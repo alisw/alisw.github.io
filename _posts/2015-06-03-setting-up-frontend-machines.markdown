@@ -3,6 +3,8 @@ title: Creating the build infrastructure
 layout: page
 ---
 
+**WORK IN PROGRESS -- do not use**
+
 # Cluster architecture description:
 
 The {{site.experiment}} build infrastructure consists of two kinds of nodes, masters,
@@ -58,7 +60,7 @@ point). You'll have to do this step only once.
 Now you can log in to `aiadm.cern.ch` and source the OpenStack credentials you
 just downloaded:
 
-      source ~/private/{{site.experiment}}-openrc.sh
+      source ~/private/{{site.builduser}}-openrc.sh
 
 you'll be prompted for password which will be put in your shell environment.
 Make sure you do not cut and paste your environment around.  You can now
@@ -77,6 +79,32 @@ about:
 Before you can continue to create a slave, make also sure you import the SSH
 key required by build machines into your openstack configuration (use the
 "Access & Security" tab and use "Import key") and that you call it `{{site.builduser}}`.
+
+### Creating a master
+
+Creation of masters in CERN Foreman setup is described at
+<http://cern.ch/config/nodes/createnode.html>. The short recipe for build
+machine is:
+
+- Login to `aiadm.cern.ch`.
+- Set up your OpenStack environment (once) and source the
+  `~/private/{{site.builduser}}-openrc.sh` file, entering the password when
+  prompted.
+- To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
+  care of provisioning the machine and putting it in Foreman, so that it will
+  receive from it the Puppet configuration:
+
+      MACHINE_NAME=<{{site.exp_prefix}}mesosXX>
+      ZONE=cern-geneva-<X> # <X> needs to be in {a,b,c}
+                           # make sure you use different zones
+                           # to improve availability.
+
+      ai-bs-vm -g {{site.master_hostgroup}} \
+               -i "{{site.openstack_image}}" \
+               --nova-sshkey {{site.builduser}} \
+               --nova-availabilityzone $ZONE \
+               --nova-flavor {{site.openstack_master_flavor}} \
+               $MACHINE_NAME
 
 ### Creating a slave  
 
