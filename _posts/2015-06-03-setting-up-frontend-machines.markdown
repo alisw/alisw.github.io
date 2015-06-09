@@ -71,7 +71,7 @@ about:
 
 - `nova list`: list the machines in the {{site.openstack_project}} 
 - `nova image-list`: list of OS images you can use. In
-  particular the build nodes should use the latest `SLC6 CERN Server - x86_64`
+  particular the build nodes should use the latest `{{site.openstack_image}}`
   ones.
 - `nova flavor-list`: list available flavors of virtual machines (i.e. how many
   CPUs, RAM).
