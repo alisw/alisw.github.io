@@ -1,6 +1,7 @@
 ---
 title: Creating the build infrastructure
 layout: page
+categories: infrastructure
 ---
 
 **WORK IN PROGRESS -- do not use**

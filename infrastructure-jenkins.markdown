@@ -1,6 +1,7 @@
 ---
 title: Creating the Jenkins Master
 layout: page
+categories: infrastructure
 ---
 
 **WORK IN PROGRESS -- do not use**

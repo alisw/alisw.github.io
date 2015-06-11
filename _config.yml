@@ -1,5 +1,5 @@
 # Site settings
-title: ALICE SW Build Infrastructure Pages
+title: ALICE SW Build Infrastructure pages
 email: giulio.eulisse@cern.ch
 description: > # this means to ignore newlines until "baseurl:"
   Initial documentation for ALICE new build infrastructure.
@@ -8,6 +8,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://alisw.github.io" # the base hostname & protocol for your site
 twitter_username: ktf
 github_username:  ktf
+categories: [main, infrastructure]
 
 # Build settings
 markdown: kramdown
@@ -18,6 +19,7 @@ exp_prefix: "ali"
 master_hostgroup: "alibuild/mesos/master"
 slave_hostgroup: "alibuild/mesos/slave"
 jenkins_hostgroup: "alibuild/jenkins"
+frontend_hostgroup: "alibuild/frontend"
 builduser: "alibuild"
 openstack_image: "CC7 Base - x86_64 [2015-02-10]"
 openstack_flavor: "hep2.24"
