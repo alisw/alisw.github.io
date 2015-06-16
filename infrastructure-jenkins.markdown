@@ -46,3 +46,34 @@ machine is:
                --nova-sshkey {{site.builduser}} \
                --nova-flavor {{site.openstack_master_flavor}} \
                $MACHINE_NAME
+
+### Adding a new Mesos cloud
+
+In order to provision jenkins slaves we use the Jenkins Mesos plugin. The
+configuration of such a plugin is found at the bottom of the "Jenkins >
+Configuration" page. In order to create a new one:
+
+- Click on "Add Slave Info" you will get a new entry.
+- Modify the various entries as it follows:
+
+    - Label String: a mnemonic string with the architecture and the size of the queue,
+      e.g. `slc5_x86-64-large`. The size should be either small, medium, large.
+    - Jenkins Slave CPUs: 0.1
+    - Jenkins Slave Memory: 512 
+    - Maximum number of Executor per slave: 1
+    - Jenkins Executor CPUs: either 1 for small, 4 for medium, 20 for large.
+    - Jenkins Executor Memory in MB: either 2000 for small, 8000 for medium, 40000 for large.
+    - Remove FS Root: jenkins
+    - Idle termination minutes: 3
+    - Mesos Offer Selection Attributes: empty.
+    - Additional Jenkins Slave JVM arguments: `-Xms16m -XX:+UseConcMarkSweepGC -Djava.net.preferIPv4Stack=true`
+    - Additional Jenkins Slave Agent JNLP arguments: `-noCertificateCheck -noReconnect`
+
+- Click on advanced and modify as follow:
+
+    - Use Docker Containerizer: checked.
+    - Docker image: `alisw/<os>-builder` where `<os>` is the operating system
+      to use, e.g. `slc5` for Scientific Linux 5. 
+
+- Click on save.
+
