@@ -11,6 +11,7 @@ layout: default
           Architecture: {{ build.architecture }} <br>
           Externals recipes: <a href="http://github.com/{{build.alidist}}/alidist/">{{build.alidist}}/alidist</a><br>
           Alibuild version: <a href="http://github.com/{{build.alibuild}}/alibuild/">{{build.alibuild}}/alibuild</a>
+          <br><a href="https://ali-ci.cern.ch/build-any-ib/{{build.alibuild}}">Tests root files</a> 
           {{ if build.jenkins_build_nr.empty? }}
             <br><a href="https://alijenkins.cern.ch/job/build-any-ib/{{build.jenkins_build_nr}}/console">Jenkins build logs.</a>
           {{ endif }}
