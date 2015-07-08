@@ -4,7 +4,22 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Recent builds</h1>
+    {% for build in site.data.build %}
+      <li>
+        <div class="post-meta">
+          Architecture: {{ build.architecture }} <br>
+          Externals recipes: <a href="http://github.com/{{build.alidist}}/alidist/">{{build.alidist}}/alidist</a><br>
+          Alibuild version: <a href="http://github.com/{{build.alibuild}}/alibuild/">{{build.alibuild}}/alibuild</a>
+          {{ if build.jenkins_build_nr.empty? }}
+            <br><a href="https://alijenkins.cern.ch/job/build-any-ib/{{build.jenkins_build_nr}}/console">Jenkins build logs.</a>
+          {{ endif }}
+        </div>
+      </li>
+      
+    {% endfor %}
+  
+<!--  <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
@@ -19,5 +34,6 @@ layout: default
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+-->
 
 </div>
