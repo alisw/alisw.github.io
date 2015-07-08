@@ -5,8 +5,8 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">Recent builds</h1>
-    {% for build in site.data.build %}
-      <li>
+    {% for build in site.data.build reversed %}
+      <li><b>Build {{build.jenkins_build_nr}}</b><br>
         <div class="post-meta">
           Architecture: {{ build.architecture }} <br>
           Externals recipes: <a href="http://github.com/{{build.alidist}}/alidist/">{{build.alidist}}/alidist</a><br>
