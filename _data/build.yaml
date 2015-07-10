@@ -1,3 +1,29 @@
+- alibuild: ktf
+  alidist: ktf
+  architecture: slc7_x86-64
+  jenkins_build_nr: 120
+  package: zlib
+  result: SUCCESS
+  sources:
+    hash: []
+    repo: []
+    tag: []
+  timestamp: 2015-07-10T15:47:58+0200
+- alibuild: ktf
+  alidist: ktf
+  architecture: slc7_x86-64
+  jenkins_build_nr: 118
+  package: aliroot-test
+  result: SUCCESS
+  sources:
+    !!python/unicode 'hash': [!!python/unicode 'v1.2.8', !!python/unicode 'v3.2.3',
+      !!python/unicode 'v5-34-30', !!python/unicode 'v2-0', !!python/unicode 'a4284f60b494e7258b51692fa685f26cc54792e9']
+    !!python/unicode 'repo': [!!python/unicode 'https://github.com/star-externals/zlib',
+      !!python/unicode 'https://github.com/Kitware/CMake', !!python/unicode 'http://github.com/root-mirror/root',
+      !!python/unicode 'http://root.cern.ch/git/geant3.git', !!python/unicode 'http://git.cern.ch/pub/AliRoot']
+    !!python/unicode 'tag': [!!python/unicode 'v1.2.8', !!python/unicode 'v3.2.3',
+      !!python/unicode 'v5-34-30', !!python/unicode 'v2-0', !!python/unicode 'master']
+  timestamp: 2015-07-10T15:29:46+0200
 - alibuild: alisw
   alidist: alisw
   architecture: slc7_x86-64
@@ -88,26 +114,4 @@
     repo: []
     tag: []
   timestamp: 2015-07-10T11:54:52+0200
-- alibuild: ktf
-  alidist: ktf
-  architecture: slc7_x86-64
-  jenkins_build_nr: 109
-  package: aliroot-test
-  result: FAILURE
-  sources:
-    hash: []
-    repo: []
-    tag: []
-  timestamp: 2015-07-10T11:45:51+0200
-- alibuild: ktf
-  alidist: ktf
-  architecture: slc7_x86-64
-  jenkins_build_nr: 108
-  package: zlib
-  result: SUCCESS
-  sources:
-    hash: []
-    repo: []
-    tag: []
-  timestamp: 2015-07-10T11:41:41+0200
 
