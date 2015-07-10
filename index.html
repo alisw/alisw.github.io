@@ -15,6 +15,15 @@ layout: default
           {{ if build.jenkins_build_nr.empty? }}
             <br><a href="https://alijenkins.cern.ch/job/build-any-ib/{{build.jenkins_build_nr}}/console">Jenkins build logs.</a>
           {{ endif }}
+          {{ if build.sources != null }}
+          <br>Sources used: <ul>
+            {% for hash in build.sources.hash %}
+              <li><a href="{{ build.sources.repo[forloop.index0] }}@{{ build.sources.hash[forloop.index0] }}">
+                {{ build.sources.repo[forloop.index0] }}
+              </li>
+            {% endfor %}
+          </ul>
+          {{ endif }}
         </div>
       </li>
       
