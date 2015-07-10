@@ -1,6 +1,17 @@
 - alibuild: ktf
   alidist: ktf
   architecture: slc7_x86-64
+  jenkins_build_nr: 115
+  package: zlib
+  result: SUCCESS
+  sources:
+    !!python/unicode 'hash': [!!python/unicode 'v1.2.8']
+    !!python/unicode 'repo': [!!python/unicode 'https://github.com/star-externals/zlib']
+    !!python/unicode 'tag': [!!python/unicode 'v1.2.8']
+  timestamp: 2015-07-10T14:36:22+0200
+- alibuild: ktf
+  alidist: ktf
+  architecture: slc7_x86-64
   jenkins_build_nr: 114
   package: cmake
   result: SUCCESS
@@ -99,15 +110,4 @@
     !!python/unicode 'repo': [!!python/unicode 'https://github.com/star-externals/zlib@v1.2.8']
     tag: [!!python/unicode '8822efa61f2a385e0bc83ca5819d608111b2168a']
   timestamp: 2015-07-09T17:18:40+0200
-- alibuild: ktf
-  alidist: ktf
-  architecture: slc7_x86-64
-  jenkins_build_nr: 105
-  package: zlib
-  result: SUCCESS
-  sources:
-    hash: []
-    repo: []
-    tag: []
-  timestamp: 2015-07-09T17:06:54+0200
 
