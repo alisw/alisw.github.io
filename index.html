@@ -18,7 +18,7 @@ layout: default
           {{ if build.sources != null }}
           <br>Sources used: <ul>
             {% for hash in build.sources.hash %}
-              <li><a href="{{ build.sources.repo[forloop.index0] }}/commit/{{ build.sources.hash[forloop.index0] }}">
+              <li><a href="{{ build.sources.repo[forloop.index0] }}/tree/{{ build.sources.hash[forloop.index0] }}">
                 {{ build.sources.repo[forloop.index0] }}{{ build.sources.tag[forloop.index0] }}
               </li>
             {% endfor %}
