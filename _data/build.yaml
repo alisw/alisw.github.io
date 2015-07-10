@@ -1,6 +1,17 @@
 - alibuild: ktf
   alidist: ktf
   architecture: slc7_x86-64
+  jenkins_build_nr: 116
+  package: geant3
+  result: SUCCESS
+  sources:
+    hash: []
+    repo: []
+    tag: []
+  timestamp: 2015-07-10T14:46:18+0200
+- alibuild: ktf
+  alidist: ktf
+  architecture: slc7_x86-64
   jenkins_build_nr: 115
   package: zlib
   result: SUCCESS
@@ -99,15 +110,4 @@
     repo: []
     tag: []
   timestamp: 2015-07-10T10:27:29+0200
-- alibuild: ktf
-  alidist: ktf
-  architecture: slc7_x86-64
-  jenkins_build_nr: 106
-  package: zlib
-  result: SUCCESS
-  sources:
-    !!python/unicode 'hash': [!!python/unicode '8822efa61f2a385e0bc83ca5819d608111b2168a']
-    !!python/unicode 'repo': [!!python/unicode 'https://github.com/star-externals/zlib@v1.2.8']
-    tag: [!!python/unicode '8822efa61f2a385e0bc83ca5819d608111b2168a']
-  timestamp: 2015-07-09T17:18:40+0200
 
