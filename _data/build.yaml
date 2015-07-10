@@ -1,11 +1,22 @@
 - alibuild: ktf
   alidist: ktf
   architecture: slc7_x86-64
+  jenkins_build_nr: 107
+  package: zlib
+  result: SUCCESS
+  sources:
+    hash: []
+    repo: []
+  timestamp: 2015-07-10T10:27:29+0200
+- alibuild: ktf
+  alidist: ktf
+  architecture: slc7_x86-64
   jenkins_build_nr: 106
   package: zlib
   result: SUCCESS
-  sources: {!!python/unicode 'hash': !!python/unicode '8822efa61f2a385e0bc83ca5819d608111b2168a',
-    !!python/unicode 'repo': !!python/unicode 'https://github.com/star-externals/zlib@v1.2.8'}
+  sources:
+    !!python/unicode 'hash': [!!python/unicode '8822efa61f2a385e0bc83ca5819d608111b2168a']
+    !!python/unicode 'repo': [!!python/unicode 'https://github.com/star-externals/zlib@v1.2.8']
   timestamp: 2015-07-09T17:18:40+0200
 - alibuild: ktf
   alidist: ktf
@@ -15,7 +26,7 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-09T17:06:54+0200
 - alibuild: alisw
   alidist: alisw
@@ -25,7 +36,7 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-09T17:05:43+0200
 - alibuild: alisw
   alidist: alisw
@@ -35,7 +46,7 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-09T16:43:46+0200
 - alibuild: alisw
   alidist: alisw
@@ -45,7 +56,7 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-09T16:42:49+0200
 - alibuild: alisw
   alidist: alisw
@@ -55,7 +66,7 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-09T16:39:21+0200
 - alibuild: alisw
   alidist: alisw
@@ -65,7 +76,7 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-09T15:53:00+0200
 - alibuild: ktf
   alidist: ktf
@@ -75,7 +86,7 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-09T14:20:22+0200
 - alibuild: ktf
   alidist: ktf
@@ -85,16 +96,6 @@
   result: SUCCESS
   sources:
     hash: []
-    url: []
+    repo: []
   timestamp: 2015-07-08T18:18:10+0200
-- alibuild: ktf
-  alidist: ktf
-  architecture: slc7_x86-64
-  jenkins_build_nr: 97
-  package: aliroot-test
-  result: SUCCESS
-  sources:
-    hash: []
-    url: []
-  timestamp: 2015-07-08T16:31:42+0200
 
