@@ -5,7 +5,7 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">Recent builds</h1>
-    {% for build in site.data.build reversed %}
+    {% for build in site.data.build %}
       <li><b>Build {{build.jenkins_build_nr}}: {{build.package}}</b><br>
         <div class="post-meta">
           Architecture: {{ build.architecture }} <br>
