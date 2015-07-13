@@ -5,45 +5,35 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">Recent builds</h1>
-    {% for build in site.data.build %}
-      <li><b>Build {{build.jenkins_build_nr}}: {{build.package}}</b><br>
+    {% for build in site.data.build.aggregations["2"].buckets %}
+      {% assign build_id = build.key %}
+      {% assign package = build["7"].buckets[0].key %}
+      {% assign architecture = build["7"].buckets[0]["6"].buckets[0].key %}
+      {% assign sources = build["7"].buckets[0]["6"].buckets[0]["3"].buckets %}
+      <li><b>Build {{ build_id }}: {{ package }}</b><br>
         <div class="post-meta">
-          Architecture: {{ build.architecture }} <br>
+          Architecture: {{ architecture }} <br>
           Externals recipes: <a href="http://github.com/{{build.alidist}}/alidist/">{{build.alidist}}/alidist</a><br>
           Alibuild version: <a href="http://github.com/{{build.alibuild}}/alibuild/">{{build.alibuild}}/alibuild</a>
-          <br><a href="https://ali-ci.cern.ch/build-any-ib/{{build.jenkins_build_nr}}">Tests root files</a> 
-          {{ if build.jenkins_build_nr.empty? }}
-            <br><a href="https://alijenkins.cern.ch/job/build-any-ib/{{build.jenkins_build_nr}}/console">Jenkins build logs.</a>
+          <br><a href="https://ali-ci.cern.ch/build-any-ib/{{ build_id }}">Tests root files</a> 
+          {{ if build_id.empty? }}
+            <br><a href="https://alijenkins.cern.ch/job/build-any-ib/{{ build_id }}/console">Jenkins build logs.</a>
           {{ endif }}
-          {{ if build.sources != null }}
+          {% if sources != null %}
           <br>Sources used: <ul>
-            {% for hash in build.sources.hash %}
-              <li><a href="{{ build.sources.repo[forloop.index0] }}/tree/{{ build.sources.hash[forloop.index0] }}">
-                {{ build.sources.repo[forloop.index0] }}{{ build.sources.tag[forloop.index0] }}
+            {% for item in sources %}
+              {% assign dep_tag = item.key %}
+              {% assign dep_hash = item["4"].buckets[0].key %}
+              {% assign dep_url = item["4"].buckets[0]["5"].buckets[0].key %}
+              <li><a href="{{ dep_url }}/tree/{{ dep_hash }}">
+                {{dep_url}}@{{dep_tag}}
               </li>
             {% endfor %}
           </ul>
-          {{ endif }}
+          {% endif %}
         </div>
       </li>
       
     {% endfor %}
   
-<!--  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
--->
-
 </div>
