@@ -25,8 +25,8 @@ layout: default
               {% assign dep_tag = item.key %}
               {% assign dep_hash = item["4"].buckets[0].key %}
               {% assign dep_url = item["4"].buckets[0]["5"].buckets[0].key %}
-              <li><a href="{{ dep_url }}/tree/{{ dep_hash }}">
-                {{dep_url}}@{{dep_tag}}
+              <li>
+              <a href="{{ dep_url }}/tree/{{ dep_hash }}">{{dep_url}}@{{dep_tag}}</a>
               </li>
             {% endfor %}
           </ul>
