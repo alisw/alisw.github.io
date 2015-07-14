@@ -9,7 +9,9 @@ layout: default
     <ul class="nav nav-tabs" role="tablist">
     {% for product in site.data.build.aggregations["3"].buckets %}
       {% assign product_name = product.key %}
-      <li role="presentation"><a href="#{{product_name}}" aria-controls="{{product_name}}" role="tab" data-toggle="tab">{{ product_name }}</a></li>
+      <li role="presentation" {% if forloop.first == true %}class="active"{%endif%}>
+        <a href="#{{product_name}}" aria-controls="{{product_name}}" role="tab" data-toggle="tab">{{ product_name }}</a>
+      </li>
     {% endfor %}
     </ul>
       
