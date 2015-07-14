@@ -27,7 +27,7 @@ layout: default
                     {% for build in architecture["10"].buckets %}
                       <li>Build #{{ build.key }}
                           {% assign alidist_version = build["5"].buckets[0].key %}
-                          <br>alidist version: {{ alidist_version }}
+                          <br>alidist version: <a href="http://github.com/{{ alidist_version }}/alidist">{{ alidist_version }}</a>
                           <br><a href="https://alijenkins.cern.ch/job/build-any-ib/{{ build.key }}/console">Jenkins build logs.</a>
                           <br><a href="https://ali-ci.cern.ch/build-any-ib/{{ build.key }}">Tests root files</a>
                         <br>Sources used:
