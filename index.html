@@ -18,7 +18,7 @@ layout: default
     <div class="tab-content">
     {% for product in site.data.build.aggregations["3"].buckets %}
       {% assign product_name = product.key %}
-      <div role="tabpanel" class="tab-pane active" id="{{product_name}}">
+      <div role="tabpanel" class="tab-pane {% if forloop.first == true %}active{%endif%}" id="{{product_name}}">
         <ul>
         {% for commit in product["2"].buckets %}
           <li>Commit {{ commit.key }}:
