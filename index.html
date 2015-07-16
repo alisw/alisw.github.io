@@ -7,7 +7,8 @@ layout: default
   <h1 class="page-heading">Recent builds</h1>
   <div>
     <ul class="nav nav-tabs" role="tablist">
-    {% for product in site.data.build.aggregations["3"].buckets %}
+    {% assign summaries = site.data.build_summary.aggregations %}
+    {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
       <li role="presentation" {% if forloop.first == true %}class="active"{%endif%}>
         <a href="#{{product_name}}" aria-controls="{{product_name}}" role="tab" data-toggle="tab">{{ product_name }}</a>
@@ -16,41 +17,42 @@ layout: default
     </ul>
       
     <div class="tab-content">
-    {% for product in site.data.build.aggregations["3"].buckets %}
+    {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
+      {%capture commit_file %}commits-{{product_name}}-master{%endcapture%}
       <div role="tabpanel" class="tab-pane {% if forloop.first == true %}active{%endif%}" id="{{product_name}}">
-        <ul>
-        {% for commit in product["2"].buckets %}
-          <li>Commit {{ commit.key }}:
-              <ul>
-                {% for architecture in commit["4"].buckets %}
-                  <li>{{ architecture.key }}
-                    <ul>
-                    {% for build in architecture["10"].buckets %}
-                      <li>Build #{{ build.key }}
-                          {% assign alidist_version = build["5"].buckets[0].key %}
-                          <br>alidist version: <a href="http://github.com/{{ alidist_version }}/alidist">{{ alidist_version }}</a>
-                          <br><a href="https://alijenkins.cern.ch/job/build-any-ib/{{ build.key }}/console">Jenkins build logs.</a>
-                          <br><a href="https://ali-ci.cern.ch/build-any-ib/{{ build.key }}">Tests root files</a>
-                        <br>Sources used:
-                        <ul>
-                          {% assign externals = build["5"].buckets[0]["9"].buckets[0]["6"].buckets %}
-                          {% for external in externals %}
-                            {% assign url = external.key %}
-                            {% assign tag = external["7"].buckets[0].key %}
-                            {% assign hash = external["7"].buckets[0]["8"].buckets[0].key %}
-                            <li>{{url}}@{{tag}} {%if hash != tag %}({{hash}}){%endif%}</li>
-                          {% endfor %}
-                        </ul>
-                      </li>
+        {% assign commits = site.data[commit_file] %}
+        <div class="list-group">
+        {% for commit_info in commits %}
+          {% capture commit %}{{commit_info.commit | truncate: 11}}{%endcapture%}
+          {% if forloop.first %}
+           <div class="list-group-item">
+              <h4 class="list-group-item-heading">Not tested yet</h4>
+          {% endif %}
+          {% for builds_by_commit in product.by_commit.buckets %}
+            {% capture build_commit %}{{builds_by_commit.key}}...{%endcapture%}
+            {% if build_commit == commit %}
+              </div>
+              <div href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">{{builds_by_commit.key}} ({{commit_info.author}}): {{commit_info.message}} </h4>
+                <p class="list-group-item-text">
+                  <ul>
+                    {% for build in builds_by_commit.build_id.buckets %}
+                      {% assign build_nr = build.key %}
+                      {% assign architecture = build.architecture.buckets[0].key %}
+                      {% assign alidist_repo = build.architecture.buckets[0].alidist_repo.buckets[0].key %}
+                      <li><a href="http://alijenkins.cern.ch/job/build-any-ib/{{build_nr}}/console">Build #{{ build_nr }}</a> ({{architecture}}) using <a href="https://github.com/{{alidist_repo}}/alidist">{{alidist_repo}}/alidist</a></li>
                     {% endfor %}
-                    </ul>
-                  </li>
-                {% endfor %}
-              </ul>
-          </li>
+                  </ul>
+                </p>
+            {% endif %}
+          {% endfor  %}
+          <br>{{ commit }} ({{commit_info.author}}): {{commit_info.message }}
+          {% if forloop.last%}
+           </div>
+          {% endif %}
         {% endfor %}
-        </ul>
+        </div>
       </div>
     {% endfor %}
     </div>
