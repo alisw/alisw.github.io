@@ -10,6 +10,7 @@ layout: default
     {% assign summaries = site.data.build_summary.aggregations %}
     {% assign errors_summaries = site.data.errors.aggregations %}
     {% assign warnings_summaries = site.data.warnings.aggregations %}
+    {% assign status_summaries = site.data.status.aggregations %}
 
     {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
@@ -18,7 +19,7 @@ layout: default
       </li>
     {% endfor %}
     </ul>
-      
+
     <div class="tab-content">
     {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
@@ -44,7 +45,21 @@ layout: default
                       {% assign build_nr = build.key %}
                       {% assign architecture = build.architecture.buckets[0].key %}
                       {% assign alidist_repo = build.architecture.buckets[0].alidist_repo.buckets[0].key %}
-                      <li><a href="http://alijenkins.cern.ch/job/build-any-ib/{{build_nr}}/console">Build #{{ build_nr }}</a> ({{architecture}}) using <a href="https://github.com/{{alidist_repo}}/alidist">{{alidist_repo}}/alidist</a></li>
+                        
+                      <li><a href="http://alijenkins.cern.ch/job/build-any-ib/{{build_nr}}/console">Build #{{ build_nr }}</a>
+
+                      {% for status_build in status_summaries.by_build.buckets %}
+                        {% if build_nr == status_build.key %}
+                          {% capture status_count %}{{ status_build.status.buckets | size}}{%endcapture%}
+                          {%if status_count == "1" %}
+                          (In progress)
+                          {%else if status_count == "2"%}
+                          (Done)
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+
+                      ({{architecture}}) {{status}} using <a href="https://github.com/{{alidist_repo}}/alidist">{{alidist_repo}}/alidist</a></li>
                       {% for error_build in errors_summaries.by_build.buckets %}
                         {% if build_nr == error_build.key %}
                           <div class="panel panel-danger">
