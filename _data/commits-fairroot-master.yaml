@@ -1,0 +1,250 @@
+-
+ commit: "75ab8a4aa60577ab8ee7aba88c4b8aa438d75e6a"
+ message: >-
+    - remove manual Ttree loading in executable needed by Ubuntu v>11.0 and handle the issue in CMakeLists - correct a typo in Readme.md of the FairRoot installation
+ author: !!str winckler
+-
+ commit: "e2157f5363e5cbdcde4d0709734db434efef83d5"
+ message: >-
+    Fixed a typo in example config
+ author: !!str Alexey Rybalchenko
+-
+ commit: "fa4e3d21cf23733e7bb107a97e29c69f9f4760b8"
+ message: >-
+    Add coverity code annotations to suppress false positive warnings.
+ author: !!str Florian Uhlig
+-
+ commit: "93dadc93861cd603f23502817267a386bd024be8"
+ message: >-
+    Fix coverity issue.
+ author: !!str Florian Uhlig
+-
+ commit: "0c8a64abe2261b4894b37d5405441ad52dfef7b9"
+ message: >-
+    Fix two Coverity issues.
+ author: !!str Florian Uhlig
+-
+ commit: "f3a2781d6f558bb31307f38c66c661a2537c8d32"
+ message: >-
+    - fix coverity issues - clean code and typo in comments
+ author: !!str winckler
+-
+ commit: "c0af53690792401ef4aa3015decf5c7eb63ac60d"
+ message: >-
+    create protobuf sources in the build directory
+ author: !!str Alexey Rybalchenko
+-
+ commit: "957dc75a2cbfedab044128da20a0e156e04b6526"
+ message: >-
+    Fix Coverity issues
+ author: !!str Alexey Rybalchenko
+-
+ commit: "c8e023f9e95644329c8c30c98dc9892f15e3b46b"
+ message: >-
+    Fix coverity issue CID 10098
+ author: !!str Mohammad Al-Turany
+-
+ commit: "a179f3ef90bec83b5d1e0d665d7eb74f41fdb65b"
+ message: >-
+    Fix coverity issue CID 10061
+ author: !!str Mohammad Al-Turany
+-
+ commit: "0fd66d504ed2e6fd920fae4256283e3905746f33"
+ message: >-
+    Fix coverity issue CID 10089
+ author: !!str Mohammad Al-Turany
+-
+ commit: "9a529dea2a29e44dacb36e2c35c36a0c82afe9d0"
+ message: >-
+    Fix coverity issue CID 10107
+ author: !!str Mohammad Al-Turany
+-
+ commit: "638b41ec17cf20a35a55dbbe46c3587e57edc2b4"
+ message: >-
+    Fix coverity issue CID 10168
+ author: !!str Mohammad Al-Turany
+-
+ commit: "73a9fd9cf17a313fea5a502461b3f28f6e81e166"
+ message: >-
+    Fix coverity issue CID 10169
+ author: !!str Mohammad Al-Turany
+-
+ commit: "36924d09757970eab933ce47d786ca2f72799fbf"
+ message: >-
+    Small changes
+ author: !!str Mohammad Al-Turany
+-
+ commit: "a0687b37ddcdbd88b282241979c0f6631b005154"
+ message: >-
+    Running FairRootManager without input file
+ author: !!str Tobias Stockmanns
+-
+ commit: "e5b05b02f6f5858b07c98f86b92292c86b5df4f6"
+ message: >-
+    Update to convert test beam data with FairRoot
+ author: !!str Tobias Stockmanns
+-
+ commit: "b1ced5e99bf28aba9c9b658163a4adbfa98107a0"
+ message: >-
+    Small changes
+ author: !!str Tobias Stockmanns
+-
+ commit: "8c073f61b37aa02d353250a989a1b6af0ada5a4c"
+ message: >-
+    Running FairRootManager without input file
+ author: !!str Tobias Stockmanns
+-
+ commit: "59a031b674f596d782c1f22c3f193043f6303b12"
+ message: >-
+    Update to convert test beam data with FairRoot
+ author: !!str Tobias Stockmanns
+-
+ commit: "f79ac5c5f9ce3dcdc47d66e1232ca2c21f05ac61"
+ message: >-
+    Checking for fRootFileSource and libBase.dylib:
+ author: !!str Radoslaw Karabowicz
+-
+ commit: "99610dfed5a8b7a98de83b1328664c2f2948bcd7"
+ message: >-
+    Add first two simple FairMQ examples
+ author: !!str Alexey Rybalchenko
+-
+ commit: "576a570ad62a270119dfafc54d56ca1e6dd25c17"
+ message: >-
+    Correct mistake in channel validation
+ author: !!str Alexey Rybalchenko
+-
+ commit: "7faa0f3c29d53b751d7e929d6de417bd13469f16"
+ message: >-
+    Add WaitForInitialValidation()
+ author: !!str Alexey Rybalchenko
+-
+ commit: "052d81da0fe755c7916baed083665cb4c1a9e57a"
+ message: >-
+    Fix uncaught exceptions
+ author: !!str Alexey Rybalchenko
+-
+ commit: "f59f2efd966b8fd5341721032be4a958312f1cdc"
+ message: >-
+    Thread safe initialization of the channels
+ author: !!str Alexey Rybalchenko
+-
+ commit: "b5109f007e3442245f048bbc8df5ed3e62a25a5a"
+ message: >-
+    add WaitForEndOfStateForMs(state, duration)
+ author: !!str Alexey Rybalchenko
+-
+ commit: "45488a85770252ef7b3169ec7fdebcc940dcdbef"
+ message: >-
+    Fix runtime issue in tutorial7 occuring on linux arch
+ author: !!str winckler
+-
+ commit: "2f34086c5ff4846957212be230272d12d77726ef"
+ message: >-
+    Add missing license information
+ author: !!str Mohammad Al-Turany
+-
+ commit: "11e31b7616f6016050c29c468c6aa9bb0396ab9c"
+ message: >-
+    Use FairMQProgOptions for Sink and BenchmarkSampler
+ author: !!str Alexey Rybalchenko
+-
+ commit: "e927661d7415e58a6e2822797aa96aedc90576cb"
+ message: >-
+    Update FairMQStateMachine & introduce FairMQChannels
+ author: !!str Alexey Rybalchenko
+-
+ commit: "2c3340eaa333a8f16647df948ee3993669ec3cd7"
+ message: >-
+    move fairmq json parser to fairmq/options
+ author: !!str winckler
+-
+ commit: "788fc5ddca6d60de97d2b5bd1b85fabe023e6430"
+ message: >-
+    Add FairMQProgOptions for configuring MQDevices
+ author: !!str winckler
+-
+ commit: "91b338daa61a12d1ea4c5676267c50b7a4cfd91b"
+ message: >-
+    renaming tuto7 exec files and fix coverity exception issues
+ author: !!str winckler
+-
+ commit: "2d0d65cfbc852c06e33a68fb53451008c89b08c7"
+ message: >-
+    Added protection in FairRootManager against accessing empty pointers to fRootFileSource and fRootFileSourceBKG
+ author: !!str Radoslaw Karabowicz
+-
+ commit: "ecad6deee9cffb0a77cee195aff5cadd6a470624"
+ message: >-
+    fixed: coverity warnings
+ author: !!str Dmytro Kresan
+-
+ commit: "1713b450ee510c8187062b80e86ebc27d63a7d3d"
+ message: >-
+    Change of box size in FairBoxSetDraw
+ author: !!str Tobias Stockmanns
+-
+ commit: "ed0fac898bfe20ce445739fde5a1b4d97a3dc0c6"
+ message: >-
+    ROOT 6 support Forward declaration is not enough for creating the rootmaps with ROOT6
+ author: !!str Mohammad Al-Turany
+-
+ commit: "fd23d1c1a5a7ac8190fb7634f1d4ee12ed8fe121"
+ message: >-
+    Rename names for DartMeasurement statements. If the name contain a blank CDash can't produce graphics. Convert all macros to proper linux file format.
+ author: !!str Florian Uhlig
+-
+ commit: "91facf7484b5cbde72fdbb5812e1595df6d93406"
+ message: >-
+    Fix wrong parameter name.
+ author: !!str Florian Uhlig
+-
+ commit: "3342346af7f60c725edb94f48314efad8c2826e8"
+ message: >-
+    Adapt macros to the renaming of FairMemory to FairSystemInfo. All macros now have a unified block at the end which extracts the maximal used memory and calculates the CPU usage. Both values are formated in a way that they are CTest compliant and can be send to the CDash server.
+ author: !!str Florian Uhlig
+-
+ commit: "aefc1e7addba8349a3c08b704368cf6d33c0e469"
+ message: >-
+    Rename class FairMemory to the more general name FairSystemInfo.
+ author: !!str Florian Uhlig
+-
+ commit: "460cc8d1ce00f18f8a46a736b317c2b56de3cf3c"
+ message: >-
+    Extract maximal used memory at the end of our test macros. This information is now sent to the CDash server to track the memory usage as function of time.
+ author: !!str Florian Uhlig
+-
+ commit: "a80bea5c27e0b124f8996a731bb2de4bd66fe3f7"
+ message: >-
+    Add new class to extract the maximal memory used by a macro.
+ author: !!str Florian Uhlig
+-
+ commit: "6d10f6028ff50607802e27e58c3f26da6428d927"
+ message: >-
+    Remove Pluto from FairRoot Pluto does not work with ROOT6 and need alot of changes Pluto generators should be implimented by the the experiments that need it
+ author: !!str Mohammad Al-Turany
+-
+ commit: "0289d1e6aa948b7c5109d21b0a6c55b29cd6796a"
+ message: >-
+    Change code to be able to use ROOT6
+ author: !!str Florian Uhlig
+-
+ commit: "dfee419bb7c0ef34d1071e07f9c758b5ccf5967c"
+ message: >-
+    Fix many Coverity issues. Switch to ne FairLogger interface at many places.
+ author: !!str Florian Uhlig
+-
+ commit: "b893642cab2f3e6038d8efe877f18b2f813e56e4"
+ message: >-
+    Add two new tests.
+ author: !!str Florian Uhlig
+-
+ commit: "9210280d2109d4b2ed6694589155207b131e1f2d"
+ message: >-
+    Fix many Coverity issues. Switch to new FairLogger interface.
+ author: !!str Florian Uhlig
+-
+ commit: "dbfa6fea42c5060c1f6c05d5ad3cd362d8f23407"
+ message: >-
+    added: support of wildcards in FairLmdSource
+ author: !!str Dmytro Kresan
