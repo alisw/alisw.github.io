@@ -164,6 +164,71 @@
           } ]
         }
       }, {
+        "key" : "214",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/SOURCES/aliroot/v5-06-28/3bbae3546f9cf8ea53062fb1a2414b9b57fa3a8f/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/slc7_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/slc7_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/SOURCES/aliroot/v5-06-28/3bbae3546f9cf8ea53062fb1a2414b9b57fa3a8f/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/slc7_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "205",
         "by_message" : {
           "buckets" : [ {
@@ -453,168 +518,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "3934"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gets' is deprecated (declared at /usr/include/stdio.h:638) [-Wdeprecated-declarations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../.././libssp/gets-chk.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "62"
-                  }, {
-                    "key" : "69"
-                  } ]
-                }
-              }, {
-                "key" : "../.././libssp/gets-chk.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "62"
-                  }, {
-                    "key" : "69"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'Loc.__ubsan::Location::MemoryLoc' may be used uninitialized in this function [-Wmaybe-uninitialized]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../../.././libsanitizer/ubsan/ubsan_diag.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "192"
-                  } ]
-                }
-              }, {
-                "key" : "../../.././libsanitizer/ubsan/ubsan_diag.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "192"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "202",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "'rstride[0]' may be used uninitialized in this function [-Wmaybe-uninitialized]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../.././libgfortran/generated/unpack_c10.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "115"
-                  }, {
-                    "key" : "261"
-                  } ]
-                }
-              }, {
-                "key" : "../../.././libgfortran/generated/unpack_c16.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "115"
-                  }, {
-                    "key" : "261"
-                  } ]
-                }
-              }, {
-                "key" : "../../.././libgfortran/generated/unpack_c4.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "115"
-                  }, {
-                    "key" : "261"
-                  } ]
-                }
-              }, {
-                "key" : "../../.././libgfortran/generated/unpack_c8.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "115"
-                  }, {
-                    "key" : "261"
-                  } ]
-                }
-              }, {
-                "key" : "../../.././libgfortran/generated/unpack_i1.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "115"
-                  }, {
-                    "key" : "261"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'Ql' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../.././libgcc/config/libbid/bid128_div.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1406"
-                  }, {
-                    "key" : "39"
-                  }, {
-                    "key" : "490"
-                  }, {
-                    "key" : "949"
-                  } ]
-                }
-              }, {
-                "key" : "../.././libgcc/config/libbid/bid128_div.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1406"
-                  }, {
-                    "key" : "39"
-                  }, {
-                    "key" : "490"
-                  }, {
-                    "key" : "949"
-                  } ]
-                }
-              }, {
-                "key" : "../../.././libgcc/config/libbid/bid64_div.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1374"
-                  }, {
-                    "key" : "523"
-                  }, {
-                    "key" : "937"
-                  } ]
-                }
-              }, {
-                "key" : "../.././libgcc/config/libbid/bid64_div.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1374"
-                  }, {
-                    "key" : "523"
-                  }, {
-                    "key" : "937"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "comparison between signed and unsigned integer expressions [-Wsign-compare]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "gengtype-lex.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "2652"
                   } ]
                 }
               } ]
