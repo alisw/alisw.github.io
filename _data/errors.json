@@ -1,0 +1,60 @@
+{
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "183",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "AliESDtrackCuts.h: No such file or directory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/SOURCES/aliroot/v5-06-28/4f20c2ec8e148bbbd763756a881741fb360ff9c3/EVE/EveBase/AliEveESDTracks.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "16"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "AliEventInfo.h: No such file or directory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/SOURCES/aliroot/v5-06-28/4f20c2ec8e148bbbd763756a881741fb360ff9c3/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "TGFrame.h: No such file or directory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/SOURCES/aliroot/v5-06-28/4f20c2ec8e148bbbd763756a881741fb360ff9c3/MONITOR/MONITOR/AliTestChildProc.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "TObject.h: No such file or directory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/SOURCES/aliroot/v5-06-28/4f20c2ec8e148bbbd763756a881741fb360ff9c3/EVE/EveBase/AliEveConfigManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
