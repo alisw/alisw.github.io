@@ -9,6 +9,7 @@ layout: default
     <ul class="nav nav-tabs" role="tablist">
     {% assign summaries = site.data.build_summary.aggregations %}
     {% assign errors_summaries = site.data.errors.aggregations %}
+    {% assign warnings_summaries = site.data.warnings.aggregations %}
 
     {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
@@ -46,25 +47,56 @@ layout: default
                       <li><a href="http://alijenkins.cern.ch/job/build-any-ib/{{build_nr}}/console">Build #{{ build_nr }}</a> ({{architecture}}) using <a href="https://github.com/{{alidist_repo}}/alidist">{{alidist_repo}}/alidist</a></li>
                       {% for error_build in errors_summaries.by_build.buckets %}
                         {% if build_nr == error_build.key %}
-                          Errors:
-                          {% for message in error_build.by_message.buckets %}
-                            <br/>{{message.key}}<br/>
-                            <table class="table table-condensed" style="table-layout: fixed;">
-                            <thead>
-                              <tr><th style="width: 90%;">Filename</th><th>Line</th></tr>
-                            </thead>
-                            <tbody>
-                              {% for filename in message.filename.buckets %}
-                              <tr>
-                                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:right;">
-                                    {{filename.key }}
-                                </td>
-                                <td style="width: 10%;">{{filename.line.buckets[0].key}}</td>
-                              </tr>
-                              {% endfor %}
-                            </tbody>
-                            </table>
-                          {% endfor %}
+                          <div class="panel panel-danger">
+                            <div class="panel-heading">Build errors</div>
+                            <div class="panel-body">
+                            {% for message in error_build.by_message.buckets %}
+                              <br/>{{message.key}}<br/>
+                              <table class="table table-condensed" style="table-layout: fixed;">
+                              <thead>
+                                <tr><th style="width: 90%;">Filename</th><th>Line</th></tr>
+                              </thead>
+                              <tbody>
+                                {% for filename in message.filename.buckets %}
+                                <tr>
+                                  <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:right;">
+                                      {{filename.key }}
+                                  </td>
+                                  <td style="width: 10%;">{{filename.line.buckets[0].key}}</td>
+                                </tr>
+                                {% endfor %}
+                              </tbody>
+                              </table>
+                            {% endfor %}
+                            </div>
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                      {% for warning_build in warnings_summaries.by_build.buckets %}
+                        {% if build_nr == warning_build.key %}
+                          <div class="panel panel-warning">
+                            <div class="panel-heading">Build warnings</div>
+                            <div class="panel-body">
+                            {% for message in warning_build.by_message.buckets %}
+                              <br/>{{message.key}}<br/>
+                              <table class="table table-condensed" style="table-layout: fixed;">
+                              <thead>
+                                <tr><th style="width: 90%;">Filename</th><th>Line</th></tr>
+                              </thead>
+                              <tbody>
+                                {% for filename in message.filename.buckets %}
+                                <tr>
+                                  <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:right;">
+                                      {{filename.key }}
+                                  </td>
+                                  <td style="width: 10%;">{{filename.line.buckets[0].key}}</td>
+                                </tr>
+                                {% endfor %}
+                              </tbody>
+                              </table>
+                            {% endfor %}
+                            </div>
+                          </div>
                         {% endif %}
                       {% endfor %}
                     {% endfor %}
