@@ -1,0 +1,250 @@
+-
+ commit: "9f46402a0f2d049a8fa7fd365503887ddd5e5b07"
+ message: >-
+    Run with Root 6 Small modification to needed for runing with ROOT6
+ author: !!str Mohammad Al-Turany
+-
+ commit: "1170830102590335f350adca3dff6de9f3dc1f06"
+ message: >-
+    CDash The Cdash server at GSI moved to https, change the drop method accordingly
+ author: !!str Mohammad Al-Turany
+-
+ commit: "3749e0c4a76c2394fc966f3bb911386cd66c46f0"
+ message: >-
+    Various changes for the prototype test running
+ author: !!str Matthias Richter
+-
+ commit: "f9933620ae90dfeb3943d5db257e1d98b1734b2a"
+ message: >-
+    adding aliceHLTEventSampler as common trigger for all cluster publishers
+ author: !!str Matthias Richter
+-
+ commit: "bc76460d38058ba6f8734836bb1cfb0219904743"
+ message: >-
+    Introducing a local configuration on each node; cmd line option to configure polling; some minor formatting
+ author: !!str Matthias Richter
+-
+ commit: "c3a8c944399ccc4c7fb16f0e57aaa0073071e064"
+ message: >-
+    adding option to publish individual TPC partitions and collect them by a Relay before the FLP device
+ author: !!str Matthias Richter
+-
+ commit: "626247e03d8f0390844d5fde3c50a2020026cabf"
+ message: >-
+    Extension of the topology, GPU tracking enabled, some fixes
+ author: !!str Matthias Richter
+-
+ commit: "08c74520338a4654bea504547e15eb7fcc5d0852"
+ message: >-
+    Extending the topology by FLP-EPN data transport network started by launch-flp-epn.sh - using settings from FLP-EPN launch for starting the processing devices - deploying scheduling scheme to avoid rapid ssh activity to the same node
+ author: !!str Matthias Richter
+-
+ commit: "d57d60786e60a46721d72b0a3905b086d77711ae"
+ message: >-
+    include only the necessary elements from std, not the complete namespace
+ author: !!str Matthias Richter
+-
+ commit: "844d5d02d60d9415373fa10c75cd4dd65602d728"
+ message: >-
+    various bugfixes
+ author: !!str Matthias Richter
+-
+ commit: "57f6b17ff3289aded52b3036e083037d05c92235"
+ message: >-
+    some minor bugfixes regarding propagation of event data header
+ author: !!str Matthias Richter
+-
+ commit: "da236fa05883fdbe24e59727eaef3a06a3ff139f"
+ message: >-
+    Introducing a forced terminate after configurable timeout
+ author: !!str Matthias Richter
+-
+ commit: "a1bf73ad7a4c4057063bcac32593708006d050e3"
+ message: >-
+    Assemble message payload directly in the message buffer
+ author: !!str Matthias Richter
+-
+ commit: "c75a4891d3eae470bba1b55e2f683b505ec978be"
+ message: >-
+    defining boost signal for memory allocation callback, propagating the signal instance
+ author: !!str Matthias Richter
+-
+ commit: "3402cae1cdd2a55e52e924b89f077b885f794305"
+ message: >-
+    introducing a callback function to provide the message buffer for direct memcpy
+ author: !!str Matthias Richter
+-
+ commit: "2c9fa2b6a6c24031ea7c083388ffed1bce241dda"
+ message: >-
+    Code cleanup.
+ author: !!str Alexey Rybalchenko
+-
+ commit: "c864cf9820a8389bd6cacdad694603f6952eebfd"
+ message: >-
+    New executables to run flp2epn devices with DDS in both standard and test modes.
+ author: !!str Alexey Rybalchenko
+-
+ commit: "be1d993e0ddf479708e966a0c0c67751bd87415b"
+ message: >-
+    Allow for inline getters/setters
+ author: !!str chkouzin
+-
+ commit: "9d0793d97db80f1d41bc5da92b5471d759d63ceb"
+ message: >-
+    extending the FLP to EPN configuration
+ author: !!str Matthias Richter
+-
+ commit: "3fd4fb432b62819e294dff5cfcf5db60f3052e4d"
+ message: >-
+    adding script for start of the FLP to EPN network
+ author: !!str Matthias Richter
+-
+ commit: "8bbf77aff443f13698761bf64f60e927956c0b37"
+ message: >-
+    bugfix: number of merged files now matches specified argument
+ author: !!str Matthias Richter
+-
+ commit: "2982713d7151eb96f0f3bd089dde73898101803b"
+ message: >-
+    added shell script to run overlayClusters.C in batch mode for a collection of event folders
+ author: !!str Matthias Richter
+-
+ commit: "dde2f7e2e215d3e9dad9a9741dc49b36ac309416"
+ message: >-
+    applying some fixes: tracking on GPUs, writing of all events to get all types of statistics blocks
+ author: !!str Matthias Richter
+-
+ commit: "b714c547b0917168e10d8ffc872db56c8f274197"
+ message: >-
+    stand-alone macro to run isolated HLT chain with input from binary files; all overhead by AliReconstruction skipped
+ author: !!str Matthias Richter
+-
+ commit: "f105733f24735f51f916931a9bf2340be99f820d"
+ message: >-
+    extending the tracker configuration to read directly from binary files; input can be chosen by editing the file appropriately
+ author: !!str Matthias Richter
+-
+ commit: "8a71ec5e978cffe7410ba9944be007b000bfc320"
+ message: >-
+    adding TPC track and GlobalMerger to the configuration; storing now raw clusters and transformed clusters; optionally also tracks but there is a floating point exception in the GlobalMerger trackfit under certain circumstences
+ author: !!str Matthias Richter
+-
+ commit: "67693dac0c25df20d2532f4ec47b0ffac3a1dae3"
+ message: >-
+    adding standalone HLT processing configuration, each step by one single component
+ author: !!str Matthias Richter
+-
+ commit: "6cc93d75321c64794115a36f4ba3bc3666193b38"
+ message: >-
+    correcting typo causing compilation error if DDS not available
+ author: !!str Matthias Richter
+-
+ commit: "a658a3584ce66cfe1e036a59f4e1ba33b03aab51"
+ message: >-
+    forwarding event header also if there are no output blocks; adjusting conditions for warning messages
+ author: !!str Matthias Richter
+-
+ commit: "5c6d3cb68a59efcee3f5e7c82082f05c32edfa1e"
+ message: >-
+    adding EventSampler class and executable to build
+ author: !!str Matthias Richter
+-
+ commit: "0023d88c18de430e700e9fa34fd02362cc4f6f5c"
+ message: >-
+    bugfixes: message rebuild necessary before every send; corrected initial event count; bugfix in latency calculation
+ author: !!str Matthias Richter
+-
+ commit: "6494d5313a1d510bdc3402b1d6695714db3cb63a"
+ message: >-
+    added executable for EventSampler
+ author: !!str Matthias Richter
+-
+ commit: "2fe7c9e4e27aa492d018732cd8ad351995f77f78"
+ message: >-
+    implemented sampler loop and various properties for the EventSampler
+ author: !!str Matthias Richter
+-
+ commit: "a2def46550170f98e49dd7188bfca3c459f25865"
+ message: >-
+    first sketch of HLT event sampler added
+ author: !!str Matthias Richter
+-
+ commit: "57d9fabc38963d8d0dd9f98002e5f28d8014a252"
+ message: >-
+    adding propagation of HLT event header
+ author: !!str Matthias Richter
+-
+ commit: "428b47850f8cb7c0580088cd0f2aec0fad47d4fa"
+ message: >-
+    reducing configuration to 1 FLP and 1 EPN, bugfix in type of EPN output to next level
+ author: !!str Matthias Richter
+-
+ commit: "b250e1317ed6fef9d705172b50ca85b3053afd90"
+ message: >-
+    moving topology examples to topology folder
+ author: !!str Matthias Richter
+-
+ commit: "1ede749994f95ba7630ff1a1e997752b7f6b9330"
+ message: >-
+    extending simple topology to 18 publishers
+ author: !!str Matthias Richter
+-
+ commit: "10f223c426aa1d54f5b351d61ecee3ec521fa926"
+ message: >-
+    simple topology with one data producer and one data sink, with corresponding host configuration
+ author: !!str Matthias Richter
+-
+ commit: "42761a16ad50ec8c85ef66c875c161efdc9cc926"
+ message: >-
+    error message and exit if DDS mode specified but not supported
+ author: !!str Matthias Richter
+-
+ commit: "e82604e03db364926c751090339c8f2b11a73976"
+ message: >-
+    setting define ENABLE_DDS depending on availability of DDS
+ author: !!str Matthias Richter
+-
+ commit: "f2ae0621cf82df01a149db546d370a967b23fb18"
+ message: >-
+    using DDS_LOCATION to add DDS include and dependencies, temporary solution
+ author: !!str Matthias Richter
+-
+ commit: "8fa6a39f55a35db3ff9869eb9d1f9f5d8dcfb42d"
+ message: >-
+    first working version of the O2 prototype topology; DDS does currently not fulfill all requirements to run the full topology because of random placement of tasks of multiplied groups
+ author: !!str Matthias Richter
+-
+ commit: "eb4defdd512f6f0409a0dea168d1fb2191c97177"
+ message: >-
+    disable DDS functionality for merge into dev branch
+ author: !!str Matthias Richter
+-
+ commit: "02f23bf71a674bbd34ae08f588cfe7a0d32ef28a"
+ message: >-
+    corrected logic for DDS property read and assignment to connecting sockets, implemented socket attributes local/global
+ author: !!str Matthias Richter
+-
+ commit: "e75f755b04cd20b92b62ecab7efefe5f5c92f852"
+ message: >-
+    bugfixes to the logic of assigning properties to multiple sockets; typo corrected
+ author: !!str Matthias Richter
+-
+ commit: "f6bac1aea6fd604e0b41900e0c3865652cc6ecaf"
+ message: >-
+    conditional compile of DDS code using ENABLE_DDS
+ author: !!str Matthias Richter
+-
+ commit: "341118c6170001185d47f89a82d793abaf3c547e"
+ message: >-
+    added implementation of DDS property propagation
+ author: !!str Matthias Richter
+-
+ commit: "f00841ccb89922a7a81092efb7c20ba51ca2e323"
+ message: >-
+    bugfix: corrected logic of string.compare
+ author: !!str Matthias Richter
+-
+ commit: "09520ca058943727563c4a01a53b51a3728d89bd"
+ message: >-
+    added supporting functionality for socket property exchange via DDS
+ author: !!str Matthias Richter
