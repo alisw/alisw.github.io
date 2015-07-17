@@ -32,13 +32,15 @@ layout: default
           {% if forloop.first %}
            <div class="list-group-item">
               <h4 class="list-group-item-heading">Not tested yet</h4>
+                <table class="table table-condensed small"><tr><th>Commit</th><th>Author</th><th>Summary</th></tr>
           {% endif %}
           {% for builds_by_commit in product.by_commit.buckets %}
             {% capture build_commit %}{{builds_by_commit.key}}...{%endcapture%}
             {% if build_commit == commit %}
+                </table>
               </div>
               <div href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">{{builds_by_commit.key}} ({{commit_info.author}}): {{commit_info.message}} </h4>
+                <h4 class="list-group-item-heading">Build started at commit {{builds_by_commit.key}}</h4>
                 <p class="list-group-item-text">
                   <ul>
                     {% for build in builds_by_commit.build_id.buckets %}
@@ -62,7 +64,7 @@ layout: default
                       ({{architecture}}) {{status}} using <a href="https://github.com/{{alidist_repo}}/alidist">{{alidist_repo}}/alidist</a></li>
                       {% for error_build in errors_summaries.by_build.buckets %}
                         {% if build_nr == error_build.key %}
-                          <div class="panel panel-danger">
+                          <div class="panel panel-danger small">
                             <div class="panel-heading">Build errors</div>
                             <div class="panel-body">
                             {% for message in error_build.by_message.buckets %}
@@ -89,7 +91,7 @@ layout: default
                       {% endfor %}
                       {% for warning_build in warnings_summaries.by_build.buckets %}
                         {% if build_nr == warning_build.key %}
-                          <div class="panel panel-warning">
+                          <div class="panel panel-warning small">
                             <div class="panel-heading">Build warnings</div>
                             <div class="panel-body">
                             {% for message in warning_build.by_message.buckets %}
@@ -117,10 +119,12 @@ layout: default
                     {% endfor %}
                   </ul>
                 </p>
+                <table class="table table-condensed small"><tr><th>Commit</th><th>Author</th><th>Summary</th></tr>
             {% endif %}
           {% endfor  %}
-          <br>{{ commit }} ({{commit_info.author}}): {{commit_info.message }}
+          <tr><td>{{commit}}</td><td>{{commit_info.author}}</td><td>{{commit_info.message }}</td></tr>
           {% if forloop.last%}
+            </table>
            </div>
           {% endif %}
         {% endfor %}
