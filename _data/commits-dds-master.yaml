@@ -1,0 +1,250 @@
+-
+ commit: "f7c79c4731d93262b783ea55da310254f4c47df1"
+ message: >-
+    Updated release notes for future 0.12
+ author: !!str Anar Manafov
+-
+ commit: "107e7d6cbb5ab49949bd209506dc1e7152736116"
+ message: >-
+    Fix auto-version algorithms in cmake
+ author: !!str Anar Manafov
+-
+ commit: "fa26d1675db95fcf874a4b410565a28ac8ee4808"
+ message: >-
+    Releasing v0.10
+ author: !!str Anar Manafov
+-
+ commit: "4d3ed5679a22929f82b760b1d0a0397f4ac70fad"
+ message: >-
+    Updated tutorial1 code
+ author: !!str Anar Manafov
+-
+ commit: "f84e5555cc03fa05ca349c49eacf393f5252fdb5"
+ message: >-
+    Initial version of Tutorial1 for DDS.
+ author: !!str Andrey Lebedev
+-
+ commit: "3892d72f8bac9a08c85b6f98fbfadada73283f9e"
+ message: >-
+    minor update of a code comment
+ author: !!str Anar Manafov
+-
+ commit: "ca7fa7c96b11b3a67cbecad65adb7ad7b3360a49"
+ message: >-
+    Updated Release notes
+ author: !!str Anar Manafov
+-
+ commit: "97d50132730dcace6826a0e8becea87ffd09c6ec"
+ message: >-
+    GH-96: User log file contains the name of the task.
+ author: !!str Andrey Lebedev
+-
+ commit: "f3d64d3c61a6243b3896ea563971ccf344003c8e"
+ message: >-
+    fixed code formatting
+ author: !!str Anar Manafov
+-
+ commit: "9e075e8cf044f44c264354e8ab590815b0ae84bc"
+ message: >-
+    GH-91: do not allow whitespaces for IDs.
+ author: !!str Andrey Lebedev
+-
+ commit: "1ef93c96e6f7b0b2b9f61c60b948dc7f0d68b4c0"
+ message: >-
+    GH-95: Populate group name, collection name, task name, task path.
+ author: !!str Andrey Lebedev
+-
+ commit: "3bd9d0e44fc5e7faff3dcf75c7384c38f4a990b3"
+ message: >-
+    GH-87: Fix key-value API crash when agent is online
+ author: !!str Anar Manafov
+-
+ commit: "f4ae83f3dd02c52c4abdbe122e97c1197adcb37a"
+ message: >-
+    GH-55: property propagation types for agents.
+ author: !!str Andrey Lebedev
+-
+ commit: "e1b3185d80b8e4d5ae6ba20a4bd40f77dc9009d4"
+ message: >-
+    GH-82: Priority UI channel
+ author: !!str Andrey Lebedev
+-
+ commit: "467d49006eb38555fef50f7dacfa13fa1c5cb4bb"
+ message: >-
+    New lock algorithm in DDS Scout
+ author: !!str Anar Manafov
+-
+ commit: "e497134119d920a7b5d9c8289e0defda96501973"
+ message: >-
+    fix for put_time. GCC 4.9 doesn't support it.
+ author: !!str Anar Manafov
+-
+ commit: "56780ec95817f3ae9b8d6c06612562f95dfed530"
+ message: >-
+    fix missing include for std::put_time
+ author: !!str Anar Manafov
+-
+ commit: "2fd7989b74a547d017c79b09c2b5677fd782f9ae"
+ message: >-
+    fix code formatting
+ author: !!str Anar Manafov
+-
+ commit: "65b57e8e8386efea42152cbb9d700a678316ef59"
+ message: >-
+    fix compilation warning: exception will be caught by earlier handler
+ author: !!str Anar Manafov
+-
+ commit: "1f786ea192cb9f57c4005fa3d7b0b17c784bda6a"
+ message: >-
+    fix code formatting of the main cmake file
+ author: !!str Anar Manafov
+-
+ commit: "a4fbc8b04db6f9c393c625e5a3146d7bfe06203c"
+ message: >-
+    Generate DDS API docs using doxygen
+ author: !!str Anar Manafov
+-
+ commit: "185955991dd861ff249d6363e0866f75cc90528b"
+ message: >-
+    dds-topology: enable verbose mode using '-V'
+ author: !!str Anar Manafov
+-
+ commit: "5c353f34ea1c5fc8e6d3eab303686796f17544cc"
+ message: >-
+    fix for dds-submit options description
+ author: !!str Anar Manafov
+-
+ commit: "6654d301c9852e2898b74c4ad08b3467c2cef591"
+ message: >-
+    fixed legacy names
+ author: !!str Anar Manafov
+-
+ commit: "a75d4db1a6f68c93d10fd7c6831cc4d0a6534c37"
+ message: >-
+    fixed legacy names
+ author: !!str Anar Manafov
+-
+ commit: "bf74594879f3f63e1e8c488646ab286d9a13123e"
+ message: >-
+    GH-74: dds-topology: report tasks and errors on different lines.
+ author: !!str Andrey Lebedev
+-
+ commit: "fbb444a9ff976178b6b9b5bf2e8b9477597c2c0b"
+ message: >-
+    GH-71: dds-topology: Added variable definition in the topology.
+ author: !!str Andrey Lebedev
+-
+ commit: "1fc56b05f25ab1f0ffa2ca9185918dcfc072edb1"
+ message: >-
+    GH-72: Add index for tasks and collections which are in groups.
+ author: !!str Andrey Lebedev
+-
+ commit: "2663f7ed8f258c3582743da052677c0ebc21736f"
+ message: >-
+    GH-75: Name of task output file changed to "user_task_<datetime>_<task_id>_<out/err>.log".
+ author: !!str Anar Manafov
+-
+ commit: "5833820fa3af0691ca0a2407f304386e20ddaf28"
+ message: >-
+    GH-49: DDS has learned 3 new additional levels of protocol log events.
+ author: !!str Anar Manafov
+-
+ commit: "e39718ee4c66147027c5bbca339ba2f418a8b3d5"
+ message: >-
+    GH-80:  fix monitoring thread to prevent breaks if custom callbacks throw exceptions.
+ author: !!str Anar Manafov
+-
+ commit: "60806a0de50a50b962369ab01afeca7e51b88615"
+ message: >-
+    GH-81: Updated release notes
+ author: !!str Anar Manafov
+-
+ commit: "92b61d786894e5ef6a7aad0b9fca5193402edae9"
+ message: >-
+    GH-81: check that UI connection manager was already created.
+ author: !!str Andrey Lebedev
+-
+ commit: "3a015b30b4c7cca6bfb55b48dfb782b1250ba52d"
+ message: >-
+    Fix: properly Stop channels on disconnect.
+ author: !!str Anar Manafov
+-
+ commit: "1556905512ff6c8f90d36b23b241bfe4d7daf6aa"
+ message: >-
+    removed misplaced comment
+ author: !!str Anar Manafov
+-
+ commit: "6536495cfd420990472cc66d75522a0e8d3e77bb"
+ message: >-
+    GH-70: Multiple subscribers for key-value notifications.
+ author: !!str Andrey Lebedev
+-
+ commit: "569036d638394fdc621615f0026a57501c5d9bde"
+ message: >-
+    Correct log messages.
+ author: !!str Andrey Lebedev
+-
+ commit: "56bb94b74cf70020be13b3b3e4bdd343298771b5"
+ message: >-
+    GH-76: update release notes.
+ author: !!str Andrey Lebedev
+-
+ commit: "6edeb0e70bba206976f778e639d67f40b988674d"
+ message: >-
+    GH-76: scheduling and requirements for the collections
+ author: !!str Andrey Lebedev
+-
+ commit: "38889359df6aaa72dcc532caacc98f2bc4f47147"
+ message: >-
+    GH-56: topology definition has been moved from dds-submit command to dds-topology.
+ author: !!str Anar Manafov
+-
+ commit: "999b656ffe23ccedbee215da14bdd76f8a519882"
+ message: >-
+    GH-73: "dds-topology --stop" hangs when there are no running user tasks.
+ author: !!str Anar Manafov
+-
+ commit: "26defba929d3ff8a136fcb56c6f474993cd1599b"
+ message: >-
+    Fixed: typos in log messages
+ author: !!str Anar Manafov
+-
+ commit: "a8f3ece024bf0e6659d8de7d07a336cb2a8826e3"
+ message: >-
+    GH-77: updated release notes.
+ author: !!str Anar Manafov
+-
+ commit: "2264c41d4c318347e98bbff78f841ad257f0f0fb"
+ message: >-
+    GH-77: agents try to reconnect when connection to commander fails.
+ author: !!str Anar Manafov
+-
+ commit: "7e500fe02b55226d31904e99947227d4f93666d1"
+ message: >-
+    Fix: std::array initialization
+ author: !!str Anar Manafov
+-
+ commit: "66820669e5ca323fe6e83cf889c2c0a329b4505f"
+ message: >-
+    Fixed: removed a sleep call used for debugging
+ author: !!str Anar Manafov
+-
+ commit: "55fc23abdf9ad9017ed4918715a8e46b58e29dbb"
+ message: >-
+    Updated release notes
+ author: !!str Anar Manafov
+-
+ commit: "3119a0067aa7737735515d2c025f16d1d4961de6"
+ message: >-
+    Fixed: key-value stability improvements.
+ author: !!str Andrey Lebedev
+-
+ commit: "2ca19de4e9b4b9cf679d624f320a70ba677dfc51"
+ message: >-
+    Added: new key-value functional test.
+ author: !!str Andrey Lebedev
+-
+ commit: "07aa5a958fe6f49c6f4353f987b5905596f03a3b"
+ message: >-
+    Fixed: the accumulativePushMsg method could wrongly push to the main queue even when Handshake is not yet successfully finished.
+ author: !!str Anar Manafov
