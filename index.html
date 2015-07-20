@@ -65,7 +65,7 @@ layout: default
                       {% for error_build in errors_summaries.by_build.buckets %}
                         {% if build_nr == error_build.key %}
                           <div class="panel panel-danger small">
-                            <div class="panel-heading">Build errors</div>
+                            <div class="panel-heading">Build errors ({{error_build.by_message.buckets | size}} unique errors)</div>
                             <div class="panel-body">
                             {% for message in error_build.by_message.buckets %}
                               <br/>{{message.key}}<br/>
@@ -92,7 +92,7 @@ layout: default
                       {% for warning_build in warnings_summaries.by_build.buckets %}
                         {% if build_nr == warning_build.key %}
                           <div class="panel panel-warning small">
-                            <div class="panel-heading">Build warnings</div>
+                            <div class="panel-heading">Build warnings ({{warning_build.by_message.buckets | size}} unique warnings)</div>
                             <div class="panel-body">
                             {% for message in warning_build.by_message.buckets %}
                               <br/>{{message.key}}<br/>
