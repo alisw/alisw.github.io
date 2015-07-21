@@ -1,4 +1,9 @@
 -
+ commit: "e547dfbd9f462cf87763d18ddff90816abd71cc0"
+ message: >-
+    GH-85: fix git error when using out of source build
+ author: !!str Anar Manafov
+-
  commit: "09b1c9cff945c2e510766aa17255cf62d8aaa835"
  message: >-
     GH-88: Give users a possibility to specify task requirement based on worker node name in the SSH configuration. Name can be specified as regular expression.
@@ -243,8 +248,3 @@
  message: >-
     Updated release notes
  author: !!str Anar Manafov
--
- commit: "3119a0067aa7737735515d2c025f16d1d4961de6"
- message: >-
-    Fixed: key-value stability improvements.
- author: !!str Andrey Lebedev
