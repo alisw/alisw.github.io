@@ -2,16 +2,33 @@
   "aggregations" : {
     "by_package" : {
       "buckets" : [ {
-        "key" : "o2",
+        "key" : "aliroot",
         "by_commit" : {
           "buckets" : [ {
-            "key" : "9f46402a",
+            "key" : "94533419",
             "build_id" : {
               "buckets" : [ {
-                "key" : "228",
+                "key" : "230",
                 "architecture" : {
                   "buckets" : [ {
-                    "key" : "slc7_x86-64",
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "ktf",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "231",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
                     "alidist_repo" : {
                       "buckets" : [ {
                         "key" : "ktf",
@@ -29,16 +46,16 @@
           } ]
         }
       }, {
-        "key" : "aliroot",
+        "key" : "o2",
         "by_commit" : {
           "buckets" : [ {
-            "key" : "94533419",
+            "key" : "9f46402a",
             "build_id" : {
               "buckets" : [ {
-                "key" : "230",
+                "key" : "228",
                 "architecture" : {
                   "buckets" : [ {
-                    "key" : "ubt14_x86-64",
+                    "key" : "slc7_x86-64",
                     "alidist_repo" : {
                       "buckets" : [ {
                         "key" : "ktf",
