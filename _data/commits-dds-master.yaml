@@ -1,4 +1,14 @@
 -
+ commit: "09b1c9cff945c2e510766aa17255cf62d8aaa835"
+ message: >-
+    GH-88: Give users a possibility to specify task requirement based on worker node name in the SSH configuration. Name can be specified as regular expression.
+ author: !!str Andrey Lebedev
+-
+ commit: "fa9788ac86fcb1115d05f2e1cee24ce863935ce9"
+ message: >-
+    starting a new dev. sprint - v0.12
+ author: !!str Anar Manafov
+-
  commit: "f7c79c4731d93262b783ea55da310254f4c47df1"
  message: >-
     Updated release notes for future 0.12
@@ -238,13 +248,3 @@
  message: >-
     Fixed: key-value stability improvements.
  author: !!str Andrey Lebedev
--
- commit: "2ca19de4e9b4b9cf679d624f320a70ba677dfc51"
- message: >-
-    Added: new key-value functional test.
- author: !!str Andrey Lebedev
--
- commit: "07aa5a958fe6f49c6f4353f987b5905596f03a3b"
- message: >-
-    Fixed: the accumulativePushMsg method could wrongly push to the main queue even when Handshake is not yet successfully finished.
- author: !!str Anar Manafov
