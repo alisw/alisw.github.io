@@ -1876,29 +1876,121 @@
         "key" : "271",
         "by_message" : {
           "buckets" : [ {
-            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "aliroot/v5-06-28/d5304f3152/STEER/STEER/AliRawDataHeaderSim.h",
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManager.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "12"
+                    "key" : "34"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "aliroot/v5-06-28/d5304f3152/STEER/STEER/AliQAManager.cxx",
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TAttImage.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "112"
-                  }, {
-                    "key" : "149"
-                  }, {
-                    "key" : "75"
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'class TEveVectorT<double>' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TEveVector.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "212"
                   } ]
                 }
               } ]
@@ -1952,6 +2044,30 @@
               } ]
             }
           }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1988,30 +2104,6 @@
               } ]
             }
           }, {
-            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "ubt14_x86-64/root/v5-34-30-1/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "ubt14_x86-64/root/v5-34-30-1/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2024,6 +2116,102 @@
               } ]
             }
           }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliEveDataSourceOffline' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveDataSourceOffline.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "16"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveDataSourceOffline(const AliEveDataSourceOffline&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveDataSourceOffline.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "16"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveDataSourceOffline&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveDataSourceOffline.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "16"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2031,6 +2219,30 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
                   } ]
                 }
               } ]
@@ -2059,76 +2271,41 @@
                     "key" : "931"
                   } ]
                 }
-              } ]
-            }
-          }, {
-            "key" : "conflicting types for built-in function 'malloc' [enabled by default]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "geant3/v2-0/v2-0/minicern/fchtak.c",
+              }, {
+                "key" : "aliroot/v5-06-28/d5304f3152/TPC/TPCcalib/AliTPCCorrectionFit.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "35"
+                    "key" : "187"
+                  }, {
+                    "key" : "260"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "format '%d' expects a matching 'int' argument [-Wformat=]",
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "aliroot/v5-06-28/d5304f3152/PHOS/PHOSbase/AliPHOSCpvPedProducer.cxx",
+                "key" : "ubt14_x86-64/root/v5-34-30-1/include/TNDArray.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "190"
+                    "key" : "126"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]",
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "geant3/v2-0/v2-0/minicern/locf.c",
+                "key" : "aliroot/v5-06-28/d5304f3152/STEER/STEER/AliQAManager.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "74"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "format '%lx' expects argument of type 'long unsigned int', but argument 3 has type 'long long unsigned int' [-Wformat=]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "geant3/v2-0/v2-0/minicern/locf.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "74"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "ignoring return value of 'int fscanf(FILE*, const char*, ...)', declared with attribute warn_unused_result [-Wunused-result]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "aliroot/v5-06-28/d5304f3152/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "124"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "aliroot/v5-06-28/d5304f3152/AD/ADrec/AliADTrending.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "41"
+                    "key" : "112"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "75"
                   } ]
                 }
               } ]
@@ -2141,18 +2318,176 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "524"
+                  }, {
+                    "key" : "525"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
+            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "root/v5-34-30/v5-34-30/net/alien/src/TAlienCollection.cxx",
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveConfigManager.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "1334"
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveDataSourceOffline::fEventManager' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveDataSourceOffline.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "79"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fMarkEvent' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fScreenshot' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fSwitchToHLT' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fSwitchToOffline' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fSwitchToOnline' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEveInit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEvePreferencesWindow::fAliceLive' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEvePreferencesWindow.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEvePreferencesWindow::fAutoload' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEvePreferencesWindow.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEvePreferencesWindow::fCancel' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEvePreferencesWindow.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEvePreferencesWindow::fDashNoRefit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/d5304f3152/EVE/EveBase/AliEvePreferencesWindow.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
                   } ]
                 }
               } ]
