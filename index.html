@@ -76,10 +76,10 @@ layout: default
                               <tbody>
                                 {% for filename in message.filename.buckets %}
                                 <tr>
-                                  <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:right;">
+                                  <td class="filename" >
                                       {{filename.key }}
                                   </td>
-                                  <td style="width: 10%;">{{filename.line.buckets[0].key}}</td>
+                                  <td class="linenumber">{{filename.line.buckets[0].key}}</td>
                                 </tr>
                                 {% endfor %}
                               </tbody>
@@ -106,7 +106,7 @@ layout: default
                               <tbody>
                                 {% for filename in message.filename.buckets %}
                                 <tr>
-                                  <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:right;">
+                                  <td class="filename">
                                       {{filename.key }}
                                   </td>
                                   <td style="width: 10%;">{{filename.line.buckets[0].key}}</td>

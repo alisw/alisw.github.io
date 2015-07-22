@@ -19,3 +19,14 @@ a.build-warnings:visited {
 a.build-warnings:hover {
   color: rgb(138, 109, 59);
 }
+
+.filename {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  text-align:left;
+}
+
+.line-number { 
+  width: 10%;
+}
