@@ -64,8 +64,8 @@ layout: default
                       ({{architecture}}) {{status}} using <a href="https://github.com/{{alidist_repo}}/alidist">{{alidist_repo}}/alidist</a></li>
                       {% for error_build in errors_summaries.by_build.buckets %}
                         {% if build_nr == error_build.key %}
-                          <div class="panel panel-danger small">
-                            <div class="panel-heading">Build errors ({{error_build.by_message.buckets | size}} unique errors)</div>
+                          <div id="errors{{build_nr}}" class="panel panel-danger small">
+                            <div class="panel-heading"><a href="#errors{{build_nr}}" class="build-errors">Build errors ({{error_build.by_message.buckets | size}} unique errors)</a></div>
                             <div class="panel-body">
                             {% for message in error_build.by_message.buckets %}
                               <br/>{{message.key}}<br/>
@@ -91,8 +91,11 @@ layout: default
                       {% endfor %}
                       {% for warning_build in warnings_summaries.by_build.buckets %}
                         {% if build_nr == warning_build.key %}
-                          <div class="panel panel-warning small">
-                            <div class="panel-heading">Build warnings ({{warning_build.by_message.buckets | size}} unique warnings)</div>
+                          <div id="warnings{{build_nr}}" class="panel panel-warning small">
+                            <div class="panel-heading">
+                              <a href="#warnings{{build_nr}}" class="build-warnings">
+                                Build warnings ({{warning_build.by_message.buckets | size}} unique warnings)</div>
+                              </a>
                             <div class="panel-body">
                             {% for message in warning_build.by_message.buckets %}
                               <br/>{{message.key}}<br/>
