@@ -8855,34 +8855,6 @@
         "key" : "319",
         "by_message" : {
           "buckets" : [ {
-            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "aliroot/v5-06-28/0faf019a0f/STEER/STEER/AliRawDataHeaderSim.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "aliroot/v5-06-28/0faf019a0f/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "112"
-                  }, {
-                    "key" : "149"
-                  }, {
-                    "key" : "75"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -8955,6 +8927,18 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/0faf019a0f/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -9003,6 +8987,22 @@
               } ]
             }
           }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/0faf019a0f/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "75"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -9027,6 +9027,102 @@
               } ]
             }
           }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/root/v5-34-30-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/root/v5-34-30-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/root/v5-34-30-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/root/v5-34-30-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/0faf019a0f/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/root/v5-34-30-1/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/0faf019a0f/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TStreamerInfo::TCompInfo(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/root/v5-34-30-1/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
             "filename" : {
               "buckets" : [ {
@@ -9034,6 +9130,30 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "41"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aliroot/v5-06-28/0faf019a0f/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/root/v5-34-30-1/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
                   } ]
                 }
               } ]
