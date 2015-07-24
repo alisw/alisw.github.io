@@ -11,6 +11,7 @@ layout: default
     {% assign errors_summaries = site.data.errors.aggregations %}
     {% assign warnings_summaries = site.data.warnings.aggregations %}
     {% assign status_summaries = site.data.status.aggregations %}
+    {% assign tools_infos = site.data.tools.hits.hits %}
 
     {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
@@ -61,7 +62,26 @@ layout: default
                         {% endif %}
                       {% endfor %}
 
-                      ({{architecture}}) {{status}} using <a href="https://github.com/{{alidist_repo}}/alidist">{{alidist_repo}}/alidist</a></li>
+
+                      ({{architecture}}) {{status}} using
+
+                      {% for tools_info in tools_infos %}
+                        {% if build_nr == tools_info._source.data.id %}
+                         {%assign alibuild_repo = tools_info._source.data.buildVariables.ALIBUILD_REPO %}
+                         {%assign alidist_repo = tools_info._source.data.buildVariables.ALIDIST_REPO %}
+                         {%assign alibuild_hash = tools_info._source.alibuild_hash %}
+                         {%assign alidist_hash = tools_info._source.alidist_hash %}
+                         <a href="https://github.com/{{alidist_repo}}/alidist/commits/{{alidist_hash}}">
+                            {{alidist_repo}}/alidist@{{alidist_hash | truncate: 11}}
+                         </a> 
+                         and
+                         <a href="https://github.com/{{alibuild_repo}}/alibuild/commits/{{alibuild_hash}}">
+                            {{alibuild_repo}}/alibuild@{{alibuild_hash | truncate: 11}}
+                         </a> 
+                        {% endif %}
+                      {% endfor %}
+                      </li>
+
                       {% for error_build in errors_summaries.by_build.buckets %}
                         {% if build_nr == error_build.key %}
                           <div id="errors{{build_nr}}" class="panel panel-danger small">
