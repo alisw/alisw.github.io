@@ -23,7 +23,7 @@ layout: default
     <div class="tab-content">
     {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
-      {%capture commit_file %}commits-{{product_name}}-master{%endcapture%}
+      {%capture commit_file %}commits-{{product_name | downcase}}-master{%endcapture%}
       <div role="tabpanel" class="tab-pane {% if forloop.first == true %}active{%endif%}" id="{{product_name}}">
         {% assign commits = site.data[commit_file] %}
         <div class="list-group">
