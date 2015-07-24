@@ -177,6 +177,20 @@
               } ]
             }
           }, {
+            "key" : "format not a string literal and no format arguments [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/3518bddc4b/TPC/TPCbase/AliTPCCalPad.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "914"
+                  }, {
+                    "key" : "931"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "conflicting types for built-in function 'malloc' [enabled by default]",
             "filename" : {
               "buckets" : [ {
@@ -184,6 +198,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "35"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%d' expects a matching 'int' argument [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/3518bddc4b/PHOS/PHOSbase/AliPHOSCpvPedProducer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "190"
                   } ]
                 }
               } ]
@@ -208,6 +234,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'int fscanf(FILE*, const char*, ...)', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/3518bddc4b/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
                   } ]
                 }
               } ]
@@ -620,6 +658,18 @@
         "key" : "361",
         "by_message" : {
           "buckets" : [ {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/3518bddc4b/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -703,18 +753,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "AliRoot/v5-06-28/3518bddc4b/STEER/STEER/AliRawDataHeaderSim.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
                   } ]
                 }
               } ]
