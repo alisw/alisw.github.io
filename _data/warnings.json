@@ -620,13 +620,17 @@
         "key" : "361",
         "by_message" : {
           "buckets" : [ {
-            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "AliRoot/v5-06-28/3518bddc4b/STEER/STEER/AliRawDataHeaderSim.h",
+                "key" : "AliRoot/v5-06-28/3518bddc4b/STEER/STEER/AliQAManager.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "12"
+                    "key" : "112"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "75"
                   } ]
                 }
               } ]
@@ -704,13 +708,13 @@
               } ]
             }
           }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "slc7_x86-64/ROOT/v5-34-30-1/include/TText.h",
+                "key" : "AliRoot/v5-06-28/3518bddc4b/STEER/STEER/AliRawDataHeaderSim.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "42"
+                    "key" : "12"
                   } ]
                 }
               } ]
@@ -740,18 +744,6 @@
               } ]
             }
           }, {
-            "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "AliRoot/v5-06-28/3518bddc4b/AD/ADrec/AliADTrending.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "41"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -771,6 +763,42 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/ROOT/v5-34-30-1/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/ROOT/v5-34-30-1/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/3518bddc4b/AD/ADrec/AliADTrending.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
                   } ]
                 }
               } ]
