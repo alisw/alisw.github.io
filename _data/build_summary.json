@@ -2,6 +2,50 @@
   "aggregations" : {
     "by_package" : {
       "buckets" : [ {
+        "key" : "aliroot-test",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "0",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "358",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "359",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "aliroot",
         "by_commit" : {
           "buckets" : [ {
@@ -51,50 +95,6 @@
                 "architecture" : {
                   "buckets" : [ {
                     "key" : "slc7_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "alisw",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "master"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "aliroot-test",
-        "by_commit" : {
-          "buckets" : [ {
-            "key" : "0",
-            "build_id" : {
-              "buckets" : [ {
-                "key" : "358",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "ubt14_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "alisw",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "master"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              }, {
-                "key" : "359",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "slc6_x86-64",
                     "alidist_repo" : {
                       "buckets" : [ {
                         "key" : "alisw",
