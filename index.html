@@ -99,10 +99,17 @@ layout: default
                                   <a href="https://ali-ci.cern.ch/build-any-ib/{{ test_build.key }}/{{test_name.key}}">{{ status.key }}</a>
                                 </td>
                               </tr>
+                              {% else if status.key == "FAILED" %}
+                              <tr class="danger test-failed">
+                                <td>{{ test_name.key }}</td>
+                                <td>
+                                  <a href="https://ali-ci.cern.ch/build-any-ib/{{ test_build.key }}/{{test_name.key}}">{{ status.key }}</a>
+                                </td>
+                              </tr>
                               {% else %}
                               <tr>
                                 <td>{{ test_name.key }}</td>
-                                <td>PENDING</td>
+                                <td>{{ status.key }}</td>
                               </tr>
                               {% endif %}
                           {% endfor %}
