@@ -85,17 +85,30 @@ layout: default
 
                       {% for test_build in tests_status.by_id.buckets %}
                         {% if build_nr == test_build.key %}
-                        Tests:
+                        <div id="tests{{build_nr}}" class="panel panel-default small">
+                        <div class="panel-heading"><a href="#tests{{build_nr}}">Test results</a></div>
+                        <div class="panel-body">
                         <table class="table">
                           <tr><th>Name</th><th>Status</th></tr>
                           {% for test_name in test_build.by_name.buckets %}
                             {% assign status = test_name.status.buckets | last %}
-                            <tr>
-                              <td>{{ test_name.key }}</td>
-                              <td>{{ status.key }}</td>
-                            </tr>
+                              {% if status.key == "SUCCESS" %}
+                              <tr class="success test-success">
+                                <td>{{ test_name.key }}</td>
+                                <td>
+                                  <a href="https://ali-ci.cern.ch/build-any-ib/{{ test_build.key }}/{{test_name.key}}">{{ status.key }}</a>
+                                </td>
+                              </tr>
+                              {% else %}
+                              <tr>
+                                <td>{{ test_name.key }}</td>
+                                <td>PENDING</td>
+                              </tr>
+                              {% endif %}
                           {% endfor %}
                         </table>
+                        </div>
+                        </div>
                         {% endif %}
                       {% endfor %}
 
