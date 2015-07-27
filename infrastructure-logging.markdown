@@ -31,7 +31,8 @@ then periodically query the elasticsearch instance, using the script
 [get_builds](https://github.com/alisw/ali-bot/blob/master/script/get_builds.sh)
 and populate relevant web pages in <https://ali-ci.cern.ch> or its Github
 mirror <http://alisw.github.io>. Query results are stored as JSON files in the
-repository and Jekyll Pages are populated using the data provided there.
+[es](https://github.com/alisw/ali-bot/blob/master/es)
+directory and Jekyll Pages are populated using the data provided there.
 
 Finally, for quick data-mining, a Kibana 4 interface is provided at
 <http://kibana.marathon.mesos:5601>, again only visible from inside the build
