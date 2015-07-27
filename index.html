@@ -12,6 +12,7 @@ layout: default
     {% assign warnings_summaries = site.data.warnings.aggregations %}
     {% assign status_summaries = site.data.status.aggregations %}
     {% assign tools_infos = site.data.tools.hits.hits %}
+    {% assign tests_status = site.data.tests_status.aggregations %}
 
     {% for product in summaries.by_package.buckets %}
       {% assign product_name = product.key %}
@@ -81,6 +82,22 @@ layout: default
                         {% endif %}
                       {% endfor %}
                       </li>
+
+                      {% for test_build in tests_status.by_id.buckets %}
+                        {% if build_nr == test_build.key %}
+                        Tests:
+                        <table class="table">
+                          <tr><th>Name</th><th>Status</th></tr>
+                          {% for test_name in test_build.by_name.buckets %}
+                            {% assign status = test_name.status.buckets | last %}
+                            <tr>
+                              <td>{{ test_name.key }}</td>
+                              <td>{{ status.key }}</td>
+                            </tr>
+                          {% endfor %}
+                        </table>
+                        {% endif %}
+                      {% endfor %}
 
                       {% for error_build in errors_summaries.by_build.buckets %}
                         {% if build_nr == error_build.key %}
