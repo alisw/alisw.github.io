@@ -5003,6 +5003,59 @@
           } ]
         }
       }, {
+        "key" : "378",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "conflicting types for built-in function 'malloc' [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "GEANT3/v2-0/v2-0/minicern/fchtak.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "35"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "GEANT3/v2-0/v2-0/minicern/locf.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%lx' expects argument of type 'long unsigned int', but argument 3 has type 'long long unsigned int' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "GEANT3/v2-0/v2-0/minicern/locf.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ROOT/v5-34-30/v5-34-30/net/alien/src/TAlienCollection.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "356",
         "by_message" : {
           "buckets" : [ {
@@ -5064,23 +5117,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "41"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "378",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "ROOT/v5-34-30/v5-34-30/net/alien/src/TAlienCollection.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
                   } ]
                 }
               } ]
