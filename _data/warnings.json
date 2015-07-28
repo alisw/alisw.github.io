@@ -10279,34 +10279,6 @@
         "key" : "413",
         "by_message" : {
           "buckets" : [ {
-            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "AliRoot/v5-06-28/635d1c6810/STEER/STEER/AliRawDataHeaderSim.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "AliRoot/v5-06-28/635d1c6810/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "112"
-                  }, {
-                    "key" : "149"
-                  }, {
-                    "key" : "75"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -10427,6 +10399,94 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/635d1c6810/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/635d1c6810/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "75"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -10434,6 +10494,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
                   } ]
                 }
               } ]
@@ -10465,6 +10537,128 @@
               } ]
             }
           }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "too many arguments for format [-Wformat-extra-args]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/635d1c6810/TPC/TPCbase/AliTPCROCVoltError3D.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "524"
+                  }, {
+                    "key" : "525"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/635d1c6810/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/635d1c6810/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TStreamerInfo::TCompInfo(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "format '%d' expects a matching 'int' argument [-Wformat=]",
             "filename" : {
               "buckets" : [ {
@@ -10484,6 +10678,30 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-28/635d1c6810/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "INSTALLROOT/5476f95ee66d32b7303afd5e2f7f287e3f5e3171/ubt14_x86-64/ROOT/v5-34-30-alice2-1/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
                   } ]
                 }
               } ]
