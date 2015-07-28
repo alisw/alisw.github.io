@@ -1,4 +1,9 @@
 -
+ commit: "ef080edc193b8c4dada90a157f960a2b21dbe2d9"
+ message: >-
+    split method retrieving SM matrices in 2, one devoted to the retrieval from the TGeoManager, so that this part can also be used externally at analysis level; fix coding conventions add doxygen type comments
+ author: !!str gconesab
+-
  commit: "c5f89d36f4c0255cca2ebf07e3655f6b08d0f88c"
  message: >-
     Don't fit vertex with 0 tracklets
