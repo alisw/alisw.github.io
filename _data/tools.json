@@ -1,5 +1,5 @@
 {
-  "took" : 31,
+  "took" : 37,
   "timed_out" : false,
   "_shards" : {
     "total" : 21,
@@ -7,9 +7,24 @@
     "failed" : 0
   },
   "hits" : {
-    "total" : 45,
+    "total" : 46,
     "max_score" : null,
     "hits" : [ {
+      "_index" : "logstash-2015.07.28",
+      "_type" : "logs",
+      "_id" : "AU7U5Fs2PfJHbtQwh9I_",
+      "_score" : null,
+      "_source":{"data":{"id":"414","projectName":"build-any-ib","displayName":"#414","fullDisplayName":"build-any-ib #414","url":"job/build-any-ib/414/","buildHost":"Jenkins","buildLabel":"master","buildNum":414,"buildDuration":0,"timestamp":"2015-07-28T15:40:01+0200","rootProjectName":"build-any-ib","rootProjectDisplayName":"#414","rootBuildNum":414,"buildVariables":{"ALIBUILD_REPO":"alisw","ALIDIST_REPO":"alisw","ARCHITECTURE":"slc6_x86-64","ALIBUILD_BRANCH":"master","PACKAGE_NAME":"o2","ALIDIST_BRANCH":"master","OVERRIDE_TAGS":"aliroot=master"}},"source":"jenkins","source_host":"https://alijenkins01.cern.ch:8080/","@timestamp":"2015-07-28T13:40:01.000Z","@version":1,"alibuild_hash":"41275db686f7750c1ad307d619471317bcd1031d","alidist_hash":"75dfe4ab8dccb26937b8fa4b4aae2994510ab03d","message_type":"tools_info"},
+      "fields" : {
+        "data.timestamp" : [ 1438090801000 ],
+        "@timestamp" : [ 1438090801000 ]
+      },
+      "highlight" : {
+        "message_type.raw" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ],
+        "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
+      },
+      "sort" : [ 1438090801000 ]
+    }, {
       "_index" : "logstash-2015.07.28",
       "_type" : "logs",
       "_id" : "AU7U4ZzzPfJHbtQwh9I2",
@@ -46471,6 +46486,34 @@
       }, {
         "key_as_string" : "2015-07-28T13:36:30.000Z",
         "key" : 1438090590000,
+        "doc_count" : 1
+      }, {
+        "key_as_string" : "2015-07-28T13:37:00.000Z",
+        "key" : 1438090620000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-28T13:37:30.000Z",
+        "key" : 1438090650000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-28T13:38:00.000Z",
+        "key" : 1438090680000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-28T13:38:30.000Z",
+        "key" : 1438090710000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-28T13:39:00.000Z",
+        "key" : 1438090740000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-28T13:39:30.000Z",
+        "key" : 1438090770000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-28T13:40:00.000Z",
+        "key" : 1438090800000,
         "doc_count" : 1
       } ]
     }
