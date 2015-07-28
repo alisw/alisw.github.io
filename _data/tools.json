@@ -6,9 +6,39 @@
     "failed" : 0
   },
   "hits" : {
-    "total" : 61,
+    "total" : 63,
     "max_score" : null,
     "hits" : [ {
+      "_index" : "logstash-2015.07.28",
+      "_type" : "logs",
+      "_id" : "AU7WlchrPfJHbtQwh9qI",
+      "_score" : null,
+      "_source":{"data":{"id":"431","projectName":"build-any-ib","displayName":"#431","fullDisplayName":"build-any-ib #431","url":"job/build-any-ib/431/","buildHost":"Jenkins","buildLabel":"master","buildNum":431,"buildDuration":0,"timestamp":"2015-07-28T23:33:22+0200","rootProjectName":"build-any-ib","rootProjectDisplayName":"#431","rootBuildNum":431,"buildVariables":{"ALIBUILD_REPO":"alisw","ALIDIST_REPO":"alisw","ARCHITECTURE":"slc6_x86-64","ALIBUILD_BRANCH":"master","PACKAGE_NAME":"o2","ALIDIST_BRANCH":"master","OVERRIDE_TAGS":"aliroot=master"}},"source":"jenkins","source_host":"https://alijenkins01.cern.ch:8080/","@timestamp":"2015-07-28T21:33:22.000Z","@version":1,"alibuild_hash":"f7b9deb64a7e9fe9240259ae620b772c42dd684c","alidist_hash":"e756f5c8e7c4a9274930d4598cb7edce7243a0c9","message_type":"tools_info"},
+      "fields" : {
+        "data.timestamp" : [ 1438119202000 ],
+        "@timestamp" : [ 1438119202000 ]
+      },
+      "highlight" : {
+        "message_type.raw" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ],
+        "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
+      },
+      "sort" : [ 1438119202000 ]
+    }, {
+      "_index" : "logstash-2015.07.28",
+      "_type" : "logs",
+      "_id" : "AU7WlbwsPfJHbtQwh9qH",
+      "_score" : null,
+      "_source":{"data":{"id":"430","projectName":"build-any-ib","displayName":"#430","fullDisplayName":"build-any-ib #430","url":"job/build-any-ib/430/","buildHost":"Jenkins","buildLabel":"master","buildNum":430,"buildDuration":0,"timestamp":"2015-07-28T23:33:04+0200","rootProjectName":"build-any-ib","rootProjectDisplayName":"#430","rootBuildNum":430,"buildVariables":{"ALIBUILD_REPO":"alisw","ALIDIST_REPO":"alisw","ARCHITECTURE":"slc7_x86-64","ALIBUILD_BRANCH":"master","PACKAGE_NAME":"o2","ALIDIST_BRANCH":"master","OVERRIDE_TAGS":"aliroot=master"}},"source":"jenkins","source_host":"https://alijenkins01.cern.ch:8080/","@timestamp":"2015-07-28T21:33:04.000Z","@version":1,"alibuild_hash":"f7b9deb64a7e9fe9240259ae620b772c42dd684c","alidist_hash":"e756f5c8e7c4a9274930d4598cb7edce7243a0c9","message_type":"tools_info"},
+      "fields" : {
+        "data.timestamp" : [ 1438119184000 ],
+        "@timestamp" : [ 1438119184000 ]
+      },
+      "highlight" : {
+        "message_type.raw" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ],
+        "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
+      },
+      "sort" : [ 1438119184000 ]
+    }, {
       "_index" : "logstash-2015.07.28",
       "_type" : "logs",
       "_id" : "AU7WlVvOPfJHbtQwh9p0",
@@ -50522,7 +50552,7 @@
       }, {
         "key_as_string" : "2015-07-28T21:33:00.000Z",
         "key" : 1438119180000,
-        "doc_count" : 1
+        "doc_count" : 3
       } ]
     }
   }
