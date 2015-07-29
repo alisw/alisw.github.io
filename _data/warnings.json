@@ -13526,6 +13526,36 @@
         "key" : "441",
         "by_message" : {
           "buckets" : [ {
+            "key" : "ignoring return value of 'char* fgets(char*, int, FILE*)', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "FairRoot/master/75ab8a4aa6/generators/FairUrqmdGenerator.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "106"
+                  }, {
+                    "key" : "123"
+                  }, {
+                    "key" : "128"
+                  }, {
+                    "key" : "133"
+                  }, {
+                    "key" : "134"
+                  }, {
+                    "key" : "135"
+                  }, {
+                    "key" : "138"
+                  }, {
+                    "key" : "139"
+                  }, {
+                    "key" : "142"
+                  }, {
+                    "key" : "143"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "typedef 'must_be_a_complete_type' locally defined but not used [-Wunused-local-typedefs]",
             "filename" : {
               "buckets" : [ {
@@ -13706,6 +13736,66 @@
               } ]
             }
           }, {
+            "key" : "format '%lld' expects argument of type 'long long int', but argument 2 has type 'lmdoff_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "FairRoot/master/75ab8a4aa6/MbsAPI/fLmd.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1043"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%lld' expects argument of type 'long long int', but argument 3 has type 'lmdoff_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "FairRoot/master/75ab8a4aa6/MbsAPI/fLmd.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1043"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%lld' expects argument of type 'long long int', but argument 4 has type 'lmdoff_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "FairRoot/master/75ab8a4aa6/MbsAPI/fLmd.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1043"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%lld' expects argument of type 'long long int', but argument 5 has type 'uint64_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "FairRoot/master/75ab8a4aa6/MbsAPI/fLmd.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1190"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%llx' expects argument of type 'long long unsigned int', but argument 9 has type 'lmdoff_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "FairRoot/master/75ab8a4aa6/MbsAPI/fLmd.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1152"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]",
             "filename" : {
               "buckets" : [ {
@@ -13725,6 +13815,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'FILE* freopen(const char*, const char*, FILE*)', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "FairRoot/master/75ab8a4aa6/fairtools/FairLogger.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "507"
                   } ]
                 }
               } ]
