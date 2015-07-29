@@ -14071,6 +14071,68 @@
               } ]
             }
           }, {
+            "key" : "too many arguments for format [-Wformat-extra-args]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-35/402fc6c7b2/TPC/TPCbase/AliTPCROCVoltError3D.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "524"
+                  }, {
+                    "key" : "525"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-35/402fc6c7b2/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/ROOT/v5-34-30-alice2-2/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-35/402fc6c7b2/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TStreamerInfo::TCompInfo(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/ROOT/v5-34-30-alice2-2/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "format '%d' expects a matching 'int' argument [-Wformat=]",
             "filename" : {
               "buckets" : [ {
@@ -14078,6 +14140,42 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "190"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'int fscanf(FILE*, const char*, ...)', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-35/402fc6c7b2/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/v5-06-35/402fc6c7b2/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/ROOT/v5-34-30-alice2-2/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
                   } ]
                 }
               } ]
