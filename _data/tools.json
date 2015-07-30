@@ -6,9 +6,24 @@
     "failed" : 0
   },
   "hits" : {
-    "total" : 100,
+    "total" : 101,
     "max_score" : null,
     "hits" : [ {
+      "_index" : "logstash-2015.07.30",
+      "_type" : "logs",
+      "_id" : "AU7em49NPfJHbtQwh_al",
+      "_score" : null,
+      "_source":{"data":{"id":"470","projectName":"build-any-ib","displayName":"#470","fullDisplayName":"build-any-ib #470","url":"job/build-any-ib/470/","buildHost":"Jenkins","buildLabel":"master","buildNum":470,"buildDuration":0,"timestamp":"2015-07-30T12:56:43+0200","rootProjectName":"build-any-ib","rootProjectDisplayName":"#470","rootBuildNum":470,"buildVariables":{"ALIBUILD_REPO":"alisw","ALIDIST_REPO":"alisw","ARCHITECTURE":"slc7_x86-64","MESOS_QUEUE_SIZE":"large","ALIBUILD_BRANCH":"master","PACKAGE_NAME":"o2","ALIDIST_BRANCH":"master","OVERRIDE_TAGS":"aliroot=master"}},"source":"jenkins","source_host":"https://alijenkins01.cern.ch:8080/","@timestamp":"2015-07-30T10:56:43.000Z","@version":1,"alibuild_hash":"594f92e477a767c1d73f353f3982c782d261a52e","alidist_hash":"44c3f414dae514302ad97383cec25337ac6bc0f2","message_type":"tools_info"},
+      "fields" : {
+        "data.timestamp" : [ 1438253803000 ],
+        "@timestamp" : [ 1438253803000 ]
+      },
+      "highlight" : {
+        "message_type.raw" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ],
+        "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
+      },
+      "sort" : [ 1438253803000 ]
+    }, {
       "_index" : "logstash-2015.07.30",
       "_type" : "logs",
       "_id" : "AU7emSXsPfJHbtQwh_aV",
@@ -69035,6 +69050,26 @@
       }, {
         "key_as_string" : "2015-07-30T10:54:00.000Z",
         "key" : 1438253640000,
+        "doc_count" : 1
+      }, {
+        "key_as_string" : "2015-07-30T10:54:30.000Z",
+        "key" : 1438253670000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-30T10:55:00.000Z",
+        "key" : 1438253700000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-30T10:55:30.000Z",
+        "key" : 1438253730000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-30T10:56:00.000Z",
+        "key" : 1438253760000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-30T10:56:30.000Z",
+        "key" : 1438253790000,
         "doc_count" : 1
       } ]
     }
