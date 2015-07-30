@@ -1,4 +1,19 @@
 -
+ commit: "4a37544f7a310e23aeeae5fe4b5be82702065672"
+ message: >-
+    Install files with parameters
+ author: !!str hristov
+-
+ commit: "9df3baae3682e27e9b2ab47798f4e4a4c07763f8"
+ message: >-
+    Restore EPOS test
+ author: !!str hristov
+-
+ commit: "8fb8d977958f1e6fb5125d7423df1a2a16b9342e"
+ message: >-
+    ATO-185, ATO-164, ATO-183, AOC-12 - algorithm work properly also for the 100% truncation before results in this case were undefined
+ author: !!str hristov
+-
  commit: "1f01de24ecd23cc022f382e7a0b370e1fc6d157b"
  message: >-
     ATO-185, ATO-164, ATO-183, AOC-12 - Update. adding otpition for outlier removal. Optional robust nsigma cut. Extending using test to cover the robust option case
@@ -113,8 +128,3 @@
  message: >-
      ATO-185, ATO-164, ATO-183, AOC-12 - check of the input histograms granulartity
  author: !!str mivanov
--
- commit: "4f825e0687c0df8c5854deea0ef53d829b750178"
- message: >-
-    Add missing dependency on libCore
- author: !!str eulisse
