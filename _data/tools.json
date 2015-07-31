@@ -6,9 +6,24 @@
     "failed" : 0
   },
   "hits" : {
-    "total" : 117,
+    "total" : 118,
     "max_score" : null,
     "hits" : [ {
+      "_index" : "logstash-2015.07.31",
+      "_type" : "logs",
+      "_id" : "AU7kQG4EPfJHbtQwiAPU",
+      "_score" : null,
+      "_source":{"data":{"id":"487","projectName":"build-any-ib","displayName":"#487","fullDisplayName":"build-any-ib #487","url":"job/build-any-ib/487/","buildHost":"Jenkins","buildLabel":"master","buildNum":487,"buildDuration":0,"timestamp":"2015-07-31T15:14:45+0200","rootProjectName":"build-any-ib","rootProjectDisplayName":"#487","rootBuildNum":487,"buildVariables":{"ALIBUILD_REPO":"alisw","ALIDIST_REPO":"alisw","ARCHITECTURE":"slc7_x86-64","MESOS_QUEUE_SIZE":"large","ALIBUILD_BRANCH":"master","PACKAGE_NAME":"aliroot-test","ALIDIST_BRANCH":"master","OVERRIDE_TAGS":"aliroot=master"}},"source":"jenkins","source_host":"https://alijenkins01.cern.ch:8080/","@timestamp":"2015-07-31T13:14:45.000Z","@version":1,"alibuild_hash":"594f92e477a767c1d73f353f3982c782d261a52e","alidist_hash":"db2989bce4feb135524d1d0cd2934656454834d3","message_type":"tools_info"},
+      "fields" : {
+        "data.timestamp" : [ 1438348485000 ],
+        "@timestamp" : [ 1438348485000 ]
+      },
+      "highlight" : {
+        "message_type.raw" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ],
+        "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
+      },
+      "sort" : [ 1438348485000 ]
+    }, {
       "_index" : "logstash-2015.07.31",
       "_type" : "logs",
       "_id" : "AU7kGWCkPfJHbtQwh_7I",
@@ -81594,6 +81609,346 @@
       }, {
         "key_as_string" : "2015-07-31T12:32:00.000Z",
         "key" : 1438345920000,
+        "doc_count" : 1
+      }, {
+        "key_as_string" : "2015-07-31T12:32:30.000Z",
+        "key" : 1438345950000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:33:00.000Z",
+        "key" : 1438345980000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:33:30.000Z",
+        "key" : 1438346010000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:34:00.000Z",
+        "key" : 1438346040000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:34:30.000Z",
+        "key" : 1438346070000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:35:00.000Z",
+        "key" : 1438346100000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:35:30.000Z",
+        "key" : 1438346130000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:36:00.000Z",
+        "key" : 1438346160000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:36:30.000Z",
+        "key" : 1438346190000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:37:00.000Z",
+        "key" : 1438346220000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:37:30.000Z",
+        "key" : 1438346250000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:38:00.000Z",
+        "key" : 1438346280000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:38:30.000Z",
+        "key" : 1438346310000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:39:00.000Z",
+        "key" : 1438346340000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:39:30.000Z",
+        "key" : 1438346370000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:40:00.000Z",
+        "key" : 1438346400000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:40:30.000Z",
+        "key" : 1438346430000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:41:00.000Z",
+        "key" : 1438346460000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:41:30.000Z",
+        "key" : 1438346490000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:42:00.000Z",
+        "key" : 1438346520000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:42:30.000Z",
+        "key" : 1438346550000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:43:00.000Z",
+        "key" : 1438346580000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:43:30.000Z",
+        "key" : 1438346610000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:44:00.000Z",
+        "key" : 1438346640000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:44:30.000Z",
+        "key" : 1438346670000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:45:00.000Z",
+        "key" : 1438346700000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:45:30.000Z",
+        "key" : 1438346730000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:46:00.000Z",
+        "key" : 1438346760000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:46:30.000Z",
+        "key" : 1438346790000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:47:00.000Z",
+        "key" : 1438346820000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:47:30.000Z",
+        "key" : 1438346850000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:48:00.000Z",
+        "key" : 1438346880000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:48:30.000Z",
+        "key" : 1438346910000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:49:00.000Z",
+        "key" : 1438346940000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:49:30.000Z",
+        "key" : 1438346970000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:50:00.000Z",
+        "key" : 1438347000000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:50:30.000Z",
+        "key" : 1438347030000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:51:00.000Z",
+        "key" : 1438347060000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:51:30.000Z",
+        "key" : 1438347090000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:52:00.000Z",
+        "key" : 1438347120000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:52:30.000Z",
+        "key" : 1438347150000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:53:00.000Z",
+        "key" : 1438347180000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:53:30.000Z",
+        "key" : 1438347210000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:54:00.000Z",
+        "key" : 1438347240000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:54:30.000Z",
+        "key" : 1438347270000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:55:00.000Z",
+        "key" : 1438347300000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:55:30.000Z",
+        "key" : 1438347330000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:56:00.000Z",
+        "key" : 1438347360000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:56:30.000Z",
+        "key" : 1438347390000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:57:00.000Z",
+        "key" : 1438347420000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:57:30.000Z",
+        "key" : 1438347450000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:58:00.000Z",
+        "key" : 1438347480000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:58:30.000Z",
+        "key" : 1438347510000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:59:00.000Z",
+        "key" : 1438347540000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T12:59:30.000Z",
+        "key" : 1438347570000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:00:00.000Z",
+        "key" : 1438347600000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:00:30.000Z",
+        "key" : 1438347630000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:01:00.000Z",
+        "key" : 1438347660000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:01:30.000Z",
+        "key" : 1438347690000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:02:00.000Z",
+        "key" : 1438347720000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:02:30.000Z",
+        "key" : 1438347750000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:03:00.000Z",
+        "key" : 1438347780000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:03:30.000Z",
+        "key" : 1438347810000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:04:00.000Z",
+        "key" : 1438347840000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:04:30.000Z",
+        "key" : 1438347870000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:05:00.000Z",
+        "key" : 1438347900000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:05:30.000Z",
+        "key" : 1438347930000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:06:00.000Z",
+        "key" : 1438347960000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:06:30.000Z",
+        "key" : 1438347990000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:07:00.000Z",
+        "key" : 1438348020000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:07:30.000Z",
+        "key" : 1438348050000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:08:00.000Z",
+        "key" : 1438348080000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:08:30.000Z",
+        "key" : 1438348110000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:09:00.000Z",
+        "key" : 1438348140000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:09:30.000Z",
+        "key" : 1438348170000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:10:00.000Z",
+        "key" : 1438348200000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:10:30.000Z",
+        "key" : 1438348230000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:11:00.000Z",
+        "key" : 1438348260000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:11:30.000Z",
+        "key" : 1438348290000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:12:00.000Z",
+        "key" : 1438348320000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:12:30.000Z",
+        "key" : 1438348350000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:13:00.000Z",
+        "key" : 1438348380000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:13:30.000Z",
+        "key" : 1438348410000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:14:00.000Z",
+        "key" : 1438348440000,
+        "doc_count" : 0
+      }, {
+        "key_as_string" : "2015-07-31T13:14:30.000Z",
+        "key" : 1438348470000,
         "doc_count" : 1
       } ]
     }
