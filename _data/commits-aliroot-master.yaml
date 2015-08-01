@@ -1,4 +1,14 @@
 -
+ commit: "bed04a9914d0d372c8c565b899799c4c24945a54"
+ message: >-
+     ATO-123,ATO-129, ATO-257 - modification for noise generation
+ author: !!str mivanov
+-
+ commit: "c4f231398cba5e0519c7010318cf70dfebdda109"
+ message: >-
+    ATO-123, ATO-129, ATO-257  modification for noise simulation  //  This table is used in digitization after renormalization to the pad noise (in ADC TPC/Calib/PadNoise entry)   //   in case norm==kFALSE use normalization to 1   //  MI - 01.08.2015 - related to ATO-123, ATO-129   //  !!!! IN all old simulation the default normalization factor was ~1   //  !!!! In the RUN3 simulation Chip normalization increased by factor of 1.8 (12->20)   //  !!!!    in OLD logic this lead to the overestimation of the noise by factor 1.8   //       As the calibration entry for the noise is and will be expressed in ADC units   //       we will keep the default normalization of the table 1   //       Assuming we will keep TPC OCDB entry  for the noise in the ADC Units   //  THIS IS TEMPORARY DECISSION, which has to be confirmed by TPC offline group and properly documented
+ author: !!str mivanov
+-
  commit: "da1a9964ef94c432b7a55017383da70759935eb4"
  message: >-
     ATO-123, ATO-129 - Extended print option. Used for the debugging of the Noise OCDB entry for task mention. +Preparation for the AliOCDBToolkit.Print() to keeptrack/compare/diff/OCDB content
