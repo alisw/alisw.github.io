@@ -6,7 +6,7 @@
     "failed" : 0
   },
   "hits" : {
-    "total" : 140,
+    "total" : 139,
     "max_score" : null,
     "hits" : [ {
       "_index" : "logstash-2015.08.03",
@@ -2093,21 +2093,6 @@
         "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
       },
       "sort" : [ 1438016299000 ]
-    }, {
-      "_index" : "logstash-2015.07.27",
-      "_type" : "logs",
-      "_id" : "AU7Uggc3PfJHbtQwh760",
-      "_score" : null,
-      "_source":{"data":{"id":"392","projectName":"build-any-ib","displayName":"#392","fullDisplayName":"build-any-ib #392","url":"job/build-any-ib/392/","buildHost":"Jenkins","buildLabel":"master","buildNum":392,"buildDuration":0,"timestamp":"2015-07-27T18:48:49+0200","rootProjectName":"build-any-ib","rootProjectDisplayName":"#392","rootBuildNum":392,"buildVariables":{"ALIBUILD_REPO":"ktf","ALIDIST_REPO":"ktf","ARCHITECTURE":"slc7_x86-64","ALIBUILD_BRANCH":"master","PACKAGE_NAME":"aliroot-test","ALIDIST_BRANCH":"master","OVERRIDE_TAGS":"aliroot=master"}},"source":"jenkins","source_host":"http://alijenkins01.cern.ch:8080/","@timestamp":"2015-07-27T16:48:49.000Z","@version":1,"alibuild_hash":"e76d0c62dccc12e40b18cc42f704b3f55f796172","alidist_hash":"bef2bd56fdd82ab8b9147be7b2ee693b932b7ef5","message_type":"tools_info"},
-      "fields" : {
-        "data.timestamp" : [ 1438015729000 ],
-        "@timestamp" : [ 1438015729000 ]
-      },
-      "highlight" : {
-        "message_type.raw" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ],
-        "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
-      },
-      "sort" : [ 1438015729000 ]
     } ]
   },
   "aggregations" : {
@@ -37911,7 +37896,7 @@
       }, {
         "key_as_string" : "2015-07-27T16:48:30.000Z",
         "key" : 1438015710000,
-        "doc_count" : 1
+        "doc_count" : 0
       }, {
         "key_as_string" : "2015-07-27T16:49:00.000Z",
         "key" : 1438015740000,
