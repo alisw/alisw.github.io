@@ -1,4 +1,9 @@
 -
+ commit: "61c9717c79e9afc4a017a287bcb7ae1507f93464"
+ message: >-
+    Agent IDs changed from UUID to CRC64 uint64_t.
+ author: !!str Andrey Lebedev
+-
  commit: "c762e1b76d9bcdd83b9ead3ff464c1763b958cc3"
  message: >-
     fix compilation error on SLC6
@@ -242,9 +247,4 @@
  commit: "e39718ee4c66147027c5bbca339ba2f418a8b3d5"
  message: >-
     GH-80:  fix monitoring thread to prevent breaks if custom callbacks throw exceptions.
- author: !!str Anar Manafov
--
- commit: "60806a0de50a50b962369ab01afeca7e51b88615"
- message: >-
-    GH-81: Updated release notes
  author: !!str Anar Manafov
