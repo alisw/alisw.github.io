@@ -1,325 +1,105 @@
 -
- commit: "574a8127880d1aa6c5011ec1e52315d0b06fbd4d"
+ commit: "6b750084b082b257b6ff90db6592b818287835ec"
  message: >-
-    CMake: cleanup
- author: !!str dberzano
--
- commit: "af8a06058700d2dfe406587e9d4d7d170ccb7e42"
- message: >-
-    CMake: enforce correct ROOT version
- author: !!str dberzano
--
- commit: "a465eb8ab3fbeb89c617ad1d358ad6c77f677f0d"
- message: >-
-    Protection against missing clusters tree when T0 is removed from reco
- author: !!str shahoian
--
- commit: "e9b61d41c8917127414f1331a02e89a0a9390725"
- message: >-
-    ALIROOT-6237, ATO-15, ATO-143 - Implementation of the standard AliOCDBEntry.Print. Using standard TObject::Print interface. Functionality.
- author: !!str mivanov
--
- commit: "bed04a9914d0d372c8c565b899799c4c24945a54"
- message: >-
-     ATO-123,ATO-129, ATO-257 - modification for noise generation
- author: !!str mivanov
--
- commit: "c4f231398cba5e0519c7010318cf70dfebdda109"
- message: >-
-    ATO-123, ATO-129, ATO-257  modification for noise simulation  //  This table is used in digitization after renormalization to the pad noise (in ADC TPC/Calib/PadNoise entry)   //   in case norm==kFALSE use normalization to 1   //  MI - 01.08.2015 - related to ATO-123, ATO-129   //  !!!! IN all old simulation the default normalization factor was ~1   //  !!!! In the RUN3 simulation Chip normalization increased by factor of 1.8 (12->20)   //  !!!!    in OLD logic this lead to the overestimation of the noise by factor 1.8   //       As the calibration entry for the noise is and will be expressed in ADC units   //       we will keep the default normalization of the table 1   //       Assuming we will keep TPC OCDB entry  for the noise in the ADC Units   //  THIS IS TEMPORARY DECISSION, which has to be confirmed by TPC offline group and properly documented
- author: !!str mivanov
--
- commit: "da1a9964ef94c432b7a55017383da70759935eb4"
- message: >-
-    ATO-123, ATO-129 - Extended print option. Used for the debugging of the Noise OCDB entry for task mention. +Preparation for the AliOCDBToolkit.Print() to keeptrack/compare/diff/OCDB content
- author: !!str mivanov
--
- commit: "7ec51a9d3ac83239bf0c224007b30f8aca8cf09a"
- message: >-
-    ATO-260, ATO-240  extract calibration also in case of small statistic. 2 level trehsold to accept the time dipendent calibration
- author: !!str mivanov
--
- commit: "76cefad361ee9d0a9c82ee3f223b313fb46ddb35"
- message: >-
-    Phojet test
- author: !!str hristov
--
- commit: "b59d931471245003765866645630c6bcf891d597"
- message: >-
-    Restore TUHKMgen test
- author: !!str hristov
--
- commit: "38eee9e5cada0a6c88429f583855ffcd8b8d0560"
- message: >-
-    The header files are installed in subdirectory to avoid interference. Install the particle data file
- author: !!str hristov
--
- commit: "edfbaf7dc8b381cb2bcc59c250ccf5fa764ae4a6"
- message: >-
-    The header files are installed in subdirectory to avoid interference
- author: !!str hristov
--
- commit: "8a334a302ea6fd07ac9714ac707a697690b24a03"
- message: >-
-    OCDB: CMake messages are status messages
- author: !!str dberzano
--
- commit: "723b89a148049a6aa6574e1a19abe7e72a9208df"
- message: >-
-    OCDB: symlink on CMake 2.8.12 restored
- author: !!str dberzano
--
- commit: "0a0714a98743874736feef1c9875d97534960c47"
- message: >-
-    Restore ttherminator test
- author: !!str hristov
--
- commit: "bcf3c5ca1763821ad63f148ec161fd9ea422675f"
- message: >-
-    Install data files
- author: !!str hristov
--
- commit: "bf864683a871ec6a38085333e7589c487f07a2bd"
- message: >-
-    ATO-260 - Add detialed information in case calibration not validated. Extend the range of allowed values
- author: !!str mivanov
--
- commit: "8a8d59aaf99144f9817cf96849d962ed56153cb0"
- message: >-
-    Restore the Herwig test
- author: !!str hristov
--
- commit: "3166f81ee4e3790a505203722ca2d4ed014b0318"
- message: >-
-    Avoid interference with Pythia
- author: !!str hristov
--
- commit: "b13a5f580e9533918286f31ca665995c8d0b55df"
- message: >-
-    Cleanup
- author: !!str hristov
--
- commit: "de00fd8baf282d4911fd02c79dcb56f58c9efc05"
- message: >-
-    Param becomes paramepos to avoid interference with LHAPDF
- author: !!str hristov
--
- commit: "00247c3bff35351e0e077865c1de2c19f038d1f3"
- message: >-
-    Install additional files
- author: !!str hristov
--
- commit: "046c7f517956d711290ba815fcd35493a0c040e4"
- message: >-
-    Merge branch 'feature-devcalib': fixes for TRD point assingment + TOF Z alignment
- author: !!str shahoian
--
- commit: "4354bd7e1311114be3363ad9fabd2971a0604460"
- message: >-
-    Install files with parameters
- author: !!str hristov
--
- commit: "5ead2fb392e3cbc97c34303de8e968330dc73899"
- message: >-
-    Restore EPOS test
- author: !!str hristov
--
- commit: "5c63cbcbda82caa4771c73af64c18342b2d250aa"
- message: >-
-    ATO-185, ATO-164, ATO-183, AOC-12 - algorithm work properly also for the 100% truncation before results in this case were undefined
- author: !!str hristov
--
- commit: "421352c120bd3d5db2ffdd59089eaeff0e1fd5f9"
- message: >-
-    ATO-185, ATO-164, ATO-183, AOC-12 - Update. adding otpition for outlier removal. Optional robust nsigma cut. Extending using test to cover the robust option case
- author: !!str mivanov
--
- commit: "f12a5d42bd4062b7bf0f580f06efc9386b8fcae9"
- message: >-
-    ATO-185, ATO-164, ATO-183, AOC-12 - adding otpition for outlier removal. Optional robust nsigma cut. Extending using test to cover the robust option case
- author: !!str mivanov
--
- commit: "c3885dce44ea00cce1a22f9c09dda39cf8751a5d"
- message: >-
-    Avoid confusion between VZERO and AD constants (Root6)
- author: !!str hristov
--
- commit: "14339c5b105fcf9a9d847adcc72b2d9cb26c7d2e"
- message: >-
-    Remove obsolete calls
- author: !!str hristov
--
- commit: "5160f7cb126d39149c53c0af8875df1ca9207567"
- message: >-
-    Fix for Root6
- author: !!str hristov
--
- commit: "fbe91c103e25d927e9294bedb3515975ec103e1b"
- message: >-
-    OCDB: copy/link/placeholder dir for default OCDB
- author: !!str dberzano
--
- commit: "4ca8bb021c9c140067f00d6e35490812f8eb9dfe"
- message: >-
-    Update run ranges, add LHC15F
+    Add Relative gain per pad region
  author: !!str wiechula
 -
- commit: "532add98671308d1af095fb6cb7167b3d3475441"
+ commit: "e6221019404b9a267b2fcc0e87a63055cb19770e"
  message: >-
-    ATO-185, ATO-164 - Unit test. Nicer drawing (Johannes)
- author: !!str mivanov
+    Fixing mask lenght for gamma patches, fix coverity 25094
+ author: !!str dlodato
 -
- commit: "e3c0192d5732daec04ed65a8c2751affcf0942b3"
+ commit: "90392b9e3979a720b47ac8d02285212b553308c9"
  message: >-
-    ATO-185, ATO-164 - Unit test incldes the distirbution with outliers. Test for prepared robust option in AliNDLocalRegression.cxx
- author: !!str mivanov
+    AliOADBContainer ExpandPathName on file name, fixes memleak for EMCAL tender; AliLog replacing printf
+ author: !!str hbeck
 -
- commit: "b5394f913b67088feaa476a2f5375313bf022111"
+ commit: "023549728b1fa132f1961a93d13352244d38fbdb"
  message: >-
-    ALIROOT-6207 Fixed index
- author: !!str hristov
--
- commit: "c2623e968b80e69e777ad5911dbe229af362a3e3"
- message: >-
-    We should not need libCint when we link
- author: !!str hristov
--
- commit: "3fc9d381300ae4ec0fa9928b45be255577cd888a"
- message: >-
-    ALIROOT-6207 Request to update STEER/ESD/AliESDZDC.h (Chiara Oppedisano)
- author: !!str hristov
--
- commit: "e03dfd029345874838f284af59af661975a9b7ca"
- message: >-
-    wider range (+-500 channels) of amplitude start signal
- author: !!str alla
--
- commit: "b6a72cdad926821cae5551b079e9a41147c247c0"
- message: >-
-     Lookup table for RUN2 lookup_run2-1.txt
- author: !!str alla
--
- commit: "1e9822d65d11a27fedca4ea3ae8916bc4a3a4f0a"
- message: >-
-    split method retrieving SM matrices in 2, one devoted to the retrieval from the TGeoManager, so that this part can also be used externally at analysis level; fix coding conventions add doxygen type comments
+    coverity 25272, remove dead code
  author: !!str gconesab
 -
- commit: "835af2f394dd160e0c48475f0c7233a17265fbc2"
+ commit: "eab9fb898b3e4c22a56fe2d716b75dd12b3d1607"
  message: >-
-    Don't fit vertex with 0 tracklets
- author: !!str shahoian
+    In "main" move the first "printf" line after loading the ROOT streamer plugin, this may cause the error seen in open iostream file.
+ author: !!str bogdan
 -
- commit: "a232e585a7d820ccb20a8befd49416c9c3b901ce"
+ commit: "c3a3f873e8b1eba2523e7ab4f4933013fc4aea36"
  message: >-
-    Bug fix
- author: !!str mbroz
--
- commit: "3f780525e7447e4606457921eeb9c4840ace27a1"
- message: >-
-    Fix compiling under ROOT v6-02
+    Fix includes and library dependencies in case ZeroMQ is found in a non-standard location
  author: !!str mfasel
 -
- commit: "7da8fdc91246fb19e4581b8032ee590fe339a96a"
+ commit: "cf3ce64544e7b6fbc02020a46e3978c9314871fc"
  message: >-
-    update LHC12 bad  map
+    - fix v2 for pp collisions - update parameterizations to official data Theodor Rascanu <trascanu@stud.uni-frankfurt.de>
+ author: !!str morsch
+-
+ commit: "f4689593d0ab705a7747dd22d0e258311333d124"
+ message: >-
+    de/dx scale factor rel. to G3 changed from 1.12 to 1.164
+ author: !!str morsch
+-
+ commit: "38b9ac283a5d8e21686e74de129160998d2bc3ef"
+ message: >-
+    axes of histo->fill were swapped
+ author: !!str shahoian
+-
+ commit: "3a3a82707cd21390198d3cc7dda28c3a27ae8b71"
+ message: >-
+    ALIROOT-6238 change method name to a more appropriate one from Set to Get since it returns things
  author: !!str gconesab
 -
- commit: "bff6433e7a9a8856d706743269ac772b6f81e511"
+ commit: "43ea4675d5e203bfaaaba9de56fae253c5ef5fee"
  message: >-
-    Add missing indirect dependencies so that it builds on slc7.
- author: !!str eulisse
--
- commit: "9539f244add262e0174f1213c9dc4f8699ce8ec5"
- message: >-
-    Fixed typo for JIRA ticket ALIROOT-6206
- author: !!str alla
--
- commit: "4a37544f7a310e23aeeae5fe4b5be82702065672"
- message: >-
-    Install files with parameters
- author: !!str hristov
--
- commit: "9df3baae3682e27e9b2ab47798f4e4a4c07763f8"
- message: >-
-    Restore EPOS test
- author: !!str hristov
--
- commit: "8fb8d977958f1e6fb5125d7423df1a2a16b9342e"
- message: >-
-    ATO-185, ATO-164, ATO-183, AOC-12 - algorithm work properly also for the 100% truncation before results in this case were undefined
- author: !!str hristov
--
- commit: "1f01de24ecd23cc022f382e7a0b370e1fc6d157b"
- message: >-
-    ATO-185, ATO-164, ATO-183, AOC-12 - Update. adding otpition for outlier removal. Optional robust nsigma cut. Extending using test to cover the robust option case
- author: !!str mivanov
--
- commit: "f1c1384b3c874a78ea31797e55a2bd3f6b159756"
- message: >-
-    ATO-185, ATO-164, ATO-183, AOC-12 - adding otpition for outlier removal. Optional robust nsigma cut. Extending using test to cover the robust option case
- author: !!str mivanov
--
- commit: "f908b9e14bb860687cc9900c97cbd0e59d83dab2"
- message: >-
-    Avoid confusion between VZERO and AD constants (Root6)
- author: !!str hristov
--
- commit: "976dbe8d3f99ee91dc1ce7f0c30c84e1d8ca70ca"
- message: >-
-    Remove obsolete calls
- author: !!str hristov
--
- commit: "6f194366d45af8c09e2d2d73ef3725c0723d1c2a"
- message: >-
-    Fix for Root6
- author: !!str hristov
--
- commit: "a52e5b13ede541391caa700906c1b21cd6f54ba5"
- message: >-
-    OCDB: copy/link/placeholder dir for default OCDB
+    CMake: libFTGL and libftgl supported
  author: !!str dberzano
 -
- commit: "fe50cb88cddf3c57ea3f77e0ec21922f5dcfae24"
+ commit: "02550a7332d8a3e81aa09ebe71b399a34c121c13"
  message: >-
-    Update run ranges, add LHC15F
+    Fixes for ROOT6 v6-04
+ author: !!str mfasel
+-
+ commit: "ed466237097d729d40f22852b112004ffd83a6f9"
+ message: >-
+    Fix entry counter
  author: !!str wiechula
 -
- commit: "402fc6c7b2fd0899822aaacec544543a9d5e6452"
+ commit: "1a61133b80ee54e78d00eab4ce0e4fd249ad1615"
  message: >-
-    ATO-185, ATO-164 - Unit test. Nicer drawing (Johannes)
- author: !!str mivanov
+    Hacked way of histo filling eliminated
+ author: !!str shahoian
 -
- commit: "fddca9b0bb60bb8937a5ad1076198ec4f24326c4"
+ commit: "397c8c93685ce8541bb69d699e5156845ab0d91f"
  message: >-
-    ATO-185, ATO-164 - Unit test incldes the distirbution with outliers. Test for prepared robust option in AliNDLocalRegression.cxx
- author: !!str mivanov
+    fix typo
+ author: !!str guernane
 -
- commit: "3fa72fa4d85fe3e88fe299f32c1833fb06c9cf5f"
+ commit: "ab3d5bb5744ff65f43f43f0d0b87f51ef89353c4"
  message: >-
-    ALIROOT-6207 Fixed index
- author: !!str hristov
+    corrected
+ author: !!str morsch
 -
- commit: "4077274c58bd865329ca9cee8e3ca6e7ff41dbcf"
+ commit: "4264830a5f3b65f81076c5c9df4239ebba1a3a21"
  message: >-
-    We should not need libCint when we link
- author: !!str hristov
+    New decay table for BtoD decays author: Zaida Conesa Del Valle
+ author: !!str morsch
 -
- commit: "24a5062d423c6d4a08358bcd8740ddd05f2de5f4"
+ commit: "d9af9afad5861c38d3e196de811529af2a885fd7"
  message: >-
-    ALIROOT-6207 Request to update STEER/ESD/AliESDZDC.h (Chiara Oppedisano)
- author: !!str hristov
+    Update to 8209
+ author: !!str morsch
 -
- commit: "635d1c6810b1025725167816b0c99662d72866f7"
+ commit: "507eb187678ddf9d643b25903dddbe5825b9080b"
  message: >-
-    wider range (+-500 channels) of amplitude start signal
- author: !!str alla
+    Filling CH2d via standard interface
+ author: !!str shahoian
 -
- commit: "b23696bcce4ecaa15ccfc575716cb40cbbfcbdc6"
+ commit: "342656029fa235b76534af6098a0e8d37d675b82"
  message: >-
-     Lookup table for RUN2 lookup_run2-1.txt
- author: !!str alla
+    replace the online-offline mapping shifts with corresponding methods in geometry class
+ author: !!str gconesab
 -
- commit: "ef080edc193b8c4dada90a157f960a2b21dbe2d9"
+ commit: "4c115f34bbb46e88850d33a1fb02333f6c8adbb3"
  message: >-
-    split method retrieving SM matrices in 2, one devoted to the retrieval from the TGeoManager, so that this part can also be used externally at analysis level; fix coding conventions add doxygen type comments
+    add new method to shift from online to offline mapping and viceversa, needed for DCal
  author: !!str gconesab
