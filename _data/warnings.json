@@ -1306,6 +1306,39 @@
         "key" : "537",
         "by_message" : {
           "buckets" : [ {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "BUILD/5a6d12753ec62662e4559c49ca5f87dc2100fe28/AliPhysics/PWGLF/RESONANCES/extra/G__PWGLFrsnextra.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1458"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEmcalJetBtagSV::fDoBkgRej' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGHF/jetsHF/AliAnalysisTaskEmcalJetBtagSV.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "133"
+                  }, {
+                    "key" : "90"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliMultSelectionTask::fAmplitude_V0A1' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1543,6 +1576,258 @@
                 }
               } ]
             }
+          }, {
+            "key" : "iteration 3u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGPP/EVCHAR/EventPlaneFramework/AliEventPlaneConfiguration.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "129"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentrality' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentralityCent' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentralityEGA' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentralityMB' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentralitySemiCent' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fDispersion' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fTriggers' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fexo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEMCalpi0ClusterEvaluationTask::fshower' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "110"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliRDHFJetsCuts::fApplySPDMisalignedPP2012' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGHF/jetsHF/AliRDHFJetsCuts.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "62"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliRDHFJetsCutsVertex::fCosp' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGHF/jetsHF/AliRDHFJetsCutsVertex.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "59"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliAnalysisTaskLambdaStar' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGLF/RESONANCES/extra/AliAnalysisTaskLambdaStar.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliAnalysisTaskPPJetSpectra' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGJE/UserTasks/AliAnalysisTaskPPJetSpectra.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGJE/EMCALJetTasks/Tracks/AliEMCalTriggerAnaClassManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisTaskLambdaStar(const AliAnalysisTaskLambdaStar&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGLF/RESONANCES/extra/AliAnalysisTaskLambdaStar.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisTaskPPJetSpectra(const AliAnalysisTaskPPJetSpectra&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGJE/UserTasks/AliAnalysisTaskPPJetSpectra.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager(const EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGJE/EMCALJetTasks/Tracks/AliEMCalTriggerAnaClassManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 2u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGUD/UPC/AliAnalysisTaskUpcPhi.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "120"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliAnalysisTaskPPJetSpectra&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGJE/UserTasks/AliAnalysisTaskPPJetSpectra.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/v5-06-35-01/f8e33063a2/PWGJE/EMCALJetTasks/Tracks/AliEMCalTriggerAnaClassManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
           } ]
         }
       }, {
@@ -1697,6 +1982,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "[ 12%] [ 12%] [ 12%] /build/workarea/sw/20150808/SOURCES/AliRoot/v5-06-35/v5-06-37/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "275"
                   } ]
                 }
               } ]
