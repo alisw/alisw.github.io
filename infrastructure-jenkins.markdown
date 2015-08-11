@@ -45,6 +45,8 @@ machine is:
                -i "{{site.openstack_image}}" \
                --nova-sshkey {{site.builduser}} \
                --nova-flavor {{site.openstack_master_flavor}} \
+               --landb-mainuser alice-agile-admin \
+               --landb-responsible alice-agile-admin \
                $MACHINE_NAME
 
 ### Adding a new Mesos cloud
