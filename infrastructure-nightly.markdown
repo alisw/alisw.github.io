@@ -23,3 +23,17 @@ which creates `.ini` files which are used to trigger the actual build jobs
 The configuration of which build needs to happen is defined in
 [`config.yaml`](https://github.com/alisw/ali-bot/blob/master/config.yaml) in
 particular in the section `integration_rules`.
+
+# Nightly repository
+
+In order to speed up builds we maintain a nightly repository which caches
+packages which were already built previously. This consist of an rsync server,
+`rsync://repo.marathon.mesos/store` which is deployed via Marathon. You can
+look at it's status in Marathon at
+[https://{{site.exp_prefix}}marathon.cern.ch/#apps/%2Frepo]()
+
+In case you need to deploy again the application, you can do so by doing:
+
+    git clone https://gitlab.cern.ch/eulisse/ali-marathon.git
+    cd ali-marathon 
+    ./deploy rsync
