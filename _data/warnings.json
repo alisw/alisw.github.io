@@ -1,1 +1,52 @@
-{ }
+{
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "533",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ROOT/v5-34-30-alice2/v5-34-30-alice2/core/base/src/TAttLine.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "305"
+                  } ]
+                }
+              }, {
+                "key" : "ROOT/v5-34-30-alice2/v5-34-30-alice2/core/base/src/TAttMarker.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "272"
+                  } ]
+                }
+              }, {
+                "key" : "ROOT/v5-34-30-alice2/v5-34-30-alice2/graf2d/postscript/src/TPDF.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2484"
+                  } ]
+                }
+              }, {
+                "key" : "ROOT/v5-34-30-alice2/v5-34-30-alice2/graf3d/gl/src/TGLViewerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "951"
+                  } ]
+                }
+              }, {
+                "key" : "ROOT/v5-34-30-alice2/v5-34-30-alice2/gui/ged/src/TTextEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "163"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
