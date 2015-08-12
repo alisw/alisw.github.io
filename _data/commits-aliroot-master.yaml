@@ -1,4 +1,9 @@
 -
+ commit: "2a6874b7b0243664cebe1f39cf8ffb5aacf01529"
+ message: >-
+    avoid too large cluster energies, likely from bad channels, to calculate the non linearity since the functions go to infinity, set the maximum energy to 300 GeV, increase also the lower limit
+ author: !!str gconesab
+-
  commit: "74b63111f60c7f2d35cb793d3db6e61e13ed004f"
  message: >-
     - add new generator AliGenExtExec for on-the-fly MC train using an external executable which produces HepMC output
