@@ -28,6 +28,11 @@ layout: default
       {%capture commit_file %}commits-{{product_name | downcase}}-master{%endcapture%}
       <div role="tabpanel" class="tab-pane {% if forloop.first == true %}active{%endif%}" id="{{product_name}}">
         {% assign commits = site.data[commit_file] %}
+        Prebuild tarballs for various architectures:</br>
+        <a href="https://ali-ci.cern.ch/repo/TARS/slc7_x86-64/dist/{{product_name}}">slc7_x86-64</a>
+        <a href="https://ali-ci.cern.ch/repo/TARS/ubt14_x86-64/dist/{{product_name}}">ubt14_x86-64</a>
+        <a href="https://ali-ci.cern.ch/repo/TARS/slc6_x86-64/dist/{{product_name}}">slc6_x86-64</a>
+        <a href="https://ali-ci.cern.ch/repo/TARS/slc5_x86-64/dist/{{product_name}}">slc5_x86-64</a>
         <div class="list-group">
         {% for commit_info in commits %}
           {% capture commit %}{{commit_info.commit | truncate: 11}}{%endcapture%}
