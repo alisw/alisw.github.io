@@ -19246,6 +19246,34 @@
         "key" : "636",
         "by_message" : {
           "buckets" : [ {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/bca7556e42/bca7556e42/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/bca7556e42/bca7556e42/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "75"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -19320,18 +19348,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "AliRoot/bca7556e42/bca7556e42/STEER/STEER/AliRawDataHeaderSim.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
                   } ]
                 }
               } ]
