@@ -23722,6 +23722,25 @@
         "key" : "651",
         "by_message" : {
           "buckets" : [ {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "BUILD/47bcb620e1fcd48dcd17d029c71452512e730e2c/AliPhysics/PWGLF/RESONANCES/extra/G__PWGLFrsnextra.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1461"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliAnalysisTaskEmcalJetBtagSV::fDoBkgRej' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -23731,6 +23750,20 @@
                     "key" : "133"
                   }, {
                     "key" : "90"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEmcalJetHMEC::fRunType' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetHMEC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  }, {
+                    "key" : "97"
                   } ]
                 }
               } ]
@@ -23974,6 +24007,18 @@
               } ]
             }
           }, {
+            "key" : "iteration 3u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGPP/EVCHAR/EventPlaneFramework/AliEventPlaneConfiguration.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "129"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentrality' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -24106,6 +24151,54 @@
               } ]
             }
           }, {
+            "key" : "'class AliAnalysisTaskLambdaStar' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGLF/RESONANCES/extra/AliAnalysisTaskLambdaStar.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGJE/EMCALJetTasks/Tracks/AliEMCalTriggerAnaClassManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisTaskLambdaStar(const AliAnalysisTaskLambdaStar&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGLF/RESONANCES/extra/AliAnalysisTaskLambdaStar.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager(const EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGJE/EMCALJetTasks/Tracks/AliEMCalTriggerAnaClassManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "call to void* __builtin___memset_chk(void*, int, long unsigned int, long unsigned int) will always overflow destination buffer [enabled by default]",
             "filename" : {
               "buckets" : [ {
@@ -24125,6 +24218,30 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "892"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 2u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGUD/UPC/AliAnalysisTaskUpcPhi.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "120"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const EMCalTriggerPtAnalysis::AliEMCalTriggerAnaClassManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGJE/EMCALJetTasks/Tracks/AliEMCalTriggerAnaClassManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
                   } ]
                 }
               } ]
@@ -25051,16 +25168,44 @@
           } ]
         }
       }, {
-        "key" : "576",
+        "key" : "653",
         "by_message" : {
           "buckets" : [ {
-            "key" : "typedef 'result_t' locally defined but not used [-Wunused-local-typedefs]",
+            "key" : "no newline at end of file",
             "filename" : {
               "buckets" : [ {
-                "key" : "./boost/spirit/home/classic/core/primitives/primitives.hpp",
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/OADB/AliMultSelectionTask.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "50"
+                    "key" : "704"
+                  } ]
+                }
+              }, {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWG/muon/AliAnalysisNonMuonTrackCuts.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              }, {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGGA/PHOSTasks/ClusterSelection/AliPHOSTriggerUtils.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "260"
+                  } ]
+                }
+              }, {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskPi0FlowMCHijing.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              }, {
+                "key" : "AliPhysics/58cdf7ed44d4c8bc0b6fa5779af5ea9dd57b6e7f/58cdf7ed44/PWGJE/UserTasks/AliAnalysisTaskPID.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3986"
                   } ]
                 }
               } ]
