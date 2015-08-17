@@ -73,8 +73,3 @@
  message: >-
     coverity 25272, remove dead code
  author: !!str gconesab
--
- commit: "eab9fb898b3e4c22a56fe2d716b75dd12b3d1607"
- message: >-
-    In "main" move the first "printf" line after loading the ROOT streamer plugin, this may cause the error seen in open iostream file.
- author: !!str bogdan
