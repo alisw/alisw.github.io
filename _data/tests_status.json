@@ -2,18 +2,6 @@
   "aggregations" : {
     "by_id" : {
       "buckets" : [ {
-        "key" : "563",
-        "by_name" : {
-          "buckets" : [ {
-            "key" : "gun",
-            "status" : {
-              "buckets" : [ {
-                "key" : "SUCCESS"
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "566",
         "by_name" : {
           "buckets" : [ {
@@ -591,6 +579,18 @@
         }
       }, {
         "key" : "683",
+        "by_name" : {
+          "buckets" : [ {
+            "key" : "gun",
+            "status" : {
+              "buckets" : [ {
+                "key" : "SUCCESS"
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "686",
         "by_name" : {
           "buckets" : [ {
             "key" : "gun",
