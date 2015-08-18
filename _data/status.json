@@ -2,20 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "552",
-        "status" : {
-          "buckets" : [ {
-            "key" : "failure"
-          } ]
-        }
-      }, {
-        "key" : "553",
-        "status" : {
-          "buckets" : [ {
-            "key" : "success"
-          } ]
-        }
-      }, {
         "key" : "554",
         "status" : {
           "buckets" : [ {
@@ -346,6 +332,20 @@
         }
       }, {
         "key" : "601",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "602",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "603",
         "status" : {
           "buckets" : [ {
             "key" : "failure"
