@@ -2,24 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "544",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "success"
-          } ]
-        }
-      }, {
-        "key" : "545",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "success"
-          } ]
-        }
-      }, {
         "key" : "546",
         "status" : {
           "buckets" : [ {
@@ -352,6 +334,20 @@
         }
       }, {
         "key" : "593",
+        "status" : {
+          "buckets" : [ {
+            "key" : "aborted"
+          } ]
+        }
+      }, {
+        "key" : "594",
+        "status" : {
+          "buckets" : [ {
+            "key" : "aborted"
+          } ]
+        }
+      }, {
+        "key" : "595",
         "status" : {
           "buckets" : [ {
             "key" : "aborted"
