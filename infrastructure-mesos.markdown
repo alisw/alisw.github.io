@@ -46,36 +46,23 @@ on Mesos to do the resource management.
 
 First of all make sure you have all the rights to create machines in OpenStack
 and to administer them via Puppet. In particular you'll have to have rights
-for the "{{site.openstack_project}}" OpenStack project. You'll need to go to
-the CERN OpenStack portal, select "Current Project >
-{{site.openstack_project}}" in the top bar and then go to the [Access and
-Security](https://openstack.cern.ch/dashboard/project/access_and_security/)
-tab and then select again "API access". You can then click "Download OpenStack
-RC file" which you'll have to copy in a safe place (say
-`~/private/{{site.builduser}}-openrc.sh`) on either `lxplus` or `aiadm`. If
-you do not see the openstack project or any of the above steps fails, most
-likely you are lacking the right permissions and access, in which case, please
-contact the {{site.experiment}} VOC ({{site.openstack_project}} at this
-point). You'll have to do this step only once.
+for the "{{site.openstack_project}}" OpenStack project. In order to use openstack
+you need to go to CERN OpenStack administration machines: `aiadm.cern.ch` and 
+obtain the OpenStack credentials by doing:
 
-Now you can log in to `aiadm.cern.ch` and source the OpenStack credentials you
-just downloaded:
+    eval $({{site.experiment Release Testing}})
 
-      source ~/private/{{site.builduser}}-openrc.sh
+You can now execute the various OpenStack commands, using the CLI tool called
+`openstack`, while an exhaustive list of all the available options can be
+optained via `openstack help -h`, for the process of spawning new machines you probably
+only care about:
 
-you'll be prompted for password which will be put in your shell environment.
-Make sure you do not cut and paste your environment around.  You can now
-execute the various OpenStack commands, using the CLI tool called `nova`,
-while an exhaustive list of all the available options can be optained via
-`nova help`, for the process of spawning new machines you probably only care
-about:
-
-- `nova list`: list the machines in the {{site.openstack_project}} 
-- `nova image-list`: list of OS images you can use. In
+- `openstack server list`: list the machines in the {{site.openstack_project}} 
+- `openstack image list`: list of OS images you can use. In
   particular the build nodes should use the latest `{{site.openstack_image}}`
   ones.
-- `nova flavor-list`: list available flavors of virtual machines (i.e. how many
-  CPUs, RAM).
+- `openstack flavor list`: list available flavors of virtual machines (i.e. how
+  many CPUs, RAM).
 
 Before you can continue to create a slave, make also sure you import the SSH
 key required by build machines into your openstack configuration (use the
@@ -88,9 +75,9 @@ Creation of masters in CERN Foreman setup is described at
 machine is:
 
 - Login to `aiadm.cern.ch`.
-- Set up your OpenStack environment (once) and source the
-  `~/private/{{site.builduser}}-openrc.sh` file, entering the password when
-  prompted.
+- Set up your OpenStack environment by doing:
+
+      eval $(ai-rc "{{site.experiment}} Release Testing")
 - To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
@@ -116,9 +103,9 @@ Creation of slaves in CERN Foreman setup is described at
 machine is:
 
 - Login to `aiadm.cern.ch`.
-- Set up your OpenStack environment (once) and source the
-  `~/private/{{site.builduser}}-openrc.sh` file, entering the password when
-  prompted.
+- Set up your OpenStack environment by doing:
+
+      eval $(ai-rc "{{site.experiment}} Release Testing")
 
 - To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
@@ -136,7 +123,7 @@ machine is:
                $MACHINE_NAME
 
 This will spawn a new machine. You can check the boot status either in the
-OpenStack GUI or via `nova list`. The `{{site.builduser}}` key used is the ssh
+OpenStack GUI or via `openstack server list`. The `{{site.builduser}}` key used is the ssh
 key available from the {{site.builduser}} user AFS account. Of course you
 should change the name of the machine (`<{{site.builduser}}XX>` in the
 example) and use a current image and flavor. If you have issues about the ssh
@@ -152,6 +139,8 @@ Similarly the documentation to delete a slave is found at:
 the recipe for destoying slaves is:
 
 - Login to `aiadm.cern.ch`.
-- Setup the environment with `~/private/{{site.builduser}}-openrc.sh`
+- Set up your OpenStack environment by doing:
+
+      eval $(ai-rc "{{site.experiment}} Release Testing")
 - Delete the machine with `ai-kill-vm <{{site.builduser}}XX>`
 - Delete the previously attached volumes.

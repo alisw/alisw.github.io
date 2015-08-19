@@ -23,9 +23,10 @@ The machine is setup in CERN/IT puppet + OpenStack facility in the hostgroup
 The quick recipe to restart the frontend is:
 
 - Login to `aiadm.cern.ch`.
-- Set up your OpenStack environment (once) and source the
-  `~/private/{{site.builduser}}-openrc.sh` file, entering the password when
-  prompted.
+- Set up your OpenStack environment by doing:
+
+      eval $(ai-rc "{{site.experiment}} Release Testing")
+
 - To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
