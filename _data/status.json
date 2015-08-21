@@ -2,13 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "640",
-        "status" : {
-          "buckets" : [ {
-            "key" : "failure"
-          } ]
-        }
-      }, {
         "key" : "641",
         "status" : {
           "buckets" : [ {
@@ -349,6 +342,13 @@
         "status" : {
           "buckets" : [ {
             "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "690",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
           } ]
         }
       } ]
