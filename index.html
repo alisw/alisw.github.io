@@ -155,28 +155,30 @@ layout: default
                         {% if build_nr == warning_build.key %}
                           <div id="warnings{{build_nr}}" class="panel panel-warning small">
                             <div class="panel-heading">
-                              <a href="#warnings{{build_nr}}" class="build-warnings">
+                              <a data-toggle="collapse" data-target="#warning_body{{build_nr}}" href="#warnings{{build_nr}}" class="build-warnings collapsed">
                                 Build warnings ({{warning_build.by_message.buckets | size}} unique warnings)</div>
                               </a>
-                            <div class="panel-body">
-                            {% for message in warning_build.by_message.buckets %}
-                              <br/>{{message.key}}<br/>
-                              <table class="table table-condensed" style="table-layout: fixed;">
-                              <thead>
-                                <tr><th style="width: 90%;">Filename</th><th>Line</th></tr>
-                              </thead>
-                              <tbody>
-                                {% for filename in message.filename.buckets %}
-                                <tr>
-                                  <td class="filename">
-                                      {{filename.key }}
-                                  </td>
-                                  <td style="width: 10%;">{{filename.line.buckets[0].key}}</td>
-                                </tr>
-                                {% endfor %}
-                              </tbody>
-                              </table>
-                            {% endfor %}
+                            <div id="warning_body{{build_nr}}" class="panel-collapse collapse">
+                              <div class="panel-body">
+                              {% for message in warning_build.by_message.buckets %}
+                                <br/>{{message.key}}<br/>
+                                <table class="table table-condensed" style="table-layout: fixed;">
+                                <thead>
+                                  <tr><th style="width: 90%;">Filename</th><th>Line</th></tr>
+                                </thead>
+                                <tbody>
+                                  {% for filename in message.filename.buckets %}
+                                  <tr>
+                                    <td class="filename">
+                                        {{filename.key }}
+                                    </td>
+                                    <td style="width: 10%;">{{filename.line.buckets[0].key}}</td>
+                                  </tr>
+                                  {% endfor %}
+                                </tbody>
+                                </table>
+                              {% endfor %}
+                              </div>
                             </div>
                           </div>
                         {% endif %}
