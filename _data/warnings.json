@@ -33309,13 +33309,13 @@
           } ]
         }
       }, {
-        "key" : "769",
+        "key" : "820",
         "by_message" : {
           "buckets" : [ {
             "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "AliRoot/v5-06-39/v5-06-39/STEER/STEER/AliRawDataHeaderSim.h",
+                "key" : "AliRoot/9332b11a0e/9332b11a0e/STEER/STEER/AliRawDataHeaderSim.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "12"
@@ -33327,7 +33327,7 @@
             "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "AliRoot/v5-06-39/v5-06-39/STEER/STEER/AliQAManager.cxx",
+                "key" : "AliRoot/9332b11a0e/9332b11a0e/STEER/STEER/AliQAManager.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "112"
@@ -33535,10 +33535,22 @@
             "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "AliRoot/v5-06-39/v5-06-39/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "key" : "AliRoot/9332b11a0e/9332b11a0e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/ROOT/v5-34-30-alice2-3/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
                   } ]
                 }
               } ]
@@ -33547,7 +33559,7 @@
             "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "AliRoot/v5-06-39/v5-06-39/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "key" : "AliRoot/9332b11a0e/9332b11a0e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "22"
@@ -33556,13 +33568,37 @@
               } ]
             }
           }, {
+            "key" : "but does not override 'TStreamerInfo::TCompInfo(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/ROOT/v5-34-30-alice2-3/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "AliRoot/v5-06-39/v5-06-39/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "key" : "AliRoot/9332b11a0e/9332b11a0e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/ROOT/v5-34-30-alice2-3/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
                   } ]
                 }
               } ]
