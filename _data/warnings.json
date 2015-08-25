@@ -32410,6 +32410,20 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskEmcalJetTriggerMatcher::fTrkQAcut' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetTriggerMatcher.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  }, {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliMultSelectionTask::fAmplitude_V0A1' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -32648,6 +32662,25 @@
               } ]
             }
           }, {
+            "key" : "ignoring return value of 'int system(const char*)', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWGLF/SPECTRA/PiKaPr/TOF/pp7/AliAnalysisCombinedHadronSpectra2MC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1331"
+                  } ]
+                }
+              }, {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWGLF/SPECTRA/PiKaPr/TOF/pp7/TOFSpectrappAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "469"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "iteration 3u invokes undefined behavior [-Waggressive-loop-optimizations]",
             "filename" : {
               "buckets" : [ {
@@ -32655,6 +32688,54 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "129"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskParticleEfficiency::fHistoEvents' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWGLF/SPECTRA/ParticleEfficiency/AliAnalysisTaskParticleEfficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskParticleEfficiency::fHistoGenerated' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWGLF/SPECTRA/ParticleEfficiency/AliAnalysisTaskParticleEfficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskParticleEfficiency::fHistoList' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWGLF/SPECTRA/ParticleEfficiency/AliAnalysisTaskParticleEfficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskParticleEfficiency::fHistoReconstructed' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWGLF/SPECTRA/ParticleEfficiency/AliAnalysisTaskParticleEfficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
                   } ]
                 }
               } ]
@@ -32792,6 +32873,30 @@
               } ]
             }
           }, {
+            "key" : "'class AliAnalysisMuMuMinv' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWG/muon/AliAnalysisMuMuMinv.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliAnalysisMuMuNch' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWG/muon/AliAnalysisMuMuNch.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class AliAnalysisTaskLambdaStar' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -32799,6 +32904,30 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "27"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisMuMuMinv(const AliAnalysisMuMuMinv&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWG/muon/AliAnalysisMuMuMinv.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisMuMuNch(const AliAnalysisMuMuNch&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWG/muon/AliAnalysisMuMuNch.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
                   } ]
                 }
               } ]
@@ -32847,6 +32976,30 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "120"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliAnalysisMuMuMinv&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWG/muon/AliAnalysisMuMuMinv.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliAnalysisMuMuNch&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliPhysics/ae1350fe973feca00d216ca986c58a345c43aab4/ae1350fe97/PWG/muon/AliAnalysisMuMuNch.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
                   } ]
                 }
               } ]
