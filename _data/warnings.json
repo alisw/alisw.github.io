@@ -28028,30 +28028,6 @@
               } ]
             }
           }, {
-            "key" : "variable 'ok' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "regexec.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "121"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "null argument where non-null required (argument 1) [-Wnonnull]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../hv.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "278"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -28059,6 +28035,13 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "766"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./tinfo/lib_tputs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
                   } ]
                 }
               }, {
@@ -28098,10 +28081,132 @@
                   } ]
                 }
               }, {
+                "key" : "../histfile.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "402"
+                  } ]
+                }
+              }, {
+                "key" : "../test/dots.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "54"
+                  } ]
+                }
+              }, {
+                "key" : "../test/dots_mvcur.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "54"
+                  } ]
+                }
+              }, {
+                "key" : "../test/railroad.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "63"
+                  } ]
+                }
+              }, {
+                "key" : "histfile.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "402"
+                  } ]
+                }
+              }, {
                 "key" : "sdbm.c",
                 "line" : {
                   "buckets" : [ {
                     "key" : "371"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'ok' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "regexec.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "null argument where non-null required (argument 1) [-Wnonnull]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../hv.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "278"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format not a string literal and no format arguments [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../dist/../txn/txn.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "171"
+                  }, {
+                    "key" : "318"
+                  } ]
+                }
+              }, {
+                "key" : "../dist/../crypto/aes_method.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "270"
+                  } ]
+                }
+              }, {
+                "key" : "../dist/../repmgr/repmgr_net.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./base/lib_mouse.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "188"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./tty/hardscroll.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "280"
+                  } ]
+                }
+              }, {
+                "key" : "../test/testcurs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "239"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../ncurses/./base/lib_screen.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "101"
+                  }, {
+                    "key" : "50"
                   } ]
                 }
               } ]
@@ -28137,34 +28242,6 @@
               } ]
             }
           }, {
-            "key" : "format not a string literal and no format arguments [-Wformat-security]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../dist/../txn/txn.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "171"
-                  }, {
-                    "key" : "318"
-                  } ]
-                }
-              }, {
-                "key" : "../dist/../crypto/aes_method.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "270"
-                  } ]
-                }
-              }, {
-                "key" : "../dist/../repmgr/repmgr_net.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "ignoring return value of 'gcvt', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -28177,6 +28254,39 @@
               } ]
             }
           }, {
+            "key" : "ignoring return value of 'system', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../progs/tput.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "162"
+                  } ]
+                }
+              }, {
+                "key" : "../test/filter.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  } ]
+                }
+              }, {
+                "key" : "../test/ncurses.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "486"
+                  } ]
+                }
+              }, {
+                "key" : "../test/redraw.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "114"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "typedef 'result_t' locally defined but not used [-Wunused-local-typedefs]",
             "filename" : {
               "buckets" : [ {
@@ -28184,6 +28294,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "50"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../ncurses/codes.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
                   } ]
                 }
               } ]
@@ -28247,6 +28369,25 @@
               } ]
             }
           }, {
+            "key" : "format '%ld' expects argument of type 'long int', but argument 3 has type '__pid_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../util.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "495"
+                  } ]
+                }
+              }, {
+                "key" : "util.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "495"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "ignoring return value of 'pipe', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -28256,6 +28397,25 @@
                     "key" : "36"
                   }, {
                     "key" : "37"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "too many arguments for format [-Wformat-extra-args]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../search.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "213"
+                  } ]
+                }
+              }, {
+                "key" : "search.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "213"
                   } ]
                 }
               } ]
@@ -28628,66 +28788,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "278"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex5_5' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "282"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex5_6' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "284"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex5_7' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "288"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex5_8' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "296"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex6_1' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "328"
                   } ]
                 }
               } ]
