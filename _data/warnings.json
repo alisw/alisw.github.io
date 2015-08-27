@@ -8494,6 +8494,89 @@
               } ]
             }
           }, {
+            "key" : "format not a string literal and no format arguments [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_test_suite.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "500"
+                  }, {
+                    "key" : "509"
+                  }, {
+                    "key" : "523"
+                  }, {
+                    "key" : "528"
+                  }, {
+                    "key" : "533"
+                  }, {
+                    "key" : "538"
+                  }, {
+                    "key" : "543"
+                  }, {
+                    "key" : "548"
+                  }, {
+                    "key" : "553"
+                  }, {
+                    "key" : "558"
+                  } ]
+                }
+              }, {
+                "key" : "../dist/../txn/txn.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "171"
+                  }, {
+                    "key" : "318"
+                  } ]
+                }
+              }, {
+                "key" : "engine.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "255"
+                  }, {
+                    "key" : "266"
+                  } ]
+                }
+              }, {
+                "key" : "../dist/../crypto/aes_method.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "270"
+                  } ]
+                }
+              }, {
+                "key" : "../dist/../repmgr/repmgr_net.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./base/lib_mouse.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "188"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./tty/hardscroll.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "280"
+                  } ]
+                }
+              }, {
+                "key" : "../test/testcurs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "239"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "extra tokens at end of #ifdef directive [enabled by default]",
             "filename" : {
               "buckets" : [ {
@@ -8826,64 +8909,6 @@
               } ]
             }
           }, {
-            "key" : "format not a string literal and no format arguments [-Wformat-security]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../dist/../txn/txn.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "171"
-                  }, {
-                    "key" : "318"
-                  } ]
-                }
-              }, {
-                "key" : "engine.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "255"
-                  }, {
-                    "key" : "266"
-                  } ]
-                }
-              }, {
-                "key" : "../dist/../crypto/aes_method.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "270"
-                  } ]
-                }
-              }, {
-                "key" : "../dist/../repmgr/repmgr_net.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
-                  } ]
-                }
-              }, {
-                "key" : "../ncurses/./base/lib_mouse.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "188"
-                  } ]
-                }
-              }, {
-                "key" : "../ncurses/./tty/hardscroll.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "280"
-                  } ]
-                }
-              }, {
-                "key" : "../test/testcurs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "239"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "ignoring return value of 'fgets', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -8988,6 +9013,39 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "90"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'ret' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_aesavs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "551"
+                  } ]
+                }
+              }, {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "277"
+                  } ]
+                }
+              }, {
+                "key" : "bio_lib.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  } ]
+                }
+              }, {
+                "key" : "e_chil.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1159"
                   } ]
                 }
               } ]
@@ -9098,23 +9156,28 @@
               } ]
             }
           }, {
-            "key" : "variable 'ret' set but not used [-Wunused-but-set-variable]",
+            "key" : "variable 'f_opt' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
-                "key" : "bio_lib.c",
+                "key" : "fips_aesavs.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "113"
+                    "key" : "867"
                   } ]
                 }
               }, {
-                "key" : "e_chil.c",
+                "key" : "fips_desmovs.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "1159"
+                    "key" : "643"
                   } ]
                 }
-              }, {
+              } ]
+            }
+          }, {
+            "key" : "variable 'ilen' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
                 "key" : "fips_aesavs.c",
                 "line" : {
                   "buckets" : [ {
@@ -9212,6 +9275,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "326"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'DebugValue' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "134"
                   } ]
                 }
               } ]
@@ -9367,44 +9442,6 @@
               } ]
             }
           }, {
-            "key" : "variable 'f_opt' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "867"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "643"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'ilen' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "551"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "277"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "variable 'key_block' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
@@ -9504,18 +9541,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "468"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'DebugValue' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "134"
                   } ]
                 }
               } ]
