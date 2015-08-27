@@ -26807,18 +26807,6 @@
               } ]
             }
           }, {
-            "key" : "null argument where non-null required (argument 1) [-Wnonnull]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../hv.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "278"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -26826,6 +26814,13 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "766"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./tinfo/lib_tputs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
                   } ]
                 }
               }, {
@@ -26865,10 +26860,106 @@
                   } ]
                 }
               }, {
+                "key" : "../test/dots.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "54"
+                  } ]
+                }
+              }, {
+                "key" : "../test/dots_mvcur.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "54"
+                  } ]
+                }
+              }, {
+                "key" : "../test/railroad.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "63"
+                  } ]
+                }
+              }, {
                 "key" : "sdbm.c",
                 "line" : {
                   "buckets" : [ {
                     "key" : "371"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "null argument where non-null required (argument 1) [-Wnonnull]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../hv.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "278"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format not a string literal and no format arguments [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../dist/../txn/txn.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "171"
+                  }, {
+                    "key" : "318"
+                  } ]
+                }
+              }, {
+                "key" : "../dist/../crypto/aes_method.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "270"
+                  } ]
+                }
+              }, {
+                "key" : "../dist/../repmgr/repmgr_net.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./base/lib_mouse.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "188"
+                  } ]
+                }
+              }, {
+                "key" : "../ncurses/./tty/hardscroll.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "280"
+                  } ]
+                }
+              }, {
+                "key" : "../test/testcurs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "239"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../ncurses/./base/lib_screen.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "101"
+                  }, {
+                    "key" : "50"
                   } ]
                 }
               } ]
@@ -26904,34 +26995,6 @@
               } ]
             }
           }, {
-            "key" : "format not a string literal and no format arguments [-Wformat-security]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../dist/../txn/txn.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "171"
-                  }, {
-                    "key" : "318"
-                  } ]
-                }
-              }, {
-                "key" : "../dist/../crypto/aes_method.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "270"
-                  } ]
-                }
-              }, {
-                "key" : "../dist/../repmgr/repmgr_net.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "ignoring return value of 'gcvt', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -26939,6 +27002,51 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "2961"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'system', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../progs/tput.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "162"
+                  } ]
+                }
+              }, {
+                "key" : "../test/filter.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  } ]
+                }
+              }, {
+                "key" : "../test/ncurses.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "486"
+                  } ]
+                }
+              }, {
+                "key" : "../test/redraw.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "114"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../ncurses/codes.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
                   } ]
                 }
               } ]
@@ -27023,6 +27131,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "82"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "cast from pointer to integer of different size [-Wpointer-to-int-cast]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../test/edit_field.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "298"
                   } ]
                 }
               } ]
