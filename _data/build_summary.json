@@ -2,6 +2,33 @@
   "aggregations" : {
     "by_package" : {
       "buckets" : [ {
+        "key" : "AliEn-Runtime",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "v2-19-xr",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "875",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "AliRoot",
         "by_commit" : {
           "buckets" : [ {
