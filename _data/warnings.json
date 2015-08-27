@@ -28163,6 +28163,13 @@
                     "key" : "121"
                   } ]
                 }
+              }, {
+                "key" : "randfile.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "231"
+                  } ]
+                }
               } ]
             }
           }, {
@@ -28493,6 +28500,20 @@
               } ]
             }
           }, {
+            "key" : "ignoring return value of 'fgets', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "bss_file.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "403"
+                  }, {
+                    "key" : "405"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "ignoring return value of 'pipe', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -28549,6 +28570,20 @@
               } ]
             }
           }, {
+            "key" : "the address of 'c' will always evaluate as 'true' [-Waddress]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "tasn_dec.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "133"
+                  }, {
+                    "key" : "143"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "too many arguments for format [-Wformat-extra-args]",
             "filename" : {
               "buckets" : [ {
@@ -28591,6 +28626,25 @@
                     "key" : "687"
                   }, {
                     "key" : "728"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'mtmp' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ech_lib.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "99"
+                  } ]
+                }
+              }, {
+                "key" : "ecs_lib.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "86"
                   } ]
                 }
               } ]
@@ -28689,6 +28743,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "17989"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'outlen' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "a_mbstr.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "96"
                   } ]
                 }
               } ]
@@ -28809,54 +28875,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "140"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex2_18' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "149"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex2_2' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "7"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex2_23' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "159"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex2_24' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "yaml-cpp/release-0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "174"
                   } ]
                 }
               } ]
