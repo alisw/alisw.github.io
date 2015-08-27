@@ -8962,6 +8962,43 @@
               } ]
             }
           }, {
+            "key" : "variable 'ret' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_aesavs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "551"
+                  }, {
+                    "key" : "494"
+                  } ]
+                }
+              }, {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "277"
+                  }, {
+                    "key" : "268"
+                  } ]
+                }
+              }, {
+                "key" : "bio_lib.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  } ]
+                }
+              }, {
+                "key" : "e_chil.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1159"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]",
             "filename" : {
               "buckets" : [ {
@@ -8971,6 +9008,52 @@
                     "key" : "101"
                   }, {
                     "key" : "50"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'f_opt' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_aesavs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "867"
+                  }, {
+                    "key" : "751"
+                  } ]
+                }
+              }, {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "643"
+                  }, {
+                    "key" : "569"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'ilen' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_aesavs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "551"
+                  }, {
+                    "key" : "494"
+                  } ]
+                }
+              }, {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "277"
+                  }, {
+                    "key" : "268"
                   } ]
                 }
               } ]
@@ -9013,39 +9096,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "90"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'ret' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "551"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "277"
-                  } ]
-                }
-              }, {
-                "key" : "bio_lib.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  } ]
-                }
-              }, {
-                "key" : "e_chil.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1159"
                   } ]
                 }
               } ]
@@ -9156,44 +9206,6 @@
               } ]
             }
           }, {
-            "key" : "variable 'f_opt' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "867"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "643"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'ilen' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "551"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "277"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "ISO C forbids assignment between function pointer and 'void *' [-Wpedantic]",
             "filename" : {
               "buckets" : [ {
@@ -9217,6 +9229,110 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%lld' expects argument of type 'long long int', but argument 3 has type 'int64_t {aka long int}' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "stdsoap2_ck_cpp.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9518"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_cpp.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9518"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_ssl_cpp.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9518"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%lld' expects argument of type 'long long int', but argument 3 has type 'int64_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "stdsoap2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9518"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_ck.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9518"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_ssl.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9518"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'uint64_t {aka long unsigned int}' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "stdsoap2_ck_cpp.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10320"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_cpp.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10320"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_ssl_cpp.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10320"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'uint64_t' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "stdsoap2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10320"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_ck.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10320"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2_ssl.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10320"
                   } ]
                 }
               } ]
@@ -9558,6 +9674,18 @@
               } ]
             }
           }, {
+            "key" : "'counter' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_dssvs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "154"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'des_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]",
             "filename" : {
               "buckets" : [ {
@@ -9577,66 +9705,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "18012"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'des_xmlSchematronPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "17992"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gen_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34157"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gen_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18009"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gen_xmlSchematronPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "17989"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'outlen' may be used uninitialized in this function [-Wmaybe-uninitialized]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "a_mbstr.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "96"
                   } ]
                 }
               } ]
