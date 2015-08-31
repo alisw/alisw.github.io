@@ -1,4 +1,9 @@
 -
+ commit: "b4ed0c1adbb0ca14eb9f41682ed3290a4cf553ec"
+ message: >-
+    change default cluster position from 0,0,0 to -1,-1,-1 like in AliEMCALRecPoints, avoid problems when calculating the cluster momentum for null vertex case; move method comment avobe the method with doxygen format
+ author: !!str gconesab
+-
  commit: "276007b515135da028569e1a88e3ac4f187f1434"
  message: >-
     fix variables names
