@@ -17586,6 +17586,18 @@
               } ]
             }
           }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../ncurses/codes.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "variable 'gimme' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
@@ -17609,6 +17621,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "82"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "cast from pointer to integer of different size [-Wpointer-to-int-cast]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../test/edit_field.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "298"
                   } ]
                 }
               } ]
