@@ -17757,6 +17757,18 @@
               } ]
             }
           }, {
+            "key" : "variable 'ok' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "regexec.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "variable 'gimme' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
@@ -17816,6 +17828,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "2473"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "operation on 'b->buf' may be undefined [-Wsequence-point]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "perlio.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "4126"
                   } ]
                 }
               } ]
