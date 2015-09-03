@@ -14272,6 +14272,30 @@
               } ]
             }
           }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../ncurses/codes.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "attempt to free a non-heap object 'line' [-Wfree-nonheap-object]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "utils.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "82"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "enum conversion when passing argument 1 of 'getpriority' is invalid in C++ [-Wc++-compat]",
             "filename" : {
               "buckets" : [ {
