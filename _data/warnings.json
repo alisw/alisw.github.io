@@ -11984,6 +11984,89 @@
               } ]
             }
           }, {
+            "key" : "variable 'ret' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_aesavs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "551"
+                  }, {
+                    "key" : "494"
+                  } ]
+                }
+              }, {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "277"
+                  }, {
+                    "key" : "268"
+                  } ]
+                }
+              }, {
+                "key" : "bio_lib.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  } ]
+                }
+              }, {
+                "key" : "e_chil.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1159"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'f_opt' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_aesavs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "867"
+                  }, {
+                    "key" : "751"
+                  } ]
+                }
+              }, {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "643"
+                  }, {
+                    "key" : "569"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'ilen' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_aesavs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "551"
+                  }, {
+                    "key" : "494"
+                  } ]
+                }
+              }, {
+                "key" : "fips_desmovs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "277"
+                  }, {
+                    "key" : "268"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "variable 'n' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
@@ -12026,39 +12109,6 @@
               } ]
             }
           }, {
-            "key" : "variable 'ret' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "551"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "277"
-                  } ]
-                }
-              }, {
-                "key" : "bio_lib.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  } ]
-                }
-              }, {
-                "key" : "e_chil.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1159"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "format '%d' expects argument of type 'int', but argument 4 has type 'long int' [-Wformat=]",
             "filename" : {
               "buckets" : [ {
@@ -12072,44 +12122,6 @@
                     "key" : "712"
                   }, {
                     "key" : "978"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'f_opt' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "867"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "643"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'ilen' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "fips_aesavs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "551"
-                  } ]
-                }
-              }, {
-                "key" : "fips_desmovs.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "277"
                   } ]
                 }
               } ]
@@ -12347,6 +12359,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "468"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'counter' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "fips_dssvs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "154"
                   } ]
                 }
               } ]
@@ -12635,18 +12659,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "74"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_cond_signal' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "88"
                   } ]
                 }
               } ]
