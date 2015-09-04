@@ -14756,7 +14756,7 @@
           } ]
         }
       }, {
-        "key" : "1012",
+        "key" : "1028",
         "by_message" : {
           "buckets" : [ {
             "key" : "conflicting types for built-in function '__atomic_compare_exchange' [enabled by default]",
@@ -14848,6 +14848,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "82"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "cast from pointer to integer of different size [-Wpointer-to-int-cast]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../test/edit_field.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "298"
                   } ]
                 }
               } ]
@@ -14963,7 +14975,7 @@
           } ]
         }
       }, {
-        "key" : "1028",
+        "key" : "1012",
         "by_message" : {
           "buckets" : [ {
             "key" : "conflicting types for built-in function '__atomic_compare_exchange' [enabled by default]",
@@ -15015,6 +15027,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "121"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../ncurses/codes.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
                   } ]
                 }
               } ]
