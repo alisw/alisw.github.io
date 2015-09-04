@@ -15082,6 +15082,20 @@
               } ]
             }
           }, {
+            "key" : "format '%d' expects argument of type 'int', but argument 3 has type '__time_t {aka long int}' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ApMon.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1396"
+                  }, {
+                    "key" : "1403"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "format '%d' expects argument of type 'int', but argument 4 has type 'STRLEN' [-Wformat=]",
             "filename" : {
               "buckets" : [ {
@@ -15105,6 +15119,18 @@
                     "key" : "36"
                   }, {
                     "key" : "37"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "attempt to free a non-heap object 'line' [-Wfree-nonheap-object]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "utils.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "82"
                   } ]
                 }
               } ]
