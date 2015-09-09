@@ -1,4 +1,39 @@
 -
+ commit: "e8a5bc06d690cd4f1d4769dce54a0845243b8446"
+ message: >-
+    Add PYTHIA6 library path.
+ author: !!str Giulio Eulisse
+-
+ commit: "2223d1d8a91431632f45e4fea5f9b19ce77ab423"
+ message: >-
+    Adjust Pythia8 so that it works both with 8175 and 82XX.
+ author: !!str Giulio Eulisse
+-
+ commit: "083fd4ffda99537166002fb798dc6f1f2410afd8"
+ message: >-
+    Silence warning.
+ author: !!str Giulio Eulisse
+-
+ commit: "5c5c02774e8a42f386ab12db6590f564f13092bc"
+ message: >-
+    Get rid of warning about implicit namespace.
+ author: !!str Giulio Eulisse
+-
+ commit: "40711a06f941be411cfc9be387506ea9a38db24b"
+ message: >-
+    Add missing dependencies on ZMQ and ROOT.
+ author: !!str Giulio Eulisse
+-
+ commit: "2621d3d281b5a9500fe51e5aedf5fbda4b342570"
+ message: >-
+    Fix undefined behaviour.
+ author: !!str Giulio Eulisse
+-
+ commit: "31d6a472af04fd81387b8eb6d409197dbadc6f53"
+ message: >-
+    Return 0 rather than a random value.
+ author: !!str Giulio Eulisse
+-
  commit: "c73ffe58af9c36a5c3908d7a4f21b332de84409f"
  message: >-
     Critical bug fix in the ITS hit generation
@@ -213,38 +248,3 @@
  message: >-
     Code cleanup.
  author: !!str Alexey Rybalchenko
--
- commit: "c864cf9820a8389bd6cacdad694603f6952eebfd"
- message: >-
-    New executables to run flp2epn devices with DDS in both standard and test modes.
- author: !!str Alexey Rybalchenko
--
- commit: "be1d993e0ddf479708e966a0c0c67751bd87415b"
- message: >-
-    Allow for inline getters/setters
- author: !!str chkouzin
--
- commit: "9d0793d97db80f1d41bc5da92b5471d759d63ceb"
- message: >-
-    extending the FLP to EPN configuration
- author: !!str Matthias Richter
--
- commit: "3fd4fb432b62819e294dff5cfcf5db60f3052e4d"
- message: >-
-    adding script for start of the FLP to EPN network
- author: !!str Matthias Richter
--
- commit: "8bbf77aff443f13698761bf64f60e927956c0b37"
- message: >-
-    bugfix: number of merged files now matches specified argument
- author: !!str Matthias Richter
--
- commit: "2982713d7151eb96f0f3bd089dde73898101803b"
- message: >-
-    added shell script to run overlayClusters.C in batch mode for a collection of event folders
- author: !!str Matthias Richter
--
- commit: "dde2f7e2e215d3e9dad9a9741dc49b36ac309416"
- message: >-
-    applying some fixes: tracking on GPUs, writing of all events to get all types of statistics blocks
- author: !!str Matthias Richter
