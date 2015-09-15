@@ -10414,6 +10414,56 @@
                 }
               } ]
             }
+          }, {
+            "key" : "format not a string literal and no format arguments [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/6d8cc24d1f/6d8cc24d1f/TPC/TPCbase/AliTPCCalPad.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "932"
+                  }, {
+                    "key" : "949"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%d' expects a matching 'int' argument [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/6d8cc24d1f/6d8cc24d1f/PHOS/PHOSbase/AliPHOSCpvPedProducer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format '%d' expects argument of type 'int', but argument 2 has type 'std::vector<int>::size_type {aka long unsigned int}' [-Wformat=]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/6d8cc24d1f/6d8cc24d1f/MUON/MUONcalib/AliMUONBusPatchEvolution.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "75"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'int fscanf(FILE*, const char*, ...)', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/6d8cc24d1f/6d8cc24d1f/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "136"
+                  } ]
+                }
+              } ]
+            }
           } ]
         }
       }, {
