@@ -1,4 +1,14 @@
 -
+ commit: "83c50930236dafa5f675167c4787182cd8041361"
+ message: >-
+    Double the maximum test time. Tests with ROOT6 need more time and run more often in timeouts with the old settings.
+ author: !!str Florian Uhlig
+-
+ commit: "6d3be9bcb0eb3e35c7fe39b4e56b52957b407f23"
+ message: >-
+    Patch needed to compile root5 dictionary with gcc5.
+ author: !!str Florian Uhlig
+-
  commit: "75ab8a4aa60577ab8ee7aba88c4b8aa438d75e6a"
  message: >-
     - remove manual Ttree loading in executable needed by Ubuntu v>11.0 and handle the issue in CMakeLists - correct a typo in Readme.md of the FairRoot installation
@@ -238,13 +248,3 @@
  message: >-
     Add two new tests.
  author: !!str Florian Uhlig
--
- commit: "9210280d2109d4b2ed6694589155207b131e1f2d"
- message: >-
-    Fix many Coverity issues. Switch to new FairLogger interface.
- author: !!str Florian Uhlig
--
- commit: "dbfa6fea42c5060c1f6c05d5ad3cd362d8f23407"
- message: >-
-    added: support of wildcards in FairLmdSource
- author: !!str Dmytro Kresan
