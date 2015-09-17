@@ -1405,6 +1405,23 @@
             "key" : "vAN-2015",
             "build_id" : {
               "buckets" : [ {
+                "key" : "27",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
                 "key" : "26",
                 "architecture" : {
                   "buckets" : [ {
@@ -1559,23 +1576,6 @@
                 }
               }, {
                 "key" : "17",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "slc5_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "dberzano",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "master"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              }, {
-                "key" : "16",
                 "architecture" : {
                   "buckets" : [ {
                     "key" : "slc5_x86-64",
