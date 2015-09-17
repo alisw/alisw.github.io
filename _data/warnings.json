@@ -11494,42 +11494,6 @@
           } ]
         }
       }, {
-        "key" : "1114",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "AliRoot/ee708688fc/ee708688fc/Vc/include/Vc/global.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "262"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "no newline at end of file",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "AliRoot/ee708688fc/ee708688fc/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "275"
-                  } ]
-                }
-              }, {
-                "key" : "[ 89%] /build/workarea/sw/20150905/SOURCES/AliRoot/ee708688fc/ee708688fc/HLT/TPCLib/tracking-ca/AliHLTTPCCATracker.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1078"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "1133",
         "by_message" : {
           "buckets" : [ {
@@ -11674,6 +11638,47 @@
           } ]
         }
       }, {
+        "key" : "1270",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/668472175a/668472175a/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/ROOT/v5-34-30-alice3-4/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/ROOT/v5-34-30-alice3-4/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "1161",
         "by_message" : {
           "buckets" : [ {
@@ -11775,6 +11780,23 @@
             "filename" : {
               "buckets" : [ {
                 "key" : "AliRoot/61a8afffad/61a8afffad/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "1271",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "AliRoot/668472175a/668472175a/Vc/include/Vc/global.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "262"
