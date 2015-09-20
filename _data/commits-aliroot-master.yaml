@@ -1,4 +1,29 @@
 -
+ commit: "263e729f3adcf9c81c7157ceb3b6606870eeae36"
+ message: >-
+    AOD: Template implementation should be visible from header!
+ author: !!str shahoian
+-
+ commit: "5ebc0a1e2d614885d98e476c4e50ed4df43ad582"
+ message: >-
+    implement all overriden virtual f-ns to avoid hiding
+ author: !!str shahoian
+-
+ commit: "ae9198f9f6a943f6b0f6fe6d0e1019845f90082d"
+ message: >-
+    Make the MCHBPEVO DA works with a single input parameter.
+ author: !!str laphecet
+-
+ commit: "9d44536693e23df6ec02fc5634a669fb92c18f5e"
+ message: >-
+    Let the DA indicate by flags which of the exported files have to be stored in the OCDB.
+ author: !!str bogdan
+-
+ commit: "0983b943cb021199db4fb3da1cdb73fed5f61728"
+ message: >-
+    Store on OCDB only the necessary files according to the flags set by the MTR DA.
+ author: !!str bogdan
+-
  commit: "3c5359ebd39efad6df64975cb46a0d73b3f99c7a"
  message: >-
     small fix on potential memory leak (pointer object -> non-pointer object)
@@ -58,13 +83,3 @@
  message: >-
     backward compatible stu raw stream decoder for run 2 (Hiroki)
  author: !!str guernane
--
- commit: "aec9bba3ce0d8dbb3be7585a88e57a4380b3c23e"
- message: >-
-    - update late conversion rejection for online tracking (Ole Schmidt)
- author: !!str jklein
--
- commit: "3012c98698f848608314818d1350084e5c933729"
- message: >-
-    Add separate correction/distortions functions for sector
- author: !!str wiechula
