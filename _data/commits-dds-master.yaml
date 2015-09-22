@@ -1,4 +1,24 @@
 -
+ commit: "cb1a0b40ae6c5cfc6778112225f6b0bc3da2181d"
+ message: >-
+    Fix "Unused typedef" warning using clang 3.7+ and boost < 1.59
+ author: !!str Anar Manafov
+-
+ commit: "be38f2814659102db88c9bf5e13ab4019e4146dd"
+ message: >-
+    GH-89: Extend error message in case if worker package is missing.
+ author: !!str Anar Manafov
+-
+ commit: "2a5c5732c908d086831800521a076e0fad3358a8"
+ message: >-
+    GH-98: check DDS_LOCATION before agent start
+ author: !!str Anar Manafov
+-
+ commit: "fbfa3d0105cc47d35107723b4332c7469c8baf0a"
+ message: >-
+    Fix compatibility issues with BOOST 1.59
+ author: !!str Anar Manafov
+-
  commit: "61c9717c79e9afc4a017a287bcb7ae1507f93464"
  message: >-
     Agent IDs changed from UUID to CRC64 uint64_t.
@@ -228,23 +248,3 @@
  message: >-
     GH-71: dds-topology: Added variable definition in the topology.
  author: !!str Andrey Lebedev
--
- commit: "1fc56b05f25ab1f0ffa2ca9185918dcfc072edb1"
- message: >-
-    GH-72: Add index for tasks and collections which are in groups.
- author: !!str Andrey Lebedev
--
- commit: "2663f7ed8f258c3582743da052677c0ebc21736f"
- message: >-
-    GH-75: Name of task output file changed to "user_task_<datetime>_<task_id>_<out/err>.log".
- author: !!str Anar Manafov
--
- commit: "5833820fa3af0691ca0a2407f304386e20ddaf28"
- message: >-
-    GH-49: DDS has learned 3 new additional levels of protocol log events.
- author: !!str Anar Manafov
--
- commit: "e39718ee4c66147027c5bbca339ba2f418a8b3d5"
- message: >-
-    GH-80:  fix monitoring thread to prevent breaks if custom callbacks throw exceptions.
- author: !!str Anar Manafov
