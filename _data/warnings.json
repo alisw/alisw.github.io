@@ -2,6 +2,269 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
+        "key" : "1430",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "non-standard suffix on floating constant [-Wpedantic]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/lanczos.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "106"
+                  }, {
+                    "key" : "1001"
+                  }, {
+                    "key" : "1002"
+                  }, {
+                    "key" : "1003"
+                  }, {
+                    "key" : "1004"
+                  }, {
+                    "key" : "1005"
+                  }, {
+                    "key" : "1006"
+                  }, {
+                    "key" : "1007"
+                  }, {
+                    "key" : "1008"
+                  }, {
+                    "key" : "1009"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/detail/igamma_large.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "100"
+                  }, {
+                    "key" : "105"
+                  }, {
+                    "key" : "106"
+                  }, {
+                    "key" : "107"
+                  }, {
+                    "key" : "108"
+                  }, {
+                    "key" : "109"
+                  }, {
+                    "key" : "110"
+                  }, {
+                    "key" : "111"
+                  }, {
+                    "key" : "112"
+                  }, {
+                    "key" : "113"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/erf.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "209"
+                  }, {
+                    "key" : "222"
+                  }, {
+                    "key" : "223"
+                  }, {
+                    "key" : "224"
+                  }, {
+                    "key" : "225"
+                  }, {
+                    "key" : "226"
+                  }, {
+                    "key" : "229"
+                  }, {
+                    "key" : "230"
+                  }, {
+                    "key" : "231"
+                  }, {
+                    "key" : "232"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/detail/unchecked_factorial.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "286"
+                  }, {
+                    "key" : "287"
+                  }, {
+                    "key" : "288"
+                  }, {
+                    "key" : "289"
+                  }, {
+                    "key" : "290"
+                  }, {
+                    "key" : "291"
+                  }, {
+                    "key" : "292"
+                  }, {
+                    "key" : "293"
+                  }, {
+                    "key" : "294"
+                  }, {
+                    "key" : "295"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/detail/lgamma_small.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "151"
+                  }, {
+                    "key" : "152"
+                  }, {
+                    "key" : "153"
+                  }, {
+                    "key" : "154"
+                  }, {
+                    "key" : "157"
+                  }, {
+                    "key" : "158"
+                  }, {
+                    "key" : "159"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/detail/erf_inv.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "100"
+                  }, {
+                    "key" : "138"
+                  }, {
+                    "key" : "143"
+                  }, {
+                    "key" : "147"
+                  }, {
+                    "key" : "154"
+                  }, {
+                    "key" : "169"
+                  }, {
+                    "key" : "174"
+                  }, {
+                    "key" : "181"
+                  }, {
+                    "key" : "196"
+                  }, {
+                    "key" : "201"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/constants/constants.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "281"
+                  }, {
+                    "key" : "286"
+                  }, {
+                    "key" : "291"
+                  }, {
+                    "key" : "296"
+                  }, {
+                    "key" : "303"
+                  }, {
+                    "key" : "309"
+                  }, {
+                    "key" : "314"
+                  }, {
+                    "key" : "319"
+                  }, {
+                    "key" : "324"
+                  }, {
+                    "key" : "328"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/expm1.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "182"
+                  }, {
+                    "key" : "183"
+                  }, {
+                    "key" : "186"
+                  }, {
+                    "key" : "193"
+                  }, {
+                    "key" : "225"
+                  }, {
+                    "key" : "230"
+                  }, {
+                    "key" : "237"
+                  }, {
+                    "key" : "241"
+                  }, {
+                    "key" : "246"
+                  }, {
+                    "key" : "184"
+                  } ]
+                }
+              }, {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/log1p.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "191"
+                  }, {
+                    "key" : "198"
+                  }, {
+                    "key" : "203"
+                  }, {
+                    "key" : "187"
+                  }, {
+                    "key" : "188"
+                  }, {
+                    "key" : "189"
+                  }, {
+                    "key" : "190"
+                  }, {
+                    "key" : "192"
+                  }, {
+                    "key" : "193"
+                  }, {
+                    "key" : "194"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'index' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/multi_array/concept_checks.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  }, {
+                    "key" : "54"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'index_range' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "slc7_x86-64/boost/v1.57.0-5/include/boost/multi_array/concept_checks.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  }, {
+                    "key" : "53"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "1421",
         "by_message" : {
           "buckets" : [ {
@@ -1172,6 +1435,141 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "1431",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "non-standard suffix on floating constant [-Wpedantic]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ubt14_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/lanczos.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1001"
+                  }, {
+                    "key" : "1002"
+                  }, {
+                    "key" : "1003"
+                  }, {
+                    "key" : "1004"
+                  }, {
+                    "key" : "1005"
+                  }, {
+                    "key" : "1006"
+                  }, {
+                    "key" : "1007"
+                  }, {
+                    "key" : "1008"
+                  }, {
+                    "key" : "1009"
+                  }, {
+                    "key" : "1010"
+                  } ]
+                }
+              }, {
+                "key" : "ubt14_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/detail/igamma_large.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "100"
+                  }, {
+                    "key" : "105"
+                  }, {
+                    "key" : "106"
+                  }, {
+                    "key" : "107"
+                  }, {
+                    "key" : "108"
+                  }, {
+                    "key" : "109"
+                  }, {
+                    "key" : "110"
+                  }, {
+                    "key" : "111"
+                  }, {
+                    "key" : "112"
+                  }, {
+                    "key" : "113"
+                  } ]
+                }
+              }, {
+                "key" : "ubt14_x86-64/boost/v1.57.0-5/include/boost/math/constants/constants.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "277"
+                  }, {
+                    "key" : "278"
+                  }, {
+                    "key" : "279"
+                  }, {
+                    "key" : "280"
+                  }, {
+                    "key" : "281"
+                  }, {
+                    "key" : "282"
+                  }, {
+                    "key" : "283"
+                  }, {
+                    "key" : "284"
+                  }, {
+                    "key" : "285"
+                  }, {
+                    "key" : "286"
+                  } ]
+                }
+              }, {
+                "key" : "ubt14_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/expm1.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "182"
+                  }, {
+                    "key" : "183"
+                  }, {
+                    "key" : "184"
+                  }, {
+                    "key" : "185"
+                  }, {
+                    "key" : "186"
+                  }, {
+                    "key" : "187"
+                  }, {
+                    "key" : "188"
+                  }, {
+                    "key" : "191"
+                  }, {
+                    "key" : "192"
+                  }, {
+                    "key" : "193"
+                  } ]
+                }
+              }, {
+                "key" : "ubt14_x86-64/boost/v1.57.0-5/include/boost/math/special_functions/log1p.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "187"
+                  }, {
+                    "key" : "188"
+                  }, {
+                    "key" : "189"
+                  }, {
+                    "key" : "190"
+                  }, {
+                    "key" : "191"
+                  }, {
+                    "key" : "192"
+                  }, {
+                    "key" : "193"
+                  }, {
+                    "key" : "194"
+                  }, {
+                    "key" : "195"
+                  }, {
+                    "key" : "198"
                   } ]
                 }
               } ]
