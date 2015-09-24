@@ -2,6 +2,123 @@
   "aggregations" : {
     "by_package" : {
       "buckets" : [ {
+        "key" : "AliPhysics",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "8379d460",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1298",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1294",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1293",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1291",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1290",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "vAN-2015",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "27",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "AliRoot",
         "by_commit" : {
           "buckets" : [ {
@@ -52,6 +169,28 @@
                         "alidist_branch" : {
                           "buckets" : [ {
                             "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "3c5359eb",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1292",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
                           } ]
                         }
                       } ]
@@ -1093,6 +1232,101 @@
                         "alidist_branch" : {
                           "buckets" : [ {
                             "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "O2",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "026b3f17",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1297",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1296",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1295",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1289",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "ktf",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1288",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "master"
                           } ]
                         }
                       } ]
