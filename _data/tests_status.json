@@ -1,19 +1,4 @@
 {
-  "aggregations" : {
-    "by_id" : {
-      "buckets" : [ {
-        "key" : "1298",
-        "by_name" : {
-          "buckets" : [ {
-            "key" : "gun",
-            "status" : {
-              "buckets" : [ {
-                "key" : "SUCCESS"
-              } ]
-            }
-          } ]
-        }
-      } ]
-    }
-  }
+  "error" : "SearchPhaseExecutionException[Failed to execute phase [query], all shards failed]",
+  "status" : 503
 }
