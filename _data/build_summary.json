@@ -2,33 +2,6 @@
   "aggregations" : {
     "by_package" : {
       "buckets" : [ {
-        "key" : "AliPhysics",
-        "by_commit" : {
-          "buckets" : [ {
-            "key" : "8379d460",
-            "build_id" : {
-              "buckets" : [ {
-                "key" : "1298",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "slc7_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "alisw",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "master"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "AliRoot",
         "by_commit" : {
           "buckets" : [ {
@@ -1120,50 +1093,6 @@
                         "alidist_branch" : {
                           "buckets" : [ {
                             "key" : "IB/v5-06/prod"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "O2",
-        "by_commit" : {
-          "buckets" : [ {
-            "key" : "026b3f17",
-            "build_id" : {
-              "buckets" : [ {
-                "key" : "1297",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "slc7_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "alisw",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "master"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              }, {
-                "key" : "1296",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "ubt14_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "alisw",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "master"
                           } ]
                         }
                       } ]
