@@ -1,4 +1,77 @@
 {
-  "error" : "ClusterBlockException[blocked by: [SERVICE_UNAVAILABLE/1/state not recovered / initialized];]",
-  "status" : 503
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "1424",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "1425",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "1426",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "1427",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "1428",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "1430",
+        "status" : {
+          "buckets" : [ {
+            "key" : "started"
+          } ]
+        }
+      }, {
+        "key" : "1436",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "1437",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "1438",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "39",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
+          } ]
+        }
+      } ]
+    }
+  }
 }
