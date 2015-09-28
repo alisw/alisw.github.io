@@ -1,4 +1,21 @@
 {
-  "error" : "SearchPhaseExecutionException[Failed to execute phase [query], all shards failed]",
-  "status" : 503
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "1425",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "39",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
+          } ]
+        }
+      } ]
+    }
+  }
 }
