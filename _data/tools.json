@@ -1,18 +1,4 @@
 {
-  "timed_out" : false,
-  "_shards" : {
-    "total" : 150,
-    "successful" : 1,
-    "failed" : 0
-  },
-  "hits" : {
-    "total" : 0,
-    "max_score" : null,
-    "hits" : [ ]
-  },
-  "aggregations" : {
-    "2" : {
-      "buckets" : [ ]
-    }
-  }
+  "error" : "SearchPhaseExecutionException[Failed to execute phase [query], all shards failed]",
+  "status" : 503
 }
