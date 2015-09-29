@@ -1,4 +1,9 @@
 -
+ commit: "b3478926ec72976f692fc07e3427f4b89246f022"
+ message: >-
+    Add one more environment variable which is needed for ROOT6. The variable defines the location of the needed header files.
+ author: !!str Florian Uhlig
+-
  commit: "83c50930236dafa5f675167c4787182cd8041361"
  message: >-
     Double the maximum test time. Tests with ROOT6 need more time and run more often in timeouts with the old settings.
@@ -242,9 +247,4 @@
  commit: "dfee419bb7c0ef34d1071e07f9c758b5ccf5967c"
  message: >-
     Fix many Coverity issues. Switch to ne FairLogger interface at many places.
- author: !!str Florian Uhlig
--
- commit: "b893642cab2f3e6038d8efe877f18b2f813e56e4"
- message: >-
-    Add two new tests.
  author: !!str Florian Uhlig
