@@ -1,4 +1,506 @@
 {
-  "error" : "SearchPhaseExecutionException[Failed to execute phase [query], all shards failed]",
-  "status" : 503
+  "aggregations" : {
+    "by_package" : {
+      "buckets" : [ {
+        "key" : "AliRoot",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "1f56f21b",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1439",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1438",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1434",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "7cf8a0a3",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1409",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ebc2a991",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1427",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1426",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1425",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1424",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1423",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1422",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1421",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/master/root6"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1420",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "f0a517b1",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1418",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1417",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1416",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1415",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/master/root6"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1414",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1413",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1412",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1411",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1410",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "v5-06-41",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "39",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "38",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "37",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "36",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "ThePEG-test",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "0",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1431",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1430",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
 }
