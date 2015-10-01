@@ -1,4 +1,24 @@
 -
+ commit: "2eadc441a26f9680f606adc8d23d3fcc38f87fa5"
+ message: >-
+    Remove unused ZDC files from CMakeLists
+ author: !!str dberzano
+-
+ commit: "7f12a94effd200a38ff6b8521ce0603136613745"
+ message: >-
+    Merging flatdev without TPC changes
+ author: !!str dberzano
+-
+ commit: "4733921649f151a6c911ea8c40c0c8877e376ae1"
+ message: >-
+    Missing fwddecl
+ author: !!str dberzano
+-
+ commit: "e059ad8bc4c02739fc54c5ac86508628b926ebb3"
+ message: >-
+    AliTPCPreprocessorOffline from old flatdev
+ author: !!str dberzano
+-
  commit: "be1b4abbace2d42d96b093e3cb4db272b10ca8d0"
  message: >-
     fix bug
@@ -8,6 +28,1996 @@
  message: >-
     removing unused files
  author: !!str coppedis
+-
+ commit: "0989cf71a722fcc8ea3ea221931935bffa7acf6b"
+ message: >-
+    remove unused function
+ author: !!str mkrzewic
+-
+ commit: "b16d41c66c431998ee03e8d16a3e7d192db49bfe"
+ message: >-
+    only reset data after succesful PushBack()
+ author: !!str mkrzewic
+-
+ commit: "0db31c06ce6c5ce5cfaa3fb0b268f0c0fbf0e750"
+ message: >-
+    PushBack() and InsertOutputBlock() return size of buffer on success
+ author: !!str mkrzewic
+-
+ commit: "1f8c90a5da683968faf50ec9c55f354b526f1720"
+ message: >-
+    cleanup pushing and resetting
+ author: !!str mkrzewic
+-
+ commit: "a2caab6bc4ce6f6bbb5e4982fd805eefbc481896"
+ message: >-
+    fix loading of AliHLTTrigger library, linkdef for new class was missing
+ author: !!str drohr
+-
+ commit: "39d035dbecfd290c3a8bf10e60e8ca606a5d645c"
+ message: >-
+    do clean up after yourself
+ author: !!str mkrzewic
+-
+ commit: "e0dbc7404f8856dd23c6ba1046a681dcb95279e4"
+ message: >-
+    process triggers only until a match is found
+ author: !!str mkrzewic
+-
+ commit: "12a316d441fe08f8af283683cfb72d581f1dfa83"
+ message: >-
+    initialize the regexp properly
+ author: !!str mkrzewic
+-
+ commit: "c38c6b6f4af680f48156c0a37022616abbcc892a"
+ message: >-
+    first skeleton version of the CTP regexp trigger
+ author: !!str mkrzewic
+-
+ commit: "a11edea3f3c628c9f60c48357fa26b91d0c9dc75"
+ message: >-
+    proper fix for the opencl sync error during initialization that was discovered by Heiko
+ author: !!str drohr
+-
+ commit: "a5eb3816f69317ecad946fefeb9861e9a4f8a313"
+ message: >-
+    Fix compilation warnings
+ author: !!str drohr
+-
+ commit: "735cd33fa92cba1b42026a08715f214b64c54bd7"
+ message: >-
+    merge with standalone version: add global tracking to standalone event display
+ author: !!str drohr
+-
+ commit: "aa2380b9435f1e0d28717e1c30fcfdc887d63cfa"
+ message: >-
+    add flag to build opengl related display only when compile flag set
+ author: !!str drohr
+-
+ commit: "7b1774f78a6ce0c0b19b369acd22328befd88353"
+ message: >-
+    some preparations for opencl based merger
+ author: !!str drohr
+-
+ commit: "bf028a78dc27aeb7ad136101b893d3714e76cfa9"
+ message: >-
+    correct behavior when gpu code is not properly initialized
+ author: !!str drohr
+-
+ commit: "8de660a8ebfba0bea15e50594ecbe227af7322d2"
+ message: >-
+    Adaptively change minimum number of TPC clusters per  track depending on Pt, to allow finding short low-pt tracks
+ author: !!str drohr
+-
+ commit: "a36bbdc42c9a4d671f5bd4a072463c487c3eb928"
+ message: >-
+    Reduce default HLT TPC Pt cut to 50MeV
+ author: !!str drohr
+-
+ commit: "bbc17ec8c56b84b2528daf84259ecfeee7510f3e"
+ message: >-
+    formatting: fix indents
+ author: !!str mkrzewic
+-
+ commit: "65e5e289abfed0a5a021ad5c40e1986c71e80588"
+ message: >-
+    fix: work also with non-empty HLT/Calib/StreamerInfo from OCDB
+ author: !!str mkrzewic
+-
+ commit: "84af90d6b9c1e0fa469bb88a6d9dccd31b949def"
+ message: >-
+    new script to update HLT streamers - updates all
+ author: !!str mkrzewic
+-
+ commit: "3dc8f94fa32e22b0848aa3d4ed75e31304b2c902"
+ message: >-
+    working version of the simplified lumireg component
+ author: !!str mkrzewic
+-
+ commit: "08347bb1e3527c1bf303d1c7a40ae888cfed5be7"
+ message: >-
+    some fixes
+ author: !!str mkrzewic
+-
+ commit: "cdf6560028af8e2e0df2cad1f041cecbe361c201"
+ message: >-
+    there shall be only one ZMQ monitoring tool
+ author: !!str mkrzewic
+-
+ commit: "95c70b68ed1d27a9e45f41be0d90c056656c9c76"
+ message: >-
+    subscribe by default
+ author: !!str mkrzewic
+-
+ commit: "623e34a1555dffce1ca3c09f5e5554e399d9a7e9"
+ message: >-
+    add a pointer data source type for internal thread communication
+ author: !!str mkrzewic
+-
+ commit: "0608baa85af15e4edd72f7f6b5c28cd2f83e3b7c"
+ message: >-
+    More fixes for LumiRegion (output type, typos) and adding configuration macro
+ author: !!str zampolli
+-
+ commit: "3167b16c5b7c8638effe2db0414db1156c277fa9"
+ message: >-
+    Fixes for LumiRegion component
+ author: !!str zampolli
+-
+ commit: "b7e562a0b7926726a583a233b956e7812d5f4c09"
+ message: >-
+    skeleton for the ZMQ DIM server for the lumireq monitoring
+ author: !!str mkrzewic
+-
+ commit: "000829f56ed54d67edcb63cf61e66724f42269b7"
+ message: >-
+    receive the SPD vertex properly
+ author: !!str mkrzewic
+-
+ commit: "ae8f9b342b182707151d5692c9e4372a37210fce"
+ message: >-
+    increase classdef
+ author: !!str mkrzewic
+-
+ commit: "44a713c944de2c4450d5ff450193d0be4bd5ec60"
+ message: >-
+    getters for origin and ID
+ author: !!str mkrzewic
+-
+ commit: "793bb2775d73a9c29f26cf317244130d28b6f0ca"
+ message: >-
+    fix method signature
+ author: !!str mkrzewic
+-
+ commit: "48e9cd3111f72ecc549aaea7f1615b1f9d6d2bdc"
+ message: >-
+    use zmq_strerror() instead of standard one
+ author: !!str mkrzewic
+-
+ commit: "f3be0a4808d166e267c03c109611370b91d84a27"
+ message: >-
+    DoDeinit implementation + classdef
+ author: !!str mkrzewic
+-
+ commit: "61acf3e24d5bc0473e858459048892df7dedd688"
+ message: >-
+    fix credits
+ author: !!str mkrzewic
+-
+ commit: "70aea52529dc1925af7dc5776b1aef19bae1f241"
+ message: >-
+    additional helper to receive multipart string messages
+ author: !!str mkrzewic
+-
+ commit: "1e814ef1243ef493eba3abb37efda6e414b98130"
+ message: >-
+    from Davide Caffari: first version of the luminous region component
+ author: !!str mkrzewic
+-
+ commit: "a4dbc011d97874b8e104dc6b0e65ad58d457b9a3"
+ message: >-
+    better zmq requester
+ author: !!str mkrzewic
+-
+ commit: "7198b72c5035fda1937953b07c47c87eba65d2bf"
+ message: >-
+    on Chiara's request: restore old class as example
+ author: !!str mkrzewic
+-
+ commit: "5a7321405a29f36cc548d95f213e34ef1e20640d"
+ message: >-
+    fix compilation
+ author: !!str mkrzewic
+-
+ commit: "75edd6e6f3f221154eb8cfc7a9e40f95fea68959"
+ message: >-
+    remove fAddTaskArgs
+ author: !!str mkrzewic
+-
+ commit: "d66379b22d9c55d15d172efe0f1bb7635d7d4ebb"
+ message: >-
+    can use only one component at a time in emulation
+ author: !!str mkrzewic
+-
+ commit: "3c68d327e804f16b56e250d9fc7d8b1586709413"
+ message: >-
+    add IsTriggerClassFired(const char*) method
+ author: !!str mkrzewic
+-
+ commit: "87abd508b2fb6edd6f3b2afe3ee3aabb3755cefe"
+ message: >-
+    update of the testconfigCalib.C
+ author: !!str mkrzewic
+-
+ commit: "bbc6f98a07cc5bcf5c35ef629af5429590ce048b"
+ message: >-
+    remove obsolete classes
+ author: !!str mkrzewic
+-
+ commit: "0cac6e137c90e0b7604ccead10c9958f804ecde4"
+ message: >-
+    remove obsolete HW cluster transformation component
+ author: !!str sgorbuno
+-
+ commit: "4ce571b84dbd8d14e0021d8da526ce2828045438"
+ message: >-
+    bug fix
+ author: !!str sgorbuno
+-
+ commit: "c9a6992e3ba33f7ee893b3a8af20a5d597438a2b"
+ message: >-
+    bug fix
+ author: !!str sgorbuno
+-
+ commit: "eb80cf4402c0e7a98d5effda34c6cf4f65b2739c"
+ message: >-
+    removing code of old TPC calibration project, besause it is not supposed to be used in the future
+ author: !!str sgorbuno
+-
+ commit: "f250f70a92546fed703533f6df9deaa4504bdb3c"
+ message: >-
+    remove obsolette code
+ author: !!str sgorbuno
+-
+ commit: "16d164fd38348ffb31a3ee52d7e38db2b6905cff"
+ message: >-
+    make source files unexecutable
+ author: !!str sgorbuno
+-
+ commit: "cfee8198a16ac8d714c424596d52f63f5e320f4e"
+ message: >-
+    cleanup
+ author: !!str sgorbuno
+-
+ commit: "46ebdbc0b21857fc00ff58b4fd5402eb4c497e68"
+ message: >-
+    remove executable system flag for source files
+ author: !!str sgorbuno
+-
+ commit: "9c3a009e79030ee22913fe6332447669b9421b76"
+ message: >-
+    increase output buffer size
+ author: !!str mkrzewic
+-
+ commit: "a8fd4edc3781e5dbedcaddfec2258263cc68229f"
+ message: >-
+    increase estimated output size for transformed HLT clusters
+ author: !!str sgorbuno
+-
+ commit: "690ba9618f2c71f4c5a93e8c6fc22e68b8dfc788"
+ message: >-
+    rename AliHLTTPCTransform class to AliHLTTPCGeometry to avoid confusion
+ author: !!str sgorbuno
+-
+ commit: "227ce9ce83e5eda45de789ab71e4aa40320fbe4e"
+ message: >-
+    raw cluster coordinates added to HLTSpacePointData structure
+ author: !!str sgorbuno
+-
+ commit: "03a16e167d8f87684cdbe980bbfe25d586eeb8ae"
+ message: >-
+    rename SigmaY2, SigmaZ2 to SigmaPad2, SigmaTime2 in AliHLTTPCRawCluster
+ author: !!str sgorbuno
+-
+ commit: "ec3a65c053432a8796459375974a7cac11ea0ac9"
+ message: >-
+    pad and time coordinates added to flatTPCcluster structure
+ author: !!str sgorbuno
+-
+ commit: "757943afcfc76922298a725eeb9a92620b43da2f"
+ message: >-
+    getter for ESDVZEROfriend added to VFriendEvent
+ author: !!str sgorbuno
+-
+ commit: "77c6e5f093ec3fc1d3ca1ef4676db9a591a51365"
+ message: >-
+    switch to using AliHLTAnalysisManagerComponent
+ author: !!str mkrzewic
+-
+ commit: "e815385bfc0359dacdc7b9f2c327c8831dbdf8e7"
+ message: >-
+    increase output buffer size to 300000
+ author: !!str mkrzewic
+-
+ commit: "2da61c9b65e50e903edb8b20f03b1dbeac53e21f"
+ message: >-
+    Add AliHLTAnalysisManager  to GlobalAgent
+ author: !!str mkrzewic
+-
+ commit: "614fcb73f4a32bc89ce61dbbbe87d6e99ebb20ec"
+ message: >-
+    a general HLT analysisManager component
+ author: !!str mkrzewic
+-
+ commit: "fa52ed557cd485c1c0e48cf28ef9cf9e3d6f354a"
+ message: >-
+    bug fix
+ author: !!str sgorbuno
+-
+ commit: "0434d90027a9c1a680ac533f576b4dd350ab7de4"
+ message: >-
+    bug fix
+ author: !!str sgorbuno
+-
+ commit: "782ec715db330f9aa5a2803196769460cc411741"
+ message: >-
+    increase the output buffer size for VZEROreco
+ author: !!str mkrzewic
+-
+ commit: "db271a6abbd35975514703ade42af2d24f5f6040"
+ message: >-
+    cleanup
+ author: !!str sgorbuno
+-
+ commit: "8b7b981dd8cf0ff460357ae2f9d5e25edfadafdb"
+ message: >-
+    input datatypes added to flat & esd converter components
+ author: !!str sgorbuno
+-
+ commit: "54d0cc3d0593da93b2c5b7b1e69c34079166fd0a"
+ message: >-
+    VZEROfriend added to ESD convertor & flat esd convertor
+ author: !!str sgorbuno
+-
+ commit: "d2114207aa72ba16a512730283934a12088a85fa"
+ message: >-
+    fix memory alignment for the track table in flat ESD friend event
+ author: !!str drohr
+-
+ commit: "ac74199fce1586ed0a7b443236c908f4fff2be6e"
+ message: >-
+    comment out member functions which are unimplemented
+ author: !!str drohr
+-
+ commit: "e46dc1006a87577198d0755a2eac4f3f1308ce1f"
+ message: >-
+    remove strange brackets in zeromq cmake file
+ author: !!str drohr
+-
+ commit: "331a5fefcfc1a6cfb1f057298fc225c35da60a7c"
+ message: >-
+    fix sending form AliHLTZMQsink
+ author: !!str mkrzewic
+-
+ commit: "dc783c1b76555d374d0155f599fc0e0989ea93b2"
+ message: >-
+    memory alignment for the track table in flat ESD friend event
+ author: !!str sgorbuno
+-
+ commit: "67a8f1f2cc7bd18af3d1741147bbd3bfc9c57749"
+ message: >-
+    memory alignment for the track table in flat ESD event
+ author: !!str sgorbuno
+-
+ commit: "cc4a3003f82bb585462a814cb8227a313b1bd91d"
+ message: >-
+    memory alignment for the track table in flat ESD event
+ author: !!str sgorbuno
+-
+ commit: "59d2803767235f6ce9026074fd7c71d78997a7d6"
+ message: >-
+    remove orphaned function declaration
+ author: !!str mkrzewic
+-
+ commit: "e6ded9fee728e6ee54f12ebaaf3a1b27a140a8c3"
+ message: >-
+    VZEROfriend output added to HLT VZERO component
+ author: !!str sgorbuno
+-
+ commit: "617987ef8d560e77749864324c3f11d919500fda"
+ message: >-
+    moving constants from ESDVZEROfrend to VVVZEROfriend
+ author: !!str sgorbuno
+-
+ commit: "cb24008faee47976733c18cee4bfd24d50bb0a5a"
+ message: >-
+    timeout 0 when in fully non-blocking mode
+ author: !!str mkrzewic
+-
+ commit: "878b101e4b48654d023bd7b2e9877fb90fc6fe40"
+ message: >-
+    Flat VZERO friend added
+ author: !!str sgorbuno
+-
+ commit: "df9d5bd0d2a0adc5203873b69bfc8ddcf5c194c0"
+ message: >-
+    add a new configuration "GLOBAL-esd-converter-friends"
+ author: !!str mkrzewic
+-
+ commit: "fd7b9135bdf94a252545f8cc2b816fd693d0d5c1"
+ message: >-
+    fix compiler warnings
+ author: !!str mkrzewic
+-
+ commit: "3bc08b32e847b137a934223d75b69ff10631bf81"
+ message: >-
+    HMTF-28 provide the necessary API for the BG monitoring task
+ author: !!str mkrzewic
+-
+ commit: "f64b0f0d44e9a4da558cfa8f6c89c359f5e74ac8"
+ message: >-
+    HMTF-28 add a virtual base class for AliESDVZEROfriend
+ author: !!str mkrzewic
+-
+ commit: "2560ad3dbafecfba087a033b169282a185a9cdd8"
+ message: >-
+    comment the code
+ author: !!str mkrzewic
+-
+ commit: "211187672e84183bb2d22df683289290bafb07f0"
+ message: >-
+    by default never block
+ author: !!str mkrzewic
+-
+ commit: "074dca40d0f77bee4e1306ba8db523bbe59f40d4"
+ message: >-
+    make ZMQ socket blocking behaviour configurable
+ author: !!str mkrzewic
+-
+ commit: "85a3f1c42ba1fc9e6d6cf45c309a8b06225cb2c6"
+ message: >-
+    update config of the ZMQ components to new schema
+ author: !!str mkrzewic
+-
+ commit: "3814d20efb9d7014406b61e46f5e7c2796150829"
+ message: >-
+    simplify ZMQ socket configuration
+ author: !!str mkrzewic
+-
+ commit: "fcdb85c96f483dc1d36af2389c48ce0f69e9a6a3"
+ message: >-
+    option to override the zmq PUSH blocking behaviour
+ author: !!str mkrzewic
+-
+ commit: "28590ccca9e9de379defcc9c3ca50a5f5da1ad8f"
+ message: >-
+    add some zmq helper functions
+ author: !!str mkrzewic
+-
+ commit: "7fbf69c64deaa641f458975682b85efec14762ab"
+ message: >-
+    add possibility to use a REQ socket in AliHLTZMQsource
+ author: !!str mkrzewic
+-
+ commit: "02c545372c9598a3d46a7d6f7a167415e5ae1daf"
+ message: >-
+    add a tool to monitor ZMQ push socket content
+ author: !!str mkrzewic
+-
+ commit: "7df9cbd1fdbab54e7be6283eb2a5881d9fadf5d5"
+ message: >-
+    additional ctor for AliHLTDataTopic
+ author: !!str mkrzewic
+-
+ commit: "b1aa43b5cbcc6160a0b20ae3859e9e9826aab448"
+ message: >-
+    fix includes
+ author: !!str drohr
+-
+ commit: "b07f01be6664866231d22db386cf0eb057c1499d"
+ message: >-
+    add AliHLTDataTopic to HLTbaseLinkDef.h
+ author: !!str mkrzewic
+-
+ commit: "1f2bea07a1bcad06d75f92c3c93f63ed0d0749f8"
+ message: >-
+    use AliHLTDataTopic in the ZMQ components
+ author: !!str mkrzewic
+-
+ commit: "ab671eb6d62fe511600e50618e8a8feac8cb19b6"
+ message: >-
+    add AliHLTDataTopic struct to the data types
+ author: !!str mkrzewic
+-
+ commit: "2d221370ece3ba6643d9a7569d6fb55c61cb4553"
+ message: >-
+    fix rebase artefact in AliAnalysisManager::GetOADBPath()
+ author: !!str mkrzewic
+-
+ commit: "d7f129fa7e6f104686510ea81551e074047b195a"
+ message: >-
+    some cleanup, fix some more functions that were missing the return statement
+ author: !!str drohr
+-
+ commit: "2885f918a510b7f7673b52e7a7c81a488670f764"
+ message: >-
+    we should return 0 at the end of that function
+ author: !!str drohr
+-
+ commit: "2043644a44a73ced9465508f9585be6f20882a5b"
+ message: >-
+    Add benchmark test configuration for online calibration chain
+ author: !!str drohr
+-
+ commit: "5265733c270e082e13d88f5405549e24c45bed25"
+ message: >-
+    Change Clustertransformation Prepare Component to add the possibility to reinitialize the cluster transformation with a new calibration object and to run the calibration preprocessor (should be called postprocessor...)
+ author: !!str drohr
+-
+ commit: "cfc53461f85732c9c6ed51d56475c48cee580274"
+ message: >-
+    The cache cannot work like this and cannot take ownership. As soon as this CDB Entry has been queried, the cache has no control over who has a pointer to an object, so it MUST not delete it. This should be fixed somehow, but for the time being I see no other way. Consider that this INTRODUCES A MEMORY LEAK.
+ author: !!str drohr
+-
+ commit: "08baaebe856558e1d555d0f55ea1e40273eee440"
+ message: >-
+    add helper function to convert HLT Data Type to Readable string for debug output functions
+ author: !!str drohr
+-
+ commit: "d42e96168524b13fe9a51d098d045fb738d3e61b"
+ message: >-
+    add missing library to libAliHLTTPC
+ author: !!str drohr
+-
+ commit: "c1af5e22e0c2aafeea99928e3cfe9dcc3200f17b"
+ message: >-
+    add hlt tpccalib to include files
+ author: !!str drohr
+-
+ commit: "4be79da6365a644b2bd1453dac94def12c5d15ee"
+ message: >-
+    add option to calibration components to ship data only every n-th event
+ author: !!str drohr
+-
+ commit: "441c18810af2992ea201aaf29c143570e42cfa6d"
+ message: >-
+    remove redundant code already defined somewhere else
+ author: !!str mkrzewic
+-
+ commit: "067313313f554d819ccf195dbb2de6eb54c5d492"
+ message: >-
+    Changes to base classes for online QA
+ author: !!str atimmins
+-
+ commit: "7943e44017cb10a2b84e2139710a13ebab260e25"
+ message: >-
+    Second test by Ant
+ author: !!str atimmins
+-
+ commit: "be0c997cdb78ae5976f88d20fbd47c1d1de627a0"
+ message: >-
+    Online QA addition - first commit
+ author: !!str atimmins
+-
+ commit: "7956ae65e3b944ad99adbe5192e5efe27f3e5134"
+ message: >-
+    report errno only in error state.
+ author: !!str mkrzewic
+-
+ commit: "2c37678f313a9127e9dfbe3ed5b1938931236a92"
+ message: >-
+    don't lie to yourself
+ author: !!str mkrzewic
+-
+ commit: "261b1a50ab733a1087804757307eebc5de231144"
+ message: >-
+    AliCDBManager: additional cache for online use
+ author: !!str mkrzewic
+-
+ commit: "988a5124de807dd0483606d99ca41b27aef9a4ff"
+ message: >-
+    academic exercise in code optimisation
+ author: !!str mkrzewic
+-
+ commit: "0d7c3c7817782008c00f0cb01b202efc418ffe7e"
+ message: >-
+    zmqRequester.py: update
+ author: !!str mkrzewic
+-
+ commit: "be5587a54e46b5780360ed46935fbc11ace2e17c"
+ message: >-
+    don't send an empty frame unless absolutely necessary
+ author: !!str mkrzewic
+-
+ commit: "50eb24dc6475f982d8daec9e7df86c03227a6f4c"
+ message: >-
+    VZERO object added to flat event
+ author: !!str sgorbuno
+-
+ commit: "194f119470ec82100335c557f8043e910d8b7674"
+ message: >-
+    remove old class
+ author: !!str mkrzewic
+-
+ commit: "4d6856f024fda6c75056c7eb023ff96fbccb1198"
+ message: >-
+    inherit from AliHLTComponent
+ author: !!str mkrzewic
+-
+ commit: "5031462c209c16d6f3522c838979be7f6ade8a40"
+ message: >-
+    dont push private blocks by default + stricter options
+ author: !!str mkrzewic
+-
+ commit: "27b5eec7f950ca333a053b23af51c1566a6599ff"
+ message: >-
+    be stricter with options
+ author: !!str mkrzewic
+-
+ commit: "b17349b233027ffe947b8a53212e85490424f728"
+ message: >-
+    better output from test script
+ author: !!str mkrzewic
+-
+ commit: "0798180d1b81a215680cf46d710ed285409ac379"
+ message: >-
+    more verbosity in test script
+ author: !!str mkrzewic
+-
+ commit: "520725f49555966d3bfc2f2821d1d6793bd85246"
+ message: >-
+    we should increase the version number of AliHLTDataTypes if we change it...
+ author: !!str drohr
+-
+ commit: "d286b8cbeff9ab5d26159ee82b4bff2a8812a228"
+ message: >-
+    change linkdef, agents, cmakelist, etc. to include the new components, move async processor from global to base to avoid some dependencies on libAliHLTGlobal
+ author: !!str drohr
+-
+ commit: "56014051a062082c56d9a1051193b92a6da455bb"
+ message: >-
+    add component to merge tpc transform maps
+ author: !!str drohr
+-
+ commit: "ae89503f784a9d49679f2b2f3a4dc7e81f437090"
+ message: >-
+    add component to prepare tpc fast transform map
+ author: !!str drohr
+-
+ commit: "5a996a2033aca29949d75a541cd1dbae7b9809f8"
+ message: >-
+    add datatype for tpc fast transform object
+ author: !!str drohr
+-
+ commit: "ffc2b5e84ea618f24d13e609aa6c564e96d5f729"
+ message: >-
+    some minor fixes and cleanup
+ author: !!str drohr
+-
+ commit: "833c73e3a39defc1fe9cb10f3778c323a7efad86"
+ message: >-
+    add some hack to get non-const tobject in HLT, should be revised after discussion with experts
+ author: !!str drohr
+-
+ commit: "3f7fc2e32e75f13e6fb9c45180726323ade53faf"
+ message: >-
+    add option to receive transformation map from another component
+ author: !!str drohr
+-
+ commit: "bcf0e167833e399b737eebdd52bdb87f06342014"
+ message: >-
+    Change fast cluster transform object, such that it can contain only a subset of tpc sectors
+ author: !!str drohr
+-
+ commit: "087e4ecb4cfd1400fd69a3c0012bf6702844b921"
+ message: >-
+    Add component for asynchronous excution of calibration (currently only a dummy variant)
+ author: !!str drohr
+-
+ commit: "d6af9e0023567053a787417c19abd14a5a67430d"
+ message: >-
+    add AliHLTZero component, which just dumps whatever data it receives and sends on empty payload
+ author: !!str drohr
+-
+ commit: "7587c8dc2651f909abef4372c321675102c74924"
+ message: >-
+    Reduce verbosity of debug messages
+ author: !!str drohr
+-
+ commit: "9260de2d0e709fbff04b1d2afb05126d09d9c724"
+ message: >-
+    ZMQ sink and source fixes
+ author: !!str mkrzewic
+-
+ commit: "78d36fedc572c9fdb7edea4b4ea8de07f8983ad3"
+ message: >-
+    ZMQ sink and source test configurations
+ author: !!str mkrzewic
+-
+ commit: "d231b812362f851d54c7cb5f0618217dfc8a7bbb"
+ message: >-
+    minor updates to testing scripts
+ author: !!str mkrzewic
+-
+ commit: "cb0d43d0f7d207bb6e18f3b14f6689f905e9d5bb"
+ message: >-
+    add a printout on push
+ author: !!str mkrzewic
+-
+ commit: "037dbe5a4c6034bd1a4975fb32ebb4983023f7f6"
+ message: >-
+    add the possibility to set a zmq subscription
+ author: !!str mkrzewic
+-
+ commit: "d55b402766d471e6a39f6049b8a2f180c2861046"
+ message: >-
+    routine maintenance
+ author: !!str mkrzewic
+-
+ commit: "76ac0e7c78dd590ea9499a05d1d6868d121fd453"
+ message: >-
+    add AliHLTZMQsource: takes ZMQ input, pushes as HLT blocks
+ author: !!str mkrzewic
+-
+ commit: "1d548266fe88a50f7143a68ae6d488bc2f9f97be"
+ message: >-
+    fix zeromq compilation issues
+ author: !!str mkrzewic
+-
+ commit: "4dfc5372687046bc603c796ae892a66c6a91fa64"
+ message: >-
+    merge MONITOR from master
+ author: !!str mkrzewic
+-
+ commit: "b11cc6f992541314d11dc52f722d0b9a59c41157"
+ message: >-
+    small cleanup of the build syst
+ author: !!str mkrzewic
+-
+ commit: "f252639b1bb0d17fac709891d7c1de3491ef4936"
+ message: >-
+    fix PUB mode
+ author: !!str mkrzewic
+-
+ commit: "78ecb939f036e07b97517a0f21394970902f1412"
+ message: >-
+    updates
+ author: !!str mkrzewic
+-
+ commit: "140d3b13d3e97cfc27a23b26f18caabbdb7217be"
+ message: >-
+    some updates
+ author: !!str mkrzewic
+-
+ commit: "700a25059c5b25d08e8aa5363ed98d533e3580f3"
+ message: >-
+    update of fast cluster transformation
+ author: !!str sgorbuno
+-
+ commit: "7a7aed3fa69490927e724222cb5353cfaa4aa378"
+ message: >-
+    add example scritps to test ZMQ funcionality
+ author: !!str mkrzewic
+-
+ commit: "0bac49c2dabba455db941d4b472ae59e7940f2d0"
+ message: >-
+    properly enable polling with ZMQ_REP
+ author: !!str mkrzewic
+-
+ commit: "5719a1ce66a349debbc6c3a6c12fecd07675a933"
+ message: >-
+    add PUSH to the list of supported zmq socket types
+ author: !!str mkrzewic
+-
+ commit: "ba24542526a8c907e328e9f04d62e5bfea901060"
+ message: >-
+    fixes+logging
+ author: !!str mkrzewic
+-
+ commit: "28c18a023003cd61400fe926b6a2d86073883a13"
+ message: >-
+    add test setup for Event Display
+ author: !!str mkrzewic
+-
+ commit: "31683ccda1f448f136e4781daeeee8ff32ddc01b"
+ message: >-
+    dont init structures in the ctor: move to DoInit()
+ author: !!str mkrzewic
+-
+ commit: "6d7aa48c96fb31d125340d159eef4eab937098aa"
+ message: >-
+    add AliHLTZMAsink to GlobalAgent
+ author: !!str mkrzewic
+-
+ commit: "171b29e9849f4243e5088facc635712ec8b0ef19"
+ message: >-
+    properly link zmq if detected
+ author: !!str mkrzewic
+-
+ commit: "cf637502efeb7776842ad30b8b366ac7fc3a2b2c"
+ message: >-
+    some cleanup
+ author: !!str mkrzewic
+-
+ commit: "bf5908f6a5838bfea03487d3cc903ea9da4bd612"
+ message: >-
+    simplify topic comparisons
+ author: !!str mkrzewic
+-
+ commit: "8734a0b30817e800832e5d9919f55531c23a2841"
+ message: >-
+    properly handle the zmq topic (data descriptor)
+ author: !!str mkrzewic
+-
+ commit: "ca6cdcdb5c33775ed8b22ad7008b95a177e5e1b1"
+ message: >-
+    Revert " Gitignore"
+ author: !!str mkrzewic
+-
+ commit: "4d5f1bdb1c5a1812f8f5dbfb5bc477904e05ebba"
+ message: >-
+    Add helper headers for async HLT processor to include install directory
+ author: !!str drohr
+-
+ commit: "24236b7eef0923b53c3fd60277c7aa3b22a8c84a"
+ message: >-
+    Add component interface for asynchronous processing to HLT
+ author: !!str drohr
+-
+ commit: "55154c6469a954391d8489b0fb8ff63315d9d03a"
+ message: >-
+    add AliHLTDirectHOMERManager from alice-hlt-core
+ author: !!str mkrzewic
+-
+ commit: "b7f725042a715166830e529c2f314ae1c40acaad"
+ message: >-
+    remove a stupid rebasing artefact
+ author: !!str mkrzewic
+-
+ commit: "24c947d87e52de554d3074ea1d82166b2e7c05b9"
+ message: >-
+    make HOMER histoWriter compile
+ author: !!str mkrzewic
+-
+ commit: "90fa4b63361c6ee2b039c29327412e59316929d8"
+ message: >-
+    fix default value
+ author: !!str mkrzewic
+-
+ commit: "219a4e7907130c0603a0c6d63647b6cb493e2e58"
+ message: >-
+    fix typo
+ author: !!str mkrzewic
+-
+ commit: "37210758de7e0f13e89dbadfc0379eeee532ce23"
+ message: >-
+    voorkom ellende met nulberichtenrij
+ author: !!str mkrzewic
+-
+ commit: "c60551d2e6d545bf94c5a8459e62fddf6c05084c"
+ message: >-
+    first version of the ZMQ sink/publisher component
+ author: !!str mkrzewic
+-
+ commit: "da0e36e99e437a56dad4bd1803d2a88ad3874f1f"
+ message: >-
+    install macros
+ author: !!str mkrzewic
+-
+ commit: "e84344c3179cdf8dbec470bb345f5f61c77a4574"
+ message: >-
+    make cmake aware of all the flat classes
+ author: !!str mkrzewic
+-
+ commit: "2ac15cabb024c70a23414fa962a1aa1842c4562a"
+ message: >-
+    update of fast transformation object
+ author: !!str sgorbuno
+-
+ commit: "af9234e0e2aae51ca6bec50a85b43dd8debf7233"
+ message: >-
+    update of fast transformation object
+ author: !!str sgorbuno
+-
+ commit: "b0e66d8c375d6cb202d8044e373833bff784b4c7"
+ message: >-
+    fast transformation object for DB
+ author: !!str sgorbuno
+-
+ commit: "8608bb07bedde395504bb00a933588b3bed36dac"
+ message: >-
+    remove obsolete file
+ author: !!str mkrzewic
+-
+ commit: "2be86ee78f0baf74c454528567c4ddd1576927bb"
+ message: >-
+    recraw-local.C: use localOCDBaccessConfig.C
+ author: !!str mkrzewic
+-
+ commit: "db6752e2ff2376e568a9c298993839ddf4679693"
+ message: >-
+    -make-friends parameter added to AliHLTGlobalESDConverterComponent
+ author: !!str sgorbuno
+-
+ commit: "09a9c3412dc2a52fda4f35459edc60f58e87845d"
+ message: >-
+    get the master version of the TPCCA tracker
+ author: !!str mkrzewic
+-
+ commit: "df0ef1797d15bab1234557e5037ee10fe47b2de4"
+ message: >-
+    Example of super-duper easy HLTCalibrationProcessor
+ author: !!str zampolli
+-
+ commit: "5d9a3b9808b29a98c2eb2922dd90ea16c512fdde"
+ message: >-
+    enable resetting of TPCseed via V interface
+ author: !!str mkrzewic
+-
+ commit: "ecb7955fd2fe9786008e03a00d9509499bd73256"
+ message: >-
+    extra timing information with AddStamp
+ author: !!str mkrzewic
+-
+ commit: "a4eae7b9b9fa9c08ca02dc688164d85e0f0c90ba"
+ message: >-
+    add IsPureITSStandalone()
+ author: !!str mkrzewic
+-
+ commit: "211b81da501cd5856912768f3c788f046380092e"
+ message: >-
+    Sergey: properly store vertex tracks
+ author: !!str mkrzewic
+-
+ commit: "935f0848fe8e8fa0c9151a56ac82229f7171355a"
+ message: >-
+    introduced bi-square weigthing/iterative scaling for outliers removal
+ author: !!str shahoian
+-
+ commit: "5b63c8f5d664993531fd538ea1b896796f510460"
+ message: >-
+    revert to the original flatdev version
+ author: !!str mkrzewic
+-
+ commit: "bce449945aa95598cefa50a94f1f3e26d2a1922d"
+ message: >-
+    fix rebasing artefacts
+ author: !!str mkrzewic
+-
+ commit: "16c95915a07891c44fc56148c8a939e0c2979b7b"
+ message: >-
+    git sucks. sometimes.
+ author: !!str mkrzewic
+-
+ commit: "9fc1112ead793996b91c6d1ee7322a640fe1b777"
+ message: >-
+    ITS standalone vertex is stored as primaryVertexTracks, TPC vertex stored as primVtxTPC - both in ESD and flatESD
+ author: !!str sgorbuno
+-
+ commit: "bbe33be3e73639ec4b3141ec255450a2f6766ee0"
+ message: >-
+    additional debug/benchmarking
+ author: !!str mkrzewic
+-
+ commit: "49e4bfae23ddba1b7e964f0519a7ece71dfbb0fb"
+ message: >-
+    enable debug output with option: EnableDebug
+ author: !!str mkrzewic
+-
+ commit: "8018f807d9395fb8df320a030b01326736a2cb56"
+ message: >-
+    add example static conversion functions flat<->ESD
+ author: !!str mkrzewic
+-
+ commit: "d6bb710ab50595056261bdf4fa9b7a8a9d57dc7c"
+ message: >-
+    ATO-146 add an approximate time+pad coordinate
+ author: !!str mkrzewic
+-
+ commit: "0524c0c71b8fe6e258ad3a7a87b0965bc6ac19bd"
+ message: >-
+    extract the freshly calculated TPC impact params
+ author: !!str mkrzewic
+-
+ commit: "61dacc0d9405a1914e50707255c48b3e5e061d23"
+ message: >-
+    moved macros
+ author: !!str sgweber
+-
+ commit: "9f0aff3b475ca3ee6c1962ba32ae998aa271323d"
+ message: >-
+    implement IsOn() in AliFlatESDTrack
+ author: !!str mkrzewic
+-
+ commit: "dff162d39ab770926609785a6c25055bb57e53ff"
+ message: >-
+    add consistent GetNumberOf{ITS,TPC,TRD}clusters()
+ author: !!str mkrzewic
+-
+ commit: "195c23939a94f7881a43a10fbb62d23ec87aa305"
+ message: >-
+    adjust output buffer size for calib output
+ author: !!str mkrzewic
+-
+ commit: "e63a7f243e217c301a392f58e83875c56a190b91"
+ message: >-
+    increase the buffer size to fit PbPb events
+ author: !!str mkrzewic
+-
+ commit: "b4321819e74d929a9f83a2d4661826fda8cc4e0f"
+ message: >-
+    add comment
+ author: !!str mkrzewic
+-
+ commit: "22eee91cfa644f455f1768ef1b1c12dccb52f8f5"
+ message: >-
+    exclude SDD if requested or if SDD is not in the trigger
+ author: !!str shahoian
+-
+ commit: "b1fb1a8574b6b10e080a61f4c4bbd9f528490013"
+ message: >-
+    LoadLibraries ALICE_ROOT->ALICE_PHYSICS
+ author: !!str ivorobye
+-
+ commit: "66c3d370a1f5ad4a1236ea29fe5f7c0049cd69f3"
+ message: >-
+    a little more documentation in the header
+ author: !!str mkrzewic
+-
+ commit: "9bc7711bbd868ae1be2d7708bbc9add58e13a7ad"
+ message: >-
+    install macros
+ author: !!str mkrzewic
+-
+ commit: "8ebcc506566ab303a3058f7f4937bcb741ab57d4"
+ message: >-
+    update of flat->ESD conversion
+ author: !!str sgorbuno
+-
+ commit: "2c7fe0d38416ddd253f5fbe5c8a7cdfcc69d4972"
+ message: >-
+    more cleanup
+ author: !!str mkrzewic
+-
+ commit: "19bf3c73f14a54472a8e6848f4e02869814d0d8d"
+ message: >-
+    cleanup after merge with the new split repo
+ author: !!str mkrzewic
+-
+ commit: "144a869ce54640a05131ed04f33de385c4e4e711"
+ message: >-
+    ALICE_ROOT->ALICE_PHYSICS
+ author: !!str mkrzewic
+-
+ commit: "8643761794bb15a4e11f7f7753e3d41577f98365"
+ message: >-
+    compile with zeromq properly
+ author: !!str mkrzewic
+-
+ commit: "339ca1cdced5f242c378b1ffd5c6a7deaf51b0f4"
+ message: >-
+    introduce PushAndReset() + improve handling of EOR
+ author: !!str mkrzewic
+-
+ commit: "863a727a57eb737c94b914e24627784bf49174f6"
+ message: >-
+    API change: dont init the runNumber in AddTask
+ author: !!str mkrzewic
+-
+ commit: "d05eb0644f6d8902d1c99d422515d6d3d8d4c17e"
+ message: >-
+    process standalone strings as keys in options
+ author: !!str mkrzewic
+-
+ commit: "20dfc5757999946fd568c2d571d01c55994ac615"
+ message: >-
+    make location of the AddTaskMacro selectable
+ author: !!str mkrzewic
+-
+ commit: "42afecfb372ee8d3ec6b237ffc59ae1499020cbe"
+ message: >-
+    better argument string reconstruction
+ author: !!str mkrzewic
+-
+ commit: "6432d3924411a7495a11c3a967e9f7f6f79b5627"
+ message: >-
+    Revert "store the original configuration string"
+ author: !!str mkrzewic
+-
+ commit: "e9aceb44841802477c6e47793469326528291dc9"
+ message: >-
+    bugfix: propagate options properly+remove printf
+ author: !!str mkrzewic
+-
+ commit: "d38d58901629a3e5c296ae8b9ba53d7634731e02"
+ message: >-
+    delete should be enough, we dont store pointers
+ author: !!str mkrzewic
+-
+ commit: "02bf854371dba0c4f8dc162105232d450734ef3a"
+ message: >-
+    make the string parser more backward compatible
+ author: !!str mkrzewic
+-
+ commit: "4b7066607c9d78234c368f10720f8e5253132c1d"
+ message: >-
+    cleanup of the option parsing
+ author: !!str mkrzewic
+-
+ commit: "19ab8da9342c551db5cfe59772ee09d59c4f3867"
+ message: >-
+    store the original configuration string
+ author: !!str mkrzewic
+-
+ commit: "36a49f0389c205761eaec7faad6aa4a087cebb1f"
+ message: >-
+    please compile
+ author: !!str mkrzewic
+-
+ commit: "222c9a770072f229c7ff93b798cc70a7af2bc884"
+ message: >-
+    dont leave ze speicher lying around everywhere
+ author: !!str mkrzewic
+-
+ commit: "3512a3aa125ad20391a12d606b87e52c9f9ddd1f"
+ message: >-
+    add comments to the new option parser
+ author: !!str mkrzewic
+-
+ commit: "bbfb325ee7d119a7bf565827ccc631cf94fe9aa0"
+ message: >-
+    configure TPCcalib on command line
+ author: !!str mkrzewic
+-
+ commit: "cfa0d3dc5a0c4a62bf8761a00f8deb56edef44a4"
+ message: >-
+    use the AddTaskTPCcalib form standard location
+ author: !!str mkrzewic
+-
+ commit: "e739194a13a74dedeaadc893b2b7ab4b75a54ae7"
+ message: >-
+    make TPC calib tasks (and subtasks) selectable
+ author: !!str mkrzewic
+-
+ commit: "cebbcb43740de2ca0a79963bf43150f432d67558"
+ message: >-
+    workaround on flat->esd conversion method
+ author: !!str sgorbuno
+-
+ commit: "2fc8df6d9bbd4eda84fd7774a368a3c54be529fc"
+ message: >-
+    impact parameters added to flat esd track
+ author: !!str sgorbuno
+-
+ commit: "d21ab591514b8b71538455c16942c92f97bc0763"
+ message: >-
+    don't push the data (yet)
+ author: !!str mkrzewic
+-
+ commit: "395054392446af29648f81a96b271451b25c651a"
+ message: >-
+    more cleanup
+ author: !!str mkrzewic
+-
+ commit: "647c903e55c47619be7ea1a249944fabce3cb99c"
+ message: >-
+    more cleanup
+ author: !!str sgweber
+-
+ commit: "4575043de7e2a30bec1413292b1b629a41a4c7a2"
+ message: >-
+    cleanup
+ author: !!str sgweber
+-
+ commit: "e685d2eed641670fd857fb9eeb77da5e32e442c1"
+ message: >-
+    cleanup
+ author: !!str mkrzewic
+-
+ commit: "0888ee7d31842fabb014c0547324aa2ee6aa4b62"
+ message: >-
+    add RestOutputData() to clean out the histograms
+ author: !!str mkrzewic
+-
+ commit: "fe9d1b9a432e8067015ed4f08eba9cd62f6df8a8"
+ message: >-
+    remove cout
+ author: !!str sgweber
+-
+ commit: "79e3b3548a3a8aad23315966fc2a750dba9e9338"
+ message: >-
+    cleanup of HLT calibration
+ author: !!str mkrzewic
+-
+ commit: "ed8a533ee1d872dfcb58b2258136538736ed7a41"
+ message: >-
+    fixed bug in comparer component
+ author: !!str sgweber
+-
+ commit: "e22725672809fb976f77d77e05a8eafdba589073"
+ message: >-
+    removed itsOut from flatESDflat
+ author: !!str sgweber
+-
+ commit: "57e825056b069898aca0124197d86670cd160554"
+ message: >-
+    add default value
+ author: !!str mkrzewic
+-
+ commit: "3d08412c4a2760383a725921159c1adaef056bab"
+ message: >-
+    disable the use of AliSysInfo and debug streamers
+ author: !!str mkrzewic
+-
+ commit: "83ece9d714d1d4ad532bfaeee2dbb154dc43545d"
+ message: >-
+    disable file writes with SetDisabled(bool) methods
+ author: !!str mkrzewic
+-
+ commit: "1f14d82820ad5977befccf549819adc698f3c8ab"
+ message: >-
+    #define TESTING to switch on/off performance measurements
+ author: !!str sgweber
+-
+ commit: "ef0046bfda641d31ad7cc1597e24c969e63404f1"
+ message: >-
+    perform init and cleanup manually
+ author: !!str mkrzewic
+-
+ commit: "5583a157e3dbb5bc25849a7960a725b8c37d1e14"
+ message: >-
+    disable printouts
+ author: !!str mkrzewic
+-
+ commit: "7c4c9ed1fef5fcdeeb1c3126e3379db06774e282"
+ message: >-
+    Several TPCCalibTasks added to CalibComponent, proper access to OCDB is needed (to be continued...)
+ author: !!str ivorobye
+-
+ commit: "52c62d47615417a517d5339d1311cca7ead510d5"
+ message: >-
+    Bug in CalibTime fixed, ResetTrackParamTPCInner(), cosmetics
+ author: !!str ivorobye
+-
+ commit: "0e72bf471df5029092c6822053f143d748750dbc"
+ message: >-
+    attach friends to tracks old style for ESDs
+ author: !!str mkrzewic
+-
+ commit: "9e93b69f7fff7b8ab2f1d4f2c0dccbe41dd33d49"
+ message: >-
+    updated macros
+ author: !!str sgweber
+-
+ commit: "c94a710710f411b9054fda320f7f437bf98c4419"
+ message: >-
+    set friend to the event also when processing ESD
+ author: !!str mkrzewic
+-
+ commit: "08fae14fd05265961d2f3eabd187f714b64aeb6b"
+ message: >-
+    butt-ugly hack to prove a principle
+ author: !!str mkrzewic
+-
+ commit: "46607168b909bef7b5abedc492d3a7e69f29aa2d"
+ message: >-
+    rename AliHLTAnaManagerComponent
+ author: !!str mkrzewic
+-
+ commit: "67464dda5d1a56309f323bc39ec3adcf54b5a06c"
+ message: >-
+    mv AliHLTTestInputHandler AliHLTVEventInputHandler
+ author: !!str mkrzewic
+-
+ commit: "3ae180eb51b4337adda5188e30eb8eeb3b18ff34"
+ message: >-
+    attach friend to event in the HLT input handler
+ author: !!str mkrzewic
+-
+ commit: "6dd7b4c07961732d7897250c5582cb167cf3f417"
+ message: >-
+    change in comparer component
+ author: !!str sgweber
+-
+ commit: "d7a0e2623292203184f1479bf1221238e37dc957"
+ message: >-
+    fix bug in setting of TPC clusters in flatTPCseed convertor
+ author: !!str sgorbuno
+-
+ commit: "3b6f653f874e4e1c22db3dcee935394f54c40a04"
+ message: >-
+    fix bug in setting of TPC clusters in flatTPCseed convertor
+ author: !!str sgorbuno
+-
+ commit: "07b192bed18f52dc6c751b880bc50d3c701b57f0"
+ message: >-
+    fix bug in setting of TPC clusters in flatTPCseed convertor
+ author: !!str sgorbuno
+-
+ commit: "9b090dff78b0aac9746f85e04fb0a076ea3e6efa"
+ message: >-
+    clusters+ bugfix
+ author: !!str sgweber
+-
+ commit: "c65d8459fba2e9d88a76dc774af548bea8591863"
+ message: >-
+    TPCCalibManagerComponent works on ESD input (=output of Global-esd-converter) -Only one task at the moment (Align) -Access to friend event should be done through AnalysisManager -TPCOut parameter for friendTracks is missed in Global-esd-converter
+ author: !!str ivorobye
+-
+ commit: "280ff738846887e5cf836aa23f7f244614b2cd80"
+ message: >-
+    clusters loop
+ author: !!str sgweber
+-
+ commit: "394fbd6c5d96ce7b2044f24575b9f973714d3bca"
+ message: >-
+    change in AliVTrack & VfriendTrack interface SetTrackParam*->ResetTrackParam*
+ author: !!str sgorbuno
+-
+ commit: "5526ddb48c0f41422078ed7910e8275e79bb75a4"
+ message: >-
+    bug fix in filling of ITS standalone tracks in flat esd structure
+ author: !!str sgorbuno
+-
+ commit: "639989c26e02022a80f979cd3c15cb9a3b64a5af"
+ message: >-
+    minor changes
+ author: !!str sgweber
+-
+ commit: "0580f5a95d88af8caeb8b6b50b6d916686202379"
+ message: >-
+    ITS standalone tracks added to flat esd
+ author: !!str sgorbuno
+-
+ commit: "2254a34c92fc4b963c2d96c620b44a57e701c2d0"
+ message: >-
+    check for primaryVertexTracks->Status()!=0
+ author: !!str sgorbuno
+-
+ commit: "4e1f072e6c5f9d43bf1b473b3e01b5ac8b52bb51"
+ message: >-
+    bug fix for trackID!=track index
+ author: !!str sgorbuno
+-
+ commit: "7bc2e43abc4f6588511c736c4296a6bd0551a7f9"
+ message: >-
+    Access to flatESDfriends for dummy calib component Note that ITSSA tracking is missed in Global-flat-esd-converter
+ author: !!str ivorobye
+-
+ commit: "63ee7d1ccfd64d04d3845204e439066461b52731"
+ message: >-
+    change structure of flat track and flat friend track
+ author: !!str sgorbuno
+-
+ commit: "3a955eccc2b24557141850a91b32f6be26e8ee70"
+ message: >-
+    various changes
+ author: !!str sgweber
+-
+ commit: "28ee60037b0932622151c55d77c906bbeda90fef"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "992521896dceab2c1056462996ab3dc1f45ba46d"
+ message: >-
+    removing fit-to-vertex feature in GlobalVertexerComponent
+ author: !!str sgorbuno
+-
+ commit: "85253d47f530d5e7b6f978590f08225bec350329"
+ message: >-
+    Small changes - SetTrackParamTPCOut for AliESDfriendTrack - Get rid of "ESD" names and printouts - Bugfix in CalibV0
+ author: !!str ivorobye
+-
+ commit: "5a598f59abca873cd4a7ebcfa68996f9bf5e9977"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "06d4d915714bcf591d2204323f69217e1a1e21de"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "6a7210fdf3ceecc3df009ee2caf9e78bb9042779"
+ message: >-
+    minor change in comparer component
+ author: !!str sgweber
+-
+ commit: "2e03fa2c2d9190f6707a023ffbee65df59ac179f"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "b44bbe5d3eeacbce815f7140cde1d1e547e1df79"
+ message: >-
+    Bugfixes, cosmetics. Errors in CalibTime and CalibCalib are now fixed. Some functions should be implemented in FlatESD classes: - FlatESDtrack : SetTrackParamIp, SetTrackParamOp - FlatESDfriendtrack : SetTrackParamTPCOut
+ author: !!str ivorobye
+-
+ commit: "176469a6c0597ea6c2ffd4756311cbfae64f308b"
+ message: >-
+    output of flatESDconverter added to CalibManagerComponent
+ author: !!str sgorbuno
+-
+ commit: "af93cdf7c20f7507691c891a568776ecec36971b"
+ message: >-
+    Dummy TPC Calib Component based on AnaManagerComponent and Pt task
+ author: !!str ivorobye
+-
+ commit: "aee65f3c92ebd0ff9e4ea7eb99460d942a4d28a1"
+ message: >-
+    bugfix in flatESD comparer component
+ author: !!str sgweber
+-
+ commit: "3192595223564cf334bcd5b24807814aa13b85e9"
+ message: >-
+    get the master version of the TPCCA tracker
+ author: !!str mkrzewic
+-
+ commit: "90df203b1d3d6e7d53e974be6e594f1f91570fc9"
+ message: >-
+    bug fix in Reinitialisation of flat esd friend
+ author: !!str sgorbuno
+-
+ commit: "0a1a6411d9394181967d3a1c9977b2e14cb35e61"
+ message: >-
+    Example of super-duper easy HLTCalibrationProcessor
+ author: !!str zampolli
+-
+ commit: "9a38dc5254759779695c86bf2b1f3aacf09f4233"
+ message: >-
+    enable resetting of TPCseed via V interface
+ author: !!str mkrzewic
+-
+ commit: "9d65b51dfa62de84811d0423e33395d7d22ccd51"
+ message: >-
+    extra timing information with AddStamp
+ author: !!str mkrzewic
+-
+ commit: "797de34d509ea6eee82f2d37ebd8cd34601443c6"
+ message: >-
+    Add a setter to enable constructing friends in the esd converter
+ author: !!str mkrzewic
+-
+ commit: "59f497b4a0390cfec7f62391f962a8c5f6392b55"
+ message: >-
+    add IsPureITSStandalone()
+ author: !!str mkrzewic
+-
+ commit: "2b2ef3df6db1ff0343f13426ed823c1d0495aa28"
+ message: >-
+    Sergey: properly store vertex tracks
+ author: !!str mkrzewic
+-
+ commit: "fde519ab8b198ff070e76127420782a6d55fb352"
+ message: >-
+    revert to the original flatdev version
+ author: !!str mkrzewic
+-
+ commit: "a1386f1e528d0858a6a2ce7d88a5e8a8c74d5491"
+ message: >-
+    fix rebasing artefacts
+ author: !!str mkrzewic
+-
+ commit: "28fbf38e17e4406ccfdcd51fd3a0c54e24ff9118"
+ message: >-
+    git sucks. sometimes.
+ author: !!str mkrzewic
+-
+ commit: "82c0484c3eff24b1e0c4661b8bff1ab0203bc409"
+ message: >-
+    ITS standalone vertex is stored as primaryVertexTracks, TPC vertex stored as primVtxTPC - both in ESD and flatESD
+ author: !!str sgorbuno
+-
+ commit: "64920c09f7071abec0171903c5a338651e866cbb"
+ message: >-
+    additional debug/benchmarking
+ author: !!str mkrzewic
+-
+ commit: "33d17105782f56869b4d8ec49d3852a6dabc2d74"
+ message: >-
+    enable debug output with option: EnableDebug
+ author: !!str mkrzewic
+-
+ commit: "3204c50eb3819fa65a95b0a928a4e0fc4409829a"
+ message: >-
+    update comment on how to fill an ESD from flat
+ author: !!str mkrzewic
+-
+ commit: "916aac62c8e2d662c1703a1e4d02509650825449"
+ message: >-
+    add example static conversion functions flat<->ESD
+ author: !!str mkrzewic
+-
+ commit: "e501a6f70b7387d3f42d98ba330081dcfcf4478d"
+ message: >-
+    ATO-146 add an approximate time+pad coordinate
+ author: !!str mkrzewic
+-
+ commit: "02b4dc95c7e0f6d4cda9ac9fbfeb360acb3d09d4"
+ message: >-
+    primary vtx TPC added to flat ESD event, fNPrimVertices field removed
+ author: !!str sgorbuno
+-
+ commit: "defedd547ef1f66bb1695d722d6ba6f12c895925"
+ message: >-
+    extract the freshly calculated TPC impact params
+ author: !!str mkrzewic
+-
+ commit: "606c91ffe8bc4514bb136f686eb16ba6d85249d4"
+ message: >-
+    simple implementation of GetTPCCrossedRows() (=ncls)
+ author: !!str mkrzewic
+-
+ commit: "eb26c61aa1ca2b47c3243eee20e509d92ab0fa66"
+ message: >-
+    moved macros
+ author: !!str sgweber
+-
+ commit: "c8bb8fffd63f5fab81009a1edc591d66668a4ce8"
+ message: >-
+    implement IsOn() in AliFlatESDTrack
+ author: !!str mkrzewic
+-
+ commit: "466f24213fcf709f260cd808e5274d08ed45c2a3"
+ message: >-
+    add consistent GetNumberOf{ITS,TPC,TRD}clusters()
+ author: !!str mkrzewic
+-
+ commit: "70bd55ae75482e374120591252f0f9f1ea5e36e8"
+ message: >-
+    GetXYZ returns GLOBAL coordinates
+ author: !!str mkrzewic
+-
+ commit: "48216a1cb1feb2459f1db330e9f516d16ff26fac"
+ message: >-
+    adjust output buffer size for calib output
+ author: !!str mkrzewic
+-
+ commit: "68d2114ba10d3d716abfea81eed7545a154ca50d"
+ message: >-
+    increase the buffer size to fit PbPb events
+ author: !!str mkrzewic
+-
+ commit: "7ef563c6f6e123e44f283f9173fb856e3585eec8"
+ message: >-
+    add comment
+ author: !!str mkrzewic
+-
+ commit: "28baca6faedb3f9a48b12bc8284f2514dc457b0c"
+ message: >-
+    LoadLibraries ALICE_ROOT->ALICE_PHYSICS
+ author: !!str ivorobye
+-
+ commit: "b5d4ae6b269f77e56bdef4c559d4c92fa513fb9a"
+ message: >-
+    a little more documentation in the header
+ author: !!str mkrzewic
+-
+ commit: "3525216583d646caec0825702eba3b20405afb90"
+ message: >-
+    install macros
+ author: !!str mkrzewic
+-
+ commit: "22ae3f489409bac98730a9c17085342a60686c1c"
+ message: >-
+    update of flat->ESD conversion
+ author: !!str sgorbuno
+-
+ commit: "aa86e969313153bcb226909d8bb91ecfe8d84040"
+ message: >-
+    Set methods for imp. parameters added to ESD track
+ author: !!str sgorbuno
+-
+ commit: "6b5d7f92cb98cf7f8b38d6a08fa44df4dbf41e37"
+ message: >-
+    more cleanup
+ author: !!str mkrzewic
+-
+ commit: "b7fb235038d4f1dd9d543e35007921f52670e0d9"
+ message: >-
+    cleanup after merge with the new split repo
+ author: !!str mkrzewic
+-
+ commit: "a8484ecbd464b5b8ae1da13da9844446b4dc7a5c"
+ message: >-
+    ALICE_ROOT->ALICE_PHYSICS
+ author: !!str mkrzewic
+-
+ commit: "b0647b6706a73b6fd9b9e3d7eab03fc9f384e28c"
+ message: >-
+    compile with zeromq properly
+ author: !!str mkrzewic
+-
+ commit: "bee0692fa44a4b770deebbc53f4a570a3668f09a"
+ message: >-
+    introduce PushAndReset() + improve handling of EOR
+ author: !!str mkrzewic
+-
+ commit: "ec9280be3496f30e7ee5dd80d8518b4d3f605491"
+ message: >-
+    update documentation of PushBack
+ author: !!str mkrzewic
+-
+ commit: "88beaf2ab4ce08dc0f70e576b0edd4d283395c18"
+ message: >-
+    API change: dont init the runNumber in AddTask
+ author: !!str mkrzewic
+-
+ commit: "70283827b7ea597e32823089a988407e85189390"
+ message: >-
+    process standalone strings as keys in options
+ author: !!str mkrzewic
+-
+ commit: "27d466bc60b2c1fccc745a088fd212b657ec992c"
+ message: >-
+    make location of the AddTaskMacro selectable
+ author: !!str mkrzewic
+-
+ commit: "11e23c9e5d68874d7743b978858fb2827144783f"
+ message: >-
+    better argument string reconstruction
+ author: !!str mkrzewic
+-
+ commit: "cebb07de3d2807cde55a654b58e3464943731081"
+ message: >-
+    Revert "store the original configuration string"
+ author: !!str mkrzewic
+-
+ commit: "bfb8e4cd3778d1ba14bee46be9e73763d3596b24"
+ message: >-
+    bugfix: propagate options properly+remove printf
+ author: !!str mkrzewic
+-
+ commit: "7ae792709d8e4c11a1cd0a383793dd98c8a80d0a"
+ message: >-
+    delete should be enough, we dont store pointers
+ author: !!str mkrzewic
+-
+ commit: "3abbd868c2ee994b3467fba3f8a86b95cd7c53d0"
+ message: >-
+    make the string parser more backward compatible
+ author: !!str mkrzewic
+-
+ commit: "68f7b1c86b1348300457e7d5c502b172c6c4674b"
+ message: >-
+    cleanup of the option parsing
+ author: !!str mkrzewic
+-
+ commit: "79e8f9a327b72be126870e85f00087abca35caa2"
+ message: >-
+    store the original configuration string
+ author: !!str mkrzewic
+-
+ commit: "e392c4e5c4fbc2283a4e9e02a903cc34b791ec76"
+ message: >-
+    please compile
+ author: !!str mkrzewic
+-
+ commit: "99c45033df7645cda9bced1d4853e536af5dc1c1"
+ message: >-
+    dont leave ze speicher lying around everywhere
+ author: !!str mkrzewic
+-
+ commit: "47042d63820ca1c0017ef408d5f87d3586bfc6aa"
+ message: >-
+    add comments to the new option parser
+ author: !!str mkrzewic
+-
+ commit: "5ef349c6acbee2619e0096506e77eb9cd2ff0c6c"
+ message: >-
+    configure TPCcalib on command line
+ author: !!str mkrzewic
+-
+ commit: "3522914ac5c1d4939df77f491885cfc1fce0e3af"
+ message: >-
+    use the AddTaskTPCcalib form standard location
+ author: !!str mkrzewic
+-
+ commit: "224d1f97ab8f4fac63fbf05e27fb9444f30e3349"
+ message: >-
+    make TPC calib tasks (and subtasks) selectable
+ author: !!str mkrzewic
+-
+ commit: "86ff4935cee8d9e533cd1f7999e756aab5c3ee3c"
+ message: >-
+    workaround on flat->esd conversion method
+ author: !!str sgorbuno
+-
+ commit: "60d13ef890ab12e1832fb6296124bcee9f0cc170"
+ message: >-
+    impact parameters added to flat esd track
+ author: !!str sgorbuno
+-
+ commit: "813ed2d5604750bcb96f10ef6db23736582d2c48"
+ message: >-
+    don't push the data (yet)
+ author: !!str mkrzewic
+-
+ commit: "79afa513355de753a8ea4048a8294e12b7cfa2b8"
+ message: >-
+    more cleanup
+ author: !!str mkrzewic
+-
+ commit: "73c01747c3a80c5e00642fde77e8b346b80a5936"
+ message: >-
+    more cleanup
+ author: !!str sgweber
+-
+ commit: "5b49bebd052e6afc340dd2206643b462fb220ec7"
+ message: >-
+    cleanup
+ author: !!str sgweber
+-
+ commit: "e6a0453a9f092bf2ab3aa3b32723573dd7f38cc8"
+ message: >-
+    cleanup
+ author: !!str mkrzewic
+-
+ commit: "e11f380cf0bf0d10a230b036bbd84f5827298bd9"
+ message: >-
+    add RestOutputData() to clean out the histograms
+ author: !!str mkrzewic
+-
+ commit: "0177b02aa5754130f06ddbf7edea26eff055af6c"
+ message: >-
+    remove cout
+ author: !!str sgweber
+-
+ commit: "639432ae6ed8cf68668a42a8fdc8682d7c058d4a"
+ message: >-
+    cleanup of HLT calibration
+ author: !!str mkrzewic
+-
+ commit: "1b64e94fe0d0caab9e2e7d081bf49bdf3995c586"
+ message: >-
+    fixed bug in comparer component
+ author: !!str sgweber
+-
+ commit: "25ce6d2513780a114eedb22beea48cd9264a76ed"
+ message: >-
+    removed itsOut from flatESDflat
+ author: !!str sgweber
+-
+ commit: "2ee1cdb67d92cbb87f9ac8d6b3d54e8cad4999e7"
+ message: >-
+    add default value
+ author: !!str mkrzewic
+-
+ commit: "6ab36264505b62d7ae10190f0f018a104dba887c"
+ message: >-
+    disable the use of AliSysInfo and debug streamers
+ author: !!str mkrzewic
+-
+ commit: "c532eaa284cedc53a3f129e833baef287c3a21eb"
+ message: >-
+    disable file writes with SetDisabled(bool) methods
+ author: !!str mkrzewic
+-
+ commit: "b46b61c9ab798de8476281bd975e9f2b702a70bc"
+ message: >-
+    Avoid to call VTrack->GetParameter() AliExternalTrackParam is used instead so that it will work also for FlatESD
+ author: !!str ivorobye
+-
+ commit: "3a715d39d1e46d405173b81a3adff1337a44b8d1"
+ message: >-
+    #define TESTING to switch on/off performance measurements
+ author: !!str sgweber
+-
+ commit: "d3370bd1f6a6ebfa53571d2bd8f976a5c3c71adf"
+ message: >-
+    perform init and cleanup manually
+ author: !!str mkrzewic
+-
+ commit: "17ca78e4552f1f5fa003c3ed6fd1f47dffddfcda"
+ message: >-
+    disable printouts
+ author: !!str mkrzewic
+-
+ commit: "9c7b6662748a54b712d112036ab7b5d149448556"
+ message: >-
+    Several TPCCalibTasks added to CalibComponent, proper access to OCDB is needed (to be continued...)
+ author: !!str ivorobye
+-
+ commit: "e9dc4c59ee9358857acf91a1d8cbcd8b1340535d"
+ message: >-
+    Bug in CalibTime fixed, ResetTrackParamTPCInner(), cosmetics
+ author: !!str ivorobye
+-
+ commit: "0d820863390ac9cf9f235a6f7f6e895a6db2978a"
+ message: >-
+    attach friends to tracks old style for ESDs
+ author: !!str mkrzewic
+-
+ commit: "5f3968e7054a702635f763208e0895b34c0bb0b0"
+ message: >-
+    updated macros
+ author: !!str sgweber
+-
+ commit: "82f2f39cf1f2887e8eb5c89843b7b9f77eabcfc5"
+ message: >-
+    set friend to the event also when processing ESD
+ author: !!str mkrzewic
+-
+ commit: "6291e67314eaa5b3d6ebc97eb330652ad4295d5b"
+ message: >-
+    butt-ugly hack to prove a principle
+ author: !!str mkrzewic
+-
+ commit: "767f358bcb539bd77d2317597ec55ce6d20392fa"
+ message: >-
+    fix double inclusion protection after rename
+ author: !!str mkrzewic
+-
+ commit: "a0209352baa462df4c1754595f81b6b42a2f6ca0"
+ message: >-
+    rename AliHLTAnaManagerComponent
+ author: !!str mkrzewic
+-
+ commit: "2d25fcc1d3d27073508a17a2a2f3c29b8f440878"
+ message: >-
+    mv AliHLTTestInputHandler AliHLTVEventInputHandler
+ author: !!str mkrzewic
+-
+ commit: "c1e82ccb370f6d521e85eb5356295647d97027f0"
+ message: >-
+    attach friend to event in the HLT input handler
+ author: !!str mkrzewic
+-
+ commit: "b2876ab9932f3973ac43d1419dc197bf954c642c"
+ message: >-
+    change in comparer component
+ author: !!str sgweber
+-
+ commit: "f86c4ac3046597c975bfeb0c998f8ec23a38f161"
+ message: >-
+    fix bug in setting of TPC clusters in flatTPCseed convertor
+ author: !!str sgorbuno
+-
+ commit: "29ba6a82b81c9c0cba241febbcc9985d5ac4c837"
+ message: >-
+    fix bug in setting of TPC clusters in flatTPCseed convertor
+ author: !!str sgorbuno
+-
+ commit: "fb06e023882f4fff72b5e223860dc21c25bb3d6d"
+ message: >-
+    fix bug in setting of TPC clusters in flatTPCseed convertor
+ author: !!str sgorbuno
+-
+ commit: "f7198c67ecc8b9501f22d13b485a314703362c51"
+ message: >-
+    clusters+ bugfix
+ author: !!str sgweber
+-
+ commit: "31758d9a04bba63f71f5d2eabcbeb407f9f1cdad"
+ message: >-
+    add TPCOut and ITSOut to esd friend
+ author: !!str sgorbuno
+-
+ commit: "8939c8e2c3ff1c3df3a6aa92a9564e3ca7321359"
+ message: >-
+    TPCCalibManagerComponent works on ESD input (=output of Global-esd-converter) -Only one task at the moment (Align) -Access to friend event should be done through AnalysisManager -TPCOut parameter for friendTracks is missed in Global-esd-converter
+ author: !!str ivorobye
+-
+ commit: "252225b0a10379ad220e62a8d85a908d617e7d27"
+ message: >-
+    clusters loop
+ author: !!str sgweber
+-
+ commit: "ad16d0b4eae4c02f9a3dd3154ab6d165d930d5b2"
+ message: >-
+    change in AliVTrack & VfriendTrack interface SetTrackParam*->ResetTrackParam*
+ author: !!str sgorbuno
+-
+ commit: "1dd84cb47b8ab48296b827a0be33e41b52248107"
+ message: >-
+    bug fix in filling of ITS standalone tracks in flat esd structure
+ author: !!str sgorbuno
+-
+ commit: "44054107899d30525bed09d0e7e461eadf5df9bc"
+ message: >-
+    minor changes
+ author: !!str sgweber
+-
+ commit: "ae842e2b34e0445efa9b9833af4fea5a1ce2b691"
+ message: >-
+    ITS standalone tracks added to flat esd
+ author: !!str sgorbuno
+-
+ commit: "c085af33b784ba138d68ca7116a605e55670dbe2"
+ message: >-
+    check for primaryVertexTracks->Status()!=0
+ author: !!str sgorbuno
+-
+ commit: "450a0b14f4bceb0c63f8583f4521dc0eb80b6760"
+ message: >-
+    bug fix for trackID!=track index
+ author: !!str sgorbuno
+-
+ commit: "72300b7f764fa5f8c46225749181745ebb6bb2f0"
+ message: >-
+    Access to flatESDfriends for dummy calib component Note that ITSSA tracking is missed in Global-flat-esd-converter
+ author: !!str ivorobye
+-
+ commit: "6e6f4ae84d73205b06c667b26c161b9c8032313b"
+ message: >-
+    change structure of flat track and flat friend track
+ author: !!str sgorbuno
+-
+ commit: "0f15a4baa1138184b7c38ba14154c210d5041e23"
+ message: >-
+    various changes
+ author: !!str sgweber
+-
+ commit: "3ea685b03653fad721dae0f27ac32ca7fce2ab5f"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "6cb2d8feeee421ac358d067d6b3c7f5c31ace797"
+ message: >-
+    removing fit-to-vertex feature in GlobalVertexerComponent
+ author: !!str sgorbuno
+-
+ commit: "0d1fbfe82fcda21ea60d474fad4aeacf350e245f"
+ message: >-
+    removing fit-to-vertex feature in GlobalVertexerComponent
+ author: !!str sgorbuno
+-
+ commit: "140333e1968d375b6c30232932f6960287dba241"
+ message: >-
+    Small changes - SetTrackParamTPCOut for AliESDfriendTrack - Get rid of "ESD" names and printouts - Bugfix in CalibV0
+ author: !!str ivorobye
+-
+ commit: "4467b3a0e1935378f9ea84d560b0da34ef9e86b4"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "a658e28b71eed0ca81e041ac42c0d3f4eb7d0dc9"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "b63bb90a7a1c07bdf291df451382ffd01ebbd3ac"
+ message: >-
+    minor change in comparer component
+ author: !!str sgweber
+-
+ commit: "8ed7cee65296b8b1d46e173f96fe1574278ff6d7"
+ message: >-
+    filling of track params in flat esd track changed
+ author: !!str sgorbuno
+-
+ commit: "385ac009f3dd5bf62b93565ab0319f562efe0afc"
+ message: >-
+    Bugfixes, cosmetics. Errors in CalibTime and CalibCalib are now fixed. Some functions should be implemented in FlatESD classes: - FlatESDtrack : SetTrackParamIp, SetTrackParamOp - FlatESDfriendtrack : SetTrackParamTPCOut
+ author: !!str ivorobye
+-
+ commit: "27004e05c05c06803e71322a0cfa10ef794083ee"
+ message: >-
+    output of flatESDconverter added to CalibManagerComponent
+ author: !!str sgorbuno
+-
+ commit: "e548c3a8dbf4cf5a67b576f3f258c5a7a3c2eaaa"
+ message: >-
+    flatESDFriend added to the output data block description
+ author: !!str sgorbuno
+-
+ commit: "44d8fab066e1ae876ba23070e068849a701f85bd"
+ message: >-
+    Dummy TPC Calib Component based on AnaManagerComponent and Pt task
+ author: !!str ivorobye
+-
+ commit: "6955348bc5e68624ec985359a96175fe46f0a374"
+ message: >-
+     Gitignore
+ author: !!str ivorobye
+-
+ commit: "3bd6f3416b2ce1d638d5e88201feb143b6e5b184"
+ message: >-
+    bugfix in flatESD comparer component
+ author: !!str sgweber
 -
  commit: "4c82e261f7985bd95f42f24cec4d92cf91e2f1b4"
  message: >-
