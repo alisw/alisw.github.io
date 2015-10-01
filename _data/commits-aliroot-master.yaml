@@ -1,4 +1,39 @@
 -
+ commit: "4c82e261f7985bd95f42f24cec4d92cf91e2f1b4"
+ message: >-
+    ATO-238 - FPE protection
+ author: !!str mivanov
+-
+ commit: "d28b0f478ba580d3ee0156f9ece027ab041ddcd5"
+ message: >-
+    ATO-108 - updated code after passing second round of tests. Adding time stamp ...
+ author: !!str mivanov
+-
+ commit: "7d827c73f7f16e0afdabacfbd137d58ebec12882"
+ message: >-
+    ATO-108 - new calibration class AliTPCcalibAlignInterpolation added
+ author: !!str mivanov
+-
+ commit: "18528a3ef8c6a852e5428dc15b541e62d9138322"
+ message: >-
+    ATO-108 - new calibration class AliTPCcalibAlignInterpolation added
+ author: !!str mivanov
+-
+ commit: "bc7ae0be8fdf7ad465b1eae7f4490a62c9fd70ff"
+ message: >-
+    ATO-108, ATO-271 -  TStatToolkit::MakeDistortionMap
+ author: !!str mivanov
+-
+ commit: "b2d17e11346d2e629227c0eaad03f7db62dd0490"
+ message: >-
+    Add documentation for runTests
+ author: !!str eulisse
+-
+ commit: "68bc92109b21fda125c9b95ebddcd42df2e3d827"
+ message: >-
+    Fix OADB location to ALICE_PHYSICS, PIDresponse path is settable
+ author: !!str shahoian
+-
  commit: "ba509710588f72d7efc88b7e5042acd0408db17b"
  message: >-
     MTR scalers: correct rounding of the event time given by the global clock scaler.
@@ -73,13 +108,3 @@
  message: >-
     Introduce protection to read older file format for EXPORTED.
  author: !!str bogdan
--
- commit: "1f56f21bacbb2613f2eadfc146fc72e07386ec06"
- message: >-
-    The MCH configuration might now change for each run.
- author: !!str laphecet
--
- commit: "41e7e971de9bf55f62abd7e228adb596f990da75"
- message: >-
-    AMPT gen macro fixed for pp collisions (Leonardo)
- author: !!str ekryshen
