@@ -107,11 +107,18 @@ machine is:
 
       eval $(ai-rc "{{site.experiment}} Release Testing")
 
+- Specify a few parameters for the machine you want to spawn:
+
+      MACHINE_NAME=<{{site.builduser}}XX>
+
+- Create a data volume which will be used as build scratch space and
+  for build artifacts:
+
+      openstack volume create --type io1 --size 1000 $MACHINE_NAME-store
+
 - To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
-
-      MACHINE_NAME=<{{site.builduser}}XX>
 
       ai-bs-vm -g {{site.slave_hostgroup}} \
                -i "{{site.openstack_image}}" \
