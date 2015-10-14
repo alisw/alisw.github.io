@@ -1,1 +1,19 @@
-{ }
+{
+  "aggregations" : {
+    "by_id" : {
+      "buckets" : [ {
+        "key" : "1901",
+        "by_name" : {
+          "buckets" : [ {
+            "key" : "gun",
+            "status" : {
+              "buckets" : [ {
+                "key" : "SUCCESS"
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
