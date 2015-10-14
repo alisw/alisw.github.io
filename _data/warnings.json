@@ -12429,6 +12429,35 @@
           } ]
         }
       }, {
+        "key" : "1936",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "passing argument 9 of 'crypto_aead_aes256gcm_decrypt_afternm' from incompatible pointer type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/beb826f6fd/src/libsodium/crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "803"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "passing argument 9 of 'crypto_aead_aes256gcm_encrypt_afternm' from incompatible pointer type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/beb826f6fd/src/libsodium/crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "784"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "1925",
         "by_message" : {
           "buckets" : [ {
