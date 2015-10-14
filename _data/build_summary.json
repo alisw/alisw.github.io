@@ -1,1 +1,197 @@
-{ }
+{
+  "aggregations" : {
+    "by_package" : {
+      "buckets" : [ {
+        "key" : "AliRoot",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "v5-07-01",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "67",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/prod"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "ThePEG-test",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "0",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "1899",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1898",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1897",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1896",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1895",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1894",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1893",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc7_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1892",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc6_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              }, {
+                "key" : "1891",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "dberzano",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "thepeg-v20150811"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
