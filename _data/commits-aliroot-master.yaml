@@ -1,4 +1,9 @@
 -
+ commit: "8c6a0121b1fc222a9b4802375dd6b525699f703e"
+ message: >-
+    Fix bug in validity range of the MTR config files: current run number to infinity, except for the trigger scalers.
+ author: !!str bogdan
+-
  commit: "d7897f50a15c9115e3974ced680f699aa9a57765"
  message: >-
     ATO-108, ATO-271 - using localX insteadof the R for the distortion histogram creation. +static TTree* AddFriendDistortionTree(TTree * tree, const char * fname, const char *treeName,  const char *friendAlias) used for visualization and comparison of the differn distortion maps
