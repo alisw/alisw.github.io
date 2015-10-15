@@ -16107,6 +16107,110 @@
           } ]
         }
       }, {
+        "key" : "1956",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "variadic templates only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQConnection.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  }, {
+                    "key" : "93"
+                  }, {
+                    "key" : "80"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "319"
+                  }, {
+                    "key" : "320"
+                  }, {
+                    "key" : "326"
+                  }, {
+                    "key" : "327"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObject.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "103"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObjectEmitVA.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "318"
+                  }, {
+                    "key" : "319"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQConnection.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObject.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "105"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "149"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "scoped enums only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "1932",
         "by_message" : {
           "buckets" : [ {
@@ -16173,6 +16277,60 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "154"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "1957",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "type attributes ignored after type is already defined [-Wattributes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "./boost/archive/detail/interface_oarchive.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "32"
+                  } ]
+                }
+              }, {
+                "key" : "./boost/archive/polymorphic_iarchive.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "46"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              }, {
+                "key" : "./boost/archive/polymorphic_oarchive.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "45"
+                  }, {
+                    "key" : "46"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "use of C++0x long long integer constant [-Wlong-long]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "./boost/timer/timer.hpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              }, {
+                "key" : "libs/timer/src/cpu_timer.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
                   } ]
                 }
               } ]
@@ -16263,6 +16421,23 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "229"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "1954",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/8c6a0121b1fc222a9b4802375dd6b525699f703e/8c6a0121b1/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
                   } ]
                 }
               } ]
