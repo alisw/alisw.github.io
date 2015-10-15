@@ -1,4 +1,19 @@
 -
+ commit: "d7897f50a15c9115e3974ced680f699aa9a57765"
+ message: >-
+    ATO-108, ATO-271 - using localX insteadof the R for the distortion histogram creation. +static TTree* AddFriendDistortionTree(TTree * tree, const char * fname, const char *treeName,  const char *friendAlias) used for visualization and comparison of the differn distortion maps
+ author: !!str mivanov
+-
+ commit: "56e1bd3336d0684958d2ee90b2087539b1e7682d"
+ message: >-
+    ATO-108, ATO-271 - Optional use of the systematic errors from AliTPCReconstructor instead of the TPC/Calib/RecoParam. To be used in Cpass0 reconstruction to guarantte correct matching with pouter depetectors, in case of significant distortions
+ author: !!str mivanov
+-
+ commit: "a0f0d039e86e5cd5b70465a84f8ea86df43d2e44"
+ message: >-
+    ATO-108. Reduction of outpu file size in TStatToolkit::MakeDistortionMap. Dumping of 1D histogram only as an option. Default only subsample of histogram written
+ author: !!str mivanov
+-
  commit: "b0aff708fb243b3d158f7c85ee2c015c2ed62bbf"
  message: >-
     bugfix: handle the message closing properly
