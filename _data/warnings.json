@@ -27789,6 +27789,18 @@
         "key" : "2035",
         "by_message" : {
           "buckets" : [ {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/a8e38aa3abc3248b8533b6b284e569765d1183c2/a8e38aa3ab/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -27877,6 +27889,95 @@
               } ]
             }
           }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 24u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/a8e38aa3abc3248b8533b6b284e569765d1183c2/a8e38aa3ab/T0/T0rec/AliT0Reconstructor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "868"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "2041",
+        "by_message" : {
+          "buckets" : [ {
             "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -27884,6 +27985,94 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/a8e38aa3abc3248b8533b6b284e569765d1183c2/a8e38aa3ab/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "75"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
                   } ]
                 }
               } ]
@@ -28982,135 +29171,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "262"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "67",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "no newline at end of file",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWG/muon/AliAnalysisNonMuonTrackCuts.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGCF/Correlations/ThreePart/AliAnalysisTaskCorrelation3p.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGHF/hfe/AliAnalysisTaskEMCalHFEpA.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "644"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/OADB/COMMON/MULTIPLICITY/AliMultEstimator.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "47"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/OADB/COMMON/MULTIPLICITY/AliMultInput.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "33"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/OADB/COMMON/MULTIPLICITY/AliMultVariable.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "30"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWG/muon/aaf/FILTER_AODMUONWITHTRACKLETS.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "49"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGCF/Correlations/ThreePart/AliThreeParticleCorrelator.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGGA/PHOSTasks/ClusterSelection/AliPHOSTriggerUtils.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "260"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskPi0FlowMCHijing.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "121"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGHF/hfe/AliAnalysisTaskEMCalHFEpA.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "6833"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGHF/jetsHF/AliHFJetTaggingIP.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "627"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGJE/UserTasks/AliAnalysisTaskPID.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3986"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGLF/SPECTRA/Nuclei/deuteronpA/AliAnalysisDeuteronTree.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "316"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGLF/SPECTRA/PiKaPr/TOF/pp7/TOFSpectrappAnalysis.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "489"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskPPVsMultCrossCheckMC.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "711"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliPhysics/vAN-20151013/vAN-20151013/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "564"
                   } ]
                 }
               } ]
