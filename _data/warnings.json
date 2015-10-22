@@ -14897,34 +14897,6 @@
         "key" : "2064",
         "by_message" : {
           "buckets" : [ {
-            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/69bf5c2cf4aa8f219e2c89dd042fc0995fc70e7e/69bf5c2cf4/STEER/STEER/AliRawDataHeaderSim.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/69bf5c2cf4aa8f219e2c89dd042fc0995fc70e7e/69bf5c2cf4/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "112"
-                  }, {
-                    "key" : "149"
-                  }, {
-                    "key" : "75"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -15040,6 +15012,118 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct AliRawDataHeaderV3' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/69bf5c2cf4aa8f219e2c89dd042fc0995fc70e7e/69bf5c2cf4/STEER/STEER/AliRawDataHeaderSim.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/69bf5c2cf4aa8f219e2c89dd042fc0995fc70e7e/69bf5c2cf4/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  }, {
+                    "key" : "149"
+                  }, {
+                    "key" : "75"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
                   } ]
                 }
               } ]
