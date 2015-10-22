@@ -2,15 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "1951",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "aborted"
-          } ]
-        }
-      }, {
         "key" : "1960",
         "status" : {
           "buckets" : [ {
@@ -382,6 +373,13 @@
         }
       }, {
         "key" : "2035",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "2036",
         "status" : {
           "buckets" : [ {
             "key" : "failure"
