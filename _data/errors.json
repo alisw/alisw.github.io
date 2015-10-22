@@ -2,23 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "1945",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "boost/shared_ptr.hpp: No such file or directory",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/lhapdf/v6.1.5-5/include/LHAPDF/Utils.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "24"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "1948",
         "by_message" : {
           "buckets" : [ {
