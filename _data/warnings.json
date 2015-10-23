@@ -1724,6 +1724,18 @@
               } ]
             }
           }, {
+            "key" : "'AliRsnMiniEvent::fRefMult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/08c0cde801ac3e0feb7066ad2c90ffb0cfcbcd22/08c0cde801/PWGLF/RESONANCES/AliRsnMiniEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1793,6 +1805,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/08c0cde801ac3e0feb7066ad2c90ffb0cfcbcd22/08c0cde801/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/e93624aee9e4d22599a68fd212a2f5e71572cf0d/AliPhysics/PWGLF/RESONANCES/extra/G__PWGLFrsnextra.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1473"
                   } ]
                 }
               } ]
@@ -1933,30 +1964,6 @@
                     "key" : "119"
                   }, {
                     "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "base class 'struct TEveQuadSet::QRectFixDim_t' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/TEveQuadSet.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "65"
                   } ]
                 }
               } ]
