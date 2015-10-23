@@ -2392,6 +2392,18 @@
               } ]
             }
           }, {
+            "key" : "'AliRsnMiniEvent::fRefMult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGLF/RESONANCES/AliRsnMiniEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2513,125 +2525,97 @@
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskEmcalJetBJetTaggingIP::fCalculateSoftElectronVtxInvariantMass' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'class AliMultInput' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGHF/jetsHF/AliAnalysisTaskEmcalJetBJetTaggingIP.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliMultInput.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "143"
-                  }, {
-                    "key" : "63"
+                    "key" : "9"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskEmcalJetBJetTaggingIP::fUseFunctionalBunchCut' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'class AliMultSelection' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGHF/jetsHF/AliAnalysisTaskEmcalJetBJetTaggingIP.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliMultSelection.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "143"
-                  }, {
-                    "key" : "63"
+                    "key" : "9"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fAOD' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'class AliMultSelectionCuts' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliMultSelectionCuts.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
+                    "key" : "20"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fClusterZvtx' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'class AliOADBMultSelection' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliOADBMultSelection.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
+                    "key" : "25"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fFileEff' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "but does not override 'AliMultInput(const AliMultInput&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliMultInput.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
+                    "key" : "9"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fNEvClusters' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "but does not override 'AliMultSelection(const AliMultSelection&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliMultSelection.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
+                    "key" : "9"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fWeight' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "but does not override 'AliMultSelectionCuts(const AliMultSelectionCuts&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliMultSelectionCuts.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
+                    "key" : "20"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "but does not override 'AliOADBMultSelection(const AliOADBMultSelection&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "key" : "1/SOURCES/AliPhysics/37c2906147a391cf24d038dba1db9f1a73240374/37c2906147/OADB/COMMON/MULTIPLICITY/AliOADBMultSelection.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-2/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
+                    "key" : "25"
                   } ]
                 }
               } ]
