@@ -2,27 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "2002",
-        "status" : {
-          "buckets" : [ {
-            "key" : "success"
-          } ]
-        }
-      }, {
-        "key" : "2003",
-        "status" : {
-          "buckets" : [ {
-            "key" : "failure"
-          } ]
-        }
-      }, {
-        "key" : "2006",
-        "status" : {
-          "buckets" : [ {
-            "key" : "failure"
-          } ]
-        }
-      }, {
         "key" : "2010",
         "status" : {
           "buckets" : [ {
