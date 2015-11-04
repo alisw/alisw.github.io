@@ -1,4 +1,39 @@
 -
+ commit: "9531af67ed35436c0431107deef7edfdc2c37d5e"
+ message: >-
+    add switch to recover time calibration parameters from OCDB
+ author: !!str gconesab
+-
+ commit: "b498458fd8dcb083aeba83f35e19ab9824e57c73"
+ message: >-
+    minor fixes on variable with capital letters, const of arguments in method and Fatal to AliFatal
+ author: !!str gconesab
+-
+ commit: "44537384c6d05f4b367dbfd7f88e914343dcc95f"
+ message: >-
+    cosmetics
+ author: !!str gconesab
+-
+ commit: "50aa5d5f032dc4b3bd963b2efb13a0267947547c"
+ message: >-
+    check if switch for using time calibration is on, in this case shift time with parameters stored in OCDB
+ author: !!str gconesab
+-
+ commit: "b368d3b89fc34637a0dc7fb7721a08a88f1b4efe"
+ message: >-
+    add flag to activate use of time calibration parameters in simulation or reconstruction, set in OCDB
+ author: !!str gconesab
+-
+ commit: "226ab96b6a4b6cab02860686a4991c44c3e3dfbf"
+ message: >-
+    simplify a bit the complicated digitization method: remove last loop for digits decalibration and setting final values and include this in the previous loop where masked digits or with too low energy are excluded
+ author: !!str gconesab
+-
+ commit: "fd03d9f3de94f1ac0c8a14a10a96ed81ca61db71"
+ message: >-
+    reorder digit timing offset setting, in preparation for next developments
+ author: !!str gconesab
+-
  commit: "79ee1e64e82bd13a66cef0f580f9e8a92a125f62"
  message: >-
     Implement trigger maker component for the EMCAL in the HLT
