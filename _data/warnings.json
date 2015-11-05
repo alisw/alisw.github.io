@@ -2,6 +2,653 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
+        "key" : "2302",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "variadic templates only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "326"
+                  }, {
+                    "key" : "327"
+                  }, {
+                    "key" : "320"
+                  }, {
+                    "key" : "319"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQConnection.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  }, {
+                    "key" : "93"
+                  }, {
+                    "key" : "80"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObject.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "103"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObjectEmitVA.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "26"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TMethodCall.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "319"
+                  }, {
+                    "key" : "318"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQConnection.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObject.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "105"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TFileMergeInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  }, {
+                    "key" : "45"
+                  }, {
+                    "key" : "46"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TIsAProxy.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "46"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              }, {
+                "key" : "[  2%] /build/workarea/sw/20155581/1/slc7_x86-64/ROOT/v6-05-02-3/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "318"
+                  } ]
+                }
+              }, {
+                "key" : "[  4%] /build/workarea/sw/20155581/1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObject.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "105"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'annotate' attribute directive ignored [-Wattributes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALrec/G__EMCALrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1194"
+                  }, {
+                    "key" : "1185"
+                  }, {
+                    "key" : "1186"
+                  }, {
+                    "key" : "1187"
+                  }, {
+                    "key" : "1188"
+                  }, {
+                    "key" : "1189"
+                  }, {
+                    "key" : "1190"
+                  }, {
+                    "key" : "1191"
+                  }, {
+                    "key" : "1192"
+                  }, {
+                    "key" : "1193"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDEbase/G__ACORDEbase.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1148"
+                  }, {
+                    "key" : "1150"
+                  }, {
+                    "key" : "1151"
+                  }, {
+                    "key" : "1154"
+                  }, {
+                    "key" : "1155"
+                  }, {
+                    "key" : "1156"
+                  }, {
+                    "key" : "1157"
+                  }, {
+                    "key" : "1149"
+                  }, {
+                    "key" : "1152"
+                  }, {
+                    "key" : "1153"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALraw/G__EMCALraw.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1414"
+                  }, {
+                    "key" : "1415"
+                  }, {
+                    "key" : "1402"
+                  }, {
+                    "key" : "1403"
+                  }, {
+                    "key" : "1404"
+                  }, {
+                    "key" : "1405"
+                  }, {
+                    "key" : "1406"
+                  }, {
+                    "key" : "1407"
+                  }, {
+                    "key" : "1408"
+                  }, {
+                    "key" : "1409"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDEsim/G__ACORDEsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "886"
+                  }, {
+                    "key" : "887"
+                  }, {
+                    "key" : "888"
+                  }, {
+                    "key" : "889"
+                  }, {
+                    "key" : "890"
+                  }, {
+                    "key" : "891"
+                  }, {
+                    "key" : "892"
+                  }, {
+                    "key" : "893"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/AD/ADrec/G__ADrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "896"
+                  }, {
+                    "key" : "897"
+                  }, {
+                    "key" : "900"
+                  }, {
+                    "key" : "902"
+                  }, {
+                    "key" : "903"
+                  }, {
+                    "key" : "898"
+                  }, {
+                    "key" : "899"
+                  }, {
+                    "key" : "901"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALsim/G__EMCALsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "989"
+                  }, {
+                    "key" : "990"
+                  }, {
+                    "key" : "991"
+                  }, {
+                    "key" : "992"
+                  }, {
+                    "key" : "993"
+                  }, {
+                    "key" : "994"
+                  }, {
+                    "key" : "995"
+                  }, {
+                    "key" : "996"
+                  }, {
+                    "key" : "997"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/AD/ADsim/G__ADsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "784"
+                  }, {
+                    "key" : "785"
+                  }, {
+                    "key" : "786"
+                  }, {
+                    "key" : "787"
+                  }, {
+                    "key" : "788"
+                  }, {
+                    "key" : "790"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDErec/G__ACORDErec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "376"
+                  }, {
+                    "key" : "377"
+                  }, {
+                    "key" : "378"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/BCM/G__BCM.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "371"
+                  }, {
+                    "key" : "372"
+                  }, {
+                    "key" : "373"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/HLT/BASE/HOMER/G__AliHLTHOMER.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "358"
+                  }, {
+                    "key" : "359"
+                  }, {
+                    "key" : "360"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/LHAPDF/base/G__lhapdfbase.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "165"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/TEvtGen/THepMCParser/G__THepMCParser.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "132"
+                  } ]
+                }
+              }, {
+                "key" : "[  2%] /build/workarea/sw/20155581/1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/AD/ADsim/G__ADsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "789"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "149"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "scoped enums only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "missing terminating \" character [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDEbase/G__ACORDEbase.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1143"
+                  }, {
+                    "key" : "1159"
+                  }, {
+                    "key" : "1160"
+                  }, {
+                    "key" : "1186"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDErec/G__ACORDErec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "371"
+                  }, {
+                    "key" : "379"
+                  }, {
+                    "key" : "380"
+                  }, {
+                    "key" : "398"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDEsim/G__ACORDEsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "881"
+                  }, {
+                    "key" : "894"
+                  }, {
+                    "key" : "895"
+                  }, {
+                    "key" : "918"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/AD/ADrec/G__ADrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "891"
+                  }, {
+                    "key" : "904"
+                  }, {
+                    "key" : "905"
+                  }, {
+                    "key" : "928"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/AD/ADsim/G__ADsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "779"
+                  }, {
+                    "key" : "791"
+                  }, {
+                    "key" : "792"
+                  }, {
+                    "key" : "814"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/BCM/G__BCM.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "366"
+                  }, {
+                    "key" : "374"
+                  }, {
+                    "key" : "375"
+                  }, {
+                    "key" : "393"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALraw/G__EMCALraw.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1397"
+                  }, {
+                    "key" : "1417"
+                  }, {
+                    "key" : "1418"
+                  }, {
+                    "key" : "1450"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALrec/G__EMCALrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1180"
+                  }, {
+                    "key" : "1196"
+                  }, {
+                    "key" : "1197"
+                  }, {
+                    "key" : "1223"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALsim/G__EMCALsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1023"
+                  }, {
+                    "key" : "984"
+                  }, {
+                    "key" : "998"
+                  }, {
+                    "key" : "999"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/HLT/BASE/HOMER/G__AliHLTHOMER.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "353"
+                  }, {
+                    "key" : "361"
+                  }, {
+                    "key" : "362"
+                  }, {
+                    "key" : "392"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/LHAPDF/base/G__lhapdfbase.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "160"
+                  }, {
+                    "key" : "166"
+                  }, {
+                    "key" : "167"
+                  }, {
+                    "key" : "183"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/TEvtGen/THepMCParser/G__THepMCParser.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "127"
+                  }, {
+                    "key" : "133"
+                  }, {
+                    "key" : "134"
+                  }, {
+                    "key" : "150"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDEbase/G__ACORDEbase.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1206"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDErec/G__ACORDErec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "409"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDEsim/G__ACORDEsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "934"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/AD/ADrec/G__ADrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "944"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/AD/ADsim/G__ADsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "829"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/BCM/G__BCM.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "404"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALraw/G__EMCALraw.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1473"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALrec/G__EMCALrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1242"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/EMCAL/EMCALsim/G__EMCALsim.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1040"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/HLT/BASE/HOMER/G__AliHLTHOMER.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "403"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/LHAPDF/base/G__lhapdfbase.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "192"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/TEvtGen/THepMCParser/G__THepMCParser.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "159"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TInterpreter::SuspendAutoParsing' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TInterpreter::SuspendAutoParsing(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "2213",
         "by_message" : {
           "buckets" : [ {
@@ -1299,227 +1946,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "2302",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "variadic templates only available with -std=c++11 or -std=gnu++11 [enabled by default]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQConnection.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "78"
-                  }, {
-                    "key" : "93"
-                  }, {
-                    "key" : "80"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "319"
-                  }, {
-                    "key" : "320"
-                  }, {
-                    "key" : "326"
-                  }, {
-                    "key" : "327"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObject.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "103"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObjectEmitVA.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  }, {
-                    "key" : "26"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TMethodCall.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "108"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TClass.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "318"
-                  }, {
-                    "key" : "319"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQConnection.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "60"
-                  }, {
-                    "key" : "76"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TQObject.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "105"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TFileMergeInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "44"
-                  }, {
-                    "key" : "45"
-                  }, {
-                    "key" : "46"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TIsAProxy.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "46"
-                  }, {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TClass.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "149"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "missing terminating \" character [enabled by default]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDErec/G__ACORDErec.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "371"
-                  }, {
-                    "key" : "379"
-                  }, {
-                    "key" : "380"
-                  }, {
-                    "key" : "398"
-                  } ]
-                }
-              }, {
-                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/BCM/G__BCM.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "366"
-                  }, {
-                    "key" : "374"
-                  }, {
-                    "key" : "375"
-                  }, {
-                    "key" : "393"
-                  } ]
-                }
-              }, {
-                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/HLT/BASE/HOMER/G__AliHLTHOMER.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "353"
-                  }, {
-                    "key" : "361"
-                  }, {
-                    "key" : "362"
-                  }, {
-                    "key" : "392"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "scoped enums only available with -std=c++11 or -std=gnu++11 [enabled by default]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-3/include/TInterpreter.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'annotate' attribute directive ignored [-Wattributes]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDErec/G__ACORDErec.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "376"
-                  }, {
-                    "key" : "377"
-                  }, {
-                    "key" : "378"
-                  } ]
-                }
-              }, {
-                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/HLT/BASE/HOMER/G__AliHLTHOMER.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "358"
-                  }, {
-                    "key" : "359"
-                  }, {
-                    "key" : "360"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/ACORDE/ACORDErec/G__ACORDErec.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "409"
-                  } ]
-                }
-              }, {
-                "key" : "1/BUILD/4ea40c5015cbb56112a994aae915ce57285d3d59/AliRoot/HLT/BASE/HOMER/G__AliHLTHOMER.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "403"
                   } ]
                 }
               } ]
@@ -4737,6 +5163,42 @@
           } ]
         }
       }, {
+        "key" : "2303",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/d4199e64356e486cb8ff40f6f5c1ea954b66b4ff/d4199e6435/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/d4199e64356e486cb8ff40f6f5c1ea954b66b4ff/d4199e6435/HLT/global/AliFlatExternalTrackParam.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/d4199e64356e486cb8ff40f6f5c1ea954b66b4ff/d4199e6435/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "275"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "108",
         "by_message" : {
           "buckets" : [ {
@@ -4830,35 +5292,6 @@
             "filename" : {
               "buckets" : [ {
                 "key" : "[ 13%] /build/workarea/sw/20155580/1/SOURCES/AliRoot/17f5fc16ab60bf8a35296d035f24097710ef0e3b/17f5fc16ab/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "275"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "2303",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/d4199e64356e486cb8ff40f6f5c1ea954b66b4ff/d4199e6435/Vc/include/Vc/global.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "262"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "no newline at end of file",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/d4199e64356e486cb8ff40f6f5c1ea954b66b4ff/d4199e6435/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "275"
