@@ -1,4 +1,9 @@
 -
+ commit: "4a330213a9481c777c992620c891d16a87250a5a"
+ message: >-
+    re-enable HV and P/T correction and gain factor for gas gain
+ author: !!str wiechula
+-
  commit: "a80017b86115b86bed281b828db2c8c8b2399e3e"
  message: >-
     Putting 2 ZDC files x pedestal DA for reference
@@ -263,8 +268,3 @@
  message: >-
     ATO-108,ATO-271,ATO-291 - adding also time stamp to the event info (current) stream
  author: !!str mivanov
--
- commit: "c3eecd089f6dc966c75412077a774ba23ca8d8eb"
- message: >-
-    fix small mem leak in dtor
- author: !!str mkrzewic
