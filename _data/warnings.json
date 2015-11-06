@@ -2908,6 +2908,18 @@
         "key" : "2316",
         "by_message" : {
           "buckets" : [ {
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/a3494ae3dccf382f6cddb99f2a15eccb2c7f51b2/a3494ae3dc/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TAttImage' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2958,30 +2970,6 @@
               } ]
             }
           }, {
-            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "108"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/a3494ae3dccf382f6cddb99f2a15eccb2c7f51b2/a3494ae3dc/EVE/EveBase/AliEveEventManager.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -3018,6 +3006,18 @@
               } ]
             }
           }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -3037,6 +3037,31 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "212"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct TEveDigitSet::DigitBase_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveBoxSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  }, {
+                    "key" : "40"
+                  }, {
+                    "key" : "46"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveQuadSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "55"
+                  }, {
+                    "key" : "57"
                   } ]
                 }
               } ]
@@ -3162,6 +3187,20 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct TEveBoxSet::BOrigin_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveBoxSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  }, {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class AliEveDataSourceOffline' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -3222,6 +3261,22 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct TEveQuadSet::QOrigin_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveQuadSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "59"
+                  }, {
+                    "key" : "67"
+                  }, {
+                    "key" : "69"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -3246,26 +3301,13 @@
               } ]
             }
           }, {
-            "key" : "base class 'struct TEveDigitSet::DigitBase_t' has a non-virtual destructor [-Weffc++]",
+            "key" : "base class 'struct TEveBoxSet::BCone_t' has a non-virtual destructor [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveBoxSet.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "38"
-                  }, {
-                    "key" : "40"
-                  }, {
-                    "key" : "46"
-                  } ]
-                }
-              }, {
-                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveQuadSet.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "55"
-                  }, {
-                    "key" : "57"
+                    "key" : "48"
                   } ]
                 }
               } ]
@@ -3302,6 +3344,20 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct TEveQuadSet::QRectFixDimC_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveQuadSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  }, {
+                    "key" : "63"
                   } ]
                 }
               } ]
@@ -3359,22 +3415,6 @@
               } ]
             }
           }, {
-            "key" : "base class 'struct TEveQuadSet::QOrigin_t' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveQuadSet.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "59"
-                  }, {
-                    "key" : "67"
-                  }, {
-                    "key" : "69"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -3387,29 +3427,13 @@
               } ]
             }
           }, {
-            "key" : "base class 'struct TEveBoxSet::BOrigin_t' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveBoxSet.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  }, {
-                    "key" : "44"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "base class 'struct TEveQuadSet::QRectFixDimC_t' has a non-virtual destructor [-Weffc++]",
+            "key" : "base class 'struct TEveQuadSet::QRectFixDim_t' has a non-virtual destructor [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-2/include/TEveQuadSet.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "61"
-                  }, {
-                    "key" : "63"
+                    "key" : "65"
                   } ]
                 }
               } ]
@@ -3512,30 +3536,6 @@
             }
           }, {
             "key" : "'AliEveSaveViews::fESDEvent' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/a3494ae3dccf382f6cddb99f2a15eccb2c7f51b2/a3494ae3dc/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fEventInfo' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/a3494ae3dccf382f6cddb99f2a15eccb2c7f51b2/a3494ae3dc/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fInputDetectorMask' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/SOURCES/AliRoot/a3494ae3dccf382f6cddb99f2a15eccb2c7f51b2/a3494ae3dc/EVE/EveBase/AliEveSaveViews.cxx",
