@@ -1,4 +1,14 @@
 -
+ commit: "c42d3ee8af32256751c0f9b77fa6b3d52bf2d984"
+ message: >-
+     ATO-108, ATO-291 Copy paste error fixed
+ author: !!str mivanov
+-
+ commit: "a46cfc7da5cba8909d29a7b9e2d287f69bb23b45"
+ message: >-
+    ATO-108, ATO-291              * 0.) Remove cut on z -as it can generate bias in case vdrift not calibrated.              * 1.) Sector information stored in array              * 2.) Possibiity to fill only specified histogram and limit number of entries (for fast tests)              * 3.) Keep bin size in delta more less constant (adjusted accoording deltaZ and deltaY) - keeping limit 1GBy for buffer              * 4.) Keep delta bin as a last bin in THn - to speed up firther creation of the distortion maps              * 5.) Use 50 mum rounding instead of the 100 mum scaling
+ author: !!str mivanov
+-
  commit: "e2d1ec0e86a8f28b0021d5ca8315ce6cde9d1fe0"
  message: >-
     Fix for ALIROOT-6402 : avoid double remapping of HV values for St1.
