@@ -1,4 +1,54 @@
 -
+ commit: "36d0ea120de2fd69bcf474d6084649a97117b65e"
+ message: >-
+    update TRD GTU simulation: - add debug output of intermediate results (Ole Schmidt) - remove trailing whitespaces
+ author: !!str jklein
+-
+ commit: "5b9858a5fb669a93abd34fce82a67df67f516b18"
+ message: >-
+    Optional cut on Z/X and Z on wrong side of CE for relaxed Cpass0 reco
+ author: !!str shahoian
+-
+ commit: "c09ff39a317409fc628f95301df96d83c92c69ba"
+ message: >-
+    Addition chi2 tolerance for BackProp in relaxed CPass0 reco
+ author: !!str shahoian
+-
+ commit: "b2d3a1a67a99701770e469cb97f53426c420ecba"
+ message: >-
+    ATO-108 - updated version of week constraint for the AliNDLocal regression.
+ author: !!str mivanov
+-
+ commit: "3a997dbdfd4c329ca0af8e647d57e37beadee8fa"
+ message: >-
+    Extra tolerance on matching
+ author: !!str shahoian
+-
+ commit: "96126516a0141f1db52bd075da78cfcfd7cd6ff8"
+ message: >-
+    Extra tolerance on matching cit
+ author: !!str shahoian
+-
+ commit: "72161f839629562d453d3d8197fd166fce1107d1"
+ message: >-
+    Updates concerning SPD DA and DQM plots
+ author: !!str masera
+-
+ commit: "155dc8ee18f3f07f5b62b109ec895e298b26c269"
+ message: >-
+    more methods in AliDAQ will give HLT both for kHLTid and kNDetectors-1
+ author: !!str shahoian
+-
+ commit: "3a4964edd6fca54edf3d255a3f54c4449c49988e"
+ message: >-
+    AliDAQ::OfflineModuleName gives HLT for kHLTid and kNDetectors-1
+ author: !!str shahoian
+-
+ commit: "cbb5983143372cb3476272065eb790e289b708e0"
+ message: >-
+    Using std::string
+ author: !!str hristov
+-
  commit: "ecbd8bf126a7c64e8d41a561da763d30bbb416eb"
  message: >-
     PWGPP-166 - updted configuration for tests
@@ -278,68 +328,3 @@
  message: >-
     fix in impact angles calculation
  author: !!str shahoian
--
- commit: "0c33f494be6c7be93a55bd7c63de2fcbbc18019f"
- message: >-
-    ATO-108 - updated version of week constraint for the AliNDLocal regression. Not yet fully functional
- author: !!str mivanov
--
- commit: "7e4c16a51f3f8f6173167d89b6878fe7bc84b2b3"
- message: >-
-    ATO-193, ATO-108 - implementation of the regularization in the AliNDLocalRegression. Currently only in test macros
- author: !!str mivanov
--
- commit: "16ac7477c19d704cf10cb5d1fe060ea00a3318b1"
- message: >-
-    compClusHits.C will store also impact angles on sensor (J.Stiller)
- author: !!str shahoian
--
- commit: "89741782d35b7dd10ada3fb3ec30aebc86a6504c"
- message: >-
-    Move classes AliEMCALTriggerPatchInfo and AliEMCALTriggerBitConfig from AliPhysics to AliRoot
- author: !!str mfasel
--
- commit: "556a89f1cebe9ae8a3ed9a2a7b98ba8e078ebe93"
- message: >-
-    Follow EMCAL naming convention
- author: !!str mfasel
--
- commit: "a26b4571367f679920d757e1a0e1a20818fc74f0"
- message: >-
-    Added ITSpureSA flag
- author: !!str mpuccio
--
- commit: "c044d3219ecf3947da796116d581c8bbe9d40404"
- message: >-
-    Fixed integer overflow problem in noisy events
- author: !!str mpuccio
--
- commit: "09596883ec196fb5dc0df3649149cb956417d708"
- message: >-
-    use kAliHLTDataOriginITSSPD consistently for SPD
- author: !!str mkrzewic
--
- commit: "dc1f832b292cc6297f7471e73d692970d71f0dd0"
- message: >-
-    process the HLT detector id properly
- author: !!str mkrzewic
--
- commit: "21776aedf5e4a9ec3c0679f0a897d5298d6713bb"
- message: >-
-    use AliDAQ definitions of detector names and numbers
- author: !!str mkrzewic
--
- commit: "97abf09a04a92b908e7293cbb8c5ab826aa907ec"
- message: >-
-    a simple HLT reco/cluster monitoring component
- author: !!str mkrzewic
--
- commit: "3dbf57313adb931730d43c9601e450b6dde27f7c"
- message: >-
-    print number of tracks
- author: !!str mkrzewic
--
- commit: "17f5fc16ab60bf8a35296d035f24097710ef0e3b"
- message: >-
-    check if output buffer exceed in cluster compression
- author: !!str sgorbuno
