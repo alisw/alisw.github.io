@@ -1,4 +1,49 @@
 -
+ commit: "969c59734efbca94050c82fe4615d78c06e34684"
+ message: >-
+    rename macro to fix typo; fix raw OCDB access
+ author: !!str gconesab
+-
+ commit: "b3d1cd3bf8906874737bf9ab97d5d3721b5609a2"
+ message: >-
+    Add new parameter in AliEMCALRecParam to de/activate the L1Phase shift, on by default for Run1, to be off for first Run2 periods; apply the 100ns shift for BC4=0,1 only in Run1 runs
+ author: !!str gconesab
+-
+ commit: "92e575ba56fe1b94ba42024184e6cbbe794772fb"
+ message: >-
+    undo the change in order of data members to avoid warning prints when accessing OCDB files
+ author: !!str gconesab
+-
+ commit: "fc6d8fd74848995f6b4278308b48dde50bb7b996"
+ message: >-
+    Fix run range for LHC11a period
+ author: !!str gconesab
+-
+ commit: "f4c4100bc125f00d10810f1c40c4dc7bf7058096"
+ message: >-
+    set as default shift 600 ns for all channels
+ author: !!str gconesab
+-
+ commit: "502ece8ccb6922f476033d8805645c3d8c017eaa"
+ message: >-
+    add macro to create OCDB from OADB for time calibration
+ author: !!str gconesab
+-
+ commit: "b7143e9ea6cfdc9bb9bf973a794c766d32c74e80"
+ message: >-
+    include comparison for time calibration parameters
+ author: !!str gconesab
+-
+ commit: "6b1d6c835f51da1bc3656272711f61e9f648c5a3"
+ message: >-
+    add comment on no need to use the time decalibration arrays in this class; remove double declaration of number of columns and rows in different loops; addapt to doxygen
+ author: !!str gconesab
+-
+ commit: "e8c3fc1f51c7f79aeb8971c2750b1afb5b3344b5"
+ message: >-
+    New specific container for time calibration, extracted/cloned from AliEMCALCalibData and related macros
+ author: !!str gconesab
+-
  commit: "d6adc35a1329b65e37e17fae7f5dd16693d20ef2"
  message: >-
     Reading of branch 1 TRU data fixed (hw addresses 2048-2176 corresponds to branch 1, 0 <= z < 28).
