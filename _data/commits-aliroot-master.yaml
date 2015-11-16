@@ -1,4 +1,589 @@
 -
+ commit: "350f1327cb116fa6e62ffac924c9ffa3666e284c"
+ message: >-
+    Add option to reconstruct without L1phase subtraction
+ author: !!str prsnko
+-
+ commit: "820ad508866b90547a2c60c94832af7163c857d0"
+ message: >-
+    CTP raw stream: both DDL1 and DDL2 can be present simultaneously
+ author: !!str lietava
+-
+ commit: "14b0bdeee84d4d067c56b274d69dc8969d1b0f66"
+ message: >-
+    ATO-108, ATO-271, ATO-291 - histogramming and statistical analysis in time ranges. (second part  of comit after master merging)
+ author: !!str mivanov
+-
+ commit: "8a3f869e13188bfff62de074c0525869f686d6c5"
+ message: >-
+    ATO-108, ATO-271, ATO-291 - histogramming and statistical analysis in time ranges (first part)
+ author: !!str mivanov
+-
+ commit: "827574dd96b10938402188ceef1a310b4f8d4527"
+ message: >-
+    MC digits to raw data converter and parser for ALPIDE-3
+ author: !!str shahoian
+-
+ commit: "c24ab2920764f88270d687c47de0e911b79caf5b"
+ message: >-
+    option to skip TGeo mat. corrections, simplified snp check
+ author: !!str shahoian
+-
+ commit: "04fdce57a3b33ff1f17df6a137791d812a7d0b58"
+ message: >-
+    fix in getter for index of friend track
+ author: !!str shahoian
+-
+ commit: "c263686609f1396f85d4f3aa13ac1727025012f3"
+ message: >-
+    store in esd track index of friend track
+ author: !!str shahoian
+-
+ commit: "9ed3657ba95fcebd28820c162e04df707e618c82"
+ message: >-
+    Access friend tracks only via ESDtracks
+ author: !!str shahoian
+-
+ commit: "03e8460c6edaec9d55bda43706256461ecb692ee"
+ message: >-
+    fixed fZDCTDCChannel dimension=7
+ author: !!str cterrevo
+-
+ commit: "092ad48d87df5dad86a3e18636562ee5a6e3045c"
+ message: >-
+    array fix
+ author: !!str cterrevo
+-
+ commit: "1457adc5680b37f1cfc01537c4e7efc8f5186435"
+ message: >-
+    remove obsolete data memeber and add DeleteRD method
+ author: !!str cterrevo
+-
+ commit: "b134a8a7d565f7be914b6dbf80b208ff6773e650"
+ message: >-
+    remove obsolete data memeber and add DeleteRD method
+ author: !!str cterrevo
+-
+ commit: "6a9495809fe5a8e4745b38b6e0a85e1ba1ba6568"
+ message: >-
+    Update EMCAL Preprocessor
+ author: !!str mfasel
+-
+ commit: "ad978b75fe2c6a4d94c2731694a61eccfa341b95"
+ message: >-
+    fix: calib classes were looping over rows>=159
+ author: !!str shahoian
+-
+ commit: "213a8d3af923a1892ecdecb525a1f83f6240e4c0"
+ message: >-
+    Code for spectators from data driven fragmentation
+ author: !!str morsch
+-
+ commit: "0232ca8e72c10fc720d12b9a7cb344c99e6279fc"
+ message: >-
+    Merge branch 'memdev'
+ author: !!str dberzano
+-
+ commit: "1c3130e6a22e10bc533ccaff5419f0772392bb57"
+ message: >-
+    Making memdev work on OS X
+ author: !!str dberzano
+-
+ commit: "ab1bb4d33e19b07a5bd960c25577f32c9cade8a6"
+ message: >-
+    May override 64MB stack by env.var ALIROOT_STACK_SIZE in MB (min 8MB)
+ author: !!str shahoian
+-
+ commit: "ed3a0742545e10664f347dfd0ef565442218913f"
+ message: >-
+    use Friends index for looping in case of the sparse friends
+ author: !!str shahoian
+-
+ commit: "6782be2005d25dc105306f6254845be664261e16"
+ message: >-
+    fix for wrong conflict resolution during rebase
+ author: !!str shahoian
+-
+ commit: "27e5e247c69a4b4f15cae0bef896038b8ebc1631"
+ message: >-
+    conflict resolution after merging to master
+ author: !!str shahoian
+-
+ commit: "706efb68eacd36250aad90c300216d3066778879"
+ message: >-
+    conflict with master resolved
+ author: !!str shahoian
+-
+ commit: "4c7b2c8b15f5e6b829000f36163fa02ca2acf006"
+ message: >-
+    Option to seed in TPC primaries only, according to DCAY,Z cuts
+ author: !!str shahoian
+-
+ commit: "a88d89f0e763689d561aafcd13d26e221f141baa"
+ message: >-
+    Extend roads consistently for all FindNearest... calls
+ author: !!str shahoian
+-
+ commit: "b82c1fc4c865cd291093361c040f2c33192bd2b5"
+ message: >-
+    BWD compatible ESDfriend version The track container for esdTracks restored to TClonesArray but with support of sparsification of stored friend tracks.
+ author: !!str shahoian
+-
+ commit: "b00eccbfcd60ba3c5fe3ec38e097c4943fa4b7ca"
+ message: >-
+    Option for sparsifying friend tracks. Friends reading is NOT bwd compatible
+ author: !!str shahoian
+-
+ commit: "78c867711772edece601969a3040cf5fb9cc4ba7"
+ message: >-
+    Don't prepare alignment data for friend tracks which will not be stored
+ author: !!str shahoian
+-
+ commit: "57cbfc5ca0686693f984a97f9cb5005e3078c525"
+ message: >-
+    Don't transfer to ESDfriends friendTracks which should not be stored
+ author: !!str shahoian
+-
+ commit: "1cac067d31088acffe262d604b8af64d10b391d1"
+ message: >-
+    Flag for ESD tracks whose friend will not be stored
+ author: !!str shahoian
+-
+ commit: "eff82e10e17e74fffc952dd10b841060a9f7b649"
+ message: >-
+    Protection against double delete for shared clusters in the seed
+ author: !!str shahoian
+-
+ commit: "737ab2848a0935e98d09cdcf69c318d367834cb5"
+ message: >-
+    Make HLTITSLayer consistent with updated AliITStrackerMI::AliITSLayer
+ author: !!str shahoian
+-
+ commit: "4c1df3733de8ec40977094540e70eb99f24d6ee1"
+ message: >-
+    For TClonessArray Clear is enough, no Delete
+ author: !!str shahoian
+-
+ commit: "364119302a581f427b4fd8a3be4c437cf24569da"
+ message: >-
+    use char instead of int
+ author: !!str shahoian
+-
+ commit: "66e61883c38237d2444a10c7c52121d89e729ae5"
+ message: >-
+    Double->Float, use UniqueID instead of extra data member
+ author: !!str shahoian
+-
+ commit: "be55413d8ce2cbd1e0eec7ff0892a3dabdebad49"
+ message: >-
+    heap allocation -> stack
+ author: !!str shahoian
+-
+ commit: "36a5c35b10ccc69fcba1e4c2b2b867e68afc155a"
+ message: >-
+    Reduction of static arrays it AliITStrackerMI Max clusters seen in the data per layer is 7k, no need to allocate 70k space -> changed max capacity to 32k, changed all Int_t containers to UShort_t
+ author: !!str shahoian
+-
+ commit: "0871209cb214d41457c3fc4af75a2b385e44a407"
+ message: >-
+    tailor tmp clusters array according to real occ.
+ author: !!str shahoian
+-
+ commit: "3d08f5f34fc4fef7abce59f59e96c7346b2a713c"
+ message: >-
+    heap allocations -> stack, optimize FindKinks
+ author: !!str shahoian
+-
+ commit: "093edc526f6d94016a0367450d17d0c15d446c1c"
+ message: >-
+    Check for valid row index in GetClusterIndex
+ author: !!str shahoian
+-
+ commit: "e585c7d7adb9cbfb391833f0050ca5bae189162c"
+ message: >-
+    heap allocations -> stack
+ author: !!str shahoian
+-
+ commit: "681cbd771cd97223304862ee4eb6faf9965f49cb"
+ message: >-
+    Check for valid row index in GetClusterIndex
+ author: !!str shahoian
+-
+ commit: "73fd7ae17c7008b5da7d6d5b0081ec433e09f6c6"
+ message: >-
+    heap allocations -> stack
+ author: !!str shahoian
+-
+ commit: "acb0e5490d088079b5da3ecb1c4a43c12937d290"
+ message: >-
+    heap allocations -> stack, assignment in loops -> memcpy
+ author: !!str shahoian
+-
+ commit: "02c28673248d742d2a0ba70b7fac3d17bcb9710e"
+ message: >-
+    use memcpy instead of assignment in loop for large arrays
+ author: !!str shahoian
+-
+ commit: "c59a1e5c24602de64e312beadef4e335b770c9b0"
+ message: >-
+    use stack allocation instead of heap when possible
+ author: !!str shahoian
+-
+ commit: "1d0fc1396dc8ad1266380d50c9e9ddf6e658d6b7"
+ message: >-
+    Increase aliroot stack to min(64MB,hardlimit)
+ author: !!str shahoian
+-
+ commit: "90073a4fa9729a66c31cf2c88a981eebb631dc43"
+ message: >-
+    don't modify clusters buffer while storing the friends
+ author: !!str shahoian
+-
+ commit: "8925bf7379aa2175136be05adc2919a9ce5e2e3b"
+ message: >-
+    Store friendTracks in esdFriend using TObjArray rathern than TClonesArray
+ author: !!str shahoian
+-
+ commit: "ae5ee0b8a202459ae08e7219ec919264d774065d"
+ message: >-
+    Reset ESDfriends before ESD, to remove trackers objects
+ author: !!str shahoian
+-
+ commit: "4e65516c2ab01e4ab6a55f41de63d2f644f97a4b"
+ message: >-
+    when cleaning seeds from friendtracks, check both ESD and ESDfriend
+ author: !!str shahoian
+-
+ commit: "8ca7f20f532bc2a58e02b53ebc854884964cd3b9"
+ message: >-
+    do not clone full seed for local processing
+ author: !!str shahoian
+-
+ commit: "854f6b2e9273a8dcf01bdd5c4f6c6a2433417f46"
+ message: >-
+    Friends store directly TPC seeds instead of clones
+ author: !!str shahoian
+-
+ commit: "ce2a5313b1736a579bf7b6a0d1616fd7d8fc3f5d"
+ message: >-
+    setter/getter for clusters ownership
+ author: !!str shahoian
+-
+ commit: "bcb882b0c24ec6a5bb132eef1bb24774c875b307"
+ message: >-
+    when deleting friends first remove objects owned by trackers
+ author: !!str shahoian
+-
+ commit: "0a2ede63276fc1da7d54508ae036650cc54041d2"
+ message: >-
+    Allow to Tracks to own and remove its objects in esd/friends
+ author: !!str shahoian
+-
+ commit: "03bf693fb0edea48e57d6d774ce54881abe2a8cb"
+ message: >-
+    allow removal of calib objects
+ author: !!str shahoian
+-
+ commit: "0e976e267b7299bc54a1725997ba899c269060ad"
+ message: >-
+    Use faster PropagateTrackParamOnly method when errors are not needed
+ author: !!str shahoian
+-
+ commit: "9880627b6a40b770c3a87b2bde19cabb1bf4ebd5"
+ message: >-
+    reuse fSeeds array
+ author: !!str shahoian
+-
+ commit: "98ba9a21bdbd27f375c92731c8c9ffa573416833"
+ message: >-
+    changed many instances of heap to stack allocation to reduce memory trashing
+ author: !!str shahoian
+-
+ commit: "3a5b93cb8bdda4cc32c04a97a77d403cdf8f72e5"
+ message: >-
+    added alias for RM and deltaRM
+ author: !!str shahoian
+-
+ commit: "63d6f4880d400215ced5452da3840ae78f8d0416"
+ message: >-
+    Methods for finite step propagation of params only, w/o material corr.
+ author: !!str shahoian
+-
+ commit: "b3fa04f4e99d369c0973c0c314fcea28ac0674f2"
+ message: >-
+    use stack allocation, suppress default debug streamer
+ author: !!str shahoian
+-
+ commit: "2352d66e5340f6a043ec0f6d9de4b059df00c1b9"
+ message: >-
+    Don't store cluster pointers in the seeds during the tracking
+ author: !!str shahoian
+-
+ commit: "c4dd3f07a92d0f5d0f26cd748344ccdadba18bdc"
+ message: >-
+    Rmoved unused cluster info pointer from AliTPCclusterMI
+ author: !!str shahoian
+-
+ commit: "8e4a2cad0b23fb51cc2cca8b9cb6575a7c73ab3e"
+ message: >-
+    read rules for bwd compatibility of AliTPCtrack,AliTPCseed
+ author: !!str shahoian
+-
+ commit: "3e958da632b4a47eb7798587635f5ff4206c214f"
+ message: >-
+    Fixed->dynamical array of cluster pointers
+ author: !!str shahoian
+-
+ commit: "89410e127e6b5f277650c374ed0606b8ad3e10fc"
+ message: >-
+    added wrapper class for array of compact AliTPCTrackerPoints
+ author: !!str shahoian
+-
+ commit: "e2cadda968b6e67a50d0472e043240189d8c8a73"
+ message: >-
+    impose kMaxRow for nrows: in loops and containers
+ author: !!str shahoian
+-
+ commit: "8aaa3dca0353b1c512c91a1c7506cbf444ac98a9"
+ message: >-
+    tpc seed memory reduction
+ author: !!str shahoian
+-
+ commit: "5d745f6f9889f8dd05a37636215d3b8a4540c044"
+ message: >-
+    Enabled plot of DeltaPhi vs DeltaBX for trigger hits to appear in the DQM summary image in the logbook.
+ author: !!str fbellini
+-
+ commit: "75329bdc92f718a02acd67d6b9a6dfe3cec5555e"
+ message: >-
+    Modified histogram ranges Set DQM thresholds for multiplicity in kHighMult events for PbPb 2015
+ author: !!str fbellini
+-
+ commit: "fc3a8babb4075614cb10954730dfcdf740fea568"
+ message: >-
+    Added new members and methods to AliGenEposReader and AliGenExtFile classes
+ author: !!str ilakomov
+-
+ commit: "dde754b79e10648e859c9ab531c1792d757dc409"
+ message: >-
+    ATO-108 - adding ITS mulitilicity estimators for crosscheck of TPC estimators
+ author: !!str mivanov
+-
+ commit: "10310aed075c755b17541f03b44f87c9658c8c09"
+ message: >-
+    Use inteder constant to initialize inteder arrays
+ author: !!str hristov
+-
+ commit: "91a464ad54acf52ea0e6a2b0ce9d057d6e2d4067"
+ message: >-
+    protection against aprticle going to inf. Z at low R (Johannes)
+ author: !!str shahoian
+-
+ commit: "2a313e0b004729605a72eb16760d89ce6ecc4dd2"
+ message: >-
+    ATO-108, ATO-291 - Bug fix. 1.) In previous productions, NCl counters per sectors overwrittent by Ncl from last sector. 2.) timeStamp with branch corrected
+ author: !!str mivanov
+-
+ commit: "e04a677b13b72a66023851b9b092deeb09d75484"
+ message: >-
+    fix warning about an extra /* within a comment block
+ author: !!str gconesab
+-
+ commit: "097a32c7ee66fcaf53531e0db2c0bd2528b5ca0b"
+ message: >-
+    RMS timing TRU, STU Absolute info instead of ratios
+ author: !!str dlodato
+-
+ commit: "5aa9d2c283bbe04c3b3662d2027c5e03a79c8ab4"
+ message: >-
+    Set histogram ranges and drawing options for 2015 PbPb data taking.
+ author: !!str fbellini
+-
+ commit: "8b70d035b4421d748b21857c125c4ab1d1d69ac0"
+ message: >-
+    Added plots for expert DQM: - average number of fired macropad per event (can be used for UPC trigger monitoring) - average number of hits (with ToT>0) per crate Enabled image flag for the DeltaPhi-DeltaBCID plot for trigger hits for UPC in PbPb
+ author: !!str fbellini
+-
+ commit: "862322b7f91334e93adabb7fa5f6fa5ade3b5c96"
+ message: >-
+    Updated example macro to run on Grid a standalone TOF QA analysis: - modified for aliphysics paths - PIDresponse and PIDqa task added to the train - update to use TOFqaID task
+ author: !!str fbellini
+-
+ commit: "09b2fd78633aa16b21ad6079cb6b417676372c36"
+ message: >-
+    Update for upcoming Pb-Pb run (Raphaelle)
+ author: !!str cblume
+-
+ commit: "6a526517879d0c3eaf71fc130a36e5f1bb6fe109"
+ message: >-
+    Removing -fvisibility-inlines-hidden for now
+ author: !!str dberzano
+-
+ commit: "78566dd09f84f9b0752a437b2aec8024309e6697"
+ message: >-
+    Bugfix for the previous commit in AliTPCdataQA
+ author: !!str richterm
+-
+ commit: "5e2fbbcf4b6ee48bfe7826bd95f6f0ead2c90f68"
+ message: >-
+    Unused AliZDCRecoParam object initialization commented out
+ author: !!str coppedis
+-
+ commit: "f372925b4bfd60f27856603b60c5dc242fb04c2b"
+ message: >-
+    AliEn plugin: fix for missing "free" command on OS X
+ author: !!str dberzano
+-
+ commit: "e8438ad82fd4cc83d39e286ad77ee6be969e3e87"
+ message: >-
+    Incremented ClassDef, corrected intialization of fPHOSScale
+ author: !!str hristov
+-
+ commit: "613a33cfb720a5bbfef9fdc9851bfe72983285f3"
+ message: >-
+    Correct function for proton correction added
+ author: !!str coppedis
+-
+ commit: "7ff942f859b8168ba333028fc5489bccf39a308c"
+ message: >-
+    Adding a fix also for pedestal subtraction from digits
+ author: !!str coppedis
+-
+ commit: "ef7b3592d4a44ae51659feddeb0631809f00a060"
+ message: >-
+    Merge branch 'master' of https://git.cern.ch/reps/AliRoot
+ author: !!str mfloris
+-
+ commit: "c6a2ea32059e13387f9633c02a3d5ed7bf7a46aa"
+ message: >-
+    Modifications to propagate T0 bits to AODs
+ author: !!str mfloris
+-
+ commit: "511326525d6fcab3ca2f8d171581b6ec1925baef"
+ message: >-
+    Removing unwanted offset in pedestal mean:sjena
+ author: !!str sjena
+-
+ commit: "28d2c5c4a55784b7031a5bb7b6f806e88f91a18a"
+ message: >-
+    ATO-300 - AliESDtrack::GetTPCClusterInfo - adding type 3 and 4 to define findable cluster only in case cluster before AND after exist, similar as used in TPC dEdx calculation. Default type value is kept OR as before.
+ author: !!str mivanov
+-
+ commit: "25471501bc40253cb2f049069cb0fcb54044bad7"
+ message: >-
+    Reduce CPU time of GetSum
+ author: !!str dstocco
+-
+ commit: "c6bf1135e7de7305802ad66964b8ed6490a43832"
+ message: >-
+    Fix for misplaced braket
+ author: !!str hristov
+-
+ commit: "60ebe00a8625abf78346f7c10e929bf05c3ca7b1"
+ message: >-
+    Update of the preprocessor in order to handle STU configuration for DCAL
+ author: !!str mfasel
+-
+ commit: "f3a2968d55f5d126b1c384d0f8c4f89f73c7b52f"
+ message: >-
+    include option to recover and use time calibrations from new OCDB time shifts container
+ author: !!str gconesab
+-
+ commit: "d81ba4c7a97b253113043827ad1e868aa01bd4f9"
+ message: >-
+    access the time calibration from OCDB if requested
+ author: !!str gconesab
+-
+ commit: "821b6c8c8c4e6f6cb8d1f651bfaafbc065a7d85d"
+ message: >-
+    addapt comments to doxygen format
+ author: !!str gconesab
+-
+ commit: "a2322224b90d6d76ce8756355f044ac1dd7ed193"
+ message: >-
+    stop compressing TPC data block in case of corrupted data
+ author: !!str sgorbuno
+-
+ commit: "3e7f318763b8132f9a91232dc65afe04465d805d"
+ message: >-
+    ATO-193, ATO-108 - implementation of the regularization used from.
+ author: !!str mivanov
+-
+ commit: "28daa3220a0a9e71247d8d2c017c7c1b2c9fbee3"
+ message: >-
+    Add EMCal trigger QA class
+ author: !!str saiola
+-
+ commit: "bcd98443ba8f4603fa0e7f705d1266fe16b76069"
+ message: >-
+    New features: DCal/EMCal flag and Initialize methods
+ author: !!str saiola
+-
+ commit: "33ffed439f746230f1955095d605a4cecb2816b5"
+ message: >-
+    branch of code for ddl2 IR
+ author: !!str lietava
+-
+ commit: "79d6b0f96287a9b0d7c755de838f878b8029782d"
+ message: >-
+    Fixing printout, and adding a new one
+ author: !!str zampolli
+-
+ commit: "bc0d43854b37bbdbcce6d042ed6376be8e7a0b62"
+ message: >-
+    ATO-193, ATO-108 - Move the smoothing code from macro to official class.  Test of new function in STAT/test/AliNDLocalRegressionTest.C:UnitTestContrain
+ author: !!str mivanov
+-
+ commit: "f64e34baf9908e1804331cdd37403e7f73df67da"
+ message: >-
+    Turn on -fvisibility-inlines-hidden option
+ author: !!str eulisse
+-
+ commit: "e52d778bae932d7154c8c5d9dd122ea9363bcab6"
+ message: >-
+    fix mismatch in TDCs naming (Chiara)
+ author: !!str shahoian
+-
+ commit: "0d554d7d849d3d8386a0d31f103bf94ea3046adf"
+ message: >-
+    Class version was not increased
+ author: !!str shahoian
+-
+ commit: "539f2aaf91f2f60ab809c960507e57d5169e9d34"
+ message: >-
+    ALIROOT-6405 SIGSEGV when reading geometry from file (Christian)
+ author: !!str hristov
+-
+ commit: "05f2da1f108802396936b87f503a9aab62fb6d5d"
+ message: >-
+    Avoiding intermediate array of sector clusters.
+ author: !!str richterm
+-
+ commit: "be6b71f2d08190dc440d1f9d8e7dd6419719ebd5"
+ message: >-
+    Code audit, no functional change
+ author: !!str richterm
+-
+ commit: "5c32f26080e0e4f398bd77a2d1e6ae6ec621c97b"
+ message: >-
+    Delaying the allocation of big arrays until the time they are needed.
+ author: !!str richterm
+-
+ commit: "c880643a507d56e7a1f605ee65b2a2f311c2b63d"
+ message: >-
+    Using only one instance of the HWCF emulator for data of all readout partitions
+ author: !!str richterm
+-
+ commit: "1b250745cbac7521397daf4d97196903c83587b7"
+ message: >-
+    Delaying allocation of big arrays
+ author: !!str richterm
+-
+ commit: "3418963513559ea439f9b5aacda08bd6947fd4da"
+ message: >-
+    Implementing option to copy clusters directly to the offline structure.
+ author: !!str richterm
+-
  commit: "ba14ad43a76a824321c472faf0c937df08f6f233"
  message: >-
     bug fix in end-of-space error treatmen in cluster compressiont
@@ -83,313 +668,3 @@
  message: >-
     Addition chi2 tolerance for BackProp in relaxed CPass0 reco
  author: !!str shahoian
--
- commit: "b2d3a1a67a99701770e469cb97f53426c420ecba"
- message: >-
-    ATO-108 - updated version of week constraint for the AliNDLocal regression.
- author: !!str mivanov
--
- commit: "3a997dbdfd4c329ca0af8e647d57e37beadee8fa"
- message: >-
-    Extra tolerance on matching
- author: !!str shahoian
--
- commit: "96126516a0141f1db52bd075da78cfcfd7cd6ff8"
- message: >-
-    Extra tolerance on matching cit
- author: !!str shahoian
--
- commit: "72161f839629562d453d3d8197fd166fce1107d1"
- message: >-
-    Updates concerning SPD DA and DQM plots
- author: !!str masera
--
- commit: "155dc8ee18f3f07f5b62b109ec895e298b26c269"
- message: >-
-    more methods in AliDAQ will give HLT both for kHLTid and kNDetectors-1
- author: !!str shahoian
--
- commit: "3a4964edd6fca54edf3d255a3f54c4449c49988e"
- message: >-
-    AliDAQ::OfflineModuleName gives HLT for kHLTid and kNDetectors-1
- author: !!str shahoian
--
- commit: "cbb5983143372cb3476272065eb790e289b708e0"
- message: >-
-    Using std::string
- author: !!str hristov
--
- commit: "ecbd8bf126a7c64e8d41a561da763d30bbb416eb"
- message: >-
-    PWGPP-166 - updted configuration for tests
- author: !!str mivanov
--
- commit: "2cc7d4bbef83072bd9a9b5383fbc3dad64e9ab16"
- message: >-
-    Support syncing to alien in alisync
- author: !!str eulisse
--
- commit: "c42d3ee8af32256751c0f9b77fa6b3d52bf2d984"
- message: >-
-     ATO-108, ATO-291 Copy paste error fixed
- author: !!str mivanov
--
- commit: "a46cfc7da5cba8909d29a7b9e2d287f69bb23b45"
- message: >-
-    ATO-108, ATO-291              * 0.) Remove cut on z -as it can generate bias in case vdrift not calibrated.              * 1.) Sector information stored in array              * 2.) Possibiity to fill only specified histogram and limit number of entries (for fast tests)              * 3.) Keep bin size in delta more less constant (adjusted accoording deltaZ and deltaY) - keeping limit 1GBy for buffer              * 4.) Keep delta bin as a last bin in THn - to speed up firther creation of the distortion maps              * 5.) Use 50 mum rounding instead of the 100 mum scaling
- author: !!str mivanov
--
- commit: "e2d1ec0e86a8f28b0021d5ca8315ce6cde9d1fe0"
- message: >-
-    Fix for ALIROOT-6402 : avoid double remapping of HV values for St1.
- author: !!str laphecet
--
- commit: "bf1794c2d69d58a11f5978b2beb4f9cf643e7c91"
- message: >-
-    Add a protection to remove a harmless-but-annoying out of bounds error message
- author: !!str laphecet
--
- commit: "635db850e33db9969f75cdd3c9551c54273caf5c"
- message: >-
-    Add LHC15 >= g periods
- author: !!str laphecet
--
- commit: "a3494ae3dccf382f6cddb99f2a15eccb2c7f51b2"
- message: >-
-    Add alisync utility
- author: !!str eulisse
--
- commit: "cfd483218aeea3b5e61d91959cf8c092f731b00e"
- message: >-
-    fix:use in residuals tree TOFsig-TOFexp for pion instead of BC from TPC PID
- author: !!str shahoian
--
- commit: "bcaa7f96a37b7907e634f68b3d494d4907f8cc14"
- message: >-
-    use in residuals tree TOFsig-TOFexp for pion instead of BC from TPC PID
- author: !!str shahoian
--
- commit: "a13535048dfe1ff670e64c26ee30f354d58f4533"
- message: >-
-    Getter for TOFsig-TOFexp for arbitrary specii
- author: !!str shahoian
--
- commit: "5bc456c03b1267f3524a4bcad2a4025f352752a7"
- message: >-
-    Uniform naming convention for alimdc RPM
- author: !!str dberzano
--
- commit: "09eaaabfd86703115be15ae3ff546eb4d3da1557"
- message: >-
-    fix HLT detectorID handling: must be 30!
- author: !!str mkrzewic
--
- commit: "bbd0fe28d3b6c01c781d7c46680460109e00271b"
- message: >-
-    missing streamer info
- author: !!str mkrzewic
--
- commit: "7a0b98960f3fb4a1fbc06d73cbf97ebdfc870752"
- message: >-
-     Slewing correction for old QTC from Dima
- author: !!str alla
--
- commit: "69daded556810a7c021fbf8ca24a7fb24f9f9886"
- message: >-
-     fix QT1 for old and new size
- author: !!str alla
--
- commit: "b0b98f887b25ed30861c9947f6f3c75fa0092da5"
- message: >-
-    Better RPM naming based on "git describe" for DAs
- author: !!str dberzano
--
- commit: "33b02cb69d465320b1e902731d20f676d0498efa"
- message: >-
-    Improved check for ZeroMQ: check version too
- author: !!str dberzano
--
- commit: "ce12df572a9168b2f90f6314de573f21d5f58bf3"
- message: >-
-    CMake: exclude EVE->HLT/EVE if ROOT has no OpenGL
- author: !!str dberzano
--
- commit: "9d1fd16bf7b5345baf5770e4d03dd4fd69d8e659"
- message: >-
-    TPC: added missing include needed for calloc
- author: !!str dberzano
--
- commit: "f42fea8cc89f8ea3355a2903283b49958da97b2a"
- message: >-
-    For DAQ: only ROOT v5.34.17 needed if EVE excluded
- author: !!str dberzano
--
- commit: "529f05c0ce2f26e39ee32add236a7ad4e5900183"
- message: >-
-    Possibility to exclude AliRoot modules
- author: !!str dberzano
--
- commit: "82354763ce74eecc6196f7938430183a9800fc48"
- message: >-
-    Faster version MakeDistortionMapFast added
- author: !!str shahoian
--
- commit: "46a4a1becf6e17a1cc0c30551b36401672c80bad"
- message: >-
-    Fixing small bug in AliGenEposReader.cxx
- author: !!str ilakomov
--
- commit: "d4199e64356e486cb8ff40f6f5c1ea954b66b4ff"
- message: >-
-    reduce size of AliHLTTPCFastTransformObject
- author: !!str sgorbuno
--
- commit: "9f685c9ad772779c72800a7276324ed98c0cbec7"
- message: >-
-    Add build type for Code coverage
- author: !!str eulisse
--
- commit: "4a330213a9481c777c992620c891d16a87250a5a"
- message: >-
-    re-enable HV and P/T correction and gain factor for gas gain
- author: !!str wiechula
--
- commit: "a80017b86115b86bed281b828db2c8c8b2399e3e"
- message: >-
-    Putting 2 ZDC files x pedestal DA for reference
- author: !!str coppedis
--
- commit: "c2a2241df113daab31efc3cb8125d20929080328"
- message: >-
-    Added EPOS3 Reader and Header classes
- author: !!str ilakomov
--
- commit: "8b191e2ccdbea04d7cafc8a06c06735c0a4c88e5"
- message: >-
-    small fixes
- author: !!str wiechula
--
- commit: "167fdd739479bcd1e5d2c9faee30402b16694cc1"
- message: >-
-    Add test function for AliTPCCalPad
- author: !!str wiechula
--
- commit: "0a20ebe9afcdce21cf999f29825242079b67d09e"
- message: >-
-    Fix zero pointer protection
- author: !!str wiechula
--
- commit: "74c878e4d743abb6d5a7ee21ed0ec0ac792c6a06"
- message: >-
-    Add function to dump information for unit test
- author: !!str wiechula
--
- commit: "22eb42133b97f164b16bcf135536f70ddbf18e9c"
- message: >-
-    Fix NULL pointer protection
- author: !!str wiechula
--
- commit: "d3d4f0a36f1e3e295ddee6130e20384d6ac3aeac"
- message: >-
-    Simplify statistics estimators, add pad region capability
- author: !!str wiechula
--
- commit: "9531af67ed35436c0431107deef7edfdc2c37d5e"
- message: >-
-    add switch to recover time calibration parameters from OCDB
- author: !!str gconesab
--
- commit: "b498458fd8dcb083aeba83f35e19ab9824e57c73"
- message: >-
-    minor fixes on variable with capital letters, const of arguments in method and Fatal to AliFatal
- author: !!str gconesab
--
- commit: "44537384c6d05f4b367dbfd7f88e914343dcc95f"
- message: >-
-    cosmetics
- author: !!str gconesab
--
- commit: "50aa5d5f032dc4b3bd963b2efb13a0267947547c"
- message: >-
-    check if switch for using time calibration is on, in this case shift time with parameters stored in OCDB
- author: !!str gconesab
--
- commit: "b368d3b89fc34637a0dc7fb7721a08a88f1b4efe"
- message: >-
-    add flag to activate use of time calibration parameters in simulation or reconstruction, set in OCDB
- author: !!str gconesab
--
- commit: "226ab96b6a4b6cab02860686a4991c44c3e3dfbf"
- message: >-
-    simplify a bit the complicated digitization method: remove last loop for digits decalibration and setting final values and include this in the previous loop where masked digits or with too low energy are excluded
- author: !!str gconesab
--
- commit: "fd03d9f3de94f1ac0c8a14a10a96ed81ca61db71"
- message: >-
-    reorder digit timing offset setting, in preparation for next developments
- author: !!str gconesab
--
- commit: "79ee1e64e82bd13a66cef0f580f9e8a92a125f62"
- message: >-
-    Implement trigger maker component for the EMCAL in the HLT
- author: !!str mfasel
--
- commit: "77138b265f5424d1c5137a0b6e7c578a85055d9a"
- message: >-
-    fix '+' as connect symbol
- author: !!str mkrzewic
--
- commit: "6a1d50ce5051f6447a5d80a5e18b3b33ca664034"
- message: >-
-    '+' now also means "connect"
- author: !!str mkrzewic
--
- commit: "96f551c6510d7af8280d0ca1211994461034cce2"
- message: >-
-    make highWaterMark settable
- author: !!str mkrzewic
--
- commit: "a8119e99123feaab7156b361485fb3b539ffdefc"
- message: >-
-    Implement missing functions
- author: !!str mfasel
--
- commit: "fdf28185866f576eabdf2fde8023908aecc326f0"
- message: >-
-    Set number of EMCAL supermodules to 20
- author: !!str mfasel
--
- commit: "f18482a4c0f265ff44f4a7e8d7c82f601c8d70bc"
- message: >-
-    EMCAL: fix missing include paths in CMakeLists
- author: !!str dberzano
--
- commit: "521f3e42166eb99d094e7ebfb751c47505248f5d"
- message: >-
-    Adding offset to pedestal mean:tapan
- author: !!str sjena
--
- commit: "5d7fe3a7107db5e7363716dc08799e3654d1bc87"
- message: >-
-    set array size to maximum value for Run2 since size is not constant
- author: !!str gconesab
--
- commit: "fdaeb4aedf2047c67196856d411b4e70152fe379"
- message: >-
-    L0Fix GeometryFix Excluded call for MakeRawsSTU
- author: !!str dlodato
--
- commit: "f8d7d3f319daf912e88790c04f0bb213e7d4031f"
- message: >-
-    move new non linearity beam-test parametrization to new function kBeamTestCorrectedv3
- author: !!str gconesab
--
- commit: "383d288743b70d56eea6abdd653c5f62cdb8c059"
- message: >-
-    small update - use local:// explicitly in the cdb path
- author: !!str mkrzewic
--
- commit: "7afed8ef598145c6bfa30a264a2ee1cbbed309a5"
- message: >-
-    bug fix in TPC compression
- author: !!str sgorbuno
