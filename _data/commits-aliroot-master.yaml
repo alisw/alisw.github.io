@@ -613,33 +613,3 @@
  message: >-
     ALIROOT-6405 SIGSEGV when reading geometry from file (Christian)
  author: !!str hristov
--
- commit: "05f2da1f108802396936b87f503a9aab62fb6d5d"
- message: >-
-    Avoiding intermediate array of sector clusters.
- author: !!str richterm
--
- commit: "be6b71f2d08190dc440d1f9d8e7dd6419719ebd5"
- message: >-
-    Code audit, no functional change
- author: !!str richterm
--
- commit: "5c32f26080e0e4f398bd77a2d1e6ae6ec621c97b"
- message: >-
-    Delaying the allocation of big arrays until the time they are needed.
- author: !!str richterm
--
- commit: "c880643a507d56e7a1f605ee65b2a2f311c2b63d"
- message: >-
-    Using only one instance of the HWCF emulator for data of all readout partitions
- author: !!str richterm
--
- commit: "1b250745cbac7521397daf4d97196903c83587b7"
- message: >-
-    Delaying allocation of big arrays
- author: !!str richterm
--
- commit: "3418963513559ea439f9b5aacda08bd6947fd4da"
- message: >-
-    Implementing option to copy clusters directly to the offline structure.
- author: !!str richterm
