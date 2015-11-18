@@ -623,8 +623,3 @@
  message: >-
     Removing unwanted offset in pedestal mean:sjena
  author: !!str sjena
--
- commit: "28d2c5c4a55784b7031a5bb7b6f806e88f91a18a"
- message: >-
-    ATO-300 - AliESDtrack::GetTPCClusterInfo - adding type 3 and 4 to define findable cluster only in case cluster before AND after exist, similar as used in TPC dEdx calculation. Default type value is kept OR as before.
- author: !!str mivanov
