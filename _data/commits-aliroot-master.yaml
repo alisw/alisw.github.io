@@ -658,18 +658,3 @@
  message: >-
     RMS timing TRU, STU Absolute info instead of ratios
  author: !!str dlodato
--
- commit: "5aa9d2c283bbe04c3b3662d2027c5e03a79c8ab4"
- message: >-
-    Set histogram ranges and drawing options for 2015 PbPb data taking.
- author: !!str fbellini
--
- commit: "8b70d035b4421d748b21857c125c4ab1d1d69ac0"
- message: >-
-    Added plots for expert DQM: - average number of fired macropad per event (can be used for UPC trigger monitoring) - average number of hits (with ToT>0) per crate Enabled image flag for the DeltaPhi-DeltaBCID plot for trigger hits for UPC in PbPb
- author: !!str fbellini
--
- commit: "862322b7f91334e93adabb7fa5f6fa5ade3b5c96"
- message: >-
-    Updated example macro to run on Grid a standalone TOF QA analysis: - modified for aliphysics paths - PIDresponse and PIDqa task added to the train - update to use TOFqaID task
- author: !!str fbellini
