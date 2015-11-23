@@ -1,4 +1,9 @@
 -
+ commit: "522dfad7266580c1eb7eeb15982d5d05f7e03a67"
+ message: >-
+    ATO-108, ATO-291 - adding mean metadata information to enable current correction into the ResidualHistogram*.root and ResidualMapFull_*.root - metadata: (*fout)<<"metaData"<<     "startTime="<<startTime<<        // start time  as requested     "stopTime="<<stopTime<<          // stop time as requested     "meanTime="<<meanTime<<          // mean time     "minTime="<<minTime<<            // minimal time stamp in data sample     "maxTime="<<maxTime<<            // maximal time stamp in data sample     "ntracksUsed="<<currentTrack<<   // number of tracks acumulated in time interval     "meanNcl.="<<&meanNcl<<          // current estimator - mean number of clusters     "meanNclUsed.="<<&meanNclUsed;   // current estimator - mean number of clusters   for (Int_t iSec=0; iSec<nSec; iSec++){     (*fout)<<"metaData"<<       TString::Format("grNcl%d.=",iSec).Data()<< nclArray[iSec]<<       TString::Format("grNclUsed%d.=",iSec).Data()<< nclArrayUsed[iSec];   }   (*fout)<<"metaData"<<"\n";
+ author: !!str mivanov
+-
  commit: "653715c8d5edbeab2da9095914de5afc40a91654"
  message: >-
     ATO-108 - Changes lost during merging: 1.) In case of old data without npValid use all data 2.) Clear vectors
