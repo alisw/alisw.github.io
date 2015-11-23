@@ -1,250 +1,250 @@
 -
- commit: "b3478926ec72976f692fc07e3427f4b89246f022"
+ commit: "91daf5113835d5f03a06e743a7334fd6f896b3db"
  message: >-
-    Add one more environment variable which is needed for ROOT6. The variable defines the location of the needed header files.
+    add a command line to enable/disable the color format in the fairmq log console output
+ author: !!str NicolasWinckler
+-
+ commit: "a617304e0dc28685d58eca8305c5a26a94a62d6c"
+ message: >-
+    Update version info. Libraries will have now a version. Change fairroot-config script to provide info about major, minor and patch version.
  author: !!str Florian Uhlig
 -
- commit: "83c50930236dafa5f675167c4787182cd8041361"
+ commit: "16fcfe9b91ca08f5bef4d22b001efc520b87f590"
  message: >-
-    Double the maximum test time. Tests with ROOT6 need more time and run more often in timeouts with the old settings.
- author: !!str Florian Uhlig
+    change io directory for test of GenericDevices example and produce 3 different input files for the 3 different serialization format
+ author: !!str NicolasWinckler
 -
- commit: "6d3be9bcb0eb3e35c7fe39b4e56b52957b407f23"
+ commit: "847015f71b8e0eeee2cadca4ebede93ffaa11151"
  message: >-
-    Patch needed to compile root5 dictionary with gcc5.
- author: !!str Florian Uhlig
+    remove unfinished doc
+ author: !!str NicolasWinckler
 -
- commit: "75ab8a4aa60577ab8ee7aba88c4b8aa438d75e6a"
+ commit: "6b76e9b050d80d207f195c062036be389c131754"
  message: >-
-    - remove manual Ttree loading in executable needed by Ubuntu v>11.0 and handle the issue in CMakeLists - correct a typo in Readme.md of the FairRoot installation
- author: !!str winckler
+    add a pointer data type serializer function in the boost serializer add the zmq and nanomsg directories in cmaklists that use the runSimpleMQStateMachine
+ author: !!str NicolasWinckler
 -
- commit: "e2157f5363e5cbdcde4d0709734db434efef83d5"
+ commit: "ab7e5eb91b3d37234b14ff1acebc4c7dd087cfb3"
  message: >-
-    Fixed a typo in example config
+    Simplify the handling of send/receive timeouts
  author: !!str Alexey Rybalchenko
 -
- commit: "fa4e3d21cf23733e7bb107a97e29c69f9f4760b8"
+ commit: "33fc46fabd24da7ac445e6990f2e58f5603fc7cc"
  message: >-
-    Add coverity code annotations to suppress false positive warnings.
+    Add missing link dependencies. Force tests to run in sequential order.
  author: !!str Florian Uhlig
 -
- commit: "93dadc93861cd603f23502817267a386bd024be8"
+ commit: "6336ff50417e33587fb72c96bba13df49e77ffd2"
  message: >-
-    Fix coverity issue.
+    Add missing link dependencies.
  author: !!str Florian Uhlig
 -
- commit: "0c8a64abe2261b4894b37d5405441ad52dfef7b9"
+ commit: "58a811fef51a7ca588338008b674bfefcf4bbefb"
  message: >-
-    Fix two Coverity issues.
+    Allow to pass extra parameters to the cmake command. This is for example needed to define the compilers on some systems.
  author: !!str Florian Uhlig
 -
- commit: "f3a2781d6f558bb31307f38c66c661a2537c8d32"
+ commit: "44eff7696fa031bd5a7392cc759860af7bd85422"
  message: >-
-    - fix coverity issues - clean code and typo in comments
- author: !!str winckler
+    Create virtual function which is used to call the Fill function of the IOManager. This allows the experiments to override the Fill to their needs.
+ author: !!str Florian Uhlig
 -
- commit: "c0af53690792401ef4aa3015decf5c7eb63ac60d"
+ commit: "d0c6e721dbba5e80b0d13db126ac5daea9b4c22e"
  message: >-
-    create protobuf sources in the build directory
- author: !!str Alexey Rybalchenko
+    MQ example tests : add different port setting for the different serialization formats
+ author: !!str NicolasWinckler
 -
- commit: "957dc75a2cbfedab044128da20a0e156e04b6526"
+ commit: "197fdd64ca74314205569859164511c40a103132"
  message: >-
-    Fix Coverity issues
- author: !!str Alexey Rybalchenko
+    - create 3 test scripts for bin, boost, and root serialization format
+ author: !!str NicolasWinckler
 -
- commit: "c8e023f9e95644329c8c30c98dc9892f15e3b46b"
+ commit: "38c1e0015541037389df32a3f17f632d6e33d418"
  message: >-
-    Fix coverity issue CID 10098
+    change json for sampler-proc-sink config
+ author: !!str NicolasWinckler
+-
+ commit: "93d975fe283705e892a964172066b7b2d762fed4"
+ message: >-
+    add test dir to examples/MQ/GenericDevices + change policy typedef in generic device from private to protected
+ author: !!str NicolasWinckler
+-
+ commit: "00c1c9db032ed084c599a2cb72c840157cba1bf0"
+ message: >-
+    access channel map with at
+ author: !!str NicolasWinckler
+-
+ commit: "39b434848b6f59fd4896842f2fd684b9a71ed17a"
+ message: >-
+    Clean CMakelist.txt files
  author: !!str Mohammad Al-Turany
 -
- commit: "a179f3ef90bec83b5d1e0d665d7eb74f41fdb65b"
+ commit: "2de18594e9def077b778ec61f987b4e7fd022622"
  message: >-
-    Fix coverity issue CID 10061
+    Clean CMakelist.txt files include dbase-subdirectories only when we build with dbase remove obsolete directories from includes
  author: !!str Mohammad Al-Turany
 -
- commit: "0fd66d504ed2e6fd920fae4256283e3905746f33"
+ commit: "e164a8147f29d0fe3e62f40a7026d23b63f93090"
  message: >-
-    Fix coverity issue CID 10089
+    Update device configuration
+ author: !!str Alexey Rybalchenko
+-
+ commit: "a16abf79441bd1af371c934e332d5f8e14a3e8d9"
+ message: >-
+    remove obsolete function
  author: !!str Mohammad Al-Turany
 -
- commit: "9a529dea2a29e44dacb36e2c35c36a0c82afe9d0"
+ commit: "acce6c219e46eac74df866dd29a6128ab060e664"
  message: >-
-    Fix coverity issue CID 10107
+    Re-arrange directory structure for the examples Add new ctor to the Urqmd generator which allow to set the path to the conversion table
  author: !!str Mohammad Al-Turany
 -
- commit: "638b41ec17cf20a35a55dbbe46c3587e57edc2b4"
+ commit: "dd7f3bc797e062e1c716414a8cf9275faf2a21c1"
  message: >-
-    Fix coverity issue CID 10168
+    Re-arrange directory structure for the examples correct paths in the macros
  author: !!str Mohammad Al-Turany
 -
- commit: "73a9fd9cf17a313fea5a502461b3f28f6e81e166"
+ commit: "6ff175c96e5dc6c56964aa551286319dd46ce6fb"
  message: >-
-    Fix coverity issue CID 10169
+    Re-arrange directory structure for the examples continue with adapting the macros to the new directory structure
  author: !!str Mohammad Al-Turany
 -
- commit: "36924d09757970eab933ce47d786ca2f72799fbf"
+ commit: "6857d724bbca38aa38e4c35c5d33fd8f58f32331"
  message: >-
-    Small changes
+    Re-arrange directory structure for the examples adapt CMakelists and macros to the new directory structure
  author: !!str Mohammad Al-Turany
 -
- commit: "a0687b37ddcdbd88b282241979c0f6631b005154"
+ commit: "2a0c14c7883cc9b424c7b3144c2d4eb0c817d469"
  message: >-
-    Running FairRootManager without input file
- author: !!str Tobias Stockmanns
--
- commit: "e5b05b02f6f5858b07c98f86b92292c86b5df4f6"
- message: >-
-    Update to convert test beam data with FairRoot
- author: !!str Tobias Stockmanns
--
- commit: "b1ced5e99bf28aba9c9b658163a4adbfa98107a0"
- message: >-
-    Small changes
- author: !!str Tobias Stockmanns
--
- commit: "8c073f61b37aa02d353250a989a1b6af0ada5a4c"
- message: >-
-    Running FairRootManager without input file
- author: !!str Tobias Stockmanns
--
- commit: "59a031b674f596d782c1f22c3f193043f6303b12"
- message: >-
-    Update to convert test beam data with FairRoot
- author: !!str Tobias Stockmanns
--
- commit: "f79ac5c5f9ce3dcdc47d66e1232ca2c21f05ac61"
- message: >-
-    Checking for fRootFileSource and libBase.dylib:
- author: !!str Radoslaw Karabowicz
--
- commit: "99610dfed5a8b7a98de83b1328664c2f2948bcd7"
- message: >-
-    Add first two simple FairMQ examples
- author: !!str Alexey Rybalchenko
--
- commit: "576a570ad62a270119dfafc54d56ca1e6dd25c17"
- message: >-
-    Correct mistake in channel validation
- author: !!str Alexey Rybalchenko
--
- commit: "7faa0f3c29d53b751d7e929d6de417bd13469f16"
- message: >-
-    Add WaitForInitialValidation()
- author: !!str Alexey Rybalchenko
--
- commit: "052d81da0fe755c7916baed083665cb4c1a9e57a"
- message: >-
-    Fix uncaught exceptions
- author: !!str Alexey Rybalchenko
--
- commit: "f59f2efd966b8fd5341721032be4a958312f1cdc"
- message: >-
-    Thread safe initialization of the channels
- author: !!str Alexey Rybalchenko
--
- commit: "b5109f007e3442245f048bbc8df5ed3e62a25a5a"
- message: >-
-    add WaitForEndOfStateForMs(state, duration)
- author: !!str Alexey Rybalchenko
--
- commit: "45488a85770252ef7b3169ec7fdebcc940dcdbef"
- message: >-
-    Fix runtime issue in tutorial7 occuring on linux arch
- author: !!str winckler
--
- commit: "2f34086c5ff4846957212be230272d12d77726ef"
- message: >-
-    Add missing license information
+    Re-arrange directory structure for the examples adapt existing README.md and add new ones
  author: !!str Mohammad Al-Turany
 -
- commit: "11e31b7616f6016050c29c468c6aa9bb0396ab9c"
+ commit: "200561ca1a08ebc323e76f0b8825e8947759e4ce"
  message: >-
-    Use FairMQProgOptions for Sink and BenchmarkSampler
- author: !!str Alexey Rybalchenko
--
- commit: "e927661d7415e58a6e2822797aa96aedc90576cb"
- message: >-
-    Update FairMQStateMachine & introduce FairMQChannels
- author: !!str Alexey Rybalchenko
--
- commit: "2c3340eaa333a8f16647df948ee3993669ec3cd7"
- message: >-
-    move fairmq json parser to fairmq/options
- author: !!str winckler
--
- commit: "788fc5ddca6d60de97d2b5bd1b85fabe023e6430"
- message: >-
-    Add FairMQProgOptions for configuring MQDevices
- author: !!str winckler
--
- commit: "91b338daa61a12d1ea4c5676267c50b7a4cfd91b"
- message: >-
-    renaming tuto7 exec files and fix coverity exception issues
- author: !!str winckler
--
- commit: "2d0d65cfbc852c06e33a68fb53451008c89b08c7"
- message: >-
-    Added protection in FairRootManager against accessing empty pointers to fRootFileSource and fRootFileSourceBKG
- author: !!str Radoslaw Karabowicz
--
- commit: "ecad6deee9cffb0a77cee195aff5cadd6a470624"
- message: >-
-    fixed: coverity warnings
- author: !!str Dmytro Kresan
--
- commit: "1713b450ee510c8187062b80e86ebc27d63a7d3d"
- message: >-
-    Change of box size in FairBoxSetDraw
- author: !!str Tobias Stockmanns
--
- commit: "ed0fac898bfe20ce445739fde5a1b4d97a3dc0c6"
- message: >-
-    ROOT 6 support Forward declaration is not enough for creating the rootmaps with ROOT6
+    Re-arrange directory structure for the examples move common stuff to a separate directory
  author: !!str Mohammad Al-Turany
 -
- commit: "fd23d1c1a5a7ac8190fb7634f1d4ee12ed8fe121"
+ commit: "1fe7673e253a110d33b5df4005c7080c905fba39"
  message: >-
-    Rename names for DartMeasurement statements. If the name contain a blank CDash can't produce graphics. Convert all macros to proper linux file format.
+    Re-arrange directory structure for the examples create new directories and move the tutorials to the corresponding places
+ author: !!str Mohammad Al-Turany
+-
+ commit: "8ad02d4d0dbac6a4db244164895dbcbd538f6252"
+ message: >-
+    add FairProgOptionsHelper.h in header list to be installed of fairmq/CMakeLists.txt
+ author: !!str NicolasWinckler
+-
+ commit: "55a469d6beb9fc36a369e512fe6aa3bb2829769e"
+ message: >-
+    add function helpers for FairProgOptions which simplify FairProgOptions.cxx
+ author: !!str NicolasWinckler
+-
+ commit: "fabeef7454480b53953ec5b1b724add5c16ce3ac"
+ message: >-
+    enable/disable multipart functionnality for sending header if source policy has the proper signature
+ author: !!str NicolasWinckler
+-
+ commit: "440e70f85abe3701c769a9001fab3c2063bffeab"
+ message: >-
+    formatting, change and clean generic_sampler and SimpleTreeReader
+ author: !!str NicolasWinckler
+-
+ commit: "78f2819f810ab865960018b2cddef8f9e6304cf8"
+ message: >-
+    Correct paths to point to new /examples directory
+ author: !!str Alexey Rybalchenko
+-
+ commit: "78437d57d16d6b430a32758e2699fb6f7d1070d8"
+ message: >-
+    Rename /example to /examples and move MQ examples in it
+ author: !!str Alexey Rybalchenko
+-
+ commit: "2cf45d767c10b595c375432d2644f90d965a1814"
+ message: >-
+    Add example for sending multipart messages
+ author: !!str Alexey Rybalchenko
+-
+ commit: "7da40c8e646d4e02a8bb23ae1c4fce4c89446116"
+ message: >-
+    Add ParameterMQServer and example of its use
+ author: !!str Alexey Rybalchenko
+-
+ commit: "073bdf7224ebb5c539026b3a715131d287e172a9"
+ message: >-
+    Reimplement missing function.
  author: !!str Florian Uhlig
 -
- commit: "91facf7484b5cbde72fdbb5812e1595df6d93406"
+ commit: "09c21f736d5b4fdc2d19755180e480442e6a98ec"
  message: >-
-    Fix wrong parameter name.
- author: !!str Florian Uhlig
+    in FairMQLmdSampler : print somethin in TRACE mode if sub-event key not found instead of throwing an exception
+ author: !!str NicolasWinckler
 -
- commit: "3342346af7f60c725edb94f48314efad8c2826e8"
+ commit: "d3addf496146da040274852153c1089b92540327"
  message: >-
-    Adapt macros to the renaming of FairMemory to FairSystemInfo. All macros now have a unified block at the end which extracts the maximal used memory and calculates the CPU usage. Both values are formated in a way that they are CTest compliant and can be send to the CDash server.
- author: !!str Florian Uhlig
+    - rename tutorial7 and move it to example/MQ/GenericDevices - rename functions of MQ examples and change directory structures - move FairMQUnpacker.h from example/MQ/LmdSampler to base/MQ/devices - add runSimpleMQStateMachine.h helper function in fairmq/tools
+ author: !!str NicolasWinckler
 -
- commit: "aefc1e7addba8349a3c08b704368cf6d33c0e469"
+ commit: "bf55b98422508b0d17685f97a9820c00a6111f49"
  message: >-
-    Rename class FairMemory to the more general name FairSystemInfo.
- author: !!str Florian Uhlig
+    correct some coverity issues and add empty string to the logger if boost version = 1,59.0
+ author: !!str NicolasWinckler
 -
- commit: "460cc8d1ce00f18f8a46a736b317c2b56de3cf3c"
+ commit: "561665b077ce17d75fd85d201b3e893de04a7443"
  message: >-
-    Extract maximal used memory at the end of our test macros. This information is now sent to the CDash server to track the memory usage as function of time.
- author: !!str Florian Uhlig
+    add lmd sampler-unpacker-sink chain in example/MQ/lmdSampler
+ author: !!str NicolasWinckler
 -
- commit: "a80bea5c27e0b124f8996a731bb2de4bd66fe3f7"
+ commit: "09dd47e6850b282516687135bc9c22e2cc6c2f4b"
  message: >-
-    Add new class to extract the maximal memory used by a macro.
- author: !!str Florian Uhlig
+    Add CRTP base class for the policies of the generic device
+ author: !!str NicolasWinckler
 -
- commit: "6d10f6028ff50607802e27e58c3f26da6428d927"
+ commit: "f88136dde344c0ca7513777b2ef823510c4f12cb"
  message: >-
-    Remove Pluto from FairRoot Pluto does not work with ROOT6 and need alot of changes Pluto generators should be implimented by the the experiments that need it
+    add doc for the generic devices
+ author: !!str NicolasWinckler
+-
+ commit: "17e531be8da3ea473f247ee4c421d85a07b5f8e8"
+ message: >-
+    add typedef for policies in host class, and make the sampler task container optional.
+ author: !!str NicolasWinckler
+-
+ commit: "2efdf1b7c04690b105fa2d526d7a6c5ea11b0450"
+ message: >-
+    add doc for the tutorial7 and the generic device
+ author: !!str NicolasWinckler
+-
+ commit: "930b8bad10dc78948abdd0d6089c06bc829f75f8"
+ message: >-
+    use FairMQProgOptions to configure the data generator of tutorial7
+ author: !!str NicolasWinckler
+-
+ commit: "6b3a3b89307f03f48a621bc37c23eaaf6209a427"
+ message: >-
+    Merge branch 'do-not-require-geant4' of https://github.com/ktf/FairRoot into ktf-do-not-require-geant4
  author: !!str Mohammad Al-Turany
 -
- commit: "0289d1e6aa948b7c5109d21b0a6c55b29cd6796a"
+ commit: "dbe60aed368dd853e127a223f71f28d006ce4e22"
  message: >-
-    Change code to be able to use ROOT6
- author: !!str Florian Uhlig
+    Fix return values of nanomsg send/receive calls
+ author: !!str Alexey Rybalchenko
 -
- commit: "dfee419bb7c0ef34d1071e07f9c758b5ccf5967c"
+ commit: "5b29c7471d8a88dceeac478c2b4fd4a68c5d8089"
  message: >-
-    Fix many Coverity issues. Switch to ne FairLogger interface at many places.
+    Check return values of Receive calls in the examples
+ author: !!str Alexey Rybalchenko
+-
+ commit: "f4a78bd62aaa4e4b8f24db7778b3ee942e599223"
+ message: >-
+    Add proper return value in set timeout
+ author: !!str Alexey Rybalchenko
+-
+ commit: "314a42452052074bbeda4e1e6ac4648ecc2a38e0"
+ message: >-
+    Return if an unknown exception has been cought in Channel
+ author: !!str Alexey Rybalchenko
+-
+ commit: "78c151b2501f1f1e39511892fae00fdbd6b03cca"
+ message: >-
+    Add functionality which allows to swich on/off persistency from the macro.
  author: !!str Florian Uhlig
