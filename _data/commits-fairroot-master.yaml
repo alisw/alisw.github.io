@@ -1,4 +1,24 @@
 -
+ commit: "ad090e3fa75789a8a9fa8309be6e1a7a517d5fa9"
+ message: >-
+    FairMQLogger : remove pragma command and use CMake include SYSTEM command instead
+ author: !!str NicolasWinckler
+-
+ commit: "55c5d241dbd5da7a54ad37421f388e2b2f34fef3"
+ message: >-
+    Extend DDS Example to use command interface
+ author: !!str Alexey Rybalchenko
+-
+ commit: "89e806dd4fe2b5813612da522bd31ca64714b26b"
+ message: >-
+    Improve the documentation of the examples
+ author: !!str Mohammad Al-Turany
+-
+ commit: "1522272be799b72ecc1b20f9b91cd74d0df8d0fa"
+ message: >-
+    Improve the documentation of the examples
+ author: !!str Mohammad Al-Turany
+-
  commit: "5acff1b88ba01536a40f56cd10f23db5b375876e"
  message: >-
     Properly initialize internal variable.
@@ -228,23 +248,3 @@
  message: >-
     Merge branch 'do-not-require-geant4' of https://github.com/ktf/FairRoot into ktf-do-not-require-geant4
  author: !!str Mohammad Al-Turany
--
- commit: "dbe60aed368dd853e127a223f71f28d006ce4e22"
- message: >-
-    Fix return values of nanomsg send/receive calls
- author: !!str Alexey Rybalchenko
--
- commit: "5b29c7471d8a88dceeac478c2b4fd4a68c5d8089"
- message: >-
-    Check return values of Receive calls in the examples
- author: !!str Alexey Rybalchenko
--
- commit: "f4a78bd62aaa4e4b8f24db7778b3ee942e599223"
- message: >-
-    Add proper return value in set timeout
- author: !!str Alexey Rybalchenko
--
- commit: "314a42452052074bbeda4e1e6ac4648ecc2a38e0"
- message: >-
-    Return if an unknown exception has been cought in Channel
- author: !!str Alexey Rybalchenko
