@@ -1,4 +1,14 @@
 -
+ commit: "89492dc5e7b4acdfbcdc158ea2ff41857b58a4dc"
+ message: >-
+    Tool to download, create and combine trending trees of different sources
+ author: !!str wiechula
+-
+ commit: "de4871923428fe6b216cf1fb7ac7345a16e875e6"
+ message: >-
+    update for border cases in Pythia (provided by Jesper)
+ author: !!str jgrosseo
+-
  commit: "f00d73eb1cf45783b371b2d7dff57fa14feff4fe"
  message: >-
     Possibility to buildan AliESDVertex from an AliESDv0 (Hans Beck, Andrea Dainese)
@@ -158,38 +168,3 @@
  message: >-
     Additional protection against decoding STU raw data by ALTRO format
  author: !!str kharlov
--
- commit: "49c1c1337821d2565363059e9fcebef44a623b46"
- message: >-
-    New alias kINT1=BIT(0) in addition to kMB
- author: !!str ekryshen
--
- commit: "80d1fe427387579e7577929d97b38ff106c0ab03"
- message: >-
-    new amplitude and PFPbit added to the tree
- author: !!str alla
--
- commit: "01c60318590de32b632ac58dd130d6ad859e8930"
- message: >-
-    new amplitude and PFPbit added to the tree
- author: !!str alla
--
- commit: "4fb70060b85bd0fc78a7b77a0e7cd93611850dcd"
- message: >-
-    we will not reconstruct old summary amplitude signal
- author: !!str alla
--
- commit: "51751ee5f4f9a72e1b625a63f1d8d3bd870245fe"
- message: >-
-    correct set RecoParam kHighMult
- author: !!str alla
--
- commit: "68147613b0f14b5929f9755a526944fccdf77c9f"
- message: >-
-    fix floating point exception for the case of very large input buffer in AliHLTTask
- author: !!str sgorbuno
--
- commit: "1053eebaa381a95f283c66466801cff2dd4e3a5c"
- message: >-
-    New alias names for muon triggers in CINT7 suite. And kINT5=kCINT5
- author: !!str ekryshen
