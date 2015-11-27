@@ -168,18 +168,3 @@
  message: >-
     removed printout
  author: !!str alla
--
- commit: "e3f676d1aa43d578cb67b86befde8a5d60b264f3"
- message: >-
-    ATO-193, ATO-108. 1.) Swith polynom in bin/natural coordiantes. 2.) Adding option useCommon   in Bool_t AliNDLocalRegression::AddWeekConstrainsAtBoundaries(Int_t nDims, Int_t *indexes, Double_t *relWeight, TTreeSRedirector* pcstream, Bool_t useCommon)
- author: !!str mivanov
--
- commit: "9dd75d73f624d1a0fea6238851a0697868d39965"
- message: >-
-    ATO-193, ATO-108 - adding more information to streamer. Protect  against singular matrices
- author: !!str mivanov
--
- commit: "835e319aca7e3f2d2ac6a3e627cb971dd7450b03"
- message: >-
-     ATO-193, ATO-108  - special setting of test for  calgrind
- author: !!str mivanov
