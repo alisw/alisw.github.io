@@ -1,4 +1,774 @@
 -
+ commit: "b5df23b777b8615bf26bf54991b3b4a481d665c7"
+ message: >-
+    Fix HLT EMCAL CMakeList after rebase
+ author: !!str drohr
+-
+ commit: "925e5311040657e5a8ce6dc4698471e6a9dbb7d0"
+ message: >-
+    Cleanup after rebase
+ author: !!str drohr
+-
+ commit: "20bd36ce87d6c7f0389e6279bb2da32a7ee27cdf"
+ message: >-
+    -annotateTitle will prepend a string to titles
+ author: !!str mkrzewic
+-
+ commit: "73f28f584ddd75955b64f92a0fab44c7a972377a"
+ message: >-
+    factor out adding and removing of entries
+ author: !!str mkrzewic
+-
+ commit: "cd5e92511259a317501dac09175c8724041d0d3a"
+ message: >-
+    Reduce verbosity of library loading, fix a bud in histogram scale setting
+ author: !!str drohr
+-
+ commit: "26e86bc4a654a8524f428497531309a65cc1489e"
+ message: >-
+    Add 1000-separators to STATUSQA output, improve histograms
+ author: !!str drohr
+-
+ commit: "61f41ed50889202e61a232cc132c02622659c4a9"
+ message: >-
+    Reset stu raw digit maker at the beginning of the event
+ author: !!str mfasel
+-
+ commit: "8990f8d4b7415f95760e13b1b3c6a587b689d26d"
+ message: >-
+    sprintf -> snprintf
+ author: !!str mkrzewic
+-
+ commit: "d5135b1e04817653368eac77bd00ae5c60ee7769"
+ message: >-
+    Further adapt histograms to HI run behavior
+ author: !!str drohr
+-
+ commit: "32206262a51eace7891362bbc04b5fe1bd0748c0"
+ message: >-
+    Check buffer available, increase several output buffer requests
+ author: !!str mfasel
+-
+ commit: "03684abf04ee88853a4c466495e37089c21265de"
+ message: >-
+    pushback-time now in seconds
+ author: !!str mkrzewic
+-
+ commit: "1b87e5ea657fcddee982ba1ff8a8ec3d39bcf2cb"
+ message: >-
+    replace object with new version when merging fails
+ author: !!str mkrzewic
+-
+ commit: "dce3940b8d8a80486c9d61c74f593cbbbf817717"
+ message: >-
+    fix crash when replacing object in map
+ author: !!str mkrzewic
+-
+ commit: "8af9561aeee63d020719095a846613aa6d77c0f1"
+ message: >-
+    caching only mode for the merger - don't merge, replace
+ author: !!str mkrzewic
+-
+ commit: "afe4a599bec321b6252f0581667249b9b9cb173c"
+ message: >-
+    Verbose warning message for unexpected hits in SDD
+ author: !!str mpuccio
+-
+ commit: "4eed3da69ee266f37dfe49d828c583e6dc34710a"
+ message: >-
+    increase histogram scales as events are larger than assumed
+ author: !!str drohr
+-
+ commit: "2160c75976adf8ffe319166be6ffde0456ad0f3e"
+ message: >-
+    dont skip processing on non-data events
+ author: !!str mkrzewic
+-
+ commit: "2313851db7ff2fbbb69167541711894b82a0440c"
+ message: >-
+    tag outgoing data kAliHLTDataOriginOut
+ author: !!str mkrzewic
+-
+ commit: "62d7b4e88d1953f3b3915d1bae5f92290a6f43fb"
+ message: >-
+    Use defines from AliDAQ:: instead of hardcoded constants
+ author: !!str drohr
+-
+ commit: "e9a71f0871f3e9f42da89145c0bdf03f5530ff89"
+ message: >-
+    reset viewer on run change and show run number in window title
+ author: !!str mkrzewic
+-
+ commit: "b02548be09c2890d134e3f5c463215f7c015c793"
+ message: >-
+    some error messages
+ author: !!str mkrzewic
+-
+ commit: "cb2835c97ac3966eba96734a7e35fe45e94aefcd"
+ message: >-
+    Fix PbPb histogram ranges, add SDD v.s. SPD and SSD plots
+ author: !!str drohr
+-
+ commit: "24d9218dfcc30fdccf959e1a3a7a612462cd8306"
+ message: >-
+    print warning at startuo if TPC is disabled in Detector Mask
+ author: !!str drohr
+-
+ commit: "9b102969fdcd0398d1932719408c9025036f57da"
+ message: >-
+    fix logz
+ author: !!str tbreitne
+-
+ commit: "9158cf35b2ccb741dd44e49d293bf1883fc308b8"
+ message: >-
+    documentation
+ author: !!str mkrzewic
+-
+ commit: "ddefb65193f290996f7dc1a3e7d2732eb1cae025"
+ message: >-
+    allow log scale plotting with optis: -logx, -logy, -logz
+ author: !!str mkrzewic
+-
+ commit: "55e0c97b48c65f63d5c266261e263ceba2a961df"
+ message: >-
+    clean up recoQA, use macro to simplify histogram creation, add histogram with HLT in/out ratio
+ author: !!str drohr
+-
+ commit: "85dd8b16a085b48c3272f6740ccae21c3d8b50ec"
+ message: >-
+    fix status printouts, print if there are spd or tpc clusters
+ author: !!str drohr
+-
+ commit: "c66f7a96ac407c5c163695e30f6956ef6e2e43ba"
+ message: >-
+    document unselect option
+ author: !!str mkrzewic
+-
+ commit: "a2f8f695a32d80d6b0e0ad29e7e6d8768c2a9be9"
+ message: >-
+    add -unselect option to explicitly exclude histograms by regex
+ author: !!str mkrzewic
+-
+ commit: "836aff6786ca5b1720c2ce18799f46e3cc559132"
+ message: >-
+    Read raw TPC data size from RCU trailer word in HWCF data, add some histograms to PromptQA
+ author: !!str drohr
+-
+ commit: "38687ebe77401f21aa85e6f0ccf8b8d0a410ef38"
+ message: >-
+    Do not load TCP OCDB objects if TPC not present in GRP detector mask
+ author: !!str drohr
+-
+ commit: "075cea04dcd932c822e940c0a45f02a1c92d75a1"
+ message: >-
+    Use master node from nodelist
+ author: !!str drohr
+-
+ commit: "8e4002357f21c149cd0aa350ead7ac958cbbf69e"
+ message: >-
+    fix minor bug in logical evalustion for error checking
+ author: !!str mkrzewic
+-
+ commit: "788ae37317cb5280413cdcdff3b7f1c7557138ca"
+ message: >-
+    properly handle and send ResetOnRequest
+ author: !!str mkrzewic
+-
+ commit: "09392b1218a31b1a652e9b635dc804c78d09d158"
+ message: >-
+    Use isfinite instead of finite in TPC CA Tracker CPU Version for C99 and later compatibility
+ author: !!str drohr
+-
+ commit: "7f32cf84f56078a21f85d907ba15104819c6ea16"
+ message: >-
+    send run information along with data
+ author: !!str mkrzewic
+-
+ commit: "ddbfbeb5df7bd272022d870f0d1bcb1d16fc058d"
+ message: >-
+    only send once with the selected blocks
+ author: !!str mkrzewic
+-
+ commit: "62f5e32470b4dba257fcf1d427760c993b91e40c"
+ message: >-
+    new option: SendRunNumber, it includes a INFO message with run=123123 in the body
+ author: !!str mkrzewic
+-
+ commit: "039c14243185cd232e2c434ba6f5194665eabd50"
+ message: >-
+    reset the merger on change of run communicated by INFO run=#
+ author: !!str mkrzewic
+-
+ commit: "6874746c3d75409ac598faf81eda2ba1b7086684"
+ message: >-
+    new option to only reset what was requested (once)
+ author: !!str mkrzewic
+-
+ commit: "3441d8a0e3f5e48cf76b62fa1e8eaa33a278f457"
+ message: >-
+    add a verbose status option to recoQA
+ author: !!str drohr
+-
+ commit: "2e1be5d4bace929886ed4efb0bf0c32f11e981bf"
+ message: >-
+    remove logical ambiguity
+ author: !!str mkrzewic
+-
+ commit: "30bcddedeeca6d7281165cd15ad427ba149ef090"
+ message: >-
+    update AliESDEvent and AliESDtrack definitions for eventdisplay to work
+ author: !!str mkrzewic
+-
+ commit: "d79ca0d40b4864e589d5e68916a00bc502889493"
+ message: >-
+    update definition of VZERO-ZDC histograms
+ author: !!str mkrzewic
+-
+ commit: "46be4fb57c8a638517d4127c9a978839f34ec204"
+ message: >-
+    fix crash
+ author: !!str mkrzewic
+-
+ commit: "efd1a6995572d02914f468b998006ab1a7556088"
+ message: >-
+    dump to file and exit
+ author: !!str mkrzewic
+-
+ commit: "7804f72bbfa770e356cd0693ed0471fef7f304c6"
+ message: >-
+    fix crash: unprotected acces to regexp
+ author: !!str mkrzewic
+-
+ commit: "5753b9499ad7df23867b3157a2500f9f3c48084e"
+ message: >-
+    add the side monitoring chain scripts (move from hlt-core repo)
+ author: !!str mkrzewic
+-
+ commit: "f9d8fa28b460d79408397cf4180d510e6488d4f4"
+ message: >-
+    add an (empty) virtual dtor to AliOptionParser
+ author: !!str mkrzewic
+-
+ commit: "441423aba68210abb6e15ecc5d912419d51b5e57"
+ message: >-
+    add statistics for ZDC reco and HLT in/out size, some improvements
+ author: !!str drohr
+-
+ commit: "eaae0f065e090cdd84b59998a002a46a2ae448fe"
+ message: >-
+    improve debug output
+ author: !!str drohr
+-
+ commit: "5675a8e9e813b8e672178a5bd653ea120601fce4"
+ message: >-
+    reduce verbosity
+ author: !!str drohr
+-
+ commit: "4cd3d5807b4681b0b39727d0d56c52dacc9ce15d"
+ message: >-
+    add VZEROmultiplicity vs ZDC plot
+ author: !!str mkrzewic
+-
+ commit: "7daaf094d17dd36059ca5cfca8675c141f3e15c1"
+ message: >-
+    quitting a root program is tough. Some fixes.
+ author: !!str mkrzewic
+-
+ commit: "39075851867f7cfd564decf553137060a5deb0d3"
+ message: >-
+    clean(er) exit with ctrl-c
+ author: !!str mkrzewic
+-
+ commit: "ab9fdb6afec9cd728cc47e88b2a954b76eb80863"
+ message: >-
+    default to linger value of 0 for ZMQ sockets
+ author: !!str mkrzewic
+-
+ commit: "af96c32cfcfa367d30b99efdb3e29bb16c561a19"
+ message: >-
+    remove unused functions
+ author: !!str mkrzewic
+-
+ commit: "9f79f429461520cf8800486f635cd2fdf62389d4"
+ message: >-
+    option to sync the contents to file
+ author: !!str mkrzewic
+-
+ commit: "2739132d140235868fc9db0fdb2b362c88ea4395"
+ message: >-
+    from B. von Haller: add option to generate many histograms in one message
+ author: !!str mkrzewic
+-
+ commit: "856baa33ea09c6538567c51f6af2d975abf5fa3f"
+ message: >-
+    always close the message after sending
+ author: !!str mkrzewic
+-
+ commit: "41bf659126d22c4145d7d6e9b7c6bed1122760ba"
+ message: >-
+    regexp selection of imerged data to be sent on request
+ author: !!str mkrzewic
+-
+ commit: "b84a0a4f6b41ed5b45c29af945c93eccfa94b7cd"
+ message: >-
+    add alizmq_msg_add() to construct multi part messages
+ author: !!str mkrzewic
+-
+ commit: "43698c5ff280f90c24133d16e72beb41ec8d01b7"
+ message: >-
+    can now select histograms to view by regex and set drawoptions
+ author: !!str mkrzewic
+-
+ commit: "150e6b4537ac96057a1f56bab7d8d2a5c4cbcc9a"
+ message: >-
+    fix printouts
+ author: !!str mkrzewic
+-
+ commit: "6a84305229d2e0381d68d6a5bbe5cac440efd599"
+ message: >-
+    Remove draw option
+ author: !!str saiola
+-
+ commit: "f804b836041ef72f35a0c970d2129437eca8f22d"
+ message: >-
+    Several fixes to make raw decoder working
+ author: !!str mfasel
+-
+ commit: "66987665797fa2dd8b068b184d719a7ee465ae1f"
+ message: >-
+    Initialize patch energy
+ author: !!str saiola
+-
+ commit: "99f800c8ccbc55c757c7309f6ca281fdb53e3f86"
+ message: >-
+    Reduce histogram size; add new histogram to monitor FastORs with large amplitudes
+ author: !!str saiola
+-
+ commit: "001f8d62db8e89a3dcdc28579cdbe29a27a4e264"
+ message: >-
+    make ZMQtimeout and ZMQmaxQueueSize settable
+ author: !!str mkrzewic
+-
+ commit: "2b6fe82c35d14cf2e7d1632b8df73d566054393a"
+ message: >-
+    be more verbose
+ author: !!str mkrzewic
+-
+ commit: "8c6637081241ed8f51048ebf98729d3de472c6de"
+ message: >-
+    small update to extendHLTCDB.sh
+ author: !!str mkrzewic
+-
+ commit: "bf5c6b9f398b075de06a79ca08bbbbe1e2eae635"
+ message: >-
+    add some more qa information
+ author: !!str drohr
+-
+ commit: "f6e266ef52a2bf5c99c6fa9d857ef7aace560d71"
+ message: >-
+    reduce verbosity
+ author: !!str drohr
+-
+ commit: "5d71e8dbf0f05a3f936f9e53ea9fef5b529f5aed"
+ message: >-
+    Fix nbumber of STUs
+ author: !!str mfasel
+-
+ commit: "04244b03edfc1f8eb3c923719f1aa7b01f78bd16"
+ message: >-
+    add a script to modify run ranges of the HCDB
+ author: !!str mkrzewic
+-
+ commit: "0fa8346b28733e566e72fca612a55e7a954b8f77"
+ message: >-
+    improve status printouts during cmake build
+ author: !!str mkrzewic
+-
+ commit: "2205251bfa1f31e7ccf1aec72ef2c90d344189e4"
+ message: >-
+    fix typos in info message
+ author: !!str mkrzewic
+-
+ commit: "342f5093906bb53f80d9abfb0d24e5ed60c464fa"
+ message: >-
+    install HLT createGRP wrapper script to AliRoot install directory
+ author: !!str mkrzewic
+-
+ commit: "0d7b1e4d3869cda527d420571db730f5a71cf1fe"
+ message: >-
+    add libAliHLTCreateGRP to the standard AliRoot Build process. Automatically built when DIM is found
+ author: !!str mkrzewic
+-
+ commit: "f1a8d2843acb788627f335a12710e4c5e92fa10a"
+ message: >-
+    fix compiler warning (close comment with */)
+ author: !!str mkrzewic
+-
+ commit: "a82727fa15b52441d3ff990e21f891a5a9d1e4dc"
+ message: >-
+    fix compilation without ZMQ
+ author: !!str mkrzewic
+-
+ commit: "cfb8ea171dc0192a377609a16034b90bcd22d04c"
+ message: >-
+    Add FastOR QA plus more QA plots for the patches
+ author: !!str saiola
+-
+ commit: "e240bd9b79312bfa42491bf01b22cb50633a6065"
+ message: >-
+    Fix bug in contructor initializer + fix data type and set method for thresholds
+ author: !!str saiola
+-
+ commit: "51c282adb13c53abce9ccff2b069041cbf161e34"
+ message: >-
+    Link offline and online patches
+ author: !!str saiola
+-
+ commit: "250673b9bb135664d74de95617df9995c9d3fa2c"
+ message: >-
+    Add some relevant constants in a new namespace
+ author: !!str saiola
+-
+ commit: "50dd7681ccfb7b2f40801d1398e1b53739b09870"
+ message: >-
+    Add new data structure to hold FastOR info
+ author: !!str saiola
+-
+ commit: "fd0b33b242ed76072273ac58913e3a598c9f3192"
+ message: >-
+    add a proxy to the ZMQ example
+ author: !!str mkrzewic
+-
+ commit: "368a033e5fb4e1468ec78a15afe37ec0df58c7c6"
+ message: >-
+    add documentation to the ZMQ devices
+ author: !!str mkrzewic
+-
+ commit: "2444d4783ecfecd2d6cb545044b05fba459e78f6"
+ message: >-
+    cleanup the proxy, add documentation
+ author: !!str mkrzewic
+-
+ commit: "6858742154255420941d47f6ef4131197d48a264"
+ message: >-
+    fix minor option parsing issue
+ author: !!str mkrzewic
+-
+ commit: "9c6b1406007afa39f8b551767564c7004fe7920e"
+ message: >-
+    remove unused function
+ author: !!str mkrzewic
+-
+ commit: "265e4a5e0886572f4248f06af2b9c4bbe79204b3"
+ message: >-
+    Several updates of the EMCAL HLT
+ author: !!str mfasel
+-
+ commit: "e797ca32c75b91b2594fdbed76f12eb609d8232b"
+ message: >-
+    forgotten implementation of ProcessOptionString(int,char**)
+ author: !!str mkrzewic
+-
+ commit: "47957f424086b5a8ac802f9aa311da46c329c9ec"
+ message: >-
+    improve HLT createGRP script
+ author: !!str drohr
+-
+ commit: "361b3df387dd8cd8262aa325c9bfa6de05cc4569"
+ message: >-
+    remove printfs
+ author: !!str mkrzewic
+-
+ commit: "0870bc470ac4d2d8f5d63574e6f4cce784ed269c"
+ message: >-
+    use AliOptionParser also in AliHLTZMQsource
+ author: !!str mkrzewic
+-
+ commit: "c98e6f82bff29ac6d6dbb7b4a8ad4601c159cacf"
+ message: >-
+    fix double inclusion protection and fix option parsing
+ author: !!str mkrzewic
+-
+ commit: "766634170dc6aefd9a5fad495c12b7ee415634c3"
+ message: >-
+    use AliOptionParser in the zmq components
+ author: !!str mkrzewic
+-
+ commit: "007a50800b9e02eae4648daa053fc52d02eec936"
+ message: >-
+    inherit from AliOptionParser as well
+ author: !!str mkrzewic
+-
+ commit: "8df10716c12522180637d19746bec5836340365c"
+ message: >-
+    use AliOptionParser
+ author: !!str mkrzewic
+-
+ commit: "da985f38f904e4f93c6c11cdb7e254a02934ce16"
+ message: >-
+    use printf instead of Printf
+ author: !!str mkrzewic
+-
+ commit: "db49f235207efe94c142de4245bd073855473ffe"
+ message: >-
+    dont use "," as an option separator symbol
+ author: !!str mkrzewic
+-
+ commit: "088bac14a514a094ba119f2a3cb9bae51f359273"
+ message: >-
+    add AliOptionParser to the linkdef
+ author: !!str mkrzewic
+-
+ commit: "9b970a6a3217dbdc48cf0581218b1199cd128e95"
+ message: >-
+    make some methods static
+ author: !!str mkrzewic
+-
+ commit: "8758ae4c7847303f1ec1c466820a5f5937a91f38"
+ message: >-
+    Add first version of script to create HLT GRP object
+ author: !!str drohr
+-
+ commit: "166269c9bedc64ad23aaeb7f775a2eda590bb298"
+ message: >-
+    move from SetMemory() function to AddBuffer() function in EMCALRawAnalyzerTRU and CaloRawAnalayzer in HLT
+ author: !!str mkrzewic
+-
+ commit: "f70560eb42c781a0be3fb98a58fcab0f76211422"
+ message: >-
+    Implement new mapping procedure for DCAL
+ author: !!str mfasel
+-
+ commit: "058a98a502500aafa18d53962a4895d9ef42daab"
+ message: >-
+    update HLT CTP trigger regular expression component
+ author: !!str mkrzewic
+-
+ commit: "78f6adcc16332fe1369036c87ec23b380fa5b683"
+ message: >-
+    Fix crash in HLTAnalysisManager when running in HLT Framework
+ author: !!str mkrzewic
+-
+ commit: "87c365c87e7435d55be60d4c9b112d8c60f6d439"
+ message: >-
+    remove debug output
+ author: !!str mkrzewic
+-
+ commit: "5999a43e5ab0021b07455098f21acc44045daedd"
+ message: >-
+    check environment (HLT_ONLINE_MODE) to disable loading of CTPScalers
+ author: !!str drohr
+-
+ commit: "268e26d4c19b2f5d0ea9cbfbfc8eaefc9cb400c0"
+ message: >-
+    init TGeoManager
+ author: !!str mkrzewic
+-
+ commit: "999251f3a484ac5dcb06ad125c380967ddfb7efc"
+ message: >-
+    fix string comparison
+ author: !!str mkrzewic
+-
+ commit: "7cd20ba277e841fc286c8e17da466d1877e05237"
+ message: >-
+    fix printouts
+ author: !!str mkrzewic
+-
+ commit: "2b705a04e2bc02c9491a2ec4c766b58981af509d"
+ message: >-
+    Fix AliHLTEMCALTriggerDataMaker
+ author: !!str mfasel
+-
+ commit: "981a80b77934278d042b33174fc38859b92b341f"
+ message: >-
+    Fix output of trigger maker component
+ author: !!str mfasel
+-
+ commit: "0d4415dc5a863406511156c317b6595857b97901"
+ message: >-
+    fix printout
+ author: !!str mkrzewic
+-
+ commit: "3f8e25a6212924c7cc3b97ae9bf4386a15c8d663"
+ message: >-
+    add break; in a case statement
+ author: !!str mkrzewic
+-
+ commit: "6fe7457243411bb3c6a9587ec74276c02b7d3018"
+ message: >-
+    Remove obsolete function that fails to link
+ author: !!str mfasel
+-
+ commit: "dd36b14780d4b260f07f3b47acf23318e332ff80"
+ message: >-
+    Update HLT Data Types to version 23
+ author: !!str drohr
+-
+ commit: "db9afecc4a052486f5dab87dd94573bc28e8bbfc"
+ message: >-
+    remove obsolete warning
+ author: !!str drohr
+-
+ commit: "1e3eda46d218a52bed71bbf4025e96f0346c5109"
+ message: >-
+    reduce verbosity
+ author: !!str drohr
+-
+ commit: "3b2126c9e23e7cb2b618f5dff3d6209cda04f303"
+ message: >-
+    Fix buffer overflow in output of HWCDDecoder when output buffer too small
+ author: !!str drohr
+-
+ commit: "3b3fdc4b65258561bedd77944d01291ee0e78a94"
+ message: >-
+    This fix is no longer needed, now that AliDAQ.cxx is fixed
+ author: !!str mkrzewic
+-
+ commit: "e5670a5ee74ffffc29224594aabdef0b38d63a28"
+ message: >-
+    Add some comments, and remove some redundancy
+ author: !!str drohr
+-
+ commit: "80315d0b6b6c916ba76681901ee54b6fcfa9c696"
+ message: >-
+    Fix initialization of AliHLTLumiRegComponent.... The defautl return value should not be 'Operation not permitted '
+ author: !!str drohr
+-
+ commit: "4a36593a48b2700f81c93b435cdc0ed3af5e2a1a"
+ message: >-
+    Implementation of TRU and STU decoder components for the EMCAL HLT
+ author: !!str mfasel
+-
+ commit: "fea74abba841a3638cd2d4485ef5265d714f49b0"
+ message: >-
+    move example scripts to the exa directory
+ author: !!str mkrzewic
+-
+ commit: "b2ce74132f80a8afee0f2d1335ad25c607215882"
+ message: >-
+    a test script to start a dummy lumi region histogram source
+ author: !!str mkrzewic
+-
+ commit: "26905978bce6fdfc9ba2944cdf7112c2c709d1f1"
+ message: >-
+    fix compilation on macosx: CLOCK_REALTIME is not available there
+ author: !!str mkrzewic
+-
+ commit: "1c749ee783bd1fc06222bddf94ce59111d60082b"
+ message: >-
+    move to alizmq_socket_init
+ author: !!str mkrzewic
+-
+ commit: "0d50e8c981e77b2307e71a8ab148e07e95e1c333"
+ message: >-
+    refactoring/cleanup of code
+ author: !!str mkrzewic
+-
+ commit: "0dd8f88bd47c3fbd7a85b3c60ffcb6893a2028ac"
+ message: >-
+    reduce the default queue length to 2
+ author: !!str mkrzewic
+-
+ commit: "fe2d78a3fb6f87de1f58082752c4203435e9f8a6"
+ message: >-
+    make nbins a parameter
+ author: !!str mkrzewic
+-
+ commit: "aa3c1dd91f1fb523d7c645f69302f48b999ff74b"
+ message: >-
+    add alizmq_socket_name() + some fixes
+ author: !!str mkrzewic
+-
+ commit: "3b4d2c5ccde08b44ef28807b80a4e13a139114c5"
+ message: >-
+    add cluster compression ratio
+ author: !!str mkrzewic
+-
+ commit: "d4e63b3661e034b188175b6d60d2768a7a48fce3"
+ message: >-
+    add CALO to the includes and libs
+ author: !!str mkrzewic
+-
+ commit: "0bc4ab8a47ab804a259f7c073a22cdcbe10bc563"
+ message: >-
+    Improve HLT Prompt Reco QA: Add HLT-TPC-Cluster size, fix compressed cluster size, add ESD size, add V0
+ author: !!str drohr
+-
+ commit: "3e1b4805dcc7374958e2a828aa3b04226c35eac7"
+ message: >-
+    Add printout of mode and deflatermode to compression component
+ author: !!str drohr
+-
+ commit: "6557ecd447c07e37b5505f31fc910c6ccc4daed1"
+ message: >-
+    Add new HLT data type RawClustersDataTypeNotCompressed used by TPCDataCompressor if it cannot compress the data
+ author: !!str drohr
+-
+ commit: "a7c3a320ff291921d85aa556cb566e80cf8c820c"
+ message: >-
+    Add GetInputObjectFromIndex function to AliHLTComponent to get a particular object if you already know the buffer
+ author: !!str drohr
+-
+ commit: "d76aaed87eef612423b1cdea19fa27991cb74056"
+ message: >-
+    Fix initializing the start time for push back with correct random seed
+ author: !!str mkrzewic
+-
+ commit: "36400ebe0bdebd0cefe6743f3a7caddf826dd092"
+ message: >-
+    further reduce verbosity of some components
+ author: !!str drohr
+-
+ commit: "5e95a80029d2a712b9459b7736189bb74c3b290e"
+ message: >-
+    Reduce verbosity for HLT further
+ author: !!str drohr
+-
+ commit: "4537941b14778bb84020851a5a0b248ba68b610e"
+ message: >-
+    Add new statistics to histograms
+ author: !!str drohr
+-
+ commit: "608092be9b4ae77a31f0f728f477939de3afcda3"
+ message: >-
+    reduce verbosity of messages
+ author: !!str drohr
+-
+ commit: "3194f3355a7071530c88618b26c79c1f9ec00f3c"
+ message: >-
+    Add lots of more statistice to PromptRecoQAComponent
+ author: !!str drohr
+-
+ commit: "99895711aafe285dbfc1ed916f36e803af17ecca"
+ message: >-
+    Extract AliHLTTPCCADefinitions in an extra file in order to use it externally
+ author: !!str drohr
+-
+ commit: "9f0a6d400f49a8675d9ef231cf8d0b81b5d47c7a"
+ message: >-
+    add option to AliMagF to not throw a Fatal error when the Magnet Currents are invalid, such that the check can be used externally by HLT
+ author: !!str drohr
+-
+ commit: "5ec3559b0d64ea1f7241fe00010fe2db976319ad"
+ message: >-
+    fix 'invalid detector ID' issue in GlobalTrigger. AliDAQ seems to use (kNDetectors - 1) internally for the HLTId, but it uses kHLTId = 30 for determining the HLT DDLS. AliHLTDAQ Uses kHLTId always, so there needs to be some conversion. Perhaps this should be cleaned up and the HLTID should be made consistent in the future
+ author: !!str drohr
+-
+ commit: "69b37f99d5c8f03287a514f8cf05d79070634dc1"
+ message: >-
+    Add new HLT component to monitor the EMCal trigger
+ author: !!str saiola
+-
+ commit: "37743ea1872a565a0c1c1932497642a91647242d"
+ message: >-
+    Bug fix: the size of the data was not set, therefore no data was posted
+ author: !!str saiola
+-
+ commit: "1d75377f096ef46b952cc310d139455e4d41f301"
+ message: >-
+    temp fixes - proper fix in master
+ author: !!str tbreitne
+-
  commit: "a2d8ed5daaea2341de8cd97fa4d9d287784909c9"
  message: >-
     Add a new StartAnalysis method to work directly on a TFileCollection.
