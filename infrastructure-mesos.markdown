@@ -4,8 +4,6 @@ layout: page
 categories: infrastructure
 ---
 
-**WORK IN PROGRESS -- do not use**
-
 # Cluster architecture description:
 
 The {{site.experiment}} build infrastructure consists of two kinds of nodes, masters,
