@@ -151,3 +151,14 @@ the recipe for destoying slaves is:
       eval $(ai-rc "{{site.experiment}} Release Testing")
 - Delete the machine with `ai-kill-vm <{{site.builduser}}XX>`
 - Delete the previously attached volumes.
+
+### Rebooting a slave
+
+In case there is an issue with any of the slaves, a hard reboot can be
+attempted to bring it back to a working state. This can be done via the
+OpenStack GUI, in the Instances tab, or by issuing:
+
+      eval $(ai-rc "{{site.experiment}} Release Testing")
+      openstack server reboot --hard <slave name>
+
+in case the GUI is not functional.
