@@ -1,4 +1,14 @@
 -
+ commit: "672db0a70716cccbe56534a0d28cd5e782cf12b4"
+ message: >-
+    ATO-108 - 1.) AliTPCcalibAlignInterpolation::FillHistogramsFromChain- disable not used branches.  2.) Does not mix A side and C side clusters (check z/side match)  3.) Fix memory leak (delete tree after each file)
+ author: !!str mivanov
+-
+ commit: "b8d3bf59659ca619a6bbaf1813d913055d271f27"
+ message: >-
+    ATO-193, ATO-108 1.) Check TLinearFitter::Eval return value  ans skip bin where fit failed 2.) Skip underflow and overflow bins in fits 3.) Additional check of ranges, because of bug (feature?)  in the TObjArray streamer.  Changes tested with  STAT/test/AliNDLocalRegressionTest.C
+ author: !!str mivanov
+-
  commit: "2ad9f797494307b5b12f4089c173c82fd615aa91"
  message: >-
     minimize amount of meaningless fits
