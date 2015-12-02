@@ -1,4 +1,14 @@
 -
+ commit: "91dc1850fd32894b132e80d61fbf0e7e4562f76e"
+ message: >-
+    extend AliGenExtExec to support alternating files
+ author: !!str jklein
+-
+ commit: "0bcafc7340e58ad8d810aaaf343c363fd0fce4b5"
+ message: >-
+    ATO-46, ATO-310 - temorary fix. To get QA. Fix will be not needed once the configuration files will be introduced
+ author: !!str mivanov
+-
  commit: "dfcb210f641aadb0bfe3f2604ef7e47c5bb98ef3"
  message: >-
     reject ITSpureSA to avoid double counting
@@ -1003,8 +1013,3 @@
  message: >-
     update for border cases in Pythia (provided by Jesper)
  author: !!str jgrosseo
--
- commit: "f00d73eb1cf45783b371b2d7dff57fa14feff4fe"
- message: >-
-    Possibility to buildan AliESDVertex from an AliESDv0 (Hans Beck, Andrea Dainese)
- author: !!str belikov
