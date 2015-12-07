@@ -1,4 +1,19 @@
 -
+ commit: "13ec2120cc91ac3b0f716605cb832c1eeecb0df2"
+ message: >-
+     ATO-108 - additional check of ranges
+ author: !!str mivanov
+-
+ commit: "d6d89672c8ea1c5f1431d12727064342150621f5"
+ message: >-
+    ATO-108 - BUG fix. Do not use cpmposed correction producing the maps.  Bug introduced in the commit 4306c9502794862ae2e9562318efcddecee87b3d (17.11.2015). PbPb data were processed distortion  maps created as rsidual in respect to default map
+ author: !!str mivanov
+-
+ commit: "c8507a57d814f7d4a7d827ba8b425eb2e4e76849"
+ message: >-
+    ATO-108 - Bug fix. Enable also track parameters sub-branches in AliTPCcalibAlignInterpolation::FillHistogramsFromChain. Before q/pt=0 used
+ author: !!str mivanov
+-
  commit: "79c469202446eb0159164cf91bc13f90b3cf962c"
  message: >-
     disable trigger processor
