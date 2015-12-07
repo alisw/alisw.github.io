@@ -203,18 +203,3 @@
  message: >-
     Extend title check to objects within collections
  author: !!str shahoian
--
- commit: "5d5ff50369793077b23c3dfbddb14bcd079d0387"
- message: >-
-    ATO-193, ATO-108 - change a default for unitTest. Callgrind/valgrind test in TPC git /hera/alice/miranov/alice-tpc-notes//JIRA/ATO-193/data to be moved to the ALICE_ROOT - after addapting to OFFLINE test suit
- author: !!str mivanov
--
- commit: "95d2485b00b49c0e1f9c4233431e73f583ee1818"
- message: >-
-    ATO-108, Speedup of the local regression (factor O(5) in setup UnitTest- $ALICE_ROOT/../src/STAT/test/AliNDLocalRegressionTest.C) Modifications: * 1.) Use nsigma cut instead and calculate weights only once * 2.) Use raw pointers instead of TVectorD resp. TObjArray **    no range controls in innermost loop
- author: !!str mivanov
--
- commit: "f24a4bf00acd072a75d29c43c3a9fde2f304ab8f"
- message: >-
-    ATO-108 - CPU optimization - cache and use raw pointers instead instead of TVector operator[] - see callgrind https://alice.its.cern.ch/jira/secure/attachment/30658/calgrindHistogramming.png
- author: !!str mivanov
