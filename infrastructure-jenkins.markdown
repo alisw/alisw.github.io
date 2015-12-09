@@ -4,8 +4,6 @@ layout: page
 categories: infrastructure
 ---
 
-**WORK IN PROGRESS -- do not use**
-
 # Jenkins installation
 
 In order to drive the Continuos Integration process the `{{site.experiment}}`

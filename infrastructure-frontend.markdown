@@ -4,8 +4,6 @@ layout: page
 categories: infrastructure
 ---
 
-**WORK IN PROGRESS -- do not use**
-
 # Frontend setup
 
 The {{site.experiment}} build infrastructure is exposed via SSO.
