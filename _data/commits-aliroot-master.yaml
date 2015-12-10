@@ -1,4 +1,799 @@
 -
+ commit: "1069b5ff0747648b32a1a1f77d2bbec0b76025d1"
+ message: >-
+    missing include
+ author: !!str mkrzewic
+-
+ commit: "83976fbcce44ba15e164e409494212cb9ee6f6cc"
+ message: >-
+    fix potential mem lean in the merger
+ author: !!str mkrzewic
+-
+ commit: "6d70f587977470e0f68c5b5904c0806415290cbd"
+ message: >-
+    small fix for when there is no CTP information
+ author: !!str mkrzewic
+-
+ commit: "fef81b973b4fac28c974eadbc7e201851ee3e29e"
+ message: >-
+    Change option parsing to EqualTo instead of Contains..., add fForceKillAsyncProcess option
+ author: !!str drohr
+-
+ commit: "25f7e8565e29d2203d9e8122564e62d9344a6c3a"
+ message: >-
+    Add option to stop child if it does not quit after some time
+ author: !!str drohr
+-
+ commit: "a374b27c140bd1e2a82d44ebce156640eaa9d31f"
+ message: >-
+    randomize the PushBack time each time by PushbackPeriod/2
+ author: !!str mkrzewic
+-
+ commit: "4bb48f675cabd8e03a8545b9aecbd75bebb5e683"
+ message: >-
+    Fix to Root Object Merger, object was not initialize properly after initialization was moved into first loop
+ author: !!str drohr
+-
+ commit: "6c6d3fb71622bdcc200acaf7e87c57123b59d360"
+ message: >-
+    printf->AliInfo
+ author: !!str mkrzewic
+-
+ commit: "49abe77bb741e97cfd41572b67ff7cc0291b7483"
+ message: >-
+    fix a crash when accessing one axis
+ author: !!str mkrzewic
+-
+ commit: "63bb14fce96bdab35ed6ca8b67752df4131ecd8c"
+ message: >-
+    fill when at least x has a non-zero value, allow y to be empty fir 1d histograms
+ author: !!str mkrzewic
+-
+ commit: "b89e5ae75f4e81e86e94728ae78cb07bf85a748b"
+ message: >-
+    improve file name of the file sink
+ author: !!str mkrzewic
+-
+ commit: "414e9bb3960e8bb3661f933a248e3d20d02ab344"
+ message: >-
+    process events after reset
+ author: !!str mkrzewic
+-
+ commit: "9ecc4cf386c904d24779b20ef85bd3e7bb6164dc"
+ message: >-
+    Add option to use POSIX semaphores instead of pthread mutexes for better performance in async processor
+ author: !!str drohr
+-
+ commit: "4d7479fe3db150633b42bf2a55eb8a214c3f4373"
+ message: >-
+    Fix alignment of objects
+ author: !!str drohr
+-
+ commit: "d3129bf0cfd885962ca5094443c017bfca1e1eef"
+ message: >-
+    refactor root object merger, add support for async process
+ author: !!str drohr
+-
+ commit: "6304730c5a032ca1c54e9e9466f1b11c4639b6af"
+ message: >-
+    We should allocate queuedepth + 2 buffers to have a buffer for everyone
+ author: !!str drohr
+-
+ commit: "924cde2b06f6cb4389d8e6698b20f0ab2aaf57dc"
+ message: >-
+    Clean up alignment of buffer headers, add support for multi-part shared buffers
+ author: !!str drohr
+-
+ commit: "24de9d134aed247d854c7cd6c60edea64cc1ffb5"
+ message: >-
+    Add an HLT component initializer that padds with spaces, such that 'HLT' works as well as 'HLT '
+ author: !!str drohr
+-
+ commit: "91dd44737e10b28fbc505fbb7e09e905d6e6dca7"
+ message: >-
+    Remove redundant check for output buffer size
+ author: !!str drohr
+-
+ commit: "5afedea00ef831273c9adbbba6ce9673d018c0aa"
+ message: >-
+    Add some protection for invalid indexes
+ author: !!str mfasel
+-
+ commit: "82d7112c8bfd286f32fa55f401c9e3f21ee8c0c9"
+ message: >-
+    Do not push empty output block
+ author: !!str mfasel
+-
+ commit: "62d153c45b5c1f33dd8ce3faf86b5c3a5ca36b55"
+ message: >-
+    We should initialize the debug counter by 0...
+ author: !!str drohr
+-
+ commit: "627eaaae11e03f6cbd40f3ae31944d45a5521519"
+ message: >-
+    option to ignore change of run in the viewer
+ author: !!str mkrzewic
+-
+ commit: "a16601d6293c8f8c971bfe45f450dc7613a6f0ef"
+ message: >-
+    running version of the monitoring chain
+ author: !!str mkrzewic
+-
+ commit: "c6635cb1291462b679bcff818893b3ba8eca5da6"
+ message: >-
+    fix -Weffc warnings
+ author: !!str mkrzewic
+-
+ commit: "9ac4b25e9026d517a79cce599cbab4f907e89f5b"
+ message: >-
+    install signal handlers for a clean exit
+ author: !!str mkrzewic
+-
+ commit: "449643db59679c9b1ba12658d5d450752cb1fd5e"
+ message: >-
+    working version of the ZMQfileSink
+ author: !!str mkrzewic
+-
+ commit: "eb405a31e503faf0251bc0cae749848f84510898"
+ message: >-
+    clear the mergelist after failed merge
+ author: !!str mkrzewic
+-
+ commit: "5c353328d69242e4fda4ab29b0f85eba532bdb96"
+ message: >-
+    allow 1d histograms (by providing ony one axis definition, second empty)
+ author: !!str mkrzewic
+-
+ commit: "4a55b2f438e7100b09b710b8fd5220a19611ed2f"
+ message: >-
+    include classname in verbose output
+ author: !!str mkrzewic
+-
+ commit: "36292fe9ba9e38e0937e195dcb3c57a09bc9a687"
+ message: >-
+    properly reset: also the axes
+ author: !!str mkrzewic
+-
+ commit: "9ec4659b78eed385e229f7148d1e1b351d8a9c57"
+ message: >-
+    fix option parsing
+ author: !!str mkrzewic
+-
+ commit: "397ef0b460fb6c9287c0865609495c3ae2fe79c7"
+ message: >-
+    special case for merging TH1: in case of failure, replace
+ author: !!str mkrzewic
+-
+ commit: "f848512df4cd245aeb68352aa89f48511a003030"
+ message: >-
+    report a reset in verbose mode
+ author: !!str mkrzewic
+-
+ commit: "aa29ff490e2bbcb92d359c972f2c76e777b7abe1"
+ message: >-
+    use std::vector to store options
+ author: !!str mkrzewic
+-
+ commit: "d4bd4a56b76c0d48e6c49b16bd6cdd2b8b6e242c"
+ message: >-
+    first version of a file sink
+ author: !!str mkrzewic
+-
+ commit: "0c69f4ede97b2c2230589e0ae293c8463879fdf4"
+ message: >-
+    add pushback-period as valid option
+ author: !!str mkrzewic
+-
+ commit: "12c0d5d506fabf6abb9e1b56c607aa09e740e7aa"
+ message: >-
+    remove the empty script directory
+ author: !!str mkrzewic
+-
+ commit: "8a62e16eae534f70e3a64f4f6d2dd36d11674992"
+ message: >-
+    skip lines commented out with # and //
+ author: !!str mkrzewic
+-
+ commit: "a5764055b15f6c5411efe8b37c0f18a2c9ded3a9"
+ message: >-
+    switch to a better option parser
+ author: !!str mkrzewic
+-
+ commit: "e063c298ea8bb40e95777e653ad08d5947221cf7"
+ message: >-
+    move the zmq monitor python script to HLT/BASE/util
+ author: !!str mkrzewic
+-
+ commit: "1113832d193d03ac240946d71dba66667a8e1ce0"
+ message: >-
+    Improve root object merger debug output: add data sizes
+ author: !!str drohr
+-
+ commit: "6683de6d460d59ad5211080a9652ae1ba8bd22a2"
+ message: >-
+    fix parsing multi-line options
+ author: !!str mkrzewic
+-
+ commit: "2324f63a418f5216da7cc6ae753565f0718bcd2f"
+ message: >-
+    Reduce HLT verbosity thresholds
+ author: !!str drohr
+-
+ commit: "a4d1521aff5be4104a8a8bbf22c95acf958ab60f"
+ message: >-
+    Add option to retrive index of last input block returned by GetFirst...
+ author: !!str drohr
+-
+ commit: "7a15391646932191af42453a249e2d9299f5d795"
+ message: >-
+    Add AsyncProcess option to tpc offline preprocessor
+ author: !!str drohr
+-
+ commit: "159a52fb55c0cfe8d4a1f94d205872e7a82cf4cc"
+ message: >-
+    Fix check for buffer size
+ author: !!str drohr
+-
+ commit: "64dad036fd432a6fd00efd54d28505c36a3ac9a6"
+ message: >-
+    Add RequestPush option to async processor
+ author: !!str drohr
+-
+ commit: "fcbbaf04b29246d7ddcbd4c89dae52f34e0ddefc"
+ message: >-
+    fix missing init of a pointer in assignment op
+ author: !!str mkrzewic
+-
+ commit: "f2c3f3fe22e253d0c0e63cf38176cdb4b1b4e16d"
+ message: >-
+    add check for corrupted TPCHWCluster data
+ author: !!str mkrzewic
+-
+ commit: "23a4cedfae1cef0752a9e863b1b19649f3a2cae7"
+ message: >-
+    fix potential bad dereference
+ author: !!str mkrzewic
+-
+ commit: "4df660a38b9d4efee7f7b608010d7430a69cbb69"
+ message: >-
+    method to PushBack string payloads
+ author: !!str mkrzewic
+-
+ commit: "c5e2de713f56579ea5e82c399c4ab788c2629932"
+ message: >-
+    dynamic histogram creation/modification fixes
+ author: !!str mkrzewic
+-
+ commit: "843547570ea36f1c4dee214b7c590b030c5bafb5"
+ message: >-
+    fix PUB/SUB, problem introduced last commit
+ author: !!str mkrzewic
+-
+ commit: "0c05bb8891ca564ff745056406d66bf4c3e7c3ac"
+ message: >-
+    support arbitrary number of parts
+ author: !!str mkrzewic
+-
+ commit: "ab209f2aa9ece1c1f43c2b83ab96e1a469bd67aa"
+ message: >-
+    show some characters of the message
+ author: !!str mkrzewic
+-
+ commit: "3b3178d04b0e820762b0fc428849c347c1103c00"
+ message: >-
+    can send up to 2 frames with zmqMonitor.py
+ author: !!str mkrzewic
+-
+ commit: "cfbb529278ecb6a7afc93f5dd8cb70b3c66338a4"
+ message: >-
+    reconfigure on request
+ author: !!str mkrzewic
+-
+ commit: "ab3d53540362ec5e4557ee69dbe8a2285577c9bd"
+ message: >-
+    Fix compilation issue on MacOS.......
+ author: !!str drohr
+-
+ commit: "1efb82e5dfe69242264c0bc219e56d720474ef35"
+ message: >-
+    fix trigger names
+ author: !!str mkrzewic
+-
+ commit: "3a7aeec44e05d0153b4b5f8c26b6f3aa07844801"
+ message: >-
+    fix option parsing
+ author: !!str mkrzewic
+-
+ commit: "a00a4546a9619d4f6ad7af999f28d5785ed938c0"
+ message: >-
+    reinit all histograms that use an updated axis
+ author: !!str mkrzewic
+-
+ commit: "8bae34b87a628df5a9947cf9d8ce4db0e28e7743"
+ message: >-
+    trigger name as a postfix instead of a prefix (better for sorting)
+ author: !!str mkrzewic
+-
+ commit: "dc72a3686c538cfbf6ff12237cea5ec30d8b5bd9"
+ message: >-
+    Cleanup test online calib macro
+ author: !!str drohr
+-
+ commit: "2dc715aca4815708cddf172f4ba13a0993ff0eb6"
+ message: >-
+    Fix AnalysisManager to finally work with async process
+ author: !!str drohr
+-
+ commit: "572126ac9d0a6976f3cbe73e94cc14a67c654d28"
+ message: >-
+    Add capability to run async processes instead of threads also for member functions
+ author: !!str drohr
+-
+ commit: "666eeb8ff3f889ca94712a5e5b4087e2aacafb22"
+ message: >-
+    Fix reinitialization, add shared buffer space for derived classes, some fixes for async process processing
+ author: !!str drohr
+-
+ commit: "46048eb70f00eadd184afe4f3e11769b2dd1e6b4"
+ message: >-
+    Fix small memory leak in case queuing of async member task fails
+ author: !!str drohr
+-
+ commit: "f3f1e796aa7925c0eedf05994545fa970d0f3b39"
+ message: >-
+    dont push empty histograms
+ author: !!str mkrzewic
+-
+ commit: "c0dd99053dc4dc399b826c3b9c80d637a1341f37"
+ message: >-
+    add CONFIG,INFO,CDBEntry data types to linkdef
+ author: !!str mkrzewic
+-
+ commit: "20e2422089c8c68c3592c7c10fd87307d7e57282"
+ message: >-
+    initialize the default topic with any|any
+ author: !!str mkrzewic
+-
+ commit: "4b342364e90b84504e34827ef24997435f9ca208"
+ message: >-
+    please stop committing minor improvements separately
+ author: !!str mkrzewic
+-
+ commit: "e8efab621f97e547f99d66aa131b87c8d3c82801"
+ message: >-
+    improve subscription logic somewhat...
+ author: !!str mkrzewic
+-
+ commit: "9ac74903f6f2ac24ed85bc926064f9494148a8f0"
+ message: >-
+    allow subscriptions
+ author: !!str mkrzewic
+-
+ commit: "208f82e7a4c3471cd7abcd598104b0692b002b01"
+ message: >-
+    add CONFIG,INFO and CDBEntry block types
+ author: !!str mkrzewic
+-
+ commit: "428097414331b956040463ba21cc6010150ec29d"
+ message: >-
+    init members in ctor
+ author: !!str mkrzewic
+-
+ commit: "cda224b187dcf919f836257778d7b04cfcf4263b"
+ message: >-
+    keep old histo names when no trigger selection
+ author: !!str mkrzewic
+-
+ commit: "40f63889b47b59b8088f40dc6044435a22f5f632"
+ message: >-
+    first version of reworked PromptQA
+ author: !!str mkrzewic
+-
+ commit: "c8d7a88a5d59592911d5a7cb9cd6aa4167c6452d"
+ message: >-
+    MAP_ANONYMOUS missing on macosx, link to MAP_ANON
+ author: !!str mkrzewic
+-
+ commit: "30a8d9d401e20cda563982d88c774ca3b3d3f4d5"
+ message: >-
+    missing include on macosx
+ author: !!str mkrzewic
+-
+ commit: "5ae7f81d8eb17f6647311ea95ff26733b48cfd34"
+ message: >-
+    constness fixes
+ author: !!str mkrzewic
+-
+ commit: "8ed230f91d3c833cc0e1bc2ac1119404e328e6a4"
+ message: >-
+    Fixing array copies needed to compile under clang
+ author: !!str mfasel
+-
+ commit: "76cbbce929b1c45753da2e92fa3430ac6dd94c5b"
+ message: >-
+    fix TPCClusterTransformation with fast initialize object in HLT emulation mode
+ author: !!str drohr
+-
+ commit: "04d65e9d31cf30c53c31a4c716b9ba59b10c4c71"
+ message: >-
+    Fix HLTAnalysisManagerComponent with AsyncProcessor async process mode: Use new functionality for buffer allocation
+ author: !!str drohr
+-
+ commit: "277015f4e9a35a010d4c5ba7c0058bd9fac87896"
+ message: >-
+    Add new functionality to AsyncProcessor to serialize directly into a newly allocated buffer
+ author: !!str drohr
+-
+ commit: "07ca4d2941ff39e3c3516bcfa1c54a90eb1bdb14"
+ message: >-
+    Improve SerializeObject function of AliHLTComponent: Allow to allocate new larger buffer and leave space for header
+ author: !!str drohr
+-
+ commit: "ab0f1352cb023c1e3e2ba03b3d0db7dd4711c4dc"
+ message: >-
+    improve buffer allocation functionality of async processor
+ author: !!str drohr
+-
+ commit: "d507578d0ccfdbb2cf17ac8a11c963ac17dc8a87"
+ message: >-
+    Add option to use existing buffer to serialize object
+ author: !!str drohr
+-
+ commit: "364972c518549b75c8fcd0966bf872c89468d85a"
+ message: >-
+    modify asyncProcessor to support asyncronous processes on top of async threads
+ author: !!str drohr
+-
+ commit: "53bb77cdc12ca2fe3221ed1e0931960f62175d8d"
+ message: >-
+    Fix buffer overflow caused by incorrect calculation of number of digits
+ author: !!str drohr
+-
+ commit: "eb5f1ddd7eb7b79f08c66ffee1fdd6cc5c76c131"
+ message: >-
+    Fix calculation of total data size
+ author: !!str mfasel
+-
+ commit: "446025541f3b1ccf75d7ce5f98c0a1d299fe491b"
+ message: >-
+    Add protection that compares size in header to actual data size
+ author: !!str mfasel
+-
+ commit: "c951d494f6b6d8dcc23eb6d303205e9157c4323c"
+ message: >-
+    Fix processing of TRU data in case an invalid TRU index was detected, improve copying of TRU Raw digits (do not use hardcoded size constatnts)
+ author: !!str drohr
+-
+ commit: "f70895738607118e29e7585c0f6cfcdd59d64972"
+ message: >-
+    Fix buffer overflow in initialization of EMCAL CaloTriggerRawDigitDataStruct
+ author: !!str drohr
+-
+ commit: "f303cfdecbd8c71cc7b3701185da9ae72f3d96df"
+ message: >-
+    Add protection for invalid index
+ author: !!str drohr
+-
+ commit: "093cfc1524e31078f0ad89df8af15ae229ec2191"
+ message: >-
+    Obtain number of digits from output size (in case the buffer is exceeded)
+ author: !!str mfasel
+-
+ commit: "7e25021c3bf084d9aeec57bb9e47d1d2d8d7e466"
+ message: >-
+    fix test macro for online calib
+ author: !!str drohr
+-
+ commit: "6457379722ab2a304033186f07e02900e312fa1b"
+ message: >-
+    SPD reports a warning for very high multiplicity events which we don't want continuously in the HLT as it floods the logs
+ author: !!str drohr
+-
+ commit: "ffcd52530fe9b35e651ae879b9c0bb8ba0a56fca"
+ message: >-
+    Disable RawStreamDecode warnings for start time bin in HLT after some threshold
+ author: !!str drohr
+-
+ commit: "40e5c2c4285ca09c50b787c824517cb8d66eeab8"
+ message: >-
+    Disable SDD invalid cell warnings after a threshold in online mode
+ author: !!str drohr
+-
+ commit: "1cce6b3d14791c53fcf99449f509fc096dafe99c"
+ message: >-
+    Add threshold to suppress error messages for corrupt data
+ author: !!str drohr
+-
+ commit: "2f0690d7daaacaded7f3cf4d62544a78444e7880"
+ message: >-
+    add string matching of triggernames to AliCTPData
+ author: !!str mkrzewic
+-
+ commit: "4319f13d4512e56fc9ca027f124bf2f4587a43d1"
+ message: >-
+    Fix loglevel of some error messages
+ author: !!str drohr
+-
+ commit: "4092ae9f895eecf6effccbf869c06a64f5ff7b85"
+ message: >-
+    Further increase GPU tracker buffers
+ author: !!str drohr
+-
+ commit: "d5bddee5623798e4614d152856a3695cdf4866ce"
+ message: >-
+    Fix ROOT merger, just pass through single objects...., reduce verbosity
+ author: !!str drohr
+-
+ commit: "dca73c30f7d27c9d3dcafcf971e57f1ad9224a42"
+ message: >-
+    Improve verbosity behavior of Analysis Manager
+ author: !!str drohr
+-
+ commit: "9076575ef20370146364271e9edb861ec5ce8158"
+ message: >-
+    Add some debug output to offline preprocessor wrapper
+ author: !!str drohr
+-
+ commit: "eebf8d4a2cbe41afe2839c58014af0c9090d008d"
+ message: >-
+    Fix stupid bug in intialization, mode was not checked properly....
+ author: !!str drohr
+-
+ commit: "90f1007de47f6fba4dfe68620cb3898f07585d70"
+ message: >-
+    Add option to supress warning if async queue is full
+ author: !!str drohr
+-
+ commit: "3199e4b46c5d23e1c8cf74a6d8e46bd4f04194cf"
+ message: >-
+    Only give a warning for unmatched trigger strings
+ author: !!str mfasel
+-
+ commit: "fa573d7b19bc34ab64a21da0310b3c69a8b7fdaa"
+ message: >-
+    Do setup of the CTP data in trigger QA task
+ author: !!str mfasel
+-
+ commit: "718095b58e0567b4ca33e2c2ea01bb33fe447806"
+ message: >-
+    Add histograms for different trigger classes
+ author: !!str saiola
+-
+ commit: "3e708d83476e350aca8bd92d58892322440f6f02"
+ message: >-
+    Fix jet patches to the correct size
+ author: !!str saiola
+-
+ commit: "b61be005fba4e7c5f7da4842d23ce1cd0ea4c452"
+ message: >-
+    Separate background patch processing from signal patch processing
+ author: !!str saiola
+-
+ commit: "1f73544f06c582148659c9addd4e4577950d81b2"
+ message: >-
+    Remove bkg, jet, gamma algorithms
+ author: !!str saiola
+-
+ commit: "1051f0f66197d78350159e481e8d1c26468cca29"
+ message: >-
+    Adjust histogram binning
+ author: !!str saiola
+-
+ commit: "89ab2feebe553734272a688c8cfffde0b1219b6f"
+ message: >-
+    HLT EMCal trigger QA component updates
+ author: !!str saiola
+-
+ commit: "f53cac0e53048f0ddf1237cca3927d8715c00e35"
+ message: >-
+    Updates for EMCal trigger QA
+ author: !!str saiola
+-
+ commit: "75243f46eed3efa30da46a4da1750b543261e053"
+ message: >-
+    Update testConfigOnlineCalib for new software version
+ author: !!str drohr
+-
+ commit: "88ed933b7d7d4205f5279168e23b025f945b1cd9"
+ message: >-
+    Add -NoInitialObject option to AliHLTTPCClusterTransformationPrepareComponent to work on-the-fly only, fix stdout info message
+ author: !!str drohr
+-
+ commit: "7c7fe1b49ad802fd02fb81817c38c4a885b1cdc5"
+ message: >-
+    Fix messages: show pushback messages only when actually pushing something
+ author: !!str drohr
+-
+ commit: "6c004229f7ad3ab992a76894e131b16a432d6e25"
+ message: >-
+    Fix wrong indexing that leads to segmentation fault....
+ author: !!str drohr
+-
+ commit: "32128b9cd9a439b80aa04315aaf0831ee8d42ec9"
+ message: >-
+    Fix Pushback, only reset lastPushbackTime if you actually push something
+ author: !!str drohr
+-
+ commit: "0326d49ed3d41c6d56a08f3e49b6d4cee2d8e61b"
+ message: >-
+    Add quick end run option to Analysis manager to stop processing new async tasks after EOR
+ author: !!str drohr
+-
+ commit: "ebe48851e88e5e15736f11202b26b594bbed642b"
+ message: >-
+    finalize and fix async processing in AliHLTAnalysisManager
+ author: !!str drohr
+-
+ commit: "e5d71429dd9c3c27e903484a86aaaf14d24abcc3"
+ message: >-
+    add functions to hltcomponent to manually serialize a buffer and to check when pushback period will trigger
+ author: !!str drohr
+-
+ commit: "5ca69afd24b49840d0459b43415c3718ac78e9bd"
+ message: >-
+    fix logic involving fAllowResetAtSOR (if disabled never reset at SOR)
+ author: !!str mkrzewic
+-
+ commit: "0c80cd08f92e0eb89048018234c61ff741522c8b"
+ message: >-
+    better logging
+ author: !!str mkrzewic
+-
+ commit: "030d1de8fa7bf8cf1028aacc795ab30b3a391513"
+ message: >-
+    More debug output for HLT tracker in case event is too big
+ author: !!str drohr
+-
+ commit: "80074a63c07a56e40174ed72cde9f8c13c0b4533"
+ message: >-
+    Silence EMCAL Geometry at some more places
+ author: !!str drohr
+-
+ commit: "0fd7671c88865009f66fa1a741fee9fd525518a6"
+ message: >-
+    Correctly use HLT offline preprocessor in calibration example script
+ author: !!str drohr
+-
+ commit: "941d851420659238f187db700580908e9352bb4a"
+ message: >-
+    Different histograms should have different names (i think)
+ author: !!str drohr
+-
+ commit: "d47cbec62f3e0403d57d7d64e8e267876b40609e"
+ message: >-
+    silence error message in AliTrackerBase during DriftTime calibration in HLT
+ author: !!str drohr
+-
+ commit: "091ff6dd42390913bd083173d939521fb87f5090"
+ message: >-
+    fix initialization of flat objects in AliHLTAnalysisManager (I think this was fixed by Mikolaj some time ago and broke in the recent rebase)
+ author: !!str drohr
+-
+ commit: "874291a68d309c46b17cb040e48fb11a07f3176d"
+ message: >-
+    silence EMCAL geometry message to stdout for HLT
+ author: !!str drohr
+-
+ commit: "3193243ba9c1a007b1a354ba4521a55c24221df0"
+ message: >-
+    fix file permissions
+ author: !!str drohr
+-
+ commit: "6367ec13ad63529e625067fa4ff461565156ff96"
+ message: >-
+    -ZMQerrorMsgSkip=N to report ZMQ connection errors only every Nth error (default 100)
+ author: !!str mkrzewic
+-
+ commit: "85fa8c226007ea551607938cdb08e44a53b5e6df"
+ message: >-
+    rename a fAllowResetAtEOR -> fAllowResetAtSOR
+ author: !!str mkrzewic
+-
+ commit: "d74f9912008e50d4ecc33f9e6cd3ac8cc8a954bb"
+ message: >-
+    Fix AliHLTAnalysisManager after rebase
+ author: !!str drohr
+-
+ commit: "4e25392f2f3657f8241bb5129bf3f4c5b0e8f0f8"
+ message: >-
+    switch from AliHLTTPCTransform to AloHLTTPCGeometry for compatibility with Sergey patch after rebase
+ author: !!str drohr
+-
+ commit: "c96d80e9678aadee02382f7e6875cdd315566e7d"
+ message: >-
+    Adapt test script to new software
+ author: !!str drohr
+-
+ commit: "41ca83b08c1e12d0cb3713f53c924deb0cdc8ca9"
+ message: >-
+    Remove components after their functionality was merged into HLTAnalysisManager
+ author: !!str drohr
+-
+ commit: "98a02fc662d4490a6044d6ee3581190bea561196"
+ message: >-
+    Add option to init from OCDB object and then reinit on the fly
+ author: !!str drohr
+-
+ commit: "a16ac1f35ece16a65f54a883b5a4ba672340654b"
+ message: >-
+    Increase Output buffer size
+ author: !!str drohr
+-
+ commit: "c06299216060a1a0668d01d41053bc0e799eef7c"
+ message: >-
+    Better error message when GPU buffer for TPC slice data memory runs full
+ author: !!str drohr
+-
+ commit: "cad8cda09746791ea5b36548be14191b0f0075c5"
+ message: >-
+    port async capabilities from TPCCalibManagerComponent to HLTAnalysisManagerComponent
+ author: !!str drohr
+-
+ commit: "f6c144c4bec1bb204910b339ecce4b3d14a0f110"
+ message: >-
+    add min-num-of-tracks option to tpc calib manager, some minor fixes
+ author: !!str drohr
+-
+ commit: "330785407d69b5b1538e4c249fec22bb91472520"
+ message: >-
+    split tpc cluster transformation prepare component in two parts, and extract the new AliHLTTPCOfflinePreprocessorWrapper
+ author: !!str drohr
+-
+ commit: "4b2acdbbc9204b61e15ab163b384fdea61f5bd99"
+ message: >-
+    fix class and include requirements of tpc preprocessor offline
+ author: !!str drohr
+-
+ commit: "4aa3fc7c848dc64d8c8962f6140164e4436970a9"
+ message: >-
+    remove old files
+ author: !!str drohr
+-
+ commit: "95035f84c5f75f095fed6b45e6765568369bd6fe"
+ message: >-
+    rename and move tpcclustertransformationmerger to global/rootobjectmerger, add basic async capabilities to rootobjectmerger
+ author: !!str drohr
+-
+ commit: "996901a0c82f1274ea30436f17969ddf27d72bd2"
+ message: >-
+    Add asynchronous capabilities to TPCCalibManager
+ author: !!str drohr
+-
+ commit: "2def1892c74571f1aaf42e37ccadcf9ac0362a22"
+ message: >-
+    Add required gpu memory printout to gpu init status message
+ author: !!str drohr
+-
+ commit: "efc6ea6497e7ff4f9a48e224197882cbfc2bf2d6"
+ message: >-
+    Adapt testConfigOnlineCalib to new HLTAnalysisManagerComponent
+ author: !!str drohr
+-
+ commit: "acabca0fd9c3ee9f3562a0ab9042a074714063d6"
+ message: >-
+    Increase HLT VZERO Output buffer size
+ author: !!str drohr
+-
+ commit: "e52fa8f95e813bc021e91ae9dc825328cfec1ed5"
+ message: >-
+    Set subregion size 4 for the background patches
+ author: !!str mfasel
+-
+ commit: "62079aaa2505b0019e7cc019063e599a7c788802"
+ message: >-
+    Introduce subregion size and set values (1 for the gamma trigger, 4 for the jet patch trigger)
+ author: !!str mfasel
+-
+ commit: "14fa149aab4865e018201cf39751759aca326f71"
+ message: >-
+    Improve histograms
+ author: !!str drohr
+-
+ commit: "c1bfb286f802dc5d16c72a53f507757938fb21f2"
+ message: >-
+    Increase GPU tracker memory limits for new PbPb period
+ author: !!str drohr
+-
  commit: "88675fb98745f83f8e86c2b32496327d9bc2ff93"
  message: >-
     add multiplicity correction graph to calib summary tree
