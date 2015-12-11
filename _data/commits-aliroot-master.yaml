@@ -1,4 +1,34 @@
 -
+ commit: "4b059e12151a62f286153590d172f4104c52656f"
+ message: >-
+    An async process could call the destructor before exiting, although it does not really matter at that point
+ author: !!str drohr
+-
+ commit: "30d3849b43a0d0e1866ed6a72d6a61cdbdf4bdab"
+ message: >-
+    Fix same bug for async process that we fixed for async thread before...... we should not forget the external object to merge...
+ author: !!str drohr
+-
+ commit: "a590189e5e3e8285e3389dafc03f0a298004e599"
+ message: >-
+    Reduce verbosity level of trigger messages
+ author: !!str drohr
+-
+ commit: "8eb53c31e2f0f4ef9005248206c42145ccf72302"
+ message: >-
+    Fix randomization of last pushback time
+ author: !!str drohr
+-
+ commit: "ba2030bdc8746d1a10450bd276af829abe9133e0"
+ message: >-
+    Increase GPU track output buffer size
+ author: !!str drohr
+-
+ commit: "9e5cb9f1dbd4372646edec7882f809c320aec228"
+ message: >-
+    Fix default histrogram axis
+ author: !!str drohr
+-
  commit: "c26da41fe0c57891461fbb1055b98a58fc2381b6"
  message: >-
     bugfix for TRD GTU simulation (Ole Schmidt): correct prefactors in late conversion rejection
