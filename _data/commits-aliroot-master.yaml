@@ -1,4 +1,9 @@
 -
+ commit: "e033dcae6836d8e1a8d3324abd929ed97445649c"
+ message: >-
+    ATO-108 - use TTree cache to speed up reading from remote files. Defaul value 200 MBy, possible to overwirite using env. varaible - gSystem->Getenv("treeCacheSize")
+ author: !!str mivanov
+-
  commit: "ff069173f078260a3d2c13e4edd71e47c5c0f770"
  message: >-
      ATO-193, ATO-108 - Extraplotion error bug fix. Use safety margin in the boundary check.
