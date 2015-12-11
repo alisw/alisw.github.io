@@ -1,4 +1,9 @@
 -
+ commit: "ff069173f078260a3d2c13e4edd71e47c5c0f770"
+ message: >-
+     ATO-193, ATO-108 - Extraplotion error bug fix. Use safety margin in the boundary check.
+ author: !!str mivanov
+-
  commit: "4b059e12151a62f286153590d172f4104c52656f"
  message: >-
     An async process could call the destructor before exiting, although it does not really matter at that point
