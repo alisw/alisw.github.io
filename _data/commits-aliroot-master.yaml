@@ -1,4 +1,9 @@
 -
+ commit: "c9d461bb576a5ded54b1c3d6a900ae19674a3666"
+ message: >-
+    overloaded virtual base methods must be defined in derived class to avoid hiding
+ author: !!str shahoian
+-
  commit: "7c68d232bad93c1c083d66711a3a77af34b4c16e"
  message: >-
     do not use a random value between 0 and period for initialization but something around the actual period +/- random. Otherwise, a lot of processes will push after start of run
