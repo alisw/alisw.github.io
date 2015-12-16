@@ -1,1 +1,197 @@
-{ }
+{
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "3134",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'TF1Parameters::fParNames' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TF1.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TF1Parameters::fParameters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TF1.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fBody' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fFound' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fFuncCall' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fNargs' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TInterpreter::SuspendAutoParsing' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TInterpreter::SuspendAutoParsing(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3128",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "address of 'internal->transform_delta' will always evaluate to 'true' [-Wpointer-bool-conversion]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/4670fda44e4ca68d186af574a4ca0f0e9e5088d0/ROOT/graf2d/freetype/src/freetype-2.3.12/src/base/ftobjs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "752"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "address of 'internal->transform_matrix' will always evaluate to 'true' [-Wpointer-bool-conversion]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/4670fda44e4ca68d186af574a4ca0f0e9e5088d0/ROOT/graf2d/freetype/src/freetype-2.3.12/src/base/ftobjs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "748"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "checking minix/config.h presence... /build/workarea/sw/20155595/1/SOURCES/ROOT/v5-34-30-alice/19b634aeb6/cint/reflex/src/Class.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "267"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3130",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/19b634aeb6/core/base/src/TAttLine.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "305"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/19b634aeb6/core/base/src/TAttMarker.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "272"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
