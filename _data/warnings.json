@@ -617,6 +617,18 @@
               } ]
             }
           }, {
+            "key" : "'AliRsnMiniEvent::fRefMult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b_ROOT6/d3f1588b1e/PWGLF/RESONANCES/AliRsnMiniEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -686,18 +698,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
                   } ]
                 }
               } ]
@@ -1893,6 +1893,52 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "163"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3135",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/19b634aeb6/net/alien/src/TAlienCollection.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3136",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice_COVERAGE/19b634aeb6/net/alien/src/TAlienCollection.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
                   } ]
                 }
               } ]
