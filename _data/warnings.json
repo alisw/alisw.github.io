@@ -2129,6 +2129,18 @@
               } ]
             }
           }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2167,6 +2179,66 @@
               } ]
             }
           }, {
+            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2174,6 +2246,78 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TStreamerInfo::TCompInfo(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
                   } ]
                 }
               } ]
@@ -2344,6 +2488,18 @@
               } ]
             }
           }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b_COVERAGE/db910ebfbe/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2382,6 +2538,66 @@
               } ]
             }
           }, {
+            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b_COVERAGE/db910ebfbe/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-3/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-3/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-3/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-3/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2389,6 +2605,78 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b_COVERAGE/db910ebfbe/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-3/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b_COVERAGE/db910ebfbe/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TStreamerInfo::TCompInfo(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-3/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b_COVERAGE/db910ebfbe/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TStreamerInfo::TCompInfo&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-3/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
                   } ]
                 }
               } ]
@@ -2414,6 +2702,13 @@
             "key" : "no newline at end of file",
             "filename" : {
               "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGCF/Correlations/ThreePart/AliFilteredEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              }, {
                 "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGDQ/reducedTree/AliReducedCaloClusterInfo.h",
                 "line" : {
                   "buckets" : [ {
@@ -2432,6 +2727,27 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "78"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGCF/Correlations/ThreePart/AliAnalysisTaskBuildCorrTree.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "143"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGCF/Correlations/ThreePart/AliAnalysisTaskCorrelation3p.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "241"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGCF/Correlations/ThreePart/AliFilteredEventInputHandler.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
                   } ]
                 }
               }, {
@@ -2463,6 +2779,34 @@
                   } ]
                 }
               }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWG/muon/aaf/FILTER_AODMUONONLY_PBPB2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "63"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWG/muon/aaf/FILTER_AODMUONONLY_PP2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWG/muon/aaf/FILTER_AODMUONWITHTRACKLETS.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGCF/Correlations/ThreePart/AliThreeParticleCorrelator.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18"
+                  } ]
+                }
+              }, {
                 "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGGA/PHOSTasks/ClusterSelection/AliPHOSTriggerUtils.cxx",
                 "line" : {
                   "buckets" : [ {
@@ -2488,6 +2832,13 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "680"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b/d3f1588b1e/PWGLF/SPECTRA/Nuclei/deuteronpA/AliAnalysisDeuteronTree.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "425"
                   } ]
                 }
               }, {
