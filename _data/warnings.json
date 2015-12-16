@@ -557,6 +557,22 @@
               } ]
             }
           }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/d3f1588b1ea06d39570d1f8661b0d7c5acc2cc5b_ROOT6/d3f1588b1e/PWGLF/SPECTRA/AntiprotonToProton/train/AliAnalysisTaskProtonAbsorbtion.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "196"
+                  }, {
+                    "key" : "226"
+                  }, {
+                    "key" : "231"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -690,24 +706,34 @@
                 }
               } ]
             }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/slc7_x86-64/ROOT/v6-05-02-7/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
           } ]
         }
       }, {
         "key" : "3128",
         "by_message" : {
           "buckets" : [ {
+            "key" : "'/*' within block comment [-Wcomment]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/TPC/TPCmon/TPCmonLinkDef.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10"
+                  }, {
+                    "key" : "11"
+                  }, {
+                    "key" : "6"
+                  }, {
+                    "key" : "7"
+                  }, {
+                    "key" : "8"
+                  }, {
+                    "key" : "9"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "reference cannot be bound to dereferenced null pointer in well-defined C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]",
             "filename" : {
               "buckets" : [ {
@@ -828,6 +854,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'&&' within '||' [-Wlogical-op-parentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/TEvtGen/Photos/src/photos-fortran/photosC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1813"
+                  } ]
+                }
+              }, {
+                "key" : "[ 36%] /build/workarea/sw/20155595/1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/TEvtGen/Photos/src/photos-fortran/photosC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1812"
                   } ]
                 }
               } ]
@@ -1420,34 +1465,6 @@
                 }
               } ]
             }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<unsigned int, allocator<unsigned int> >::iterator::reference' (aka 'unsigned int &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "6203"
-                  }, {
-                    "key" : "6265"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<unsigned int, allocator<unsigned int> >::reference' (aka 'unsigned int &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "5817"
-                  }, {
-                    "key" : "5927"
-                  } ]
-                }
-              } ]
-            }
           } ]
         }
       }, {
@@ -1861,6 +1878,13 @@
             "key" : "no newline at end of file",
             "filename" : {
               "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/ITS/ITSrec/AliITSOnlineSPDphysAnalyzer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              }, {
                 "key" : "1/SOURCES/ROOT/v5-34-30-alice/19b634aeb6/core/base/src/TAttLine.cxx",
                 "line" : {
                   "buckets" : [ {
@@ -1893,6 +1917,13 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "163"
+                  } ]
+                }
+              }, {
+                "key" : "[ 24%] [ 24%] [ 25%] /build/workarea/sw/20155595/1/SOURCES/AliRoot/db910ebfbe44b83c376d66b479ae5bdd865f565b/db910ebfbe/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "275"
                   } ]
                 }
               } ]
