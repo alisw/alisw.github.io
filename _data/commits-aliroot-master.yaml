@@ -183,8 +183,3 @@
  message: >-
     option to write only one file and exit (-once)
  author: !!str mkrzewic
--
- commit: "e033dcae6836d8e1a8d3324abd929ed97445649c"
- message: >-
-    ATO-108 - use TTree cache to speed up reading from remote files. Defaul value 200 MBy, possible to overwirite using env. varaible - gSystem->Getenv("treeCacheSize")
- author: !!str mivanov
