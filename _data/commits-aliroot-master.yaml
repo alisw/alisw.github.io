@@ -158,18 +158,3 @@
  message: >-
     overloaded virtual base methods must be defined in derived class to avoid hiding
  author: !!str shahoian
--
- commit: "7c68d232bad93c1c083d66711a3a77af34b4c16e"
- message: >-
-    do not use a random value between 0 and period for initialization but something around the actual period +/- random. Otherwise, a lot of processes will push after start of run
- author: !!str drohr
--
- commit: "aeb05659d494d8aeb672086a5a591010b880554a"
- message: >-
-    increase buffer count, should be queuedepth + 3 to be non-blocking after rethinking it thoroughly
- author: !!str drohr
--
- commit: "79a76bfb9bd96ca54e24f8bb4760d74bd69ed06a"
- message: >-
-    Add monitoring how many events are used in HLT AnalysisManager
- author: !!str drohr
