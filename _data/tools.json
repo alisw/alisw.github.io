@@ -1,35 +1,4 @@
 {
-  "timed_out" : false,
-  "_shards" : {
-    "total" : 22,
-    "successful" : 22,
-    "failed" : 0
-  },
-  "hits" : {
-    "total" : 1,
-    "max_score" : null,
-    "hits" : [ {
-      "_index" : "logstash-2016.01.04",
-      "_type" : "logs",
-      "_id" : "AVIM4SMtkqAuLJnTDEd4",
-      "_score" : null,
-      "_source":{"data":{"id":"3440","projectName":"build-any-ib","displayName":"#3440","fullDisplayName":"build-any-ib #3440","url":"job/build-any-ib/3440/","buildHost":"Jenkins","buildLabel":"master","buildNum":3440,"buildDuration":1,"rootProjectName":"build-any-ib","rootProjectDisplayName":"#3440","rootBuildNum":3440,"buildVariables":{"ALIBUILD_REPO":"alisw","ALIDIST_REPO":"alisw","PUBLISH_BUILDS":"true","ARCHITECTURE":"ubt14_x86-64","MESOS_QUEUE_SIZE":"large","USE_REMOTE_STORE":"true","ALIBUILD_BRANCH":"next","PACKAGE_NAME":"aliroot-test","ALIDIST_BRANCH":"IB/v5-06/next","DEFAULTS":"release","OVERRIDE_TAGS":"aliroot=master"}},"source":"jenkins","source_host":"https://alijenkins.cern.ch/","@timestamp":"2016-01-04T13:43:35.000Z","@version":1,"alibuild_hash":"7f67f4186bea5e1e59f654d4c409ed03b768fb24","alidist_hash":"983848358b7fb4129b3840ac712fb31a6b9f999e","message_type":"tools_info"},
-      "fields" : {
-        "@timestamp" : [ 1451915015000 ]
-      },
-      "highlight" : {
-        "message_type" : [ "@kibana-highlighted-field@tools_info@/kibana-highlighted-field@" ]
-      },
-      "sort" : [ 1451915015000 ]
-    } ]
-  },
-  "aggregations" : {
-    "2" : {
-      "buckets" : [ {
-        "key_as_string" : "2016-01-04T13:43:30.000Z",
-        "key" : 1451915010000,
-        "doc_count" : 1
-      } ]
-    }
-  }
+  "error" : "ReduceSearchPhaseException[Failed to execute phase [query], [reduce] ]; nested: ClassCastException[java.lang.Long cannot be cast to org.apache.lucene.util.BytesRef]; ",
+  "status" : 503
 }
