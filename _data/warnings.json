@@ -1,4 +1,9 @@
 {
-  "error" : "ClusterBlockException[blocked by: [SERVICE_UNAVAILABLE/1/state not recovered / initialized];]",
-  "status" : 503
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "3436"
+      } ]
+    }
+  }
 }
