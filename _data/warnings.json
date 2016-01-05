@@ -1628,6 +1628,73 @@
           } ]
         }
       }, {
+        "key" : "3464",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../base/debugmacros.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "32"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible implicit declaration of built-in function 'memcpy'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "spc_cwc.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "146"
+                  }, {
+                    "key" : "179"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'blocks' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gapi_stat.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'lasttimeexecuted' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gclient.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "708"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'r_cnt' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aesaux.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "167"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3436"
       }, {
         "key" : "3454",
@@ -1898,6 +1965,23 @@
             "filename" : {
               "buckets" : [ {
                 "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3465",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/4bccf01ce8fc2f7d3a46d3e9f22cf1b09571b1a7/4bccf01ce8/Vc/include/Vc/global.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "262"
