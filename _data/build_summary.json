@@ -1,1 +1,34 @@
-{ }
+{
+  "aggregations" : {
+    "by_package" : {
+      "buckets" : [ {
+        "key" : "AliRoot",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "f9238f42",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "3452",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "ubt14_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-06/next"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
