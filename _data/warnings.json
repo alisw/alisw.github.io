@@ -2,22 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "3440"
-      }, {
-        "key" : "3441"
-      }, {
-        "key" : "3447"
-      }, {
-        "key" : "3444"
-      }, {
-        "key" : "3445"
-      }, {
-        "key" : "3446"
-      }, {
-        "key" : "3451"
-      }, {
-        "key" : "3436"
-      }, {
         "key" : "3452",
         "by_message" : {
           "buckets" : [ {
@@ -33,17 +17,121 @@
               } ]
             }
           }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/STEER/STEER/AliQAManager.cxx",
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveEventManager.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
                   } ]
                 }
               } ]
@@ -142,6 +230,13 @@
                     "key" : "308"
                   } ]
                 }
+              }, {
+                "key" : "[ 88%] /build/workarea/sw/20155601/1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
               } ]
             }
           }, {
@@ -169,6 +264,66 @@
               } ]
             }
           }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -181,6 +336,18 @@
               } ]
             }
           }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -188,6 +355,46 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
                   } ]
                 }
               } ]
@@ -207,7 +414,199 @@
               } ]
             }
           }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveConfigManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveEventManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveInit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCluster' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fClustersInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCompositeImgFileName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCurrentFileNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fESDEvent' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fEventInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fInputDetectorMask' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fMaxFiles' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fNumberOfClusters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fRunNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'G__comment_info::p' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/G__ci.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1152"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
@@ -220,6 +619,22 @@
             }
           } ]
         }
+      }, {
+        "key" : "3440"
+      }, {
+        "key" : "3441"
+      }, {
+        "key" : "3447"
+      }, {
+        "key" : "3444"
+      }, {
+        "key" : "3445"
+      }, {
+        "key" : "3446"
+      }, {
+        "key" : "3451"
+      }, {
+        "key" : "3436"
       }, {
         "key" : "186"
       }, {
