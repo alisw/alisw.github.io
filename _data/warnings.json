@@ -735,6 +735,32 @@
         "key" : "3453",
         "by_message" : {
           "buckets" : [ {
+            "key" : "'&&' within '||' [-Wlogical-op-parentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TEvtGen/Photos/src/photos-fortran/photosC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1812"
+                  }, {
+                    "key" : "1813"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "add explicit braces to avoid dangling else [-Wdangling-else]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TEvtGen/Photos/src/utilities/Log.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "125"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
             "filename" : {
               "buckets" : [ {
@@ -812,18 +838,6 @@
         "key" : "3457",
         "by_message" : {
           "buckets" : [ {
-            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/Vc/include/Vc/global.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "262"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "no newline at end of file",
             "filename" : {
               "buckets" : [ {
@@ -831,6 +845,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "80"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "275"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
                   } ]
                 }
               } ]
