@@ -18,10 +18,6 @@
       }, {
         "key" : "3436"
       }, {
-        "key" : "186"
-      }, {
-        "key" : "3443"
-      }, {
         "key" : "3452",
         "by_message" : {
           "buckets" : [ {
@@ -53,13 +49,121 @@
               } ]
             }
           }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "218"
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
                   } ]
                 }
               } ]
@@ -88,8 +192,38 @@
                 }
               } ]
             }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "693"
+                  }, {
+                    "key" : "749"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-9/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
           } ]
         }
+      }, {
+        "key" : "186"
+      }, {
+        "key" : "3443"
       } ]
     }
   }
