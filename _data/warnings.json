@@ -967,10 +967,6 @@
           } ]
         }
       }, {
-        "key" : "186"
-      }, {
-        "key" : "3443"
-      }, {
         "key" : "3453",
         "by_message" : {
           "buckets" : [ {
@@ -991,6 +987,46 @@
                     "key" : "8"
                   }, {
                     "key" : "9"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "using directive refers to implicitly-defined namespace 'std'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TTherminator/Therminator/THGlobal.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "32"
+                  } ]
+                }
+              }, {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TPCLib/tracking-ca/AliHLTTPCCAInputDataCompressorComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              }, {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TPCLib/tracking-ca/AliHLTTPCCATrackerComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "28"
+                  } ]
+                }
+              }, {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TPCLib/tracking-ca/AliHLTTPCCATrackerOutputConverter.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              }, {
+                "key" : "[ 92%] /build/workarea/sw/20155601/3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TPCLib/tracking-ca/AliHLTTPCCAGlobalMergerComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "28"
                   } ]
                 }
               } ]
@@ -1024,6 +1060,27 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "252"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/ITS/tracking/AliITStrackerHLT.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "72"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              }, {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TPCLib/merger-ca/AliHLTTPCGMSliceTrack.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "206"
                   } ]
                 }
               } ]
@@ -1090,15 +1147,20 @@
               } ]
             }
           }, {
-            "key" : "'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]",
+            "key" : "add explicit braces to avoid dangling else [-Wdangling-else]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/ITS/tracking/AliITStrackerHLT.cxx",
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/EMCAL/AliHLTEMCALRawHistoMakerComponent.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "72"
-                  }, {
-                    "key" : "73"
+                    "key" : "188"
+                  } ]
+                }
+              }, {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TEvtGen/Photos/src/utilities/Log.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "125"
                   } ]
                 }
               } ]
@@ -1137,6 +1199,20 @@
               } ]
             }
           }, {
+            "key" : "format string is not a string literal (potentially insecure) [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TPC/TPCcalib/AliTPCCorrectionFit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "187"
+                  }, {
+                    "key" : "260"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]",
             "filename" : {
               "buckets" : [ {
@@ -1146,18 +1222,6 @@
                     "key" : "52"
                   }, {
                     "key" : "53"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "using directive refers to implicitly-defined namespace 'std'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TTherminator/Therminator/THGlobal.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "32"
                   } ]
                 }
               } ]
@@ -1187,6 +1251,37 @@
               } ]
             }
           }, {
+            "key" : "using the result of an assignment as a condition without parentheses [-Wparentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TPCLib/transform/AliHLTTPCFastTransformObject.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              }, {
+                "key" : "[ 82%] /build/workarea/sw/20155601/3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TPC/TPCrec/AliTPCclusterer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1522"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gluPickMatrix' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveDet/AliEveITSModuleStepper.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "576"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'sem_destroy' is deprecated [-Wdeprecated-declarations]",
             "filename" : {
               "buckets" : [ {
@@ -1211,13 +1306,13 @@
               } ]
             }
           }, {
-            "key" : "add explicit braces to avoid dangling else [-Wdangling-else]",
+            "key" : "4 enumeration values not handled in switch: 'kPyJetsPWHG', 'kPyCharmPWHG', 'kPyBeautyPWHG'... [-Wswitch]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TEvtGen/Photos/src/utilities/Log.cxx",
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/PYTHIA8/AliPythia8/AliPythia8.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "125"
+                    "key" : "127"
                   } ]
                 }
               } ]
@@ -1230,6 +1325,30 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "510"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "empty parentheses interpreted as a function declaration [-Wvexing-parse]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/EVE/EveBase/AliEveHF.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "471"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "enumeration value 'kBJpsiUndecayed' not handled in switch [-Wswitch]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/PYTHIA8/AliPythia8/AliDecayerPythia8.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "130"
                   } ]
                 }
               } ]
@@ -1307,19 +1426,47 @@
               } ]
             }
           }, {
-            "key" : "using the result of an assignment as a condition without parentheses [-Wparentheses]",
+            "key" : "source of this 'memcpy' call is a pointer to dynamic class 'AliTRDcluster'; vtable pointer will be copied [-Wdynamic-class-memaccess]",
             "filename" : {
               "buckets" : [ {
-                "key" : "[ 82%] /build/workarea/sw/20155601/3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/TPC/TPCrec/AliTPCclusterer.cxx",
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TRD/AliHLTTRDCluster.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "1522"
+                    "key" : "136"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "source of this 'memcpy' call is a pointer to dynamic class 'AliTRDseedV1'; vtable pointer will be copied [-Wdynamic-class-memaccess]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "[ 90%] /build/workarea/sw/20155601/3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TRD/AliHLTTRDTracklet.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "250"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "source of this 'memcpy' call is a pointer to dynamic class 'AliTRDtrackV1'; vtable pointer will be copied [-Wdynamic-class-memaccess]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/TRD/AliHLTTRDTrack.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "243"
                   } ]
                 }
               } ]
             }
           } ]
         }
+      }, {
+        "key" : "186"
+      }, {
+        "key" : "3443"
       }, {
         "key" : "3457",
         "by_message" : {
@@ -1331,6 +1478,13 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "80"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/f9238f42710d94cb41a88267e8aff69d11bf5001/f9238f4271/HLT/global/AliFlatExternalTrackParam.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
                   } ]
                 }
               }, {
