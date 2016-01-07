@@ -1,4 +1,24 @@
 -
+ commit: "369a0fbb6c4386ba8c7160de9994938b1c4bb83e"
+ message: >-
+    Fix for bug AliRoot-6506 (match raw and esd event by EventIdAsLong)
+ author: !!str jcastill
+-
+ commit: "b5b00f9ab5c139b9e3472705611333359d6d24fa"
+ message: >-
+    make sure the timebins are equidistant and cover from SOR-EOR
+ author: !!str shahoian
+-
+ commit: "8f013315fb5b8558a42314abe4c2c93ed8fac2f2"
+ message: >-
+    additional optimization for CPU eff.
+ author: !!str shahoian
+-
+ commit: "bce2605069f2ec7869c4c4ae71835be93375cd94"
+ message: >-
+    Use ULong64_t for event global index, as in RawReader
+ author: !!str shahoian
+-
  commit: "7b82b99b01106054306accc7817dd26639cb2ccf"
  message: >-
     Bugs in TSs with CPV clusters
