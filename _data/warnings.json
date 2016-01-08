@@ -10457,6 +10457,138 @@
       }, {
         "key" : "3443"
       }, {
+        "key" : "3540",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdlStub.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "235"
+                  }, {
+                    "key" : "351"
+                  } ]
+                }
+              }, {
+                "key" : "wsdlC.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10054"
+                  }, {
+                    "key" : "12573"
+                  }, {
+                    "key" : "8006"
+                  }, {
+                    "key" : "9737"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9045"
+                  }, {
+                    "key" : "9053"
+                  }, {
+                    "key" : "9061"
+                  } ]
+                }
+              }, {
+                "key" : "wsdl.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "355"
+                  }, {
+                    "key" : "96"
+                  }, {
+                    "key" : "984"
+                  } ]
+                }
+              }, {
+                "key" : "types.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1826"
+                  }, {
+                    "key" : "2031"
+                  } ]
+                }
+              }, {
+                "key" : "schema.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "261"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"HAVE_SYS_TIMEB_H\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "stdsoap2.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "334"
+                  }, {
+                    "key" : "457"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'cppnamespace' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "90"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'cwd_path' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "89"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'import_path' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "88"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'mapfile' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "87"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3471",
         "by_message" : {
           "buckets" : [ {
@@ -10910,83 +11042,6 @@
             "filename" : {
               "buckets" : [ {
                 "key" : "1/SOURCES/sodium/master/cfd597298f/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "17"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "3510",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "#warning Alternatively, use the \"stable\" branch in the git repository. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/f1ab1fd377/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning Do not use this in production. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/f1ab1fd377/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "16"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning It might be totally insecure. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/f1ab1fd377/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "15"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning It might not compile. It might not work as expected. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/f1ab1fd377/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "14"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning This is unstable, untested, development code. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/f1ab1fd377/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "13"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning Use releases available at https: [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/f1ab1fd377/src/libsodium/sodium/core.c",
                 "line" : {
                   "buckets" : [ {
                     "key" : "17"
