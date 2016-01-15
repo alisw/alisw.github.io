@@ -16470,6 +16470,145 @@
           } ]
         }
       }, {
+        "key" : "3751",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "right-hand operand of comma expression has no effect [-Wunused-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "Include/objimpl.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "164"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'result' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/BUILD/491725393832f72ab7b33f5b25be295f64eb2044/Python/Modules/socketmodule.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3453"
+                  }, {
+                    "key" : "3529"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'i' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "Parser/pgen.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "282"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'length' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/BUILD/491725393832f72ab7b33f5b25be295f64eb2044/Python/Modules/_ctypes/cfield.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "50"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3748",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "variable 'Ql' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../gcc/libgcc/config/libbid/bid128_div.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1406"
+                  }, {
+                    "key" : "39"
+                  }, {
+                    "key" : "490"
+                  }, {
+                    "key" : "949"
+                  } ]
+                }
+              }, {
+                "key" : "../../../gcc/libgcc/config/libbid/bid64_div.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1374"
+                  }, {
+                    "key" : "523"
+                  }, {
+                    "key" : "937"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "comparison between signed and unsigned integer expressions [-Wsign-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "arlex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1803"
+                  } ]
+                }
+              }, {
+                "key" : "ldlex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3934"
+                  } ]
+                }
+              }, {
+                "key" : "syslex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1681"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "sec_tabselect.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "no previous prototype for '_bfd_dwarf2_find_symbol_bias' [-Wmissing-prototypes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../binutils/bfd/dwarf2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3797"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3742",
         "by_message" : {
           "buckets" : [ {
@@ -16480,6 +16619,13 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "80"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/global/AliFlatExternalTrackParam.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
                   } ]
                 }
               }, {
@@ -16499,6 +16645,104 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3749",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'kCTFontHorizontalOrientation' is deprecated: first deprecated in OS X 10.11 [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/graf2d/cocoa/src/FontCache.mm",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "437"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/graf2d/quartz/src/QuartzText.mm",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "330"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible pointer types sending 'NSComparisonResult (*)(id, id, void *)' to parameter of type 'NSComparisonResult (* _Nonnull)(__kindof NSView * _Nonnull, __kindof NSView * _Nonnull, void * _Nullable)' [-Wincompatible-pointer-types]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/graf2d/cocoa/src/QuartzWindow.mm",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2449"
+                  }, {
+                    "key" : "2483"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'kCTFontDefaultOrientation' is deprecated: first deprecated in OS X 10.11 [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/graf2d/quartz/src/QuartzText.mm",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/math/foam/src/TFoamVect.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "219"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "address of 'internal->transform_delta' will always evaluate to 'true' [-Wpointer-bool-conversion]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/fdcd6220eb8ac3639d233c7adec1ced8a04b3828/ROOT/graf2d/freetype/src/freetype-2.3.12/src/base/ftobjs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "752"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "address of 'internal->transform_matrix' will always evaluate to 'true' [-Wpointer-bool-conversion]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/fdcd6220eb8ac3639d233c7adec1ced8a04b3828/ROOT/graf2d/freetype/src/freetype-2.3.12/src/base/ftobjs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "748"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "checking dirent.h usability... checking for strings.h... /build/workarea/sw/20155605/1/SOURCES/ROOT/v5-34-30-alice/23865caede/cint/reflex/src/Class.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "267"
                   } ]
                 }
               } ]
@@ -16660,42 +16904,76 @@
           } ]
         }
       }, {
-        "key" : "3748",
+        "key" : "3741",
         "by_message" : {
           "buckets" : [ {
-            "key" : "comparison between signed and unsigned integer expressions [-Wsign-compare]",
+            "key" : "#warning Alternatively, use the \"stable\" branch in the git repository. [-Wcpp]",
             "filename" : {
               "buckets" : [ {
-                "key" : "arlex.c",
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "1803"
-                  } ]
-                }
-              }, {
-                "key" : "ldlex.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3934"
-                  } ]
-                }
-              }, {
-                "key" : "syslex.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1681"
+                    "key" : "18"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "no previous prototype for '_bfd_dwarf2_find_symbol_bias' [-Wmissing-prototypes]",
+            "key" : "#warning Do not use this in production. [-Wcpp]",
             "filename" : {
               "buckets" : [ {
-                "key" : "../../binutils/bfd/dwarf2.c",
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "3797"
+                    "key" : "16"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning It might be totally insecure. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "15"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning It might not compile. It might not work as expected. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning This is unstable, untested, development code. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning Use releases available at https: [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "17"
                   } ]
                 }
               } ]
@@ -16703,40 +16981,153 @@
           } ]
         }
       }, {
-        "key" : "3749",
+        "key" : "3743",
         "by_message" : {
           "buckets" : [ {
-            "key" : "address of 'internal->transform_delta' will always evaluate to 'true' [-Wpointer-bool-conversion]",
+            "key" : "#warning Alternatively, use the \"stable\" branch in the git repository. [-Wcpp]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/BUILD/fdcd6220eb8ac3639d233c7adec1ced8a04b3828/ROOT/graf2d/freetype/src/freetype-2.3.12/src/base/ftobjs.c",
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "752"
+                    "key" : "18"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "address of 'internal->transform_matrix' will always evaluate to 'true' [-Wpointer-bool-conversion]",
+            "key" : "#warning Do not use this in production. [-Wcpp]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/BUILD/fdcd6220eb8ac3639d233c7adec1ced8a04b3828/ROOT/graf2d/freetype/src/freetype-2.3.12/src/base/ftobjs.c",
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "748"
+                    "key" : "16"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]",
+            "key" : "#warning It might be totally insecure. [-Wcpp]",
             "filename" : {
               "buckets" : [ {
-                "key" : "checking dirent.h usability... checking for strings.h... /build/workarea/sw/20155605/1/SOURCES/ROOT/v5-34-30-alice/23865caede/cint/reflex/src/Class.cxx",
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "267"
+                    "key" : "15"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning It might not compile. It might not work as expected. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning This is unstable, untested, development code. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning Use releases available at https: [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "17"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3745",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning Alternatively, use the \"stable\" branch in the git repository.",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning Do not use this in production.",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "16"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning It might be totally insecure.",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "15"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning It might not compile. It might not work as expected.",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning This is unstable, untested, development code.",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning Use releases available at https:",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "17"
                   } ]
                 }
               } ]
