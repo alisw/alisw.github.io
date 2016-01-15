@@ -3573,6 +3573,674 @@
           } ]
         }
       }, {
+        "key" : "3720",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../base/debugmacros.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "32"
+                  } ]
+                }
+              }, {
+                "key" : "gapi_job_operations.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "378"
+                  }, {
+                    "key" : "383"
+                  }, {
+                    "key" : "388"
+                  }, {
+                    "key" : "393"
+                  }, {
+                    "key" : "398"
+                  }, {
+                    "key" : "403"
+                  }, {
+                    "key" : "412"
+                  }, {
+                    "key" : "419"
+                  }, {
+                    "key" : "424"
+                  }, {
+                    "key" : "429"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "function declaration isn't a prototype [-Wstrict-prototypes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  }, {
+                    "key" : "69"
+                  }, {
+                    "key" : "71"
+                  }, {
+                    "key" : "73"
+                  }, {
+                    "key" : "75"
+                  }, {
+                    "key" : "77"
+                  }, {
+                    "key" : "79"
+                  }, {
+                    "key" : "81"
+                  }, {
+                    "key" : "83"
+                  }, {
+                    "key" : "85"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ISO C forbids assignment between function pointer and 'void *' [-Wpedantic]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "xpath.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13552"
+                  }, {
+                    "key" : "13579"
+                  }, {
+                    "key" : "4956"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'fd' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gclient.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1224"
+                  }, {
+                    "key" : "1836"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible implicit declaration of built-in function 'memcpy'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "spc_cwc.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "146"
+                  }, {
+                    "key" : "179"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "685"
+                  }, {
+                    "key" : "741"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_key_create' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  }, {
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_key_delete' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "64"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "unused variable 'items' [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/usr/lib64/perl5/CORE/XSUB.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "136"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'tmp' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testdict.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "155"
+                  }, {
+                    "key" : "318"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveConfigManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveInit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCluster' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fClustersInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCompositeImgFileName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCurrentFileNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3534",
         "by_message" : {
           "buckets" : [ {
@@ -7212,7 +7880,618 @@
           } ]
         }
       }, {
-        "key" : "3720",
+        "key" : "3719",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "685"
+                  }, {
+                    "key" : "741"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveConfigManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveInit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCluster' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fClustersInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCompositeImgFileName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCurrentFileNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fESDEvent' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fEventInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fInputDetectorMask' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fMaxFiles' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fNumberOfClusters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fRunNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'G__comment_info::p' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/G__ci.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1152"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3718",
         "by_message" : {
           "buckets" : [ {
             "key" : "suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]",
@@ -7252,25 +8531,13 @@
               } ]
             }
           }, {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "key" : "right-hand operand of comma expression has no effect [-Wunused-value]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TMap.h",
+                "key" : "Include/objimpl.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/TPC/TPCbase/AliComplexCluster.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "109"
+                    "key" : "164"
                   } ]
                 }
               } ]
@@ -7306,233 +8573,112 @@
               } ]
             }
           }, {
-            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "variable 'freelistp' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
+                "key" : "extern/qhull/poly.c",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class THnIter' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/THn.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
+                    "key" : "1014"
                   }, {
-                    "key" : "150"
+                    "key" : "248"
                   }, {
-                    "key" : "76"
+                    "key" : "564"
+                  }, {
+                    "key" : "981"
+                  } ]
+                }
+              }, {
+                "key" : "extern/qhull/merge.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2086"
+                  }, {
+                    "key" : "219"
+                  }, {
+                    "key" : "322"
+                  } ]
+                }
+              }, {
+                "key" : "extern/qhull/geom.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "897"
+                  }, {
+                    "key" : "935"
+                  } ]
+                }
+              }, {
+                "key" : "extern/qhull/qset.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "717"
+                  }, {
+                    "key" : "927"
+                  } ]
+                }
+              }, {
+                "key" : "extern/qhull/poly2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1076"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "key" : "#warning \"Using deprecated NumPy API, disable it by \" \"#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION\" [-Wcpp]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TText.h",
+                "key" : "1/INSTALLROOT/491725393832f72ab7b33f5b25be295f64eb2044/slc6_x86-64/Python/v2.7.10-9/lib/python2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "42"
+                    "key" : "15"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/MPL_isnan.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "62"
+                  }, {
+                    "key" : "52"
+                  } ]
+                }
+              }, {
+                "key" : "src/cntr.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2019"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"_POSIX_C_SOURCE\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/INSTALLROOT/491725393832f72ab7b33f5b25be295f64eb2044/slc6_x86-64/Python/v2.7.10-9/include/python2.7/pyconfig.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1188"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"_XOPEN_SOURCE\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/INSTALLROOT/491725393832f72ab7b33f5b25be295f64eb2044/slc6_x86-64/Python/v2.7.10-9/include/python2.7/pyconfig.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1210"
                   } ]
                 }
               } ]
@@ -7554,37 +8700,46 @@
               } ]
             }
           }, {
-            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
+            "key" : "unused variable 'offset' [-Wunused-variable]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "key" : "src/_png.cpp",
                 "line" : {
                   "buckets" : [ {
                     "key" : "108"
+                  }, {
+                    "key" : "316"
+                  } ]
+                }
+              }, {
+                "key" : "src/ft2font.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"npy_fseek\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/file_compat.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "31"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"npy_ftell\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/file_compat.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "32"
                   } ]
                 }
               } ]
@@ -7604,13 +8759,20 @@
               } ]
             }
           }, {
-            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
+                "key" : "XrdxAlienWorker.cc",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "108"
+                    "key" : "136"
+                  } ]
+                }
+              }, {
+                "key" : "src/_ttconv.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "57"
                   } ]
                 }
               } ]
@@ -7625,32 +8787,6 @@
                     "key" : "146"
                   }, {
                     "key" : "179"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "685"
-                  }, {
-                    "key" : "741"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
                   } ]
                 }
               } ]
@@ -7696,6 +8832,20 @@
               } ]
             }
           }, {
+            "key" : "variable 'result' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/491725393832f72ab7b33f5b25be295f64eb2044/Python/Modules/socketmodule.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3453"
+                  }, {
+                    "key" : "3529"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "variable 'tmp' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
@@ -7710,133 +8860,25 @@
               } ]
             }
           }, {
-            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'FT2Font::face' will be initialized after [-Wreorder]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveConfigManager.cxx",
+                "key" : "src/ft2font.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "84"
+                    "key" : "140"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'Py::Object FT2Font::image' [-Wreorder]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "key" : "src/ft2font.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "21"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/EVE/EveBase/AliEveEventManager.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-14/include/TStreamerInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "58"
+                    "key" : "136"
                   } ]
                 }
               } ]
@@ -7873,6 +8915,306 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "18063"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'des_xmlSchematronPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18043"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_const_xmlBufPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18558"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34503"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18060"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_xmlSchematronPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18040"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'mode' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gapi_file_operations.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'no1' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aesgav.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "418"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'order' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gbbox.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "209"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'trio_is_negative' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "trionan.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'x0' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/path_converters.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "403"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'x1' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/path_converters.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "403"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'y0' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/path_converters.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "404"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'y1' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/path_converters.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "404"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ISO C forbids passing argument 4 of 'xmlHashAddEntry2__internal_alias' between function pointer and 'void *' [-Wpedantic]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "xpath.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "4875"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "array subscript is above array bounds [-Warray-bounds]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "XrdxAlienWorker.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "passing argument 2 of 'perl_parse' from incompatible pointer type",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "C2PERL.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "passing argument 3 of 'Perl_newXS' from incompatible pointer type",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "C2PERL.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_cond_destroy' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_cond_init' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_cond_signal' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "88"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_cond_wait' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_equal' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_getspecific' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "56"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_mutex_destroy' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "68"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_mutex_init' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
                   } ]
                 }
               } ]
@@ -13764,921 +15106,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "65"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "3718",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../base/debugmacros.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "32"
-                  } ]
-                }
-              }, {
-                "key" : "gapi_job_operations.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "378"
-                  }, {
-                    "key" : "383"
-                  }, {
-                    "key" : "388"
-                  }, {
-                    "key" : "393"
-                  }, {
-                    "key" : "398"
-                  }, {
-                    "key" : "403"
-                  }, {
-                    "key" : "412"
-                  }, {
-                    "key" : "419"
-                  }, {
-                    "key" : "424"
-                  }, {
-                    "key" : "429"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "right-hand operand of comma expression has no effect [-Wunused-value]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "Include/objimpl.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "164"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "function declaration isn't a prototype [-Wstrict-prototypes]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  }, {
-                    "key" : "69"
-                  }, {
-                    "key" : "71"
-                  }, {
-                    "key" : "73"
-                  }, {
-                    "key" : "75"
-                  }, {
-                    "key" : "77"
-                  }, {
-                    "key" : "79"
-                  }, {
-                    "key" : "81"
-                  }, {
-                    "key" : "83"
-                  }, {
-                    "key" : "85"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "ISO C forbids assignment between function pointer and 'void *' [-Wpedantic]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "xpath.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "13552"
-                  }, {
-                    "key" : "13579"
-                  }, {
-                    "key" : "4956"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'fd' may be used uninitialized in this function [-Wmaybe-uninitialized]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "gclient.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1224"
-                  }, {
-                    "key" : "1836"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "incompatible implicit declaration of built-in function 'memcpy'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "spc_cwc.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "146"
-                  }, {
-                    "key" : "179"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_key_create' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "61"
-                  }, {
-                    "key" : "84"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_key_delete' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "64"
-                  }, {
-                    "key" : "86"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "unused variable 'items' [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "/usr/lib64/perl5/CORE/XSUB.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "136"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'result' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/BUILD/491725393832f72ab7b33f5b25be295f64eb2044/Python/Modules/socketmodule.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3453"
-                  }, {
-                    "key" : "3529"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'tmp' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testdict.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "155"
-                  }, {
-                    "key" : "318"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'des_const_xmlBufPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18561"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'des_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34506"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'des_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18063"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'des_xmlSchematronPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18043"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gen_const_xmlBufPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18558"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gen_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34503"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gen_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18060"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gen_xmlSchematronPtr' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "testapi.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18040"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'mode' may be used uninitialized in this function [-Wmaybe-uninitialized]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "gapi_file_operations.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "124"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'no1' may be used uninitialized in this function [-Wmaybe-uninitialized]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "aesgav.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "418"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'order' may be used uninitialized in this function [-Wmaybe-uninitialized]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "gbbox.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "209"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'trio_is_negative' defined but not used [-Wunused-function]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "trionan.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "ISO C forbids passing argument 4 of 'xmlHashAddEntry2__internal_alias' between function pointer and 'void *' [-Wpedantic]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "xpath.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "4875"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "array subscript is above array bounds [-Warray-bounds]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "XrdxAlienWorker.cc",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "115"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "XrdxAlienWorker.cc",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "136"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing argument 2 of 'perl_parse' from incompatible pointer type",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "C2PERL.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "77"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing argument 3 of 'Perl_newXS' from incompatible pointer type",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "C2PERL.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "26"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_cond_destroy' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_cond_init' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "74"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_cond_signal' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "88"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_cond_wait' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "78"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_equal' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "80"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_getspecific' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "56"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_mutex_destroy' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "68"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_mutex_init' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "66"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_mutex_lock' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "70"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_mutex_unlock' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "72"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_once' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "53"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_self' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "82"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "redundant redeclaration of 'pthread_setspecific' [-Wredundant-decls]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "threads.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "58"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "unused parameter 'options' [-Wunused-parameter]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "runtest.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "2099"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'blocks' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "gapi_stat.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "78"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'dtd' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "tree2.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "30"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'i' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "Parser/pgen.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "282"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/ROOT/v5-34-30-alice/19b634aeb6/net/alien/src/TAlienCollection.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'lasttimeexecuted' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "gclient.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "708"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'length' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/BUILD/491725393832f72ab7b33f5b25be295f64eb2044/Python/Modules/_ctypes/cfield.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "50"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'r_cnt' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "aesaux.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "167"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "3719",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TMap.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class THnIter' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "685"
-                  }, {
-                    "key" : "741"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/T0/T0calib/AliT0CalibAnalysisTask.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "21"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-17/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/ROOT/v5-34-30-alice/19b634aeb6/net/alien/src/TAlienCollection.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
                   } ]
                 }
               } ]
