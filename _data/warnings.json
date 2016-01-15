@@ -4509,6 +4509,44 @@
               } ]
             }
           }, {
+            "key" : "control may reach end of non-void function [-Wreturn-type]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gvariant.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2715"
+                  }, {
+                    "key" : "2891"
+                  }, {
+                    "key" : "4265"
+                  }, {
+                    "key" : "4342"
+                  }, {
+                    "key" : "4424"
+                  } ]
+                }
+              }, {
+                "key" : "gvariant-serialiser.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1325"
+                  }, {
+                    "key" : "1372"
+                  }, {
+                    "key" : "1441"
+                  } ]
+                }
+              }, {
+                "key" : "gtestutils.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3250"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "passing 'guchar *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]",
             "filename" : {
               "buckets" : [ {
@@ -4637,6 +4675,50 @@
               } ]
             }
           }, {
+            "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../src/po-lex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "241"
+                  }, {
+                    "key" : "273"
+                  } ]
+                }
+              }, {
+                "key" : "po-lex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "241"
+                  }, {
+                    "key" : "273"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "data argument not used by format string [-Wformat-extra-args]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "error.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "386"
+                  }, {
+                    "key" : "381"
+                  } ]
+                }
+              }, {
+                "key" : "gmessages.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1077"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "initializing 'const guchar *' (aka 'const unsigned char *') with an expression of type 'char [19]' converts between pointers to integer types with different sign [-Wpointer-sign]",
             "filename" : {
               "buckets" : [ {
@@ -4724,29 +4806,6 @@
               } ]
             }
           }, {
-            "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../src/po-lex.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "241"
-                  }, {
-                    "key" : "273"
-                  } ]
-                }
-              }, {
-                "key" : "po-lex.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "241"
-                  }, {
-                    "key" : "273"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "initializing 'const guchar *' (aka 'const unsigned char *') with an expression of type 'char [16]' converts between pointers to integer types with different sign [-Wpointer-sign]",
             "filename" : {
               "buckets" : [ {
@@ -4811,15 +4870,29 @@
               } ]
             }
           }, {
-            "key" : "data argument not used by format string [-Wformat-extra-args]",
+            "key" : "'__PARSEDATE_H' is used as a header guard here, followed by #define of a different macro [-Wheader-guard]",
             "filename" : {
               "buckets" : [ {
-                "key" : "error.c",
+                "key" : "1/SOURCES/CMake/v2.8.12.2/v2.8.12.2/Utilities/cmcurl/parsedate.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "386"
+                    "key" : "1"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible integer to pointer conversion passing 'gsize' (aka 'unsigned long') to parameter of type 'gpointer' (aka 'void *') [-Wint-conversion]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gatomic.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "416"
                   }, {
-                    "key" : "381"
+                    "key" : "440"
+                  }, {
+                    "key" : "464"
                   } ]
                 }
               } ]
@@ -4960,6 +5033,20 @@
               } ]
             }
           }, {
+            "key" : "incompatible integer to pointer conversion passing 'gsize' (aka 'unsigned long') to parameter of type 'GData *' (aka 'struct _GData *') [-Wint-conversion]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gdataset.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1191"
+                  }, {
+                    "key" : "1214"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "passing 'char [3]' to parameter of type 'const xmlChar *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]",
             "filename" : {
               "buckets" : [ {
@@ -5021,6 +5108,30 @@
               } ]
             }
           }, {
+            "key" : "'CFURLCreateFromFSRef' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gutils.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1426"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'FSFindFolder' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gutils.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1424"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "20 warnings generated.",
             "filename" : {
               "buckets" : [ {
@@ -5040,6 +5151,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "202"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "comparison of constant 8 with expression of type 'GDateWeekday' is always true [-Wtautological-constant-out-of-range-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gdate.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "432"
                   } ]
                 }
               } ]
@@ -5076,90 +5199,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "1680"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "initializing 'const guchar *' (aka 'const unsigned char *') with an expression of type 'char [21]' converts between pointers to integer types with different sign [-Wpointer-sign]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "libcroco/cr-rgb.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "102"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing 'char [36]' to parameter of type 'const guchar *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "libcroco/cr-parser.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "737"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing 'char [56]' to parameter of type 'const guchar *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "libcroco/cr-parser.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3213"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing 'char [5]' to parameter of type 'const xmlChar *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "libcroco/cr-sel-eng.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "136"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing 'char [65]' to parameter of type 'const guchar *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "libcroco/cr-parser.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3416"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing 'char [6]' to parameter of type 'const guchar *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "libcroco/cr-style.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1128"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "passing 'const xmlChar *' (aka 'const unsigned char *') to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "libcroco/cr-sel-eng.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "649"
                   } ]
                 }
               } ]
@@ -11058,6 +11097,639 @@
           } ]
         }
       }, {
+        "key" : "3716",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "function declaration isn't a prototype [-Wstrict-prototypes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  }, {
+                    "key" : "69"
+                  }, {
+                    "key" : "71"
+                  }, {
+                    "key" : "73"
+                  }, {
+                    "key" : "75"
+                  }, {
+                    "key" : "77"
+                  }, {
+                    "key" : "79"
+                  }, {
+                    "key" : "81"
+                  }, {
+                    "key" : "83"
+                  }, {
+                    "key" : "85"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ISO C forbids assignment between function pointer and 'void *' [-Wpedantic]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "xpath.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13552"
+                  }, {
+                    "key" : "13579"
+                  }, {
+                    "key" : "4956"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_key_create' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  }, {
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "redundant redeclaration of 'pthread_key_delete' [-Wredundant-decls]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "threads.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "64"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'tmp' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testdict.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "155"
+                  }, {
+                    "key" : "318"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'des_const_xmlBufPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18561"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'des_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34506"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'des_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18063"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'des_xmlSchematronPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18043"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_const_xmlBufPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18558"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34503"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18060"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gen_xmlSchematronPtr' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "testapi.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18040"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'trio_is_negative' defined but not used [-Wunused-function]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "trionan.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_1' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_10' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_11' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "88"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_12' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "99"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_13' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_14' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_15' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_16' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_17' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "140"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_18' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "149"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_2' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "7"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_23' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "159"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_24' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "174"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_25' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "190"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_26' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "199"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_27' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "208"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_28' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "239"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_3' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_4' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_5' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "32"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_6' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "37"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_7' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_8' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "56"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex2_9' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "68"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_11' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "303"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_12' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_13' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "316"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_14' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "323"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_3' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "269"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_4' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "278"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_5' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "282"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_6' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "284"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_7' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "288"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex5_8' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "296"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex6_1' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "328"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'{anonymous}::ex6_10' defined but not used [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "401"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3531",
         "by_message" : {
           "buckets" : [ {
@@ -12231,6 +12903,131 @@
           } ]
         }
       }, {
+        "key" : "3717",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'class TInterpreter::SuspendAutoParsing' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TInterpreter::SuspendAutoParsing(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TF1Parameters::fParNames' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TF1.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TF1Parameters::fParameters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TF1.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fBody' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fFound' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fFuncCall' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'TFormulaFunction::fNargs' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TFormula.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3557",
         "by_message" : {
           "buckets" : [ {
@@ -12338,6 +13135,102 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "3986"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "3713",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "variable 'Ql' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../gcc/libgcc/config/libbid/bid128_div.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1406"
+                  }, {
+                    "key" : "39"
+                  }, {
+                    "key" : "490"
+                  }, {
+                    "key" : "949"
+                  } ]
+                }
+              }, {
+                "key" : "../../../gcc/libgcc/config/libbid/bid64_div.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1374"
+                  }, {
+                    "key" : "523"
+                  }, {
+                    "key" : "937"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "comparison between signed and unsigned integer expressions [-Wsign-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "arlex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1803"
+                  } ]
+                }
+              }, {
+                "key" : "ldlex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3934"
+                  } ]
+                }
+              }, {
+                "key" : "syslex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1681"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "sec_tabselect.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "sec_tabselect.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "no previous prototype for '_bfd_dwarf2_find_symbol_bias' [-Wmissing-prototypes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../binutils/bfd/dwarf2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3797"
                   } ]
                 }
               } ]
@@ -12730,7 +13623,7 @@
           } ]
         }
       }, {
-        "key" : "3713",
+        "key" : "3722",
         "by_message" : {
           "buckets" : [ {
             "key" : "comparison between signed and unsigned integer expressions [-Wsign-compare]",
@@ -12785,6 +13678,35 @@
           } ]
         }
       }, {
+        "key" : "3715",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8/9d7a5c25fb/ITS/ITSrec/AliITSOnlineSPDphysAnalyzer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3555",
         "by_message" : {
           "buckets" : [ {
@@ -12812,23 +13734,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "44"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "3722",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "no previous prototype for '_bfd_dwarf2_find_symbol_bias' [-Wmissing-prototypes]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../binutils/bfd/dwarf2.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3797"
                   } ]
                 }
               } ]
