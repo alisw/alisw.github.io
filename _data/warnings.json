@@ -8007,6 +8007,25 @@
               } ]
             }
           }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              }, {
+                "key" : "1/ubt1510_x86-64/AliRoot/9f4defde62575153508e53528538083fa39f2074-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -8110,18 +8129,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/TPC/TPCbase/AliComplexCluster.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "109"
                   } ]
                 }
               } ]
@@ -8290,6 +8297,22 @@
               } ]
             }
           }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/SPECTRA/AntiprotonToProton/train/AliAnalysisTaskProtonAbsorbtion.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "196"
+                  }, {
+                    "key" : "226"
+                  }, {
+                    "key" : "231"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -8297,6 +8320,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliRsnMiniEvent::fRefMult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/RESONANCES/AliRsnMiniEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
                   } ]
                 }
               } ]
@@ -8381,6 +8416,54 @@
               } ]
             }
           }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonLow' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -8423,6 +8506,132 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskEmcalJetHMEC::fRunType' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetHMEC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  }, {
+                    "key" : "97"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEmcalJetTriggerMatcher::fTrkQAcut' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetTriggerMatcher.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  }, {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskHFEemcQA::fcentMax' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGHF/hfe/AliAnalysisTaskHFEemcQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "169"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskHFEemcQA::fcentMim' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGHF/hfe/AliAnalysisTaskHFEemcQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "169"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNanoAODFilter::fMCMode' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWG/DevNanoAOD/AliAnalysisTaskNanoAODFilter.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "52"
+                  }, {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliAnalysisTaskNeutralMesons::fAOD' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -8460,182 +8669,6 @@
                     "key" : "119"
                   }, {
                     "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fNEvClusters' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fWeight' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMultiplicitySelectionCP' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMultiplicitySelectionCP(const AliMultiplicitySelectionCP&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "685"
-                  }, {
-                    "key" : "741"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliMultiplicitySelectionCP&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnaPi0::fhMiDiffSectorDCALPHOSMod' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/CaloTrackCorrelations/AliAnaPi0.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "53"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnaPi0::fhMiSameSectorDCALPHOSMod' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/CaloTrackCorrelations/AliAnaPi0.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "53"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnaPi0::fhReDiffSectorDCALPHOSMod' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/CaloTrackCorrelations/AliAnaPi0.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "53"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnaPi0::fhReSameSectorDCALPHOSMod' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/CaloTrackCorrelations/AliAnaPi0.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "53"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskEmcalJetBJetTaggingIP::flist_module_eventselection' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGHF/jetsHF/AliAnalysisTaskEmcalJetBJetTaggingIP.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "187"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fOutputList' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/962ffcd73daa80dd2737edb9de0eafc1eae7b33d/962ffcd73d/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "119"
                   } ]
                 }
               } ]
