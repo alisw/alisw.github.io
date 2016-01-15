@@ -2041,7 +2041,7 @@
               } ]
             }
           }, {
-            "key" : "or 'operator=(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "key" : "but does not override 'TInterpreter::SuspendAutoParsing(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
@@ -2053,7 +2053,7 @@
               } ]
             }
           }, {
-            "key" : "but does not override 'TInterpreter::SuspendAutoParsing(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
+            "key" : "or 'operator=(const TInterpreter::SuspendAutoParsing&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TInterpreter.h",
@@ -2361,9 +2361,9 @@
                 "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TEveBoxSet.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "40"
-                  }, {
                     "key" : "38"
+                  }, {
+                    "key" : "40"
                   }, {
                     "key" : "46"
                   } ]
@@ -2506,9 +2506,9 @@
                 "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TEveBoxSet.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "44"
-                  }, {
                     "key" : "42"
+                  }, {
+                    "key" : "44"
                   } ]
                 }
               } ]
@@ -2600,6 +2600,54 @@
               } ]
             }
           }, {
+            "key" : "'class TClass::InsertTClassInRegistryRAII' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "154"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct TEveBoxSet::BCone_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TEveBoxSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "48"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TClass::InsertTClassInRegistryRAII(const TClass::InsertTClassInRegistryRAII&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "154"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TClass::InsertTClassInRegistryRAII&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TClass.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "154"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2681,58 +2729,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8_ROOT6/9d7a5c25fb/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "base class 'struct TEveBoxSet::BCone_t' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TEveBoxSet.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "48"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "base class 'struct TEveQuadSet::QRectFixDim_t' has a non-virtual destructor [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v6-05-02-7/include/TEveQuadSet.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "65"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8_ROOT6/9d7a5c25fb/EVE/EveBase/AliEveConfigManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "84"
                   } ]
                 }
               } ]
@@ -5865,6 +5861,31 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct TEveDigitSet::DigitBase_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TEveBoxSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  }, {
+                    "key" : "40"
+                  }, {
+                    "key" : "46"
+                  } ]
+                }
+              }, {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TEveQuadSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "55"
+                  }, {
+                    "key" : "57"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -6016,6 +6037,36 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct TEveBoxSet::BOrigin_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TEveBoxSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  }, {
+                    "key" : "44"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct TEveQuadSet::QOrigin_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TEveQuadSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "59"
+                  }, {
+                    "key" : "67"
+                  }, {
+                    "key" : "69"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -6076,6 +6127,20 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct TEveQuadSet::QRectFixDimC_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TEveQuadSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -6128,6 +6193,18 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct TEveBoxSet::BCone_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TEveBoxSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "48"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -6135,6 +6212,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct TEveQuadSet::QRectFixDim_t' has a non-virtual destructor [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TEveQuadSet.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "65"
                   } ]
                 }
               } ]
@@ -6283,78 +6372,6 @@
                 }
               } ]
             }
-          }, {
-            "key" : "'AliEveSaveViews::fNumberOfClusters' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8_COVERAGE/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fRunNumber' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8_COVERAGE/9d7a5c25fb/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9d7a5c25fb56e1cf27760e166066fd64db9276e8_COVERAGE/9d7a5c25fb/T0/T0calib/AliT0CalibAnalysisTask.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "21"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'G__comment_info::p' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/G__ci.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1152"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-8/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
           } ]
         }
       }, {
@@ -6393,6 +6410,18 @@
                     "key" : "424"
                   }, {
                     "key" : "429"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "right-hand operand of comma expression has no effect [-Wunused-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "Include/objimpl.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "164"
                   } ]
                 }
               } ]
@@ -6495,6 +6524,20 @@
                     "key" : "64"
                   }, {
                     "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'result' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/BUILD/491725393832f72ab7b33f5b25be295f64eb2044/Python/Modules/socketmodule.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3453"
+                  }, {
+                    "key" : "3529"
                   } ]
                 }
               } ]
@@ -6989,30 +7032,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "323"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex5_3' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "269"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'{anonymous}::ex5_4' defined but not used [-Wunused-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/yaml-cpp/v0.5.2/release-0.5.2/test/specexamples.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "278"
                   } ]
                 }
               } ]
