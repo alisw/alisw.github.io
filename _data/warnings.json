@@ -9340,6 +9340,65 @@
               } ]
             }
           }, {
+            "key" : "using integer absolute value function 'abs' when argument is of floating point type [-Wabsolute-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/PWGDQ/dielectron/core/AliDielectronVarManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "893"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/PWGGA/Hyperon/AliAnalysisTaskSigma0Spectra.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "652"
+                  }, {
+                    "key" : "371"
+                  }, {
+                    "key" : "470"
+                  }, {
+                    "key" : "501"
+                  }, {
+                    "key" : "502"
+                  }, {
+                    "key" : "548"
+                  }, {
+                    "key" : "553"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/OADB/AliCentralitySelectionTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1844"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/T0/T0calib/AliT0AnalysisTaskQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "140"
+                  } ]
+                }
+              }, {
+                "key" : "[ 10%] /build/workarea/sw/20155605/1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/PWGGA/Hyperon/AliAnalysisTaskSigma0Spectra.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "410"
+                  } ]
+                }
+              }, {
+                "key" : "[ 79%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/T0/T0calib/AliT0AnalysisTaskQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "140"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]",
             "filename" : {
               "buckets" : [ {
@@ -9400,6 +9459,45 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "261"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'/*' within block comment [-Wcomment]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskGammaFlow.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1852"
+                  }, {
+                    "key" : "1853"
+                  }, {
+                    "key" : "1854"
+                  }, {
+                    "key" : "1856"
+                  }, {
+                    "key" : "1857"
+                  }, {
+                    "key" : "1858"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/TPC/TPCmon/TPCmonLinkDef.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10"
+                  }, {
+                    "key" : "11"
+                  }, {
+                    "key" : "6"
+                  }, {
+                    "key" : "7"
+                  }, {
+                    "key" : "8"
+                  }, {
+                    "key" : "9"
                   } ]
                 }
               } ]
@@ -9613,28 +9711,6 @@
               } ]
             }
           }, {
-            "key" : "'/*' within block comment [-Wcomment]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/TPC/TPCmon/TPCmonLinkDef.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10"
-                  }, {
-                    "key" : "11"
-                  }, {
-                    "key" : "6"
-                  }, {
-                    "key" : "7"
-                  }, {
-                    "key" : "8"
-                  }, {
-                    "key" : "9"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "'gapi_jobformatstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBFORMAT_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
             "filename" : {
               "buckets" : [ {
@@ -9682,6 +9758,71 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format string is not a string literal (potentially insecure) [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/TPC/TPCcalib/AliTPCCorrectionFit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "187"
+                  }, {
+                    "key" : "260"
+                  } ]
+                }
+              }, {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "150"
+                  }, {
+                    "key" : "153"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/PWGLF/FORWARD/trains/OutputUtilities.C",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "195"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "using the result of an assignment as a condition without parentheses [-Wparentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/PWGDQ/reducedTree/AliAnalysisTaskReducedEventProcessor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "122"
+                  }, {
+                    "key" : "125"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/fb408479f3c0e3d8239410b1e4779df1f0e4b07f/fb408479f3/PWGLF/FORWARD/trains/TrainSetup.C",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "557"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/HLT/TPCLib/transform/AliHLTTPCFastTransformObject.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              }, {
+                "key" : "[ 84%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/TPC/TPCrec/AliTPCclusterer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1522"
                   } ]
                 }
               } ]
@@ -9804,29 +9945,6 @@
                     "key" : "89"
                   }, {
                     "key" : "90"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "format string is not a string literal (potentially insecure) [-Wformat-security]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/9f4defde62575153508e53528538083fa39f2074/9f4defde62/TPC/TPCcalib/AliTPCCorrectionFit.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "187"
-                  }, {
-                    "key" : "260"
-                  } ]
-                }
-              }, {
-                "key" : "wsdl2h.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "150"
-                  }, {
-                    "key" : "153"
                   } ]
                 }
               } ]
@@ -10316,34 +10434,6 @@
                     "key" : "177"
                   }, {
                     "key" : "287"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<float, allocator<float> >::iterator::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "9023"
-                  }, {
-                    "key" : "9085"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<float, allocator<float> >::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "8637"
-                  }, {
-                    "key" : "8747"
                   } ]
                 }
               } ]
