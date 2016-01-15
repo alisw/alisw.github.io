@@ -1665,6 +1665,18 @@
               } ]
             }
           }, {
+            "key" : "variable 'pvcheck' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "SimpleProton.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "229"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "variable 'triModule' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
@@ -9985,6 +9997,617 @@
           } ]
         }
       }, {
+        "key" : "3741",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "685"
+                  }, {
+                    "key" : "741"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning Alternatively, use the \"stable\" branch in the git repository. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning Do not use this in production. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "16"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning It might be totally insecure. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "15"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning It might not compile. It might not work as expected. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning This is unstable, untested, development code. [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning Use releases available at https: [-Wcpp]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "17"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveConfigManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveInit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCluster' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fClustersInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCompositeImgFileName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCurrentFileNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fESDEvent' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fEventInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fInputDetectorMask' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3721",
         "by_message" : {
           "buckets" : [ {
@@ -12047,610 +12670,1025 @@
           } ]
         }
       }, {
-        "key" : "3741",
+        "key" : "3749",
         "by_message" : {
           "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "key" : "using integer absolute value function 'abs' when argument is of floating point type [-Wabsolute-value]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TMap.h",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGDQ/dielectron/core/AliDielectronVarManager.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "148"
+                    "key" : "893"
                   } ]
                 }
-              } ]
-            }
-          }, {
-            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/Hyperon/AliAnalysisTaskSigma0Spectra.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "108"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "108"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "108"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TAttImage.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCbase/AliComplexCluster.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "109"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class THnIter' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THn.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TNDArray.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "126"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
+                    "key" : "652"
                   }, {
-                    "key" : "150"
+                    "key" : "371"
                   }, {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "685"
+                    "key" : "410"
                   }, {
-                    "key" : "741"
+                    "key" : "470"
+                  }, {
+                    "key" : "501"
+                  }, {
+                    "key" : "502"
+                  }, {
+                    "key" : "548"
+                  }, {
+                    "key" : "553"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/T0/T0calib/AliT0AnalysisTaskQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "140"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/OADB/AliCentralitySelectionTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1844"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGPP/EVCHAR/AliTrackletAlg.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1195"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGPP/HMPID/AliHMPIDTaskQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "344"
+                  } ]
+                }
+              }, {
+                "key" : "[ 21%] /build/workarea/sw/20155605/1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/GammaConv/AliAnalysisTaskGammaPureMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "444"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "#warning Alternatively, use the \"stable\" branch in the git repository. [-Wcpp]",
+            "key" : "'/*' within block comment [-Wcomment]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCmon/TPCmonLinkDef.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "18"
+                    "key" : "10"
+                  }, {
+                    "key" : "11"
+                  }, {
+                    "key" : "6"
+                  }, {
+                    "key" : "7"
+                  }, {
+                    "key" : "8"
+                  }, {
+                    "key" : "9"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskGammaFlow.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1853"
+                  }, {
+                    "key" : "1854"
+                  }, {
+                    "key" : "1856"
+                  }, {
+                    "key" : "1857"
+                  }, {
+                    "key" : "1858"
+                  } ]
+                }
+              }, {
+                "key" : "[ 18%] /build/workarea/sw/20155605/1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskGammaFlow.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1852"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "#warning Do not use this in production. [-Wcpp]",
+            "key" : "using directive refers to implicitly-defined namespace 'std'",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TTherminator/Therminator/THGlobal.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "16"
+                    "key" : "32"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveHLT/AliEveEventBufferHomer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "8"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveHLT/AliEveEventBufferOffline.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "8"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveHLT/AliEveHOMERManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCAGlobalMergerComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "28"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCATrackerComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "28"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCATrackerOutputConverter.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  } ]
+                }
+              }, {
+                "key" : "[ 94%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCAInputDataCompressorComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "#warning It might be totally insecure. [-Wcpp]",
+            "key" : "control may reach end of non-void function [-Wreturn-type]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/GammaConv/AliConvEventCuts.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "15"
+                    "key" : "3745"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGPP/TRD/AliTRDresolution.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3948"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/PHOS/PHOSbase/AliPHOSCpvGainCalibDA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "265"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCbase/AliTPCSAMPAEmulator.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "252"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/ZDC/ZDCrec/AliZDCReconstructor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1699"
+                  } ]
+                }
+              }, {
+                "key" : "[ 29%] /build/workarea/sw/20155605/1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGPP/EVCHAR/FlowVectorCorrections/QnCorrections/AliQnCorrectionsHistograms.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "248"
+                  } ]
+                }
+              }, {
+                "key" : "[ 31%] /build/workarea/sw/20155605/1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/GammaConv/AliConvEventCuts.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3685"
+                  } ]
+                }
+              }, {
+                "key" : "[ 76%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCbase/AliTPCSAMPAEmulator.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "105"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "#warning It might not compile. It might not work as expected. [-Wcpp]",
+            "key" : "reference cannot be bound to dereferenced null pointer in well-defined C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "key" : "math/fumili/src/G__Fumili.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "14"
+                    "key" : "331"
+                  }, {
+                    "key" : "342"
+                  }, {
+                    "key" : "353"
+                  } ]
+                }
+              }, {
+                "key" : "math/minuit2/src/G__Minuit2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1481"
+                  }, {
+                    "key" : "1502"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/cint/cint/src/pause.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1585"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "#warning This is unstable, untested, development code. [-Wcpp]",
+            "key" : "logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/GammaConv/AliConversionMesonCuts.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "13"
+                    "key" : "745"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGLF/FORWARD/analysis2/AliBaseMCTrackDensity.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "374"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/ITS/UPGRADE/ITSUpgradeSim/AliITSUSimulationPix.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "182"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/PHOS/PHOSbase/AliPHOSEmcBadChannelsMap.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "101"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STAT/TStatToolkit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1545"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "#warning Use releases available at https: [-Wcpp]",
+            "key" : "using the result of an assignment as a condition without parentheses [-Wparentheses]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/18cc1b5682/src/libsodium/sodium/core.c",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGDQ/reducedTree/AliAnalysisTaskReducedEventProcessor.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "17"
+                    "key" : "122"
+                  }, {
+                    "key" : "125"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGLF/FORWARD/trains/TrainSetup.C",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "557"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/transform/AliHLTTPCFastTransformObject.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCrec/AliTPCclusterer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1522"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<double, allocator<double> >::iterator>::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveConfigManager.cxx",
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "84"
+                    "key" : "10194"
+                  }, {
+                    "key" : "10302"
+                  } ]
+                }
+              }, {
+                "key" : "math/mathcore/src/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10519"
+                  }, {
+                    "key" : "10627"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'const' qualifier on reference type 'vector<double, allocator<double> >::iterator::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManager.cxx",
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "80"
+                    "key" : "10025"
+                  }, {
+                    "key" : "9963"
+                  } ]
+                }
+              }, {
+                "key" : "math/mathcore/src/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10288"
+                  }, {
+                    "key" : "10350"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'const' qualifier on reference type 'vector<double, allocator<double> >::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "124"
+                    "key" : "9577"
+                  }, {
+                    "key" : "9687"
+                  } ]
+                }
+              }, {
+                "key" : "math/mathcore/src/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10012"
+                  }, {
+                    "key" : "9902"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveInit.cxx",
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/ITS/tracking/AliITStrackerHLT.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "60"
+                    "key" : "72"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              }, {
+                "key" : "[ 93%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/merger-ca/AliHLTTPCGMSliceTrack.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "206"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveSaveViews::fCluster' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'gapi_jobformatstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBFORMAT_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "key" : "1/osx_x86-64/AliEn-Runtime/v2-19-le-1/include/gapi_job_operations.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "34"
+                    "key" : "24"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveSaveViews::fClustersInfo' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "'gapi_jobstatusstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBSTATUS_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "key" : "1/osx_x86-64/AliEn-Runtime/v2-19-le-1/include/gapi_job_operations.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "34"
+                    "key" : "23"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveSaveViews::fCompositeImgFileName' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/PHOS/PHOSbase/AliPHOSCpvRawStream.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "34"
+                    "key" : "424"
+                  }, {
+                    "key" : "435"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/LHAPDF/lhapdf-5.9.1/src/getdatapath.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "51"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveSaveViews::fCurrentFileNumber' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "control reaches end of non-void function [-Wreturn-type]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGLF/FORWARD/analysis2/AliBaseAODTask.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "34"
+                    "key" : "416"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/global/AliHLTRootObjectMergerComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "86"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STAT/AliNDLocalRegression.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "470"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveSaveViews::fESDEvent' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "34"
+                    "key" : "61"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveSaveViews::fEventInfo' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "equality comparison with extraneous parentheses [-Wparentheses-equality]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWG/Tools/AliCanvas.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "34"
+                    "key" : "431"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGCF/FEMTOSCOPY/HCascadeAnalysis/AliAnalysisTaskhCascadeFemto.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1197"
+                  } ]
+                }
+              }, {
+                "key" : "[ 15%] /build/workarea/sw/20155605/1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGGA/PHOSTasks/PHOS_GAFlow/AliAnalysisTaskThermalGAFlowMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "253"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliEveSaveViews::fInputDetectorMask' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "expression result unused [-Wunused-value]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveBase/AliEveSaveViews.cxx",
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGCF/FLOW/CME/TwoPwrtRP/AliChargeOnePwrtRP.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "34"
+                    "key" : "91"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGCF/FLOW/CME/TwoPwrtRP/AliChargeTwoPwrtRP.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "106"
+                  } ]
+                }
+              }, {
+                "key" : "[ 43%] /build/workarea/sw/20155605/1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGPP/TRD/AliTRDcheckPID.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1209"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format string is not a string literal (potentially insecure) [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCcalib/AliTPCCorrectionFit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "187"
+                  }, {
+                    "key" : "260"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/e6afe77bcfbefedbe98deecb5ea241d7455feea7/e6afe77bcf/PWGLF/FORWARD/trains/OutputUtilities.C",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "195"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'&&' within '||' [-Wlogical-op-parentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TEvtGen/Photos/src/photos-fortran/photosC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1812"
+                  }, {
+                    "key" : "1813"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<TString, allocator<TString> >::iterator>::reference' (aka 'TString &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "core/base/src/G__Base2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21870"
+                  }, {
+                    "key" : "21978"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<char, allocator<char> >::iterator>::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "794"
+                  }, {
+                    "key" : "902"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<float, allocator<float> >::iterator>::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9254"
+                  }, {
+                    "key" : "9362"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<int, allocator<int> >::iterator>::reference' (aka 'int &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "core/cont/src/G__Cont.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13502"
+                  }, {
+                    "key" : "13610"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<long long, allocator<long long> >::iterator>::reference' (aka 'long long &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3614"
+                  }, {
+                    "key" : "3722"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<long, allocator<long> >::iterator>::reference' (aka 'long &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2674"
+                  }, {
+                    "key" : "2782"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<short, allocator<short> >::iterator>::reference' (aka 'short &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1734"
+                  }, {
+                    "key" : "1842"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<string, allocator<string> >::iterator>::reference' (aka 'std::__1::basic_string<char> &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "core/base/src/G__Base2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24766"
+                  }, {
+                    "key" : "24874"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned char, allocator<unsigned char> >::iterator>::reference' (aka 'unsigned char &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "4554"
+                  }, {
+                    "key" : "4662"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned int, allocator<unsigned int> >::iterator>::reference' (aka 'unsigned int &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "6434"
+                  }, {
+                    "key" : "6542"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned long long, allocator<unsigned long long> >::iterator>::reference' (aka 'unsigned long long &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "8314"
+                  }, {
+                    "key" : "8422"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned long, allocator<unsigned long> >::iterator>::reference' (aka 'unsigned long &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "7374"
+                  }, {
+                    "key" : "7482"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned short, allocator<unsigned short> >::iterator>::reference' (aka 'unsigned short &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "5494"
+                  }, {
+                    "key" : "5602"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'string::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "core/base/src/G__Base2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10496"
+                  }, {
+                    "key" : "10558"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<ROOT::Fit::ParameterSettings, allocator<ROOT::Fit::ParameterSettings> >::reference' (aka 'ROOT::Fit::ParameterSettings &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "math/mathcore/src/G__MathFit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "4951"
+                  }, {
+                    "key" : "5061"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<ROOT::Minuit2::MinuitParameter, allocator<ROOT::Minuit2::MinuitParameter> >::reference' (aka 'ROOT::Minuit2::MinuitParameter &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "math/minuit2/src/G__Minuit2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3320"
+                  }, {
+                    "key" : "3430"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<RooStats::HistFactory::Channel, allocator<RooStats::HistFactory::Channel> >::reference' (aka 'RooStats::HistFactory::Channel &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "roofit/histfactory/src/G__HistFactory.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9248"
+                  }, {
+                    "key" : "9358"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<RooStats::HistFactory::HistRef, allocator<RooStats::HistFactory::HistRef> >::reference' (aka 'RooStats::HistFactory::HistRef &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "roofit/histfactory/src/G__HistFactory.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12601"
+                  }, {
+                    "key" : "12711"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<RooStats::HistFactory::Sample, allocator<RooStats::HistFactory::Sample> >::reference' (aka 'RooStats::HistFactory::Sample &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "roofit/histfactory/src/G__HistFactory.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "8095"
+                  }, {
+                    "key" : "8205"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<TEveProjection::PreScaleEntry_t, allocator<TEveProjection::PreScaleEntry_t> >::iterator::reference' (aka 'TEveProjection::PreScaleEntry_t &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "graf3d/eve/src/G__Eve1.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27810"
+                  }, {
+                    "key" : "27872"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<TEveProjection::PreScaleEntry_t, allocator<TEveProjection::PreScaleEntry_t> >::reference' (aka 'TEveProjection::PreScaleEntry_t &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "graf3d/eve/src/G__Eve1.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27424"
+                  }, {
+                    "key" : "27534"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<TProofDrawListOfGraphs::Point3D_t, allocator<TProofDrawListOfGraphs::Point3D_t> >::reference' (aka 'TProofDrawListOfGraphs::Point3D_t &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "proof/proofplayer/src/G__ProofDraw.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3151"
+                  }, {
+                    "key" : "3261"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<TProofDrawListOfPolyMarkers3D::Point4D_t, allocator<TProofDrawListOfPolyMarkers3D::Point4D_t> >::reference' (aka 'TProofDrawListOfPolyMarkers3D::Point4D_t &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "proof/proofplayer/src/G__ProofDraw.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3913"
+                  }, {
+                    "key" : "4023"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<TString, allocator<TString> >::iterator::reference' (aka 'TString &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "core/base/src/G__Base2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21639"
+                  }, {
+                    "key" : "21701"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<TString, allocator<TString> >::reference' (aka 'TString &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "core/base/src/G__Base2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21253"
+                  }, {
+                    "key" : "21363"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<char, allocator<char> >::iterator::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "563"
+                  }, {
+                    "key" : "625"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<char, allocator<char> >::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "177"
+                  }, {
+                    "key" : "287"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<float, allocator<float> >::iterator::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9023"
+                  }, {
+                    "key" : "9085"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<float, allocator<float> >::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "8637"
+                  }, {
+                    "key" : "8747"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<int, allocator<int> >::iterator::reference' (aka 'int &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "core/cont/src/G__Cont.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "13271"
+                  }, {
+                    "key" : "13333"
                   } ]
                 }
               } ]
@@ -16169,852 +17207,6 @@
           } ]
         }
       }, {
-        "key" : "3749",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "using directive refers to implicitly-defined namespace 'std'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TTherminator/Therminator/THGlobal.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "32"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveHLT/AliEveEventBufferHomer.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "8"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveHLT/AliEveEventBufferOffline.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "8"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/EVE/EveHLT/AliEveHOMERManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "19"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCAGlobalMergerComponent.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "28"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCATrackerComponent.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "28"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCATrackerOutputConverter.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "27"
-                  } ]
-                }
-              }, {
-                "key" : "[ 94%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/tracking-ca/AliHLTTPCCAInputDataCompressorComponent.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "27"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'/*' within block comment [-Wcomment]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCmon/TPCmonLinkDef.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10"
-                  }, {
-                    "key" : "11"
-                  }, {
-                    "key" : "6"
-                  }, {
-                    "key" : "7"
-                  }, {
-                    "key" : "8"
-                  }, {
-                    "key" : "9"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "reference cannot be bound to dereferenced null pointer in well-defined C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "math/fumili/src/G__Fumili.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "331"
-                  }, {
-                    "key" : "342"
-                  }, {
-                    "key" : "353"
-                  } ]
-                }
-              }, {
-                "key" : "math/minuit2/src/G__Minuit2.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1481"
-                  }, {
-                    "key" : "1502"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/cint/cint/src/pause.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1585"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<double, allocator<double> >::iterator>::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10194"
-                  }, {
-                    "key" : "10302"
-                  } ]
-                }
-              }, {
-                "key" : "math/mathcore/src/G__MathCore.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10519"
-                  }, {
-                    "key" : "10627"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<double, allocator<double> >::iterator::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10025"
-                  }, {
-                    "key" : "9963"
-                  } ]
-                }
-              }, {
-                "key" : "math/mathcore/src/G__MathCore.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10288"
-                  }, {
-                    "key" : "10350"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<double, allocator<double> >::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "9577"
-                  }, {
-                    "key" : "9687"
-                  } ]
-                }
-              }, {
-                "key" : "math/mathcore/src/G__MathCore.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10012"
-                  }, {
-                    "key" : "9902"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "control may reach end of non-void function [-Wreturn-type]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/PHOS/PHOSbase/AliPHOSCpvGainCalibDA.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "265"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCbase/AliTPCSAMPAEmulator.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "252"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/ZDC/ZDCrec/AliZDCReconstructor.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1699"
-                  } ]
-                }
-              }, {
-                "key" : "[ 76%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TPC/TPCbase/AliTPCSAMPAEmulator.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "105"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/ITS/tracking/AliITStrackerHLT.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "72"
-                  }, {
-                    "key" : "73"
-                  } ]
-                }
-              }, {
-                "key" : "[ 93%] /build/workarea/sw/20155605/1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/HLT/TPCLib/merger-ca/AliHLTTPCGMSliceTrack.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "206"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gapi_jobformatstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBFORMAT_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/osx_x86-64/AliEn-Runtime/v2-19-le-1/include/gapi_job_operations.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "24"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'gapi_jobstatusstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBSTATUS_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/osx_x86-64/AliEn-Runtime/v2-19-le-1/include/gapi_job_operations.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/PHOS/PHOSbase/AliPHOSCpvRawStream.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "424"
-                  }, {
-                    "key" : "435"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/LHAPDF/lhapdf-5.9.1/src/getdatapath.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "51"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/ITS/UPGRADE/ITSUpgradeSim/AliITSUSimulationPix.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "182"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/PHOS/PHOSbase/AliPHOSEmcBadChannelsMap.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "101"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STAT/TStatToolkit.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1545"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'&&' within '||' [-Wlogical-op-parentheses]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/TEvtGen/Photos/src/photos-fortran/photosC.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1812"
-                  }, {
-                    "key" : "1813"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<TString, allocator<TString> >::iterator>::reference' (aka 'TString &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/base/src/G__Base2.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "21870"
-                  }, {
-                    "key" : "21978"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<char, allocator<char> >::iterator>::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "794"
-                  }, {
-                    "key" : "902"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<float, allocator<float> >::iterator>::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "9254"
-                  }, {
-                    "key" : "9362"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<int, allocator<int> >::iterator>::reference' (aka 'int &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/cont/src/G__Cont.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "13502"
-                  }, {
-                    "key" : "13610"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<long long, allocator<long long> >::iterator>::reference' (aka 'long long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3614"
-                  }, {
-                    "key" : "3722"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<long, allocator<long> >::iterator>::reference' (aka 'long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "2674"
-                  }, {
-                    "key" : "2782"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<short, allocator<short> >::iterator>::reference' (aka 'short &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1734"
-                  }, {
-                    "key" : "1842"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<string, allocator<string> >::iterator>::reference' (aka 'std::__1::basic_string<char> &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/base/src/G__Base2.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "24766"
-                  }, {
-                    "key" : "24874"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned char, allocator<unsigned char> >::iterator>::reference' (aka 'unsigned char &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "4554"
-                  }, {
-                    "key" : "4662"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned int, allocator<unsigned int> >::iterator>::reference' (aka 'unsigned int &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "6434"
-                  }, {
-                    "key" : "6542"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned long long, allocator<unsigned long long> >::iterator>::reference' (aka 'unsigned long long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "8314"
-                  }, {
-                    "key" : "8422"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned long, allocator<unsigned long> >::iterator>::reference' (aka 'unsigned long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "7374"
-                  }, {
-                    "key" : "7482"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<unsigned short, allocator<unsigned short> >::iterator>::reference' (aka 'unsigned short &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "5494"
-                  }, {
-                    "key" : "5602"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'string::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/base/src/G__Base2.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10496"
-                  }, {
-                    "key" : "10558"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<ROOT::Fit::ParameterSettings, allocator<ROOT::Fit::ParameterSettings> >::reference' (aka 'ROOT::Fit::ParameterSettings &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "math/mathcore/src/G__MathFit.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "4951"
-                  }, {
-                    "key" : "5061"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<ROOT::Minuit2::MinuitParameter, allocator<ROOT::Minuit2::MinuitParameter> >::reference' (aka 'ROOT::Minuit2::MinuitParameter &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "math/minuit2/src/G__Minuit2.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3320"
-                  }, {
-                    "key" : "3430"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<RooStats::HistFactory::Channel, allocator<RooStats::HistFactory::Channel> >::reference' (aka 'RooStats::HistFactory::Channel &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "roofit/histfactory/src/G__HistFactory.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "9248"
-                  }, {
-                    "key" : "9358"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<RooStats::HistFactory::HistRef, allocator<RooStats::HistFactory::HistRef> >::reference' (aka 'RooStats::HistFactory::HistRef &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "roofit/histfactory/src/G__HistFactory.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12601"
-                  }, {
-                    "key" : "12711"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<RooStats::HistFactory::Sample, allocator<RooStats::HistFactory::Sample> >::reference' (aka 'RooStats::HistFactory::Sample &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "roofit/histfactory/src/G__HistFactory.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "8095"
-                  }, {
-                    "key" : "8205"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<TEveProjection::PreScaleEntry_t, allocator<TEveProjection::PreScaleEntry_t> >::iterator::reference' (aka 'TEveProjection::PreScaleEntry_t &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "graf3d/eve/src/G__Eve1.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "27810"
-                  }, {
-                    "key" : "27872"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<TEveProjection::PreScaleEntry_t, allocator<TEveProjection::PreScaleEntry_t> >::reference' (aka 'TEveProjection::PreScaleEntry_t &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "graf3d/eve/src/G__Eve1.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "27424"
-                  }, {
-                    "key" : "27534"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<TProofDrawListOfGraphs::Point3D_t, allocator<TProofDrawListOfGraphs::Point3D_t> >::reference' (aka 'TProofDrawListOfGraphs::Point3D_t &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "proof/proofplayer/src/G__ProofDraw.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3151"
-                  }, {
-                    "key" : "3261"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<TProofDrawListOfPolyMarkers3D::Point4D_t, allocator<TProofDrawListOfPolyMarkers3D::Point4D_t> >::reference' (aka 'TProofDrawListOfPolyMarkers3D::Point4D_t &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "proof/proofplayer/src/G__ProofDraw.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3913"
-                  }, {
-                    "key" : "4023"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<TString, allocator<TString> >::iterator::reference' (aka 'TString &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/base/src/G__Base2.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "21639"
-                  }, {
-                    "key" : "21701"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<TString, allocator<TString> >::reference' (aka 'TString &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/base/src/G__Base2.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "21253"
-                  }, {
-                    "key" : "21363"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<char, allocator<char> >::iterator::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "563"
-                  }, {
-                    "key" : "625"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<char, allocator<char> >::reference' (aka 'char &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "177"
-                  }, {
-                    "key" : "287"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<float, allocator<float> >::iterator::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "9023"
-                  }, {
-                    "key" : "9085"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<float, allocator<float> >::reference' (aka 'float &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "8637"
-                  }, {
-                    "key" : "8747"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<int, allocator<int> >::iterator::reference' (aka 'int &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/cont/src/G__Cont.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "13271"
-                  }, {
-                    "key" : "13333"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<int, allocator<int> >::reference' (aka 'int &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/cont/src/G__Cont.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12885"
-                  }, {
-                    "key" : "12995"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<long long, allocator<long long> >::iterator::reference' (aka 'long long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3383"
-                  }, {
-                    "key" : "3445"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<long long, allocator<long long> >::reference' (aka 'long long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "2997"
-                  }, {
-                    "key" : "3107"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<long, allocator<long> >::iterator::reference' (aka 'long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "2443"
-                  }, {
-                    "key" : "2505"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<long, allocator<long> >::reference' (aka 'long &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "2057"
-                  }, {
-                    "key" : "2167"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<pair<int, int>, allocator<pair<int, int> > >::reference' (aka 'std::__1::pair<int, int> &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "core/meta/src/G__Meta.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "13095"
-                  }, {
-                    "key" : "13205"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'const' qualifier on reference type 'vector<short, allocator<short> >::iterator::reference' (aka 'short &') has no effect [-Wignored-qualifiers]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "cint/cint/lib/dll_stl/G__cpp_vector.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1503"
-                  }, {
-                    "key" : "1565"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "3737",
         "by_message" : {
           "buckets" : [ {
@@ -19800,6 +19992,99 @@
           } ]
         }
       }, {
+        "key" : "3746",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/ccd96cc4d5db59fa220112c5f7696b315ccbff56/ccd96cc4d5/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "conflicting types for built-in function 'malloc'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/GEANT3/v2-0/v2-0/minicern/fchtak.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "35"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/net/alien/src/TAlienCollection.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3743",
         "by_message" : {
           "buckets" : [ {
@@ -20132,6 +20417,47 @@
           } ]
         }
       }, {
+        "key" : "3750",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "conflicting types for built-in function 'malloc'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/GEANT3/v2-0/v2-0/minicern/fchtak.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "35"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/net/alien/src/TAlienCollection.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3555",
         "by_message" : {
           "buckets" : [ {
@@ -20159,40 +20485,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "44"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "3746",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/net/alien/src/TAlienCollection.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "3750",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/ROOT/v5-34-30-alice/23865caede/net/alien/src/TAlienCollection.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
                   } ]
                 }
               } ]
