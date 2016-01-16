@@ -1,1 +1,24 @@
-{ }
+{
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "3753",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "error writing to /tmp/ccqtxOSG.s: Cannot allocate memory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/a97cd2debae18a34a02489f79ac639db6b79408f/FairRoot/base/G__BaseDict.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "30632"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
