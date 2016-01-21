@@ -1,4 +1,24 @@
 -
+ commit: "b5836642413bdb0e52c508f5e0233bcb66a555b7"
+ message: >-
+    ALIROOT-6531 doxygen style
+ author: !!str gconesab
+-
+ commit: "31238365fed5558a0e5878875d831b6aec6a7126"
+ message: >-
+    ALIROOT-6531 store in AOD fraction of MC deposited energy in the clusters
+ author: !!str gconesab
+-
+ commit: "72fef2810b046671b4220e604498c05a091f654c"
+ message: >-
+    ALIROOT-6531 Add fraction of MC deposited energy in clusters, 2 arrays: one with same size as MC labels array, containing fraction of total deposited energy per MC particle in ushorts from 0 to 100; another with as many entries as cells in the cluster, int's where the deposited energy fraction of at maximum 4 MC particles is packed, the 4 can only be the 4 most important contributors to the cluster
+ author: !!str gconesab
+-
+ commit: "cfef317d18faae7f3e210d045de613022649920c"
+ message: >-
+    ALIROOT-6531 remove if to null pointer, deleted before
+ author: !!str gconesab
+-
  commit: "2d681d24291a9fbfb568034a9b19a31300e3a4ea"
  message: >-
     fix in ITS MVcut bunch spacing: 50->25ns
