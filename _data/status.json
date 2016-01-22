@@ -2,33 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "3725",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "failure"
-          } ]
-        }
-      }, {
-        "key" : "3726",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "failure"
-          } ]
-        }
-      }, {
-        "key" : "3727",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "failure"
-          } ]
-        }
-      }, {
         "key" : "3728",
         "status" : {
           "buckets" : [ {
@@ -399,6 +372,27 @@
         "status" : {
           "buckets" : [ {
             "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "3759",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "3760",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
+          } ]
+        }
+      }, {
+        "key" : "3761",
+        "status" : {
+          "buckets" : [ {
+            "key" : "failure"
           } ]
         }
       } ]
