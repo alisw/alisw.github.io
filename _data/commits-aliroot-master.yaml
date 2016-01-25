@@ -1,4 +1,19 @@
 -
+ commit: "1d6e57cfaf3744521e0707c524b3d0e4bff46269"
+ message: >-
+    add setters for the list of primaries/parents for reclusterization at analysis level
+ author: !!str gconesab
+-
+ commit: "f46283eddc618a900155f5f16abf4572602768ee"
+ message: >-
+    add 2 new more pre-defined track cuts kGlobal2011 and kLooseWithITSRefit; main difference in kGlobal2011 is the inclusion of a different parametrized DCA cut pt dependent, that is also used in years later than 2011
+ author: !!str gconesab
+-
+ commit: "b8438fcfb82e7acf787e3da31e2b0d7b58ae6204"
+ message: >-
+    fix valid variable name, fix indentations
+ author: !!str gconesab
+-
  commit: "6a930cfd66d79e8494ed7bee0032d32046ba17f2"
  message: >-
     Add protection against null recoparam pointer
