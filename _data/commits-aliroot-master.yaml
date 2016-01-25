@@ -1,4 +1,9 @@
 -
+ commit: "45e41e2d8e0c862636c468024f562a0eaf2a22f5"
+ message: >-
+    Added HLT trigger mode info
+ author: !!str shahoian
+-
  commit: "ab8018e6ed6f2e4f1942f749a4fc2dba9a9496d5"
  message: >-
     Increase AliReconstruction class version
@@ -188,8 +193,3 @@
  message: >-
     ATO-108  - 1.) adding restircted mean estimator - controled by cutFraction 2.) adding median estimator 3.) dumping downscaled amount of the 1D histogram into tree - for debugging purposes - fraction controlled by env variable gDumpHistoFraction 4.) Adding fit status from TFitResultPtr  to the tree  (not sufficent diagnostic)
  author: !!str mivanov
--
- commit: "04eb4f747a0bdc531cf849087b5f97d71bbbdfca"
- message: >-
-    store a copy of configuration string in AliHLTSystem object, to provide possibility for HLT components to read options directly from the main HLT configuration string
- author: !!str sgorbuno
