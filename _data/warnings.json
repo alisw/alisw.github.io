@@ -21669,6 +21669,109 @@
           } ]
         }
       }, {
+        "key" : "4046",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'&&' within '||' [-Wlogical-op-parentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/TEvtGen/Photos/src/photos-fortran/photosC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1812"
+                  }, {
+                    "key" : "1813"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "add explicit braces to avoid dangling else [-Wdangling-else]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "[ 35%] [ 35%] /build/workarea/sw/20155609/1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/TEvtGen/Photos/src/utilities/Log.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "125"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "[  4%] /build/workarea/sw/20155609/1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/LHAPDF/lhapdf-5.9.1/src/getdatapath.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "51"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "control may reach end of non-void function [-Wreturn-type]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/ZDC/ZDCrec/AliZDCReconstructor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1699"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "control reaches end of non-void function [-Wreturn-type]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/STAT/AliNDLocalRegression.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "470"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "enumeration value 'kNNormType' not handled in switch [-Wswitch]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/STAT/TStatToolkit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2241"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "enumeration values 'kLTM' and 'kLTMRMS' not handled in switch [-Wswitch]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/STAT/TStatToolkit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2180"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "[ 22%] /build/workarea/sw/20155609/1/SOURCES/AliRoot/56eaf3e08dba36bee87acaa28d4124f26f20df39/56eaf3e08d/STAT/TStatToolkit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1547"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "3895",
         "by_message" : {
           "buckets" : [ {
@@ -21805,83 +21908,6 @@
             }
           }, {
             "key" : "#warning Use releases available at https:",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/d1b028abe3/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "17"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "3879",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "#warning Alternatively, use the \"stable\" branch in the git repository. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/d1b028abe3/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "18"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning Do not use this in production. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/d1b028abe3/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "16"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning It might be totally insecure. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/d1b028abe3/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "15"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning It might not compile. It might not work as expected. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/d1b028abe3/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "14"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning This is unstable, untested, development code. [-Wcpp]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/sodium/master/d1b028abe3/src/libsodium/sodium/core.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "13"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning Use releases available at https: [-Wcpp]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/SOURCES/sodium/master/d1b028abe3/src/libsodium/sodium/core.c",
