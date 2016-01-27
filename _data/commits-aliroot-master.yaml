@@ -1,4 +1,14 @@
 -
+ commit: "d8e40ad1a7c14442878683c906d904ee294ab3e0"
+ message: >-
+    ATO-108, ATO-326 - 1.) Patching TRD/TOF hole with the ITS 2.) Adding "bin response function" to distribute information 3.) Adding more metadata (cluster and entry counters) 4.) FitDrift moved form macro to AliTPCcalibAlignInterpolation::FitDrift
+ author: !!str mivanov
+-
+ commit: "d5f9249ed32caf63c62365d68aee59d82d968377"
+ message: >-
+    ATO-108, ATO-326 - adding LTM statistic, skewness and Kurtosis to the list of the per bin statistics. (speed to benchmark)
+ author: !!str mivanov
+-
  commit: "5e297def7d4d499722f1b7853b4e85081ec82813"
  message: >-
     add setters for new parameters and their value for Run2, comment them for Run1; plus cosmetics
