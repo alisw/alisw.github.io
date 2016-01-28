@@ -1,4 +1,359 @@
 -
+ commit: "83f72c67681a9a511978d02700b2fd81a47aef27"
+ message: >-
+    speedup of Ion Tail correction
+ author: !!str shahoian
+-
+ commit: "a83dc376c7a8e560349763b6e0aad1274d202022"
+ message: >-
+    Methods to get derivatives added
+ author: !!str shahoian
+-
+ commit: "e18b81c9c2d2eb6596dc1b957243d29c04f8a369"
+ message: >-
+    Option to use fraction of SCD correction as a syst. error
+ author: !!str shahoian
+-
+ commit: "5623a89a09c61e1972598b14a5a03a34ab5cebda"
+ message: >-
+    Store applied distortion in the cluster
+ author: !!str shahoian
+-
+ commit: "52d470e2aca58046eaeb2f71cfbfd05a98f089b1"
+ message: >-
+    Extra getters
+ author: !!str shahoian
+-
+ commit: "5082e023309d9f0642c7e277014137908b0e6497"
+ message: >-
+    Mechanism to store rounded distortions
+ author: !!str shahoian
+-
+ commit: "898b56687e0e2c58b294802bd1ca81ab17295c08"
+ message: >-
+    MC TimeStamp was never transferred to ESDEvent header
+ author: !!str shahoian
+-
+ commit: "7e17e069eb2aed2d52704eda37522319c27729c1"
+ message: >-
+    Always order TimeStamps + fix for array dimension
+ author: !!str shahoian
+-
+ commit: "ca444399929eb35b5b5c65300e8d6f2474183648"
+ message: >-
+    Don't generate ordered list if time interval is 0
+ author: !!str shahoian
+-
+ commit: "962fbccfe6167b29e428e154ae4d07e06ab4a88e"
+ message: >-
+    mechanism to apply distortions from Chebyshev maps in MC
+ author: !!str shahoian
+-
+ commit: "8c7b30f9e0c5599d83991d7915f4a556d0f2f424"
+ message: >-
+    Use time_t for timestamp, instead of UInt_t
+ author: !!str shahoian
+-
+ commit: "c7d63c3995f9402d40b55104112f4c7b0ae85fbb"
+ message: >-
+    Use time_t for timestamp, instead of UInt_t
+ author: !!str shahoian
+-
+ commit: "248ea56f25c56c4923956e1bcc8f6f87aa87e33b"
+ message: >-
+    Option to generate ordered time stamps according to GRP
+ author: !!str shahoian
+-
+ commit: "31e311b96177816a8a4f889fd7ba13f7f393996d"
+ message: >-
+    Distortions container as lin.interpolation of 2D Cheb.param
+ author: !!str shahoian
+-
+ commit: "74f934127a1afc63e581f2eef3865f134bec23d0"
+ message: >-
+    Distortions in Chebishev stack formate (to finish)
+ author: !!str shahoian
+-
+ commit: "040323362b10a09607740e62803a2abe2d8d2baa"
+ message: >-
+    AliTPCChebCorr will serve as base clust of its inversion (distortion)
+ author: !!str shahoian
+-
+ commit: "52700886d791b4887715a66056e8448f0b2832ca"
+ message: >-
+    Removed remnants of mechanism to account for sector change
+ author: !!str shahoian
+-
+ commit: "7cc78a3733d1bdba8326eb291b10b2dcf733a2b6"
+ message: >-
+    applied primary selection to MakeSeeds3Dist
+ author: !!str shahoian
+-
+ commit: "f1af8ee6e3e759b6ac4094ff11394a34b0bb555f"
+ message: >-
+    conflict resolved
+ author: !!str shahoian
+-
+ commit: "e31a5b6a005e8b79c75a626cff97adb9bbf1ae44"
+ message: >-
+    conflict resolved
+ author: !!str shahoian
+-
+ commit: "ba3d5b7ad3fb521feba0e305669990765b0ab0b2"
+ message: >-
+    Use extended roads also for MakeSeeds?Dist family
+ author: !!str shahoian
+-
+ commit: "b71044bb6bddf676fbc2e9bcb9e0675b28c8c746"
+ message: >-
+    Correction with Cheb.maps implemented. UpdateTimeDependentCache to finalize
+ author: !!str shahoian
+-
+ commit: "bb8051388bbcc488384343c42a6d937e783abd81"
+ message: >-
+    Extend roads consistently for all FindNearest... calls
+ author: !!str shahoian
+-
+ commit: "da3f0f44e6bc06c57d6f899378a8f31f35d5d618"
+ message: >-
+    ATO-108 - Extended search roads for clusters  as an option specified in reconstruction. This option to be activated  in CPass0/CPass1
+ author: !!str mivanov
+-
+ commit: "ee25fc6a89a7d1c994d1327c725116f94e6241e2"
+ message: >-
+    FastMath->TMath in new methods (was not in the master)
+ author: !!str shahoian
+-
+ commit: "0443ff703cbb760df58319fd29b302adfd9c756f"
+ message: >-
+    memory leak fix
+ author: !!str shahoian
+-
+ commit: "460048121a92d65ab74dfb57b4f956e8cc502141"
+ message: >-
+    memory leak fix in AliNDLocalRegression
+ author: !!str shahoian
+-
+ commit: "0bb3a757e6d4da783ae90128ed52497e3445cacf"
+ message: >-
+    Account distortions in inter-sector dead zone estimations (with slow getter)
+ author: !!str shahoian
+-
+ commit: "958d2aeb95c13b076aeb2b02b2d0e9ec9461af89"
+ message: >-
+    Memorise target row for each propagatio, use as GetRowNumber
+ author: !!str shahoian
+-
+ commit: "18866d2472d6ef60c7680e4a06350ee1e9ae5afa"
+ message: >-
+    fix of typo in fgkMaxY2X definition
+ author: !!str shahoian
+-
+ commit: "f69a94dcdd263cc10678367f7e5aa2672dadb4df"
+ message: >-
+    init cached row to -1, new method for GetRowNumber
+ author: !!str shahoian
+-
+ commit: "1e52ef438192a4dc25f83b110aa6ada73b902181"
+ message: >-
+    in GetRowNumber rely in cached row rather than distorted X
+ author: !!str shahoian
+-
+ commit: "d97fd2679480c2fffee56e62aca3888a81268cff"
+ message: >-
+    fix in sector ID increment/decrement
+ author: !!str shahoian
+-
+ commit: "93354d16c971d26ff6d3dcc4470b9c62f9a1930d"
+ message: >-
+    Version of MakeSeeds2 aware of distortions
+ author: !!str shahoian
+-
+ commit: "b0d1dcf9b74d7309c565e04cd2ce3518771d7009"
+ message: >-
+    Version of MakeSeeds5 aware of distortions
+ author: !!str shahoian
+-
+ commit: "92175517b430e178ac9fb516e50e782901d72c81"
+ message: >-
+    Version of MakeSeeds3 aware of distortions
+ author: !!str shahoian
+-
+ commit: "b8cacaee55d7ee89331ddf5ef4cb1bdbabd0417b"
+ message: >-
+    with distortions Ymax=x_real*maxY2X
+ author: !!str shahoian
+-
+ commit: "bc0cc30580a7f42b7a005fd12da126ab2af059fb"
+ message: >-
+    RecoParam will steer accountung distortions in tracking
+ author: !!str shahoian
+-
+ commit: "e204f216611f14cbfdf6acb603138030d49cbca2"
+ message: >-
+    fix in value of max Y/X
+ author: !!str shahoian
+-
+ commit: "82c62e4b90215f476593bbdb20e2fc5c3a2fe9b8"
+ message: >-
+    Implemented sector change due to distortions
+ author: !!str shahoian
+-
+ commit: "faae08c830407d008c3adb5250f7c55e67edd4e4"
+ message: >-
+    Cleaned sector change implementation
+ author: !!str shahoian
+-
+ commit: "4e6b0ac419cf39fc7509246331393205d6635f52"
+ message: >-
+    Distortions may move cluster to neighbouring sector
+ author: !!str shahoian
+-
+ commit: "68f1778fbd07d8b82641895757e2b9f1e94a44c0"
+ message: >-
+    Methods to rotate cluster to neighbouring sector
+ author: !!str shahoian
+-
+ commit: "0d4485cabf54676708a1fe846981eef0f5a5ea1f"
+ message: >-
+    bit flag to signal sector change due to distortions
+ author: !!str shahoian
+-
+ commit: "5a1b1712cccad659c5f41548521008489f634253"
+ message: >-
+    account for distortion in FollowToNext
+ author: !!str shahoian
+-
+ commit: "eb83fa7843f748cb8b7fccb2862ec44e54344c04"
+ message: >-
+    For very small steps use bz only propagation to speed up
+ author: !!str shahoian
+-
+ commit: "5b841d53143884c72388215c5e3ae0068ed679bf"
+ message: >-
+    add method to estimate Y,Z in sector frame
+ author: !!str shahoian
+-
+ commit: "dfe07727ff71c210a541d59e60dce36c8075f301"
+ message: >-
+    partial optimization in view of accounting distortions in tracking
+ author: !!str shahoian
+-
+ commit: "ac77a2cd343e0b730639ab92894213152d8b33af"
+ message: >-
+    Use bz at IP for fast crude checks
+ author: !!str shahoian
+-
+ commit: "caa878facc83ba19b5b468e604355598fc13da35"
+ message: >-
+    Separate ApplyCorrectionMap and EvalCorrectionMap methods
+ author: !!str shahoian
+-
+ commit: "f42ec04217263e67f612d831a06fcacfb49d5736"
+ message: >-
+    row in ROC convention; interface to single dimension query
+ author: !!str shahoian
+-
+ commit: "0912ed4baaff82be30840135da1b7a96de86f74b"
+ message: >-
+    Added method for query of single output dimension only
+ author: !!str shahoian
+-
+ commit: "f58eae64bc748aa396aac9798eda07138e5699de"
+ message: >-
+    fix in sect[0-71]->sect[0-17]+side conversion
+ author: !!str shahoian
+-
+ commit: "0b385c074e74282438add581d6ce0944a513f930"
+ message: >-
+    Remove object from AliCDBEntry before cleaning the cache
+ author: !!str shahoian
+-
+ commit: "f2a711c3a14c5f0e0688bfed05286fbb03f91cf7"
+ message: >-
+    18 -> kNSectors
+ author: !!str shahoian
+-
+ commit: "a2f213b4ca9eac7fcbdc5ca9c13f6ce5389c276b"
+ message: >-
+    AliChebCorr takes sector in 0-71 ROC convention
+ author: !!str shahoian
+-
+ commit: "48d3eda6f49da78385168b0452c90ed984f10a7e"
+ message: >-
+    fix in matching time bin selection
+ author: !!str shahoian
+-
+ commit: "145a81fa79754cbf6cf4f60aa1cfb27d5ccf5194"
+ message: >-
+    Take edge bin if queried coordinate is outside of valid range
+ author: !!str shahoian
+-
+ commit: "9530750ed107b75f4508f87a074e622821a7e72b"
+ message: >-
+    fix in order of arguments
+ author: !!str shahoian
+-
+ commit: "c5fef8f7884967fe16d2a9bf02551b554cb4c0e7"
+ message: >-
+    Make sure recoparam is attached before TimeStamp update
+ author: !!str shahoian
+-
+ commit: "e71bbb1a47b798c985a07215cf80e8a49f84fc40"
+ message: >-
+    Warn about corr.map change
+ author: !!str shahoian
+-
+ commit: "2c6cd0fcb137ae26a15fc1ce078293c56aad8218"
+ message: >-
+    Add angular gap between Cheb2Stack sectors
+ author: !!str shahoian
+-
+ commit: "d4c06cd855c0eb2c0a6432f55a54af436207606d"
+ message: >-
+    make maps handled by Transform directly, unload extra bins
+ author: !!str shahoian
+-
+ commit: "162a9db0ed9e9d95b7eea247581ab1d66594cd87"
+ message: >-
+    getters added + bug fix
+ author: !!str shahoian
+-
+ commit: "8b317f7c66baa9051fe8ba5f2bcdd70c10fd9e02"
+ message: >-
+    implemented caching of 1 or 2 closest time bins
+ author: !!str shahoian
+-
+ commit: "e1e2e1eafa303dd64f33b568a6491a0edbe4b16b"
+ message: >-
+    Correction with Cheb.maps implemented. UpdateTimeDependentCache to finalize
+ author: !!str shahoian
+-
+ commit: "d45822e37165a0d2d0c3f4c8eb8534871405d846"
+ message: >-
+    moved AliTPCChebCorr to TPCcalib
+ author: !!str shahoian
+-
+ commit: "229056b9ff465fc945f46d2dbd9990c12bebb8bc"
+ message: >-
+    switch to use parameterized maps corrections
+ author: !!str shahoian
+-
+ commit: "19b1696e369ac49d82dbd813a291d0b78e5b1efd"
+ message: >-
+    optimize Transform
+ author: !!str shahoian
+-
+ commit: "16aacdfc20329474db631faa2cc750351fd76871"
+ message: >-
+    add time-dependence and Z/R flags
+ author: !!str shahoian
+-
+ commit: "75ec4f1f315ece725f0aabeec0b23d884fc79450"
+ message: >-
+    new classes for TPC space points calib. container
+ author: !!str shahoian
+-
  commit: "702f35e7dfdc60ea3707c4fbe5d0934dac689eb2"
  message: >-
     Possibility to disable on-fly V0 finder from rec.C
