@@ -1,4 +1,14 @@
 -
+ commit: "f2e7a113a6ac46609e66fb26cdca0c5242bf27d2"
+ message: >-
+    Rename DDSEnvProp.h to dds_env_prop.h
+ author: !!str Andrey Lebedev
+-
+ commit: "6af2e45fb066b946e22df2031400987fbd6d9619"
+ message: >-
+    Rename DDS libraries to dds_XYZ_lib.
+ author: !!str Andrey Lebedev
+-
  commit: "106a8d7af93aa93d2328052643687dc336ab4061"
  message: >-
     Update ReleaseNotes.md
@@ -237,14 +247,4 @@
  commit: "b57d9111116c13b9e6155fe3b7fdf78b8cf79a8e"
  message: >-
     GH-83: add dds::topology namespace in dds-topology module
- author: !!str Anar Manafov
--
- commit: "a6c25d4adb118ef4a31856e178975c684cf94c24"
- message: >-
-    GH-83: add dds::commander namespace in dds-commander module
- author: !!str Anar Manafov
--
- commit: "e547dfbd9f462cf87763d18ddff90816abd71cc0"
- message: >-
-    GH-85: fix git error when using out of source build
  author: !!str Anar Manafov
