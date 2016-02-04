@@ -1,4 +1,9 @@
 -
+ commit: "2672b9b8a73fa5fa65536f78415086f06e5d6304"
+ message: >-
+    Merge branch 'master' of https://git.cern.ch/reps/AliRoot
+ author: !!str belikov
+-
  commit: "3d2500e70c372f3d049969757780a126f8cb0be4"
  message: >-
     CPV bad channel map is added (S.Evdokimov)
@@ -9,10 +14,40 @@
     Remove obsolete functions
  author: !!str dstocco
 -
+ commit: "6d7b188c5ab7a025946e855743ff3952bbf63a20"
+ message: >-
+    Merge branch 'feature-itsmft'
+ author: !!str belikov
+-
  commit: "4f373076ac2ab72aa0c5954fd7f65f801c0eec70"
  message: >-
     ATO-325 - adding ovelrpa track to the Fast simulation. First version.
  author: !!str mivanov
+-
+ commit: "3c0f9382011f3bb8585f17e0a659eb2d0c26caad"
+ message: >-
+    MUON+MFT track merging works now without changes in the MUON code; ready for merging with the master.
+ author: !!str bogdan
+-
+ commit: "1032c802e1ac1355061266f8bdc1bd3db573f414"
+ message: >-
+    Merge branch 'feature-itsmft' of https://git.cern.ch/reps/AliRoot into feature-itsmft
+ author: !!str belikov
+-
+ commit: "d7b6e13c1ebacae390cab49f0ec5ea99cd3bd8b5"
+ message: >-
+    Moving the obsolete AliITSRecPointU class to the v0 folder
+ author: !!str belikov
+-
+ commit: "8a88725ec255ca0aa64376055b8f70b1b01ccec9"
+ message: >-
+    Moving the AliITSMFTDigitPix class to the COMMONITSMFTBase library
+ author: !!str belikov
+-
+ commit: "256e7724a8c5f4ccdbfbf34f3a295657a8552f59"
+ message: >-
+    Prepare the MUON+MFT track merging without interference in the MUON code. Use a light version of the AliMuonForwardTrack. This test version of AliMFTTracker produces matching with both type of tracks and still needs the modifications in the MUON code, see 22aef0c8f. Write assignment operator for several classes. Eliminate from compilation AliMFTTrackerMU, AliMuonForwardTrackFinder and AliMuonForwardTrackPair, since the AliMuonForwardTrack has changed.
+ author: !!str bogdan
 -
  commit: "f36c6faf8629186409ce2be0e5e3147cc886905f"
  message: >-
@@ -34,6 +69,11 @@
     ATO-193 - adding protection in Eval (back compatibility-fBinWidth added)
  author: !!str mivanov
 -
+ commit: "64d101fff2ada2bf8e6d597a5ca8d7976f71467a"
+ message: >-
+    Removing the pointer to geomanager from AliITSMFTHit class. The pointer to geomanager in AliITSMFTChip class is now non-static.
+ author: !!str belikov
+-
  commit: "326131305ef6da72468e53265ce12ab2be73c72d"
  message: >-
     set proper datatype for uncompressed clusters in TPC data publisher
@@ -48,6 +88,11 @@
  message: >-
     config file for AliExternalInfo (Carsten Klein)
  author: !!str wiechula
+-
+ commit: "9b68e13c0232195e681a539a41010b466ed0824d"
+ message: >-
+    Remove function declaration without definition
+ author: !!str bogdan
 -
  commit: "ddc88f7fe7dee53a55c23ab5470c33278e4fbcc0"
  message: >-
@@ -99,6 +144,41 @@
     fix for AliMCEvent::GetVZEROData hiding base virtual f-n
  author: !!str shahoian
 -
+ commit: "b41c99b5e40106fc725595c2b61399e69ed3b3f1"
+ message: >-
+    Test
+ author: !!str tieulent
+-
+ commit: "34cb7a2bdb8a360f25062ae84a19dece29a51ccc"
+ message: >-
+    MFT Standalone Tracking via Kalman Filter (1st implementation)
+ author: !!str tieulent
+-
+ commit: "71ff0cd2bf4996bd5b488dabf3bd022858306e1f"
+ message: >-
+    Fixing print out
+ author: !!str tieulent
+-
+ commit: "fa04f38f060abe2f922c39792411bafe0f0ceaa5"
+ message: >-
+    Fixing Disk copy number
+ author: !!str tieulent
+-
+ commit: "f13c56901ffc822f4091304a2b18255147767a21"
+ message: >-
+    Updating Cmake Files
+ author: !!str tieulent
+-
+ commit: "47abe18681079471e831b8f9c68a80e544227b97"
+ message: >-
+    Adding Class AliMFTTrackReconstructor
+ author: !!str tieulent
+-
+ commit: "d92634fe9f89d40c1ec304798fe5c38921f7f247"
+ message: >-
+    Adding class AliMFTTrackExtrap
+ author: !!str tieulent
+-
  commit: "6b34a3962e06c1334da108563cf2d03113b9790b"
  message: >-
     remove printouts (changed AliError to AliDebug)
@@ -113,6 +193,21 @@
  message: >-
     default clusterizer for pp is V1 not V2
  author: !!str gconesab
+-
+ commit: "3ed7d6d0536816fed350d10a4105dc94fefb66dc"
+ message: >-
+    Adding material PEEK
+ author: !!str tieulent
+-
+ commit: "121440ab73705718f19a88adc39faa5e0ae087d6"
+ message: >-
+    Adding Constants for Kalman filtering
+ author: !!str tieulent
+-
+ commit: "7a1efe33ad7b2a71e07f620a3173fe43864c5f5a"
+ message: >-
+    Changing ladder volume to a TGeoVolumeAssembly
+ author: !!str tieulent
 -
  commit: "05b2d7dd52abbb7a10e58c1d7fc027f7e7a60e4e"
  message: >-
