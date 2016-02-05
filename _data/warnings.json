@@ -416,6 +416,22 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskSEDplusCorrelations::fEtaRange' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGHF/correlationHF/AliAnalysisTaskSEDplusCorrelations.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "106"
+                  }, {
+                    "key" : "156"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliProtonAnalysis::fSysAntiProtonHigh' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -671,20 +687,6 @@
                 }
               } ]
             }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fFileEff' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
           } ]
         }
       }, {
@@ -698,6 +700,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              }, {
+                "key" : "3/slc6_x86-64/AliRoot/041160d84ec3610748759b46ebd641a540399b99-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
                   } ]
                 }
               } ]
@@ -820,25 +841,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCbase/AliComplexCluster.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "109"
-                  } ]
-                }
-              }, {
-                "key" : "3/slc6_x86-64/AliRoot/041160d84ec3610748759b46ebd641a540399b99-1/include/AliComplexCluster.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "109"
                   } ]
                 }
               } ]
@@ -971,6 +973,36 @@
               } ]
             }
           }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/SPECTRA/AntiprotonToProton/train/AliAnalysisTaskProtonAbsorbtion.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "196"
+                  }, {
+                    "key" : "226"
+                  }, {
+                    "key" : "231"
+                  } ]
+                }
+              }, {
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  } ]
+                }
+              }, {
+                "key" : "3/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1055,25 +1087,6 @@
               } ]
             }
           }, {
-            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "43"
-                  } ]
-                }
-              }, {
-                "key" : "3/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3256"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
             "filename" : {
               "buckets" : [ {
@@ -1100,6 +1113,54 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonLow' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
                   } ]
                 }
               } ]
@@ -1145,6 +1206,20 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskEmcal::fPythiaInfoName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/EMCAL/AliAnalysisTaskEmcal.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "141"
+                  }, {
+                    "key" : "52"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliAnalysisTaskEmcalJetHMEC::fRunType' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1154,6 +1229,90 @@
                     "key" : "43"
                   }, {
                     "key" : "97"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEmcalJetTriggerMatcher::fTrkQAcut' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetTriggerMatcher.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  }, {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNanoAODFilter::fMCMode' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/DevNanoAOD/AliAnalysisTaskNanoAODFilter.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "52"
+                  }, {
+                    "key" : "66"
                   } ]
                 }
               } ]
@@ -1228,128 +1387,6 @@
                 }
               } ]
             }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "119"
-                  }, {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "33"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMultiplicitySelectionCP' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMultiplicitySelectionCPPWA' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCPPWA.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "14"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "33"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMultiplicitySelectionCP(const AliMultiplicitySelectionCP&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "12"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMultiplicitySelectionCPPWA(const AliMultiplicitySelectionCPPWA&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCPPWA.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "14"
-                  } ]
-                }
-              } ]
-            }
           } ]
         }
       }, {
@@ -1363,6 +1400,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              }, {
+                "key" : "7/slc7_x86-64/AliRoot/041160d84ec3610748759b46ebd641a540399b99-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
                   } ]
                 }
               } ]
@@ -1471,18 +1527,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "67"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCbase/AliComplexCluster.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "109"
                   } ]
                 }
               } ]
@@ -1656,6 +1700,18 @@
               } ]
             }
           }, {
+            "key" : "'AliRsnMiniEvent::fRefMult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/RESONANCES/AliRsnMiniEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1694,6 +1750,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "7/BUILD/6bb0667d96c111acd1f368e55671d3e0431bd3ff/AliPhysics/PWGLF/RESONANCES/extra/G__PWGLFrsnextra.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1474"
                   } ]
                 }
               } ]
@@ -1751,6 +1826,34 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskEmcalJetHMEC::fRunType' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetHMEC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  }, {
+                    "key" : "97"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEmcalJetTriggerMatcher::fTrkQAcut' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetTriggerMatcher.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  }, {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliAnalysisTaskNeutralMesons::fAOD' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1765,7 +1868,63 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fClusterZvtx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fFileEff' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliAnalysisTaskNeutralMesons::fNEvClusters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fWeight' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
@@ -1815,6 +1974,30 @@
               } ]
             }
           }, {
+            "key" : "'class AliMultiplicitySelectionCP' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMultiplicitySelectionCPPWA' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCPPWA.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -1839,142 +2022,13 @@
               } ]
             }
           }, {
-            "key" : "iteration 2u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "key" : "but does not override 'AliMultiplicitySelectionCP(const AliMultiplicitySelectionCP&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/FLOW/Base/AliFlowAnalysisCRC.cxx",
+                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "18634"
-                  } ]
-                }
-              }, {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGCF/FEMTOSCOPY/K0Analysis/AliFemtoK0Analysis.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1575"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "685"
-                  }, {
-                    "key" : "741"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "33"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fClusterZvtx' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fWeight' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "119"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "47"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentrality' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "110"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentralityCent' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "110"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentralityEGA' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "110"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEMCalpi0ClusterEvaluationTask::fCentralityMB' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliEMCalpi0ClusterEvaluationTask.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "110"
+                    "key" : "12"
                   } ]
                 }
               } ]
@@ -2285,6 +2339,18 @@
               } ]
             }
           }, {
+            "key" : "'AliRsnMiniEvent::fRefMult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/RESONANCES/AliRsnMiniEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "19"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2323,6 +2389,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "8/BUILD/6bb0667d96c111acd1f368e55671d3e0431bd3ff/AliPhysics/PWGLF/RESONANCES/extra/G__PWGLFrsnextra.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1474"
                   } ]
                 }
               } ]
@@ -2380,6 +2465,95 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fAOD' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fClusterZvtx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "47"
+                  } ]
+                }
+              }, {
+                "key" : "[ 18%] /build/workarea/sw/20155612/8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fFileEff' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fNEvClusters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fWeight' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2416,6 +2590,30 @@
               } ]
             }
           }, {
+            "key" : "'class AliMultiplicitySelectionCP' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMultiplicitySelectionCPPWA' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCPPWA.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "14"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -2440,159 +2638,44 @@
               } ]
             }
           }, {
-            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "key" : "but does not override 'AliMultiplicitySelectionCP(const AliMultiplicitySelectionCP&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCP.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "685"
-                  }, {
-                    "key" : "741"
+                    "key" : "12"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
+            "key" : "but does not override 'AliMultiplicitySelectionCPPWA(const AliMultiplicitySelectionCPPWA&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGUD/DIFFRACTIVE/legotrain/AliMultiplicitySelectionCPPWA.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "23"
+                    "key" : "14"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
+            "key" : "iteration 2u invokes undefined behavior [-Waggressive-loop-optimizations]",
             "filename" : {
               "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/FLOW/Base/AliFlowAnalysisCRC.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "33"
+                    "key" : "18634"
                   } ]
                 }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveConfigManager.cxx",
+              }, {
+                "key" : "8/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGCF/FEMTOSCOPY/K0Analysis/AliFemtoK0Analysis.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "84"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "80"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManagerEditor.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "124"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveInit.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "60"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fCluster' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fClustersInfo' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fCompositeImgFileName' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fCurrentFileNumber' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "[ 92%] /build/workarea/sw/20155612/8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fESDEvent' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliEveSaveViews::fEventInfo' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "34"
+                    "key" : "1575"
                   } ]
                 }
               } ]
@@ -6481,131 +6564,6 @@
           } ]
         }
       }, {
-        "key" : "4132",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "typedef 'sizeof_int64_is_not_sizeof_long_long' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "./google/protobuf/stubs/strutil.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "319"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "typedef 'sizeof_uint64_is_not_sizeof_long_long' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "./google/protobuf/stubs/strutil.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "325"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "\"_XOPEN_SOURCE\" redefined",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "src/base/mutex.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "137"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ev_default_loop_ptr' initialized and declared 'extern'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "ev.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1531"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "typedef 'DBL_DIG_is_too_big' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "google/protobuf/stubs/strutil.cc",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1058"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "typedef 'FLT_DIG_is_too_big' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "google/protobuf/stubs/strutil.cc",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1113"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "typedef 'INVALID_REQUESTED_LOG_SEVERITY' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "src/glog/logging.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "917"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "typedef 'arg_count_mismatch' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "google/protobuf/stubs/stringprintf.cc",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "164"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "typedef 'kint32min_value_error' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "google/protobuf/compiler/cpp/cpp_helpers.cc",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "265"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "typedef 'kint64min_value_error' locally defined but not used [-Wunused-local-typedefs]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "google/protobuf/compiler/cpp/cpp_helpers.cc",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "4244",
         "by_message" : {
           "buckets" : [ {
@@ -6759,31 +6717,18 @@
               } ]
             }
           }, {
-            "key" : "'/*' within block comment [-Wcomment]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCmon/TPCmonLinkDef.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10"
-                  }, {
-                    "key" : "11"
-                  }, {
-                    "key" : "6"
-                  }, {
-                    "key" : "7"
-                  }, {
-                    "key" : "8"
-                  }, {
-                    "key" : "9"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "control reaches end of non-void function [-Wreturn-type]",
             "filename" : {
               "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/Hyperon/AliAnalysisTaskSigma0.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "4195"
+                  }, {
+                    "key" : "4201"
+                  } ]
+                }
+              }, {
                 "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/HLT/global/AliHLTRootObjectMergerComponent.cxx",
                 "line" : {
                   "buckets" : [ {
@@ -6823,6 +6768,54 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "135"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'/*' within block comment [-Wcomment]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCmon/TPCmonLinkDef.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10"
+                  }, {
+                    "key" : "11"
+                  }, {
+                    "key" : "6"
+                  }, {
+                    "key" : "7"
+                  }, {
+                    "key" : "8"
+                  }, {
+                    "key" : "9"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "using integer absolute value function 'abs' when argument is of floating point type [-Wabsolute-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/T0/T0calib/AliT0AnalysisTaskQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "140"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/OADB/AliCentralitySelectionTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1844"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCcalib/AliTPCcalibAlignInterpolation.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1986"
                   } ]
                 }
               } ]
@@ -6887,25 +6880,6 @@
               } ]
             }
           }, {
-            "key" : "using integer absolute value function 'abs' when argument is of floating point type [-Wabsolute-value]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/T0/T0calib/AliT0AnalysisTaskQA.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "140"
-                  } ]
-                }
-              }, {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCcalib/AliTPCcalibAlignInterpolation.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1986"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "'&&' within '||' [-Wlogical-op-parentheses]",
             "filename" : {
               "buckets" : [ {
@@ -6953,6 +6927,25 @@
               } ]
             }
           }, {
+            "key" : "expression result unused [-Wunused-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGCF/FLOW/CME/TwoPwrtRP/AliChargeOnePwrtRP.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "91"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGCF/FLOW/CME/TwoPwrtRP/AliChargeTwoPwrtRP.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "106"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "format specifies type 'int' but the argument has type 'Double_t' (aka 'double') [-Wformat]",
             "filename" : {
               "buckets" : [ {
@@ -6986,6 +6979,20 @@
               } ]
             }
           }, {
+            "key" : "if statement has empty body [-Wempty-body]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/Hyperon/AliAnalysisTaskSigma0.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2711"
+                  }, {
+                    "key" : "2806"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]",
             "filename" : {
               "buckets" : [ {
@@ -7014,6 +7021,20 @@
                     "key" : "52"
                   }, {
                     "key" : "53"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "taking the absolute value of unsigned type 'bool' has no effect [-Wabsolute-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/Hyperon/AliAnalysisTaskSigma0.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3756"
+                  }, {
+                    "key" : "3882"
                   } ]
                 }
               } ]
@@ -7170,6 +7191,18 @@
               } ]
             }
           }, {
+            "key" : "equality comparison with extraneous parentheses [-Wparentheses-equality]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGCF/FEMTOSCOPY/HCascadeAnalysis/AliAnalysisTaskhCascadeFemto.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1212"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "implicit conversion turns floating-point number into bool: 'Double_t' (aka 'double') to 'bool' [-Wimplicit-conversion-floating-point-to-bool]",
             "filename" : {
               "buckets" : [ {
@@ -7225,6 +7258,131 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "243"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "4132",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "typedef 'sizeof_int64_is_not_sizeof_long_long' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "./google/protobuf/stubs/strutil.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "319"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'sizeof_uint64_is_not_sizeof_long_long' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "./google/protobuf/stubs/strutil.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "325"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"_XOPEN_SOURCE\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/base/mutex.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "137"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ev_default_loop_ptr' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "ev.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1531"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'DBL_DIG_is_too_big' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "google/protobuf/stubs/strutil.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1058"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'FLT_DIG_is_too_big' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "google/protobuf/stubs/strutil.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1113"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'INVALID_REQUESTED_LOG_SEVERITY' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "src/glog/logging.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "917"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'arg_count_mismatch' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "google/protobuf/stubs/stringprintf.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "164"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'kint32min_value_error' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "google/protobuf/compiler/cpp/cpp_helpers.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "265"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "typedef 'kint64min_value_error' locally defined but not used [-Wunused-local-typedefs]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "google/protobuf/compiler/cpp/cpp_helpers.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
                   } ]
                 }
               } ]
@@ -8826,6 +8984,20 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "1681"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gets' is deprecated (declared at /usr/include/stdio.h:638) [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../gcc/libssp/gets-chk.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "62"
+                  }, {
+                    "key" : "69"
                   } ]
                 }
               } ]
