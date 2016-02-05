@@ -2,6 +2,1249 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
+        "key" : "4232",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliEveEventManager(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TPaletteEditor(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              }, {
+                "key" : "[ 30%] /build/workarea/sw/20155612/1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "685"
+                  }, {
+                    "key" : "741"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveConfigManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "84"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManager::fEmptyData' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveEventManagerWindow::fStorageStatus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManagerEditor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveInit::fShowHLTESDtree' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveInit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCluster' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fClustersInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCompositeImgFileName' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fCurrentFileNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fESDEvent' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliEveSaveViews::fEventInfo' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveSaveViews.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "4233",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THn.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<double>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<double>(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TNDArrayT<float>' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TAttImage(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'TNDArrayT<float>(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  } ]
+                }
+              }, {
+                "key" : "2/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TNDArray.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TAttImage' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliEveEventManager&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TPaletteEditor&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TPaletteEditor' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "685"
+                  }, {
+                    "key" : "741"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const TAttImage&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TAttImage.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "108"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliEveEventManager' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/EVE/EveBase/AliEveEventManager.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "34"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTGeometry' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTHalfDiskSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTHalfSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTTrackParam' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTVSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TStreamerInfo::TCompInfo' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TStreamerInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "58"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "4127",
         "by_message" : {
           "buckets" : [ {
@@ -1390,13 +2633,13 @@
           } ]
         }
       }, {
-        "key" : "4233",
+        "key" : "4239",
         "by_message" : {
           "buckets" : [ {
             "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TMap.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TMap.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "148"
@@ -1408,7 +2651,7 @@
             "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -1420,7 +2663,7 @@
             "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -1432,7 +2675,7 @@
             "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -1444,7 +2687,7 @@
             "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -1456,7 +2699,7 @@
             "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "276"
@@ -1468,7 +2711,7 @@
             "key" : "'class THnIter' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
@@ -1480,7 +2723,7 @@
             "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "276"
@@ -1492,7 +2735,7 @@
             "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
@@ -1504,14 +2747,14 @@
             "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "43"
                   } ]
                 }
               }, {
-                "key" : "2/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "key" : "3/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "3256"
@@ -1523,7 +2766,7 @@
             "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "276"
@@ -1535,7 +2778,7 @@
             "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/THnBase.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
@@ -1547,7 +2790,7 @@
             "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "113"
@@ -1563,7 +2806,7 @@
             "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -1575,7 +2818,7 @@
             "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "33"
@@ -1587,7 +2830,7 @@
             "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -1599,7 +2842,7 @@
             "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "33"
@@ -1611,7 +2854,7 @@
             "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
                 "line" : {
                   "buckets" : [ {
                     "key" : "685"
@@ -1625,7 +2868,7 @@
             "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -1637,524 +2880,7 @@
             "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "33"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTGeometry' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "24"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTHalfDiskSegmentation' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTHalfSegmentation' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTTrackParam' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "22"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTVSegmentation' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMFTGeometry(const AliMFTGeometry&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "24"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const AliMFTHalfDiskSegmentation&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const AliMFTHalfSegmentation&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const AliMFTTrackParam&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "22"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const AliMFTVSegmentation&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/ubt1510_x86-64/ROOT/v5-34-30-alice-1/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliMFTGeometry&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "24"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "4232",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class THnIter' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              }, {
-                "key" : "[ 30%] /build/workarea/sw/20155612/1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "43"
-                  } ]
-                }
-              }, {
-                "key" : "1/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3256"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "33"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "33"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "685"
-                  }, {
-                    "key" : "741"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "23"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "33"
@@ -2166,7 +2892,7 @@
             "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TCollectionProxyInfo.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "218"
@@ -2178,7 +2904,7 @@
             "key" : "'class AliMFTGeometry' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
@@ -2190,7 +2916,7 @@
             "key" : "'class AliMFTHalfDiskSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -2202,7 +2928,7 @@
             "key" : "'class AliMFTHalfSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -2214,7 +2940,7 @@
             "key" : "'class AliMFTTrackParam' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "22"
@@ -2226,7 +2952,7 @@
             "key" : "'class AliMFTVSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -2238,7 +2964,7 @@
             "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -2250,7 +2976,7 @@
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
@@ -2262,7 +2988,7 @@
             "key" : "but does not override 'AliMFTGeometry(const AliMFTGeometry&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
@@ -2274,7 +3000,7 @@
             "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -2286,7 +3012,7 @@
             "key" : "but does not override 'operator=(const AliMFTHalfDiskSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -2298,7 +3024,7 @@
             "key" : "but does not override 'operator=(const AliMFTHalfSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -2310,7 +3036,7 @@
             "key" : "but does not override 'operator=(const AliMFTTrackParam&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "22"
@@ -2322,7 +3048,7 @@
             "key" : "but does not override 'operator=(const AliMFTVSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -2334,7 +3060,7 @@
             "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
@@ -2346,7 +3072,7 @@
             "key" : "or 'operator=(const AliMFTGeometry&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
@@ -2358,7 +3084,7 @@
             "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -2795,13 +3521,13 @@
           } ]
         }
       }, {
-        "key" : "4239",
+        "key" : "4240",
         "by_message" : {
           "buckets" : [ {
             "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TMap.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/TMap.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "148"
@@ -2813,7 +3539,7 @@
             "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -2825,7 +3551,7 @@
             "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -2837,7 +3563,7 @@
             "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -2849,7 +3575,7 @@
             "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "73"
@@ -2861,7 +3587,7 @@
             "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "276"
@@ -2873,7 +3599,7 @@
             "key" : "'class THnIter' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
@@ -2885,7 +3611,7 @@
             "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "276"
@@ -2897,7 +3623,7 @@
             "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
@@ -2909,14 +3635,14 @@
             "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "43"
                   } ]
                 }
               }, {
-                "key" : "3/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "key" : "6/BUILD/fca0c603d7fa61cf569b87ac630b51217effd6f4/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "3256"
@@ -2928,7 +3654,7 @@
             "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "276"
@@ -2940,7 +3666,7 @@
             "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/THnBase.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "308"
@@ -2952,7 +3678,7 @@
             "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/STEER/STEER/AliQAManager.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "113"
@@ -2968,7 +3694,7 @@
             "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -2980,7 +3706,7 @@
             "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "33"
@@ -2992,7 +3718,7 @@
             "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -3004,7 +3730,7 @@
             "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "33"
@@ -3016,7 +3742,7 @@
             "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
                 "line" : {
                   "buckets" : [ {
                     "key" : "685"
@@ -3030,7 +3756,7 @@
             "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -3042,7 +3768,7 @@
             "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "33"
@@ -3054,7 +3780,7 @@
             "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/TCollectionProxyInfo.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "218"
@@ -3066,7 +3792,7 @@
             "key" : "'class AliMFTGeometry' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
@@ -3078,7 +3804,7 @@
             "key" : "'class AliMFTHalfDiskSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -3090,7 +3816,7 @@
             "key" : "'class AliMFTHalfSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -3102,7 +3828,7 @@
             "key" : "'class AliMFTTrackParam' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "22"
@@ -3114,7 +3840,7 @@
             "key" : "'class AliMFTVSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -3126,7 +3852,7 @@
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/TText.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
@@ -3138,7 +3864,7 @@
             "key" : "but does not override 'AliMFTGeometry(const AliMFTGeometry&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
@@ -3150,7 +3876,7 @@
             "key" : "but does not override 'operator=(const AliMFTHalfDiskSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -3162,7 +3888,7 @@
             "key" : "but does not override 'operator=(const AliMFTHalfSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "25"
@@ -3174,7 +3900,7 @@
             "key" : "but does not override 'operator=(const AliMFTTrackParam&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "22"
@@ -3186,7 +3912,7 @@
             "key" : "but does not override 'operator=(const AliMFTVSegmentation&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "23"
@@ -3198,7 +3924,7 @@
             "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TText.h",
+                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/TText.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "42"
@@ -3210,7 +3936,433 @@
             "key" : "or 'operator=(const AliMFTGeometry&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "4241",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  } ]
+                }
+              }, {
+                "key" : "7/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "685"
+                  }, {
+                    "key" : "741"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTGeometry' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTHalfDiskSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTHalfSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTTrackParam' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTVSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTGeometry(const AliMFTGeometry&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTHalfDiskSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTHalfSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTTrackParam&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTVSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTGeometry&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
@@ -3637,6 +4789,432 @@
             "filename" : {
               "buckets" : [ {
                 "key" : "8/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "4237",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  } ]
+                }
+              }, {
+                "key" : "4/BUILD/25043b8d39a1f751e75d41370bbcfc97d142a200/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTTrackFinder' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTSegmentation(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTTrackFinder(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 99u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STARLIGHT/starlight/src/gammagammaleptonpair.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "685"
+                  }, {
+                    "key" : "741"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTTrackFinder&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "33"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTGeometry' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTHalfDiskSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTHalfSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTTrackParam' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliMFTVSegmentation' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliMFTGeometry(const AliMFTGeometry&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTHalfDiskSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfDiskSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTHalfSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalfSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTTrackParam&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackParam.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "22"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const AliMFTVSegmentation&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliMFTGeometry&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTGeometry.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
@@ -4721,6 +6299,203 @@
           } ]
         }
       }, {
+        "key" : "4236",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGDQ/reducedTree/AliReducedCaloClusterInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "56"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/AliAnalysisNonMuonTrackCuts.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/AliMuonTriggerCombo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/AliAnalysisTaskOnTheFlyAliAODDimuon.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "31"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGDQ/reducedTree/AliReducedBaseTrackCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGDQ/reducedTree/AliReducedEventCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITS/ITSrec/AliITSOnlineSPDphysAnalyzer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "80"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/aaf/FILTER_AODMUONONLY_PBPB2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "63"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/aaf/FILTER_AODMUONONLY_PBPB2015_WITHMULTSEL.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/aaf/FILTER_AODMUONONLY_PP2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/aaf/FILTER_AODMUONWITHTRACKLETS.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWG/muon/aaf/FILTER_ESD2AODMUON.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "116"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/PHOSTasks/ClusterSelection/AliPHOSTriggerUtils.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "260"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskPi0FlowMCHijing.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGHF/jetsHF/AliAnalysisTaskEmcalHFCJQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1274"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGJE/UserTasks/AliAnalysisTaskPID.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3986"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtUnifiedAnalysisTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "680"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskPPVsMultCrossCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "711"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "564"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/HLT/global/AliFlatExternalTrackParam.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalf.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "92"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTLadder.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "179"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "275"
+                  } ]
+                }
+              }, {
+                "key" : "[  9%] /build/workarea/sw/20155612/2/SOURCES/AliPhysics/0e0bd91dfc4f77cd8d0059dcd91e39178b2889a6/0e0bd91dfc/OADB/COMMON/MULTIPLICITY/AliMultVariable.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "4158",
         "by_message" : {
           "buckets" : [ {
@@ -5189,269 +6964,158 @@
           } ]
         }
       }, {
-        "key" : "4241",
+        "key" : "4244",
         "by_message" : {
           "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "key" : "control may reach end of non-void function [-Wreturn-type]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTCAHit.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "148"
+                    "key" : "77"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTCALadder.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "77"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTCALayer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "93"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTCATrack.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "98"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackExtrap.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "562"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMuonForwardTrack.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "77"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ZDC/ZDCrec/AliZDCReconstructor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1699"
+                  } ]
+                }
+              }, {
+                "key" : "[ 30%] /build/workarea/sw/20155612/1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTCACell.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "112"
+                  } ]
+                }
+              }, {
+                "key" : "[ 30%] /build/workarea/sw/20155612/1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTCARoad.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "control reaches end of non-void function [-Wreturn-type]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackExtrap.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
+                    "key" : "105"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STAT/AliNDLocalRegression.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "482"
+                  } ]
+                }
+              }, {
+                "key" : "[ 29%] /build/workarea/sw/20155612/1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackExtrap.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "82"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "conversion from string literal to 'Char_t *' (aka 'char *') is deprecated [-Wc++11-compat-deprecated-writable-strings]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TCollectionProxyInfo.h",
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "218"
+                    "key" : "43"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "key" : "[  1%] /build/workarea/sw/20155612/1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/LHAPDF/lhapdf-5.9.1/src/getdatapath.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "73"
+                    "key" : "51"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "enumeration value 'kNNormType' not handled in switch [-Wswitch]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STAT/TStatToolkit.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "73"
+                    "key" : "2241"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "enumeration values 'kLTM' and 'kLTMRMS' not handled in switch [-Wswitch]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STAT/TStatToolkit.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "73"
+                    "key" : "2180"
                   } ]
                 }
               } ]
             }
           }, {
-            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "key" : "logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]",
             "filename" : {
               "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
+                "key" : "1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STAT/TStatToolkit.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class THnIter' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "276"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "7/slc7_x86-64/ROOT/v5-34-30-alice-15/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "4240",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/TMap.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "6/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99_COVERAGE/041160d84e/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "73"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class THnIter' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/THnBase.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "308"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "6/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-9/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
+                    "key" : "1547"
                   } ]
                 }
               } ]
@@ -5693,70 +7357,6 @@
             "filename" : {
               "buckets" : [ {
                 "key" : "1/SOURCES/AliRoot/v5-08-00-rc2/v5-08-00-rc2/Vc/include/Vc/global.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "262"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "4236",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "no newline at end of file",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITS/ITSrec/AliITSOnlineSPDphysAnalyzer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "80"
-                  } ]
-                }
-              }, {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/HLT/global/AliFlatExternalTrackParam.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1"
-                  } ]
-                }
-              }, {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTHalf.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "92"
-                  } ]
-                }
-              }, {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTLadder.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "179"
-                  } ]
-                }
-              }, {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "60"
-                  } ]
-                }
-              }, {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/MUON/MUONgraphics/AliMUONAlignmentCompareDialog.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "275"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/Vc/include/Vc/global.h",
                 "line" : {
                   "buckets" : [ {
                     "key" : "262"
@@ -6111,39 +7711,6 @@
           } ]
         }
       }, {
-        "key" : "4237",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "4/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "4/slc7_x86-64/ROOT/v5-34-30-alice-15/include/TMap.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "4224",
         "by_message" : {
           "buckets" : [ {
@@ -6214,23 +7781,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "4244",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "comparison of unsigned expression >= 0 is always true [-Wtautological-compare]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "[  1%] /build/workarea/sw/20155612/1/SOURCES/AliRoot/041160d84ec3610748759b46ebd641a540399b99/041160d84e/LHAPDF/lhapdf-5.9.1/src/getdatapath.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "51"
                   } ]
                 }
               } ]
