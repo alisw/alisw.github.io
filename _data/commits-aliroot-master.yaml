@@ -198,13 +198,3 @@
  message: >-
     PHOS STU raw decoder (Hiroki)
  author: !!str kharlov
--
- commit: "6588106798b45ded799f78194528c38253da47f7"
- message: >-
-    GetEvent has to return AliVEvent as specified in the base class. Use expilict cast to indicate AliESDEvent
- author: !!str hristov
--
- commit: "b917138229af5d209d40bf041843e004aa8a6011"
- message: >-
-    Cleanup of GRP. Using HLT in default mode since the production is not ancored
- author: !!str hristov
