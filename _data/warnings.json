@@ -15587,6 +15587,18 @@
               } ]
             }
           }, {
+            "key" : "'Loc.__ubsan::Location::MemoryLoc' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../../gcc/libsanitizer/ubsan/ubsan_diag.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "192"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
             "filename" : {
               "buckets" : [ {
