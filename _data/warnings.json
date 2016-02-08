@@ -18319,6 +18319,18 @@
               } ]
             }
           }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class AliMFTSegmentation' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -18405,6 +18417,66 @@
               } ]
             }
           }, {
+            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/ubt14_x86-64/ROOT/v5-34-30-alice-18/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -18477,6 +18549,18 @@
               } ]
             }
           }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class TText' has pointer data members [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -18496,6 +18580,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
                   } ]
                 }
               } ]
@@ -18572,6 +18668,18 @@
                 }
               } ]
             }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "5/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
           } ]
         }
       }, {
@@ -18581,12 +18689,28 @@
             "key" : "control may reach end of non-void function [-Wreturn-type]",
             "filename" : {
               "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGGA/GammaConv/AliConvEventCuts.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3697"
+                  }, {
+                    "key" : "3757"
+                  } ]
+                }
+              }, {
                 "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCbase/AliTPCSAMPAEmulator.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "105"
                   }, {
                     "key" : "252"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGPP/EVCHAR/FlowVectorCorrections/QnCorrections/AliQnCorrectionsHistograms.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "248"
                   } ]
                 }
               }, {
@@ -18723,31 +18847,18 @@
               } ]
             }
           }, {
-            "key" : "'/*' within block comment [-Wcomment]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCmon/TPCmonLinkDef.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10"
-                  }, {
-                    "key" : "11"
-                  }, {
-                    "key" : "6"
-                  }, {
-                    "key" : "7"
-                  }, {
-                    "key" : "8"
-                  }, {
-                    "key" : "9"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "control reaches end of non-void function [-Wreturn-type]",
             "filename" : {
               "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGGA/Hyperon/AliAnalysisTaskSigma0.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "4195"
+                  }, {
+                    "key" : "4201"
+                  } ]
+                }
+              }, {
                 "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/ITSMFT/MFT/MFTrec/AliMFTTrackExtrap.cxx",
                 "line" : {
                   "buckets" : [ {
@@ -18804,10 +18915,88 @@
                   } ]
                 }
               }, {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGGA/GammaConv/AliAnalysisTaskGammaPureMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "444"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGPP/EVCHAR/AliTrackletAlg.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1195"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGUD/DIFFRACTIVE/QA/AliAnalysisTaskCEPQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "505"
+                  } ]
+                }
+              }, {
                 "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCcalib/AliTPCcalibAlignInterpolation.cxx",
                 "line" : {
                   "buckets" : [ {
                     "key" : "1986"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'/*' within block comment [-Wcomment]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCmon/TPCmonLinkDef.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10"
+                  }, {
+                    "key" : "11"
+                  }, {
+                    "key" : "6"
+                  }, {
+                    "key" : "7"
+                  }, {
+                    "key" : "8"
+                  }, {
+                    "key" : "9"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "using the result of an assignment as a condition without parentheses [-Wparentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGDQ/reducedTree/AliAnalysisTaskReducedEventProcessor.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "122"
+                  }, {
+                    "key" : "125"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGLF/FORWARD/trains/TrainSetup.C",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "557"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/HLT/TPCLib/transform/AliHLTTPCFastTransformObject.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              }, {
+                "key" : "[ 86%] /build/workarea/sw/20155613/1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCrec/AliTPCclusterer.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1537"
                   } ]
                 }
               } ]
@@ -18867,6 +19056,18 @@
               } ]
             }
           }, {
+            "key" : "conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "data argument not used by format string [-Wformat-extra-args]",
             "filename" : {
               "buckets" : [ {
@@ -18888,6 +19089,27 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "524"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format string is not a string literal (potentially insecure) [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCcalib/AliTPCCorrectionFit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "187"
+                  }, {
+                    "key" : "260"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGLF/FORWARD/trains/OutputUtilities.C",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "195"
                   } ]
                 }
               } ]
@@ -18926,6 +19148,25 @@
               } ]
             }
           }, {
+            "key" : "equality comparison with extraneous parentheses [-Wparentheses-equality]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGCF/FEMTOSCOPY/HCascadeAnalysis/AliAnalysisTaskhCascadeFemto.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1253"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGGA/PHOSTasks/PHOS_GAFlow/AliAnalysisTaskThermalGAFlowMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "364"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "expression result unused [-Wunused-value]",
             "filename" : {
               "buckets" : [ {
@@ -18959,15 +19200,15 @@
               } ]
             }
           }, {
-            "key" : "format string is not a string literal (potentially insecure) [-Wformat-security]",
+            "key" : "if statement has empty body [-Wempty-body]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCcalib/AliTPCCorrectionFit.cxx",
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGGA/Hyperon/AliAnalysisTaskSigma0.cxx",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "187"
+                    "key" : "2711"
                   }, {
-                    "key" : "260"
+                    "key" : "2806"
                   } ]
                 }
               } ]
@@ -19023,6 +19264,20 @@
               } ]
             }
           }, {
+            "key" : "taking the absolute value of unsigned type 'bool' has no effect [-Wabsolute-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGGA/Hyperon/AliAnalysisTaskSigma0.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3756"
+                  }, {
+                    "key" : "3882"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "using floating point absolute value function 'fabs' when argument is of integer type [-Wabsolute-value]",
             "filename" : {
               "buckets" : [ {
@@ -19030,25 +19285,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "34"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "using the result of an assignment as a condition without parentheses [-Wparentheses]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/HLT/TPCLib/transform/AliHLTTPCFastTransformObject.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "115"
-                  } ]
-                }
-              }, {
-                "key" : "[ 86%] /build/workarea/sw/20155613/1/SOURCES/AliRoot/8bb756f1bb7c88d01920f1db9e849da07d9af9ef/8bb756f1bb/TPC/TPCrec/AliTPCclusterer.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1537"
                   } ]
                 }
               } ]
@@ -19174,13 +19410,13 @@
               } ]
             }
           }, {
-            "key" : "equality comparison with extraneous parentheses [-Wparentheses-equality]",
+            "key" : "format specifies type 'void *' but the argument has type 'Long_t' (aka 'long') [-Wformat]",
             "filename" : {
               "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGCF/FEMTOSCOPY/HCascadeAnalysis/AliAnalysisTaskhCascadeFemto.cxx",
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGLF/FORWARD/trains/TrainSetup.C",
                 "line" : {
                   "buckets" : [ {
-                    "key" : "1253"
+                    "key" : "988"
                   } ]
                 }
               } ]
@@ -19205,6 +19441,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "returning reference to local temporary object [-Wreturn-stack-address]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/6f347a2767b5fe67c77962680a376e9db994549a/6f347a2767/PWGLF/FORWARD/trains/Option.C",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "668"
                   } ]
                 }
               } ]
