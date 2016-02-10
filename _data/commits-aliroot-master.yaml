@@ -223,8 +223,3 @@
  message: >-
     Moving the AliITSMFTDigitPix class to the COMMONITSMFTBase library
  author: !!str belikov
--
- commit: "256e7724a8c5f4ccdbfbf34f3a295657a8552f59"
- message: >-
-    Prepare the MUON+MFT track merging without interference in the MUON code. Use a light version of the AliMuonForwardTrack. This test version of AliMFTTracker produces matching with both type of tracks and still needs the modifications in the MUON code, see 22aef0c8f. Write assignment operator for several classes. Eliminate from compilation AliMFTTrackerMU, AliMuonForwardTrackFinder and AliMuonForwardTrackPair, since the AliMuonForwardTrack has changed.
- author: !!str bogdan
