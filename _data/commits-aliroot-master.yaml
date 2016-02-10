@@ -223,8 +223,3 @@
  message: >-
     Prepare the MUON+MFT track merging without interference in the MUON code. Use a light version of the AliMuonForwardTrack. This test version of AliMFTTracker produces matching with both type of tracks and still needs the modifications in the MUON code, see 22aef0c8f. Write assignment operator for several classes. Eliminate from compilation AliMFTTrackerMU, AliMuonForwardTrackFinder and AliMuonForwardTrackPair, since the AliMuonForwardTrack has changed.
  author: !!str bogdan
--
- commit: "f36c6faf8629186409ce2be0e5e3147cc886905f"
- message: >-
-    ATO-325 - adding ovelrpa track to the Fast simulation. (Only parameters set for the moment)
- author: !!str mivanov
