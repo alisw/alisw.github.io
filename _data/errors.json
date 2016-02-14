@@ -2,23 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "4260",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "zmq.h: No such file or directory",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/slc7_x86-64/FairRoot/master-28/include/FairMQMessageZMQ.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "20"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "4277",
         "by_message" : {
           "buckets" : [ {
