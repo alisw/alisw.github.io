@@ -1,4 +1,14 @@
 -
+ commit: "2a6b451abb5a3c6c4f515bd0ce6fd308f3d5c3ce"
+ message: >-
+    ATO-325 - 1.) Make on-the-fly digitization in non persistent array.  Bool_t MakeDigitization(Int_t addOverlap, Float_t gain, Float_t thr, Float_t noise, Bool_t rounding, Bool_t addPedestal,Int_t skipSample)  2.) Unfolding in respect to the local maxima
+ author: !!str mivanov
+-
+ commit: "d7c40407004469c8dea9395c1a4e5b43f188e55d"
+ message: >-
+    ATO-108 - missing parameter in formatting. Fixing copy past error from macro.
+ author: !!str mivanov
+-
  commit: "5bf7ad1b021da262edd5db3f68ccda881bbdc78b"
  message: >-
     avoid using intermediate pointer to avoid root 5/6 incompatibility
