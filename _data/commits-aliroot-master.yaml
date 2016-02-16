@@ -1,4 +1,9 @@
 -
+ commit: "1798c78a4cc83dc6b1db3f6b526e23fc5c2c8fed"
+ message: >-
+    ATO-108 Reducing dlocal disk volume 1.) Store covariance matrix only if specified . Env variale has to be set to: AliTPCcalibAlignInterpolation_MakeNDFit_KeepCovariance 2.) Store ND fits as a tree only in case env. varaible AliTPCcalibAlignInterpolation_MakeNDFit_DumpFitTree is set
+ author: !!str mivanov
+-
  commit: "2a6b451abb5a3c6c4f515bd0ce6fd308f3d5c3ce"
  message: >-
     ATO-325 - 1.) Make on-the-fly digitization in non persistent array.  Bool_t MakeDigitization(Int_t addOverlap, Float_t gain, Float_t thr, Float_t noise, Bool_t rounding, Bool_t addPedestal,Int_t skipSample)  2.) Unfolding in respect to the local maxima
