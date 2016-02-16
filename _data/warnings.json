@@ -8785,6 +8785,61 @@
           } ]
         }
       }, {
+        "key" : "4456",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "comparison between signed and unsigned integer expressions [-Wsign-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "arlex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1803"
+                  } ]
+                }
+              }, {
+                "key" : "ldlex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3934"
+                  } ]
+                }
+              }, {
+                "key" : "syslex.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1681"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "assignment discards 'const' qualifier from pointer target type [enabled by default]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "sec_tabselect.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "no previous prototype for '_bfd_dwarf2_find_symbol_bias' [-Wmissing-prototypes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../binutils/bfd/dwarf2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3797"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "4333",
         "by_message" : {
           "buckets" : [ {
@@ -8864,6 +8919,23 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "3797"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "4453",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/3a17043e180f1ad147740e35040c265ebd168269/3a17043e18/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
                   } ]
                 }
               } ]
