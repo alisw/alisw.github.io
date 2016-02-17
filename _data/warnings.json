@@ -14422,6 +14422,20 @@
               } ]
             }
           }, {
+            "key" : "'gets' is deprecated (declared at /usr/include/stdio.h:638) [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../gcc/libssp/gets-chk.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "62"
+                  }, {
+                    "key" : "69"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "assignment discards 'const' qualifier from pointer target type",
             "filename" : {
               "buckets" : [ {
@@ -14429,6 +14443,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "49"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'Loc.__ubsan::Location::MemoryLoc' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../../gcc/libsanitizer/ubsan/ubsan_diag.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "192"
                   } ]
                 }
               } ]
@@ -15227,23 +15253,6 @@
           } ]
         }
       }, {
-        "key" : "4403",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "no previous prototype for '_bfd_dwarf2_find_symbol_bias' [-Wmissing-prototypes]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../binutils/bfd/dwarf2.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3797"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "4481",
         "by_message" : {
           "buckets" : [ {
@@ -15254,6 +15263,23 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "4403",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "no previous prototype for '_bfd_dwarf2_find_symbol_bias' [-Wmissing-prototypes]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../binutils/bfd/dwarf2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3797"
                   } ]
                 }
               } ]
