@@ -11655,6 +11655,20 @@
               } ]
             }
           }, {
+            "key" : "'gets' is deprecated (declared at /usr/include/stdio.h:638) [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../gcc/libssp/gets-chk.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "62"
+                  }, {
+                    "key" : "69"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "assignment discards 'const' qualifier from pointer target type",
             "filename" : {
               "buckets" : [ {
@@ -11662,6 +11676,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "49"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'Loc.__ubsan::Location::MemoryLoc' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../../../gcc/libsanitizer/ubsan/ubsan_diag.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "192"
                   } ]
                 }
               } ]
