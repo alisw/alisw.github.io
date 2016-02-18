@@ -2,6 +2,47 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
+        "key" : "4483",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "error writing to /tmp/ccEkmsIV.s: Cannot allocate memory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/DDS/master/f2e7a113a6/dds-submit/src/main.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "82"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "error writing to /tmp/ccHO6fZ1.s: Cannot allocate memory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/DDS/master/f2e7a113a6/dds-stat/src/main.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "error writing to /tmp/ccTgijkV.s: Cannot allocate memory",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/DDS/master/f2e7a113a6/dds-test/src/main.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "81"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "4387",
         "by_message" : {
           "buckets" : [ {
