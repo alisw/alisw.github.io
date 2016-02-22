@@ -203,8 +203,3 @@
  message: >-
     fix in min/max timestamps calculation
  author: !!str shahoian
--
- commit: "e6b652538b72ede5bb5fa84c91e2d0e1558255aa"
- message: >-
-    ATO-193, ATO-108 - adding function to clean/delete array of covariance matrix, which is responsible for the most of the data volume. In case array of local covariance matrix not available, error of local evaluation is not possible to caclulate. In case of mising covaraince matrix, AliNDLocalRegression::GetCorrNDError will prent error message and function return 0
- author: !!str mivanov
