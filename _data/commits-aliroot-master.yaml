@@ -208,13 +208,3 @@
  message: >-
     ATO-193, ATO-108 - adding function to clean/delete array of covariance matrix, which is responsible for the most of the data volume. In case array of local covariance matrix not available, error of local evaluation is not possible to caclulate. In case of mising covaraince matrix, AliNDLocalRegression::GetCorrNDError will prent error message and function return 0
  author: !!str mivanov
--
- commit: "733f8dd9bc6035d86306d7129368097e3f42ed67"
- message: >-
-    slewing correction from Dima
- author: !!str alla
--
- commit: "60745d040b401383dfdde4de38b200e3ff30a0f3"
- message: >-
-    added collision time as mean of individual times as T0best
- author: !!str alla
