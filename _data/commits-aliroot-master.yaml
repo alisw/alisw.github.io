@@ -1,4 +1,34 @@
 -
+ commit: "9ff2aac89af7ca43f7d04ed76d4c538ac1ede52a"
+ message: >-
+    ALIROOT-6561 Flag the hvMap so that the St1 dcs alias patch is no longer applied
+ author: !!str laphecet
+-
+ commit: "230dba612d02522e55298913d0a2f83d365f01f2"
+ message: >-
+    Renaming AliITSsegmentation to AliITSMFTSegmentationPix (Michael)
+ author: !!str belikov
+-
+ commit: "c08d19d4eb33892e0016a966ff04a324e6fd8ff0"
+ message: >-
+    print LookUpTable
+ author: !!str alla
+-
+ commit: "754069635b49ab56f8901fd484dcf24ad0064b46"
+ message: >-
+    compilation warning about abs fixed
+ author: !!str alla
+-
+ commit: "3cab0fd98da82358ea8085a23db7886af08d58f6"
+ message: >-
+    make GetOutputDataTypes in HLTRawReaderPublischer virtual, set  proper outputdatatypes for TPC publisher
+ author: !!str sgorbuno
+-
+ commit: "03bcab4e47186fdb957b2f36ac1532cf36c0fa96"
+ message: >-
+    ATO-325 - Track paramters in absolute units, cluster kept in bin units https://alice.its.cern.ch/jira/browse/ATO-325?focusedCommentId=170927&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-170927
+ author: !!str mivanov
+-
  commit: "1f830009765891281fa9667bbdc93948b8ed77c7"
  message: >-
     ATO-339 - Cache matrices to speed up alignment bug correction
@@ -133,78 +163,3 @@
  message: >-
     add possibility to switch off glitch filter
  author: !!str wiechula
--
- commit: "abee59f2f5530b6eb58df9d0d4bc360ec6ce8925"
- message: >-
-    ATO-325 -Updated digitization part
- author: !!str mivanov
--
- commit: "bcf9f2965684f8e4772b194439ad3136ffeedf0f"
- message: >-
-    Optimization of AliNDLocalRegression for CPU speed
- author: !!str shahoian
--
- commit: "f59ec645c0ba072383181e48ea233ee5907b4b3b"
- message: >-
-    add data member with second shower shape axis
- author: !!str gconesab
--
- commit: "681bd32716f888e677b0932f9560e9a4277762b2"
- message: >-
-    ATO-108 - Bug fix introduced during optimization hunting
- author: !!str mivanov
--
- commit: "d2316ad8c6db66b61614ca4f35d6a5c8405678d1"
- message: >-
-    ATO-108 - ::Fatal if the input file residualInfo.root  dos not exist or down not contain necessary file.  in AliTPCcalibAlignInterpolation::FillHistogramsFromChain
- author: !!str mivanov
--
- commit: "1798c78a4cc83dc6b1db3f6b526e23fc5c2c8fed"
- message: >-
-    ATO-108 Reducing dlocal disk volume 1.) Store covariance matrix only if specified . Env variale has to be set to: AliTPCcalibAlignInterpolation_MakeNDFit_KeepCovariance 2.) Store ND fits as a tree only in case env. varaible AliTPCcalibAlignInterpolation_MakeNDFit_DumpFitTree is set
- author: !!str mivanov
--
- commit: "2a6b451abb5a3c6c4f515bd0ce6fd308f3d5c3ce"
- message: >-
-    ATO-325 - 1.) Make on-the-fly digitization in non persistent array.  Bool_t MakeDigitization(Int_t addOverlap, Float_t gain, Float_t thr, Float_t noise, Bool_t rounding, Bool_t addPedestal,Int_t skipSample)  2.) Unfolding in respect to the local maxima
- author: !!str mivanov
--
- commit: "d7c40407004469c8dea9395c1a4e5b43f188e55d"
- message: >-
-    ATO-108 - missing parameter in formatting. Fixing copy past error from macro.
- author: !!str mivanov
--
- commit: "5bf7ad1b021da262edd5db3f68ccda881bbdc78b"
- message: >-
-    avoid using intermediate pointer to avoid root 5/6 incompatibility
- author: !!str shahoian
--
- commit: "4af7c3426f1a4068f702e47e5566327f8cde8af6"
- message: >-
-    Fixed compilation (Root6)
- author: !!str hristov
--
- commit: "4415dd496b6cd1870d23d2a0dbf3128cf0c93381"
- message: >-
-    Avoid repetetive CreateStdContent execution in PROOF mode
- author: !!str shahoian
--
- commit: "4804509240e1848834830ac4ef9b479c3a924dec"
- message: >-
-    Fix for c++11 compliance
- author: !!str shahoian
--
- commit: "29369b5b73dbba453e32182cff08de1a6e55e6d9"
- message: >-
-    fix unfolding for Run2 - Adam
- author: !!str gconesab
--
- commit: "2adc4779506afc54fdc0e3ed950c762ace938fba"
- message: >-
-    Version to debug problem with Geant4
- author: !!str morsch
--
- commit: "3c9136febd03375a2247e210de7e9289309ba9ba"
- message: >-
-    fix in min/max timestamps calculation
- author: !!str shahoian
