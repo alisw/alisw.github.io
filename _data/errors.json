@@ -2,23 +2,6 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "4501",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "zmq.h: No such file or directory",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/FairRoot/master-8/include/FairMQMessageZMQ.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "20"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "4502",
         "by_message" : {
           "buckets" : [ {
@@ -80,23 +63,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "20"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "4500",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "AliHLTTPCTrackGeometry.h: No such file or directory",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/O2/master/f3e3f74aef/devices/hough/runHough.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "5"
                   } ]
                 }
               } ]
