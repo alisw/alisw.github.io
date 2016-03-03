@@ -1,4 +1,14 @@
 -
+ commit: "d91d86c07d35fee34449f73d4b1904f4655d92f1"
+ message: >-
+    Fix AliHLTAnalysisManagerComponent: The esd and esdfriends must only be released after the AnalysisManager has pushed the data (somehow the serialization of the AnalysisDataContainer still needs the AliVEvent object)
+ author: !!str drohr
+-
+ commit: "8dd4269169509f6a9f6f76b6dee43a1fb4542951"
+ message: >-
+    Bugfix for typo in case the run is stopped and restarted without disengaging (should actually never happen in reality, because there cannot be two runs with same run number, but anyway)
+ author: !!str drohr
+-
  commit: "7dcaa070e552b5d0f9247be0028ec1f95b9ead9f"
  message: >-
     added forwarding of unpacked TPC clusters through clusterfinder emulator and decoder
@@ -103,8 +113,3 @@
  message: >-
     ATO-325 - 0.) Implmeentation of  fast GEM response function. 1.) Using TFormulaPrimitive (pointer to the function)  to speadup TFormula Evaluation. Speedup factor 3.5 in the Simulation (70 s ->20 s). 3. (AliNDlocal to get another factor in future)
  author: !!str mivanov
--
- commit: "4f6d6da43056eb9ec32c1de16a3361e6ebb057bc"
- message: >-
-    Implementation of a virtual track selection
- author: !!str mfasel
