@@ -1,4 +1,9 @@
 -
+ commit: "c3d51f33c8ac3e755bac171d3c6a53ebe4fe758f"
+ message: >-
+    return value was forgotten
+ author: !!str shahoian
+-
  commit: "d91d86c07d35fee34449f73d4b1904f4655d92f1"
  message: >-
     Fix AliHLTAnalysisManagerComponent: The esd and esdfriends must only be released after the AnalysisManager has pushed the data (somehow the serialization of the AnalysisDataContainer still needs the AliVEvent object)
