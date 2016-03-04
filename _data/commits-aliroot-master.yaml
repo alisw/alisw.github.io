@@ -1,4 +1,9 @@
 -
+ commit: "e8e136a9dcc130d2bd1321cd2acb35525b32db93"
+ message: >-
+    ATO-321, ATO-339 - Export drift velocity  OCDB entry (TPC/Calib/TimeDrift. Still 2 cm in T0 missing.
+ author: !!str mivanov
+-
  commit: "939a02d3bd8cc79cd0b65306ff5c0010668a4188"
  message: >-
     ATO-339, ATO-336, ATO-341. 1.) Bug fix in friend trees. Also frist tree can be adreesed 2.) Adding AliSysInfoStamp, before and after each tree access O(nfiles) stamps 3.) TGrid::Connect in case alien files in file list
@@ -123,8 +128,3 @@
  message: >-
     Update FEE mapping class and macros to create pedestal tables
  author: !!str kharlov
--
- commit: "f1587873a91102de91bc835173e661ce4afb1bcb"
- message: >-
-    ATO-325 - 0.) Implementation of  fast GEM response function . 1.) Using TFormulaPrimitive (pointer to the function)  to speadup TFormula Evaluation. Speedup factor 3.5 in the Simulation (70 s ->20 s). 3. (AliNDlocal to get another factor in future)
- author: !!str mivanov
