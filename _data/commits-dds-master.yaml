@@ -1,4 +1,49 @@
 -
+ commit: "cb74049150a09be734feb49d27d5e74624b4b878"
+ message: >-
+    GH-108: New SSH plug-in
+ author: !!str Anar Manafov
+-
+ commit: "b8c5d07ccfa193c3cbb020cd7ae60ecbd6c26e39"
+ message: >-
+    GH-108: implement wait and stop functionality
+ author: !!str Andrey Lebedev
+-
+ commit: "bd42231442a0b0124fcdedd9ac086c2564378215"
+ message: >-
+    Using new dds_intercom_lib
+ author: !!str Anar Manafov
+-
+ commit: "28f7e9f1ea8751b4b68f0ec688ae43cb8b214559"
+ message: >-
+    GH-108: Using new dds_intercom_lib
+ author: !!str Anar Manafov
+-
+ commit: "459ddc5e5cb15af3951562e80619208f5581f818"
+ message: >-
+    GH-108: correct interface for DDS plug-ins.
+ author: !!str Andrey Lebedev
+-
+ commit: "c033bf01a205ddfd4c3035fe4cbd6d31b43bb17f"
+ message: >-
+    GH-108: Add interface for RMS plugin implementation to dds_intercom_lib.
+ author: !!str Andrey Lebedev
+-
+ commit: "15305825f5ac2a6893d6b6d61e7367be13e48348"
+ message: >-
+    GH-108: Create new NCF lib
+ author: !!str Anar Manafov
+-
+ commit: "8051238dc3d72c892224cb9343a336bbb9236ac3"
+ message: >-
+    cmake: Updated OSX RPATH settings.
+ author: !!str Anar Manafov
+-
+ commit: "7bedba0b49e3e9e32bfa31881eef3fe783c3360c"
+ message: >-
+    GH-108: Remove old dds-ssh
+ author: !!str Anar Manafov
+-
  commit: "f2e7a113a6ac46609e66fb26cdca0c5242bf27d2"
  message: >-
     Rename DDSEnvProp.h to dds_env_prop.h
@@ -202,49 +247,4 @@
  commit: "42c71e96d68e98b9e79f0eb6fd88d28a34e9f76a"
  message: >-
     GH-83: add dds::submit_cmd namespace in dds-submit module
- author: !!str Anar Manafov
--
- commit: "d99a8ed9df322114d7fc845396d02526259b1451"
- message: >-
-    GH-83: add dds::info_cmd namespace in dds-info module
- author: !!str Anar Manafov
--
- commit: "16ea5efafb302897abada2448a3c36c609ceebf8"
- message: >-
-    itroduce dds::key_value namespace for key-value user API
- author: !!str Anar Manafov
--
- commit: "7807b05577d02f77939190ce15c9b3b266ecce8a"
- message: >-
-    Update release notes
- author: !!str Anar Manafov
--
- commit: "e7d5e314c7317876c036a833d94447c4e917ea2a"
- message: >-
-    GH-83: add dds::key_value_api namespace in dds-key-value-lib module
- author: !!str Anar Manafov
--
- commit: "155ad3314eda4f01f610c148e98e350c444934c9"
- message: >-
-    GH-83: add dds::user_defaults_api namespace in dds-user-defaults module
- author: !!str Anar Manafov
--
- commit: "c701b84a5fa71f5e0444f9e14d48f29ffed76e76"
- message: >-
-    GH-83: add dds::ssh namespace in dds-ssh module
- author: !!str Anar Manafov
--
- commit: "ac4ef237312f70fea83eed10eeaff19571793ce7"
- message: >-
-    GH-83: add dds::agent namespace in dds-agent module
- author: !!str Anar Manafov
--
- commit: "7751d89b3771203f2672d0e302df149668e955fa"
- message: >-
-    GH-83: add dds::topology_api namespace in dds-topology-lib module
- author: !!str Anar Manafov
--
- commit: "b57d9111116c13b9e6155fe3b7fdf78b8cf79a8e"
- message: >-
-    GH-83: add dds::topology namespace in dds-topology module
  author: !!str Anar Manafov
