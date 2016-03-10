@@ -1,4 +1,9 @@
 -
+ commit: "a32434b76dec9a101c202f5eeb59f8c4681c3190"
+ message: >-
+    Fix class members docs
+ author: !!str Anar Manafov
+-
  commit: "cf55f8d2d50b0cfff59b17cb16d4355d60707dc1"
  message: >-
     Add wrkPackagePath to dds_intercom::SSubmit
@@ -242,9 +247,4 @@
  commit: "810d1a01f24b81ac68bb89a2c2a2f9282bae5935"
  message: >-
     Since Mac OS 10.11 (El Capitan) DYLD_LIBRARY_PATH is not exported in the subshell environment. We explicitly set DYLD_LIBRARY_PATH to the libraries directory.
- author: !!str Andrey Lebedev
--
- commit: "9bccf79b99bcf7197bb9a8d2c7ef61b3a98c12ea"
- message: >-
-    dds-protocol: protocol message: return header by const reference instead of copy.
  author: !!str Andrey Lebedev
