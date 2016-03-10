@@ -318,13 +318,3 @@
  message: >-
     return value was forgotten
  author: !!str shahoian
--
- commit: "d91d86c07d35fee34449f73d4b1904f4655d92f1"
- message: >-
-    Fix AliHLTAnalysisManagerComponent: The esd and esdfriends must only be released after the AnalysisManager has pushed the data (somehow the serialization of the AnalysisDataContainer still needs the AliVEvent object)
- author: !!str drohr
--
- commit: "8dd4269169509f6a9f6f76b6dee43a1fb4542951"
- message: >-
-    Bugfix for typo in case the run is stopped and restarted without disengaging (should actually never happen in reality, because there cannot be two runs with same run number, but anyway)
- author: !!str drohr
