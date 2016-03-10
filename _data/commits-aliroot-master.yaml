@@ -1,4 +1,24 @@
 -
+ commit: "de4dccfab4097b2438379afc1e06e075da889464"
+ message: >-
+    using std::...
+ author: !!str hristov
+-
+ commit: "a1062e9cff76e659674336a930a5958769bb0155"
+ message: >-
+    added configuration macro form EM cocktail generator
+ author: !!str fbock
+-
+ commit: "e3c053e45e9fb1fea574c565f5ed58c34368a1ef"
+ message: >-
+    changed setting of energy, fixed indentations
+ author: !!str fbock
+-
+ commit: "a0ca474376005f0528ee863555d88dba577a7de6"
+ message: >-
+    changed formating, more details on configuration
+ author: !!str fbock
+-
  commit: "54e035faa80040bfb0c1adb8a0388392f21a185b"
  message: >-
     test
@@ -308,8 +328,3 @@
  message: >-
     Bugfix for typo in case the run is stopped and restarted without disengaging (should actually never happen in reality, because there cannot be two runs with same run number, but anyway)
  author: !!str drohr
--
- commit: "7dcaa070e552b5d0f9247be0028ec1f95b9ead9f"
- message: >-
-    added forwarding of unpacked TPC clusters through clusterfinder emulator and decoder
- author: !!str sgorbuno
