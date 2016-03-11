@@ -1,4 +1,9 @@
 -
+ commit: "99672a0a7770c9230d9fd088d18e04e052dccd10"
+ message: >-
+    GH-117: Fail if wn_bin miss any dependency
+ author: !!str Anar Manafov
+-
  commit: "a32434b76dec9a101c202f5eeb59f8c4681c3190"
  message: >-
     Fix class members docs
@@ -242,9 +247,4 @@
  commit: "8cc98975168cd7fc96c5379a865d90162c0d9ae6"
  message: >-
     GH-99: statistics accumulation.
- author: !!str Andrey Lebedev
--
- commit: "810d1a01f24b81ac68bb89a2c2a2f9282bae5935"
- message: >-
-    Since Mac OS 10.11 (El Capitan) DYLD_LIBRARY_PATH is not exported in the subshell environment. We explicitly set DYLD_LIBRARY_PATH to the libraries directory.
  author: !!str Andrey Lebedev
