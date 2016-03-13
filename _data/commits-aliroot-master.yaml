@@ -248,18 +248,3 @@
  message: >-
     PWGPP-168 - Adding support (aliases) for the delta of file counters. Example usage: tree->Draw("deltaT:deltafileBytesRead/1000000.")
  author: !!str mivanov
--
- commit: "8fc2a480a26b130091a3fd31cbd4e42a476e4e85"
- message: >-
-    ATO-331, ATO-339 - Introducing  track and cluster quality cuts - to reduce fake background  in ResidualHistograms. 0.) Modifications in AliTPCcalibAlignInterpolation::FillHistogramsFromChain. 1.) New function  AliTPCcalibAlignInterpolation::CalculateDistance
- author: !!str mivanov
--
- commit: "367dd41bbb962a5b13a135771fc01837fbee3a89"
- message: >-
-    PWGPP-168 - Print tree query in format of  JIRA table.   Example usage: 'AliSysInfo::PrintJiraTable(tree, deltaT:sname:fileReadCalls:fileBytesRead/1000000, deltaT
- author: !!str mivanov
--
- commit: "f938e454d6ff9f70420f0e879a7b0277aec73eec"
- message: >-
-    PWGPP-168 - Print tree query in format of  JIRA table.   'AliSysInfo::PrintJiraTable(tree, deltaT:sname:fileReadCalls:fileBytesRead/1000000, deltaT
- author: !!str mivanov
