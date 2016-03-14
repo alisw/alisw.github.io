@@ -158,13 +158,3 @@
  message: >-
     Bad channel map implementation in reconstruction; x,z swap (S.Evdokimov)
  author: !!str kharlov
--
- commit: "10841286b7fa0a00fbcebc221e9f17343bb29d70"
- message: >-
-    ATO-331, ATO-339  - Fix memory leak, deleteing files and trees. Not seen before as we did not use TTreeCache
- author: !!str mivanov
--
- commit: "91859adf4cb410cec9ae3f2d967c02ddf2cf19aa"
- message: >-
-    ATO-331, ATO-339 - changing the binning to reduce the COG  versus center of bin problem
- author: !!str mivanov
