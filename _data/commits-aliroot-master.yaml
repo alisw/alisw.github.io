@@ -1,4 +1,44 @@
 -
+ commit: "bef7eb1afb8bf448a1b94e260bc71466c3fbf00d"
+ message: >-
+    Bugfix: rewinding of bit position of the read pointer
+ author: !!str richterm
+-
+ commit: "fdf1e7535a55cdf61c7947e2124a28112c76b465"
+ message: >-
+    Bugfix: handling of data cache in AliHLTDataInflaterHuffman
+ author: !!str richterm
+-
+ commit: "93571bb01b4a6f5097a2ef9d1f1070f9e16cec4c"
+ message: >-
+    Adding some debug messages
+ author: !!str richterm
+-
+ commit: "420fdfd92d5637b6945f53d7d7e0194156db8129"
+ message: >-
+    Code cleanup, removing unused variables, minor bugfix in error message
+ author: !!str richterm
+-
+ commit: "89396cab3f067f86f365fe79dcbad49baa7d38fa"
+ message: >-
+    Using cluster decoder in padrow mode 'local', added cleanup in DoDeinit
+ author: !!str richterm
+-
+ commit: "fc5bbc03d08c817b12dd0f9b48c8a16f1e38e9aa"
+ message: >-
+    Introducing modes 'global' and 'local' for extraction of TPC padrow
+ author: !!str richterm
+-
+ commit: "1d987ae54543124b12a68fc0dbbaf86ccb11d8d3"
+ message: >-
+    Adding configuration to run the cluster unpacker
+ author: !!str richterm
+-
+ commit: "f2b7a355ed2704452dc4c4e4294363126c7a8582"
+ message: >-
+    Added AliHLTTPCDataCompressionUnpackerComponent
+ author: !!str richterm
+-
  commit: "9e0ed6dccd5f525346e327d6ee7832f2b21643ad"
  message: >-
     Tree cache learning sample size is settable (Chiara)
