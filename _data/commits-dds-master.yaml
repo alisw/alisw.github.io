@@ -1,4 +1,44 @@
 -
+ commit: "482cf625b897d549d930cd79cdedcb45f9d3f4c2"
+ message: >-
+    GH-115: add localhost plug-in
+ author: !!str Andrey Lebedev
+-
+ commit: "bf86d824cdcc162e4bd57b7a506f1c6f91b845b4"
+ message: >-
+    Use do_execv with double forking to execute plug-in.
+ author: !!str Andrey Lebedev
+-
+ commit: "97f86fcf49c993872a9ce68fc51f0c034c0c93e4"
+ message: >-
+    GH-120: add escaping for double quotes
+ author: !!str Andrey Lebedev
+-
+ commit: "4d953d98eba7723ec3f9232667bf63d67eb24446"
+ message: >-
+    DDSWorker.sh: Set working directory to be the same as the script directory name
+ author: !!str Andrey Lebedev
+-
+ commit: "01ede415ec5370e26c5c746b2018acf60930bfe7"
+ message: >-
+    Remove obsolete localhost implementation
+ author: !!str Andrey Lebedev
+-
+ commit: "6a1307d1ab1fd23f34911a4cb078eaea6fa087aa"
+ message: >-
+    GH-121: dds-daemonixe is able to execute if the full path was provided
+ author: !!str Andrey Lebedev
+-
+ commit: "f8641886fe9efd48ef77ead7f34176786ac71b18"
+ message: >-
+    Add do_execv whith double forking
+ author: !!str Andrey Lebedev
+-
+ commit: "a5c63713c124bd1e2cf160d4336f51409ccdf4c2"
+ message: >-
+    Prevent Asio TCP socket to be inherited by child when using fork/exec
+ author: !!str Andrey Lebedev
+-
  commit: "99672a0a7770c9230d9fd088d18e04e052dccd10"
  message: >-
     GH-117: Fail if wn_bin miss any dependency
@@ -208,43 +248,3 @@
  message: >-
     GH-67: minor changes in dds-scout
  author: !!str Anar Manafov
--
- commit: "08c9cb0c0f1229ef9aae80c3c90f1b3008bfd67a"
- message: >-
-    Fix code formatting
- author: !!str Anar Manafov
--
- commit: "7bec32a1be640c3a5a9625989ed373c997fa711a"
- message: >-
-    GH-86: Check that DDS_LOCATION is set.
- author: !!str Anar Manafov
--
- commit: "cd9819e28577cc00500ceff30e4b3266d8c871b3"
- message: >-
-    GH-100: Custom commands
- author: !!str Andrey Lebedev
--
- commit: "79855973882f3149389fd0b28aa9f68fb42f6488"
- message: >-
-    GH-97: Remove sys. signals handler.
- author: !!str Anar Manafov
--
- commit: "d53e01000df6043e8b7bd419d7e3d3d9118b87da"
- message: >-
-    GH-93 dds-submit learned a localhost RMS. (GH-93)
- author: !!str Anar Manafov
--
- commit: "0457219cffe7a058d62b88d7e0a6c09a24393c8f"
- message: >-
-    Add two functional tests.
- author: !!str Andrey Lebedev
--
- commit: "75367420bb8fdf5f8135c54ce4103494e4ad7395"
- message: >-
-    Update unit tests for protocol commands.
- author: !!str Andrey Lebedev
--
- commit: "8cc98975168cd7fc96c5379a865d90162c0d9ae6"
- message: >-
-    GH-99: statistics accumulation.
- author: !!str Andrey Lebedev
