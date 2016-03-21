@@ -2,37 +2,24 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
-        "key" : "5095",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "failure"
-          } ]
-        }
-      }, {
-        "key" : "5092",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "aborted"
-          } ]
-        }
-      }, {
-        "key" : "5096",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          }, {
-            "key" : "failure"
-          } ]
-        }
-      }, {
         "key" : "14",
         "status" : {
           "buckets" : [ {
             "key" : "started"
+          } ]
+        }
+      }, {
+        "key" : "16",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "18",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
           } ]
         }
       }, {
@@ -43,24 +30,10 @@
           } ]
         }
       }, {
-        "key" : "5089",
+        "key" : "286",
         "status" : {
           "buckets" : [ {
-            "key" : "started"
-          } ]
-        }
-      }, {
-        "key" : "5094",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          } ]
-        }
-      }, {
-        "key" : "5097",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
+            "key" : "success"
           } ]
         }
       }, {
@@ -89,6 +62,20 @@
         "status" : {
           "buckets" : [ {
             "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "5292",
+        "status" : {
+          "buckets" : [ {
+            "key" : "started"
+          } ]
+        }
+      }, {
+        "key" : "5293",
+        "status" : {
+          "buckets" : [ {
+            "key" : "started"
           } ]
         }
       } ]

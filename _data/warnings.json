@@ -2,6 +2,2623 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
+        "key" : "17",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "\"_MODULE_\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "<command-line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "0"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/AliRoot/v5-08-02a_TESTGCC-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/AntiprotonToProton/train/AliAnalysisTaskProtonAbsorbtion.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "196"
+                  }, {
+                    "key" : "226"
+                  }, {
+                    "key" : "231"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 7u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1002"
+                  }, {
+                    "key" : "757"
+                  }, {
+                    "key" : "832"
+                  }, {
+                    "key" : "927"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliCorrelationAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "190"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSEDplusCorrelations::fEtaRange' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGHF/correlationHF/AliAnalysisTaskSEDplusCorrelations.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "106"
+                  }, {
+                    "key" : "156"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonLow' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEMCALPi0Gamma::fHMeanClusterEnergy' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskEMCALPi0Gamma.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "278"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEMCALPi0Gamma::fHMeanClusterNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskEMCALPi0Gamma.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "278"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fAOD' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fClusterZvtx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fFileEff' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fNEvClusters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fWeight' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskStrangenessVsMultiplicity::fTreeCascVarBunchCrossNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskStrangenessVsMultiplicity.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "104"
+                  }, {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskStrangenessVsMultiplicity::fTreeVariableBunchCrossNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskStrangenessVsMultiplicity.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "104"
+                  }, {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskpANormalizationCheckMC::fHistV0AVsNch_DataSelection' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "111"
+                  }, {
+                    "key" : "95"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskpANormalizationCheckMC::fHistV0AVsNch_MCSelection' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "111"
+                  }, {
+                    "key" : "95"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fChargeReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fEtaReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fParticleIDReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fPhiReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fPtReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fZvReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AlidNdPtAnalysis::triggerResult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "204"
+                  }, {
+                    "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliAnalysisTaskEPCorrPP' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliAnalysisTaskHighPtDeDx' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisTaskEPCorrPP(const AliAnalysisTaskEPCorrPP&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisTaskHighPtDeDx(const AliAnalysisTaskHighPtDeDx&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWG/FLOW/Base/AliFlowAnalysisCRC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18776"
+                  }, {
+                    "key" : "18779"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "narrowing conversion of 'evtType' from 'AliPWG0Helper::MCProcessType' to 'Double_t {aka double}' inside { } [-Wnarrowing]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1839"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtAnalysispPb.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1878"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliAnalysisTaskEPCorrPP&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliAnalysisTaskHighPtDeDx&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPD1' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPD2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPDHw1' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPDHw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::V0A' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::V0ABG' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::V0C' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::V0CBG' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::VBA' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::VBC' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::VGA' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319_TESTGCC/vAN-20160319/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "16",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/AliRoot/v5-08-02a_TESTGCC-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"_MODULE_\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "<command-line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "0"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 7u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1002"
+                  }, {
+                    "key" : "757"
+                  }, {
+                    "key" : "832"
+                  }, {
+                    "key" : "927"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliCorrelationAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "190"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEmcalJetTriggerMatcher::fTrkQAcut' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetTriggerMatcher.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  }, {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenSelectedPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiMinus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskExtractPerformanceCascade::f3dHistGenTriggPtVsYVsMultV0APiPlus' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskExtractPerformanceCascade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "390"
+                  }, {
+                    "key" : "98"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskHFEemcQA::fcentMax' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/hfe/AliAnalysisTaskHFEemcQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "170"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskHFEemcQA::fcentMim' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/hfe/AliAnalysisTaskHFEemcQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "170"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNanoAODFilter::fMCMode' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWG/DevNanoAOD/AliAnalysisTaskNanoAODFilter.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "52"
+                  }, {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fAOD' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fClusterZvtx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fFileEff' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fNEvClusters' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fWeight' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNeutralMesons::fhEff' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGGA/EMCALTasks/AliAnalysisTaskNeutralMesons.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  }, {
+                    "key" : "47"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fPtLc' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpKpi' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpKpiProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpiKp' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpiKpProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtCorrId' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtCorrIdProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpKpi' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpKpiProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpiKp' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpiKpProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhSetIsLc' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskStrangenessVsMultiplicity::fTreeCascVarBunchCrossNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskStrangenessVsMultiplicity.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "104"
+                  }, {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskStrangenessVsMultiplicity::fTreeVariableBunchCrossNumber' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskStrangenessVsMultiplicity.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "104"
+                  }, {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskpANormalizationCheckMC::fHistV0AVsNch_DataSelection' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "111"
+                  }, {
+                    "key" : "95"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskpANormalizationCheckMC::fHistV0AVsNch_MCSelection' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "111"
+                  }, {
+                    "key" : "95"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fChargeReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fEtaReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fParticleIDReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fPhiReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fPtReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fZvReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AlidNdPtAnalysis::triggerResult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "204"
+                  }, {
+                    "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliAnalysisTaskEPCorrPP' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisTaskEPCorrPP(const AliAnalysisTaskEPCorrPP&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWG/FLOW/Base/AliFlowAnalysisCRC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18776"
+                  }, {
+                    "key" : "18779"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliAnalysisTaskEPCorrPP&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "38"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPD1' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPD2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPDHw1' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::SPDHw2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisBGMonitorQA::V0A' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318_TESTGCC/vAN-20160318/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "18",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/AliRoot/v5-08-02a_TESTGCC-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "109"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGLF/SPECTRA/AntiprotonToProton/train/AliAnalysisTaskProtonAbsorbtion.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "196"
+                  }, {
+                    "key" : "226"
+                  }, {
+                    "key" : "231"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'auto_ptr' is deprecated (declared at /build/workarea/sw/20155626/1/slc5_x86-64/GCC-Toolchain/v4.9.3-4/include/c++/4.9.3/backward/auto_ptr.h:87) [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGJE/EMCALJetTasks/Tracks/AliEMCalTriggerPatchAnalysisComponent.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "297"
+                  }, {
+                    "key" : "298"
+                  }, {
+                    "key" : "299"
+                  }, {
+                    "key" : "300"
+                  }, {
+                    "key" : "301"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysAntiProtonLow' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliProtonAnalysis::fSysProtonHigh' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGLF/SPECTRA/AntiprotonToProton/AliProtonAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "184"
+                  }, {
+                    "key" : "58"
+                  }, {
+                    "key" : "86"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 2u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGUD/DIFFRACTIVE/legotrain/AliAnalysisTaskCDPWA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "198"
+                  }, {
+                    "key" : "363"
+                  }, {
+                    "key" : "956"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoEtaBins' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoEvents' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_EvtMixing_NLS' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_EvtMixing_NLS_Pref' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_EvtMixing_PLS' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_EvtMixing_PLS_Pref' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_EvtMixing_ULS' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_EvtMixing_ULS_Pref' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_NLS' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_NLS_Pref' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_PLS' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_PLS_Pref' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_ULS' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Data::fHistoInvariantMass_ULS_Pref' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Data.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "27"
+                  }, {
+                    "key" : "63"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoEvents' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvMass_Gen' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvMass_Gen_noweights' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvMass_Rec' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvMass_Rec_Pref' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvMass_Rec_Pref_noweights' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvMass_Rec_noweights' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvariantMass_Conversions' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvariantMass_Conversions_noweights' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvariantMass_Dielectrons' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskDielectronsPbPb_Efficiency::fHistoInvariantMass_Dielectrons_noweights' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGDQ/dielectron/LMEE/AliAnalysisTaskDielectronsPbPb_Efficiency.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  }, {
+                    "key" : "67"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskEmcalJetTriggerMatcher::fTrkQAcut' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskEmcalJetTriggerMatcher.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  }, {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskHFEemcQA::fcentMax' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/hfe/AliAnalysisTaskHFEemcQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "170"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskHFEemcQA::fcentMim' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/hfe/AliAnalysisTaskHFEemcQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "170"
+                  }, {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskNanoAODFilter::fMCMode' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWG/DevNanoAOD/AliAnalysisTaskNanoAODFilter.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "52"
+                  }, {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fPtLc' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpKpi' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpKpiProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpiKp' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhInvMassMisIdpiKpProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtCorrId' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtCorrIdProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpKpi' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpKpiProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpiKp' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhPtMisIdpiKpProb' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliAnalysisTaskSELambdacTMVA::fhSetIsLc' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGHF/vertexingHF/AliAnalysisTaskSELambdacTMVA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "189"
+                  }, {
+                    "key" : "71"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fChargeReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliCorrReducedTrackPP::fEtaReduced' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320_TESTGCC/vAN-20160320/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "131"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "286",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGCF/Correlations/ThreePart/AliFilteredEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/AliAnalysisNonMuonTrackCuts.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGDQ/reducedTree/AliReducedCaloClusterInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "56"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/AliMuonTriggerCombo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/AliAnalysisTaskOnTheFlyAliAODDimuon.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "31"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGCF/Correlations/ThreePart/AliAnalysisTaskBuildCorrTree.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "143"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGCF/Correlations/ThreePart/AliAnalysisTaskCorrelation3p.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "241"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGCF/Correlations/ThreePart/AliFilteredEventInputHandler.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGDQ/reducedTree/AliReducedBaseTrackCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGDQ/reducedTree/AliReducedEventCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/aaf/FILTER_AODMUONONLY_PBPB2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "63"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/aaf/FILTER_AODMUONONLY_PBPB2015_WITHMULTSEL.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/aaf/FILTER_AODMUONONLY_PP2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/aaf/FILTER_AODMUONWITHTRACKLETS.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWG/muon/aaf/FILTER_ESD2AODMUON.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "116"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskPi0FlowMCHijing.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskggMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1155"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGJE/UserTasks/AliAnalysisTaskPID.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3986"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGLF/NUCLEX/Nuclei/DeuteronpA/AliAnalysisDeuteronTree.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "433"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtUnifiedAnalysisTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "680"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskPPVsMultCrossCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "711"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "564"
+                  } ]
+                }
+              }, {
+                "key" : "[ 82%] /build/workarea/sw/20155626/1/SOURCES/AliPhysics/vAN-20160318/ae37400a66/PWGCF/Correlations/ThreePart/AliThreeParticleCorrelator.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"_MODULE_\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "<command line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              }, {
+                "key" : "[ 73%] <command line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              }, {
+                "key" : "[ 74%] <command line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "this is the location of the previous definition",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "<command line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "288",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGDQ/reducedTree/AliReducedCaloClusterInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "56"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGCF/Correlations/ThreePart/AliFilteredEvent.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/AliAnalysisNonMuonTrackCuts.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/AliMuonTriggerCombo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGDQ/reducedTree/AliReducedBaseTrackCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGDQ/reducedTree/AliReducedEventCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/AliAnalysisTaskOnTheFlyAliAODDimuon.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "31"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGCF/Correlations/ThreePart/AliAnalysisTaskBuildCorrTree.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "143"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGCF/Correlations/ThreePart/AliAnalysisTaskCorrelation3p.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "241"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/OADB/COMMON/MULTIPLICITY/AliMultVariable.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "47"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/aaf/FILTER_AODMUONONLY_PBPB2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "63"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/aaf/FILTER_AODMUONONLY_PBPB2015_WITHMULTSEL.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "67"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/aaf/FILTER_AODMUONWITHTRACKLETS.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/aaf/FILTER_ESD2AODMUON.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "116"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGCF/Correlations/ThreePart/AliFilteredEventInputHandler.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGGA/PHOSTasks/ClusterSelection/AliPHOSTriggerUtils.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "260"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskPi0FlowMCHijing.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskggMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1155"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGLF/NUCLEX/Nuclei/DeuteronpA/AliAnalysisDeuteronTree.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "433"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtUnifiedAnalysisTask.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "680"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskPPVsMultCrossCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "711"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWGLF/STRANGENESS/Cascades/AliAnalysisTaskpANormalizationCheckMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "564"
+                  } ]
+                }
+              }, {
+                "key" : "[ 71%] /build/workarea/sw/20155626/1/SOURCES/AliPhysics/vAN-20160320/273a16b511/PWG/muon/aaf/FILTER_AODMUONONLY_PP2015.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"_MODULE_\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "<command line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              }, {
+                "key" : "[ 72%] <command line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "this is the location of the previous definition",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "<command line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "287",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319/13b4eb3af6/PWGDQ/reducedTree/AliReducedCaloClusterInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "56"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319/13b4eb3af6/PWGDQ/reducedTree/AliReducedBaseTrackCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "41"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319/13b4eb3af6/PWGDQ/reducedTree/AliReducedEventCut.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "49"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319/13b4eb3af6/OADB/COMMON/MULTIPLICITY/AliMultVariable.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "47"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319/13b4eb3af6/PWGGA/PHOSTasks/ClusterSelection/AliPHOSTriggerUtils.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "260"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319/13b4eb3af6/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskPi0FlowMCHijing.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160319/13b4eb3af6/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskggMC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1155"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5293",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "#warning \"GCC < 4.3 does not have full support for SSE2 intrinsics. Using scalar types/operations only. Define VC_DONT_WARN_OLD_GCC to silence this warning.\"",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/v5-05-Rev-22i/v5-05-Rev-22i/Vc/include/Vc/global.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "262"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "no newline at end of file",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/v5-05-Rev-22i/v5-05-Rev-22i/HLT/TPCLib/tracking-ca/AliHLTTPCCATracker.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1078"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/v5-05-Rev-22i/v5-05-Rev-22i/MUON/AliMUONAlignmentCompareDialog.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "275"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/v5-05-Rev-22i/v5-05-Rev-22i/PWG/muon/AliAnalysisNonMuonTrackCuts.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/v5-05-Rev-22i/v5-05-Rev-22i/PWGGA/PHOSTasks/PHOS_PbPb/AliAnalysisTaskPi0FlowMCHijing.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "121"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "multi-line comment",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/v5-05-Rev-22i/v5-05-Rev-22i/STRUCT/AliPIPEupgrade.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "192"
+                  } ]
+                }
+              }, {
+                "key" : "[ 12%] /build/workarea/sw/20155626/1/SOURCES/AliRoot/v5-05-Rev-22i/v5-05-Rev-22i/STRUCT/AliPIPEv4.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "152"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "15",
         "by_message" : {
           "buckets" : [ {

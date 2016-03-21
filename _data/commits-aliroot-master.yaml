@@ -1,4 +1,34 @@
 -
+ commit: "dfbb9746f66d9c08fa135b35be43d743f5ab4cc0"
+ message: >-
+    Bit24 used to flag alignment bug-fix is reserved, use 23
+ author: !!str shahoian
+-
+ commit: "98eab195ac0ccc538d32015f532f971a9ff0dd94"
+ message: >-
+    Replace cout by AliInfo
+ author: !!str kharlov
+-
+ commit: "e31806aaefba666a077eabbdcee75a6e0742c8d1"
+ message: >-
+    Pedestal subtraction added for CPV digits; PHOS calib data is passed to AliPHOSCpvRawDigiProducer
+ author: !!str kharlov
+-
+ commit: "c0a4cdf25dd4a25b904472c43f0e3e000f99bee6"
+ message: >-
+    Bug fix: neutral clusters not added
+ author: !!str prsnko
+-
+ commit: "aad3f48890955c93f81adf3f2dcda9bb2e12cdad"
+ message: >-
+    Histos for time slewing correction monitoring
+ author: !!str mbroz
+-
+ commit: "1d89e5f0c5a20dd46c732ab5c8a5ce4b465731ce"
+ message: >-
+    Fix alisync glitches
+ author: !!str eulisse
+-
  commit: "9d5049d75a48eddcbdb995c3eaac5040870920d2"
  message: >-
     Adding retrieval of HLT mode from GRP preprocessor
@@ -157,24 +187,4 @@
  commit: "dbd176bf538690ed05e7f05540af33d0fa561915"
  message: >-
     temporary suppress new option to run HLT on compressed clusters, because it produces duplicated cluster blocks in HLTOut
- author: !!str sgorbuno
--
- commit: "23c04cedfce5f126c1426522c16529beb67834f8"
- message: >-
-    proper row numbers are set for decompressed TPC clusters (withing their readout partitions)
- author: !!str sgorbuno
--
- commit: "20496e61e54b05fbb9e4f43addaa4d8df0f8aa50"
- message: >-
-    Bug fix: last patches at the edges were skipped
- author: !!str saiola
--
- commit: "e92c028e8884044e9793b918c0f3c16d8bfada0a"
- message: >-
-    New FPC class (flex) and all the needed files
- author: !!str manso
--
- commit: "5c8d09ae31fda96f49e586091e10a4a503bcce52"
- message: >-
-    fix segfault, caused by using deleted pointer in HLTOut
  author: !!str sgorbuno
