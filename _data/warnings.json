@@ -2710,6 +2710,57 @@
           } ]
         }
       }, {
+        "key" : "5304",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'/*' within block comment [-Wcomment]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/dfbb9746f66d9c08fa135b35be43d743f5ab4cc0/dfbb9746f6/TPC/TPCmon/TPCmonLinkDef.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10"
+                  }, {
+                    "key" : "11"
+                  }, {
+                    "key" : "6"
+                  }, {
+                    "key" : "7"
+                  }, {
+                    "key" : "8"
+                  }, {
+                    "key" : "9"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'sem_destroy' is deprecated [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/dfbb9746f66d9c08fa135b35be43d743f5ab4cc0/dfbb9746f6/HLT/BASE/AliHLTAsyncProcessorBackend.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "40"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'sem_init' is deprecated [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/dfbb9746f66d9c08fa135b35be43d743f5ab4cc0/dfbb9746f6/HLT/BASE/AliHLTAsyncProcessorBackend.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "59"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "5223",
         "by_message" : {
           "buckets" : [ {
@@ -2756,23 +2807,6 @@
           } ]
         }
       }, {
-        "key" : "5235",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc5_x86-64/ROOT/v5-34-30-alice_TESTGCC-6/include/TMap.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "5296",
         "by_message" : {
           "buckets" : [ {
@@ -2783,6 +2817,54 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "80"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/dfbb9746f66d9c08fa135b35be43d743f5ab4cc0/dfbb9746f6/ITSMFT/MFT/MFTbase/AliMFTHalf.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "92"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/dfbb9746f66d9c08fa135b35be43d743f5ab4cc0/dfbb9746f6/ITSMFT/MFT/MFTbase/AliMFTVSegmentation.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "60"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5300",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt14_x86-64/ROOT/v5-34-30-alice-22/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5235",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/ROOT/v5-34-30-alice_TESTGCC-6/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
                   } ]
                 }
               } ]
