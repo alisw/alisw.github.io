@@ -193,8 +193,3 @@
  message: >-
     Move call of AliEMCALEMCGeometry::DefineSamplingFraction from AliEMCALEMCGeometry::Init() to AliEMCALv0::CreateGeometry(); change AliDebug to AliInfo to check the sampling factor set in DefineSamplingFraction; Modifications needed for Geant4
  author: !!str gconesab
--
- commit: "f47837c7de8b4f10e1c35c69694fd79a038c53f4"
- message: >-
-    Applying correct fix to restore default behavior of HLT TPC offline chain.
- author: !!str richterm
