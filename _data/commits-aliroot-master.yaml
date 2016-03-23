@@ -1,4 +1,14 @@
 -
+ commit: "ca4fc5325f59c37a65e851640824f76cb8160132"
+ message: >-
+    ATO-339 - Synch with the master. Using wide kernel width in q/pt fit
+ author: !!str mivanov
+-
+ commit: "ff6583b00ccb08f32d16fa03714fc221c0675c1a"
+ message: >-
+    ATO-330- Adding  AliTPCROC::GetIdealPosition(UInt_t sector, UInt_t row, UInt_t pad, coordType coord). Static version of function used for tree draw queries. Return  center of the pad in ideal case (without misaingment and distortion). Another version version with the
+ author: !!str mivanov
+-
  commit: "2fedf010180e545f9d30c923a11b1e414f77a0f6"
  message: >-
     TEvtGen: remove unneeded leftover CMake definition
