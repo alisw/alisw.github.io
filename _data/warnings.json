@@ -9291,6 +9291,43 @@
           } ]
         }
       }, {
+        "key" : "5489",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "format not a string literal and no format arguments [-Wformat-security]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "libcroco/cr-statement.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "2610"
+                  }, {
+                    "key" : "2661"
+                  }, {
+                    "key" : "2688"
+                  }, {
+                    "key" : "2714"
+                  }, {
+                    "key" : "2740"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ignoring return value of 'vasprintf', declared with attribute warn_unused_result [-Wunused-result]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "glib/gstrfuncs.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "204"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "5428",
         "by_message" : {
           "buckets" : [ {
@@ -9449,6 +9486,23 @@
         }
       }, {
         "key" : "5427",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "assuming signed overflow does not occur when assuming that (X - c) > X is always false [-Wstrict-overflow]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/ROOT/v6-06-00-patches-39e926b372/39e926b372/math/mathcore/src/triangle.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9238"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5482",
         "by_message" : {
           "buckets" : [ {
             "key" : "assuming signed overflow does not occur when assuming that (X - c) > X is always false [-Wstrict-overflow]",
