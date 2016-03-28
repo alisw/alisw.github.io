@@ -5441,6 +5441,185 @@
           } ]
         }
       }, {
+        "key" : "5509",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "reference cannot be bound to dereferenced null pointer in well-defined C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/fumili/G__Fumili.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "331"
+                  }, {
+                    "key" : "342"
+                  }, {
+                    "key" : "353"
+                  } ]
+                }
+              }, {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/minuit2/G__Minuit2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1481"
+                  }, {
+                    "key" : "1502"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gapi_jobstatusstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBSTATUS_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/osx_x86-64/AliEn-Runtime/v2-19-le-4/include/gapi_job_operations.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'reverse_iterator<vector<double, allocator<double> >::iterator>::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/mathcore/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10252"
+                  }, {
+                    "key" : "10360"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<ROOT::Fit::ParameterSettings, allocator<ROOT::Fit::ParameterSettings> >::reference' (aka 'ROOT::Fit::ParameterSettings &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/mathcore/G__MathFit.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "4951"
+                  }, {
+                    "key" : "5061"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<ROOT::Minuit2::MinuitParameter, allocator<ROOT::Minuit2::MinuitParameter> >::reference' (aka 'ROOT::Minuit2::MinuitParameter &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/minuit2/G__Minuit2.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3320"
+                  }, {
+                    "key" : "3430"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<double, allocator<double> >::iterator::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/mathcore/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10083"
+                  } ]
+                }
+              }, {
+                "key" : "[ 28%] [ 28%] /build/workarea/sw/20155629/1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/mathcore/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10021"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<double, allocator<double> >::reference' (aka 'double &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/mathcore/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9635"
+                  }, {
+                    "key" : "9745"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'const' qualifier on reference type 'vector<vector<double, allocator<double> >, allocator<vector<double, allocator<double> > > >::reference' (aka 'std::__1::vector<double, std::__1::allocator<double> > &') has no effect [-Wignored-qualifiers]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/068fa00dc8512e291daeb248f645cc1066173e51/ROOT/math/mathcore/G__MathCore.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18793"
+                  }, {
+                    "key" : "18903"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gapi_jobformatstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBFORMAT_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/osx_x86-64/AliEn-Runtime/v2-19-le-4/include/gapi_job_operations.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [-Wmismatched-new-delete]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/a7fcb1a793/hist/hist/src/TUnfold.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1123"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/ROOT/v5-34-30-alice/a7fcb1a793/math/foam/src/TFoamVect.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "219"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "checking fcntl.h usability... /build/workarea/sw/20155629/1/SOURCES/ROOT/v5-34-30-alice/a7fcb1a793/cint/reflex/src/Class.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "267"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "5351",
         "by_message" : {
           "buckets" : [ {
