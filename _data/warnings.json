@@ -5075,138 +5075,6 @@
           } ]
         }
       }, {
-        "key" : "5349",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "wsdlStub.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "235"
-                  }, {
-                    "key" : "351"
-                  } ]
-                }
-              }, {
-                "key" : "wsdlC.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "10054"
-                  }, {
-                    "key" : "12573"
-                  }, {
-                    "key" : "8006"
-                  }, {
-                    "key" : "9737"
-                  } ]
-                }
-              }, {
-                "key" : "stdsoap2.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "9045"
-                  }, {
-                    "key" : "9053"
-                  }, {
-                    "key" : "9061"
-                  } ]
-                }
-              }, {
-                "key" : "wsdl.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "355"
-                  }, {
-                    "key" : "96"
-                  }, {
-                    "key" : "984"
-                  } ]
-                }
-              }, {
-                "key" : "types.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1826"
-                  }, {
-                    "key" : "2031"
-                  } ]
-                }
-              }, {
-                "key" : "schema.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "261"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "\"HAVE_SYS_TIMEB_H\" redefined",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "stdsoap2.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "334"
-                  }, {
-                    "key" : "457"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'cppnamespace' initialized and declared 'extern'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "wsdl2h.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "90"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'cwd_path' initialized and declared 'extern'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "wsdl2h.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "89"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'import_path' initialized and declared 'extern'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "wsdl2h.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "88"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'mapfile' initialized and declared 'extern'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "wsdl2h.cpp",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "87"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "5512",
         "by_message" : {
           "buckets" : [ {
@@ -5400,6 +5268,18 @@
               } ]
             }
           }, {
+            "key" : "variable 'dtd' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "tree2.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "30"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "variable 'ecc_pkey_size' set but not used [-Wunused-but-set-variable]",
             "filename" : {
               "buckets" : [ {
@@ -5587,6 +5467,138 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "100"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5349",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdlStub.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "235"
+                  }, {
+                    "key" : "351"
+                  } ]
+                }
+              }, {
+                "key" : "wsdlC.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "10054"
+                  }, {
+                    "key" : "12573"
+                  }, {
+                    "key" : "8006"
+                  }, {
+                    "key" : "9737"
+                  } ]
+                }
+              }, {
+                "key" : "stdsoap2.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "9045"
+                  }, {
+                    "key" : "9053"
+                  }, {
+                    "key" : "9061"
+                  } ]
+                }
+              }, {
+                "key" : "wsdl.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "355"
+                  }, {
+                    "key" : "96"
+                  }, {
+                    "key" : "984"
+                  } ]
+                }
+              }, {
+                "key" : "types.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1826"
+                  }, {
+                    "key" : "2031"
+                  } ]
+                }
+              }, {
+                "key" : "schema.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "261"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "\"HAVE_SYS_TIMEB_H\" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "stdsoap2.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "334"
+                  }, {
+                    "key" : "457"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'cppnamespace' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "90"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'cwd_path' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "89"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'import_path' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "88"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'mapfile' initialized and declared 'extern'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "wsdl2h.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "87"
                   } ]
                 }
               } ]
