@@ -6521,6 +6521,23 @@
             }
           } ]
         }
+      }, {
+        "key" : "5507",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "checking for uintptr_t... /build/workarea/sw/20155629/1/SOURCES/ROOT/v5-34-30-alice/23865caede/cint/reflex/src/Class.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "267"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
       } ]
     }
   }
