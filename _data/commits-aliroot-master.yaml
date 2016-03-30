@@ -63,13 +63,3 @@
  message: >-
     Temporary fix for XCode 7.3. The clang version is called 7.3.0 but actually corresponds to 3.7.0, so I used the later one in the protection
  author: !!str hristov
--
- commit: "ca4fc5325f59c37a65e851640824f76cb8160132"
- message: >-
-    ATO-339 - Synch with the master. Using wide kernel width in q/pt fit
- author: !!str mivanov
--
- commit: "ff6583b00ccb08f32d16fa03714fc221c0675c1a"
- message: >-
-    ATO-330- Adding  AliTPCROC::GetIdealPosition(UInt_t sector, UInt_t row, UInt_t pad, coordType coord). Static version of function used for tree draw queries. Return  center of the pad in ideal case (without misaingment and distortion). Another version version with the
- author: !!str mivanov
