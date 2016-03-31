@@ -4749,6 +4749,255 @@
           } ]
         }
       }, {
+        "key" : "5602",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/STEER/STEER/AliQAManager.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "113"
+                  }, {
+                    "key" : "150"
+                  }, {
+                    "key" : "76"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fAxes' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fBrowsables' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'THnBase::fTsumwx2' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "73"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class ROOT::THnBaseBrowsable' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class THnIter' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'ROOT::THnBaseBrowsable(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'THnIter(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const ROOT::THnBaseBrowsable&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "276"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const THnIter&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/THnBase.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "308"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class TText' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/TText.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "42"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "conflicting types for built-in function 'malloc'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/GEANT3/v2-0_COVERAGE/v2-0/minicern/fchtak.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "35"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "3/SOURCES/ROOT/v5-34-30-alice_COVERAGE/5e1baee178/net/alien/src/TAlienCollection.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1334"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "5545",
         "by_message" : {
           "buckets" : [ {
@@ -6525,123 +6774,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "267"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "5602",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/TMap.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "148"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliQAManager::fActiveOnlineDetectors' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/STEER/STEER/AliQAManager.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "113"
-                  }, {
-                    "key" : "150"
-                  }, {
-                    "key" : "76"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TText' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'operator=(const TText&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/include/TText.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "42"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "conflicting types for built-in function 'malloc'",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/GEANT3/v2-0_COVERAGE/v2-0/minicern/fchtak.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "35"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/AliRoot/ac0fb49d8608f6057fc24daf5f6234f595bf34aa_COVERAGE/ac0fb49d86/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "25"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "variable 'isonline' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "3/SOURCES/ROOT/v5-34-30-alice_COVERAGE/5e1baee178/net/alien/src/TAlienCollection.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1334"
                   } ]
                 }
               } ]
