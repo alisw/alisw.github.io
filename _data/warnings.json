@@ -7616,6 +7616,177 @@
           } ]
         }
       }, {
+        "key" : "5628",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "add explicit braces to avoid dangling else [-Wdangling-else]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gapi_job_operations.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "381"
+                  }, {
+                    "key" : "386"
+                  }, {
+                    "key" : "391"
+                  }, {
+                    "key" : "396"
+                  }, {
+                    "key" : "401"
+                  }, {
+                    "key" : "406"
+                  }, {
+                    "key" : "415"
+                  }, {
+                    "key" : "422"
+                  }, {
+                    "key" : "427"
+                  }, {
+                    "key" : "432"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gapi_jobformatstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBFORMAT_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../client/gclientlib/gapi_job_operations.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              }, {
+                "key" : "./gapi_job_operations.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "24"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'gapi_jobstatusstring' has C-linkage specified, but returns user-defined type 'GAPI_JOBSTATUS_STRING' (aka 'basic_string<char, char_traits<char>, allocator<char> >') which is incompatible with C [-Wreturn-type-c-linkage]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "../../client/gclientlib/gapi_job_operations.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              }, {
+                "key" : "./gapi_job_operations.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "23"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'XrdxAlienFs::newDir' hides overloaded virtual function [-Woverloaded-virtual]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "./XrdxAlienFs/XrdxAlienFs.hh",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "205"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'XrdxAlienFs::newFile' hides overloaded virtual function [-Woverloaded-virtual]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "./XrdxAlienFs/XrdxAlienFs.hh",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "208"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "C2PERL.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "190"
+                  }, {
+                    "key" : "226"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "XrdxAlienWorker.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "136"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "array index 40 is past the end of the array (which contains 40 elements) [-Warray-bounds]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "XrdxAlienWorker.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "format specifies type 'long' but the argument has type 'off_t' (aka 'long long') [-Wformat]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "XrdxAlienFs.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "269"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible pointer types passing 'void (CV *)' (aka 'void (struct cv *)') to parameter of type 'XSUBADDR_t' (aka 'void (*)(struct interpreter *, struct cv *)') [-Wincompatible-pointer-types]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "C2PERL.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible pointer types passing 'void (void)' to parameter of type 'XSINIT_t' (aka 'void (*)(struct interpreter *)') [-Wincompatible-pointer-types]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "C2PERL.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "5560",
         "by_message" : {
           "buckets" : [ {
@@ -7741,6 +7912,201 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "1"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5625",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gapi_job_operations.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "378"
+                  }, {
+                    "key" : "383"
+                  }, {
+                    "key" : "388"
+                  }, {
+                    "key" : "393"
+                  }, {
+                    "key" : "398"
+                  }, {
+                    "key" : "403"
+                  }, {
+                    "key" : "412"
+                  }, {
+                    "key" : "419"
+                  }, {
+                    "key" : "424"
+                  }, {
+                    "key" : "429"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'fd' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gclient.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1224"
+                  }, {
+                    "key" : "1836"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible implicit declaration of built-in function 'memcpy'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "spc_cwc.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "146"
+                  }, {
+                    "key" : "179"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "unused variable 'items' [-Wunused-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/usr/lib64/perl5/CORE/XSUB.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "136"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'mode' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gapi_file_operations.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "124"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'no1' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aesgav.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "418"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'order' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gbbox.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "209"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "array subscript is above array bounds [-Warray-bounds]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "XrdxAlienWorker.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "115"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "XrdxAlienWorker.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "136"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "passing argument 2 of 'perl_parse' from incompatible pointer type",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "C2PERL.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "77"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "passing argument 3 of 'Perl_newXS' from incompatible pointer type",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "C2PERL.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'blocks' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gapi_stat.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "78"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'lasttimeexecuted' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gclient.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "708"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'r_cnt' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aesaux.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "167"
                   } ]
                 }
               } ]
@@ -8365,6 +8731,75 @@
                     "key" : "523"
                   }, {
                     "key" : "937"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5626",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "'fd' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gclient.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1224"
+                  }, {
+                    "key" : "1836"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "incompatible implicit declaration of built-in function 'memcpy'",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "spc_cwc.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "146"
+                  }, {
+                    "key" : "179"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'no1' may be used uninitialized in this function [-Wmaybe-uninitialized]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aesgav.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "418"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'lasttimeexecuted' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "gclient.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "708"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'r_cnt' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "aesaux.cpp",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "167"
                   } ]
                 }
               } ]
