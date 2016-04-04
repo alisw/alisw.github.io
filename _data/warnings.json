@@ -10820,6 +10820,36 @@
               } ]
             }
           }, {
+            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGLF/SPECTRA/AntiprotonToProton/train/AliAnalysisTaskProtonAbsorbtion.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "196"
+                  }, {
+                    "key" : "226"
+                  }, {
+                    "key" : "231"
+                  } ]
+                }
+              }, {
+                "key" : "2/SOURCES/AliRoot/de0a1733f0f06fabd8cb38f4800d68bf42bdd672/de0a1733f0/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "43"
+                  } ]
+                }
+              }, {
+                "key" : "2/BUILD/73b4253ffbc98d5865285521267cbf468de524d3/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3256"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
             "filename" : {
               "buckets" : [ {
@@ -11064,25 +11094,6 @@
               } ]
             }
           }, {
-            "key" : "deprecated conversion from string constant to 'Char_t* {aka char*}' [-Wwrite-strings]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliRoot/de0a1733f0f06fabd8cb38f4800d68bf42bdd672/de0a1733f0/ITSMFT/MFT/MFTrec/AliMFTTrackFinder.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "43"
-                  } ]
-                }
-              }, {
-                "key" : "2/BUILD/73b4253ffbc98d5865285521267cbf468de524d3/AliRoot/ITSMFT/MFT/MFTrec/G__MFTrec.cxx",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3256"
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "or 'operator=(const TNDArrayT<float>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -11149,6 +11160,42 @@
               } ]
             }
           }, {
+            "key" : "'class AliAnalysisTaskHighPtDeDx' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliAnalysisTaskHighPtDeDx(const AliAnalysisTaskHighPtDeDx&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deprecated conversion from string constant to 'char*' [-Wwrite-strings]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGLF/RESONANCES/extra/AliRsnTOFT0maker.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "61"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
             "filename" : {
               "buckets" : [ {
@@ -11191,6 +11238,25 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "1878"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliAnalysisTaskHighPtDeDx&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
+                  } ]
+                }
+              }, {
+                "key" : "[ 28%] /build/workarea/sw/20155631/2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "26"
                   } ]
                 }
               } ]
@@ -11257,54 +11323,6 @@
             }
           }, {
             "key" : "'AliCorrReducedTrackPP::fEtaReduced' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "131"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliCorrReducedTrackPP::fParticleIDReduced' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "131"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliCorrReducedTrackPP::fPhiReduced' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "131"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliCorrReducedTrackPP::fPtReduced' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "131"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'AliCorrReducedTrackPP::fZvReduced' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "2/SOURCES/AliPhysics/b9c63823cb7ca168d198fbc2f5ddba70f7c94a26/b9c63823cb/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
