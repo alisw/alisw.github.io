@@ -2,33 +2,6 @@
   "aggregations" : {
     "by_package" : {
       "buckets" : [ {
-        "key" : "AliEn-Runtime",
-        "by_commit" : {
-          "buckets" : [ {
-            "key" : "0",
-            "build_id" : {
-              "buckets" : [ {
-                "key" : "5508",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "slc5_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "alisw",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "IB/v5-06/prod"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
         "key" : "AliPhysics",
         "by_commit" : {
           "buckets" : [ {
@@ -3466,28 +3439,6 @@
         "key" : "ROOT",
         "by_commit" : {
           "buckets" : [ {
-            "key" : "23865cae",
-            "build_id" : {
-              "buckets" : [ {
-                "key" : "5507",
-                "architecture" : {
-                  "buckets" : [ {
-                    "key" : "osx_x86-64",
-                    "alidist_repo" : {
-                      "buckets" : [ {
-                        "key" : "dberzano",
-                        "alidist_branch" : {
-                          "buckets" : [ {
-                            "key" : "IB/v5-08/next"
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              } ]
-            }
-          }, {
             "key" : "a7fcb1a7",
             "build_id" : {
               "buckets" : [ {
