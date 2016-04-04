@@ -1,1 +1,83 @@
-{ }
+{
+  "aggregations" : {
+    "by_build" : {
+      "buckets" : [ {
+        "key" : "5602",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "libcrypto.so.0.9.8, needed by /build/workarea/sw/20155630/3/INSTALLROOT/d09b3350d959e1432b9157beba17b70bd5445ddc/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/lib/libNet.so, may conflict with libcrypto.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/3/slc7_x86-64/GCC-Toolchain/v4.9.3-12/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          }, {
+            "key" : "libssl.so.0.9.8, needed by /build/workarea/sw/20155630/3/INSTALLROOT/d09b3350d959e1432b9157beba17b70bd5445ddc/slc7_x86-64/ROOT/v5-34-30-alice_COVERAGE-19/lib/libNet.so, may conflict with libssl.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/3/slc7_x86-64/GCC-Toolchain/v4.9.3-12/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5606",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "libcrypto.so.0.9.8, needed by /build/workarea/sw/20155630/1/INSTALLROOT/deb3b3231b74fbbc641d4336b5351cb443b9c9dc/slc6_x86-64/ROOT/v5-34-30-alice-25/lib/libNet.so, may conflict with libcrypto.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/1/slc6_x86-64/GCC-Toolchain/v4.9.3-12/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          }, {
+            "key" : "libssl.so.0.9.8, needed by /build/workarea/sw/20155630/1/INSTALLROOT/deb3b3231b74fbbc641d4336b5351cb443b9c9dc/slc6_x86-64/ROOT/v5-34-30-alice-25/lib/libNet.so, may conflict with libssl.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/1/slc6_x86-64/GCC-Toolchain/v4.9.3-12/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5624",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "libcrypto.so.0.9.8, needed by /build/workarea/sw/20155630/7/INSTALLROOT/d88de3f81700039e014cc3485b4fb09f88885084/slc7_x86-64/ROOT/v5-34-30-alice-26/lib/libNet.so, may conflict with libcrypto.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/7/slc7_x86-64/GCC-Toolchain/v4.9.3-13/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          }, {
+            "key" : "libssl.so.0.9.8, needed by /build/workarea/sw/20155630/7/INSTALLROOT/d88de3f81700039e014cc3485b4fb09f88885084/slc7_x86-64/ROOT/v5-34-30-alice-26/lib/libNet.so, may conflict with libssl.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/7/slc7_x86-64/GCC-Toolchain/v4.9.3-13/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          } ]
+        }
+      }, {
+        "key" : "5625",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "libcrypto.so.0.9.8, needed by /build/workarea/sw/20155630/2/INSTALLROOT/d88de3f81700039e014cc3485b4fb09f88885084/slc6_x86-64/ROOT/v5-34-30-alice-26/lib/libNet.so, may conflict with libcrypto.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/2/slc6_x86-64/GCC-Toolchain/v4.9.3-12/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          }, {
+            "key" : "libssl.so.0.9.8, needed by /build/workarea/sw/20155630/2/INSTALLROOT/d88de3f81700039e014cc3485b4fb09f88885084/slc6_x86-64/ROOT/v5-34-30-alice-26/lib/libNet.so, may conflict with libssl.so.10",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "/build/workarea/sw/20155630/2/slc6_x86-64/GCC-Toolchain/v4.9.3-12/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../x86_64-unknown-linux-gnu/bin/ld"
+              } ]
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}
