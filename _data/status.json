@@ -2,6 +2,15 @@
   "aggregations" : {
     "by_build" : {
       "buckets" : [ {
+        "key" : "303",
+        "status" : {
+          "buckets" : [ {
+            "key" : "started"
+          }, {
+            "key" : "success"
+          } ]
+        }
+      }, {
         "key" : "5506",
         "status" : {
           "buckets" : [ {
@@ -65,6 +74,33 @@
           } ]
         }
       }, {
+        "key" : "5630",
+        "status" : {
+          "buckets" : [ {
+            "key" : "started"
+          }, {
+            "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "5631",
+        "status" : {
+          "buckets" : [ {
+            "key" : "started"
+          }, {
+            "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "5632",
+        "status" : {
+          "buckets" : [ {
+            "key" : "started"
+          }, {
+            "key" : "failure"
+          } ]
+        }
+      }, {
         "key" : "27",
         "status" : {
           "buckets" : [ {
@@ -80,6 +116,13 @@
         }
       }, {
         "key" : "302",
+        "status" : {
+          "buckets" : [ {
+            "key" : "success"
+          } ]
+        }
+      }, {
+        "key" : "304",
         "status" : {
           "buckets" : [ {
             "key" : "success"
@@ -328,41 +371,6 @@
         "status" : {
           "buckets" : [ {
             "key" : "started"
-          } ]
-        }
-      }, {
-        "key" : "5613",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          } ]
-        }
-      }, {
-        "key" : "5614",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          } ]
-        }
-      }, {
-        "key" : "5615",
-        "status" : {
-          "buckets" : [ {
-            "key" : "started"
-          } ]
-        }
-      }, {
-        "key" : "5616",
-        "status" : {
-          "buckets" : [ {
-            "key" : "failure"
-          } ]
-        }
-      }, {
-        "key" : "5617",
-        "status" : {
-          "buckets" : [ {
-            "key" : "failure"
           } ]
         }
       } ]
