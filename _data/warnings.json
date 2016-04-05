@@ -27239,6 +27239,92 @@
           } ]
         }
       }, {
+        "key" : "5733",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-26/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'auto_ptr' is deprecated (declared at /build/workarea/sw/20155632/1/slc6_x86-64/GCC-Toolchain/v4.9.3-12/include/c++/4.9.3/backward/auto_ptr.h:87) [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/e238200ab728e1fa6a0e83e5ed3d49da52cee5ec/e238200ab7/PYTHIA8/pythia8/src/FJcore.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "885"
+                  }, {
+                    "key" : "905"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliRoot/e238200ab728e1fa6a0e83e5ed3d49da52cee5ec/e238200ab7/HLT/BASE/util/AliHLTGlobalBarrelTrack.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "559"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-26/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliPHOSCpvRawDigiProducer' has pointer data members [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/e238200ab728e1fa6a0e83e5ed3d49da52cee5ec/e238200ab7/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "but does not override 'AliPHOSCpvRawDigiProducer(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/e238200ab728e1fa6a0e83e5ed3d49da52cee5ec/e238200ab7/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "or 'operator=(const AliPHOSCpvRawDigiProducer&)' [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/e238200ab728e1fa6a0e83e5ed3d49da52cee5ec/e238200ab7/PHOS/PHOSbase/AliPHOSCpvRawDigiProducer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "25"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "5572",
         "by_message" : {
           "buckets" : [ {
@@ -27524,40 +27610,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "262"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "5567",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "variable 'Ql' set but not used [-Wunused-but-set-variable]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "../../../gcc/libgcc/config/libbid/bid128_div.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1406"
-                  }, {
-                    "key" : "39"
-                  }, {
-                    "key" : "490"
-                  }, {
-                    "key" : "949"
-                  } ]
-                }
-              }, {
-                "key" : "../../../gcc/libgcc/config/libbid/bid64_div.c",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "1374"
-                  }, {
-                    "key" : "523"
-                  }, {
-                    "key" : "937"
                   } ]
                 }
               } ]
