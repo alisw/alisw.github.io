@@ -1,4 +1,29 @@
 -
+ commit: "55c952d70891ceec733cb2db8cec8b058481606c"
+ message: >-
+    optionally use scaled distortion dispersion as extra error
+ author: !!str shahoian
+-
+ commit: "b56e52f934c06bc909a41b0559d771ef6921a268"
+ message: >-
+    added new data member to store distortions dispersion
+ author: !!str shahoian
+-
+ commit: "0753a06350a7828e4c664ff2d708fac5f51e382b"
+ message: >-
+    Increase correction array cache to account for dispersion param
+ author: !!str shahoian
+-
+ commit: "e05027102e1c8161a229dc512f32009b1808e927"
+ message: >-
+    factor for distortion disperion (Y) to use it as extra error
+ author: !!str shahoian
+-
+ commit: "2fbacd21cccc4ae1b8a9068170cb8578974d00ce"
+ message: >-
+    Getter for N output dimensions in Cheb.Corr
+ author: !!str shahoian
+-
  commit: "de0a1733f0f06fabd8cb38f4800d68bf42bdd672"
  message: >-
     fix: enable robust caching of the ECS string (always check on non-data ev.)
