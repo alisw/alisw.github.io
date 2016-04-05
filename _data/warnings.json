@@ -8731,6 +8731,67 @@
               } ]
             }
           }, {
+            "key" : "'AliAnalysisTaskNanoAODFilter::fMCMode' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/7c855707040649e2fbf9be89eac3dd79af443e71/7c85570704/PWG/DevNanoAOD/AliAnalysisTaskNanoAODFilter.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "52"
+                  }, {
+                    "key" : "66"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'AlidNdPtAnalysis::triggerResult' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/7c855707040649e2fbf9be89eac3dd79af443e71/7c85570704/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "205"
+                  }, {
+                    "key" : "74"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 4u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/7c855707040649e2fbf9be89eac3dd79af443e71/7c85570704/PWG/FLOW/Base/AliFlowAnalysisCRC.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "18785"
+                  }, {
+                    "key" : "18788"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "narrowing conversion of 'evtType' from 'AliPWG0Helper::MCProcessType' to 'Double_t {aka double}' inside { } [-Wnarrowing]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/7c855707040649e2fbf9be89eac3dd79af443e71/7c85570704/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtAnalysis.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1855"
+                  } ]
+                }
+              }, {
+                "key" : "1/SOURCES/AliPhysics/7c855707040649e2fbf9be89eac3dd79af443e71/7c85570704/PWGLF/SPECTRA/ChargedHadrons/dNdPt/AlidNdPtAnalysispPb.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1878"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'AliEveConfigManager::fStoragePopup' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -8906,54 +8967,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "1152"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliEveEMCALSModuleData**, std::vector<AliEveEMCALSModuleData*> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-26/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-26/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<double*, std::vector<double> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-26/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<float*, std::vector<float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/slc6_x86-64/ROOT/v5-34-30-alice-26/include/TCollectionProxyInfo.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "218"
                   } ]
                 }
               } ]
