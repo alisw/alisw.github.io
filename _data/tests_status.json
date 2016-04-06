@@ -1,1 +1,14 @@
-{ }
+{
+  "aggregations" : {
+    "by_id" : {
+      "buckets" : [ {
+        "key" : "5779",
+        "by_name" : {
+          "buckets" : [ {
+            "key" : "gun"
+          } ]
+        }
+      } ]
+    }
+  }
+}
