@@ -1,4 +1,26 @@
 {
-  "error" : "ClusterBlockException[blocked by: [SERVICE_UNAVAILABLE/1/state not recovered / initialized];]",
-  "status" : 503
+  "error" : {
+    "root_cause" : [ {
+      "type" : "search_parse_exception",
+      "reason" : "Unknown key for a VALUE_STRING in [2]: [pre_zone].",
+      "line" : 1,
+      "col" : 1096
+    } ],
+    "type" : "search_phase_execution_exception",
+    "reason" : "all shards failed",
+    "phase" : "query",
+    "grouped" : true,
+    "failed_shards" : [ {
+      "shard" : 0,
+      "index" : "logstash-2016.04.06",
+      "node" : "_iMIKIP0So2SG8IunqZ16A",
+      "reason" : {
+        "type" : "search_parse_exception",
+        "reason" : "Unknown key for a VALUE_STRING in [2]: [pre_zone].",
+        "line" : 1,
+        "col" : 1096
+      }
+    } ]
+  },
+  "status" : 400
 }
