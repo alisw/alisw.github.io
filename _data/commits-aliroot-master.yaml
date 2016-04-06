@@ -1,4 +1,9 @@
 -
+ commit: "ecce38d01a5630538951978eeca4dc64c6404c0a"
+ message: >-
+    These debug flags are now set by the toplevel CMakeList file depending on the CMake build type. They must be removed here, otherwise both -DDEBUG and -DNDEBUG can be set for the HLT subdirectory
+ author: !!str drohr
+-
  commit: "394dc6640673048307a6cca95515fa370014d1c8"
  message: >-
     cache the streamer infos of objects pushed back on request
