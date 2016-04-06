@@ -1,4 +1,49 @@
 -
+ commit: "394dc6640673048307a6cca95515fa370014d1c8"
+ message: >-
+    cache the streamer infos of objects pushed back on request
+ author: !!str mkrzewic
+-
+ commit: "ff1260c1150ce40625289e38813091bd9b89f672"
+ message: >-
+    forward all HLT input blocks if asked to
+ author: !!str mkrzewic
+-
+ commit: "f732bcaee97dc2b411d0f87780e279f2475fdd6c"
+ message: >-
+    throw error on unrecognized option
+ author: !!str mkrzewic
+-
+ commit: "ee341564413834a745cb68df64ee2f1198af56f5"
+ message: >-
+    fix warning: add braces to avoid a dangling else
+ author: !!str mkrzewic
+-
+ commit: "c562f75206529d264206d6561a5b6c1c2c2595e6"
+ message: >-
+    properly handle creating streamer infos during serialize
+ author: !!str mkrzewic
+-
+ commit: "fb3974dc610dcf192150d9c0f4f43a9b81cf9af4"
+ message: >-
+    fix small memleak with enabled streamer infos
+ author: !!str mkrzewic
+-
+ commit: "606af71ed5a282921580e511d8b21871d068686e"
+ message: >-
+    add schema option to send streamer infos with histos
+ author: !!str mkrzewic
+-
+ commit: "254cb0184273f00f2162864a0a4bca3bdc9276b8"
+ message: >-
+    use the aliZMQhelpers API, add schema evolution in messages
+ author: !!str mkrzewic
+-
+ commit: "e4e43454e7ae2473aa08f161a836819b2f908959"
+ message: >-
+    add ROOT streamer info handling to the helper lib
+ author: !!str mkrzewic
+-
  commit: "93d87cdd2f7742315907c892596e2ec08fae901f"
  message: >-
     Add TPCsim parfile
