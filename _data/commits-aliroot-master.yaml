@@ -1,4 +1,9 @@
 -
+ commit: "43854f4a8244340c7805dac7671aa744164e0285"
+ message: >-
+    ATO-336, ATO-344 - Adding static function for local kernel regression of the graph AliNDLocalRegression  EvalGraphKernel(TGraph * gr, Double_t evalTime, Double_t kernelWidth, Int_t sigmaCut=3, Bool_t evalLog=kFALSE, Int_t pol=1, TVectorD *param=0, TMatrixD *covar=0)
+ author: !!str mivanov
+-
  commit: "ecce38d01a5630538951978eeca4dc64c6404c0a"
  message: >-
     These debug flags are now set by the toplevel CMakeList file depending on the CMake build type. They must be removed here, otherwise both -DDEBUG and -DNDEBUG can be set for the HLT subdirectory
