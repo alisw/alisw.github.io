@@ -1,4 +1,44 @@
 -
+ commit: "77bc4ffebafa444da6111984dd9c5e3506b12bbc"
+ message: >-
+    option to enable sending schema evolution on change
+ author: !!str mkrzewic
+-
+ commit: "6907d5c6526e2d281a4b33ea2239aff4367be00f"
+ message: >-
+    add a configuration of GLOBAL-esd-converter-schema with schema enabled
+ author: !!str mkrzewic
+-
+ commit: "48801e7ecd50476c57b6ecc418fad29b1e47cfcd"
+ message: >-
+    push schema only on change
+ author: !!str mkrzewic
+-
+ commit: "d32aeedf4d3bd5ca73f6e427180dabcc120abe9b"
+ message: >-
+    add -schema option to allow caching/forwarding the schema evolution
+ author: !!str mkrzewic
+-
+ commit: "e0793b61fad5fa801cfb6ff80292c378fa56a883"
+ message: >-
+    use the helper lib for sending
+ author: !!str mkrzewic
+-
+ commit: "37fba6e3b55cf55b58c60b21583767d1a4ca8198"
+ message: >-
+    use a TList fot streamer infos after all
+ author: !!str mkrzewic
+-
+ commit: "10a8c918ca0b95d7c8f2ee2951551dd8e8f9999a"
+ message: >-
+    some new zmq_msg_add functions
+ author: !!str mkrzewic
+-
+ commit: "9c20fd479898f29b20e4264e4eec55e81662c2a2"
+ message: >-
+    increase default poll timeout to 100s
+ author: !!str mkrzewic
+-
  commit: "f34b348d4faf7a22a2151238aa11edede729e646"
  message: >-
     Macro to check the MTR DCS aliases and possibly recover missing information (Diego)
