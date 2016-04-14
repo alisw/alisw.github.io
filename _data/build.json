@@ -2,6 +2,33 @@
   "aggregations" : {
     "3" : {
       "buckets" : [ {
+        "key" : "AliPhysics",
+        "2" : {
+          "buckets" : [ {
+            "key" : "v5-08-04",
+            "4" : {
+              "buckets" : [ {
+                "key" : "slc5_x86-64",
+                "10" : {
+                  "buckets" : [ {
+                    "key" : "5928",
+                    "5" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "9" : {
+                          "buckets" : [ {
+                            "key" : "compilation_warning"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "O2",
         "2" : {
           "buckets" : [ {
@@ -241,33 +268,6 @@
                                 }
                               } ]
                             }
-                          } ]
-                        }
-                      } ]
-                    }
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "AliPhysics",
-        "2" : {
-          "buckets" : [ {
-            "key" : "v5-08-04",
-            "4" : {
-              "buckets" : [ {
-                "key" : "slc5_x86-64",
-                "10" : {
-                  "buckets" : [ {
-                    "key" : "5928",
-                    "5" : {
-                      "buckets" : [ {
-                        "key" : "alisw",
-                        "9" : {
-                          "buckets" : [ {
-                            "key" : "compilation_warning"
                           } ]
                         }
                       } ]
