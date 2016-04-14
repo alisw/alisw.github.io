@@ -92,8 +92,6 @@
       }, {
         "key" : "5836"
       }, {
-        "key" : "5906"
-      }, {
         "key" : "5928",
         "by_message" : {
           "buckets" : [ {
@@ -298,6 +296,66 @@
               } ]
             }
           }, {
+            "key" : "'AliT0CalibAnalysisTask::fPFPbit' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/v5-08-04-rc2/v5-08-04-rc2/T0/T0calib/AliT0CalibAnalysisTask.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "21"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<AliITSUCACell*, std::vector<AliITSUCACell> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/ROOT/v5-34-30-alice-22/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<Doublets*, std::vector<Doublets> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/ROOT/v5-34-30-alice-22/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<__gnu_cxx::__normal_iterator<int*, std::vector<int> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/ROOT/v5-34-30-alice-22/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Bit_iterator>::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/ROOT/v5-34-30-alice-22/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -382,6 +440,18 @@
               } ]
             }
           }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/v5-08-04-rc2/v5-08-04-rc2/TPC/TPCbase/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "but does not override 'AliMFTGeometry(const AliMFTGeometry&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -454,6 +524,18 @@
               } ]
             }
           }, {
+            "key" : "iteration 24u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/v5-08-04-rc2/v5-08-04-rc2/T0/T0calib/AliT0TimeAmplCorr.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "405"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "or 'operator=(const AliMFTGeometry&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -479,6 +561,8 @@
             }
           } ]
         }
+      }, {
+        "key" : "5906"
       }, {
         "key" : "5810"
       }, {
