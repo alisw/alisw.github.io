@@ -1,4 +1,34 @@
 -
+ commit: "7975fb902d58940ed2b28e7a00e1a16a7f203a16"
+ message: >-
+     ATO-321 - fixt Time0 correction - see details in https://alice.its.cern.ch/jira/browse/ATO-321?focusedCommentId=173804&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-173804
+ author: !!str mivanov
+-
+ commit: "c934fa6943a7bfd7179df25dca415922472ef574"
+ message: >-
+    L1 gamma patch mapping corrected in SM1 (online).
+ author: !!str policheh
+-
+ commit: "f98a6919376c94a38366a0f1d3c4ec8412155e45"
+ message: >-
+    Fix failing test vmctest/ppbench
+ author: !!str Sandro Wenzel
+-
+ commit: "1e740a7d0e6c7f9995f0fbcb73856a0091a02ea1"
+ message: >-
+    Fix call to g4libs macro in tests
+ author: !!str Sandro Wenzel
+-
+ commit: "391db544cc969eed2bff769175504f99a3ecd785"
+ message: >-
+    Fast vertexer implementation
+ author: !!str mpuccio
+-
+ commit: "364e6c5372312c9de338a5f3b9f10ee45723ebe9"
+ message: >-
+    ATO-321 -(bug) fix in the sign of delta Z in the OCDB export
+ author: !!str mivanov
+-
  commit: "3f63069dbe3b5d4ec1b8fcbea4eb2dff0426e250"
  message: >-
     Modifying DPs aliases for MCH
@@ -98,108 +128,3 @@
  message: >-
     Fixing nanoAOD leak
  author: !!str mfloris
--
- commit: "fa0cdf57d61a70cde406185c91f226a7c38b9290"
- message: >-
-    Added new class AliAODITSsaTrackCuts.[h,cxx]
- author: !!str ilakomov
--
- commit: "a5632cb54e602857119075d13e3d966184a287f4"
- message: >-
-    Fixes for ROOT6
- author: !!str mfasel
--
- commit: "e7134f00849cf6690e3fa64bf1781c6299ec1ade"
- message: >-
-    Extention in AliPHOSReconstructor::FillESD to cope with L1 trigger digits
- author: !!str policheh
--
- commit: "b14c6714719e47dc63eb99d92205f8743bfac8f3"
- message: >-
-    Increment version number
- author: !!str mbroz
--
- commit: "bf6b07ee134502b7aeb64889b301b2656d389bdb"
- message: >-
-    Setable axis limits for charge trend histograms
- author: !!str mbroz
--
- commit: "ee488cffaba6bfd9db53b37b40ed3f72cb1c4e1e"
- message: >-
-    Perugia12 added (Leticia)
- author: !!str morsch
--
- commit: "727df436f845c1e5d1ddbb217c9af5e4a1e55502"
- message: >-
-    set CDH version correctly for control events (I assume we should use version 3 since we fill all fields for 100 trigger classes)
- author: !!str drohr
--
- commit: "d7b3948c190c703994e02971d6846af9db1c17b3"
- message: >-
-    Extra iteration of median fit added for X,Y dist. extraction
- author: !!str shahoian
--
- commit: "ff3bbad80f91b679cae29a4d0c3f7d14d6b96cf1"
- message: >-
-    using std::swap;
- author: !!str hristov
--
- commit: "7407bba832fd5a2a5cc65ae4aa58ec3f46f1ba87"
- message: >-
-    comparison must provide **strict** weak ordering
- author: !!str mkrzewic
--
- commit: "1f03e4880ca0eb03b2499f1eb23730389491e40e"
- message: >-
-    speedup the histogram viewer
- author: !!str mkrzewic
--
- commit: "de0fc26ed8a16876eda3b49bd851dfa74b61c25d"
- message: >-
-    fix in default voxel coordinates assignment
- author: !!str shahoian
--
- commit: "524566462832f103fa0cb88b2aaacc79bf07b9ff"
- message: >-
-    LTMUnbinned return sorting index + method to rearange array
- author: !!str shahoian
--
- commit: "4121ab04ac1ed6a1bc0f448e39f2e60d0345047e"
- message: >-
-    remove 10% outliers before median fit
- author: !!str shahoian
--
- commit: "3bc250e20d12e769c032e8c8e505983b2f7bd632"
- message: >-
-    reject voxels with large fit errors
- author: !!str shahoian
--
- commit: "e87f2478193bf74f47a1a8438b475994767b3060"
- message: >-
-    fix in tree aliases
- author: !!str shahoian
--
- commit: "a7d6af08711eb95dff42c9b22b343f3ef03e0fac"
- message: >-
-    L1 gamma patch info added.
- author: !!str policheh
--
- commit: "ed5ac9a8fdcc887f6dd9d66a00f775bbb40d6051"
- message: >-
-    bin center stored instead of COG for empty bins
- author: !!str shahoian
--
- commit: "ae6b6f2bc347aaa442cbd4c5fc571bffd59b82ad"
- message: >-
-    Add STAT dep in CDB
- author: !!str dberzano
--
- commit: "cbeffa9ffc13ed617ade8761cb1e772838bcb0b6"
- message: >-
-    Update AD datapoint
- author: !!str zampolli
--
- commit: "5911e153087a6185882445f3ba82eb388cd27153"
- message: >-
-    got rid of binned q/pt fits Instead of extracting X-distortions from set of histos in tgSlp bins use unbinned data fitted with robust linear fitter
- author: !!str shahoian
