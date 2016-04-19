@@ -1,4 +1,119 @@
 -
+ commit: "44b469618f9ad65d07014318ba4fc7786453fd5b"
+ message: >-
+    Several bug fixes and improvements related to the handling of L0 patches
+ author: !!str saiola
+-
+ commit: "87ef1a95ef8744ac482400d7191c9c32b3066a42"
+ message: >-
+    Handle L0 offline patches
+ author: !!str mfasel
+-
+ commit: "37fbc11baf17eafdadfeb0aa40010efc1edb7455"
+ message: >-
+    Fix recognition of online patches
+ author: !!str mfasel
+-
+ commit: "892679feaa11fc6ef81214fe4c62211452ccfe75"
+ message: >-
+    Fix online L0 flagging
+ author: !!str mfasel
+-
+ commit: "11099aec10f4fb770c126b99dcded9f9354448b0"
+ message: >-
+    Multiply by 4 L0 amplitude to compensate for the 2 least significant bits dropped in the hardware chain
+ author: !!str saiola
+-
+ commit: "e404c58af7d2db94ea41d662d550f4213579185c"
+ message: >-
+    Add histogram with number of patches
+ author: !!str saiola
+-
+ commit: "06d19788da7844573b5af038082ff371f13284d8"
+ message: >-
+    Add profiling options
+ author: !!str mfasel
+-
+ commit: "ca2c22108d41cc75498555d19458dac1312fef3b"
+ message: >-
+    Add profiling options
+ author: !!str mfasel
+-
+ commit: "3e77729b0105d172eff2019f5b88c1c9e3716294"
+ message: >-
+    Fix operator order
+ author: !!str mfasel
+-
+ commit: "62304ecba1ac5188efc331bfe13100a5bac6dd0d"
+ message: >-
+    Handling of online bits - filter out unwanted bits
+ author: !!str mfasel
+-
+ commit: "71a5212e4c77b20283e98e4802b52f46f7c63899"
+ message: >-
+    Remove debug printout
+ author: !!str mfasel
+-
+ commit: "5663cd3a0a776c17719932c0a99ae00fa1c4cf1e"
+ message: >-
+    Fix position calculation for gamma patches in run2
+ author: !!str mfasel
+-
+ commit: "cee09ea6a7fbde29553673dfadf803371016af7e"
+ message: >-
+    Use lookup table mapping the TRU indices to FastOR indices
+ author: !!str mfasel
+-
+ commit: "a7d08f5125568ce1e85b5efabe982cbfbc68bb05"
+ message: >-
+    Update STU raw reader with changes for run2.
+ author: !!str mfasel
+-
+ commit: "33414321fcb01d51de2ebe461b2f3ec3c0fed62b"
+ message: >-
+    Fix handling of L0 trigger time
+ author: !!str saiola
+-
+ commit: "b8ba04cd4860a873eafcfa102c645d25150b33e0"
+ message: >-
+    Convert offline energy to ADC counts before making offline patches
+ author: !!str saiola
+-
+ commit: "0d4d4ffa75748fa71959a0ade424648c173f794e"
+ message: >-
+    Add L0 trigger time histogram + reduce histogram size
+ author: !!str saiola
+-
+ commit: "b760b440e533b09eea1ad82c192f7e8371555642"
+ message: >-
+    Further bugfix in Level0 handling
+ author: !!str mfasel
+-
+ commit: "2d90066e428e89a999a7ea475b698efe77037eca"
+ message: >-
+    Fix handling of L0 triggers
+ author: !!str saiola
+-
+ commit: "a78044e0ea766c8586c070bed0f5f60e81f36d5f"
+ message: >-
+    Temporary adjustment of the output buffer size
+ author: !!str mfasel
+-
+ commit: "95dce213925a743f3d65daec001c97758820e03d"
+ message: >-
+    Updates in the HLT trigger maker for pp 2016
+ author: !!str mfasel
+-
+ commit: "d58e2be0e16b6ff03bb2027bbabcd32b91a9b6c4"
+ message: >-
+    Preparation for pp data taking: HLT component for EMCal QA
+ author: !!str saiola
+-
+ commit: "b05f91d852884f1cda9d054901de96bb944156f2"
+ message: >-
+    Create a base class for the EMCal trigger QA, to allow different implementations (online/offline, pp/PbPb, etc.)
+ author: !!str saiola
+-
  commit: "9f6873b0d0e70d031bf27d4f33758f7f406045bd"
  message: >-
     Init geom if not done yet (for saved objects)
