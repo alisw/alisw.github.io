@@ -11084,6 +11084,49 @@
           } ]
         }
       }, {
+        "key" : "6045",
+        "by_message" : {
+          "buckets" : [ {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt1510_x86-64/ROOT/v5-34-30-alice-16/include/TMap.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "148"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'auto_ptr' is deprecated (declared at /build/workarea/sw/20155637/1/ubt1510_x86-64/GCC-Toolchain/v4.9.3-5/include/c++/4.9.3/backward/auto_ptr.h:87) [-Wdeprecated-declarations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliRoot/47cb05f5915db5f012d043688f0548038be2d523/47cb05f591/PYTHIA8/pythia8/src/FJcore.cc",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "885"
+                  }, {
+                    "key" : "905"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'ROOT::TCollectionProxyInfo::Environ<std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, float> > >::fIterator' should be initialized in the member initialization list [-Weffc++]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/ubt1510_x86-64/ROOT/v5-34-30-alice-16/include/TCollectionProxyInfo.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "218"
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "6034",
         "by_message" : {
           "buckets" : [ {
@@ -11358,23 +11401,6 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "78"
-                  } ]
-                }
-              } ]
-            }
-          } ]
-        }
-      }, {
-        "key" : "6045",
-        "by_message" : {
-          "buckets" : [ {
-            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject*, long int, const TObject**, const TObject*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt1510_x86-64/ROOT/v5-34-30-alice-16/include/TMap.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "148"
                   } ]
                 }
               } ]
