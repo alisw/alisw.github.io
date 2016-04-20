@@ -2906,6 +2906,13 @@
                     "key" : "119"
                   } ]
                 }
+              }, {
+                "key" : "1/ubt1510_x86-64/AliRoot/47cb05f5915db5f012d043688f0548038be2d523-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  } ]
+                }
               } ]
             }
           }, {
@@ -3137,6 +3144,34 @@
               } ]
             }
           }, {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, AliVCluster, long int, AliVCluster**, AliVCluster*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWG/EMCAL/EMCALbase/AliClusterContainer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "117"
+                  }, {
+                    "key" : "57"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, AliVParticle, long int, AliVParticle**, AliVParticle*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWG/EMCAL/EMCALbase/AliParticleContainer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "116"
+                  }, {
+                    "key" : "56"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'THn::fSumw2' should be initialized in the member initialization list [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -3173,6 +3208,24 @@
               } ]
             }
           }, {
+            "key" : "iteration 7u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1002"
+                  }, {
+                    "key" : "757"
+                  }, {
+                    "key" : "832"
+                  }, {
+                    "key" : "927"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "or 'operator=(const TNDArrayT<double>&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
@@ -3192,6 +3245,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "126"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, TObject, long int, TObject**, TObject*>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWG/EMCAL/EMCALbase/AliEmcalIterableContainer.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "70"
                   } ]
                 }
               } ]
@@ -3428,54 +3493,6 @@
             }
           }, {
             "key" : "'class AliCorrelationAnalysis' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWGCF/Correlations/DPhi/AliCorrelationAnalysis.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "3"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "'class TGLAxisPainterBox' has pointer data members [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/ubt1510_x86-64/ROOT/v5-34-30-alice-16/include/TGLAxisPainter.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "138"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliAnalysisTaskEPCorrPP(const AliAnalysisTaskEPCorrPP&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWGCF/Correlations/DPhi/AliAnalysisTaskEPCorrPP.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "38"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliAnalysisTaskHighPtDeDx(const AliAnalysisTaskHighPtDeDx&)' [-Weffc++]",
-            "filename" : {
-              "buckets" : [ {
-                "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWGLF/SPECTRA/IdentifiedHighPt/train/AliAnalysisTaskHighPtDeDx.h",
-                "line" : {
-                  "buckets" : [ {
-                    "key" : "26"
-                  } ]
-                }
-              } ]
-            }
-          }, {
-            "key" : "but does not override 'AliCorrelationAnalysis(const AliCorrelationAnalysis&)' [-Weffc++]",
             "filename" : {
               "buckets" : [ {
                 "key" : "1/SOURCES/AliPhysics/eeb6059607eccbfb0fb477842b9c2c13c41cbfea/eeb6059607/PWGCF/Correlations/DPhi/AliCorrelationAnalysis.h",
