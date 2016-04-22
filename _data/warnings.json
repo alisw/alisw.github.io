@@ -11838,6 +11838,18 @@
         "key" : "331",
         "by_message" : {
           "buckets" : [ {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/slc5_x86-64/AliRoot/v5-08-05-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, AliVParticle, long int, AliVParticle**, AliVParticle*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
             "filename" : {
               "buckets" : [ {
@@ -11887,6 +11899,20 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "70"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "deleting object of polymorphic class type 'AliJAcceptanceCorrection' which has non-virtual destructor might cause undefined behaviour [-Wdelete-non-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "2/BUILD/a6df997f32ac81a1720f78ec98c925ab13103eec/AliPhysics/PWGCF/Correlations/JCORRAN/Base/G__PWGCFCorrelationsJCORRAN.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1864"
+                  }, {
+                    "key" : "6188"
                   } ]
                 }
               } ]
