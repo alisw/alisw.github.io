@@ -1,4 +1,9 @@
 -
+ commit: "f34e6f11fc7d3fa881c8464d21ab0ef04cb90cd8"
+ message: >-
+    Make ExctractAndSetPrimaryVerex public, do not delete fPrimaryVertex since it belongs to the event (Igor)
+ author: !!str hristov
+-
  commit: "1b3c233809688ade103612ae333718a426bbce2a"
  message: >-
     ped removed from comparison and chi2 now return 0 if amp is higher than OVERFLOWCUT
@@ -378,8 +383,3 @@
  message: >-
     Script to run AliRoot tests in isolation
  author: !!str Sandro Wenzel
--
- commit: "7975fb902d58940ed2b28e7a00e1a16a7f203a16"
- message: >-
-     ATO-321 - fixt Time0 correction - see details in https://alice.its.cern.ch/jira/browse/ATO-321?focusedCommentId=173804&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-173804
- author: !!str mivanov
