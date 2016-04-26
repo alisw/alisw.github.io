@@ -1,4 +1,19 @@
 -
+ commit: "14bccd4f5498f0e0e803381e69eae7577dc09064"
+ message: >-
+    Alignment-bug-fix modified It appears that the alignment bug was affecting directly the track Z(via evaluation at wrong phi,X), cluster phi,X,dY but the dZ was calculated as a difference of biased Ztrack and unbiased Zcluster: the latter was not taken from GetGlobalXYZ. Extra manipulation to account for that is added to FixAlignmentBug
+ author: !!str shahoian
+-
+ commit: "545059f2cbcc4b29a947037a7c4818240c89642b"
+ message: >-
+    recover proper track Ztrd of Ztof instead of relaying on Zits
+ author: !!str shahoian
+-
+ commit: "6ae37f772ac698622e0518086b383e61db792902"
+ message: >-
+    Use proper side dependent ZMax instead of 250cm
+ author: !!str shahoian
+-
  commit: "e4a4f705a80c37205b0bc42b6e8f7c8831230b20"
  message: >-
     typo fix in DA
