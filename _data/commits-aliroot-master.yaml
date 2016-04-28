@@ -1,4 +1,24 @@
 -
+ commit: "757e3fdc3805e23da36ba76c4f6762fcca9b7f2a"
+ message: >-
+    Ped removed from fitters. Chi2 fixed
+ author: !!str anolivei
+-
+ commit: "7b5247533a53ba542063820962fc863915853754"
+ message: >-
+    Protection against existing digits branches
+ author: !!str eulisse
+-
+ commit: "64e0fd978ee00b4f04f11e725ad460f372233cce"
+ message: >-
+    made printouts more readable
+ author: !!str fbock
+-
+ commit: "37c81775ee667121fb666fb7482c492bcf145bba"
+ message: >-
+    added possibility to have min E-diff between cells to start new clus
+ author: !!str fbock
+-
  commit: "8093a787e47a9155afc4a58e628176992b59a8a4"
  message: >-
     Merge branch 'master' of https://git.cern.ch/reps/AliRoot
@@ -268,28 +288,3 @@
  message: >-
     Fix typo
  author: !!str mfasel
--
- commit: "2f1364f2b3c60f0985894e40215ebf70f2cdad93"
- message: >-
-    Add macro for AliGenTunedOnPbPb
- author: !!str jklein
--
- commit: "eba5b1c83187443fcb85a6e550f5dec8e174cccc"
- message: >-
-    allowing generator macro also from alice_physics
- author: !!str jgrosseo
--
- commit: "45a7354f53f2a4a856aedfad66a42c6b5a161728"
- message: >-
-    default name for saved AliTPCDcalibRes is set to class name
- author: !!str shahoian
--
- commit: "0e425d1d3c2ae8a8d72411b1a0a81cbe8dfc2df0"
- message: >-
-    parameterize DZ corrected for tgLambda*dX(smoothed)
- author: !!str shahoian
--
- commit: "1d3ad0950319fa7d5aa713993b9358fe17bd3c6b"
- message: >-
-    no need to account for dZ vs dX in closure test
- author: !!str shahoian
