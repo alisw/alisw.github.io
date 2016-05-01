@@ -1391,6 +1391,18 @@
         "key" : "342",
         "by_message" : {
           "buckets" : [ {
+            "key" : ""_MODULE_" redefined",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "<command-line>",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "0"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "base class 'struct std::iterator<std::bidirectional_iterator_tag, AliVCluster, long int, AliVCluster**, AliVCluster*&>' has accessible non-virtual destructor [-Wnon-virtual-dtor]",
             "filename" : {
               "buckets" : [ {
@@ -1414,6 +1426,24 @@
                     "key" : "116"
                   }, {
                     "key" : "56"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "iteration 7u invokes undefined behavior [-Waggressive-loop-optimizations]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/SOURCES/AliPhysics/vAN-20160501/7543984042/PWGPP/BeamGasMonitoring/AliAnalysisBGMonitorQA.cxx",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "1002"
+                  }, {
+                    "key" : "757"
+                  }, {
+                    "key" : "832"
+                  }, {
+                    "key" : "927"
                   } ]
                 }
               } ]
@@ -1867,6 +1897,18 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "12"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "'class AliTPCTrackerPoints' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/slc5_x86-64/AliRoot/v5-08-09-1/include/AliComplexCluster.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "119"
                   } ]
                 }
               } ]
