@@ -3100,6 +3100,18 @@
         "key" : "6066",
         "by_message" : {
           "buckets" : [ {
+            "key" : "right-hand operand of comma expression has no effect [-Wunused-value]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "Include/objimpl.h",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "164"
+                  } ]
+                }
+              } ]
+            }
+          }, {
             "key" : "'auto_ptr' is deprecated (declared at /build/workarea/sw/20155641/1/slc5_x86-64/GCC-Toolchain/v4.9.3-8/include/c++/4.9.3/backward/auto_ptr.h:87) [-Wdeprecated-declarations]",
             "filename" : {
               "buckets" : [ {
@@ -3135,6 +3147,32 @@
                 "line" : {
                   "buckets" : [ {
                     "key" : "693"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'i' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "Parser/pgen.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "282"
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "key" : "variable 'result' set but not used [-Wunused-but-set-variable]",
+            "filename" : {
+              "buckets" : [ {
+                "key" : "1/BUILD/8cd15dc7d2c6a838ae61d117bf01bf9903c52ef0/Python/Modules/socketmodule.c",
+                "line" : {
+                  "buckets" : [ {
+                    "key" : "3453"
+                  }, {
+                    "key" : "3529"
                   } ]
                 }
               } ]
