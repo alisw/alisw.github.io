@@ -2,6 +2,33 @@
   "aggregations" : {
     "by_package" : {
       "buckets" : [ {
+        "key" : "AliGenerators",
+        "by_commit" : {
+          "buckets" : [ {
+            "key" : "0",
+            "build_id" : {
+              "buckets" : [ {
+                "key" : "6066",
+                "architecture" : {
+                  "buckets" : [ {
+                    "key" : "slc5_x86-64",
+                    "alidist_repo" : {
+                      "buckets" : [ {
+                        "key" : "alisw",
+                        "alidist_branch" : {
+                          "buckets" : [ {
+                            "key" : "IB/v5-08/next-rebased"
+                          } ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      }, {
         "key" : "AliPhysics",
         "by_commit" : {
           "buckets" : [ {
