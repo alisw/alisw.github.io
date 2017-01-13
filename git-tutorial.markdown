@@ -9,7 +9,7 @@ permalink: /git-tutorial/
 
 ## What are these instructions for?
 
-These instructions are meant to be the simplest way to get you up and running developing one feature at the time for AliPhysics on GitHub. They can be reused for AliRoot by simply changing AliPhysics to AliRoot. If you are trying to do something more complicated or you want to have more detailed information on the inner workings of the system, please refer to the [advanced workflow](/doc/ALICE-GitHub-advanced-guide-7mesQeJRwfZyphJsJ85ER).
+These instructions are meant to be the simplest way to get you up and running developing one feature at the time for AliPhysics on GitHub. They can be reused for AliRoot by simply changing AliPhysics to AliRoot. If you are trying to do something more complicated or you want to have more detailed information on the inner workings of the system, please refer to the [advanced workflow](/git-advanced).
 
 ## Setup GitHub account
 
@@ -24,12 +24,12 @@ In case you don’t have a GitHub account it will ask you to create one. Notice 
 
 
 > **Note:** we recommend you create a GitHub username which is the same as your CERN one, if available.
-https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104790690_C55599B5-D37E-45AF-BE7B-0F8515669BC2.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104790690_C55599B5-D37E-45AF-BE7B-0F8515669BC2.png)
 
 
 In case you have an account, login and authorize “ALICE Continuous Integration” to read your user name so that it can be mapped to your CERN account.
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104817047_7D8A528B-53AE-4855-8F54-9C7DDCD18E7D.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104817047_7D8A528B-53AE-4855-8F54-9C7DDCD18E7D.png)
 
 ## Fork repository
 
@@ -80,7 +80,7 @@ Now if you want to contribute to AliPhysics move to the clone directory and tell
 
 
 ## The workflow
-https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104848816_38113614-B38C-4B7C-BA39-C6BE8D14B38B.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104848816_38113614-B38C-4B7C-BA39-C6BE8D14B38B.png)
 
 
 As depicted in the image, the general idea is:
@@ -98,22 +98,22 @@ Let’s say you now have a development to AliPhysics you want to propose for inc
 
 At this point changes are on your own “fork” on GitHub, and **they are not yet upstream**. It is important to understand this point as this is the main difference to the old workflow. Create the pull request itself by going to [https://github.com/<your-github-username>/AliPhysics ](https://github.com/alisw/AliPhysics)and clicking on “New Pull Request”:
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104883470_48EC02AC-0ACC-464E-A571-998A16C4F43B.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104883470_48EC02AC-0ACC-464E-A571-998A16C4F43B.png)
 
 
 Review the proposed changes and if you are satisfied click on the green button saying “Create a pull request”:
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104945640_E9ADB103-C71E-49EA-8008-54CA1ABDDF50.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_DC2E677430BA2AA7FD207F2D16426909084AA99BBE80F321C6194E44ED5772CA_1481104945640_E9ADB103-C71E-49EA-8008-54CA1ABDDF50.png)
 
 
 Please make sure the title and the description of your pull request are written in a proper English and express the purpose of the changes in a simple and concise way.
 
 A good description will help yourself, the other contributors to ALICE software, and it will guarantee a faster approval (if required).  Notice GitHub is a popular, public, hosting site, so there will be zero tolerance for offending statements or embarrassments to ALICE collaboration. In case of doubt, you can find more information in the [commit guidelines](/doc/7mesQeJRwfZyphJsJ85ER).
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_98FF252C26DE06DC5A57C33513260F22ADF7DCDF39C8B349FAD53C27D51C830E_1484309825564_Schermata+2017-01-13+alle+13.16.39.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_98FF252C26DE06DC5A57C33513260F22ADF7DCDF39C8B349FAD53C27D51C830E_1484309825564_Schermata+2017-01-13+alle+13.16.39.png)
 
 
-Once you are done, your code is **proposed **for inclusion in the official repository, but it’s not yet in, as it needs to pass the (likely automated) review process. Notice also that creating pull requests can be done from the command-line, see the advanced guide for more information.
+Once you are done, your code is **proposed** for inclusion in the official repository, but it’s not yet in, as it needs to pass the (likely automated) review process. Notice also that creating pull requests can be done from the command-line, see the advanced guide for more information.
 
 ## Review process
 
@@ -128,12 +128,12 @@ There might be three possible scenarios:
 
 In the first case, the user is allowed to modify the files and the build system will tell you that by commenting. For example:
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_98FF252C26DE06DC5A57C33513260F22ADF7DCDF39C8B349FAD53C27D51C830E_1481549204743_Schermata+2016-12-12+alle+14.26.04.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_98FF252C26DE06DC5A57C33513260F22ADF7DCDF39C8B349FAD53C27D51C830E_1481549204743_Schermata+2016-12-12+alle+14.26.04.png)
 
 
 Every single pull request is tested for a successful build on our production environment: this means that a pull request in AliPhysics should work with the reference AliRoot version using the same environment used on the Grid.
 
-This test (plus optional additional tests as described in the [ALICE GitHub advanced guide](git-advanced)) are run automatically: in case they succeed then the pull request is merged automatically without any further action.
+This test (plus optional additional tests as described in the [ALICE GitHub advanced guide](/git-advanced)) are run automatically: in case they succeed then the pull request is merged automatically without any further action.
 
 If the user is not allowed to modify the code touched by the pull requests, the person(s) responsible will be contacted automatically and will be asked to comment on the pull request and wether or not the change is approved. Special comments are those that begin with:
 
@@ -156,4 +156,4 @@ In case you want to retire your pull request by throwing away your changes and r
     git reset --hard origin/master
 
 
-> Note that doing so will imply a loss of your current work. You must really be sure that you want to discard it first. If you want to work on multiple features at the same time, and having different pull requests open at once, please refer to the [ALICE GitHub advanced guide](git-advanced).
+> Note that doing so will imply a loss of your current work. You must really be sure that you want to discard it first. If you want to work on multiple features at the same time, and having different pull requests open at once, please refer to the [ALICE GitHub advanced guide](/git-advanced).
