@@ -6,11 +6,13 @@ permalink: /git-advanced/
 ---
 # ALICE GitHub advanced guide
 
-This guide is meant to be a set of advanced topics regarding the ALICE Github workflow. If you are looking for a more step by step guide on how to get started and propose code changes to AliPhysics, please have a look at the [Basic Workflow Guide](/doc/GitHub-basic-workflow-3RufU5sZirA1p2deNin6y).
+This guide is meant to be a set of advanced topics regarding the ALICE Github workflow.
+If you are looking for a more step by step guide on how to get started and propose code changes to AliPhysics,
+please have a look at the [Basic Workflow Guide](/git-tutorial).
 
 # I want to use the command line!
 
-If you are find the web based workflow not matching your taste, Github offers the possibility to use a command line based workflow as well via an utility called `hub` .
+If you find the web based workflow not to your taste, Github offers the possibility to use a command line based workflow via a utility called `hub` .
 
 ## Install “hub”
 
@@ -19,7 +21,7 @@ On macOS you can install it with brew:
 
     brew install hub
 
-On Linux you can [use the precompiled releases](https://github.com/github/hub/releases\).
+On Linux you can [use the precompiled releases](https://github.com/github/hub/releases).
 
 ## Forking and cloning the repository
 
@@ -44,11 +46,11 @@ Note that it is also possible to open a pull request from the GitHub web interfa
 
 If you copy-paste it to your browser you will see a nice interface.
 
-# What happens if I my changes need to be approved by more than one person?
+# What happens if my changes need to be approved by more than one person?
 
 Here is an example that involves multiple approvers:
 
-https://d2mxuefqeaa7sj.cloudfront.net/s_98FF252C26DE06DC5A57C33513260F22ADF7DCDF39C8B349FAD53C27D51C830E_1481552414512_Schermata+2016-12-12+alle+15.19.51.png
+![Image](https://d2mxuefqeaa7sj.cloudfront.net/s_98FF252C26DE06DC5A57C33513260F22ADF7DCDF39C8B349FAD53C27D51C830E_1481552414512_Schermata+2016-12-12+alle+15.19.51.png)
 
 # How to write a pull request
 
@@ -101,7 +103,7 @@ If you are one of the users authorized to push changes to the AliPhysics OADB (o
     git commit -a -m 'Updated OADB'
     git push
 
-If you don’t have proper authorization to push changes you should ask the ALICE administrators that, in accordance with the Physics Coordination, will give you proper access.
+If you don’t have proper authorization to push changes you should ask the ALICE administrators, who, in accordance with the Physics Coordination, will give you proper access.
 
 The above workflow applies to `AliRootData` too.
 
