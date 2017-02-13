@@ -31,6 +31,7 @@ In order to fork a repository you can use `hub fork` and `hub clone`
     cd ~/alice
     hub fork alisw/AliRoot
     hub clone <your-github-username>/AliRoot
+
 ## Creating a pull request
 [ ] Fix this…
 
