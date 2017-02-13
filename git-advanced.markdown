@@ -6,11 +6,13 @@ permalink: /git-advanced/
 ---
 # ALICE GitHub advanced guide
 
-This guide is meant to be a set of advanced topics regarding the ALICE Github workflow. If you are looking for a more step by step guide on how to get started and propose code changes to AliPhysics, please have a look at the [Basic Workflow Guide](/doc/GitHub-basic-workflow-3RufU5sZirA1p2deNin6y).
+This guide is meant to be a set of advanced topics regarding the ALICE Github workflow.
+If you are looking for a more step by step guide on how to get started and propose code changes to AliPhysics,
+please have a look at the [Basic Workflow Guide](/git-tutorial).
 
 # I want to use the command line!
 
-If you are find the web based workflow not matching your taste, Github offers the possibility to use a command line based workflow as well via an utility called `hub` .
+If you find the web based workflow not to your taste, Github offers the possibility to use a command line based workflow via a utility called `hub` .
 
 ## Install “hub”
 
@@ -19,7 +21,7 @@ On macOS you can install it with brew:
 
     brew install hub
 
-On Linux you can [use the precompiled releases](https://github.com/github/hub/releases\).
+On Linux you can [use the precompiled releases](https://github.com/github/hub/releases).
 
 ## Forking and cloning the repository
 
@@ -44,7 +46,7 @@ Note that it is also possible to open a pull request from the GitHub web interfa
 
 If you copy-paste it to your browser you will see a nice interface.
 
-# What happens if I my changes need to be approved by more than one person?
+# What happens if my changes need to be approved by more than one person?
 
 Here is an example that involves multiple approvers:
 
@@ -101,7 +103,7 @@ If you are one of the users authorized to push changes to the AliPhysics OADB (o
     git commit -a -m 'Updated OADB'
     git push
 
-If you don’t have proper authorization to push changes you should ask the ALICE administrators that, in accordance with the Physics Coordination, will give you proper access.
+If you don’t have proper authorization to push changes you should ask the ALICE administrators who, in accordance with the Physics Coordination, will give you proper access.
 
 The above workflow applies to `AliRootData` too.
 
@@ -138,9 +140,10 @@ If you are one of the users authorized to push changes to the AliPhysics OADB (o
     git commit -a -m 'Updated OADB'
     git push
 
-If you don’t have proper authorization to push changes you should ask the ALICE administrators that, in accordance with the Physics Coordination, will give you proper access.
+If you don’t have proper authorization to push changes you should ask the ALICE administrators who, in accordance with the Physics Coordination, will give you proper access.
 
-This `git push` pushes the changes to the OADB repository but does not tell AliPhysics to use them. For that you need to open a pull request as explained in the +ALICE GitHub basic workflow:
+This `git push` pushes the changes to the OADB repository but does not tell AliPhysics to use them.
+For that you need to open a pull request as explained in the [ALICE GitHub basic workflow](/git-tutorial):
 
 
     cd ~alice/AliPhysics
@@ -161,23 +164,24 @@ Unfortunately in order to keep the main repository lean we really need to keep d
 ## Use CVMFS
 - We don’t have a good way of allowing people to publish (no access control, etc.) - the CVMFS team is working on that but it will not be ready in time.
 - We would require having CVMFS installed everywhere. This is currently not the case. This requirement could be harsh for macOS users.
-- Currently CVMFS supports versioning, however there is no way to cleanly select the version of the OADB snapshot you want. CVMFS team is working on that too (but it’s not ready now).
+- Currently CVMFS supports versioning, however there is no way to cleanly select the version of the OADB snapshot you want. The CVMFS team is working on this too (but it’s not ready yet).
 
 
 ## Use FTP/HTTP/etc.
-- We *could* use one of those services to host files (and IT can provide us with hosting).
+- We *could* use one of these services to host files (and IT can provide us with hosting).
 - We don’t however have versioning on that, which is required.
 
 
 ## Git LFS/Git Annex
 
-Those are Git extensions requiring external programs that handle “large” files in the same main repository.
+These are Git extensions requiring external programs that handle “large” files in the same main repository.
 
 - Require an external tool.
 - Complicated to use (annex in particular).
 - LFS requires hosting (or paying for it).
-- Not always clear what ends in the code repository and what ends elsewhere (we want users to be conscious that data ends in the data place, and code in the code place).
-- Breaks the pull requests workflow: you can make a pull request for a *pointer* to a large file, but the large file itself has to be pushed even if it would not be accepted. Pull requests involving large files are not practicable. [See here for more.](https://help.github.com/articles/collaboration-with-git-large-file-storage/)
+- Not always clear what ends up in the code repository and what ends up elsewhere (we want users to be conscious that data ends up in the data place, and code in the code place).
+- Breaks the pull requests workflow: you can make a pull request for a *pointer* to a large file, but the large file itself has to
+be pushed even if it would not be accepted. Pull requests involving large files are not practicable. [See here for more information](https://help.github.com/articles/collaboration-with-git-large-file-storage/)
 
 
 ## Git subtree
