@@ -104,7 +104,7 @@ command from the tutorial should point to the `git-migration` development
 branch of our recipes:
 
 ```bash
-aliBuild --dist git-migration init AliRoot,AliPhysics`
+aliBuild --dist git-migration init AliRoot,AliPhysics
 ```
 
 You can then continue the build as normal using:
