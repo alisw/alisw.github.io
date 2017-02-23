@@ -186,3 +186,15 @@ In this case, the file will be searched in the following locations in order:
 2. `$ALICE_PHYSICS/<file>`
 3. `/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/<file>` (for Grid jobs)
 4. `root://eospublic.cern.ch//eos/experiment/alice/analysis-data/<file>`
+
+## Git user interfaces
+
+While the command line interface of git is very powerful, it can become tedious if more complex operations are required. Examples of such operations would include committing a subsection of a changed file, switching back and forth between branches, or inspecting the history of a given file. Fortunately, many user interfaces exist to make the life of the user easier and at the same time might help to understand git better. Often these interfaces are available as plug-ins to editors. Below is a non-exhaustive list of such interfaces which have been found helpful by other users. It is probably best to check out the documentation on their respective home page.
+
+### [Magit (Emacs)](https://magit.vc/)
+
+Possibly the most popular git-interface for Emacs. 
+
+### Gitgutter ([Sublime](https://github.com/jisaacks/GitGutter), [Vim](https://github.com/airblade/vim-gitgutter))
+
+While originally being a Sublime plug-in, it is also available for Vim and even Emacs.
