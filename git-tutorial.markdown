@@ -2,7 +2,6 @@
 layout: page
 title: GitHub basic workflow
 categories: main
-permalink: /git-tutorial
 ---
 
 ## What are these instructions for?
@@ -13,6 +12,7 @@ for AliRoot by simply changing AliPhysics to AliRoot. If you are trying to do
 something more complicated or you want to have more detailed information on the
 inner workings of the system, please refer to the [advanced
 workflow](/git-advanced) instead.
+
 
 ## Setup GitHub account
 
@@ -178,11 +178,21 @@ approached.
 
 As depicted in the image, the general idea is:
 
-- you always fetch the changes (“pull”) from the upstream repository
-- you always write your changes (“push”) to your own fork
-- you propose the changes to be added upstream by opening a “pull request”
-- your code change proposal is checked by a series of automatic tests before
+* you always fetch the changes (“pull”) from the upstream repository
+* you always write your changes (“push”) to your own fork
+* you propose the changes to be added upstream by opening a “pull request”
+* your code change proposal is checked by a series of automatic tests before
   being accepted (more details follow)
+
+What we illustrate here is a simplified workflow, where you work on a single
+branch. The workflow is simpler, but it has limitations you need to know.
+
+* **If you work on one feature at a time** this is enough. When you open the
+  pull request, though, you will have to wait until it is accepted and merged
+  before starting developing new features.
+* **If you need to work on multiple features at the same time** then you will
+  need to work with [multiple branches (advanced
+  documentation)](/git-advanced#work-with-multiple-branches).
 
 
 ## Create a pull request
