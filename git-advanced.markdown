@@ -2,6 +2,7 @@
 layout: page
 title: GitHub advanced workflow
 categories: main
+permalink: /git-advanced/
 ---
 
 This guide is meant to be a set of advanced topics regarding the ALICE Github

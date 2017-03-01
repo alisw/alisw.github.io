@@ -2,6 +2,7 @@
 layout: page
 title: GitHub basic workflow
 categories: main
+permalink: /git-tutorial/
 ---
 
 ## What are these instructions for?
@@ -188,11 +189,19 @@ What we illustrate here is a simplified workflow, where you work on a single
 branch. The workflow is simpler, but it has limitations you need to know.
 
 * **If you work on one feature at a time** this is enough. When you open the
-  pull request, though, you will have to wait until it is accepted and merged
-  before starting developing new features.
+  pull request, though, you will have to _wait until it is accepted and merged_
+  before starting developing new features. This is because each pull request is
+  tied to your remote `master`, and if you push to it you are updating the
+  _existing_ pull request. For the same reason, if you follow this workflow _you
+  cannot open multiple pull requests at the same time_ because you need multiple
+  branches for that.
 * **If you need to work on multiple features at the same time** then you will
   need to work with [multiple branches (advanced
   documentation)](/git-advanced#work-with-multiple-branches).
+
+> It is important to stress that if you have an open (not yet merged) pull
+> request following this simplified workflow and you push new changes, then
+> **the open pull request gets updated and tests will start over!**
 
 
 ## Create a pull request
