@@ -2,7 +2,6 @@
 layout: page
 title: GitHub advanced workflow
 categories: main
-permalink: /git-advanced
 ---
 
 This guide is meant to be a set of advanced topics regarding the ALICE Github
@@ -187,14 +186,167 @@ In this case, the file will be searched in the following locations in order:
 3. `/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/<file>` (for Grid jobs)
 4. `root://eospublic.cern.ch//eos/experiment/alice/analysis-data/<file>`
 
-## Git user interfaces
 
-While the command line interface of git is very powerful, it can become tedious if more complex operations are required. Examples of such operations would include committing a subsection of a changed file, switching back and forth between branches, or inspecting the history of a given file. Fortunately, many user interfaces exist to make the life of the user easier and at the same time might help to understand git better. Often these interfaces are available as plug-ins to editors. Below is a non-exhaustive list of such interfaces which have been found helpful by other users. It is probably best to check out the documentation on their respective home page.
+## Git editors plugins
 
-### [Magit (Emacs)](https://magit.vc/)
+Many Git plugins exist in order to improve your Git workflow from within your
+favorite editor. Examples of what you can do with such plugins are seeing what
+parts of code were added or removed by you before committing them, or perform
+the commit of some portions of your modifications.
 
-Possibly the most popular git-interface for Emacs. 
+* [Magit](https://magit.vc/) for Emacs
+* GitGutter for [Sublime](https://github.com/jisaacks/GitGutter) or
+  [Vim](https://github.com/airblade/vim-gitgutter)
 
-### Gitgutter ([Sublime](https://github.com/jisaacks/GitGutter), [Vim](https://github.com/airblade/vim-gitgutter))
 
-While originally being a Sublime plug-in, it is also available for Vim and even Emacs.
+## Work with multiple branches
+
+The basic workflow we suggest is to use a single branch and develop one feature
+at a time. If you follow this workflow then your local branch will be called
+`master`, and so are called the remote working branch on your fork, and the
+remote upstream branch.
+
+You may want to develop multiple features at the same time because you do not
+want to wait for one feature to be merged before proceeding, for instance.
+
+To do so, the first thing to do is make sure your local `master` branch is
+up-to-date:
+
+```bash
+cd ~/alice/AliPhysics
+git checkout master
+git pull origin
+```
+
+Now from your `master` branch, spawn a different one, and name it explicitly:
+
+```bash
+git checkout -b my-new-feature
+```
+
+The `git checkout -b` command creates the `my-new-feature` branch (the name is
+arbitrary) and moves you to it. You can check at any time what is your current
+branch at any time with:
+
+```bash
+git status
+```
+
+which will give you something like:
+
+```text
+On branch my-new-feature
+nothing to commit, working directory clean
+```
+
+At this point you can start developing your code, and make your commits as usual
+with `git commit`. When it comes the time for pushing, you need to tell Git that
+you want to push your current branch to a remote branch with the same name (for
+simplicity) on _your_ remote fork. This is done by:
+
+```bash
+git push --set-upstream <your-github-username> my-new-feature
+```
+
+Note that all subsequent pushes from this branch can be simply done with:
+
+```bash
+git push
+```
+
+as you have already told Git what is the corresponding upstream branch once.
+
+When you need to create a pull request you can simply do it from the command
+line [in case you have Hub installed](#i-want-to-use-the-command-line):
+
+```
+hub pull-request
+```
+
+and it will return you the link (to copy and paste into your browser) to the
+GitHub page corresponding to the newly created pull request. In case you want
+to use the interface, go to your fork from a browser:
+
+> https://github.com/\<your-github-username\>/AliPhysics
+
+From the web interface you will see something like the following:
+
+![Open a GitHub pull request from a certain branch](/images/git-open-pr-adv.png)
+
+If you have recently pushed, which is the case most of the time, GitHub tells
+you what is your branch name and proposes you to open the pull request right
+away, as you can see from the yellow box. You just need to press the green
+button indicated by the red arrow. This is very convenient.
+
+In case you are not presented with a direct link, then use the dropdown to
+select your branch explicitly (see the other red arrow). Once you have done
+that just click the "New pull request" button next to the dropdown and continue
+with the [normal workflow](/git-tutorial#create-a-pull-request).
+
+[As explained already](/git-tutorial#amend-an-open-pull-request) in order to
+amend or integrate an open pull request just keep committing and pushing on the
+corresponding feature branch.
+
+While you are working on a certain feature on a branch different from `master`
+you can work on other features. You don't need to push your current changes,
+and you don't need to open a pull request either: just _commit_ all your
+changes with, for instance:
+
+```bash
+git add --all -v :/
+git commit
+```
+
+in order to be able to cleanly switch to a different branch (if you don't want
+to commit you can use the [stash](https://git-scm.com/docs/git-stash) too).
+
+Now switch back to `master`, update it, and create a new branch from there:
+
+```bash
+git checkout master
+git pull
+git checkout -b my-second-feature
+```
+
+You can now follow the same workflow, by keeping in mind that you can switch
+back and forth using `git checkout` (without the `-b` option this time).
+
+> It is important you create your feature branches from an updated `master`,
+> and not from other feature branches, in order to avoid confusion and in order
+> to avoid opening different pull requests with overlapping contents.
+
+The advantage of this workflow is that you will never work in your `master`
+branch (_i.e._ you will never perform `git push` from there): your changes and
+the upstream ones are clearly separated.
+
+
+### Clean up feature branches
+
+Once your pull requests get merged, you can delete both your local feature branch
+and the remote counterpart. Note that this is completely optional.
+
+To delete your local branch, first move to the `master` and update it:
+
+```bash
+git checkout master
+git pull
+```
+
+then delete it:
+
+```bash
+git branch -d my-feature-branch
+```
+
+If your branch was merged to `master` then Git will not complain. If your
+branch was not merged, Git will prevent you from accidentally delete it (you
+can force by using `-D` instead of `-d` if you really know what you are doing).
+
+Now you can delete the remote one **(this is a dangerous and irreversible
+operation)**:
+
+```bash
+git push <your-github-username> :my-feature-branch
+```
+
+It's the `:` that does the trick (it's not a typo).
