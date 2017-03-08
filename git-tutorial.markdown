@@ -346,6 +346,32 @@ This may be a good moment to [update your repository with the latest changes in
 the master](#updating-your-fork-with-changes-from-the-master).
 
 
+### Pull request size limit
+
+We have put in place a size check on each opened pull request set to 20 MB. The
+limit is in place in order to avoid an uncontrolled growth of the Git
+repositories and make them slimmer and easier to download.
+
+In case you go beyond the limit, your pull request will be automatically
+rejected:
+
+![Pull request is too large](/images/git-tests-err-size.png)
+
+You will also receive an email notification. The general idea is to use the
+code repositories to store code only: since sometimes there is the need to store
+data files too [we are providing an
+alternative](git-advanced/#how-to-use-large-data-files-for-analysis) with the
+following features:
+
+* Large files are easy to upload and with proper PWG-based permissions
+* Large files are versioned daily on CVMFS for easy access from Grid jobs
+* We have an interface in AliRoot to access those files transparently
+
+If you are using or plan to use large files, even if you are below our current
+limit, [we encourage you to follow the documented
+procedure](git-advanced/#how-to-use-large-data-files-for-analysis).
+
+
 ## Conflicts between different pull requests
 
 Sometimes it might happen that your pull request touches files modified also by
