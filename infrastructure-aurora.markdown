@@ -42,14 +42,14 @@ to the other or changing machine will require a new one.
 
 If you are on Mac you can do:
 
-    cern-get-sso-cookie -r -u https://aliaurora.cern.ch -o ~/.aurora-token --cert ~/Certificates.p12 --password ""
+    cern-get-sso-cookie -r -u https://aliaurora.cern.ch -o ~/.aurora/auth-token --cert ~/Certificates.p12 --password ""
 
 where `Certificates.p12` is your grid certificate, exported from your
 KeyChain. If you are on linux, you can either use your grid certificate
 in `~/.globus/usercert.pem`:
 
     cern-get-sso-cookie -r -u https://aliaurora.cern.ch  \
-                        -o ~/.aurora-token               \
+                        -o ~/.aurora/auth-token          \
                         --cert ~/.globus/usercert.pem    \
                         --key ~/.globus/userkey.pem
 
@@ -67,7 +67,7 @@ your own password.
 ## Configure your Aurora client
 
 In order to reach the Aurora cluster, you need to configure how to
-access it. This can be done by creating a file `~/.aurora/config.json`:
+access it. This can be done by creating a file `~/.aurora/clusters.json`:
 
     [{
       "name": "build",
