@@ -61,7 +61,7 @@ via username and password:
                         -o ~/.aurora/auth-token
                         
 Whatever solution you chose, you should end up with an authentication
-token in `~/.aurora-token` which you should guard safely as if it was
+token in `~/.aurora/auth-token` which you should guard safely as if it was
 your own password.
 
 ## Configure your Aurora client
