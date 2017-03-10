@@ -58,8 +58,8 @@ via username and password:
 
     kinit <cern-user-name>@CERN.CH
     cern-get-sso-cookie -r -u https://aliaurora.cern.ch  \
-                        -o ~/.aurora-token               \
-
+                        -o ~/.aurora/auth-token
+                        
 Whatever solution you chose, you should end up with an authentication
 token in `~/.aurora-token` which you should guard safely as if it was
 your own password.
@@ -72,8 +72,7 @@ access it. This can be done by creating a file `~/.aurora/config.json`:
     [{
       "name": "build",
       "scheduler_uri": "https://aliaurora.cern.ch",
-      "auth_mechanism": "UNAUTHENTICATED",
-      "cookie_jar": "~/.aurora-token",
+      "auth_mechanism": "COOKIE",
       "slave_run_directory": "latest",
       "slave_root": "/build/mesos"
     }]
