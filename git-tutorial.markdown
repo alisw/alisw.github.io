@@ -360,7 +360,7 @@ rejected:
 You will also receive an email notification. The general idea is to use the
 code repositories to store code only: since sometimes there is the need to store
 data files too [we are providing an
-alternative](git-advanced/#how-to-use-large-data-files-for-analysis) with the
+alternative](/git-advanced/#how-to-use-large-data-files-for-analysis) with the
 following features:
 
 * Large files are easy to upload and with proper PWG-based permissions
@@ -369,7 +369,7 @@ following features:
 
 If you are using or plan to use large files, even if you are below our current
 limit, [we encourage you to follow the documented
-procedure](git-advanced/#how-to-use-large-data-files-for-analysis).
+procedure](/git-advanced/#how-to-use-large-data-files-for-analysis).
 
 
 ## Conflicts between different pull requests
