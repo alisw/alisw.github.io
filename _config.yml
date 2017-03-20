@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Initial documentation for ALICE new build infrastructure.
   This is work in progress.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://alisw.github.io" # the base hostname & protocol for your site
+url: "https://alisw.github.io" # the base hostname & protocol for your site
 categories: [main, infrastructure]
 
 # Build settings
@@ -23,3 +23,13 @@ builduser: "alibuild"
 openstack_image: "CC7 Base - x86_64 [2015-06-12]"
 openstack_flavor: "hep2.24"
 openstack_master_flavor: "hep2.4"
+
+menu_header: ALICE SW
+menu:
+  - name: git
+    label: GIT
+    items:
+      - name: git-tutorial
+        label: "Basic Tutorial"
+      - name: git-advanced
+        label: "Advanced Tutorial"

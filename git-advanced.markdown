@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: main
 title: GitHub advanced workflow
 categories: main
 permalink: /git-advanced/
@@ -272,7 +272,7 @@ to use the interface, go to your fork from a browser:
 
 From the web interface you will see something like the following:
 
-![Open a GitHub pull request from a certain branch](/images/git-open-pr-adv.png)
+![Open a GitHub pull request from a certain branch]({{site.baseurl}}/images/git-open-pr-adv.png)
 
 If you have recently pushed, which is the case most of the time, GitHub tells
 you what is your branch name and proposes you to open the pull request right

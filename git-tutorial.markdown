@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: main
 title: GitHub basic workflow
 categories: main
 permalink: /git-tutorial/
@@ -30,12 +30,12 @@ work on ALICE software.
 > **Note:** we recommend you create a GitHub username which is the same as your
 > CERN one, if available.
 
-![Join GitHub](/images/git-join-github.png)
+![Join GitHub]({{site.baseurl}}/images/git-join-github.png)
 
 In case you have an account, login and authorize “ALICE Continuous Integration”
 to read your user name so that it can be mapped to your CERN account.
 
-![Authorize GitHub](/images/git-auth.png)
+![Authorize GitHub]({{site.baseurl}}/images/git-auth.png)
 
 
 ## Fork a repository
@@ -175,7 +175,7 @@ approached.
 
 ## Workflow to commit your changes
 
-![Git schema](/images/git-schema.png)
+![Git schema]({{site.baseurl}}/images/git-schema.png)
 
 As depicted in the image, the general idea is:
 
@@ -228,12 +228,12 @@ create a pull request by going to:
 
 then click on “New pull request”:
 
-![Git new Pull Request](/images/git-new-pr.png)
+![Git new Pull Request]({{site.baseurl}}/images/git-new-pr.png)
 
 Review the proposed changes and if you are satisfied click on the green button
 saying “Create a pull request”:
 
-![Git create a Pull Request](/images/git-create-pr.png)
+![Git create a Pull Request]({{site.baseurl}}/images/git-create-pr.png)
 
 Please make sure the title and the description of your pull request are
 spell-checked and express the purpose of the changes in a simple and concise
@@ -245,7 +245,7 @@ software, and it will guarantee a faster approval (if required).
 > In case of doubt, you can find more information in the [commit
 > guidelines](/git-advanced#how-to-write-a-pull-request).
 
-![Git open a Pull Request](/images/git-open-pr.png)
+![Git open a Pull Request]({{site.baseurl}}/images/git-open-pr.png)
 
 Once you are done, your code is **proposed** for inclusion in the official
 repository, but it’s not yet in, as it needs to pass a review process. Notice
@@ -270,14 +270,14 @@ There might be two possible scenarios:
 In the first case, the user is allowed to modify the files and the build system
 will tell you that by commenting. For example:
 
-![Git approved Pull Request](/images/git-approved.png)
+![Git approved Pull Request]({{site.baseurl}}/images/git-approved.png)
 
 In the other case, if the user is not allowed to modify the code touched by the
 pull requests, the person(s) responsible will be contacted automatically and
 will be asked to comment on the pull request and whether or not the change is
 approved. In this example, Jan Fiete and Jochen need to approve the request:
 
-![Git approval required](/images/git-approval-reqd.png)
+![Git approval required]({{site.baseurl}}/images/git-approval-reqd.png)
 
 Note that the system will add the real name next to the GitHub username. GitHub
 users are mentioned by prepending `@` to the username in a comment: by default,
@@ -302,7 +302,7 @@ special comments:
 Once all approvals have been granted, testing begins. The automatic system will
 give you a feedback similar to the following:
 
-![Git approval OK](/images/git-approval-ok.png)
+![Git approval OK]({{site.baseurl}}/images/git-approval-ok.png)
 
 No pull request is automatically rejected. In case a pull request wants to
 change the project structure it will be handled by the project administrators.
@@ -318,12 +318,12 @@ The automatic build system provides you feedback through the GitHub testing
 interface. In case you see a yellow badge, it means that the system has taken
 over your request and it is now trying to build it:
 
-![Git pending tests](/images/git-tests-pending.png)
+![Git pending tests]({{site.baseurl}}/images/git-tests-pending.png)
 
 If your code produces an error, this is reported together with the problem. For
 instance:
 
-![Git tests errors](/images/git-tests-err.png)
+![Git tests errors]({{site.baseurl}}/images/git-tests-err.png)
 
 Part of the build log is reported in the comment. The full log is also
 available by clicking on the “Full log” link.
@@ -336,11 +336,11 @@ howto](#amend-an-open-pull-request) below.
 
 If your code works fine, this will be reported:
 
-![Git tests OK](/images/git-tests-ok.png)
+![Git tests OK]({{site.baseurl}}/images/git-tests-ok.png)
 
 Your code will be merged into the master and the pull request closed:
 
-![Git merged](/images/git-merged.png)
+![Git merged]({{site.baseurl}}/images/git-merged.png)
 
 This may be a good moment to [update your repository with the latest changes in
 the master](#updating-your-fork-with-changes-from-the-master).
@@ -355,7 +355,7 @@ repositories and make them slimmer and easier to download.
 In case you go beyond the limit, your pull request will be automatically
 rejected:
 
-![Pull request is too large](/images/git-tests-err-size.png)
+![Pull request is too large]({{site.baseurl}}/images/git-tests-err-size.png)
 
 You will also receive an email notification. The general idea is to use the
 code repositories to store code only: since sometimes there is the need to store
@@ -388,7 +388,7 @@ Conflicts with pull requests can occur at any time.
 
 In both cases you will receive a notification in the form of a comment (which by default triggers an automatic email). For instance:
 
-![Git conflict](/images/git-conflict.png)
+![Git conflict]({{site.baseurl}}/images/git-conflict.png)
 
 The GitHub interface suggests you to use the “web editor” or the “command line”
 to resolve conflicts, and presents you with sensible suggestions. The web
@@ -398,7 +398,7 @@ set `myPtCut = 12345` and your fellow colleague has set it to `myPtCut =
 the web assisted merging, click on “resolve conflicts”.  The following window
 shows you the conflicts one by one.
 
-![Git conflict solve](/images/git-conflict-solve.png)
+![Git conflict solve]({{site.baseurl}}/images/git-conflict-solve.png)
 
 For each conflict you find the following snippets:
 
@@ -414,11 +414,11 @@ The code above is the existing code. The one below your change. Freely edit in
 the window until you think the conflict is resolved. Now you can save your
 changes by clicking “mark as resolved”.
 
-![Git conflict resolved](/images/git-conflict-resolved.png)
+![Git conflict resolved]({{site.baseurl}}/images/git-conflict-resolved.png)
 
 Once all files have been processed, click on “commit changes”:
 
-![Git conflict commit](/images/git-conflict-commit.png)
+![Git conflict commit]({{site.baseurl}}/images/git-conflict-commit.png)
 
 The changes are saved as a new commit to your fork and automatically added to
 the pull request. Now the review and testing process starts from the beginning.
