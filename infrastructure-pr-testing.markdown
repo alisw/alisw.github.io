@@ -12,8 +12,20 @@ for a centralised scheduling service. Moreover, since the process of
 checking a PR is not done once a given PR is built, but only when it's
 merged, builders keep retrying to build even PR which were previously
 successfully built. This is because the boundary condition of the PR
-checking could be different (e.g. merge conflict might happen) and
-therefore the test of PR is considered done only when the PR is merged.
+checking could be different (e.g. merge conflict might happen a
+previously unresponsive service is back to production) and therefore the
+test of a given PR is considered complete only when the PR is merged.
+
+By default the builders will behave in the following manner:
+
+- Wait for a configurable number of seconds
+- Check if there is one or more untested PR. If yes, start building them
+  and then go back to the starting point.
+- Check if there are pull requests which were previously checked and had
+  a failure. If yes, test one of them and then go back to the starting point.
+- Check if there are pull requests which were previously checked and had did
+  not have a failure. If yes, test one of them and then go back to the starting
+  point.
 
 # Deploying the builders
 
