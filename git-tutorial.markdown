@@ -88,21 +88,61 @@ to temporarily or permanently store your password.
 We recommend to follow the [aliBuild “getting started”
 guide](https://dberzano.github.io/alice/alibuild/), or the [aliBuild
 tutorial](http://alisw.github.io/alibuild/tutorial.html). Alternatively, see
-further below if you want to check out the repository manually. We will assume
-from now on that:
+further below if you want to check out the repository manually.
 
- - your working directory is `~/alice`
- - you have aliBuild installed
+We will assume from now on that your working directory is `~/alice`. If you
+have your old installation under `~/alice` then we suggest you use a different
+directory to avoid confusion.
 
-If you have your old installation under `~/alice` then we suggest you use a
-different directory to avoid confusion.
+
+### I have participated to the GitHub test
+
+> These instructions are only valid from the time the GitHub migration has been
+> completed!
+
+If you have participated to the GitHub test and you want to sync with the
+current official AliRoot/AliPhysics and alidist repositories from upstream,
+starting from the day when Git migration is effective you can follow this
+procedure and you will save some build time.
+
+Assuming you have your GitHub test installation under `~/alice`, destroy your
+current recipes, AliRoot and AliPhysics directories:
+
+```bash
+cd ~/alice
+rm -rf alidist/ AliRoot/ AliPhysics/
+```
+
+Then clone AliRoot and AliPhysics from GitHub:
+
+```bash
+cd ~/alice
+git clone https://github.com/alisw/AliRoot
+git clone https://github.com/alisw/AliPhysics
+```
+
+If you use aliBuild you can skip the two clones and do directly:
+
+```bash
+cd ~/alice
+aliBuild init AliRoot,AliPhysics
+```
+
+You may now [setup your repositories](#contribute-to-alice-software) and
+[update your fork with changes from the
+master](#updating-your-fork-with-changes-from-the-master), and you will be
+ready to build, and create pull requests.
 
 
 ### Git migration note
 
+> These instructions will not be valid any longer when the GitHub migration
+> will be completed!
+
 Until the migration to GitHub is effective the `aliBuild init`
 command from the tutorial should point to the `git-migration` development
-branch of our recipes:
+branch of our recipes. This is done by using the `--dist git-migration`
+parameter to aliBuild, which you normally don't use.
 
 ```bash
 aliBuild --dist git-migration init AliRoot,AliPhysics
@@ -114,12 +154,7 @@ You can then continue the build as normal using:
 aliBuild build AliPhysics
 ```
 
-If you do not use aliBuild you can clone the Git repository manually:
-
-```bash
-cd ~/alice
-git clone https://github.com/alisw/AliPhysics
-```
+as suggested by the tutorial.
 
 
 ### Contribute to ALICE software
@@ -145,6 +180,10 @@ git remote add <your-github-username> https://github.com/<your-github-username>/
 
 ## Updating your fork with changes from the master
 
+
+
+
+updating-your-fork-with-changes-from-the-master
 While you are working, other people may propose code for inclusion in the
 master. You can update your local repository and your fork with the latest
 version of the master with the following lines:
