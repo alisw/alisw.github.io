@@ -1,18 +1,21 @@
 ---
-title: Build Infrastructure
-layout: page
+layout: main
+title: Git
 categories: main
+permalink: /infrastructure/
 ---
 
-**WORK IN PROGRESS -- do not use**
 
-The following pages describe the various components of the build
-infrastructure:
+The following pages contain implementation details of various parts of the
+build infrastructure. They are not of general need, but serve as reference to
+operate the system.
 
-{% for page in site.pages %}
-  {% if page.categories contains 'infrastructure' %}
-    {% if page.title %}
-<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-    {% endif %}
-  {% endif %}
-{% endfor %}
+* <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
+* <a href="{{site.baseurl}}/infrastructure-logging">Logging</a>
+* <a href="{{site.baseurl}}/infrastructure-relval">RelVal</a>
+* <a href="{{site.baseurl}}/infrastructure-aurora">Apache Aurora</a>
+* <a href="{{site.baseurl}}/infrastructure-mesos">Apache Mesos</a>
+* <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
+* <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
+* <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
+* <a href="{{site.baseurl}}/infrastructure-pr-testing">PR testing</a>

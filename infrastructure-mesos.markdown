@@ -1,6 +1,6 @@
 ---
 title: Creating the build infrastructure
-layout: page
+layout: main
 categories: infrastructure
 ---
 

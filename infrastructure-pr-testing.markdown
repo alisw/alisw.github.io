@@ -1,6 +1,6 @@
 ---
 title: Pull Request Builders
-layout: page
+layout: main
 categories: infrastructure
 ---
 

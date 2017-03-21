@@ -1,6 +1,6 @@
 ---
 title: Release validation operations
-layout: page
+layout: main
 categories: infrastructure
 ---
 
