@@ -67,7 +67,7 @@ The command above allows you to do so without leaving the terminal. The output
 of the command above will be a URL like:
 
 ```bash
-https://github.com/alisw/AliRoot/pull/4
+https://github.com/alisw/AliPhysics/pull/12
 ```
 
 If you copy-paste it to your browser you will see the GitHub interface for the
@@ -115,8 +115,7 @@ to the following EOS location, which is accessible from lxplus:
 
 We have preserved the same directory structure found on AliPhysics, and the
 same permissions: for instance, `PWGLF` is writable by all members of
-`alice-svn-pwglf` (“svn” is a remain from the past and not a reference to the
-legacy version control system).
+`alice-svn-pwglf` (whose members can be edited by the group conveners).
 
 Every day, in concomitance with the AliPhysics daily tag (at 4pm Geneva time),
 this folder is snapshotted on CVMFS under the following path:
@@ -351,3 +350,83 @@ git push <your-github-username> :my-feature-branch
 ```
 
 It's the `:` that does the trick (it's not a typo).
+
+
+## Port unpushed old commits to GitHub
+
+In case you have local Git commits you did not push in your old AliPhysics
+repository and you would like to push them to GitHub now, you can create a
+"patch" from your old local repository and apply it on top of your local GitHub
+copy of AliPhysics.
+
+Go in your old AliPhysics repository (assumed to be in `~/alice-old`):
+
+```bash
+cd ~/alice-old/AliPhysics
+git format-patch HEAD^1
+```
+
+The `HEAD^1` means: take the first commit on top. If you have more than one
+commit to port, replace `1` with the appropriate number.
+
+You will find in your current directory a number of `.patches` files. If you
+have your new AliPhysics directory under `~/alice`, you can go there and apply
+all of them at once, after making sure you have all the upstream changes
+locally:
+
+```bash
+cd ~/alice
+git checkout master
+git pull --rebase
+git am ~/alice-old/AliPhysics/*.patch
+```
+
+Note that this command assumes that the only `.patches` files you have in your
+old AliPhysics directory are the ones you have just created with `git
+format-patch`.
+
+At this point you can push to your local fork and create a pull request:
+
+```bash
+git push <your-github-username>
+hub pull-request -b alisw/AliPhysics:master
+```
+
+The `hub` command works if you have the command line tool installed, otherwise
+just follow the web-based procedure.
+
+
+## Rebuild an old AliRoot/AliPhysics release
+
+GitHub clones are only valid for building AliRoot/AliPhysics releases from
+v5-09 on. Due to the repository cleanup, checking out an older version will
+lead to inconsistent results.
+
+Suppose you want to build version v5-08-18 of AliRoot (corresponding to
+v5-08-18-01 of AliPhysics). In a separate directory, called `~/alice-legacy`,
+you can do:
+
+```bash
+mkdir ~/alice-legacy && cd ~/alice-legacy
+aliBuild --dist IB/v5-08/prod init AliRoot,AliPhysics
+```
+
+Then you can explicitly checkout the versions you need:
+
+```bash
+cd ~/alice-legacy/AliRoot
+git checkout v5-08-18
+cd ~/alice-legacy/AliPhysics
+git checkout v5-08-18-01
+```
+
+Now you can run aliBuild as usual:
+
+```
+cd ~/alice-legacy
+aliBuild build AliPhysics
+```
+
+The trick is using the recipes set (alidist) from the branch `IB/v5-08/prod`,
+which has the correct pointers to the frozen old clones of AliRoot and
+AliPhysics.
