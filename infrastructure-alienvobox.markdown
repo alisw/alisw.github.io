@@ -1,6 +1,6 @@
 ---
 title: Setup an AliEn VOBOX
-layout: page
+layout: main
 categories: infrastructure
 ---
 

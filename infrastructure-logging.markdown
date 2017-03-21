@@ -1,6 +1,6 @@
 ---
 title: Build logs processing
-layout: page
+layout: main
 categories: infrastructure 
 ---
 

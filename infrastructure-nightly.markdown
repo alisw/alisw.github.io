@@ -1,6 +1,6 @@
 ---
 title: Nightly builds
-layout: page
+layout: main
 categories: infrastructure
 ---
 

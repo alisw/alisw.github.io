@@ -1,6 +1,6 @@
 ---
 title: Using Apache Aurora
-layout: page
+layout: main
 categories: infrastructure
 ---
 

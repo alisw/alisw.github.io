@@ -1,6 +1,6 @@
 ---
 title: Build Infrastructure Frontend
-layout: page
+layout: main
 categories: infrastructure
 ---
 

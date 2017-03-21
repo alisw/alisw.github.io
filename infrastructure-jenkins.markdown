@@ -1,6 +1,6 @@
 ---
 title: Creating the Jenkins Master
-layout: page
+layout: main
 categories: infrastructure
 ---
 
