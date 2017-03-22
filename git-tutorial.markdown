@@ -77,10 +77,12 @@ instructions](https://help.github.com/articles/adding-a-new-ssh-key-to-your-gith
 More details on GitHub and SSH are [also
 available](https://help.github.com/articles/connecting-to-github-with-ssh/).
 
-Alternatively, if you don’t want to use GitHub with SSH then you can check out
-[how to setup the credentials
-helper](https://help.github.com/articles/caching-your-github-password-in-git/)
-to temporarily or permanently store your password.
+A full AliRoot/AliPhysics build requires manually inputting your CERN username
+and password in some cases. To avoid repeating the procedure several times, and
+to prevent unattended builds to wait for your input, you can [setup a temporary
+or permanent credentials cache](/git-advanced/#setup-a-git-credentials-cache).
+You can also use the credentials cache as an alternative to setting you a GitHub
+SSH key.
 
 
 ## Setup software repositories on your local computer

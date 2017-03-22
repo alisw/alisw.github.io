@@ -471,3 +471,49 @@ export ALIROOT_OCDB_ROOT=$PWD/AliRootOCDB
 
 > Note that `ALIROOT_OCDB_ROOT` is the toplevel directory containing in turn
 > the `OCDB` directory with the calibration files.
+
+
+## Setup a Git credentials cache
+
+While compiling the AliRoot/AliPhysics software chain you might be asked
+several times to input your CERN username and your password. This is because
+some of the required software components have licensing restrictions and cannot
+be made publicly available, so authentication is an inevitable consequence. This
+happens for instance with the DPMJET generator.
+
+To prevent automated installations from bothering you with multiple password
+requests, you can set up a Git credentials cache.
+
+You can do (only once):
+
+```bash
+git config --global credential.helper "cache --timeout=86400"
+```
+
+to tell Git to save in memory all inputted credentials for one day. You will be
+prompted for your password only once in 24 hours, or if your password changes
+and the cached one is no longer valid.
+
+The cache duration can be configured with the `--timeout` switch and it is is
+expressed in seconds.
+
+A very unsafe option is to _permanently_ store your password in
+`~/.git-credentials`: you will be prompted only once, and the password will be
+forever stored there **in clear text**.
+
+```bash
+git config --global credential.helper store
+```
+
+> Note: this solution is not good for your laptop. It is meant to target
+> clusters with unattended installation systems.
+
+If you are on macOS you can also save your Git password inside your Keychain:
+
+```bash
+git config --global credential.helper osxkeychain
+```
+
+More information on caching Git credentials can be found [on the GitHub
+documentation](https://help.github.com/articles/caching-your-github-password-in-git/):
+the documentation applies also to repositories not hosted on GitHub.
