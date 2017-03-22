@@ -430,3 +430,44 @@ aliBuild build AliPhysics
 The trick is using the recipes set (alidist) from the branch `IB/v5-08/prod`,
 which has the correct pointers to the frozen old clones of AliRoot and
 AliPhysics.
+
+
+## Use the reference OCDB
+
+Our production OCDB is stored on CVMFS and AliEn, however we also have a
+reference OCDB which used to be part of AliRoot. The reference OCDB is no
+longer there: it can now be found at this [separate Git
+repository](https://gitlab.cern.ch/alisw/AliRootOCDB/).
+
+To use the new OCDB with AliPhysics, you first need to build the package:
+
+```bash
+cd ~/alice
+aliBuild build AliPhysics
+aliBuild build AliRoot-OCDB
+```
+
+When you enter the environment, load it as extra package:
+
+```bash
+cd ~/alice
+alienv enter AliPhysics/latest AliRoot-OCDB/latest
+```
+
+The OCDB will be available at the following path:
+
+```
+$ALIROOT_OCDB_ROOT/OCDB
+```
+
+so you will need to update your paths accordingly. If you don't use aliBuild
+you can simply clone the package and manually export the environment variable:
+
+```bash
+cd ~/alice
+git clone https://gitlab.cern.ch/alisw/AliRootOCDB.git
+export ALIROOT_OCDB_ROOT=$PWD/AliRootOCDB
+```
+
+> Note that `ALIROOT_OCDB_ROOT` is the toplevel directory containing in turn
+> the `OCDB` directory with the calibration files.
