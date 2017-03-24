@@ -77,11 +77,26 @@ instructions](https://help.github.com/articles/adding-a-new-ssh-key-to-your-gith
 More details on GitHub and SSH are [also
 available](https://help.github.com/articles/connecting-to-github-with-ssh/).
 
+
+### Credentials for private repositories
+
 A full AliRoot/AliPhysics build requires manually inputting your CERN username
-and password in some cases. To avoid repeating the procedure several times, and
-to prevent unattended builds to wait for your input, you can [setup a temporary
-or permanent credentials cache](/git-advanced/#setup-a-git-credentials-cache).
-You can also use the credentials cache as an alternative to setting you a GitHub
+and password in some cases, as it is stored on private ALICE Git repositories
+hosted at CERN GitLab.
+
+In order to access them, you need to **login to
+[gitlab.cern.ch](https://gitlab.cern.ch/) at least once using your browser** in
+order to be registered, otherwise you will not be able to download private
+components! After you have done that for the first time you need to wait for up
+to one hour before you can download the code. This is explained on [this CERN
+IT-maintained
+documentation](https://cern.service-now.com/service-portal/article.do?n=KB0003137).
+
+During the compilation process you might be asked several times for your CERN
+credentials. To avoid repeating the procedure several times, and to prevent
+unattended builds to wait for your input, you can [setup a temporary or
+permanent credentials cache](/git-advanced/#setup-a-git-credentials-cache).
+Note that the credentials cache is also an alternative to setting up a GitHub
 SSH key.
 
 
@@ -155,10 +170,6 @@ git remote add <your-github-username> https://github.com/<your-github-username>/
 
 ## Updating your fork with changes from the master
 
-
-
-
-updating-your-fork-with-changes-from-the-master
 While you are working, other people may propose code for inclusion in the
 master. You can update your local repository and your fork with the latest
 version of the master with the following lines:
