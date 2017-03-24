@@ -517,3 +517,34 @@ git config --global credential.helper osxkeychain
 More information on caching Git credentials can be found [on the GitHub
 documentation](https://help.github.com/articles/caching-your-github-password-in-git/):
 the documentation applies also to repositories not hosted on GitHub.
+
+
+## Get notified for all changes
+
+Email notifications are handled by GitHub and will be sent to the email you
+have linked to your GitHub account.
+
+If you want to be notified for every activity on a certain repository, you
+first need to make sure "watch" notifications are enabled. Go to the [GitHub
+notification settings](https://github.com/settings/notifications) page for your
+account, and enable email notifications for **Watching**:
+
+![GitHub notification settings]({{site.baseurl}}/images/git-notif-settings.png)
+
+A green tick will appear next to the checkboxes to confirm your settings have
+been saved (there is no "save settings" button).
+
+Note that in the [GitHub notification
+settings](https://github.com/settings/notifications) you can granularily
+specify what are the events that trigger a notification. You can for instance
+be notified only for pushes or merges, and not for every comment.
+
+> Note that independently from your "Watch" settings, you will continue
+> receiving emails if you are **@mentioned** if the **Participating** settings
+> are ticked.
+
+Navigate now to the repository you want to follow, for instance
+[AliPhysics](https://github.com/alisw/AliPhysics) and on the dropdown on top
+select **Watch** to be notified of all activities.
+
+![GitHub watch repository]({{site.baseurl}}/images/git-notif-repo.png)
