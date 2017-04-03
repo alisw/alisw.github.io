@@ -40,7 +40,7 @@ machine is:
       MACHINE_NAME=<{{site.exp_prefix}}jenkinsXX>
 
       ai-bs-vm -g {{site.jenkins_hostgroup}} \
-               -i "{{site.openstack_image}}" \
+               --{{site.openstack_image | downcase}} \
                --nova-sshkey {{site.builduser}} \
                --nova-flavor {{site.openstack_master_flavor}} \
                --landb-mainuser alice-agile-admin \
