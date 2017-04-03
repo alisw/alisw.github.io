@@ -32,7 +32,7 @@ The quick recipe to restart the frontend is:
       MACHINE_NAME=<{{site.exp_prefix}}build-frontendXX>
 
       ai-bs-vm -g {{site.frontend_hostgroup}} \
-               -i "{{site.openstack_image}}" \
+               --{{site.openstack_image | downcase}} \
                --nova-sshkey {{site.builduser}} \
                --nova-flavor {{site.openstack_master_flavor}} \
                --landb-mainuser alice-agile-admin \
