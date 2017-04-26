@@ -19,6 +19,7 @@ Assuming your proxy to be used for EOS is available under `~/.globus/eos-proxy`
 you can start the container like the following:
 
     docker run -it --rm                                                   \
+      -privileged                                                         \
       -v ~/.globus:/root/.globus:ro                                       \
       -e X509_USER_PROXY=/root/.globus/eos-proxy                          \
       -e X509_CERT_DIR=/cvmfs/grid.cern.ch/etc/grid-security/certificates \
@@ -26,14 +27,16 @@ you can start the container like the following:
       parrot_run eos root://eospublic.cern.ch/
 
 Where `parrot_run` is used to enable CVMFS (only used for reading the CA
-certificates). This command sends you straight to the EOS prompt.
+certificates). This command sends you straight to the EOS prompt. Note that the
+`-privileged` option is required by Parrot.
 
 If you have EOS installed on your machine you can simply export a couple of
 environment variables and start EOS afterwards:
 
-    export X509_USER_PROXY=/root/.globus/eos-proxy
+    export X509_USER_PROXY=<path_to_eos_proxy>
     export X509_CERT_DIR=/cvmfs/grid.cern.ch/etc/grid-security/certificates
-    eos root://eospublic.cern.ch/
+    export EOS_MGM_URL=root://eospublic.cern.ch
+    eos
 
 
 ## Remove old release validations
@@ -89,3 +92,32 @@ used as a dataset for a release validation. In order to make this file usable:
  - edit the Jenkins job in order to add the dataset name (file name without the
    `.txt` extension) to the drop-down list associated to the `DATASETS` Jenkins
    variable
+
+
+# Proxy certificate
+
+The release validation uses a Grid proxy certificate mapped to the **alibot**
+EOS/CERN service account on eospublic.cern.ch.
+
+As CERN does not allow service accounts to own certificates, we are using a host
+certificate for this purpose. The corresponding node is managed by the CERN
+Puppet infrastructure therefore its certificate will be automatically renewed.
+Certificate and key will be found under `/etc/grid-security` on the very host.
+
+When the proxy expires or is about to, it has to be renewed using the
+`grid-proxy-init` utility found on lxplus, which is always up-to-date. To do so,
+
+    grid-proxy-init -cert hostcert.pem \
+                    -key hostkey.pem   \
+                    -out eos-proxy     \
+                    -valid 9000:0
+
+Adjust the validity to make it _shorter_ than the host certificate (the utility
+will warn you in case it is longer). The validity is specified in
+`hours:minutes`.
+
+To verify whether this proxy can be correctly parsed, use the following command:
+
+    voms-proxy-info -file eos-proxy
+
+The new proxy can now be deployed to production.
