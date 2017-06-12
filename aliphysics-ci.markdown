@@ -10,6 +10,7 @@ If a release validation fails, one can try out the release candidate by sourcing
 nightly environment from CVMFS:
 
     source /cvmfs/alice-nightlies.cern.ch/etc/login.sh
+    export PATH=/cvmfs/alice-nightlies.cern.ch/bin:$PATH
 
 then you can query and use nighly releases the usual way:
 
