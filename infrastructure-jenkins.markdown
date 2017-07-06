@@ -77,3 +77,20 @@ Configuration" page. In order to create a new one:
 
 - Click on save.
 
+
+# Troubleshooting
+
+## Killing a stuck job
+
+Sometimes Jenkins jobs (especially pipelines) remain stuck in some weird state
+and refuse to be killed by the GUI. When this happens, the last resort is to do the following:
+
+* Go to "Manage Jenkins"
+* Go to "Script Console"
+* Adapt the following script to your needs:
+
+      def jobId = XYZ
+      def jobName = "daily-builds/daily-aliphysics-test"
+      def job = Jenkins.instance.getItemByFullName(jobName)
+      def task = job.getBuildByNumber(jobId)
+      task.doKill()
