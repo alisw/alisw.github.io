@@ -98,3 +98,10 @@ You can start it with:
      Job create succeeded: job url=https://aliaurora.cern.ch/scheduler/root/devel/hello
 
 then you can open the provided web page to look at the produced logs.
+
+## Gotchas
+
+In order to access the logs, you need to connect directly to the client machines, therefore you need to open a SOCKS tunnel inside the cluster and configure your browser to use it.
+
+On Costin machines, for security reasons the log provider are not running, so you need to directly ssh inside them and lock at the filesystem.
+
