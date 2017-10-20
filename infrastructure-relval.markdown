@@ -96,7 +96,7 @@ used as a dataset for a release validation. In order to make this file usable:
 
 # Proxy certificate
 
-The release validation uses a Grid proxy certificate mapped to the **alibot**
+Release validation uses a Grid proxy certificate mapped to the **alibot**
 EOS/CERN service account on eospublic.cern.ch.
 
 As CERN does not allow service accounts to own certificates, we are using a host
@@ -104,20 +104,40 @@ certificate for this purpose. The corresponding node is managed by the CERN
 Puppet infrastructure therefore its certificate will be automatically renewed.
 Certificate and key will be found under `/etc/grid-security` on the very host.
 
-When the proxy expires or is about to, it has to be renewed using the
-`grid-proxy-init` utility found on lxplus, which is always up-to-date. To do so,
+Release validation is configured to preventively fail at start if the proxy
+certificate is going to expire soon (in order not to fail in the middle of a
+job with errors difficult to catch).
 
-    grid-proxy-init -cert hostcert.pem \
-                    -key hostkey.pem   \
-                    -out eos-proxy     \
-                    -valid 9000:0
+First off, connect to `alibuild-frontend01`. Once there, `rsync` the certificate
+directory to `aiadmin.cern.ch` (a login node managed by CERN IT):
 
-Adjust the validity to make it _shorter_ than the host certificate (the utility
-will warn you in case it is longer). The validity is specified in
-`hours:minutes`.
+    rsync -av /etc/grid-security/ youruser@aiadm.cern.ch:eos-cert/
 
-To verify whether this proxy can be correctly parsed, use the following command:
+Connect to `aiadmin.cern.ch`, then:
 
-    voms-proxy-info -file eos-proxy
+    cd eos-cert/
+    grid-proxy-init -cert hostcert.pem -key hostkey.pem -out eos-proxy.pem -valid 9000:0
 
-The new proxy can now be deployed to production.
+Just make sure the proxy is shorter than the issuing certificate by tuning the
+`9000` number (in hours). A warning is issued in case proxy is longer.
+
+Now, store the proxy on `tbag` (the CERN IT facility for deploying secrets,
+integrated with Puppet):
+
+    tbag set --hg alibuild/mesos/slave --file eos-proxy.pem eos-proxy
+
+If you want to force the update on every node and don't want to wait for
+automatic Puppet runs, do everywhere (with `pdsh`, `mpssh` or similar tools):
+
+    puppet agent -tv
+
+Additionally, you can verify the proxy information by running:
+
+    voms-proxy-info -file eos-proxy.pem
+
+Note that on some nodes (not Puppet-managed) proxy has to be deployed manually
+as `/secrets/eos-proxy` with mode `0400`.
+
+On `aiadmin`, everything can be now deleted:
+
+    cd ; rm -rf eos-cert/
