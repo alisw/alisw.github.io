@@ -124,9 +124,18 @@ this folder is snapshotted on CVMFS under the following path:
 /cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD
 ```
 
-carrying the same name as the corresponding AliPhysics tag. CVMFS has the
-advantage to make data access from Grid jobs reliable and faster due to caches
-(files unchanged in two different snapshots are not downloaded twice).
+carrying the same name as the corresponding AliPhysics tag. Moreover, at
+every AliRoot/AliPhysics production release, we also snapshot at:
+
+```
+/cvmfs/alice.cern.ch/data/prod/v5-XX-YY-01
+```
+
+where the last component is the AliPhysics tag name.
+
+CVMFS brings the advantage to make data access from Grid jobs reliable and
+faster due to caching (files unchanged in two different snapshots are not
+downloaded twice).
 
 In order to profit from the separate storage for large files we have created an
 interface in AliRoot to allow transparent access to OADB files using a relative
@@ -144,13 +153,14 @@ TFile::Open(AliDataFile::GetFileNameOADB("PWGLF/FORWARD/CORRECTIONS/data/fmd_cor
 
 The static function `AliDataFile::GetFileNameOADB` returns the first accessible
 full URL of the OADB file by finding the first match from the following ordered
-paths:
+list of paths:
 
 1. `$OADB_PATH/<file>`
 2. `$ALICE_DATA/OADB/<file>`
 3. `$ALICE_PHYSICS/OADB/<file>`
-4. `/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/OADB/<file>` (for Grid jobs)
-5. `root://eospublic.cern.ch//eos/experiment/alice/analysis-data/OADB/<file>`
+4. `/cvmfs/alice.cern.ch/data/prod/v5-XX-YY-01/OADB/<file>` (for Grid jobs, or with CVMFS installed)
+5. `/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/OADB/<file>` (for Grid jobs, or with CVMFS installed)
+6. `root://eospublic.cern.ch//eos/experiment/alice/analysis-data/OADB/<file>`
 
 This means that for laptop analysis it will always be possible to access data
 files, somehow, and in a transparent fashion. If you want to have your OADB
@@ -183,8 +193,8 @@ In this case, the file will be searched in the following locations in order:
 
 1. `$ALICE_DATA/<file>`
 2. `$ALICE_PHYSICS/<file>`
-3. `/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/<file>` (for Grid jobs)
-4. `root://eospublic.cern.ch//eos/experiment/alice/analysis-data/<file>`
+3. `/cvmfs/alice.cern.ch/data/prod/v5-XX-YY-01/<file>` (for Grid jobs, or with CVMFS installed)
+4. `/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/<file>` (for Grid jobs, or with CVMFS installed)
 
 
 ## Git editors plugins
