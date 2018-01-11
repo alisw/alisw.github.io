@@ -84,7 +84,7 @@ This is the list of builders that should be up and running.
 | alisw/AliRoot        | build/AliRoot/el6native  | build_AliRoot_el6native  | 1 |
 | alisw/AliRoot        | build/AliRoot/macos      | _not on Aurora_          | 1 |
 | alisw/AliRoot        | build/AliRoot/release    | build_AliRoot_release    | 1 |
-| alisw/AliPhysics     | build/AliPhysics/release | build_AliRoot_el6native  | 4 |
+| alisw/AliPhysics     | build/AliPhysics/release | build_AliPhysics_release | 4 |
 | AliceO2Group/AliceO2 | build/O2/o2              | build_O2_o2              | 1 |
 | AliceO2Group/AliceO2 | build/O2/o2-dev-fairroot | build_O2_o2-dev-fairroot | 1 |
 | AliceO2Group/AliceO2 | build/O2/macos           | _not on Aurora_          | 1 |
