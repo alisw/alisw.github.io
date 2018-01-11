@@ -27,7 +27,13 @@ By default the builders will behave in the following manner:
   not have a failure. If yes, test one of them and then go back to the starting
   point.
 
-# Deploying the builders
+
+# Aurora operations
+
+The following documentation applies to the pull request checkers deployed on Aurora. Checkers on
+macOS do not use Aurora, instead they are run directly as scripts.
+
+## Deploying the builders
 
 Deploying the builders is done via the Apache Aurora instance. You can
 find instructions on how to set it up [here](infrastructure-apache).
@@ -38,18 +44,58 @@ doing:
 
     # Start the new 4 workers by doing.
     aurora update start build/mesosci/devel/aliphysics_github_ci/4-7 aurora/continuos-integration.aurora
+
     # Those workers do the same job as worker 2 and 3 in the previous configuration.
     # Once they are up and running, we can therefore safely redeploy 2 and 3.
     aurora update start build/mesosci/devel/aliphysics_github_ci/2-3 aurora/continuos-integration.aurora
+
     # The new 2 and 3 will do the job of the old 1, which we can now redeploy
     aurora update start build/mesosci/devel/aliphysics_github_ci/1 aurora/continuos-integration.aurora
+
     # Finally we restart 0
     aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
+
+## Restarting the builders
+
+In some cases, builders need restart. The Aurora command for restarting a builder does not require
+any `.aurora` file as an option, and the builder will be restarted as it was deployed.
+
+All our production builders are under the tree `build/mesosci/devel`, so if you want to restart the
+builder called `build_AliRoot_el6native` we would do:
+
+    aurora job restart build/mesosci/devel/build_AliRoot_el6native
 
 
 # Monitoring the builders
 
-Builders are monitored in Monalisa. In particular you can use aliendb9
-and look at the `github-pr-checker/github.com/github-api-calls` metric
-to know how many API calls are being done by the system.
+Builders are monitored in [Monalisa](http://alimonitor.cern.ch/display?page=github/combined).
+In particular you can use aliendb9 and look at the `github-pr-checker/github.com/github-api-calls`
+metric to know how many API calls are being done by the system.
 
+
+# Currently active builders
+
+This is the list of builders that should be up and running.
+
+## Production
+
+| Repository           | GitHub check name        | Aurora job               | # |
+|----------------------|--------------------------|--------------------------|---|
+| alisw/AliRoot        | build/AliRoot/el6native  | build_AliRoot_el6native  | 1 |
+| alisw/AliRoot        | build/AliRoot/macos      | _not on Aurora_          | 1 |
+| alisw/AliRoot        | build/AliRoot/release    | build_AliRoot_release    | 1 |
+| alisw/AliPhysics     | build/AliPhysics/release | build_AliRoot_el6native  | 4 |
+| AliceO2Group/AliceO2 | build/O2/o2              | build_O2_o2              | 1 |
+| AliceO2Group/AliceO2 | build/O2/o2-dev-fairroot | build_O2_o2-dev-fairroot | 1 |
+| AliceO2Group/AliceO2 | build/O2/macos           | _not on Aurora_          | 1 |
+| AliceO2Group/AliceO2 | build/o2checkcode/o2     | build_o2checkcode_o2     | 1 |
+
+Notes:
+
+* AliRoot "el6native" check does not run on SLC6, but it runs in C++98-compatible mode. This is
+  still required until the end of Run 2 for compatibility with Point-2 nodes.
+* AliRoot builds on macOS use ROOT 6.
+* The AliRoot "release" check runs the guntest as well. In some cases, tests might fail if the
+  reference OCDB hasn't been updated, and this is correct.
+* AliPhysics checks use the latest AliRoot tag as reference (not master), as configured in the
+  defaults `prod-latest`.

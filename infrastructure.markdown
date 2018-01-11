@@ -18,5 +18,5 @@ operate the system.
 * <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
 * <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
 * <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
-* <a href="{{site.baseurl}}/infrastructure-pr-testing">PR testing</a>
+* <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
 * <a href="{{site.baseurl}}/infrastructure-publisher">Release publishing</a>

@@ -202,3 +202,22 @@ pre {
         }
     }
 }
+
+/**
+ * Tables
+ */
+table {
+    td,th {
+        border: solid 1px $grey-color-light;
+        border-collapse: collapse;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    th {
+        background-color: $grey-color-light;
+    }
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
