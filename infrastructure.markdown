@@ -20,3 +20,4 @@ operate the system.
 * <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
 * <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
 * <a href="{{site.baseurl}}/infrastructure-publisher">Release publishing</a>
+* <a href="{{site.baseurl}}/infrastructure-aliroot-releases">Make AliRoot releases</a>
