@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Git
+title: Infrastructure
 categories: main
 permalink: /infrastructure/
 ---
@@ -9,6 +9,10 @@ permalink: /infrastructure/
 The following pages contain implementation details of various parts of the
 build infrastructure. They are not of general need, but serve as reference to
 operate the system.
+
+Further troubleshooting information is privately available in the repository:
+
+https://gitlab.cern.ch/ALICEDevOps/aliops.git/
 
 * <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
 * <a href="{{site.baseurl}}/infrastructure-logging">Logging</a>
