@@ -1,3 +1,9 @@
+---
+title: Release process
+layout: main
+categories: infrastructure
+---
+
 This is to document the release process of AliRoot / AliPhysics.
 
 # Patching old ( <= AliRoot-v5-08) releases
