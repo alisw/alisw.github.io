@@ -100,7 +100,7 @@ Notes:
 * AliPhysics checks use the latest AliRoot tag as reference (not master), as configured in the
   defaults `prod-latest`.
 
-## Builders for macos
+## Builders for macOS
 
 There is a dedicated process to run validation of pullrequests for macos.The routines therein are implemented within a [runscript](https://github.com/alisw/ali-bot/blob/master/ci/run-continuous-builder.sh) inside [ali-bot](https://github.com/alisw/ali-bot). This script currently needs to be started manually using a SREEN session to ensure it stays open. A launchd version is wip. 
 
