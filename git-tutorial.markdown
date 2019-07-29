@@ -157,7 +157,7 @@ connection):
 
 ```bash
 cd ~/alice/AliPhysics
-git remote add <your-github-username> git@github.com:<your-github-username>/AliPhysics
+git remote add <your-github-username> git@github.com:<your-github-username>/AliPhysics.git
 ```
 
 If you do not use SSH:
