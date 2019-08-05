@@ -48,7 +48,7 @@ for the "{{site.openstack_project}}" OpenStack project. In order to use openstac
 you need to go to CERN OpenStack administration machines: `aiadm.cern.ch` and 
 obtain the OpenStack credentials by doing:
 
-    eval $("{{site.openstack_project}}")
+    eval $(ai-rc "{{site.openstack_project}}")
 
 You can now execute the various OpenStack commands, using the CLI tool called
 `openstack`, while an exhaustive list of all the available options can be
