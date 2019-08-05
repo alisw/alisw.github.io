@@ -135,6 +135,25 @@ example) and use a current image and flavor. If you have issues about the ssh
 key, make sure you imported it in your account (see the Setting up the
 OpenStack environment) part.
 
+### Rebuilding a master
+
+Rebuilding a master is a potentially disruptive operation, since our mesos setup requires at least 2
+masters to be up and running in order to schedule new jobs. Therefore before you actually decide to
+rebuild one you should:
+
+* Discuss with your collegueas wether that's a good idea.
+* Make sure that the other two masters are properly functioning.
+* If the master is the currently leading master, force a leadership transition to one of the other
+  two machines before the rebuild.
+  
+In order to perform the rebuild you need to do:
+
+```
+ai-rebuild-vm --cc7 {{site.exp_prefix}}mesosXX
+```
+
+it can take up to one hour for the process to complete.
+
 ### Deleting a slave
 
 Similarly the documentation to delete a slave is found at:
