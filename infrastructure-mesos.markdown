@@ -7,12 +7,12 @@ categories: infrastructure
 # Cluster architecture description:
 
 The {{site.experiment}} build infrastructure consists of two kinds of nodes, masters,
-responsible for scheduling jobs, and slaves, responsible to execute jobs and
+responsible for scheduling jobs, and agents, responsible to execute jobs and
 services. They are in general provisioned using [CERN Openstack
 Infrastructure](http://openstack.cern.ch) and configured using [CERN Puppet /
 Foreman setup](http://cern.ch/config).
 
-Masters belong to the hostgroup `{{site.master_hostgroup}}` while slaves
+Masters belong to the Puppet hostgroup `{{site.master_hostgroup}}` while agents
 belong to `{{site.slave_hostgroup}}`. The configuration of those hostgroups
 can be found in the GIT repository for [it-puppet-hostgroup-alibuild](
 https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild), in particular in:
@@ -20,11 +20,10 @@ https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild), in particular in:
 - [/code/manifests/{{site.master_hostgroup}}.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.master_hostgroup}}.pp)  for the master.
 - [/code/manifests/{{site.slave_hostgroup}}.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.slave_hostgroup}}.pp)  for the slaves.
 
-
 We have in particular three masters, each running on a separate OpenStack
 availability zone which work in an High Availability (HA) mode which allows
-the ensamble to continue working correctly and scheduling jobs. In particular
-the masters run the following services:
+the ensamble to continue working correctly and scheduling jobs even in eventuality that one
+of the machines goes down. In particular the masters run the following services:
 
 - The [**Mesos Master**](http://mesos.apache.org) service: Mesos is used to
   schedule some of the Jenkins jobs automatically on the cluster and to automate
