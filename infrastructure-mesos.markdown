@@ -38,7 +38,7 @@ the masters run the following services:
 to define, launch and monitor long running services on the slaves. It relays
 on Mesos to do the resource management.
 
-# Useful recipes:
+# Essential Operation Guides:
 
 * [Setting up the OpenStack / Puppet environment](#setup)
 * [Creating a master](#create-master)
@@ -166,16 +166,21 @@ rebuild one you should:
   
 In order to perform the rebuild you need to do:
 
-```
-ai-rebuild-vm --cc7 {{site.exp_prefix}}mesosXX
-```
+- Login to `aiadm.cern.ch`.
+- Set up your OpenStack environment by doing:
+
+      eval $(ai-rc "{{site.experiment}} Release Testing")
+
+- Actually rebuild the machine
+
+      ai-rebuild-vm --cc7 {{site.exp_prefix}}mesosXX
 
 it can take up to one hour for the process to complete.
 
 ## Deleting a Mesos agent
 {: #delete-agent}
 
-Similarly the documentation to delete an agent is found at:
+Documentation to delete an agent is found at:
 
 <http://configdocs.web.cern.ch/configdocs/nodes/deletenode.html>
 
@@ -188,14 +193,19 @@ the recipe for destoying agents is:
 - Delete the machine with `ai-kill-vm <{{site.builduser}}XX>`
 - Delete the previously attached volumes.
 
-## Rebooting a Mesos agent
-{: #reboot-agent}
+## Rebooting a Mesos server
+{: #reboot-server}
 
 In case there is an issue with any of the agents, a hard reboot can be
 attempted to bring it back to a working state. This can be done via the
-OpenStack GUI, in the Instances tab, or by issuing:
+OpenStack GUI, in the Instances tab, or doing:
+
+- Login to `aiadm.cern.ch`.
+- Set up your OpenStack environment by doing:
 
       eval $(ai-rc "{{site.experiment}} Release Testing")
-      openstack server reboot --hard <agent name>
+- Actually reboot `<server name>`
+
+      openstack server reboot --hard <server name>
 
 in case the GUI is not functional.
