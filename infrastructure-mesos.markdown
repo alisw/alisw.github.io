@@ -41,16 +41,21 @@ on Mesos to do the resource management.
 # Useful recipes:
 
 * [Setting up the OpenStack / Puppet environment](#setup)
-
+* [Creating a master](#create-master)
+* [Rebuild a master](#rebuild-master)
+* [Creating an agent](#create-agent)
+* [Reboot an agent](#reboot-agent)
+* [Delete an agent](#delete-agent)
 
 ## Setting up the OpenStack environment:
 {: #setup}
 
 First of all make sure you have all the rights to create machines in OpenStack
 and to administer them via Puppet. In particular you'll have to have rights
-for the "{{site.openstack_project}}" OpenStack project. In order to use openstack
-you need to go to CERN OpenStack administration machines: `aiadm.cern.ch` and 
-obtain the OpenStack credentials by doing:
+for the "{{site.openstack_project}}" OpenStack project. 
+
+In order to use openstack you need to go to CERN OpenStack administration 
+machines: `aiadm.cern.ch` and obtain the OpenStack credentials by doing:
 
     eval $(ai-rc "{{site.openstack_project}}")
 
@@ -66,11 +71,12 @@ only care about:
 - `openstack flavor list`: list available flavors of virtual machines (i.e. how
   many CPUs, RAM).
 
-Before you can continue to create a slave, make also sure you import the SSH
+Before you can continue to create an agent, make also sure you import the SSH
 key required by build machines into your openstack configuration (use the
 "Access & Security" tab and use "Import key") and that you call it `{{site.builduser}}`.
 
 ## Creating a master
+{: #create-master}
 
 Creation of masters in CERN Foreman setup is described at
 <http://cern.ch/config/nodes/createnode.html>. The short recipe for build
@@ -98,9 +104,10 @@ machine is:
                --landb-responsible alice-agile-admin          \
                $MACHINE_NAME
 
-## Creating a slave  
+## Creating a agent  
+{: #create-agent}
 
-Creation of slaves in CERN Foreman setup is described at
+Creation of mesos agents in CERN Foreman setup is described at
 <http://cern.ch/config/nodes/createnode.html>. The short recipe for build
 machine is:
 
@@ -140,6 +147,7 @@ key, make sure you imported it in your account (see the Setting up the
 OpenStack environment) part.
 
 ## Rebuilding a master
+{: #rebuild-master}
 
 Rebuilding a master is a potentially disruptive operation, since our mesos setup requires at least 2
 masters to be up and running in order to schedule new jobs. Therefore before you actually decide to
@@ -158,13 +166,14 @@ ai-rebuild-vm --cc7 {{site.exp_prefix}}mesosXX
 
 it can take up to one hour for the process to complete.
 
-## Deleting a slave
+## Deleting a Mesos agent
+{: #delete-agent}
 
-Similarly the documentation to delete a slave is found at:
+Similarly the documentation to delete an agent is found at:
 
 <http://configdocs.web.cern.ch/configdocs/nodes/deletenode.html>
 
-the recipe for destoying slaves is:
+the recipe for destoying agents is:
 
 - Login to `aiadm.cern.ch`.
 - Set up your OpenStack environment by doing:
@@ -173,13 +182,14 @@ the recipe for destoying slaves is:
 - Delete the machine with `ai-kill-vm <{{site.builduser}}XX>`
 - Delete the previously attached volumes.
 
-## Rebooting a slave
+## Rebooting a Mesos agent
+{: #reboot-agent}
 
-In case there is an issue with any of the slaves, a hard reboot can be
+In case there is an issue with any of the agents, a hard reboot can be
 attempted to bring it back to a working state. This can be done via the
 OpenStack GUI, in the Instances tab, or by issuing:
 
       eval $(ai-rc "{{site.experiment}} Release Testing")
-      openstack server reboot --hard <slave name>
+      openstack server reboot --hard <agent name>
 
 in case the GUI is not functional.
