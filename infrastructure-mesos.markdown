@@ -23,7 +23,11 @@ https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild), in particular in:
 We have in particular three masters, each running on a separate OpenStack
 availability zone which work in an High Availability (HA) mode which allows
 the ensamble to continue working correctly and scheduling jobs even in eventuality that one
-of the machines goes down. In particular the masters run the following services:
+of the machines goes down. A diagram for the services running on the masters can be find below:
+
+![build-infrastructure-diagram](images/build-infrastructure-diagram.png)
+
+In particular the masters run the following services:
 
 - The [**Mesos Master**](http://mesos.apache.org) service: Mesos is used to
   schedule some of the Jenkins jobs automatically on the cluster and to automate
