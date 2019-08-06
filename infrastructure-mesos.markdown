@@ -52,9 +52,14 @@ on Mesos to do the resource management.
 
 First of all make sure you have all the rights to create machines in OpenStack
 and to administer them via Puppet. In particular you'll have to have rights
-for the "{{site.openstack_project}}" OpenStack project. 
+for the "{{site.openstack_project}}" OpenStack project and you will have to 
+request access to the alice-agile-admin. 
 
-In order to use openstack you need to go to CERN OpenStack administration 
+To get the OpenStack rights, open a request in [CERN Cloud Service Now](https://cern.service-now.com/service-portal/function.do?name=cloud-infrastructure&s=cloud) asking to be added to the "{{site.openstack_project}}" project.
+
+To get the Puppet rights, you should be member of the egroup [alice-agile-admin](https://e-groups.cern.ch).
+
+In order to use OpenStack you need to go to CERN OpenStack administration 
 machines: `aiadm.cern.ch` and obtain the OpenStack credentials by doing:
 
     eval $(ai-rc "{{site.openstack_project}}")
@@ -74,6 +79,8 @@ only care about:
 Before you can continue to create an agent, make also sure you import the SSH
 key required by build machines into your openstack configuration (use the
 "Access & Security" tab and use "Import key") and that you call it `{{site.builduser}}`.
+
+Further information on how CERN OpenStack cloud works can be found [here](https://clouddocs.web.cern.ch/clouddocs/).
 
 ## Creating a master
 {: #create-master}
