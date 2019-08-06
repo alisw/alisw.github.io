@@ -186,6 +186,10 @@ Documentation to delete an agent is found at:
 
 the recipe for destoying agents is:
 
+- Ask yourself why you are deleting the agent. **Do it only if you want to get rid of it for good**. 
+  If you want to recreate it immediately after, e.g. to handle some 
+  irreversible fault on the installation, you might first want to
+  try rebuilding it, since it will be much faster. 
 - Login to `aiadm.cern.ch`.
 - Set up your OpenStack environment by doing:
 
