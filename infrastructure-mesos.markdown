@@ -14,11 +14,11 @@ Foreman setup](http://cern.ch/config).
 
 Masters belong to the hostgroup `{{site.master_hostgroup}}` while slaves
 belong to `{{site.slave_hostgroup}}`. The configuration of those hostgroups
-can be found in the GIT repository
-<https://git.cern.ch/web/it-puppet-hostgroup-{{site.builduser}}.git>, in particular in:
+can be found in the GIT repository for [it-puppet-hostgroup-alibuild](
+https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild), in particular in:
 
-- [/code/manifests/{{site.master_hostgroup}}.pp](https://git.cern.ch/web/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.master_hostgroup}}.pp)  for the master.
-- [/code/manifests/{{site.slave_hostgroup}}.pp](https://git.cern.ch/web/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.slave_hostgroup}}.pp)  for the slaves.
+- [/code/manifests/{{site.master_hostgroup}}.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.master_hostgroup}}.pp)  for the master.
+- [/code/manifests/{{site.slave_hostgroup}}.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.slave_hostgroup}}.pp)  for the slaves.
 
 
 We have in particular three masters, each running on a separate OpenStack
