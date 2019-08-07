@@ -101,14 +101,14 @@ machine is:
                            # make sure you use different zones
                            # to improve availability.
 
-      ai-bs-vm -g {{site.master_hostgroup}}                   \
-               --{{site.openstack_image | downcase}}          \
-               --nova-sshkey {{site.builduser}}               \
-               --nova-availabilityzone $ZONE                  \
-               --nova-flavor {{site.openstack_master_flavor}} \
-               --landb-mainuser alice-agile-admin             \
-               --landb-responsible alice-agile-admin          \
-               $MACHINE_NAME
+      ai-bs -g {{site.master_hostgroup}}                   \
+            --{{site.openstack_image | downcase}}          \
+            --nova-sshkey {{site.builduser}}               \
+            --nova-availabilityzone $ZONE                  \
+            --nova-flavor {{site.openstack_master_flavor}} \
+            --landb-mainuser alice-agile-admin             \
+            --landb-responsible alice-agile-admin          \
+            $MACHINE_NAME
 
 ## Creating a agent  
 {: #create-agent}
@@ -135,14 +135,14 @@ machine is:
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
 
-      ai-bs-vm -g {{site.slave_hostgroup}}             \
-               --{{site.openstack_image | downcase}}  \
-               --nova-sshkey {{site.builduser}}        \
-               --nova-flavor {{site.openstack_flavor}} \
-               --landb-mainuser alice-agile-admin      \
-               --landb-responsible alice-agile-admin   \
-               --nova-attach-new-volume vdc=1TB        \
-               $MACHINE_NAME
+      ai-bs -g {{site.slave_hostgroup}}               \
+            --{{site.openstack_image | downcase}}     \
+            --nova-sshkey {{site.builduser}}          \
+            --nova-flavor {{site.openstack_flavor}}   \
+            --landb-mainuser alice-agile-admin        \
+            --landb-responsible alice-agile-admin     \
+            --nova-attach-new-volume vdc=1TB:type=io1 \
+            $MACHINE_NAME
 
 This will spawn a new machine. You can check the boot status either in the
 OpenStack GUI or via `openstack server list`. The `{{site.builduser}}` key used is the ssh
