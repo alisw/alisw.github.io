@@ -111,10 +111,11 @@ machine is:
       ai-bs -g {{site.master_hostgroup}}                   \
             --{{site.openstack_image | downcase}}          \
             --nova-sshkey {{site.builduser}}               \
-            --nova-availabilityzone $ZONE                  \
+            --nova-availabilityzone $ZONE               \
             --nova-flavor {{site.openstack_master_flavor}} \
             --landb-mainuser alice-agile-admin             \
-            --landb-responsible alice-agile-admin          \
+            --landb-responsible alice-agile-admin       \
+            --nova-attach-new-volume vdb=200GB          \
             $MACHINE_NAME
 
 ## Creating a agent  
