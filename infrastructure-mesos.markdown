@@ -185,16 +185,16 @@ In order to perform the rebuild you need to do:
 
 it can take up to one hour for the process to complete.
 
-## Deleting a Mesos agent
+## Deleting build infrastructure VM
 {: #delete-agent}
 
-Documentation to delete an agent is found at:
+Documentation to delete a VM is found at:
 
 <http://configdocs.web.cern.ch/configdocs/nodes/deletenode.html>
 
 the recipe for destoying agents is:
 
-- Ask yourself why you are deleting the agent. **Do it only if you want to get rid of it for good**. 
+- Ask yourself why you are deleting the VM. **Do it only if you want to get rid of it for good**. 
   If you want to recreate it immediately after, e.g. to handle some 
   irreversible fault on the installation, you might first want to
   try rebuilding it, since it will be much faster. 
@@ -202,7 +202,7 @@ the recipe for destoying agents is:
 - Set up your OpenStack environment by doing:
 
       eval $(ai-rc "{{site.experiment}} Release Testing")
-- Delete the machine with `ai-kill-vm <{{site.builduser}}XX>`
+- Delete the VM with `ai-kill <{{site.builduser}}XX>`
 - Delete the previously attached volumes.
 
 ## Rebooting a Mesos server
