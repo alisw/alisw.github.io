@@ -99,7 +99,7 @@ machine is:
 - Set up your OpenStack environment by doing:
 
       eval $(ai-rc "{{site.experiment}} Release Testing")
-- To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
+- To spawn a machine you need to use the `ai-bs` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
 
