@@ -43,14 +43,14 @@ on Mesos to do the resource management.
 
 # Essential Operation Guides:
 
-* [Setting up the OpenStack / Puppet environment](#setup)
+* [Getting access to the OpenStack / Puppet infrastructure](#setup)
 * [Creating a master](#create-master)
 * [Rebuild a master](#rebuild-master)
 * [Creating an agent](#create-agent)
 * [Reboot an agent](#reboot-agent)
 * [Delete an agent](#delete-agent)
 
-## Setting up the OpenStack environment:
+## Getting access to the OpenStack / Puppet infrastructure:
 {: #setup}
 
 First of all make sure you have all the rights to create machines in OpenStack and to administer them via Puppet. 
@@ -75,6 +75,8 @@ only care about:
   many CPUs, RAM).
 
 Further information on how CERN OpenStack cloud works can be found [here](https://clouddocs.web.cern.ch/clouddocs/).
+
+Note that you will have to login as `root` to all the machines.
 
 ## Checklist to verify the status of a master
 
