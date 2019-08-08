@@ -82,11 +82,11 @@ Note that you will have to login as `root` to all the machines.
 
 In case there are issues with one of the masters you should follow the following checklist:
 
-* Check on the [Openstack Dashboard](openstack.cern.ch) if the machine is up and running.
-* Check in [Foreman](foreman.cern.ch) if there are any puppet errors.
+* Check on the [Openstack Dashboard](https://openstack.cern.ch) if the machine is up and running.
+* Check in [Foreman](https://foreman.cern.ch) if there are any puppet errors.
 * Ping the machine.
 * SSH into the machine.
-* Check if docker is running and if it has at least the following containers: `master`, `zookeeper`, `marathon`, `aurora`.
+* Check if docker is running and if it has at least the following containers: `mesos-master`, `zookeeper`, `marathon`, `aurora-scheduler`, `mesos-dns`.
 
 ## Creating a master
 {: #create-master}
