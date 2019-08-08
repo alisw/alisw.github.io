@@ -108,12 +108,13 @@ machine is:
                            # make sure you use different zones
                            # to improve availability.
 
-      ai-bs -g {{site.master_hostgroup}}                   \
-            --{{site.openstack_image | downcase}}          \
-            --nova-sshkey {{site.builduser}}               \
+      ai-bs -g {{site.master_hostgroup}}                      \
+            --foreman-environment alibuild_devel        \
+            --{{site.openstack_image | downcase}}                 \
+            --nova-sshkey {{site.builduser}}                  \
             --nova-availabilityzone $ZONE               \
             --nova-flavor {{site.openstack_master_flavor}} \
-            --landb-mainuser alice-agile-admin             \
+            --landb-mainuser alice-agile-admin          \
             --landb-responsible alice-agile-admin       \
             --nova-attach-new-volume vdb=200GB          \
             $MACHINE_NAME
