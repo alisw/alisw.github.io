@@ -74,12 +74,17 @@ only care about:
 - `openstack flavor list`: list available flavors of virtual machines (i.e. how
   many CPUs, RAM).
 
-Before you can continue, make also sure you import the SSH
-key used by the build machines into your openstack configuration (use the
-"Access & Security" tab and use "Import key" in the OpenStack dashboard) and that you call
-it `{{site.builduser}}`.
-
 Further information on how CERN OpenStack cloud works can be found [here](https://clouddocs.web.cern.ch/clouddocs/).
+
+## Checklist to verify the status of a master
+
+In case there are issues with one of the masters you should follow the following checklist:
+
+* Check on the [Openstack Dashboard](openstack.cern.ch) if the machine is up and running.
+* Check in [Foreman](foreman.cern.ch) if there are any puppet errors.
+* Ping the machine.
+* SSH into the machine.
+* Check if docker is running and if it has at least the following containers: `master`, `zookeeper`, `marathon`, `aurora`.
 
 ## Creating a master
 {: #create-master}
