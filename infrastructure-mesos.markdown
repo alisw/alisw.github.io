@@ -191,6 +191,34 @@ it can take up to one hour for the process to complete.
      - ssh to it
      - run `puppet agent -t -v` until no errors are reported
 
+## Rebuilding an agent
+{: #rebuild-master}
+
+**YOU SHOULD NEVER REBUILD ALIBUILD03 and ALIBUILD09**
+
+Rebuilding an agent is potentially a problem, since the Mesos machine might be doing something,
+e.g. building a release, which should not be in general interrupted. Therefore you need to:
+
+* Discuss with your collegueas wether that's a good idea.
+* Verify that the machine is not running any particularly important task, by looking at the report
+  in the Mesos GUI. If in doubt, ask.
+
+In order to perform the rebuild you need to do:
+
+- Login to `aiadm.cern.ch`.
+- Set up your OpenStack environment by doing:
+
+      eval $(ai-rc "ALICE Release Testing")
+
+- Actually rebuild the machine
+
+      ai-rebuild-vm --cc7 alibuildXX
+- In order to make sure that the machine is correctly up and running, you should:
+     - ping it
+     - ssh to it
+     - run `puppet agent -t -v` until no errors are reported. If you keep having errors after a few
+       run, report them.
+
 ## Deleting build infrastructure VM
 {: #delete-agent}
 
