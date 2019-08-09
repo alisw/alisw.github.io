@@ -186,6 +186,10 @@ In order to perform the rebuild you need to do:
       ai-rebuild-vm --cc7 {{site.exp_prefix}}mesosXX
 
 it can take up to one hour for the process to complete.
+- In order to make sure that the machine is correctly up and running, you should:
+     - ping it
+     - ssh to it
+     - run `puppet agent -t -v` until no errors are reported
 
 ## Deleting build infrastructure VM
 {: #delete-agent}
