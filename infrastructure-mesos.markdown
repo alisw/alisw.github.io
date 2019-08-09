@@ -172,7 +172,7 @@ rebuild one you should:
 * Discuss with your collegueas wether that's a good idea.
 * Make sure that the other two masters are properly functioning.
 * If the master is the currently leading master, force a leadership transition to one of the other
-  two machines before the rebuild.
+  two machines before the rebuild (Optional, since failower will take care of that).  
   
 In order to perform the rebuild you need to do:
 
