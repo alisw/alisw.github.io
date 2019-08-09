@@ -145,6 +145,7 @@ machine is:
   receive from it the Puppet configuration:
 
       ai-bs -g {{site.slave_hostgroup}}               \
+            --foreman-environment alibuild_devel      \
             --{{site.openstack_image | downcase}}     \
             --nova-sshkey {{site.builduser}}          \
             --nova-flavor {{site.openstack_flavor}}   \
@@ -188,6 +189,8 @@ it can take up to one hour for the process to complete.
 
 ## Deleting build infrastructure VM
 {: #delete-agent}
+
+**WHATEVER YOU DO, NEVER DELETE ALIBUILD03 OR ITS ATTACHED VOLUME** 
 
 Documentation to delete a VM is found at:
 
