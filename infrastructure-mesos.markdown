@@ -150,12 +150,13 @@ machine is:
             $MACHINE_NAME
 
 This will spawn a new machine. You can check the boot status either in the
-OpenStack GUI or via `openstack server list`. The `alibuild` key used is the ssh
-key available from the {{site.builduser}} user AFS account. Of course you
-should change the name of the machine (`<alibuildXX>` in the
-example) and use a current image and flavor. If you have issues about the ssh
-key, make sure you imported it in your account (see the Setting up the
-OpenStack environment) part.
+OpenStack GUI or via `openstack server list`. Of course you should change the name
+of the machine (`<alibuildXX>` in the example).
+- In order to make sure that the machine is correctly up and running, you should:
+     - ping it
+     - ssh to it
+     - run `puppet agent -t -v` until no errors are reported
+     - execute `docker pull alisw/slc7-builder` to force pull the builder image.
 
 ## Rebuilding a master
 {: #rebuild-master}
