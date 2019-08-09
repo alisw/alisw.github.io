@@ -129,35 +129,30 @@ machine is:
 - Login to `aiadm.cern.ch`.
 - Set up your OpenStack environment by doing:
 
-      eval $(ai-rc "{{site.experiment}} Release Testing")
+      eval $(ai-rc "ALICE Release Testing")
 
 - Specify a few parameters for the machine you want to spawn:
 
-      MACHINE_NAME=<{{site.builduser}}XX>
+      MACHINE_NAME=<alibuildXX>
 
-- Create a data volume which will be used as build scratch space and
-  for build artifacts:
-
-      openstack volume create --type io1 --size 1000 $MACHINE_NAME-store
-
-- To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
+- To spawn a machine you need to use the `ai-bs` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
 
-      ai-bs -g {{site.slave_hostgroup}}               \
-            --foreman-environment alibuild_devel      \
-            --{{site.openstack_image | downcase}}     \
-            --nova-sshkey {{site.builduser}}          \
-            --nova-flavor {{site.openstack_flavor}}   \
-            --landb-mainuser alice-agile-admin        \
-            --landb-responsible alice-agile-admin     \
-            --nova-attach-new-volume vdc=1TB:type=io1 \
+      ai-bs -g alibuild/mesos/slave                     \
+            --foreman-environment alibuild_devel        \
+            --cc7                                       \
+            --nova-sshkey alibuild                      \
+            --nova-flavor m2.2xlarge                    \
+            --landb-mainuser alice-agile-admin          \
+            --landb-responsible alice-agile-admin       \
+            --nova-attach-new-volume vdc=500GB:type=io1 \
             $MACHINE_NAME
 
 This will spawn a new machine. You can check the boot status either in the
-OpenStack GUI or via `openstack server list`. The `{{site.builduser}}` key used is the ssh
+OpenStack GUI or via `openstack server list`. The `alibuild` key used is the ssh
 key available from the {{site.builduser}} user AFS account. Of course you
-should change the name of the machine (`<{{site.builduser}}XX>` in the
+should change the name of the machine (`<alibuildXX>` in the
 example) and use a current image and flavor. If you have issues about the ssh
 key, make sure you imported it in your account (see the Setting up the
 OpenStack environment) part.
