@@ -146,7 +146,7 @@ machine is:
             --nova-flavor m2.2xlarge                    \
             --landb-mainuser alice-agile-admin          \
             --landb-responsible alice-agile-admin       \
-            --nova-attach-new-volume vdc=500GB:type=io1 \
+            --nova-attach-new-volume vdb=500GB:type=io1 \
             $MACHINE_NAME
 
 This will spawn a new machine. You can check the boot status either in the
