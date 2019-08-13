@@ -4,8 +4,6 @@ layout: main
 categories: infrastructure
 ---
 
-# Setting up your environment
-
 It's now possible to use [Apache Aurora](https://aurora.apache.org) to
 schedule long running jobs, cron jobs, and ad hoc job on the ALICE Mesos
 infrastructure.
@@ -14,11 +12,21 @@ ALICE Aurora instance can be found at:
 
 https://aliaurora.cern.ch
 
-access is allowed to ALICE members who are part of the
-`alice-aurora-users` egroups. If you are denied access, please ask
-amins. FIXME: not true, only Giulio and Michael for now.
+It is used for a number of jobs an in particular for the continuous builders
+of the pull request.
 
-## Getting the client
+Access is allowed to ALICE members who are part of the
+`alice-aurora-users` egroup. You can subscribe to it by going to
+the usual [egroup page](https://egroup.cern.ch).
+
+## User guide
+
+### Getting the client
+{:get-the-client}
+
+The GUI is only a read-only view on the state of the jobs
+running on the cluster. If you want to interact with Aurora
+itself you will need the aurora client.
 
 You can get a binary distribution of the Aurora client at:
 
@@ -31,43 +39,33 @@ Alternatively you can download the sources and build it with:
 cp dist/kaurora aurora
 ```
 
-## Getting the authentication token
+### Configuring your environment
+{:configuring}
 
-Once you have the tools in place, you can get authentication token
-(similar to alien one, the two will probably need to be unified at
-some point) using `cern-get-sso-cookie`. Notice the token has a 1 day
-lifetime, after which you need to renew it. The token will also know the
-IP address you are using to authenticate, so switching from one network
-to the other or changing machine will require a new one.
+Access is allowed to ALICE members who are part of the
+`alice-aurora-users` egroup. You can subscribe to it by going to
+the usual [egroup page](https://egroup.cern.ch).
 
-If you are on Mac you can do:
+The authentication mechanism uses kerberos, so you should make sure
+you have a valid kerberos ticket in the CERN.CH realm. You can verify that 
+by doing:
 
-    cern-get-sso-cookie -r -u https://aliaurora.cern.ch -o ~/.aurora/auth-token --cert ~/Certificates.p12 --password ""
+```bash
+$ klist
+```
 
-where `Certificates.p12` is your grid certificate, exported from your
-KeyChain. If you are on linux, you can either use your grid certificate
-in `~/.globus/usercert.pem`:
+which should result in something like:
 
-    cern-get-sso-cookie -r -u https://aliaurora.cern.ch  \
-                        -o ~/.aurora/auth-token          \
-                        --cert ~/.globus/usercert.pem    \
-                        --key ~/.globus/userkey.pem
+```
+Credentials cache: API:5BD2DB44-B9A8-48BD-9CD1-47078B7D00A9
+        Principal: <your-cern-user-name>@CERN.CH
 
-or install the kerberos client and authenticate with CERN Kerberos realm
-via username and password:
-
-    kinit <cern-user-name>@CERN.CH
-    cern-get-sso-cookie -r -u https://aliaurora.cern.ch  \
-                        -o ~/.aurora/auth-token
-                        
-Whatever solution you chose, you should end up with an authentication
-token in `~/.aurora/auth-token` which you should guard safely as if it was
-your own password.
-
-## Configure your Aurora client
+  Issued                Expires               Principal
+Aug 13 14:26:57 2019  Aug 14 00:26:57 2019  krbtgt/CERN.CH@CERN.CH
+```
 
 In order to reach the Aurora cluster, you need to configure how to
-access it. This can be done by creating a file `~/.aurora/clusters.json`:
+access it. This is done by creating a file `~/.aurora/clusters.json`:
 
     [{
       "name": "build",
@@ -77,9 +75,15 @@ access it. This can be done by creating a file `~/.aurora/clusters.json`:
       "slave_root": "/build/mesos"
     }]
 
-# Test application
+If everything is setup as expected you should be able to get a list of
+jobs by doing:
 
-## A simple Aurora example
+```
+aurora job list build
+```
+
+### Run a simple application
+{: simple-app}
 
 We keep Aurora configuration files in:
 
@@ -99,9 +103,8 @@ You can start it with:
 
 then you can open the provided web page to look at the produced logs.
 
-## Gotchas
+### Gotchas
 
 In order to access the logs, you need to connect directly to the client machines, therefore you need to open a SOCKS tunnel inside the cluster and configure your browser to use it.
 
 On Costin machines, for security reasons the log provider are not running, so you need to directly ssh inside them and lock at the filesystem.
-
