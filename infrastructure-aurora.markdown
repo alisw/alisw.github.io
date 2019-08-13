@@ -22,7 +22,7 @@ amins. FIXME: not true, only Giulio and Michael for now.
 
 You can get a binary distribution of the Aurora client at:
 
-https://github.com/alisw/aurora/releases/tag/0.16.0-alice2
+<https://github.com/alisw/aurora/releases/tag/0.16.0-alice2>
 
 Alternatively you can download the sources and build it with:
 
