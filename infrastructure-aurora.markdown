@@ -39,6 +39,12 @@ Alternatively you can download the sources and build it with:
 cp dist/kaurora aurora
 ```
 
+If you use homebrew, you can also do:
+
+```bash
+brew install ktf/system-deps/alice-aurora
+```
+
 ### Configuring your environment
 {:configuring}
 
@@ -79,9 +85,15 @@ If everything is setup as expected you should be able to get a list of
 jobs by doing:
 
 ```
-aurora job list build
+$ aurora job list build
 ```
 
+If you are an admin, you should also verify that `aurora_admin` also works.
+
+```
+$ aurora_admin get_cluster_config aliaurora
+{"auth_mechanism": "KERBEROS", "name": "aliaurora", "scheduler_uri": "https://aliaurora.cern.ch"}%
+```
 ### Run a simple application
 {: simple-app}
 
