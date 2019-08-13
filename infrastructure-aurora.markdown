@@ -21,6 +21,10 @@ the usual [egroup page](https://egroup.cern.ch).
 
 ## User guide
 
+* [Getting the client](#get-the-client)
+* [Configuring your environment](#configuring)
+* [Run a simple application](#simple-app)
+
 ### Getting the client
 {:get-the-client}
 
