@@ -16,20 +16,18 @@ https://aliaurora.cern.ch
 
 access is allowed to ALICE members who are part of the
 `alice-aurora-users` egroups. If you are denied access, please ask
-amins.
+amins. FIXME: not true, only Giulio and Michael for now.
 
 ## Getting the client
 
-In order to work with CERN SSO Authentication, you will need to use a
-slightly modified client for both aurora and cern-get-sso-cookie.
+You can get a binary distribution of the Aurora client at:
 
-You can build them with [aliBuild]():
+https://github.com/alisw/aurora/releases/tag/0.16.0-alice2
 
-```bash
-aliBuild build aurora
-aliBuild build cern-get-sso-cookie/latest
-alienv enter aurora/latest cern-get-sso-cookie/latest
-```
+Alternatively you can download the sources and build it with:
+
+./pants binary src/main/python/apache/aurora/kerberos:kaurora
+cp dist/kaurora aurora
 
 ## Getting the authentication token
 
