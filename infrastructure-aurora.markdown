@@ -72,7 +72,7 @@ access it. This can be done by creating a file `~/.aurora/clusters.json`:
     [{
       "name": "build",
       "scheduler_uri": "https://aliaurora.cern.ch",
-      "auth_mechanism": "COOKIE",
+      "auth_mechanism": "KERBEROS",
       "slave_run_directory": "latest",
       "slave_root": "/build/mesos"
     }]
