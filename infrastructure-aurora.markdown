@@ -26,8 +26,10 @@ https://github.com/alisw/aurora/releases/tag/0.16.0-alice2
 
 Alternatively you can download the sources and build it with:
 
+```bash
 ./pants binary src/main/python/apache/aurora/kerberos:kaurora
 cp dist/kaurora aurora
+```
 
 ## Getting the authentication token
 
