@@ -119,8 +119,30 @@ You can start it with:
 
 then you can open the provided web page to look at the produced logs.
 
-### Gotchas
+### Gotchas & issues
 
-In order to access the logs, you need to connect directly to the client machines, therefore you need to open a SOCKS tunnel inside the cluster and configure your browser to use it.
+* On Costin machines, for security reasons the log provider are not running, so you need to directly ssh inside them and look at the filesystem.
 
-On Costin machines, for security reasons the log provider are not running, so you need to directly ssh inside them and lock at the filesystem.
+* On some systems, the CERN CA is not available by default. You can overcome this by either:
+  * Go to <https://ca.cern.ch> and install all the required CA certificates. In general this is what is needed on macOS.
+  * Obtain it via `scp lxplus.cern.ch:/etc/ssl/certs/ca-bundle.crt ca-bundle.crt` and doing `export REQUESTS_CA_BUNDLE=$PWD/ca-bundle.crt`.
+  * Installing the `CERN-CA-certs` package and doing `export REQUESTS_CA_BUNDLE=$PWD/ca-bundle.crt`.
+
+* On some systems, kerberos gives a token for the actual backend name, rather than aliaurora. You can check that by doing klist and you will see `HTTP/alibuild-frontend01.cern.ch@CERN.CH`:
+
+```bash
+Credentials cache: API:B7FC3DD4-738F-417E-B2FA-92B2CCA9590C
+        Principal: eulisse@CERN.CH
+
+  Issued                Expires               Principal
+Aug 14 15:50:42 2019  Aug 15 01:50:42 2019  krbtgt/CERN.CH@CERN.CH
+Aug 14 15:50:46 2019  Aug 15 01:50:42 2019  HTTP/alibuild-frontend01.cern.ch@CERN.CH
+```
+
+In order to fix this you will have to change your kerberos configuration, usually found in `/etc/krb5.conf`, and add `rdns = false` in the `[libdefaults]` stanza. 
+
+* On mac the most reliable way to operate is:
+  * First do `kdestroy`
+  * Then do `kinit`
+  * Finally `aurora job list`
+  * The three steps above should guarantee that Firefox has the correct token. 
