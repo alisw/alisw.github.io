@@ -41,6 +41,7 @@ make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/i
 * [Setup your environment](#setup)
 * [Listing active PR checker](#list-checkers)
 * [Deploying a PR checker](#deploy-checker)
+* [Scaling the number of checkers](#scale-checkers)
 * [Restart a PR checker](#restart-checker)
 * [Removing a PR checker](#remove-checker)
 * [Monitoring the checkers](#monitor-checkers)
@@ -69,11 +70,13 @@ where the resulting job names will follow the convention:
 
     build_<Package>_<alibuild-default>
 
-## Deploying a PR checker
+## Updating a PR checker
 {:deploy-checker}
 
-Deploying the builders is done via the Apache Aurora instance. You can
-find instructions on how to set it up [here](infrastructure-apache).
+Sometimes you need to modify running checkers, e.g. to spawn more instances or to change their configuration.
+This is in general done by modifying the configuration in `aurora/continuous-integration.aurora`, 
+and the issuing the `aurora update` command.
+
 Because of the way the system is partitioned, we can ensure fully
 covered scale up / scale down operations in the following way. Say that
 we want to go from 4 workers to 8, one can start the new 4 workers by
@@ -92,7 +95,35 @@ doing:
     # Finally we restart 0
     aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
 
-## Restarting the builders
+## Scaling the number of checkers
+{:scale-checkers}
+
+A simpler update operation is scaling up (or down) the number of checkers. This is also done with the `aurora update`
+command.
+
+* First of all you should check the differences between your configuration and the one of the running instances, by doing:
+
+```bash
+aurora job diff <ID>  aurora/continuos-integration.aurora
+```
+
+and verifying that the only changes are in `Resources` or `Owner`. If you do not understand the differences, ask.
+
+* Update your job configuration. These are specified by instances of `CIConfig` in `aurora/continuous-integration.aurora`. You should find the one with the `ci_name` which matches the checker you want to scale and modify its `worker_pool_size` attribute, e.g. to 8 for 8 instances in total.  
+
+* Secondly you need to add new checkers (say 4-7) via:
+
+```bash
+aurora update start <ID>/4-7 aurora/continuos-integration.aurora
+```
+
+* Once they are up and running you can update the old instances so that you do not test certain PRs twice.
+
+```bash
+aurora update start <ID>/0-3 aurora/continuos-integration.aurora
+```
+
+## Restarting a checker
 {:restart-checker }
 
 In some cases, builders need restart. The Aurora command for restarting a builder does not require
