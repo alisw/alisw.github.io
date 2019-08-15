@@ -139,9 +139,9 @@ In order to see the list of the running prs you can do:
 
 where the resulting job names will follow the convention:
 
-### Removing PR checkers
+### Removing a PR checker
 
-First of all make sure the pr checker you want to kill uses the same job description as the one you have in ali-marathon. This can be done with `aurora job diff <ID> aurora/continuos-integration.aurora`. 
+First of all make sure the pr checker you want to kill uses the same job description as the one you have in ali-marathon. This can be done with `aurora job diff <ID> aurora/continuos-integration.aurora`. E.g.:
 
 ```bash
 aurora job diff build/mesosci/devel/build_O2_o2-dev-fairroot aurora/continuos-integration.aurora
@@ -150,7 +150,7 @@ aurora job diff build/mesosci/devel/build_O2_o2-dev-fairroot aurora/continuos-in
 If the differences are only in the reported `Resources` or in the `Owner` you can proceed with the killing by doing:
 
 ```bash
-aurora job killall build/mesosci/devel/build_O2_o2-dev-fairroot
+aurora job killall <ID>
 ```
 
 ## Gotchas & issues
