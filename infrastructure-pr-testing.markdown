@@ -97,7 +97,7 @@ the checkers will start in some default configuration, but they will not report 
 
 ```bash
 aurora task ssh -l root <ID> "echo 8 > config/workers-pool-size"
-seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
+aurora task ssh -l root <ID> "echo {{mesos.instance}} > config/worker-index"
 aurora task ssh -l root <ID> "rm config/silent"
 ```
 
@@ -116,7 +116,7 @@ aurora job kill <ID>/4-7
 
 ```bash
 aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
-seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
+aurora task ssh -l root <ID>/0-3 "echo {{mesos.instance}} > config/worker-index"
 ```
 
 ## Updating a PR checker
@@ -142,7 +142,7 @@ If you do not have enough resources, do a scale down until you have them and the
 ```bash
 # assuming 8 workers in total.
 aurora task ssh -l root <ID>/0-3 "echo 1 > config/silent"
-seq 4 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo $(({} - 4)) > config/worker-index"
+aurora task ssh -l root <ID>/4-7 "echo $(({{mesos.instance}} - 4)) > config/worker-index"
 ```
 
 * Once this situation is stable, update the lower half of the machines:
@@ -155,7 +155,7 @@ aurora update start <ID>/0-3 aurora/continuos-integration.aurora
 
 ```bash
 aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
-seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
+aurora task ssh -l root <ID>/0-7 "echo {{mesos.instance}} > config/worker-index"
 aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ```
 
