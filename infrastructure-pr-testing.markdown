@@ -125,30 +125,39 @@ seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-in
 Sometimes you want to update the cluster to a new version of the build script, e.g. to address some bug
 or to provide a new feature. This can be done with no interruption of service by using the following recipe.
 
-TO BE FIXED.
+* If you have enough capacity, add as many instances you need for the test:
 
+```bash
+aurora update start <ID>/4-7 aurora/continuos-integration.aurora
+```
 
-Sometimes you need to modify running checkers, e.g. to spawn more instances or to change their configuration.
-This is in general done by modifying the configuration in `aurora/continuous-integration.aurora`, 
-and the issuing the `aurora update` command.
+If you do not have enough resources, do a scale down until you have them and then scale them back up. 
 
-Because of the way the system is partitioned, we can ensure fully
-covered scale up / scale down operations in the following way. Say that
-we want to go from 4 workers to 8, one can start the new 4 workers by
-doing:
+* These new resources will start in silent mode, so you are free to play with them, updating the scripts and making sure the behave correctly.
 
-    # Start the new 4 workers by doing.
-    aurora update start build/mesosci/devel/aliphysics_github_ci/4-7 aurora/continuos-integration.aurora
+* Once you are satisfied with your changes scale down to half of the instances and then scale back up. The second half of instances will start in silent mode and warm up. 
 
-    # Those workers do the same job as worker 2 and 3 in the previous configuration.
-    # Once they are up and running, we can therefore safely redeploy 2 and 3.
-    aurora update start build/mesosci/devel/aliphysics_github_ci/2-3 aurora/continuos-integration.aurora
+* Once happy with them, mark as silent the first part of the instances, and move all the load on the newly available instances:
 
-    # The new 2 and 3 will do the job of the old 1, which we can now redeploy
-    aurora update start build/mesosci/devel/aliphysics_github_ci/1 aurora/continuos-integration.aurora
+```bash
+# assuming 8 workers in total.
+seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 1 > config/silent"
+seq 4 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo $(({} - 4)) > config/worker-index"
+```
 
-    # Finally we restart 0
-    aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
+* Once this situation is stable, update the lower half of the machines:
+
+```bash
+aurora update start <ID>/0-3 aurora/continuos-integration.aurora
+```
+
+* Once the bottom half is ready, make the pool as big as before, removing the silent flag:
+
+```bash
+seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 8 > config/workers-pool-size"
+seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
+seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "rm config/silent"
+```
 
 ## Restarting a checker
 {:restart-checker }
