@@ -89,7 +89,7 @@ where `<ID>/0` is your template configuration while `<N>` is the number of insta
 
 ```bash
 aurora task ssh -l root <ID> "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID> "echo {{ "{{mesos.instance" }}}} > config/worker-index"
+aurora task ssh -l root <ID> 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
 ```
 
 * Finally you mark all the new instances as not silent, so that they can start reporting results of the check:
@@ -97,7 +97,6 @@ aurora task ssh -l root <ID> "echo {{ "{{mesos.instance" }}}} > config/worker-in
 ```bash
 aurora task ssh -l root <ID> "rm config/silent"
 ```
-
 ## Scaling down the number of checkers
 {:scale-down-checkers}
 
@@ -113,7 +112,7 @@ aurora job kill <ID>/4-7
 
 ```bash
 aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-3 "echo {{ "{{mesos.instance" }}}} > config/worker-index"
+aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
 ```
 
 ## Updating a PR checker
@@ -130,7 +129,7 @@ aurora job add <ID>/0 1
 
 If you do not have enough resources, do a scale down until you have them and then scale them back up. 
 
-* These new resources will start in silent mode, so you are free to play with them, updating the scripts and making sure the behave correctly.
+* These new resources will start in silent mode, so you are free to play with them, updating the scripts and making sure the behave correctly. You can use `aurora restart` to restart job and pick up changes, or if you changed `continuous-integration.aurora` make sure you have the correct number of instances before you run `aurora update start`.
 
 * Once you are satisfied with your changes scale down to half of the instances and then scale back up. The second half of instances will start in silent mode and warm up. 
 
@@ -139,7 +138,7 @@ If you do not have enough resources, do a scale down until you have them and the
 ```bash
 # assuming 8 workers in total.
 aurora task ssh -l root <ID>/0-3 "echo 1 > config/silent"
-aurora task ssh -l root <ID>/4-7 "echo $(({{ "{{mesos.instance" }}}} - 4)) > config/worker-index"
+aurora task ssh -l root <ID>/4-7 'echo $(({{ "{{mesos.instance" }}}} - 4)) > config/worker-index'
 ```
 
 * Once this situation is stable, update the lower half of the machines:
@@ -152,7 +151,7 @@ aurora update start <ID>/0-3 aurora/continuos-integration.aurora
 
 ```bash
 aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-7 "echo {{ "{{mesos.instance" }}}} > config/worker-index"
+aurora task ssh -l root <ID>/0-7 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
 aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ```
 
