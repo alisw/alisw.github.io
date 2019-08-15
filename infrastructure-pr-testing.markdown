@@ -96,9 +96,9 @@ the checkers will start in some default configuration, but they will not report 
 * Once they are warm and building pull requests correctly (use `aurora task ssh` to check), you can increase the worker pool size by setting `config/workers-pool-size` for each of them, you assign each a partition, and make all reporting their results.
 
 ```bash
-seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 8 > config/workers-pool-size"
+aurora task ssh -l root <ID> "echo 8 > config/workers-pool-size"
 seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
-seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "rm config/silent"
+aurora task ssh -l root <ID> "rm config/silent"
 ```
 
 ## Scaling down the number of checkers
@@ -109,13 +109,13 @@ Scaling down the number of checker might be useful to claim back resources in lo
 * Kill the checkers you do not need.
 
 ```bash
-seq 4 7 | xargs -I{} aurora job kill <ID>/{}
+aurora job kill <ID>/4-7
 ```
 
 * Resize the workers pool accordingly:
 
 ```bash
-seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 4 > config/workers-pool-size"
+aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
 seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
 ```
 
@@ -141,7 +141,7 @@ If you do not have enough resources, do a scale down until you have them and the
 
 ```bash
 # assuming 8 workers in total.
-seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 1 > config/silent"
+aurora task ssh -l root <ID>/0-3 "echo 1 > config/silent"
 seq 4 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo $(({} - 4)) > config/worker-index"
 ```
 
@@ -154,9 +154,9 @@ aurora update start <ID>/0-3 aurora/continuos-integration.aurora
 * Once the bottom half is ready, make the pool as big as before, removing the silent flag:
 
 ```bash
-seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 8 > config/workers-pool-size"
+aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
 seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
-seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "rm config/silent"
+aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ```
 
 ## Restarting a checker
