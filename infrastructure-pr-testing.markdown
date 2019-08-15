@@ -71,31 +71,6 @@ where the resulting job names will follow the convention:
 
     build_<Package>_<alibuild-default>
 
-## Updating a PR checker
-{:deploy-checker}
-
-Sometimes you need to modify running checkers, e.g. to spawn more instances or to change their configuration.
-This is in general done by modifying the configuration in `aurora/continuous-integration.aurora`, 
-and the issuing the `aurora update` command.
-
-Because of the way the system is partitioned, we can ensure fully
-covered scale up / scale down operations in the following way. Say that
-we want to go from 4 workers to 8, one can start the new 4 workers by
-doing:
-
-    # Start the new 4 workers by doing.
-    aurora update start build/mesosci/devel/aliphysics_github_ci/4-7 aurora/continuos-integration.aurora
-
-    # Those workers do the same job as worker 2 and 3 in the previous configuration.
-    # Once they are up and running, we can therefore safely redeploy 2 and 3.
-    aurora update start build/mesosci/devel/aliphysics_github_ci/2-3 aurora/continuos-integration.aurora
-
-    # The new 2 and 3 will do the job of the old 1, which we can now redeploy
-    aurora update start build/mesosci/devel/aliphysics_github_ci/1 aurora/continuos-integration.aurora
-
-    # Finally we restart 0
-    aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
-
 ## Scaling up the number of checkers
 {:scale-up-checkers}
 
@@ -143,6 +118,37 @@ seq 4 7 | xargs -I{} aurora job kill <ID>/{}
 seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 4 > config/workers-pool-size"
 seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
 ```
+
+## Updating a PR checker
+{:deploy-checker}
+
+Sometimes you want to update the cluster to a new version of the build script, e.g. to address some bug
+or to provide a new feature. This can be done with no interruption of service by using the following recipe.
+
+TO BE FIXED.
+
+
+Sometimes you need to modify running checkers, e.g. to spawn more instances or to change their configuration.
+This is in general done by modifying the configuration in `aurora/continuous-integration.aurora`, 
+and the issuing the `aurora update` command.
+
+Because of the way the system is partitioned, we can ensure fully
+covered scale up / scale down operations in the following way. Say that
+we want to go from 4 workers to 8, one can start the new 4 workers by
+doing:
+
+    # Start the new 4 workers by doing.
+    aurora update start build/mesosci/devel/aliphysics_github_ci/4-7 aurora/continuos-integration.aurora
+
+    # Those workers do the same job as worker 2 and 3 in the previous configuration.
+    # Once they are up and running, we can therefore safely redeploy 2 and 3.
+    aurora update start build/mesosci/devel/aliphysics_github_ci/2-3 aurora/continuos-integration.aurora
+
+    # The new 2 and 3 will do the job of the old 1, which we can now redeploy
+    aurora update start build/mesosci/devel/aliphysics_github_ci/1 aurora/continuos-integration.aurora
+
+    # Finally we restart 0
+    aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
 
 ## Restarting a checker
 {:restart-checker }
