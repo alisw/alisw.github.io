@@ -131,16 +131,29 @@ which will ssh for you in the sandbox for the job on the machine it is running. 
 
 Pull request checkers run as long running jobs. A given repository for which we test the PRs under certain configurations is associated with a given aurora job and has one or more workers. Each worker takes a fraction of the hash phase space for git commits and keeps rebuilding all the pull requests which have the tip of their feature branch as part of that fraction. E.g. if you have two builders, a pull request whose tip commit is "08312648716746174678326478174" will be handled by worker 0, while "8487897843894827483274329874832" will be handled by worker 1. This allows us to avoid a central scheduling server and to make sure we keep testings pull requests as other ones get merged or external conditions change.
 
+### Listing PR checkers
+
 In order to see the list of the running prs you can do:
 
     $ aurora job list build/mesosci
 
 where the resulting job names will follow the convention:
 
+### Removing PR checkers
 
+First of all make sure the pr checker you want to kill uses the same job description as the one you have in ali-marathon. This can be done with `aurora job diff <ID> aurora/continuos-integration.aurora`. 
 
+```bash
+aurora job diff build/mesosci/devel/build_O2_o2-dev-fairroot aurora/continuos-integration.aurora
+```
 
-### Gotchas & issues
+If the differences are only in the reported `Resources` or in the `Owner` you can proceed with the killing by doing:
+
+```bash
+aurora job killall build/mesosci/devel/build_O2_o2-dev-fairroot
+```
+
+## Gotchas & issues
 
 * On Costin machines, for security reasons the log provider are not running, so you need to directly ssh inside them and look at the filesystem.
 
