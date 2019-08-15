@@ -27,13 +27,37 @@ By default the builders will behave in the following manner:
   not have a failure. If yes, test one of them and then go back to the starting
   point.
 
+We use Apache Aurora to deploy the builders on linux while builders on macOS are deployed 
+directly.
 
-# Aurora operations
+# Essential operations guide
 
-The following documentation applies to the pull request checkers deployed on Aurora. Checkers on
-macOS do not use Aurora, instead they are run directly as scripts.
+The following documentation applies to the Linux pull request checkers deployed with Aurora. 
+Checkers on macOS do not use Aurora, instead they are run directly as scripts. 
+**Before you do anything make sure you are familiar with [Apache Aurora command line
+ interface](http://aurora.apache.org/documentation/0.16.0/reference/client-commands/)** and
+make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/infrastructure-aurora) correctly**.
 
-## Deploying the builders
+* [Listing active PR checker](#list-checkers)
+* [Deploying a PR checker](#deploy-checker)
+* [Restart a PR checker](#restart-checker)
+* [Removing a PR checker](#remove-checker)
+* [Monitoring the checkers](#monitor-checkers)
+* [macOS checkers](#mac-checkers)
+
+## Listing active PR checkers
+{: list-checkers}
+
+In order to see the list of the running prs you can do:
+
+    $ aurora job list build/mesosci
+
+where the resulting job names will follow the convention:
+
+    build_<Package>_<alibuild-default>
+
+## Deploying a PR checker
+{: deploy-checker}
 
 Deploying the builders is done via the Apache Aurora instance. You can
 find instructions on how to set it up [here](infrastructure-apache).
@@ -56,6 +80,7 @@ doing:
     aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
 
 ## Restarting the builders
+{: restart-checker }
 
 In some cases, builders need restart. The Aurora command for restarting a builder does not require
 any `.aurora` file as an option, and the builder will be restarted as it was deployed.
@@ -65,42 +90,40 @@ builder called `build_AliRoot_el6native` we would do:
 
     aurora job restart build/mesosci/devel/build_AliRoot_el6native
 
+## Removing a PR checker
+{: remove-checker}
 
-# Monitoring the builders
+First of all make sure the pr checker you want to kill uses the same job description as the one you have in `ali-marathon`. The only differences allowed are in the `Resource` and in the `Owner` fields.
+
+This can be done with `aurora job diff <ID> aurora/continuos-integration.aurora`. E.g.:
+
+```bash
+aurora job diff build/mesosci/devel/build_O2_o2-dev-fairroot aurora/continuos-integration.aurora
+```
+
+If there are no significant changes (ask if in doubt) you can kill all the jobs with:
+
+```bash
+aurora job killall <ID>
+```
+
+or alternatively you can kill one instance with:
+
+```bash
+aurora job kill <ID>
+```
+
+## Monitoring the checkers
+{:monitor-checkers}
 
 Builders are monitored in [Monalisa](http://alimonitor.cern.ch/display?page=github/combined).
 In particular you can use aliendb9 and look at the `github-pr-checker/github.com/github-api-calls`
 metric to know how many API calls are being done by the system.
 
-
-# Currently active builders
-
-This is the list of builders that should be up and running.
-
-## Production
-
-| Repository           | GitHub check name        | Aurora job               | # |
-|----------------------|--------------------------|--------------------------|---|
-| alisw/AliRoot        | build/AliRoot/el6native  | build_AliRoot_el6native  | 1 |
-| alisw/AliRoot        | build/AliRoot/macos      | _not on Aurora_          | 1 |
-| alisw/AliRoot        | build/AliRoot/release    | build_AliRoot_release    | 1 |
-| alisw/AliPhysics     | build/AliPhysics/release | build_AliPhysics_release | 4 |
-| AliceO2Group/AliceO2 | build/O2/o2              | build_O2_o2              | 1 |
-| AliceO2Group/AliceO2 | build/O2/o2-dev-fairroot | build_O2_o2-dev-fairroot | 1 |
-| AliceO2Group/AliceO2 | build/O2/macos           | _not on Aurora_          | 1 |
-| AliceO2Group/AliceO2 | build/o2checkcode/o2     | build_o2checkcode_o2     | 1 |
-
-Notes:
-
-* AliRoot "el6native" check does not run on SLC6, but it runs in C++98-compatible mode. This is
-  still required until the end of Run 2 for compatibility with Point-2 nodes.
-* AliRoot builds on macOS use ROOT 6.
-* The AliRoot "release" check runs the guntest as well. In some cases, tests might fail if the
-  reference OCDB hasn't been updated, and this is correct.
-* AliPhysics checks use the latest AliRoot tag as reference (not master), as configured in the
-  defaults `prod-latest`.
+You can also get a detailed view the activity of the builders in our [Build Infrastructure Cockpit](https://alisw.cern.ch/cockpit).
 
 ## Builders for macOS
+{: mac-checkers}
 
 There is a dedicated process to run validation of pullrequests for macos.The routines therein are implemented within a [runscript](https://github.com/alisw/ali-bot/blob/master/ci/run-continuous-builder.sh) inside [ali-bot](https://github.com/alisw/ali-bot). This script currently needs to be started manually using a SREEN session to ensure it stays open. A launchd version is wip. 
 
