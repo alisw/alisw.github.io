@@ -126,6 +126,8 @@ which will ssh for you in the sandbox for the job on the machine it is running. 
 
     $ aurora task run build/mesostest/devel/hello/0 "hostname > foo.txt"
     
+You can find more information about the available commands in the [official Aurora documentation]( http://aurora.apache.org/documentation/0.16.0/reference/client-commands/).
+    
 ## Managing build infrastructure pull request checkers
 {: pr-checkers}
 
