@@ -24,6 +24,7 @@ the usual [egroup page](https://egroup.cern.ch).
 * [Getting the client](#get-the-client)
 * [Configuring your environment](#configuring)
 * [Run a simple application](#simple-app)
+* [Gotchas and issues](#gotchas)
 
 ## Getting the client
 {:get-the-client}
@@ -129,6 +130,7 @@ which will ssh for you in the sandbox for the job on the machine it is running. 
 You can find more information about the available commands in the [official Aurora documentation]( http://aurora.apache.org/documentation/0.16.0/reference/client-commands/).
 
 ## Gotchas & issues
+{: gotchas}
 
 * On Costin machines, for security reasons the log provider are not running, so you need to directly ssh inside them and look at the filesystem.
 
