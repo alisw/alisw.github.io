@@ -19,13 +19,13 @@ Access is allowed to ALICE members who are part of the
 `alice-aurora-users` egroup. You can subscribe to it by going to
 the usual [egroup page](https://egroup.cern.ch).
 
-## User guide
+# User guide
 
 * [Getting the client](#get-the-client)
 * [Configuring your environment](#configuring)
 * [Run a simple application](#simple-app)
 
-### Getting the client
+## Getting the client
 {:get-the-client}
 
 The GUI is only a read-only view on the state of the jobs
@@ -49,7 +49,7 @@ If you use homebrew, you can also do:
 brew install ktf/system-deps/alice-aurora
 ```
 
-### Configuring your environment
+## Configuring your environment
 {:configuring}
 
 Access is allowed to ALICE members who are part of the
@@ -98,7 +98,7 @@ If you are an admin, you should also verify that `aurora_admin` also works.
 $ aurora_admin get_cluster_config aliaurora
 {"auth_mechanism": "KERBEROS", "name": "aliaurora", "scheduler_uri": "https://aliaurora.cern.ch"}%
 ```
-### Run a simple application
+## Run a simple application
 {: simple-app}
 
 We keep Aurora configuration files in:
@@ -114,10 +114,31 @@ You can start it with:
 
     $ aurora job create build/mesostest/devel/hello hello.aurora
       INFO] Creating job hello
-      INFO] Checking status of build/root/devel/hello
-     Job create succeeded: job url=https://aliaurora.cern.ch/scheduler/root/devel/hello
+      INFO] Checking status of build/mesostest/devel/hello
+     Job create succeeded: job url=https://aliaurora.cern.ch/scheduler/mesostest/devel/hello
 
-then you can open the provided web page to look at the produced logs.
+This will start on the cluster a (somewhat) long running job. You can open the provided web page to look at the workarea.
+If you want to interact with the job in an ad-hoc manner, e.g. to debug what it is doing or force some action to it, you can SSH to the machine running the job by doing:
+
+    $ aurora task ssh build/mesostest/devel/hello/0
+    
+which will ssh for you in the sandbox for the job on the machine it is running. Notice that you might still have to `docker exec` yourself into the container to get the correct environment. Alternatively you can execute a one off job by doing:
+
+    $ aurora task run build/mesostest/devel/hello/0 "hostname > foo.txt"
+    
+## Managing build infrastructure pull request checkers
+{: pr-checkers}
+
+Pull request checkers run as long running jobs. A given repository for which we test the PRs under certain configurations is associated with a given aurora job and has one or more workers. Each worker takes a fraction of the hash phase space for git commits and keeps rebuilding all the pull requests which have the tip of their feature branch as part of that fraction. E.g. if you have two builders, a pull request whose tip commit is "08312648716746174678326478174" will be handled by worker 0, while "8487897843894827483274329874832" will be handled by worker 1. This allows us to avoid a central scheduling server and to make sure we keep testings pull requests as other ones get merged or external conditions change.
+
+In order to see the list of the running prs you can do:
+
+    $ aurora job list build/mesosci
+
+where the resulting job names will follow the convention:
+
+
+
 
 ### Gotchas & issues
 
@@ -145,4 +166,7 @@ In order to fix this you will have to change your kerberos configuration, usuall
   * First do `kdestroy`
   * Then do `kinit`
   * Finally `aurora job list`
-  * The three steps above should guarantee that Firefox has the correct token. 
+  * The three steps above should guarantee that Firefox has the correct token.
+  
+* SSH / running ad-hoc tasks on some of the machines requires extra work, most notably on Costin's `alientest` machines which do not use kerberos. In order to be able to login, you need to ask the admin of such machines to add your SSH key to 
+the `.authorised_keys` of the user which has the same name as the role for the job (e.g. `mesostest` for `build/mesostest/devel/hello`).
