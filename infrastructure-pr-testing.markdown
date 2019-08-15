@@ -41,7 +41,8 @@ make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/i
 * [Setup your environment](#setup)
 * [Listing active PR checker](#list-checkers)
 * [Deploying a PR checker](#deploy-checker)
-* [Scaling the number of checkers](#scale-checkers)
+* [Scaling up the number of checkers](#scale-up-checkers)
+* [Scaling down the number of checkers](#scale-down-checkers)
 * [Restart a PR checker](#restart-checker)
 * [Removing a PR checker](#remove-checker)
 * [Monitoring the checkers](#monitor-checkers)
@@ -95,8 +96,8 @@ doing:
     # Finally we restart 0
     aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
 
-## Scaling the number of checkers
-{:scale-checkers}
+## Scaling up the number of checkers
+{:scale-up-checkers}
 
 A simpler update operation is scaling up (or down) the number of checkers. This is also done with the `aurora update`
 command.
@@ -104,12 +105,10 @@ command.
 * First of all you should check the differences between your configuration and the one of the running instances, by doing:
 
 ```bash
-aurora job diff <ID>  aurora/continuos-integration.aurora
+aurora job diff <ID> aurora/continuos-integration.aurora
 ```
 
 and verifying that the only changes are in `Resources` or `Owner`. If you do not understand the differences, ask.
-
-* Update your job configuration. These are specified by instances of `CIConfig` in `aurora/continuous-integration.aurora`. You should find the one with the `ci_name` which matches the checker you want to scale and modify its `worker_pool_size` attribute, e.g. to 8 for 8 instances in total.  
 
 * Secondly you need to add new checkers (say 4-7) via:
 
@@ -117,10 +116,32 @@ and verifying that the only changes are in `Resources` or `Owner`. If you do not
 aurora update start <ID>/4-7 aurora/continuos-integration.aurora
 ```
 
-* Once they are up and running you can update the old instances so that you do not test certain PRs twice.
+the checkers will start in some default configuration, but they will not report results until you tell them to do so.
+
+* Once they are warm and building pull requests correctly (use `aurora task ssh` to check), you can increase the worker pool size by setting `config/workers-pool-size` for each of them, you assign each a partition, and make all reporting their results.
 
 ```bash
-aurora update start <ID>/0-3 aurora/continuos-integration.aurora
+seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 8 > config/workers-pool-size"
+seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
+seq 0 7 | xargs -I{} aurora task ssh -l root <ID>/{} "rm config/silent"
+```
+
+## Scaling down the number of checkers
+{:scale-down-checkers}
+
+Scaling down the number of checker might be useful to claim back resources in low activity periods. The logic is similar to the scaling up:
+
+* Kill the checkers you do not need.
+
+```bash
+seq 4 7 | xargs -I{} aurora job kill <ID>/{}
+```
+
+* Resize the workers pool accordingly:
+
+```bash
+seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo 4 > config/workers-pool-size"
+seq 0 3 | xargs -I{} aurora task ssh -l root <ID>/{} "echo {} > config/worker-index"
 ```
 
 ## Restarting a checker
