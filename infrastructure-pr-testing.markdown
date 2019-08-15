@@ -38,6 +38,7 @@ Checkers on macOS do not use Aurora, instead they are run directly as scripts.
  interface](http://aurora.apache.org/documentation/0.16.0/reference/client-commands/)** and
 make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/infrastructure-aurora) correctly**.
 
+* [Setup your environment](#setup)
 * [Listing active PR checker](#list-checkers)
 * [Deploying a PR checker](#deploy-checker)
 * [Restart a PR checker](#restart-checker)
@@ -45,8 +46,20 @@ make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/i
 * [Monitoring the checkers](#monitor-checkers)
 * [macOS checkers](#mac-checkers)
 
+## Setup your environment
+{:setup}
+
+Besides setting up your ALICE Aurora environment as described [here](https://alisw.github.io/infrastructure-aurora), you must be part of the `alice-aurora-mesosci` [egroup](https://egroups.cern.ch). Moreover, you will need to download
+the set of recipes describing the jobs from the `ali-marathon` (bad name...) repository:
+
+```bash
+git clone https://gitlab.cern.ch/ALICEDevOps/ali-marathon
+```
+
+unless otherwise specified all the instructions of this page assume that you use `ali-marathon` as your working directory.
+
 ## Listing active PR checkers
-{: list-checkers}
+{:list-checkers}
 
 In order to see the list of the running prs you can do:
 
@@ -57,7 +70,7 @@ where the resulting job names will follow the convention:
     build_<Package>_<alibuild-default>
 
 ## Deploying a PR checker
-{: deploy-checker}
+{:deploy-checker}
 
 Deploying the builders is done via the Apache Aurora instance. You can
 find instructions on how to set it up [here](infrastructure-apache).
@@ -80,7 +93,7 @@ doing:
     aurora update start build/mesosci/devel/aliphysics_github_ci/0 aurora/continuos-integration.aurora
 
 ## Restarting the builders
-{: restart-checker }
+{:restart-checker }
 
 In some cases, builders need restart. The Aurora command for restarting a builder does not require
 any `.aurora` file as an option, and the builder will be restarted as it was deployed.
@@ -91,7 +104,7 @@ builder called `build_AliRoot_el6native` we would do:
     aurora job restart build/mesosci/devel/build_AliRoot_el6native
 
 ## Removing a PR checker
-{: remove-checker}
+{:remove-checker}
 
 First of all make sure the pr checker you want to kill uses the same job description as the one you have in `ali-marathon`. The only differences allowed are in the `Resource` and in the `Owner` fields.
 
@@ -123,7 +136,7 @@ metric to know how many API calls are being done by the system.
 You can also get a detailed view the activity of the builders in our [Build Infrastructure Cockpit](https://alisw.cern.ch/cockpit).
 
 ## Builders for macOS
-{: mac-checkers}
+{:mac-checkers}
 
 There is a dedicated process to run validation of pullrequests for macos.The routines therein are implemented within a [runscript](https://github.com/alisw/ali-bot/blob/master/ci/run-continuous-builder.sh) inside [ali-bot](https://github.com/alisw/ali-bot). This script currently needs to be started manually using a SREEN session to ensure it stays open. A launchd version is wip. 
 
