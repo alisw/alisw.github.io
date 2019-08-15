@@ -74,30 +74,27 @@ where the resulting job names will follow the convention:
 ## Scaling up the number of checkers
 {:scale-up-checkers}
 
-A simpler update operation is scaling up (or down) the number of checkers. This is also done with the `aurora update`
-command.
+A simpler update operation is scaling up (or down) the number of checkers. This is also done with the `aurora add`
+command which will add more instances, duplicating the configuration of one of the running ones.
 
-* First of all you should check the differences between your configuration and the one of the running instances, by doing:
-
-```bash
-aurora job diff <ID> aurora/continuos-integration.aurora
-```
-
-and verifying that the only changes are in `Resources` or `Owner`. If you do not understand the differences, ask.
-
-* Secondly you need to add new checkers (say 4-7) via:
+* First of all you need to add more instances by doing:
 
 ```bash
-aurora update start <ID>/4-7 aurora/continuos-integration.aurora
+aurora job add <ID>/0 <N>
 ```
 
-the checkers will start in some default configuration, but they will not report results until you tell them to do so.
+where `<ID>/0` is your template configuration while `<N>` is the number of instances you want to add.
 
 * Once they are warm and building pull requests correctly (use `aurora task ssh` to check), you can increase the worker pool size by setting `config/workers-pool-size` for each of them, you assign each a partition, and make all reporting their results.
 
 ```bash
 aurora task ssh -l root <ID> "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID> "echo {{mesos.instance}} > config/worker-index"
+aurora task ssh -l root <ID> "echo \{\{mesos.instance\}\} > config/worker-index"
+```
+
+* Finally you mark all the new instances as not silent, so that they can start reporting results of the check:
+
+```bash
 aurora task ssh -l root <ID> "rm config/silent"
 ```
 
@@ -116,7 +113,7 @@ aurora job kill <ID>/4-7
 
 ```bash
 aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-3 "echo {{mesos.instance}} > config/worker-index"
+aurora task ssh -l root <ID>/0-3 "echo \{\{mesos.instance\}\} > config/worker-index"
 ```
 
 ## Updating a PR checker
@@ -128,7 +125,7 @@ or to provide a new feature. This can be done with no interruption of service by
 * If you have enough capacity, add as many instances you need for the test:
 
 ```bash
-aurora update start <ID>/4-7 aurora/continuos-integration.aurora
+aurora job add <ID>/0 1
 ```
 
 If you do not have enough resources, do a scale down until you have them and then scale them back up. 
@@ -142,7 +139,7 @@ If you do not have enough resources, do a scale down until you have them and the
 ```bash
 # assuming 8 workers in total.
 aurora task ssh -l root <ID>/0-3 "echo 1 > config/silent"
-aurora task ssh -l root <ID>/4-7 "echo $(({{mesos.instance}} - 4)) > config/worker-index"
+aurora task ssh -l root <ID>/4-7 "echo $((\{\{mesos.instance\}\} - 4)) > config/worker-index"
 ```
 
 * Once this situation is stable, update the lower half of the machines:
@@ -155,7 +152,7 @@ aurora update start <ID>/0-3 aurora/continuos-integration.aurora
 
 ```bash
 aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-7 "echo {{mesos.instance}} > config/worker-index"
+aurora task ssh -l root <ID>/0-7 "echo \{\{mesos.instance\}\} > config/worker-index"
 aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ```
 
