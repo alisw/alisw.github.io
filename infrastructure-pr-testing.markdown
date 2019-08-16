@@ -158,35 +158,27 @@ aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ## Restarting a checker
 {:restart-checker }
 
-In some cases, builders need restart. The Aurora command for restarting a builder does not require
-any `.aurora` file as an option, and the builder will be restarted as it was deployed.
+In some cases, builders need to be restarted. This will redeploy the same aurora configuration,
+but the `ali-bot` scripts will be taken from HEAD and `continuous-builder.sh` will be run again.
+Because each builder has ~30 minutes of warm up periods, you should follow the following procedure
+to make it transparent to the user.
 
-All our production builders are under the tree `build/mesosci/devel`, so if you want to restart the
-builder called `build_AliRoot_el6native` we would do:
-
-    aurora job restart build/mesosci/devel/build_AliRoot_el6native
-
-## Removing a PR checker
-{:remove-checker}
-
-First of all make sure the pr checker you want to kill uses the same job description as the one you have in `ali-marathon`. The only differences allowed are in the `Resource` and in the `Owner` fields.
-
-This can be done with `aurora job diff <ID> aurora/continuos-integration.aurora`. E.g.:
+* Take the builder to be restarted out of the workers pool by changing the worker pool size to the old size -1. E.g. if
+you have eight builders and you want to restart 4
 
 ```bash
-aurora job diff build/mesosci/devel/build_O2_o2-dev-fairroot aurora/continuos-integration.aurora
+aurora task ssh -l root <ID>/0-7 "echo 7 > config/workers-pool-size"
+aurora task ssh -l root <ID>/0-2 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
+aurora task ssh -l root <ID>/4-7 'echo $(({{ "{{mesos.instance" }}}} - 1)) > config/worker-index'
+aurora job restart <ID>/3'
 ```
 
-If there are no significant changes (ask if in doubt) you can kill all the jobs with:
+* Wait for the new builder to warm up (use `aurora task ssh` to check), and then scale up the whole cluster back to the worker pool size:
 
 ```bash
-aurora job killall <ID>
-```
-
-or alternatively you can kill one instance with:
-
-```bash
-aurora job kill <ID>
+aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
+aurora task ssh -l root <ID>/0-7 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
+aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ```
 
 ## Monitoring the checkers
