@@ -22,7 +22,7 @@ that it can run, for example SLC5 on CC7 or similar setups.
 * [Triggering builds programmatically](#trigger-jobs)
 
 ### Create the Jenkins master (only in case of disaster recovery!!!!)
-{:create-jenkins}
+{: #create-jenkins}
 
 The jenkins master is created on top of the usual OpenStack / Foreman
 infrastructure at CERN. This is because we want to be able to run Jenkins even
@@ -51,7 +51,7 @@ Creation of the jenkins masters in CERN Foreman setup is described at
             $MACHINE_NAME
 
 ### Adding a new Mesos cloud
-{:add-mesos}
+{: #add-mesos}
 
 In order to provision jenkins slaves we use the Jenkins Mesos plugin. The
 configuration of such a plugin is found at the bottom of the "Jenkins >
@@ -82,7 +82,7 @@ Configuration" page. In order to create a new one:
 - Click on save.
 
 ### Killing a stuck job
-{:kill-stuck-job}
+{: #kill-stuck-job}
 
 Sometimes Jenkins jobs (especially pipelines) remain stuck in some weird state
 and refuse to be killed by the GUI. When this happens, the last resort is to do the following:
@@ -98,7 +98,7 @@ and refuse to be killed by the GUI. When this happens, the last resort is to do 
       task.doKill()
 
 ### Triggering builds programmatically
-{:trigger-jobs}
+{: #trigger-jobs}
 
 It's now possible to start new builds in a programmatic way. In order to do so you must
 have a valid kerberos token, and you must be able to execute the build from the web GUI.
