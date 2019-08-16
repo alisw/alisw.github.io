@@ -4,50 +4,54 @@ layout: main
 categories: infrastructure
 ---
 
-# Jenkins installation
+In order to drive the Continuos Integration process the ALICE build infrastructure uses Jenkins. 
 
-In order to drive the Continuos Integration process the `{{site.experiment}}`
-build infrastructure uses Jenkins. 
-
-Jenkin master belong to the hostgroup `{{site.jenkins_hostgroup}}` while slaves
+Jenkin master belong to the  `alibuild/jenkins` hostgroup in CERN puppet, while slaves
 are in general dynamically provisioned using Apache Mesos using the Jenkins
 [mesos-plugin](https://github.com/jenkinsci/mesos-plugin). The main advantage
 of this setup is that the plugin can spawn slaves inside a docker container so
 that it can run, for example SLC5 on CC7 or similar setups.
 
-- [/code/manifests/{{site.jenkins_hostgroup}}.pp](https://git.cern.ch/web/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.jenkins_hostgroup}}.pp)  for the master.
+- [/code/manifests/alibuild/jenkins.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/master/code/manifests/jenkins.pp)  for the master.
 
-# Useful recipes:
+# Essential Operation Guides:
 
-### Start the Jenkins master
+* [Create the Jenkins master](#create-jenkins)
+* [Adding a new Mesos cloud](#add-mesos-cloud)
+* [Killing a stuck job](#kill-stuck-job)
+* [Triggering builds programmatically](#trigger-builds-commandline)
+
+### Create the Jenkins master (only in case of disaster recovery!!!!)
+{:create-jenkins}
 
 The jenkins master is created on top of the usual OpenStack / Foreman
 infrastructure at CERN. This is because we want to be able to run Jenkins even
 if every other bit of the Mesos Build infrastructure fails.
 
 Creation of the jenkins masters in CERN Foreman setup is described at
-<http://cern.ch/config/nodes/createnode.html>. The short recipe for build
-machine is:
+<http://cern.ch/config/nodes/createnode.html>. The short recipe to create the machine,
+**to do only in case of disaster** is:
 
 - Login to `aiadm.cern.ch`.
 - Set up your OpenStack environment by doing:
 
-      eval $(ai-rc "{{site.experiment}} Release Testing")
-- To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
+      eval $(ai-rc "ALICE Release Testing")
+- To spawn a machine you need to use the `ai-bs` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
 
-      MACHINE_NAME=<{{site.exp_prefix}}jenkinsXX>
+      MACHINE_NAME=<alijenkinsXX>
 
-      ai-bs-vm -g {{site.jenkins_hostgroup}} \
-               --{{site.openstack_image | downcase}} \
-               --nova-sshkey {{site.builduser}} \
-               --nova-flavor {{site.openstack_master_flavor}} \
-               --landb-mainuser alice-agile-admin \
-               --landb-responsible alice-agile-admin \
-               $MACHINE_NAME
+      ai-bs -g alibuild/jenkins                              \
+            --cc7                                            \
+            --nova-sshkey {{site.builduser}}                 \
+            --nova-flavor {{site.openstack_master_flavor}}   \
+            --landb-mainuser alice-agile-admin               \
+            --landb-responsible alice-agile-admin            \
+            $MACHINE_NAME
 
 ### Adding a new Mesos cloud
+{:add-mesos}
 
 In order to provision jenkins slaves we use the Jenkins Mesos plugin. The
 configuration of such a plugin is found at the bottom of the "Jenkins >
@@ -77,10 +81,8 @@ Configuration" page. In order to create a new one:
 
 - Click on save.
 
-
-# Troubleshooting
-
-## Killing a stuck job
+### Killing a stuck job
+{:kill-stuck-job}
 
 Sometimes Jenkins jobs (especially pipelines) remain stuck in some weird state
 and refuse to be killed by the GUI. When this happens, the last resort is to do the following:
@@ -94,3 +96,17 @@ and refuse to be killed by the GUI. When this happens, the last resort is to do 
       def job = Jenkins.instance.getItemByFullName(jobName)
       def task = job.getBuildByNumber(jobId)
       task.doKill()
+
+### Triggering builds programmatically
+
+It's now possible to start new builds in a programmatic way. In order to do so you must
+have a valid kerberos token, and you must be able to execute the build from the web GUI.
+The step by step guide is:
+
+* Get the token with `kinit`, use `klist` to verify you have one.
+* Given the name of the job in the GUI, `<job>`, you can trigger a build with:
+      
+      curl -k -X POST --negotiate -u : https://alijenkins.cern.ch/kerberos/job/<job>/build --data-urlencode json='{}'
+
+  the urlencoded data is a dictionary with the parameters of the job. 
+
