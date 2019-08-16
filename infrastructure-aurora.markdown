@@ -95,10 +95,11 @@ $ aurora job list build
 
 If you are an admin, you should also verify that `aurora_admin` also works.
 
+```bash
+$ aurora_admin get_cluster_config build
+{"auth_mechanism": "KERBEROS", "name": "build", "scheduler_uri": "https://aliaurora.cern.ch"}%
 ```
-$ aurora_admin get_cluster_config aliaurora
-{"auth_mechanism": "KERBEROS", "name": "aliaurora", "scheduler_uri": "https://aliaurora.cern.ch"}%
-```
+
 ## Run a simple application
 {: simple-app}
 
