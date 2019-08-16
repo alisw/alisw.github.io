@@ -19,7 +19,7 @@ that it can run, for example SLC5 on CC7 or similar setups.
 * [Create the Jenkins master](#create-jenkins)
 * [Adding a new Mesos cloud](#add-mesos-cloud)
 * [Killing a stuck job](#kill-stuck-job)
-* [Triggering builds programmatically](#trigger-builds-commandline)
+* [Triggering builds programmatically](#trigger-jobs)
 
 ### Create the Jenkins master (only in case of disaster recovery!!!!)
 {:create-jenkins}
@@ -98,6 +98,7 @@ and refuse to be killed by the GUI. When this happens, the last resort is to do 
       task.doKill()
 
 ### Triggering builds programmatically
+{:trigger-jobs}
 
 It's now possible to start new builds in a programmatic way. In order to do so you must
 have a valid kerberos token, and you must be able to execute the build from the web GUI.
