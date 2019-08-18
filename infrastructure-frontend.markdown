@@ -31,10 +31,18 @@ The quick recipe to restart the frontend is:
 
       MACHINE_NAME=<{{site.exp_prefix}}build-frontendXX>
 
-      ai-bs-vm -g {{site.frontend_hostgroup}} \
-               --{{site.openstack_image | downcase}} \
-               --nova-sshkey {{site.builduser}} \
+      ai-bs-vm -g alibuild/frontend                   \
+               --cc 7                                 \
+               --nova-sshkey alibuild                 \
                --nova-flavor {{site.openstack_master_flavor}} \
                --landb-mainuser alice-agile-admin \
                --landb-responsible alice-agile-admin \
                $MACHINE_NAME
+- Once you have the frontend created, you also need to grant it read-only
+  permission to some CERN S3 bucket we use for storing logs. The policy for
+  it can be found in the [ali-marathon](https://gitlab.cern.ch/AliceDevOps/ali-marathon)
+  repository. The required policies are:
+  
+  * `s3/alice-build-logs-policy.json`
+  
+  and they need to have the right Ip Address registered there.
