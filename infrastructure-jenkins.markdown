@@ -109,5 +109,24 @@ The step by step guide is:
       
       curl -k -X POST --negotiate -u : https://alijenkins.cern.ch/kerberos/job/<job>/build --data-urlencode json='{}'
 
-  the urlencoded data is a dictionary with the parameters of the job. 
+  the urlencoded data is a dictionary with the parameters of the job.
+  
+## Gotchas and issues:
+{: #gotchas}
 
+* On some systems, the CERN CA is not available by default. You can overcome this by either:
+  * Go to <https://ca.cern.ch> and install all the required CA certificates. In general this is what is needed on macOS.
+  * Installing the `CERN-CA-certs` package.
+
+* On some systems, kerberos gives a token for the actual backend name, rather than `aliaurora`. You can check that by doing klist and you will see `HTTP/alibuild-frontend01.cern.ch@CERN.CH`:
+
+```bash
+Credentials cache: API:B7FC3DD4-738F-417E-B2FA-92B2CCA9590C
+        Principal: eulisse@CERN.CH
+
+  Issued                Expires               Principal
+Aug 14 15:50:42 2019  Aug 15 01:50:42 2019  krbtgt/CERN.CH@CERN.CH
+Aug 14 15:50:46 2019  Aug 15 01:50:42 2019  HTTP/alibuild-frontend01.cern.ch@CERN.CH
+```
+
+In order to fix this you will have to change your kerberos configuration, usually found in `/etc/krb5.conf`, and add `rdns = false` in the `[libdefaults]` stanza.
