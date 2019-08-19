@@ -20,6 +20,7 @@ that it can run, for example SLC5 on CC7 or similar setups.
 * [Adding a new Mesos cloud](#add-mesos-cloud)
 * [Killing a stuck job](#kill-stuck-job)
 * [Triggering builds programmatically](#trigger-jobs)
+* [Gotchas and issues](#gotchas)
 
 ### Create the Jenkins master (only in case of disaster recovery!!!!)
 {: #create-jenkins}
