@@ -110,8 +110,13 @@ The step by step guide is:
       
       curl -k -X POST --negotiate -u : https://alijenkins.cern.ch/kerberos/job/<job>/build --data-urlencode json='{}'
 
-  the urlencoded data is a dictionary with the parameters of the job.
-  
+* The parametrized job can be started with:
+
+      curl -X POST -k --negotiate -u : https://alijenkins.cern.ch/kerberos/job/<job>/buildWithParameters -H 'Content-Type: application/x-www-form-urlencoded' -d '<parameters>'
+
+  The `<parameters>` are formatted as in a URL: `<name>=<value>&<name2>=<value2>`.
+
+
 ## Gotchas and issues:
 {: #gotchas}
 
