@@ -41,6 +41,6 @@ In case you need to update the S3 access permission policy, e.g. in case the fro
 [clouddocs]: https://clouddocs.web.cern.ch/clouddocs/
 
 ## Accessing the logs programmatically
-{: accessing-logs}
+{: #accessing-logs}
 
 Accessing the logs programmatically can be done via any S3 enabled client, e.g. `s3cmd` (command line) or `boto3` (python). Ask usual suspects for the access key, secret. An example of how new logs can be pushed via `boto3` is at <https://github.com/alisw/ali-bot/blob/master/report-pr-errors#L175-L194>.
