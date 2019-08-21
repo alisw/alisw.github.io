@@ -18,6 +18,8 @@ egroup.
 # Essential operation guides
 
 * [Creating the bucket](#create-bucket)
+* [Updating the policy](#update-policy)
+* [Accessing the logs programmatically](#accessing-logs)
 
 ## Creating the bucket
 {: #create-bucket}
@@ -32,7 +34,13 @@ Creating the bucket should not be needed unless some disaster happens. The curre
 * Verify that using the `ali-bot` access_key / secret_key you can write files.
 
 ## Updating the policy
+{: #update-policy}
 
-In case you need to update the policy, e.g. in case the frontend IP changes, you need to do so in `ali-marathon/s3/alice-build-logs-policy.json`.
+In case you need to update the S3 acces permission policy, e.g. in case the frontend IP changes, you need to do so in `ali-marathon/s3/alice-build-logs-policy.json` and then apply it to the `s3://alice-build-logs`
 
 [clouddocs]: https://clouddocs.web.cern.ch/clouddocs/
+
+## Accessing the logs programmatically
+{: accessing-logs}
+
+Accessing the logs programmatically can be done via any S3 enabled client, e.g. `s3cmd` (command line) or `boto3` (python). Ask usual suspects for the access key, secret. An example of how new logs can be pushed via `boto3` is at <https://github.com/alisw/ali-bot/blob/master/report-pr-errors#L175-L194>.
