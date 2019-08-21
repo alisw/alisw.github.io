@@ -92,11 +92,12 @@ aurora task ssh -l root <ID> "echo 8 > config/workers-pool-size"
 aurora task ssh -l root <ID> 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
 ```
 
-* Finally you mark all the new instances as not silent, so that they can start reporting results of the check:
+* Finally you mark all the new instances as non-silent, so that they can start reporting results of the check:
 
 ```bash
 aurora task ssh -l root <ID> "rm config/silent"
 ```
+
 ## Scaling down the number of checkers
 {:scale-down-checkers}
 
@@ -121,38 +122,68 @@ aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worke
 Sometimes you want to update the cluster to a new version of the build script, e.g. to address some bug
 or to provide a new feature. This can be done with no interruption of service by using the following recipe.
 
-* If you have enough capacity, add as many instances you need for the test:
+* Make sure that the number of instances you have in `aurora/continuous-builder.sh` matches the final number of instances you want to have.
+
+* Check what are the differences between the currently running configuration and the one you have locally in `ali-marathon`:
 
 ```bash
-aurora job add <ID>/0 1
+aurora job diff <ID> aurora/continuous-integration.aurora
 ```
 
-If you do not have enough resources, do a scale down until you have them and then scale them back up. 
+You should see only changes in the either ownership or resources.
 
-* These new resources will start in silent mode, so you are free to play with them, updating the scripts and making sure the behave correctly. You can use `aurora restart` to restart job and pick up changes, or if you changed `continuous-integration.aurora` make sure you have the correct number of instances before you run `aurora update start`.
+* If you do not have more than one instance, make sure you scale to at least two instances and wait for the second one to be ready.
 
-* Once you are satisfied with your changes scale down to half of the instances and then scale back up. The second half of instances will start in silent mode and warm up. 
-
-* Once happy with them, mark as silent the first part of the instances, and move all the load on the newly available instances:
+* Make sure the second half of the cluster can do the job of the first half, by halving the value in `config/workers-pool-size` and remapping the indices. E.g., if you have 8 instances:
 
 ```bash
 # assuming 8 workers in total.
 aurora task ssh -l root <ID>/0-3 "echo 1 > config/silent"
+aurora task ssh -l root <ID>/4-7 "echo 4 > config/workers-pool-size"
 aurora task ssh -l root <ID>/4-7 'echo $(({{ "{{mesos.instance" }}}} - 4)) > config/worker-index'
 ```
 
-* Once this situation is stable, update the lower half of the machines:
+* Update the first half of the cluster and set it in silent mode:
 
 ```bash
-aurora update start <ID>/0-3 aurora/continuos-integration.aurora
+# assuming 8 workers in total.
+aurora update start <ID>/0-3 config/continuous-integration.aurora
+aurora task run -l root build/mesosci/devel/build_O2_o2/0-3 "echo 1 > config/silent"
 ```
 
-* Once the bottom half is ready, make the pool as big as before, removing the silent flag:
+* Wait for it to be up and running by looking at the `.logs/*-continuos_integration/0/stderr` file.
 
 ```bash
-aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-7 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
-aurora task ssh -l root <ID>/0-7 "rm config/silent"
+aurora task run -l root build/mesosci/devel/build_O2_o2/0-3 "tail .logs/*continuos_integration/0/stderr"
+```
+
+If it's there, then the new builders are processing PRs. Mark them as non-silent and make the first half do all the work:
+
+```bash
+aurora task ssh -l root <ID>/0-3 "rm config/silent"
+aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
+aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
+```
+
+* Now you can safely update the second half.
+
+```bash
+# assuming 8 workers in total.
+aurora update start <ID>/4-7 aurora/continuous-integration.aurora
+```
+
+* Wait until all the new nodes are working correctly:
+
+```
+aurora task run -l root build/mesosci/devel/build_O2_o2/4-7 "tail .logs/*continuos_integration/0/stderr"
+```
+
+* Rebalance the workload on the whole pool:
+
+```bash
+aurora task ssh -l root <ID>/0-3 "rm config/silent"
+aurora task ssh -l root <ID>/0-3 "echo 8 > config/workers-pool-size"
+aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
 ```
 
 ## Restarting a checker
