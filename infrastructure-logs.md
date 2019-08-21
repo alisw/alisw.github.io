@@ -36,7 +36,7 @@ Creating the bucket should not be needed unless some disaster happens. The curre
 ## Updating the policy
 {: #update-policy}
 
-In case you need to update the S3 acces permission policy, e.g. in case the frontend IP changes, you need to do so in `ali-marathon/s3/alice-build-logs-policy.json` and then apply it to the `s3://alice-build-logs`
+In case you need to update the S3 access permission policy, e.g. in case the frontend IP changes, you need to do so in `ali-marathon/s3/alice-build-logs-policy.json` and then apply it to the `s3://alice-build-logs`
 
 [clouddocs]: https://clouddocs.web.cern.ch/clouddocs/
 
