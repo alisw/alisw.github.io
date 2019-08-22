@@ -45,6 +45,7 @@ make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/i
 * [Scaling down the number of checkers](#scale-down-checkers)
 * [Restart a PR checker](#restart-checker)
 * [Removing a PR checker](#remove-checker)
+* [Inspecting the status of the checker](#inspect-checker)
 * [Monitoring the checkers](#monitor-checkers)
 * [macOS checkers](#mac-checkers)
 
@@ -147,7 +148,7 @@ aurora task ssh -l root <ID>/4-7 'echo $(({{ "{{mesos.instance" }}}} - 4)) > con
 
 ```bash
 # assuming 8 workers in total.
-aurora update start <ID>/0-3 config/continuous-integration.aurora
+aurora update start <ID>/0-3 aurora/continuous-integration.aurora
 aurora task run -l root build/mesosci/devel/build_O2_o2/0-3 "echo 1 > config/silent"
 ```
 
@@ -211,6 +212,25 @@ aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
 aurora task ssh -l root <ID>/0-7 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
 aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ```
+
+## Inspecting the checkers
+{:inspect-checker}
+
+Inspecting the checkers can be either interactively, by using the `aurora task ssh <ID>/<instance>` command, e.g.:
+
+```bash
+aurora task ssh  build/mesosci/devel/build_O2_o2/0
+```
+
+To ssh on the first instance where the job is running.
+
+You can also run commands programmatically, using the `aurora task run <ID>/<instance-range>` command, e.g.:
+
+```
+aurora task run build/mesosci/devel/build_O2_o2/0-1
+```
+
+to run on the 0 and 1 instances.
 
 ## Monitoring the checkers
 {:monitor-checkers}
