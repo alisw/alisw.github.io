@@ -14,15 +14,19 @@ Further troubleshooting information is privately available in the repository:
 
 https://gitlab.cern.ch/ALICEDevOps/aliops.git/
 
-* <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
-* <a href="{{site.baseurl}}/infrastructure-logging">Logging</a>
-* <a href="{{site.baseurl}}/infrastructure-relval">RelVal</a>
-* <a href="{{site.baseurl}}/infrastructure-aurora">Apache Aurora</a>
-* <a href="{{site.baseurl}}/infrastructure-mesos">Apache Mesos</a>
-* <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
-* <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
-* <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
-* <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
+## Tasks
+
 * <a href="{{site.baseurl}}/infrastructure-release-process">Release process</a>
+* <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
+* <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
+* <a href="{{site.baseurl}}/infrastructure-logs">Build Logs</a>
 * <a href="{{site.baseurl}}/infrastructure-publisher">Release publishing</a>
-* <a href="{{site.baseurl}}/infrastructure-logs">Logs</a>
+* <a href="{{site.baseurl}}/infrastructure-relval">RelVal</a>
+
+## Infrastructure
+
+* <a href="{{site.baseurl}}/infrastructure-mesos">Apache Mesos</a>
+* <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
+* <a href="{{site.baseurl}}/infrastructure-aurora">Apache Aurora</a>
+* <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
+* <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
