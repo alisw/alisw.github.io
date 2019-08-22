@@ -216,21 +216,39 @@ aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ## Inspecting the checkers
 {:inspect-checker}
 
-Inspecting the checkers can be either interactively, by using the `aurora task ssh <ID>/<instance>` command, e.g.:
+Toi inspect checkers, you should probably get familiar with the command line client of aurora [documentation](http://aurora.apache.org/documentation/latest/reference/client-commands/).
+
+Inspecting the checkers can be done interactively, using the `aurora task ssh <ID>/<instance>` command. 
+
+E.g. use:
 
 ```bash
-aurora task ssh  build/mesosci/devel/build_O2_o2/0
+aurora task ssh -l root build/mesosci/devel/build_O2_o2/0
 ```
 
-To ssh on the first instance where the job is running.
+to ssh on the first instance where the job is running.
 
 You can also run commands programmatically, using the `aurora task run <ID>/<instance-range>` command, e.g.:
 
 ```
-aurora task run build/mesosci/devel/build_O2_o2/0-1
+aurora task run -l root build/mesosci/devel/build_O2_o2/0-1 ls
 ```
 
-to run on the 0 and 1 instances.
+to run `ls` on the instances 0 and 1.
+
+The checkers react to some special files which can be created in the sandbox. In particular:
+
+* `config/silent` with non empty content means that the checker will not report issues to the github PR page associated with the checks being done.
+* `config/debug` will force alibuild execution with `--debug` option.
+* `config/workers-pool-size` will force the number of checkers currently active.
+* `config/worker-index` will force the index of the current instance of the checker.
+
+Moreover there are a few files which give you information about the current status of the system:
+
+* `.logs/<step>/0/stderr`: stderr logs for <step> step in the job.
+* `.logs/<step>/0/stderr`: stderr logs for <step> step in the job.
+* `state/ready`: if present, the builder went throught the cache warm up phase
+
 
 ## Monitoring the checkers
 {:monitor-checkers}
