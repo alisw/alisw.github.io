@@ -249,6 +249,14 @@ Moreover there are a few files which give you information about the current stat
 * `.logs/<step>/0/stderr`: stderr logs for <step> step in the job.
 * `state/ready`: if present, the builder went throught the cache warm up phase
 
+A few useful commands:
+
+* To see the current pool configuration:
+
+```bash
+aurora task run -l root <ID> 'grep list .logs/*cont*/0/stderr | tail -n1'
+```
+
 
 ## Monitoring the checkers
 {:monitor-checkers}
