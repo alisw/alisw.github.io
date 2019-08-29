@@ -263,6 +263,12 @@ aurora task run -l root <ID> 'grep list .logs/*cont*/0/stderr | tail -n1'
 aurora task run -l root <ID> "cd ali-bot ; git pull --rebase"
 ```
 
+* To check what it's happening inside the O2 build:
+
+```bash
+aurora task run -l root <ID> "tail -n1 sw/BUILD/O2-latest/log"
+```
+
 ## Monitoring the checkers
 {:monitor-checkers}
 
