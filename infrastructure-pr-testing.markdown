@@ -257,6 +257,11 @@ A few useful commands:
 aurora task run -l root <ID> 'grep list .logs/*cont*/0/stderr | tail -n1'
 ```
 
+* To update `ali-bot` on each node:
+
+```bash
+aurora task run -l root <ID> "cd ali-bot ; git pull --rebase"
+```
 
 ## Monitoring the checkers
 {:monitor-checkers}
