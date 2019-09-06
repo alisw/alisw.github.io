@@ -30,3 +30,4 @@ https://gitlab.cern.ch/ALICEDevOps/aliops.git/
 * <a href="{{site.baseurl}}/infrastructure-aurora">Apache Aurora</a>
 * <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
 * <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
+* <a href="{{site.baseurl}}/infrastructure-alibi">AliBI</a>
