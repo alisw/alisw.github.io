@@ -269,6 +269,17 @@ aurora task run -l root <ID> "cd ali-bot ; git pull --rebase"
 aurora task run -l root <ID> "tail -n1 sw/BUILD/O2-latest/log"
 ```
 
+## Creating a new checker
+
+Checkers configuration is in `ali-marathon/aurora/continuous-integration.aurora`. I order to add a new checker you need
+to add a properly configured `CIConfig` instance to the `specs` list and start it with:
+
+```bash
+aurora job create build/mesosci/devel/<ci-name>
+```
+
+where `<ci-name>` is the value of the `ci_name` field in the associated `CIConfig` configuration object. 
+
 ## Monitoring the checkers
 {:monitor-checkers}
 
