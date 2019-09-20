@@ -136,7 +136,13 @@ Additionally, you can verify the proxy information by running:
     voms-proxy-info -file eos-proxy.pem
 
 Note that on some nodes (not Puppet-managed) proxy has to be deployed manually
-as `/secrets/eos-proxy` with mode `0400`.
+as `/secrets/eos-proxy` with mode `0400`. This can be done with:
+
+```bash
+for x in alientest02.cern.ch alientest06.cern.ch  alientest07.cern.ch pcalienstorage.cern.ch; do
+  rsync --chown=0400 eos-proxy.pem root@$x:/secrets/eos-proxy
+done
+```
 
 On `aiadmin`, everything can be now deleted:
 
