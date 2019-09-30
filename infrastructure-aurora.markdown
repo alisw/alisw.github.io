@@ -17,7 +17,7 @@ of the pull request.
 
 Access is allowed to ALICE members who are part of the
 `alice-aurora-users` egroup. You can subscribe to it by going to
-the usual [egroups page](https://egroups.cern.ch).
+the usual [egroups page](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10225666).
 
 # User guide
 
@@ -55,7 +55,7 @@ brew install ktf/system-deps/alice-aurora
 
 Access is allowed to ALICE members who are part of the
 `alice-aurora-users` egroup. You can subscribe to it by going to
-the usual [egroup page](https://egroup.cern.ch).
+the usual [egroup page](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10225666).
 
 The authentication mechanism uses kerberos, so you should make sure
 you have a valid kerberos ticket in the CERN.CH realm. You can verify that 
