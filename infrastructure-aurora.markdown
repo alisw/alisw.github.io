@@ -17,7 +17,7 @@ of the pull request.
 
 Access is allowed to ALICE members who are part of the
 `alice-aurora-users` egroup. You can subscribe to it by going to
-the usual [egroup page](https://egroup.cern.ch).
+the usual [egroups page](https://egroups.cern.ch).
 
 # User guide
 
