@@ -278,7 +278,8 @@ to add a properly configured `CIConfig` instance to the `specs` list and start i
 aurora job create build/mesosci/devel/<ci-name>
 ```
 
-where `<ci-name>` is the value of the `ci_name` field in the associated `CIConfig` configuration object. 
+where `<ci-name>` is the value of the `ci_name` field in the associated `CIConfig` configuration object. Notice that in
+order to post status updates for pull requests, the user `alibuild` must be a collaborator of the repository with write access.
 
 ## Monitoring the checkers
 {:monitor-checkers}
