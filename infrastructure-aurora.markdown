@@ -16,8 +16,8 @@ It is used for a number of jobs an in particular for the continuous builders
 of the pull request.
 
 Access is allowed to ALICE members who are part of the
-`alice-aurora-users` egroup. You can subscribe to it by going to
-the usual [egroups page](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10225666).
+[`alice-aurora-users`](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10225666) **and** of the [`alice-agile-admin`](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10172645) egroups.
+
 
 # User guide
 
@@ -152,6 +152,12 @@ Aug 14 15:50:46 2019  Aug 15 01:50:42 2019  HTTP/alibuild-frontend01.cern.ch@CER
 ```
 
 In order to fix this you will have to change your kerberos configuration, usually found in `/etc/krb5.conf`, and add `rdns = false` in the `[libdefaults]` stanza. 
+
+* When using firefox make sure you have the following settings in [about:config]():
+
+| Name | value |
+| ---- | ----- |
+|network.negotiate-auth.trusted-uris | cern.ch|
 
 * On mac the most reliable way to operate is:
   * First do `kdestroy`
