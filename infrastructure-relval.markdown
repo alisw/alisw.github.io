@@ -4,7 +4,19 @@ layout: main
 categories: infrastructure
 ---
 
-# Managing data on EOS
+The release validation of AliRoot communicates its results on Jira. Before starting a release validation, we create a Jira ticket and take note of its ID (for instance, ALIROOT-1234).
+
+Then we start the [AliRootDPGValidation](https://alijenkins.cern.ch/job/AliRootDPGValidation/). Normally, the only parameter that needs changing is the JIRA_ISSUE one, where one must specify the ID of the just created ticket. In case no other parameter is changed, the release validation will:
+
+* Automatically tag AliRoot, AliPhysics and AliDPG from their master branches (the tag will be clearly marked as “rc”, as in “release candidate”)
+* Build the three of them, using the master of alidist
+* Wait for their deployment on CVMFS: we use the nightlies repository, /cvmfs/alice-nightlies.cern.ch
+
+Start the validation script for Reconstruction first, then General Purpose Monte Carlo.
+
+# Essential Operations Guide
+
+## Managing data on EOS
 
 EOS and its XRootD interface are used by the release validation:
 
@@ -94,7 +106,7 @@ used as a dataset for a release validation. In order to make this file usable:
    variable
 
 
-# Proxy certificate
+## Proxy certificate
 
 Release validation uses a Grid proxy certificate mapped to the **alibot**
 EOS/CERN service account on eospublic.cern.ch.
