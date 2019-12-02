@@ -66,12 +66,15 @@ The compute node is a physical machine outside the CERN datacenter, which makes 
     * Hardware Model: `ProLiant DL380 Gen10`
 
 ### Prepare installation
-* Download kikstart file from `Templates>provision Template>Review`
-* Set install to `graphical`
-* Remove content about:
-    *  bootloader (mbr)
-    *  partitioning
-* Host ks file on a webserver (e.g. `python -m SimpleHTTPServer`)
+* Based on the Foreman entry, a provisioning template in form of a _kickstart file_ is generated and is updated every time the configuration in Foreman is changed.
+* Since the compute node is outside of the CERN datacenter it does not have direct access to this file, so it needs to be downloaded and self hosted for the duration of the installation.
+  * Download kikstart file from `Templates>provision Template>Review`
+  * Inside the file:
+    * Set install to `graphical`
+    * Remove content about:
+      *  bootloader (mbr)
+      *  partitioning
+  * Host the file on a webserver. The simplest way is to use python2.7 `python -m SimpleHTTPServer` in the directory where your kickstart file is located.
 * Stage certificate on `aiadm.cern.ch`:
 ```
 certmgr-stage --host alibicompute01.cern.ch
