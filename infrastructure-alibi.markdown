@@ -106,3 +106,13 @@ linuxefi (http)/aims/boot/<YOUR_CC_VERSION_HERE>/vmlinuz ip=dhcp ks=http://<PATH
 * Start the installation and let it finish. The machine will restart automatically.
 * At this point you will notice that the `post installation` section of the installation has not been completed automatically. Since all commands are bash, it can be executed dully by copy& paste or extracted and executed as a separate script.
 * Afterwards the machine state should reflect the puppet manifests and can be fully monitored using the CERN Foreman infastruture.
+
+## Installation of packages via puppet
+
+* Packages are installed via puppet. The configuration / manifests is taken from a special `alibi` branch on a central git repository 
+  [PUPPET-HOSTGROUP](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/alibi).
+
+* Upon updating the manifests, changes can be immediately applied through (as root)
+  ```bash
+  puppet agent -t -v
+  ```
