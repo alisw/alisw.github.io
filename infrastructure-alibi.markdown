@@ -116,3 +116,20 @@ linuxefi (http)/aims/boot/<YOUR_CC_VERSION_HERE>/vmlinuz ip=dhcp ks=http://<PATH
   ```bash
   puppet agent -t -v
   ```
+
+## Troubleshooting
+
+### Symptom: No allocations can be made, node stuck in "drain" state
+
+In case `sinfo` shows:
+```bash
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+compute*     up   infinite      1  drain alibicompute01.cern.ch
+```
+We need to undrain the node. 
+* Make sure you understand why the node is stuck, if necessary restart the node. 
+* As admin, reset the node state by
+```bash
+scontrol update nodename=node10 state=idle
+```
+
