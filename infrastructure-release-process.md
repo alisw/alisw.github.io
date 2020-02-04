@@ -33,7 +33,7 @@ function update() {
   
   document.getElementById("alidist_target").value = "AliPhysics-" + target + "-01-patches";
   document.getElementById("alidist_tag").value = "AliPhysics-" + release + "-01";
-  document.getElementById("alidist_title").value = release;
+  document.getElementById("alidist_title").value = "AliPhysics-" + release + "-01";
   document.getElementById("alidist_button").innerHTML = "Create tag for alidist@" + "AliPhysics-" + release + "-01";
   document.getElementById("aliroot_target").value = target + "-patches";
   document.getElementById("aliroot_tag").value = release;
