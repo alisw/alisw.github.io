@@ -24,8 +24,11 @@ function update() {
   var release = document.getElementById("release").value;
   var match = release.match(targetMatcher);
   if (match === null) {
+    document.getElementById("errorDiv").style.display = "block";
+    document.getElementById("workDiv").style.display = "none";
     return;
   }
+  document.getElementById("errorDiv").style.display = "none";
   var target = match[1];
   
   document.getElementById("alidist_target").value = "AliPhysics-" + target + "-01-patches";
@@ -40,33 +43,36 @@ function update() {
   document.getElementById("aliphysics_tag").value = release + "-01";
   document.getElementById("aliphysics_title").value = release + "-01";
   document.getElementById("aliphysics_button").innerHTML = "Create tag for AliPhysics@" + release + "-01";
+  document.getElementById("workDiv").style.display = "block";
 }
 </script>
-
+<div id="errorDiv"><strong>Please specify a proper tag in the format vX-YY-ZZ[a-z].</strong></div>
 <form>
-  <input id="release" type="text" onkeyup="update()" value="v5-09-XX"></input>
+  <input id="release" type="text" onkeyup="update()" onload="update()" value="v5-09-XX">
 </form>
+<div id="workDiv" style="display: none;">
 <form target="_blank">
-  <input id="alidist_target" type="hidden" name="target"></input>
-  <input id="alidist_tag" type="hidden" name="tag"></input>
-  <input id="alidist_title" type="hidden" name="title"></input>
+  <input id="alidist_target" type="hidden" name="target">
+  <input id="alidist_tag" type="hidden" name="tag">
+  <input id="alidist_title" type="hidden" name="title">
   <button id="alidist_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/alidist/releases/new">Create alidist release</button>
 </form>
 <br/>
 <form target="_blank">
-  <input id="aliroot_target" type="hidden" name="target"></input>
-  <input id="aliroot_tag" type="hidden" name="tag"></input>
-  <input id="aliroot_title" type="hidden" name="title"></input>
+  <input id="aliroot_target" type="hidden" name="target">
+  <input id="aliroot_tag" type="hidden" name="tag">
+  <input id="aliroot_title" type="hidden" name="title">
   <button id="aliroot_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/AliRoot/releases/new">Create AliRoot release</button>
 </form>
 <br/>
 <form target="_blank">
-  <input id="aliphysics_target" type="hidden" name="target"></input>
-  <input id="aliphysics_tag" type="hidden" name="tag"></input>
-  <input id="aliphysics_title" type="hidden" name="title"></input>
+  <input id="aliphysics_target" type="hidden" name="target">
+  <input id="aliphysics_tag" type="hidden" name="tag">
+  <input id="aliphysics_title" type="hidden" name="title">
   <button id="aliphysics_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/AliRoot/releases/new">Create AliPhysics release</button>
 </form>
 <br/>
+</div>
 
 Once the release is built. You can create a pull request in `alidist` from the branch `AliPhysics-<aliroot-tag>-01-patches` so that master uses a specific release. You might also want to move the dailies to such a release.
 
