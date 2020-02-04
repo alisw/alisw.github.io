@@ -18,6 +18,56 @@ Creation of a release can be done in several ways, however this is the preferred
 
 The last step will trigget a build in Jenkins.
 
+<script>
+function update() {
+  var targetMatcher = /(v[0-9]-[0-9][0-9]-[0-9][0-9])[a-z]*/;
+  var release = document.getElementById("release").value;
+  var match = release.match(targetMatcher);
+  if (match === null) {
+    return;
+  }
+  var target = match[1];
+  
+  document.getElementById("alidist_target").value = "AliPhysics-" + target + "-01-patches";
+  document.getElementById("alidist_tag").value = "AliPhysics-" + release + "-01";
+  document.getElementById("alidist_title").value = release;
+  document.getElementById("alidist_button").innerHTML = "Create tag for alidist@" + "AliPhysics-" + release + "-01";
+  document.getElementById("aliroot_target").value = target + "-patches";
+  document.getElementById("aliroot_tag").value = release;
+  document.getElementById("aliroot_title").value = release;
+  document.getElementById("aliroot_button").innerHTML = "Create tag for AliRoot@" + release;
+  document.getElementById("aliphysics_target").value = target + "-01-patches"
+  document.getElementById("aliphysics_tag").value = release + "-01";
+  document.getElementById("aliphysics_title").value = release + "-01";
+  document.getElementById("aliphysics_button").innerHTML = "Create tag for AliPhysics@" + release + "-01";
+}
+</script>
+
+<form>
+  <input id="release" type="text" onkeyup="update()" value="v5-09-XX"></input>
+</form>
+<form target="_blank">
+  <input id="alidist_target" type="hidden" name="target"></input>
+  <input id="alidist_tag" type="hidden" name="tag"></input>
+  <input id="alidist_title" type="hidden" name="title"></input>
+  <button id="alidist_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/alidist/releases/new">Create alidist release</button>
+</form>
+<br/>
+<form target="_blank">
+  <input id="aliroot_target" type="hidden" name="target"></input>
+  <input id="aliroot_tag" type="hidden" name="tag"></input>
+  <input id="aliroot_title" type="hidden" name="title"></input>
+  <button id="aliroot_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/AliRoot/releases/new">Create AliRoot release</button>
+</form>
+<br/>
+<form target="_blank">
+  <input id="aliphysics_target" type="hidden" name="target"></input>
+  <input id="aliphysics_tag" type="hidden" name="tag"></input>
+  <input id="aliphysics_title" type="hidden" name="title"></input>
+  <button id="aliphysics_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/AliRoot/releases/new">Create AliPhysics release</button>
+</form>
+<br/>
+
 Once the release is built. You can create a pull request in `alidist` from the branch `AliPhysics-<aliroot-tag>-01-patches` so that master uses a specific release. You might also want to move the dailies to such a release.
 
 # Patching old ( <= AliRoot-v5-08) releases
