@@ -69,7 +69,7 @@ function update() {
   <input id="aliphysics_target" type="hidden" name="target">
   <input id="aliphysics_tag" type="hidden" name="tag">
   <input id="aliphysics_title" type="hidden" name="title">
-  <button id="aliphysics_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/AliRoot/releases/new">Create AliPhysics release</button>
+  <button id="aliphysics_button" type="submit" method="get" target="_blank" formaction="https://github.com/alisw/AliPhysics/releases/new">Create AliPhysics release</button>
 </form>
 <br/>
 </div>
