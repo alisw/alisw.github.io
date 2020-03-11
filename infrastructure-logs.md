@@ -40,6 +40,14 @@ In case you need to update the S3 access permission policy, e.g. in case the fro
 
 [clouddocs]: https://clouddocs.web.cern.ch/clouddocs/
 
+You can verify that a given machine has access to the logs by doing:
+
+```bash
+curl alice-build-logs.s3.cern.ch/test.txt
+```
+
+If you get an actual reply, rather than permission denied, it means the machine can access the logs.
+
 ## Accessing the logs programmatically
 {: #accessing-logs}
 
