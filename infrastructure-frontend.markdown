@@ -46,3 +46,24 @@ The quick recipe to restart the frontend is:
   * `s3/alice-build-logs-policy.json`
   
   and they need to have the right Ip Address registered there.
+
+## Enabling / disabling one host in the load balancing
+
+Machines in the `alibuild/frontend` hostgroup participate in a load balanced DNS alias. In order to do so they must be in roger state `production`. To do so:
+
+```
+roger update --app_alarmed false --appstate production --message 'Fully operational' <hostname>
+```
+
+to do an intervention on them:
+
+```
+roger update --app_alarmed true --appstate intervention --message '<Some log message>' <hostname>
+puppet agent -t -v
+```
+
+You can check their load balanced score with:
+
+```
+/usr/local/sbin/lbclient -d TRACE
+```
