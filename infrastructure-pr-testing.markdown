@@ -47,7 +47,6 @@ make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/i
 * [Removing a PR checker](#remove-checker)
 * [Inspecting the status of the checker](#inspect-checker)
 * [Monitoring the checkers](#monitor-checkers)
-* [macOS checkers](#mac-checkers)
 
 ## Setup your environment
 {:setup}
