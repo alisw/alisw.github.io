@@ -23,6 +23,7 @@ https://gitlab.cern.ch/ALICEDevOps/aliops.git/
 * <a href="{{site.baseurl}}/infrastructure-logs">Build Logs</a>
 * <a href="{{site.baseurl}}/infrastructure-publisher">Release Publishing</a>
 * <a href="{{site.baseurl}}/infrastructure-relval">RelVal</a>
+* <a href="{{site.baseurl}}/infrastructure-alibi-user-guide">AliBI User Guide</a>
 
 ## Infrastructure
 
