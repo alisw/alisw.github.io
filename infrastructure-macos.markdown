@@ -1,13 +1,23 @@
+---
+title: Pull Request Builders on macOS
+layout: main
+categories: infrastructure
+---
+
 The macOS build infrastructure works the same way as it's Linux counterpart. However, instead of being deployed via Apache Aurora, the scripts are run directly as scripts on macOS.
 
+This guide covers:
+* [Installation and initial Setup of a macOS Pull Request Checker](#installation_and_initial_setup)
+* [Running the Pull Request Checker](#running_the_pull_request_checker)
 
-## Initial Setup 
+# Installation and Initial Setup
+{: #installation_and_initial_setup}
 These are the instructions for macOS 10.15 (Mojave)
 
 * during setup create a user account for the `aliBuild` user, do not sound in to iCloud.
 * Sign into the AppStore as `ali.bot@cern.ch`.
 
-#### Software Prerequisites
+## Software Prerequisites
 * Install XCode 
 * Install the command line tools 
 ```bash
@@ -38,7 +48,7 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 * don't forget to reload your session
 
 
-#### Python 
+## Python 
 macOS developer tools (for now) come with both `python2.7` and `python3`. We will use `python3` from `brew` to not mess with Apples defaults. Both `python3` and `pip` are already installed as parts of the prerequisites and we need to create entries for `pip` and `python` in `/usr/local/bin`.
 
 * Reinstalling pip will create the right symbolic links in `/usr/local/bin`:
@@ -50,13 +60,13 @@ pip3 install --upgrade --force-reinstall pip
 ln -s  /usr/local/bin/python3 /usr/local/bin/python
 ```
 
-#### Disable System Integrity Protection (SIP)
+## Disable System Integrity Protection (SIP)
 * Reboot the machine into recovery mode by holding `Command-R` at startup until the Apple logo appears
 * In recovery mode run ```csrutil disable``` in a terminal and reboot - it can be re-enabled in the recovery mode via ```csrutil enable```
 * Check the
 
 
-#### Create work environment
+## Create work environment
 With macOS 10.15 `/`is no longer writable. Create a _synthetic link_ by adding  
 ```bash
 /build   System/Volumes/Data/build
@@ -64,7 +74,7 @@ With macOS 10.15 `/`is no longer writable. Create a _synthetic link_ by adding
 to `/etc/synthetic.conf` (tab separated, not by whitespaces) and reboot.
 Afterwards exclude the `/build` directory from Spotlight in the system preferences. Go to `(Apple) menu>System preferences>Spotlight`. In the `Privacy` tab, hit the `+` button. Now select the `/build` directory and confirm.
 
-#### Prepare Builder Scripts
+## Prepare Builder Scripts
 * In `/build` clone the `ali-Bot` repository which contains the CI scripts. 
 ```bash
 git clone https://github.com/alisw/ali-bot.git
@@ -74,7 +84,8 @@ git clone https://github.com/alisw/ali-bot.git
 chmod 600  /Users/alibuild/.continuous-builder
 ```
 
-## Running the PR Checker
+# Running the Pull Request Checker
+{: #running_the_pull_request_checker}
 
 There is a dedicated process to run validation of pullrequests for macos.The routines therein are implemented within a [runscript](https://github.com/alisw/ali-bot/blob/master/ci/run-continuous-builder.sh) inside [ali-bot](https://github.com/alisw/ali-bot). This script needs to be started manually using a `screen` session to ensure it stays open.
 
