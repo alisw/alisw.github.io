@@ -1,4 +1,8 @@
-# ALICE Benchmarking Infrastrure (AliBI)
+---
+title: ALICE Benchmarking Infrastrure (AliBI)
+layout: main
+categories: infrastructure
+---
 
 The main goal of AliBI is to provide a service for benchmarking CPU and GPU code in a consistent, reproducable environment. This allows monitoring of performance of the code base over time, especially for simulation and reconstruction tasks.
 
