@@ -1,6 +1,3 @@
-# Builders for macOS
-{:mac-checkers}
-
 The macOS build infrastructure works the same way as it's Linux counterpart. However, instead of being deployed via Apache Aurora, the scripts are run directly as scripts on macOS.
 
 
