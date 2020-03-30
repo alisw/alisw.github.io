@@ -1,4 +1,9 @@
-# AliBI Quickstart Guide 
+---
+title: AliBI Quickstart Guide 
+layout: main
+categories: infrastructure
+---
+
 
 The **Ali**ce **B**enchmark **I**nfrastructure is a service that was established to provide a platform for systematic, reproducable and consistent benchmarks for ALICE O2.
 
