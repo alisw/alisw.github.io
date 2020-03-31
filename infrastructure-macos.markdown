@@ -34,14 +34,17 @@ brew doctor
 ```
 * Install the software prerequisites: 
 ```bash
-brew install alisw/system-deps/o2-full-deps 
+brew install alisw/system-deps/alice-build-machine 
 ```
-* For `alidist` PR builders install additional steps are required:
+
+* Make sure that the OpenJDK can be found by the CI scripts by doing:
+
 ```bash
-brew install mysql openjdk
 sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 ```
+
 Then append the `openjdk` to `PATH` via the `.zshrc`
+
 ```bash
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 ```
