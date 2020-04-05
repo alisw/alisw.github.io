@@ -38,18 +38,17 @@ Checkers on macOS do not use Aurora, instead they are run directly as scripts.
  interface](http://aurora.apache.org/documentation/0.16.0/reference/client-commands/)** and
 make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/infrastructure-aurora) correctly**.
 
-* [Setup your environment](#setup)
-* [Listing active PR checker](#list-checkers)
-* [Deploying a PR checker](#deploy-checker)
-* [Scaling up the number of checkers](#scale-up-checkers)
-* [Scaling down the number of checkers](#scale-down-checkers)
-* [Restart a PR checker](#restart-checker)
-* [Removing a PR checker](#remove-checker)
-* [Inspecting the status of the checker](#inspect-checker)
-* [Monitoring the checkers](#monitor-checkers)
+* [Setup your environment](#setup-your-environment)
+* [Listing active PR checker](#listing-active-pr-checkers)
+* [Scaling up the number of checkers](#scaling-up-the-number-of-checkers)
+* [Scaling down the number of checkers](#scaling-down-the-number-of-checkers)
+* [Creating a new checker](#creating-a-new-checker)
+* [Updating a PR checker](#updating-a-pr-checker)
+* [Restarting a checker](#restarting-a-checker)
+* [Inspecting the checkers](#inspecting-the-checkers)
+* [Monitoring the checkers](#monitoring-the-checkers)
 
 ## Setup your environment
-{:setup}
 
 Besides setting up your ALICE Aurora environment as described [here](https://alisw.github.io/infrastructure-aurora), you must be part of the `alice-aurora-mesosci` [egroup](https://egroups.cern.ch). Moreover, you will need to download
 the set of recipes describing the jobs from the `ali-marathon` (bad name...) repository:
@@ -61,7 +60,6 @@ git clone https://gitlab.cern.ch/ALICEDevOps/ali-marathon
 unless otherwise specified all the instructions of this page assume that you use `ali-marathon` as your working directory.
 
 ## Listing active PR checkers
-{:list-checkers}
 
 In order to see the list of the running prs you can do:
 
@@ -72,7 +70,6 @@ where the resulting job names will follow the convention:
     build_<Package>_<alibuild-default>
 
 ## Scaling up the number of checkers
-{:scale-up-checkers}
 
 A simpler update operation is scaling up (or down) the number of checkers. This is also done with the `aurora add`
 command which will add more instances, duplicating the configuration of one of the running ones.
@@ -99,7 +96,6 @@ aurora task ssh -l root <ID> "rm config/silent"
 ```
 
 ## Scaling down the number of checkers
-{:scale-down-checkers}
 
 Scaling down the number of checker might be useful to claim back resources in low activity periods. The logic is similar to the scaling up:
 
@@ -116,8 +112,21 @@ aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
 aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
 ```
 
+## Creating a new checker
+
+Checkers configuration is in `ali-marathon/aurora/continuous-integration.aurora`. I order to add a new checker you need
+to add a properly configured `CIConfig` instance to the `specs` list and start it with:
+
+```bash
+aurora job create build/mesosci/devel/<ci-name>
+```
+
+where `<ci-name>` is the value of the `ci_name` field in the associated `CIConfig` configuration object. Notice that in
+order to post status updates for pull requests, the user `alibuild` must be a collaborator of the repository with write access.
+
+An example of the `continuous-integration.aurora` update for a newly added checker `o2-dataflow` can be found at this [GitLab MR](https://gitlab.cern.ch/ALICEDevOps/ali-marathon/-/commit/71b3ddb52afcbabf0671672b5888e61ac8905423).
+
 ## Updating a PR checker
-{:deploy-checker}
 
 Sometimes you want to update the cluster to a new version of the build script, e.g. to address some bug
 or to provide a new feature. This can be done with no interruption of service by using the following recipe.
@@ -187,7 +196,6 @@ aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worke
 ```
 
 ## Restarting a checker
-{:restart-checker }
 
 In some cases, builders need to be restarted. This will redeploy the same aurora configuration,
 but the `ali-bot` scripts will be taken from HEAD and `continuous-builder.sh` will be run again.
@@ -213,7 +221,6 @@ aurora task ssh -l root <ID>/0-7 "rm config/silent"
 ```
 
 ## Inspecting the checkers
-{:inspect-checker}
 
 Toi inspect checkers, you should probably get familiar with the command line client of aurora [documentation](http://aurora.apache.org/documentation/latest/reference/client-commands/).
 
@@ -268,20 +275,7 @@ aurora task run -l root <ID> "cd ali-bot ; git pull --rebase"
 aurora task run -l root <ID> "tail -n1 sw/BUILD/O2-latest/log"
 ```
 
-## Creating a new checker
-
-Checkers configuration is in `ali-marathon/aurora/continuous-integration.aurora`. I order to add a new checker you need
-to add a properly configured `CIConfig` instance to the `specs` list and start it with:
-
-```bash
-aurora job create build/mesosci/devel/<ci-name>
-```
-
-where `<ci-name>` is the value of the `ci_name` field in the associated `CIConfig` configuration object. Notice that in
-order to post status updates for pull requests, the user `alibuild` must be a collaborator of the repository with write access.
-
 ## Monitoring the checkers
-{:monitor-checkers}
 
 Builders are monitored in [Monalisa](http://alimonitor.cern.ch/display?page=github/combined).
 In particular you can use aliendb9 and look at the `github-pr-checker/github.com/github-api-calls`
