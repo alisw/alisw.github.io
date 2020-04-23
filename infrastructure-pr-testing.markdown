@@ -126,10 +126,36 @@ order to post status updates for pull requests, the user `alibuild` must be a co
 
 An example of the `continuous-integration.aurora` update for a newly added checker `o2-dataflow` can be found at this [GitLab MR](https://gitlab.cern.ch/ALICEDevOps/ali-marathon/-/commit/71b3ddb52afcbabf0671672b5888e61ac8905423).
 
+## Updating the PR checker inner loop
+
+Sometimes one might need to update the inner loop of the PR checking, without having to restart the checker itself. This can be done for whatever update of the `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` files. In order to do so,
+make you need to:
+
+* SSH on the machine running the docker container for the test. E.g. via:
+
+```bash
+aurora task ssh -l root <job-id>
+```
+
+* Enter in the container running the test:
+
+```bash
+docker exec -it <container-id> /bin/bash
+```
+
+* Force upgrade the ali-bot python package:
+
+```bash
+pip install --upgrade git+https://github.com/alisw/ali-bot@master
+```
+
+Notice that upgrades will be picked up at the next iteration of the PR builder, so you might still have to wait for the current one to finish before you can see your updates deployed.
+
 ## Updating a PR checker
 
-Sometimes you want to update the cluster to a new version of the build script, e.g. to address some bug
-or to provide a new feature. This can be done with no interruption of service by using the following recipe.
+For all changes regarding `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` please see the [previous section](#updating-the-pr-checker-inner-loop).
+
+For all other changes, a redeployment is required. This can be done with no interruption of service by using the following recipe.
 
 * Make sure that the number of instances you have in `aurora/continuous-builder.sh` matches the final number of instances you want to have.
 
