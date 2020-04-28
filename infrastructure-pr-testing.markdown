@@ -30,7 +30,7 @@ By default the builders will behave in the following manner:
 We use Apache Aurora to deploy the builders on linux while builders on macOS are deployed 
 directly.
 
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB" frameborder="0" style="border:0"></iframe>
+<iframe width="700" height="504" src="https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB" frameborder="0" style="border:0"></iframe>
   
 # Essential operations guide
 
