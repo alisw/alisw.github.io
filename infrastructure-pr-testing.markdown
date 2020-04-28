@@ -30,6 +30,8 @@ By default the builders will behave in the following manner:
 We use Apache Aurora to deploy the builders on linux while builders on macOS are deployed 
 directly.
 
+<iframe width="800" height="600" src="https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 # Essential operations guide
 
 The following documentation applies to the Linux pull request checkers deployed with Aurora. 
