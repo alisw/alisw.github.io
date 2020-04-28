@@ -309,4 +309,4 @@ Builders are monitored in [Monalisa](http://alimonitor.cern.ch/display?page=gith
 In particular you can use aliendb9 and look at the `github-pr-checker/github.com/github-api-calls`
 metric to know how many API calls are being done by the system.
 
-You can also get a detailed view the activity of the builders in our [Build Infrastructure Cockpit](https://alisw.cern.ch/cockpit).
+You can also get a detailed view the activity of the builders in our [Build Infrastructure Cockpit](https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB). If you are interested in extending the reports, please contact us.
