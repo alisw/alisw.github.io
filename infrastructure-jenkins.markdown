@@ -116,6 +116,17 @@ The step by step guide is:
 
   The `<parameters>` are formatted as in a URL: `<name>=<value>&<name2>=<value2>`.
 
+## Creating Jenkins agents with guaranteed resources
+
+In order to create a Jenkins agent which has some guarantees in terms of resources you can do so by using aurora. 
+* First of all you need to go to `alijenkins.cern.ch > New Node` and create a new node. Assuming the architecture is `<arch>` the node needs to be called (e.g. `<arch>-builder-<X>`) where `<X>` is incremental number. Valid `<arch>` values are, for the time being `slc7`, and `slc8`.
+* Click on the newly create agent and note down the associated secret.
+* Download the aurora configuration in `ali-marathon`.
+* Finally you can create the new agent with:
+
+```bash
+aurora job create build/mesosci/prod/jenkins-<arch>-builder-1 aurora/ci-services.aurora --bind arch=<arch> --bind agent_name=<arch>-builder-<X> --bind secret=<secret>
+```
 
 ## Gotchas and issues:
 {: #gotchas}
