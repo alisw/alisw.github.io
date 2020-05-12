@@ -14,6 +14,12 @@ Then we start the [AliRootDPGValidation](https://alijenkins.cern.ch/job/AliRootD
 
 Start the validation script for Reconstruction first, then General Purpose Monte Carlo.
 
+# Essential User Guide
+
+All the release validations performed are available at:
+
+https://ali-ci.cern.ch/release-validation/
+
 # Essential Operations Guide
 
 ## Managing data on EOS
