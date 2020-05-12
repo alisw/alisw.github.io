@@ -18,7 +18,7 @@ Start the validation script for Reconstruction first, then General Purpose Monte
 
 All the release validations performed are available at:
 
-[https://ali-ci.cern.ch/release-validation/]()
+[](https://ali-ci.cern.ch/release-validation/)
 
 # Essential Operations Guide
 
