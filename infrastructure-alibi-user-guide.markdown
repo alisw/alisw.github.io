@@ -50,7 +50,7 @@ Find out more about `sinfo` [here](https://slurm.schedmd.com/sinfo.html)
 
 ### Query for Jobs
 * Login to `alibi.cern.ch`
-* The `squeue` command will display all of the request that have been submitted to one of the queues and are either currently running or pending.
+* The `squeue` command will display all of the request that have been submitted to one of the queues and are either currently running or pending
 ```bash
 -bash-4.2$ squeue 
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
