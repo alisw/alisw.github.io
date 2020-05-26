@@ -18,13 +18,14 @@ of the pull request.
 Access is allowed to ALICE members who are part of the
 [`alice-aurora-users`](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10225666) **and** of the [`alice-agile-admin`](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10172645) egroups.
 
+If you have toubles following the instructions, in particular if you have certificate or kerberos issues, please make sure you read the [Troubleshooting](#troubleshooting) section.
 
 # User guide
 
 * [Getting the client](#get-the-client)
 * [Configuring your environment](#configuring)
 * [Run a simple application](#simple-app)
-* [Gotchas and issues](#gotchas)
+* [Troubleshooting](#troubleshooting)
 
 ## Getting the client
 {:get-the-client}
@@ -130,8 +131,7 @@ which will ssh for you in the sandbox for the job on the machine it is running. 
     
 You can find more information about the available commands in the [official Aurora documentation]( http://aurora.apache.org/documentation/0.16.0/reference/client-commands/).
 
-## Gotchas & issues
-{: gotchas}
+## Troubleshooting
 
 * On Costin machines, for security reasons the log provider are not running, so you need to directly ssh inside them and look at the filesystem.
 
