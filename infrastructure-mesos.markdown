@@ -253,3 +253,7 @@ OpenStack GUI, in the Instances tab, or doing:
       openstack server reboot --hard <server name>
 
 in case the GUI is not functional.
+
+## Master backups
+
+Backup of the Mesos Master is done via CERN TSM. This needs to be renewed regularly and CERN IT will ping by email about it. Agents are not backed up.
