@@ -12,8 +12,8 @@ the branch of a repository and they usually include as many tests as possible wh
 can help making sure that the branch is in the best possible state.
 
 In order to drive {{site.experiment}} builds we use [Jenkins](https://jenkins-ci.org) while
-results of the builds are shown in [{{site.exp_prefix}}-ci.cern.ch]() (or it's
-mirror [{{site.exp_prefix}}sw.gihub.io]()).
+results of the builds are shown in [https://alijenkins.cern.ch/job/DailyBuilds/](
+https://alijenkins.cern.ch/job/DailyBuilds/).
 
 The job which schedules the build is
 [schedule-all-ib](https://{{site.exp_prefix}}jenkins.cern.ch/job/schedule-all-ib/)
