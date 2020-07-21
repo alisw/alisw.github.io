@@ -10,9 +10,8 @@ This is to document the release process of AliRoot / AliPhysics.
 
 Creation of a release can be done in several ways, however this is the preferred workflow:
 
-* Create a branch in alidist called `AliPhysics-<aliroot-tag>-01-patches`.
-* Replace all the occurences of the old `<aliroot-tag>` with the new ones and commit on the newly created patches branch. In particular make sure that the `defaults-release.sh` file has the overrides for AliRoot and AliPhysics.
-* Create a release in alidist called `AliPhysics-<aliroot-tag>-01` using the `AliPhysics-<aliroot-tag>-01-patches` branch. 
+* If not present, create a branch in alidist called `AliPhysics-<aliroot-tag>-01-patches`.
+* Replace all the occurences of the old `<aliroot-tag>` with the new ones and commit on the newly created patches branch. In particular make sure that the `defaults-release.sh` file has the overrides for AliRoot and AliPhysics. You can do this by running the [Prepare AliPhysics tag](https://github.com/alisw/alidist/actions?query=workflow%3A%22Prepare+AliPhysics+tag%22) Github Action. This will take care of preparing a release in alidist called `AliPhysics-<aliroot-tag>-01` using the `AliPhysics-<aliroot-tag>-01-patches` branch. 
 * Create a release in AliRoot called `<aliroot-tag>` using your branch of choice.
 * Create a release in AliPhysics called `<aliroot-tag>-01` using your branch of choice.
 
