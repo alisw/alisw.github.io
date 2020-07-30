@@ -131,7 +131,7 @@ directory to `aiadmin.cern.ch` (a login node managed by CERN IT):
 
     rsync -av /etc/grid-security/ youruser@aiadm.cern.ch:eos-cert/
 
-Connect to `aiadmin.cern.ch`, then:
+Connect to `aiadm.cern.ch`, then:
 
     cd eos-cert/
     grid-proxy-init -cert hostcert.pem -key hostkey.pem -out eos-proxy.pem -valid 9000:0
