@@ -57,10 +57,10 @@ Creation of the jenkins masters in CERN Foreman setup is described at
 While the machine on which jenkins run is provisioned by OpenStack, the actual Jenkins instance is managed by Aurora. The machine will join the Mesos cluster with a `dedicated:jenkins/master` attribute and the instance itself can be started with:
 
 ```bash
-aurora job create build/jenkins/prod/jenkins_master jenkins.aurora
+aurora job create build/jenkins/prod/jenkins_master aurora/jenkins.aurora
 ```
 
-You can then look at the logs in the aurora gui.
+You can then look at the logs in the Aurora GUI. Other maintanance tasks can be found in the same `aurora/jenkins.aurora` configuration.
 
 ### Adding a new Mesos cloud
 {: #add-mesos}
