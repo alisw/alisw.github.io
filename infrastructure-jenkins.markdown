@@ -6,7 +6,7 @@ categories: infrastructure
 
 In order to drive the Continuos Integration process the ALICE build infrastructure uses Jenkins. 
 
-Jenkin master belong to the  `alibuild/jenkins` hostgroup in CERN puppet, while slaves
+Jenkin master(s) is started by Aurora, on a machine which belongs to the `alibuild/mesos/slave/jenkins` hostgroup in CERN puppet, while slaves
 are in general dynamically provisioned using Apache Mesos using the Jenkins
 [mesos-plugin](https://github.com/jenkinsci/mesos-plugin). The main advantage
 of this setup is that the plugin can spawn slaves inside a docker container so
@@ -16,7 +16,8 @@ that it can run, for example SLC5 on CC7 or similar setups.
 
 # Essential Operation Guides:
 
-* [Create the Jenkins master](#create-jenkins)
+* [Create the Jenkins](#create-jenkins)
+* [Starting Jenkins in aurora](#start-jenkins)
 * [Adding a new Mesos cloud](#add-mesos-cloud)
 * [Killing a stuck job](#kill-stuck-job)
 * [Triggering builds programmatically](#trigger-jobs)
@@ -43,13 +44,23 @@ Creation of the jenkins masters in CERN Foreman setup is described at
 
       MACHINE_NAME=<alijenkinsXX>
 
-      ai-bs -g alibuild/jenkins                              \
+      ai-bs -g alibuild/mesos/slave/jenkins                  \
             --cc7                                            \
             --nova-sshkey {{site.builduser}}                 \
             --nova-flavor {{site.openstack_master_flavor}}   \
             --landb-mainuser alice-agile-admin               \
             --landb-responsible alice-agile-admin            \
             $MACHINE_NAME
+
+### Starting Jenkins
+
+While the machine on which jenkins run is provisioned by OpenStack, the actual Jenkins instance is managed by Aurora. The machine will join the Mesos cluster with a `dedicated:jenkins/master` attribute and the instance itself can be started with:
+
+```bash
+aurora job create build/jenkins/prod/jenkins_master jenkins.aurora
+```
+
+You can then look at the logs in the aurora gui.
 
 ### Adding a new Mesos cloud
 {: #add-mesos}
