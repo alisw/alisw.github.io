@@ -12,7 +12,7 @@ are in general dynamically provisioned using Apache Mesos using the Jenkins
 of this setup is that the plugin can spawn slaves inside a docker container so
 that it can run, for example SLC5 on CC7 or similar setups.
 
-- [/code/manifests/alibuild/jenkins.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/master/code/manifests/jenkins.pp)  for the master.
+- [/code/manifests/alibuild/mesos/slave/jenkins.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/master/code/manifests/mesos/slave/jenkins.pp)  for the master.
 
 # Essential Operation Guides:
 
