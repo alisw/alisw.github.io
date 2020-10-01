@@ -37,7 +37,7 @@ or by using the aliaurora web UI.
 
 ### CVMFS
 
-Packages published on CVMFS can be configured from [https://github.com/alisw/ali-bot/tree/master/publish/aliPublish.conf](). Apart from having your changes in master, no further action is required.
+Packages published on CVMFS can be configured via the [aliPublish.conf](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish.conf) file. Apart from having your changes in master, no further action is required.
 
 ### RPMS
 
