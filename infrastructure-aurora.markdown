@@ -18,7 +18,7 @@ of the pull request.
 Access is allowed to ALICE members who are part of the
 [`alice-aurora-users`](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10225666) **and** of the [`alice-agile-admin`](https://e-groups.cern.ch/e-groups/Egroup.do?egroupId=10172645) egroups.
 
-If you have toubles following the instructions, in particular if you have certificate or kerberos issues, please make sure you read the [Troubleshooting](#troubleshooting) section.
+If you have troubles following the instructions, in particular if you have certificate or kerberos issues, please make sure you read the [Troubleshooting](#troubleshooting) section.
 
 # User guide
 
@@ -34,9 +34,8 @@ The GUI is only a read-only view on the state of the jobs
 running on the cluster. If you want to interact with Aurora
 itself you will need the aurora client.
 
-You can get a binary distribution of the Aurora client at:
-
-<https://github.com/alisw/aurora/releases/tag/0.16.0-alice2>
+You can get a binary distribution of the Aurora client at
+<https://github.com/alisw/aurora/releases>.
 
 Alternatively you can download the sources and build it with:
 
@@ -79,18 +78,20 @@ Aug 13 14:26:57 2019  Aug 14 00:26:57 2019  krbtgt/CERN.CH@CERN.CH
 In order to reach the Aurora cluster, you need to configure how to
 access it. This is done by creating a file `~/.aurora/clusters.json`:
 
-    [{
-      "name": "build",
-      "scheduler_uri": "https://aliaurora.cern.ch",
-      "auth_mechanism": "KERBEROS",
-      "slave_run_directory": "latest",
-      "slave_root": "/build/mesos"
-    }]
+```json
+[{
+  "name": "build",
+  "scheduler_uri": "https://aliaurora.cern.ch",
+  "auth_mechanism": "KERBEROS",
+  "slave_run_directory": "latest",
+  "slave_root": "/build/mesos"
+}]
+```
 
 If everything is setup as expected you should be able to get a list of
 jobs by doing:
 
-```
+```bash
 $ aurora job list build
 ```
 
