@@ -127,9 +127,13 @@ Creation of mesos agents in CERN Foreman setup is described at
 machine is:
 
 - Login to `aiadm.cern.ch`.
-- Set up your OpenStack environment by doing:
+- Set up your OpenStack environment by doing (for build machines):
 
       eval $(ai-rc "ALICE Release Testing")
+
+  or (for the release validation machines):
+  
+      eval $(ai-rc "ALICE Cloud Tests")
 
 - Specify a few parameters for the machine you want to spawn:
 
@@ -140,7 +144,7 @@ machine is:
   receive from it the Puppet configuration:
 
       ai-bs -g alibuild/mesos/slave                     \
-            --foreman-environment alibuild_devel        \
+            --foreman-environment production            \
             --cc7                                       \
             --nova-sshkey alibuild                      \
             --nova-flavor m2.2xlarge                    \
@@ -148,6 +152,17 @@ machine is:
             --landb-responsible alice-agile-admin       \
             --nova-attach-new-volume vdb=500GB:type=io1 \
             $MACHINE_NAME
+
+   or for release validation machines:
+
+      ai-bs -g alibuild/mesos/slave                     \
+            --foreman-environment production            \
+            --cc7                                       \
+            --nova-sshkey alibuild                      \
+            --nova-flavor m2.2xlarge                    \
+            --landb-mainuser alice-agile-admin          \
+            --landb-responsible alice-agile-admin       \
+            $MACHINE_NAME  
 
 This will spawn a new machine. You can check the boot status either in the
 OpenStack GUI or via `openstack server list`. Of course you should change the name
@@ -205,10 +220,17 @@ In order to perform the rebuild you need to do:
 - Set up your OpenStack environment by doing:
 
       eval $(ai-rc "ALICE Release Testing")
+      
+  or 
+
+      eval $(ai-rc "ALICE Cloud Tests")
+
+  depending on which project the machine belongs to.
 
 - Actually rebuild the machine
 
       ai-rebuild-vm --cc7 alibuildXX
+      
 - In order to make sure that the machine is correctly up and running, you should:
      - ping it
      - ssh to it
