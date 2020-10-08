@@ -137,6 +137,12 @@ machine is:
   
       eval $(ai-rc "ALICE Cloud Tests")
 
+- In order to create new machines, you will also need the public SSH key to be
+  added on the `alibuild` machines. After executing the `eval $(ai-rc ...)` line
+  above, execute (assuming you have saved the public SSH key in `alibuild.pub`):
+
+      openstack keypair create --public-key alibuild.pub alibuild
+
 - Specify a few parameters for the machine you want to spawn:
 
       MACHINE_NAME=<alibuildXX>
