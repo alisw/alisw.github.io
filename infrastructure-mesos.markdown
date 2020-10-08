@@ -6,19 +6,21 @@ categories: infrastructure
 
 # Cluster architecture description:
 
-The {{site.experiment}} build infrastructure consists of two kinds of nodes, masters,
+The ALICE build infrastructure consists of two kinds of nodes, masters,
 responsible for scheduling jobs, and agents, responsible to execute jobs and
 services. They are in general provisioned using [CERN Openstack
 Infrastructure](http://openstack.cern.ch) and configured using [CERN Puppet /
 Foreman setup](http://cern.ch/config).
 
-Masters belong to the Puppet hostgroup `{{site.master_hostgroup}}` while agents
-belong to `{{site.slave_hostgroup}}`. The configuration of those hostgroups
+Masters belong to the Puppet hostgroup `alibuild/mesos/master` while agents
+belong to `alibuild/mesos/slave`. The configuration of those hostgroups
 can be found in the GIT repository for [it-puppet-hostgroup-alibuild](
 https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild), in particular in:
 
-- [/code/manifests/{{site.master_hostgroup}}.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.master_hostgroup}}.pp)  for the master.
-- [/code/manifests/{{site.slave_hostgroup}}.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-{{site.builduser}}.git/blob/HEAD:/code/manifests/{{site.slave_hostgroup}}.pp)  for the slaves.
+- [/code/manifests/mesos/master.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild.git/blob/HEAD:/code/manifests/mesos/master.pp) for the master.
+- [/code/manifests/mesos/slave.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild.git/blob/HEAD:/code/manifests/mesos/slave.pp) for the slaves.
+
+Notice that in order to be able to modify such configuration and create / deploy machines in those hostgroups you will have to be part of the `alice-puppet` hostgroup.
 
 We have in particular three masters, each running on a separate OpenStack
 availability zone which work in an High Availability (HA) mode which allows
