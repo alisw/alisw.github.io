@@ -29,16 +29,16 @@ jobs:
       run: |
         sudo DEBIAN_FRONTEND=noninteractive apt-get install -y krb5-user
         cat << \EOF > krb5.conf
-        ${{secrets.KRB5CONF}}
+        ${{ "{{" }}secrets.KRB5CONF}}
         EOF
         grep rdns krb5.conf
         sudo mv -f krb5.conf /etc/krb5.conf
 
     - name: Trigger release in jenkins
       run: |
-        echo ${{github.event.release.tag_name}} | grep -e "prod-20[0-9][0-9][0-1][0-9]-[0-9][0-9]"
-        echo ${{secrets.JENKINS_BOT_PASS}} | kinit ${{secrets.PRINCIPAL}}
-        curl -X POST -k --negotiate -u : ${{secrets.API_URL}} -H 'Content-Type: application/x-www-form-urlencoded' -d 'PROJECT_TAG=${{github.event.release.tag_name}}'
+        echo ${{ "{{" }}github.event.release.tag_name}} | grep -e "prod-20[0-9][0-9][0-1][0-9]-[0-9][0-9]"
+        echo ${{ "{{" }}secrets.JENKINS_BOT_PASS}} | kinit ${{ "{{" }}secrets.PRINCIPAL}}
+        curl -X POST -k --negotiate -u : ${{ "{{" }}secrets.API_URL}} -H 'Content-Type: application/x-www-form-urlencoded' -d 'PROJECT_TAG=${{ "{{" }}github.event.release.tag_name}}'
         klist
         kdestroy
 ```
@@ -46,7 +46,7 @@ jobs:
 ### Secrets
 
 GitHub secrets can be referenced in the build configuration using
-`${{secrets.SECRET_NAME}}` syntax. The template script above needs the following
+`${{ "{{" }}secrets.SECRET_NAME}}` syntax. The template script above needs the following
 secrets set:
 
 - `KRB5CONF`: the system configuration file for Kerberos. The important thing
