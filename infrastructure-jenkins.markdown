@@ -44,12 +44,12 @@ Creation of the jenkins masters in CERN Foreman setup is described at
 
       MACHINE_NAME=<alijenkinsXX>
 
-      ai-bs -g alibuild/mesos/slave/jenkins                  \
-            --cc7                                            \
-            --nova-sshkey {{site.builduser}}                 \
-            --nova-flavor {{site.openstack_master_flavor}}   \
-            --landb-mainuser alice-agile-admin               \
-            --landb-responsible alice-agile-admin            \
+      ai-bs -g alibuild/mesos/slave/jenkins       \
+            --cc7                                 \
+            --nova-sshkey alibuild                \
+            --nova-flavor m2.large                \
+            --landb-mainuser alice-agile-admin    \
+            --landb-responsible alice-agile-admin \
             $MACHINE_NAME
 
 ### Starting Jenkins

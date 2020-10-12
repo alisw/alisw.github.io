@@ -62,10 +62,16 @@ To get the OpenStack access rights, you should ask to become member of the `alic
 
 Once you have those rights to use OpenStack you need to ssh into the CERN
 OpenStack administration machines (`aiadm.cern.ch`) and obtain the correct
-OpenStack credentials by doing:
+OpenStack credentials for the build machines by doing:
 
 ```bash
-eval $(ai-rc "{{site.openstack_project}}")
+eval $(ai-rc "ALICE Release Testing")
+```
+
+or, for the release validation machines:
+
+```bash
+eval $(ai-rc "ALICE Cloud Tests")
 ```
 
 You can now execute the various OpenStack commands, using the CLI tool called
@@ -73,10 +79,10 @@ You can now execute the various OpenStack commands, using the CLI tool called
 optained via `openstack help -h`, for the process of spawning new machines you probably
 only care about:
 
-- `openstack server list`: list the machines in the {{site.openstack_project}} 
-- `openstack image list`: list of OS images you can use. In
-  particular the build nodes should use the latest `{{site.openstack_image}}`
-  ones.
+- `openstack server list`: list the machines in the project you specified on the
+  `eval $(ai-rc ...)` line above
+- `openstack image list`: list of OS images you can use. The build nodes should
+  use the latest `CC7` ones.
 - `openstack flavor list`: list available flavors of virtual machines (i.e. how
   many CPUs, RAM).
 
@@ -105,27 +111,27 @@ The short recipe for a build machine is:
 - Set up your OpenStack environment by doing:
 
   ```bash
-  eval $(ai-rc "{{site.experiment}} Release Testing")
+  eval $(ai-rc "ALICE Release Testing")
   ```
 - To spawn a machine you need to use the `ai-bs` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
 
   ```bash
-  MACHINE_NAME=<{{site.exp_prefix}}mesosXX>
+  MACHINE_NAME=<alimesosXX>
   ZONE=cern-geneva-<X> # <X> needs to be in {a,b,c}
                        # make sure you use different zones
                        # to improve availability.
 
-  ai-bs -g {{site.master_hostgroup}}                   \
-        --foreman-environment alibuild_devel           \
-        --{{site.openstack_image | downcase}}          \
-        --nova-sshkey {{site.builduser}}               \
-        --nova-availabilityzone $ZONE                  \
-        --nova-flavor {{site.openstack_master_flavor}} \
-        --landb-mainuser alice-agile-admin             \
-        --landb-responsible alice-agile-admin          \
-        --nova-attach-new-volume vdb=200GB             \
+  ai-bs -g alibuild/mesos/master               \
+        --foreman-environment alibuild_devel   \
+        --cc7                                  \
+        --nova-sshkey alibuild                 \
+        --nova-availabilityzone $ZONE          \
+        --nova-flavor m2.large                 \
+        --landb-mainuser alice-agile-admin     \
+        --landb-responsible alice-agile-admin  \
+        --nova-attach-new-volume vdb=200GB     \
         $MACHINE_NAME
   ```
 
@@ -143,7 +149,7 @@ The short recipe for a build machine is:
   eval $(ai-rc "ALICE Release Testing")
   ```
 
-  or (for the release validation machines):
+  or, for the release validation machines:
   
   ```bash
   eval $(ai-rc "ALICE Cloud Tests")
@@ -209,7 +215,7 @@ Rebuilding a master is a potentially disruptive operation, since our mesos setup
 masters to be up and running in order to schedule new jobs. Therefore before you actually decide to
 rebuild one you should:
 
-* Discuss with your collegueas wether that's a good idea.
+* Discuss with your collegueas whether that's a good idea.
 * Make sure that the other two masters are properly functioning.
 * If the master is the currently leading master, force a leadership transition to one of the other
   two machines before the rebuild (Optional, since failower will take care of that).
@@ -220,13 +226,13 @@ In order to perform the rebuild you need to do:
 - Set up your OpenStack environment by doing:
 
   ```bash
-  eval $(ai-rc "{{site.experiment}} Release Testing")
+  eval $(ai-rc "ALICE Release Testing")
   ```
 
 - Actually rebuild the machine
 
   ```bash
-  ai-rebuild-vm --cc7 {{site.exp_prefix}}mesosXX
+  ai-rebuild-vm --cc7 alimesosXX
   ```
 
 It can take up to one hour for the process to complete.
@@ -244,20 +250,20 @@ It can take up to one hour for the process to complete.
 Rebuilding an agent is potentially a problem, since the Mesos machine might be doing something,
 e.g. building a release, which should not be in general interrupted. Therefore you need to:
 
-* Discuss with your collegueas wether that's a good idea.
+* Discuss with your collegueas whether that's a good idea.
 * Verify that the machine is not running any particularly important task, by looking at the report
   in the Mesos GUI. If in doubt, ask.
 
 In order to perform the rebuild you need to do:
 
 - Login to `aiadm.cern.ch`.
-- Set up your OpenStack environment by doing:
+- Set up your OpenStack environment by doing (for build machines):
 
   ```bash
   eval $(ai-rc "ALICE Release Testing")
   ```
       
-  or 
+  or, for the release validation machines:
 
   ```bash
   eval $(ai-rc "ALICE Cloud Tests")
@@ -295,9 +301,9 @@ The recipe for destoying agents is:
 - Set up your OpenStack environment by doing:
 
   ```bash
-  eval $(ai-rc "{{site.experiment}} Release Testing")
+  eval $(ai-rc "ALICE Release Testing")
   ```
-- Delete the VM with `ai-kill <{{site.builduser}}XX>`
+- Delete the VM with `ai-kill <alibuildXX>`
 - Delete the previously attached volumes.
 
 ## Rebooting a Mesos server
@@ -311,7 +317,7 @@ OpenStack GUI, in the Instances tab, or doing:
 - Set up your OpenStack environment by doing:
 
   ```bash
-  eval $(ai-rc "{{site.experiment}} Release Testing")
+  eval $(ai-rc "ALICE Release Testing")
   ```
 - Actually reboot `<server name>`
 
