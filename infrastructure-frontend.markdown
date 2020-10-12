@@ -6,7 +6,7 @@ categories: infrastructure
 
 # Frontend setup
 
-The {{site.experiment}} build infrastructure is exposed via SSO.
+The ALICE build infrastructure is exposed via SSO.
 
 Due to limitations of the SSO protocol this happens via single machine which
 runs apache and does the reverse proxying to the actual service.
@@ -23,19 +23,19 @@ The quick recipe to restart the frontend is:
 - Login to `aiadm.cern.ch`.
 - Set up your OpenStack environment by doing:
 
-      eval $(ai-rc "{{site.experiment}} Release Testing")
+      eval $(ai-rc "ALICE Release Testing")
 
 - To spawn a machine you need to use the `ai-bs-vm` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
 
-      MACHINE_NAME=<{{site.exp_prefix}}build-frontendXX>
+      MACHINE_NAME=<alibuild-frontendXX>
 
-      ai-bs-vm -g alibuild/frontend                   \
-               --cc 7                                 \
-               --nova-sshkey alibuild                 \
-               --nova-flavor {{site.openstack_master_flavor}} \
-               --landb-mainuser alice-agile-admin \
+      ai-bs-vm -g alibuild/frontend                  \
+               --cc7                                 \
+               --nova-sshkey alibuild                \
+               --nova-flavor m2.large                \
+               --landb-mainuser alice-agile-admin    \
                --landb-responsible alice-agile-admin \
                $MACHINE_NAME
 - Once you have the frontend created, you also need to grant it read-only

@@ -21,23 +21,29 @@ The AliBI system relies on a CERN OpenStack VM for the _head node_ (`alibilogin0
 ## AliBI head node
 
 * On `aiadm.cern.ch` enter the OpenStack _Release Testing_ environment by running
-```bash
-eval $(ai-rc "{{site.experiment}} Release Testing")
-```
+
+  ```bash
+  eval $(ai-rc "ALICE Release Testing")
+  ```
+
 * Spawn the head node by
-```bash
-ai-bs -g alibuild/alibi/login --foreman-environment alibuild_alibi --cc7 --nova-sshkey alibuild --nova-flavor m2.xlarge --landb-mainuser alice-agile-admin --landb-responsible alice-agile-admin alibilogin01
-```
+
+  ```bash
+  ai-bs -g alibuild/alibi/login --foreman-environment alibuild_alibi --cc7 --nova-sshkey alibuild --nova-flavor m2.xlarge --landb-mainuser alice-agile-admin --landb-responsible alice-agile-admin alibilogin01
+  ```
+
 * add alias to `alibi`:
-```bash
-openstack server set --property landb-alias=alibi alibilogin01
-```
+
+  ```bash
+  openstack server set --property landb-alias=alibi alibilogin01
+  ```
 
 ## AliBI compute node
 
 The compute node is a physical machine outside the CERN datacenter, which makes provisioning a bit more complicated.
 
 ### Registrations (only for first time set up)
+
 * Register the machine in CERN [LANDB](https://network.cern.ch)
 * Create an entry for the machine in [Foreman](https://judy.cern.ch/):
   * In Foreman, select `Hosts>New Host`. 
@@ -70,6 +76,7 @@ The compute node is a physical machine outside the CERN datacenter, which makes 
     * Hardware Model: `ProLiant DL380 Gen10`
 
 ### Prepare installation
+
 * Based on the Foreman entry, a provisioning template in form of a _kickstart file_ is generated and is updated every time the configuration in Foreman is changed.
 * Since the compute node is outside of the CERN datacenter it does not have direct access to this file, so it needs to be downloaded and self hosted for the duration of the installation.
   * Download kikstart file from `Templates>provision Template>Review`
@@ -80,19 +87,24 @@ The compute node is a physical machine outside the CERN datacenter, which makes 
       *  partitioning
   * Host the file on a webserver. The simplest way is to use python2.7 `python -m SimpleHTTPServer` in the directory where your kickstart file is located.
 * Stage certificate on `aiadm.cern.ch`:
-```
-certmgr-stage --host alibicompute01.cern.ch
-```
+
+  ```bash
+  certmgr-stage --host alibicompute01.cern.ch
+  ```
+
 * Set Foreman environment to `alibuild/alibi`.
 
 ### Installation
+
 * Get IPMI/ILO access to the physical server
 * Boot machine in network boot (PXE)
 * Select OS and press E to edit.
 * Modify the `linuxefi ...` line by deleting everything that comes after `ip=dhcp`and append the location of your kickstart script such that it reads
-```bash
-linuxefi (http)/aims/boot/<YOUR_CC_VERSION_HERE>/vmlinuz ip=dhcp ks=http://<PATH_TO_KICKSTART_FILE>
-```
+
+  ```bash
+  linuxefi (http)/aims/boot/<YOUR_CC_VERSION_HERE>/vmlinuz ip=dhcp ks=http://<PATH_TO_KICKSTART_FILE>
+  ```
+
 * `CTRL+x` to start
 * A graphical installer will start.
     * All options but the partitioning are already preset, but can be changed manually.
@@ -117,6 +129,7 @@ linuxefi (http)/aims/boot/<YOUR_CC_VERSION_HERE>/vmlinuz ip=dhcp ks=http://<PATH
   [PUPPET-HOSTGROUP](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/alibi).
 
 * Upon updating the manifests, changes can be immediately applied through (as root)
+
   ```bash
   puppet agent -t -v
   ```
@@ -126,14 +139,17 @@ linuxefi (http)/aims/boot/<YOUR_CC_VERSION_HERE>/vmlinuz ip=dhcp ks=http://<PATH
 ### Symptom: No allocations can be made, node stuck in "drain" state
 
 In case `sinfo` shows:
+
 ```bash
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 compute*     up   infinite      1  drain alibicompute01.cern.ch
 ```
+
 We need to undrain the node. 
+
 * Make sure you understand why the node is stuck, if necessary restart the node. 
 * As admin, reset the node state by
-```bash
-scontrol update nodename=node10 state=idle
-```
 
+  ```bash
+  scontrol update nodename=node10 state=idle
+  ```
