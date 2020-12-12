@@ -24,6 +24,8 @@ https://gitlab.cern.ch/ALICEDevOps/aliops.git/
 * <a href="{{site.baseurl}}/infrastructure-publisher">Release Publishing</a>
 * <a href="{{site.baseurl}}/infrastructure-relval">RelVal</a>
 * <a href="{{site.baseurl}}/infrastructure-alibi-user-guide">AliBI User Guide</a>
+* <a href="{{site.baseurl}}/infrastructure-auto-builds">Setting up automatic release builds</a>
+* <a href="{{site.baseurl}}/infrastructure-rpms">Generation of RPMs</a>
 
 ## Infrastructure
 
@@ -34,4 +36,3 @@ https://gitlab.cern.ch/ALICEDevOps/aliops.git/
 * <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
 * <a href="{{site.baseurl}}/infrastructure-repository">AliBuild S3 Repository</a>
 * <a href="{{site.baseurl}}/infrastructure-alibi">AliBI</a>
-* <a href="{{site.baseurl}}/infrastructure-auto-builds">Setting up automatic release builds</a>
