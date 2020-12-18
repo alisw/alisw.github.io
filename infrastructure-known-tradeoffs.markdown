@@ -50,3 +50,10 @@ By construction you are limited by the longest path, and even if we try to minim
 
 Updatable RPMs are generate from the tarballs of the various packages which are also deployed in CVMFS. Those tarballs are built and installed in a separate per-package location, in order to allow multiple, coexisting installations. This means that conflicting files can be introduced without any previous warning at RPM generation time. The alternative, i.e. installing everything in a single location, would either move the problem to it's conjugate for CVMFS installation, or it would mean that what is installed in CVMFS is different from what is packaged in the updateable RPMs, duplicating CI and debugging issues.
 
+## Externals
+
+## Old / own version of externals
+
+Sometimes the externals provided in alidist are either old, or provide a rebuild of a commonly available tool. In general this happens because we need to still support Run 2 Production requirements (including ROOT5 and XRootD3) and we prefer maintain a single set of tools, rather than split our configuration management.
+
+Mitigations for this are the defaults mechanism in aliBuild (including the new "per-architecture defaults") and the requirement selection mechanisms (`--disable`, `prefer_system`, architecture specific requirements) which aliBuild provides.
