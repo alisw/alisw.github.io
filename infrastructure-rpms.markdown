@@ -20,3 +20,13 @@ on CVMFS. The script itself is called `aliPublish` and as usual it's part of the
 
 For the RPM case, in particular, the script runs in [Aurora](infrastructure-aurora) in the [`build/mesosdaq/prod/rpm_creation`](https://aliaurora.cern.ch/scheduler/mesosdaq/prod/rpm_creation) job. The script runs asynchrounously and
 publishes packages as specified by the configurations for [parallel](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-rpms.conf) and [updateable](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-updatable-rpms.conf) RPMs.
+
+## Troubleshooting
+
+### Updating which aliPublish
+
+In order to update aliPublish you need to ssh on the builder:
+
+```bash
+aurora task run build/mesosdaq/prod/rpm_creation/0 "cd ali-bot && git pull --rebase" 
+```
