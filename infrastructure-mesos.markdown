@@ -48,6 +48,7 @@ The masters run the following services:
 
 * [Getting access to the OpenStack / Puppet infrastructure](#setup)
 * [Creating a master](#create-master)
+* [Backup the masters](#backup-master)
 * [Rebuild a master](#rebuild-master)
 * [Creating an agent](#create-agent)
 * [Reboot an agent](#reboot-agent)
@@ -134,6 +135,18 @@ The short recipe for a build machine is:
         --nova-attach-new-volume vdb=200GB     \
         $MACHINE_NAME
   ```
+
+## Backup master
+{: #backup-master}
+
+Backing up of the masters is done for the `/data/zookeeper` folder via the [standard backup service of CERN/IT](https://information-technology.web.cern.ch/services/Backup-Restore-Service). The service itself is setup via puppet as usual. Things which can resuscitate a backup when it fails:
+
+```bash
+# restarting the service
+service dsmcad restart
+# Asking for an incremental backup
+dsmc incremental
+```
 
 ## Creating a agent
 {: #create-agent}
