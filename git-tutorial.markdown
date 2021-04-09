@@ -130,8 +130,8 @@ Then clone AliRoot and AliPhysics from GitHub:
 
 ```bash
 cd ~/alice
-git clone https://github.com/alisw/AliRoot
-git clone https://github.com/alisw/AliPhysics
+git clone --origin upstream https://github.com/alisw/AliRoot
+git clone --origin upstream https://github.com/alisw/AliPhysics
 ```
 
 If you use aliBuild you can skip the two clones and do directly:
@@ -157,14 +157,14 @@ connection):
 
 ```bash
 cd ~/alice/AliPhysics
-git remote add <your-github-username> git@github.com:<your-github-username>/AliPhysics.git
+git remote add origin git@github.com:<your-github-username>/AliPhysics.git
 ```
 
 If you do not use SSH:
 
 ```bash
 cd ~/alice/AliPhysics
-git remote add <your-github-username> https://github.com/<your-github-username>/AliPhysics
+git remote add origin https://github.com/<your-github-username>/AliPhysics
 ```
 
 
@@ -176,8 +176,8 @@ version of the master with the following lines:
 
 ```bash
 cd ~/alice/AliPhysics
-git pull --rebase
-git push <your-github-username>
+git pull --rebase upstream master
+git push origin
 ```
 
 > Note that if you are in the middle of your work (_i.e._ you have your changes
@@ -186,7 +186,7 @@ git push <your-github-username>
 > Git history:
 >
 > ```bash
-> git push -f <your-github-username>
+> git push -f origin
 > ```
 >
 > You should use the `-f` switch **only when needed and if you are sure you are
@@ -240,7 +240,7 @@ fork:
 cd ~/alice/AliPhysics
 git add <file>  # possibly several times
 git commit
-git push <your-github-username>
+git push origin
 ```
 
 At this point changes are on your own fork on GitHub, and **they are not yet
@@ -468,7 +468,7 @@ command:
 git commit --amend
 ```
 
-This will require a `git push -f <your-github-username>` afterwards. If you
+This will require a `git push -f origin` afterwards. If you
 don’t force-push it won’t go through.
 
 
@@ -479,11 +479,11 @@ resume your work from upstream you need to “reset” the state of your working
 copy to the upstream repository:
 
 ```bash
-cd ~alice/AliPhysics
+cd ~/alice/AliPhysics
 git branch my-backup-just-in-case  # create a branch backupping your state
 git fetch --all
-git reset --hard origin/master
-git push -f <your-github-username>
+git reset --hard upstream/master
+git push -f origin
 ```
 
 Now, you have aligned your current branch with the upstream changes, and your
@@ -499,12 +499,12 @@ former work was backupped just in case, in the `my-backup-just-in-case` branch
 ### Restore work from a backupped branch
 
 If at some point you wish to resume your work from a previously abandoned branch
-(whose name we assume it is `my-backup-just-in-case`), you can do from your
+(whose name we assume is `my-backup-just-in-case`), you can do from your
 master branch:
 
 ```bash
-cd ~alice/AliPhysics
-git pull --rebase
+cd ~/alice/AliPhysics
+git pull --rebase upstream master
 git pull --rebase . my-backup-just-in-case
 ```
 

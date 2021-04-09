@@ -225,7 +225,7 @@ up-to-date:
 ```bash
 cd ~/alice/AliPhysics
 git checkout master
-git pull origin
+git pull --rebase upstream master
 ```
 
 Now from your `master` branch, spawn a different one, and name it explicitly:
@@ -255,7 +255,7 @@ you want to push your current branch to a remote branch with the same name (for
 simplicity) on _your_ remote fork. This is done by:
 
 ```bash
-git push --set-upstream <your-github-username> my-new-feature
+git push --set-upstream origin my-new-feature
 ```
 
 Note that all subsequent pushes from this branch can be simply done with:
@@ -314,7 +314,7 @@ Now switch back to `master`, update it, and create a new branch from there:
 
 ```bash
 git checkout master
-git pull
+git pull --rebase upstream master
 git checkout -b my-second-feature
 ```
 
@@ -339,7 +339,7 @@ To delete your local branch, first move to the `master` and update it:
 
 ```bash
 git checkout master
-git pull
+git pull --rebase upstream master
 ```
 
 then delete it:
@@ -356,7 +356,7 @@ Now you can delete the remote one **(this is a dangerous and irreversible
 operation)**:
 
 ```bash
-git push <your-github-username> :my-feature-branch
+git push origin :my-feature-branch
 ```
 
 It's the `:` that does the trick (it's not a typo).
@@ -387,7 +387,7 @@ locally:
 ```bash
 cd ~/alice
 git checkout master
-git pull --rebase
+git pull --rebase upstream master
 git am ~/alice-old/AliPhysics/*.patch
 ```
 
@@ -398,7 +398,7 @@ format-patch`.
 At this point you can push to your local fork and create a pull request:
 
 ```bash
-git push <your-github-username>
+git push origin
 hub pull-request -b alisw/AliPhysics:master
 ```
 
@@ -475,7 +475,7 @@ you can simply clone the package and manually export the environment variable:
 
 ```bash
 cd ~/alice
-git clone https://gitlab.cern.ch/alisw/AliRootOCDB.git
+git clone --origin upstream https://gitlab.cern.ch/alisw/AliRootOCDB.git
 export ALIROOT_OCDB_ROOT=$PWD/AliRootOCDB
 ```
 
