@@ -311,5 +311,5 @@ metric to know how many API calls are being done by the system.
 
 You can also get a detailed view the activity of the builders in our [Build Infrastructure Cockpit](https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB). If you are interested in extending the reports, please contact us.
 
-The CI machines are also included in [IT Grafana dashboard]
-(https://monit-grafana.cern.ch/d/8KnQO4HMk/openstack-vms?orgId=1&var-project_name=ALICE%20Release%20Testing&var-instance_name=alibuild02).
+Some of the CI machines are also included in [IT Grafana dashboard]
+(https://monit-grafana.cern.ch/d/8KnQO4HMk/openstack-vms?orgId=1&var-project_name=ALICE%20Release%20Testing). Notice this includes also machines which do not run CI builds.
