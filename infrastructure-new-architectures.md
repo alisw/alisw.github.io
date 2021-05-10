@@ -12,3 +12,7 @@ In particular `$ModulesCurrentModulefile` should change to `\$ModulesCurrentModu
 
 Finally, one needs to create a symlink in `/cvmfs/alice.cern.ch/etc/toolchain/modulefiles/<architecture>/GCC-<version>` 
 which points to `../../../../../el7-x86_64/Modules/modulefiles/GCC-Toolchain/<version>-<revision>`.
+
+# Enabling a new compiler on Hyperloop
+
+Besides adding the compiler to CVMFS as specified above, one needs to release again jq using the new compiler.
