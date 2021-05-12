@@ -23,7 +23,7 @@ e.g., for CERN Centos 7:
 If you have a RPM based distribution and you wish to try it out, please
 have a look at the instructions provided here:
 
-<https://dberzano.github.io/alice/install-aliroot/rpms/>
+<https://aliceo2group.github.io/quickstart/binaries.html>
 
 ## How do I build AliRoot / O2 using alibuild?
 
