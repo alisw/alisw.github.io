@@ -103,7 +103,7 @@ SSH key.
 ## Setup software repositories on your local computer
 
 We recommend to follow the [aliBuild “getting started”
-guide](https://dberzano.github.io/alice/alibuild/), or the [aliBuild
+guide](https://alice-doc.github.io/alice-analysis-tutorial/building/custom.html), or the [aliBuild
 tutorial](http://alisw.github.io/alibuild/tutorial.html). Alternatively, see
 further below if you want to check out the repository manually.
 
