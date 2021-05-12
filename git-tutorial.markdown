@@ -449,8 +449,7 @@ The changes are saved as a new commit to your fork and automatically added to
 the pull request. Now the review and testing process starts from the beginning.
 
 For more complex conflict resolutions, or if you are uncomfortable with web
-interfaces, you can have a look at our extended [Git tutorial section on this
-matter](https://dberzano.github.io/alice/git/#fixing_conflicts).
+interfaces, there is an extended tutorial [here](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts).
 
 
 ## Amend an open pull request
