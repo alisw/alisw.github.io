@@ -18,9 +18,9 @@ For each workflow, replace the `XXy` string in the release tag with the one you'
 
 The last of these is set up to automatically start a build on Jenkins.
 
-[alidist tag]: https://github.com/alisw/alidist/actions?query=workflow%3A%22Prepare+AliPhysics+tag%22
-[aliroot tag]: https://github.com/alisw/AliRoot/actions?query=workflow%3A%22Prepare+AliRoot+tag%22
-[aliphysics build]: https://github.com/alisw/AliPhysics/actions?query=workflow%3A%22Prepare+AliPhysics+tag+and+start+build%22
+[alidist tag]: https://github.com/alisw/alidist/actions/workflows/prepare-patch-release-branch.yml
+[aliroot tag]: https://github.com/alisw/AliRoot/actions/workflows/main.yml
+[aliphysics build]: https://github.com/alisw/AliPhysics/actions/workflows/release.yml
 
 ## Patching old (≤ AliRoot-v5-08) releases
 
