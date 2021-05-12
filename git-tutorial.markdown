@@ -102,10 +102,8 @@ SSH key.
 
 ## Setup software repositories on your local computer
 
-We recommend to follow the [aliBuild “getting started”
-guide](https://alice-doc.github.io/alice-analysis-tutorial/building/custom.html), or the [aliBuild
-tutorial](http://alisw.github.io/alibuild/tutorial.html). Alternatively, see
-further below if you want to check out the repository manually.
+We recommend to follow the [ALICE Analysis Tutorial](https://alice-doc.github.io/alice-analysis-tutorial/building/).
+Alternatively, see further below if you want to check out the repository manually.
 
 > With older versions of aliBuild, the central remote repository (used for
 > pulling updates) would be called `origin` instead of the usual name `upstream`
