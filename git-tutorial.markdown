@@ -107,6 +107,13 @@ guide](https://alice-doc.github.io/alice-analysis-tutorial/building/custom.html)
 tutorial](http://alisw.github.io/alibuild/tutorial.html). Alternatively, see
 further below if you want to check out the repository manually.
 
+> With older versions of aliBuild, the central remote repository (used for
+> pulling updates) would be called `origin` instead of the usual name `upstream`
+> and the personal (fork) remote repository (used for pushing changes) would be
+> called `<your-github-username>` instead of the usual name `origin`.
+> Please check your settings using `git remote -v` and adjust the Git commands
+> mentioned in the following instructions accordingly, if needed.
+
 We will assume from now on that your working directory is `~/alice`. If you
 have your old installation under `~/alice` then we suggest you use a different
 directory to avoid confusion.
@@ -411,7 +418,8 @@ Conflicts with pull requests can occur at any time.
   already!)** This means that, while your pull request was being tested,
   another one with incompatible changes got merged upstream.
 
-In both cases you will receive a notification in the form of a comment (which by default triggers an automatic email). For instance:
+In both cases you will receive a notification in the form of a comment (which by
+default triggers an automatic email). For instance:
 
 ![Git conflict]({{site.baseurl}}/images/git-conflict.png)
 
