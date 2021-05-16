@@ -102,10 +102,15 @@ SSH key.
 
 ## Setup software repositories on your local computer
 
-We recommend to follow the [aliBuild “getting started”
-guide](https://alice-doc.github.io/alice-analysis-tutorial/building/custom.html), or the [aliBuild
-tutorial](http://alisw.github.io/alibuild/tutorial.html). Alternatively, see
-further below if you want to check out the repository manually.
+We recommend to follow the [ALICE Analysis Tutorial](https://alice-doc.github.io/alice-analysis-tutorial/building/).
+Alternatively, see further below if you want to check out the repository manually.
+
+> With older versions of aliBuild, the central remote repository (used for
+> pulling updates) would be called `origin` instead of the usual name `upstream`
+> and the personal (fork) remote repository (used for pushing changes) would be
+> called `<your-github-username>` instead of the usual name `origin`.
+> Please check your settings using `git remote -v` and adjust the Git commands
+> mentioned in the following instructions accordingly, if needed.
 
 We will assume from now on that your working directory is `~/alice`. If you
 have your old installation under `~/alice` then we suggest you use a different
@@ -130,8 +135,8 @@ Then clone AliRoot and AliPhysics from GitHub:
 
 ```bash
 cd ~/alice
-git clone https://github.com/alisw/AliRoot
-git clone https://github.com/alisw/AliPhysics
+git clone --origin upstream https://github.com/alisw/AliRoot
+git clone --origin upstream https://github.com/alisw/AliPhysics
 ```
 
 If you use aliBuild you can skip the two clones and do directly:
@@ -157,14 +162,14 @@ connection):
 
 ```bash
 cd ~/alice/AliPhysics
-git remote add <your-github-username> git@github.com:<your-github-username>/AliPhysics.git
+git remote add origin git@github.com:<your-github-username>/AliPhysics.git
 ```
 
 If you do not use SSH:
 
 ```bash
 cd ~/alice/AliPhysics
-git remote add <your-github-username> https://github.com/<your-github-username>/AliPhysics
+git remote add origin https://github.com/<your-github-username>/AliPhysics
 ```
 
 
@@ -176,8 +181,8 @@ version of the master with the following lines:
 
 ```bash
 cd ~/alice/AliPhysics
-git pull --rebase
-git push <your-github-username>
+git pull --rebase upstream master
+git push origin
 ```
 
 > Note that if you are in the middle of your work (_i.e._ you have your changes
@@ -186,7 +191,7 @@ git push <your-github-username>
 > Git history:
 >
 > ```bash
-> git push -f <your-github-username>
+> git push -f origin
 > ```
 >
 > You should use the `-f` switch **only when needed and if you are sure you are
@@ -240,7 +245,7 @@ fork:
 cd ~/alice/AliPhysics
 git add <file>  # possibly several times
 git commit
-git push <your-github-username>
+git push origin
 ```
 
 At this point changes are on your own fork on GitHub, and **they are not yet
@@ -411,7 +416,8 @@ Conflicts with pull requests can occur at any time.
   already!)** This means that, while your pull request was being tested,
   another one with incompatible changes got merged upstream.
 
-In both cases you will receive a notification in the form of a comment (which by default triggers an automatic email). For instance:
+In both cases you will receive a notification in the form of a comment (which by
+default triggers an automatic email). For instance:
 
 ![Git conflict]({{site.baseurl}}/images/git-conflict.png)
 
@@ -468,7 +474,7 @@ command:
 git commit --amend
 ```
 
-This will require a `git push -f <your-github-username>` afterwards. If you
+This will require a `git push -f origin` afterwards. If you
 don’t force-push it won’t go through.
 
 
@@ -479,11 +485,11 @@ resume your work from upstream you need to “reset” the state of your working
 copy to the upstream repository:
 
 ```bash
-cd ~alice/AliPhysics
+cd ~/alice/AliPhysics
 git branch my-backup-just-in-case  # create a branch backupping your state
 git fetch --all
-git reset --hard origin/master
-git push -f <your-github-username>
+git reset --hard upstream/master
+git push -f origin
 ```
 
 Now, you have aligned your current branch with the upstream changes, and your
@@ -499,12 +505,12 @@ former work was backupped just in case, in the `my-backup-just-in-case` branch
 ### Restore work from a backupped branch
 
 If at some point you wish to resume your work from a previously abandoned branch
-(whose name we assume it is `my-backup-just-in-case`), you can do from your
+(whose name we assume is `my-backup-just-in-case`), you can do from your
 master branch:
 
 ```bash
-cd ~alice/AliPhysics
-git pull --rebase
+cd ~/alice/AliPhysics
+git pull --rebase upstream master
 git pull --rebase . my-backup-just-in-case
 ```
 

@@ -30,13 +30,13 @@ have a look at the instructions provided here:
 In order to build ALICE packages, you can use the following recipe:
 
     # Clone our build tool
-    git clone https://github.com/alisw/alibuild
+    git clone --origin upstream https://github.com/alisw/alibuild
     # Clone our build recipes
-    git clone https://github.com/alisw/alidist
+    git clone --origin upstream https://github.com/alisw/alidist
     # Optional: clone O2 or any other package you want to develop.
     #           aliBuild will prefer your copy to the one specified in the
     #           recipe
-    git clone -b dev https://github.com/AliceO2Group/AliceO2 O2
+    git clone --origin upstream -b dev https://github.com/AliceO2Group/AliceO2 O2
     # Start the build
     alibuild/aliBuild --debug --jobs NJOBS build O2
 
