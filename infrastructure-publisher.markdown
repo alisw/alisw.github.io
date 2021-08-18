@@ -14,13 +14,13 @@ case of troubles you can do the following:
 
 * SSH as your username to `cvmfs-alice.cern.ch` or
   `cvmfs-alice-nightlies.cern.ch` depending on
-  what you are publishing.
+  what you are publishing (ask to be added to the self managed lxcvmfs-alice for authorization).
 * Follow the instructions given at the logon by the MOD
 * Logs are in `~/publisher/log`
 
 ## Troubleshooting ALIEN
 
-* SSH to `alimonitor.cern.ch` as `monalisa`
+* SSH to `alimonitor.cern.ch` as `monalisa` (ask Costin).
 * Logs are in `~/publisher/log`
 
 ## Troubleshooting RPMS
