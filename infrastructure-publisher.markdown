@@ -12,11 +12,38 @@ case of troubles you can do the following:
 
 ## Troubleshooting CVMFS
 
+### Access to the publisher machines
+
 * SSH as your username to `cvmfs-alice.cern.ch` or
   `cvmfs-alice-nightlies.cern.ch` depending on
   what you are publishing (ask to be added to the self managed lxcvmfs-alice for authorization).
 * Follow the instructions given at the logon by the MOD
 * Logs are in `~/publisher/log`
+
+### Issue with missing ROOT libraries
+
+For some yet to be understood reason sometimes ROOT is published with a `-<N>` revision, while `-<N+1>` is available.
+This leads to errors like:
+
+```
+o2-analysistutorial-histograms-full-tracks: error while loading shared libraries: libGenVector.so.6.24: cannot open shared object file: No such file or directory
+```
+
+when running in hyperloop. In order to workaround the issue, for the moment, the solution is to add by hand a symlink to
+the existing folder. This can be done by:
+
+* `ssh cvmfs-alice.cern.ch`
+* `sudo -i -u cvalice`
+* Go to the ROOT folder and start a transaction
+
+```
+cd /cvmfs/alice.cern.ch/el7-x86_64/Packages/ROOT/
+cvmfs_server transaction alice.cern.ch
+```
+* Find the missing ROOT and create a symlink to the next available one. E.g. `ln -s v6-24-02-24 v6-24-02-23`.
+* **Close the transaction** `cd && cvmfs_server transaction alice.cern.ch`.
+
+Things should be then back in business in a few minutes, time for CVMFS to propagate the changes everywhere.
 
 ## Troubleshooting ALIEN
 
