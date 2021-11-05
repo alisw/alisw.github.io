@@ -72,7 +72,7 @@ ln -s  /usr/local/bin/python3 /usr/local/bin/python
 ## Create work environment
 With macOS 10.15 `/`is no longer writable. Create a _synthetic link_ by adding  
 ```bash
-/build   System/Volumes/Data/build
+build	System/Volumes/Data/build
 ```
 to `/etc/synthetic.conf` (tab separated, not by whitespaces) and reboot.
 Afterwards exclude the `/build` directory from Spotlight in the system preferences. Go to `(Apple) menu>System preferences>Spotlight`. In the `Privacy` tab, hit the `+` button. Now select the `/build` directory and confirm.
