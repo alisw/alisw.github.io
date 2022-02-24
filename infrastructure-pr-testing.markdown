@@ -313,3 +313,16 @@ You can also get a detailed view the activity of the builders in our [Build Infr
 
 Some of the CI machines are also included in [IT Grafana dashboard]
 (https://monit-grafana.cern.ch/d/8KnQO4HMk/openstack-vms?orgId=1&var-project_name=ALICE%20Release%20Testing). Notice this includes also machines which do not run CI builds.
+
+# Troubleshooting
+  
+## Empty logs
+
+Empty logs can happen in the case the build fails in some pre alibuild steps and the harvesting script is not able / is not allowed to fetch logs. In particular, due to the criticality of some operations, logs which might contain sensible information are not retrieved, to avoid exposing them to unprivileged ALICE users. Maintainers of the build infrastructure can follow the instructions in the report to retrieve them.
+  
+That said, the vast majority of the "missing logs issues" are due to the following two items:
+  
+* Wrong tag / commit / url when checking out the code. Make sure you review any tag and commit you changed in your PR to make sure they are actually existing. Possibly check by hand all the modified tags with `git clone -b <tag> <url>`.
+* Issues with the infrastructure backend not directly under our control, in particular gitlab and github. You can review if there was any known issues by going to either the [github status page](https://www.githubstatus.com) or the [CERN Service Status Board](https://cern.service-now.com/service-portal?id=service_status_board).
+  
+Failing those (or if you are unsure) feel free to contact us directly either on mattermost or by adding a comment to your PR.
