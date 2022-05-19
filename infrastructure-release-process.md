@@ -1,5 +1,5 @@
 ---
-title: Release process
+title: Release process AliRoot / AliPhysics
 layout: main
 categories: infrastructure
 ---
