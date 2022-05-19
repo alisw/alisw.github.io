@@ -16,7 +16,8 @@ https://gitlab.cern.ch/ALICEDevOps/aliops.git/
 
 ## Tasks
 
-* <a href="{{site.baseurl}}/infrastructure-release-process">Release process</a>
+* <a href="{{site.baseurl}}/infrastructure-release-process">Release process AliRoot / AliPhysics</a>
+* <a href="{{site.baseurl}}/infrastructure-release-process-o2">Release process O2PDPSuite</a>
 * <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
 * <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
 * <a href="{{site.baseurl}}/infrastructure-macos">Testing of Pull Requests on macOS</a>
