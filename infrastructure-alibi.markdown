@@ -151,5 +151,5 @@ We need to undrain the node.
 * As admin, reset the node state by
 
   ```bash
-  scontrol update nodename=node10 state=idle
+  scontrol update nodename=alibicompute01.cern.ch state=idle
   ```
