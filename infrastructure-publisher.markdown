@@ -64,7 +64,15 @@ or by using the aliaurora web UI.
 
 ### CVMFS
 
-Packages published on CVMFS can be configured via the [aliPublish.conf](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish.conf) file. Apart from having your changes in master, no further action is required.
+Packages published on CVMFS can be configured via the [`aliPublish.conf`][aliPublish-conf] file. Apart from having your changes in master, no further action is required.
+
+Builds of O2PDPSuite from the `async` branch are also published on CVMFS using [`aliPublish-async.conf`][async-conf].
+
+In addition, the AliDPG package is handled specially and published to `noarch` using [`aliPublish-noarch.conf`][noarch-conf].
+
+[aliPublish-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish.conf
+[async-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-async.conf
+[noarch-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-noarch.conf
 
 ### RPMS
 
@@ -74,3 +82,21 @@ If you need to generate a new RPM package, the configuration is in `ali-bot/publ
 aurora task run -l root build/mesosdaq/prod/rpm_creation/0 "cd ali-bot && git fetch origin && git reset --hard origin/master"
 ```
 
+## Start publishing on a new architecture
+
+In order to publish Run 2 packages on another architecture on CVMFS, symlinks for the AliDPG package must be in place.
+
+AliDPG is built on CentOS 8, but published to a special `noarch` architecture on CVMFS and AliEn.
+
+AliDPG is always loaded explicitly, as the last package in a list, like `AliPhysics/v5-09-59a-01-1,AliDPG/prod-202209-01-1`. Becase `alienv` loads all packages from the same architecture, the availability of the AliPhysics package determines where we look for the AliDPG package. As AliDPG just provides a shell script and some uncompiled ROOT macros, it doesn't matter which architecture it was built on, so we can share AliDPGs between all architectures by putting them in `noarch`.
+
+To facilitate this, the following symlinks must be created (remember to wrap this in a CVMFS transaction):
+
+```bash
+arch='<the new architecture you want to add, e.g. "el8-x86_64">'
+cd /cvmfs/alice.cern.ch
+ln -svnf ../../../noarch/Modules/modulefiles/AliDPG "$arch/Modules/modulefiles/AliDPG"
+ln -svnf ../../noarch/Packages/AliDPG "$arch/Packages/AliDPG"
+```
+
+**TODO**: This hasn't been done for O2DPG yet; that package is pulled in by O2PDPSuite, so the publishing procedure is more complicated there.
