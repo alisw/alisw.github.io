@@ -12,7 +12,7 @@ operate the system.
 
 Further troubleshooting information is privately available in the repository:
 
-https://gitlab.cern.ch/ALICEDevOps/aliops.git/
+<https://gitlab.cern.ch/ALICEDevOps/aliops.git/>
 
 ## Tasks
 
