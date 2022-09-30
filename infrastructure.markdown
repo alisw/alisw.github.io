@@ -32,6 +32,7 @@ Further troubleshooting information is privately available in the repository:
 
 ## Infrastructure
 
+* [Nomad, Consul and Vault]({{site.baseurl}}/infrastructure-nomad)
 * <a href="{{site.baseurl}}/infrastructure-mesos">Apache Mesos</a>
 * <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
 * <a href="{{site.baseurl}}/infrastructure-aurora">Apache Aurora</a>
