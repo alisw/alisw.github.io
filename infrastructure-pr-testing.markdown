@@ -50,6 +50,40 @@ make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/i
 * [Inspecting the checkers](#inspecting-the-checkers)
 * [Monitoring the checkers](#monitoring-the-checkers)
 
+## Adding a package to be tested
+
+Each checker deployed on Aurora can test multiple packages. These are declared as `*.env` files [in a subdirectory of ali-bot](https://github.com/alisw/ali-bot/tree/master/ci/repo-config), following the pattern:
+
+```
+ali-bot/ci/repo-config/<mesos role>/<container>/<short name>.env
+```
+
+The `DEFAULTS.env` files in the directory tree are special -- they are sourced before the applicable `*.env` file, and can provide default values for various variables.
+
+The most relevant variables you can set through the `*.env` file are:
+
+- `ALIBUILD_DEFAULTS`: what to pass to alibuild using its `--defaults` flag
+- `ALIBUILD_O2_TESTS`, `ALIBUILD_O2PHYSICS_TESTS`: set these if O2 and/or O2Physics unit tests should be run as part of the check
+- `CHECK_NAME`: the display name for this check, shown on GitHub
+- `CI_NAME`: an internal name for this check
+- `DEVEL_PKGS`: a newline-separated list of repositories to install as "development packages" for the build
+- `DOCKER_EXTRA_ARGS`: if running builds in Docker, any additional args to pass to the container; e.g. use this to mount a `tmpfs` if needed
+- `DONT_USE_COMMENTS`: only update GitHub statuses after the check completes, instead of commenting on each pull request as the alibuild user
+- `INSTALL_ALIBOT`, `INSTALL_ALIBUILD`: a slug (`<org>/<repo>@<tag>`) specifying the ali-bot and alibuild versions to install for this check
+- `JOBS`: how many CPU cores to use for building
+- `NO_ASSUME_CONSISTENT_EXTERNALS`: auto-generate a build identifier to keep builds of different pull requests apart
+- `PACKAGE`: the package (as declared in alidist) to build for the check
+- `PR_BRANCH`: look for pull requests against this branch
+- `PR_REPO`: look for pull requests in this repository
+- `PR_REPO_CHECKOUT`: check out the repository to be tested into this directory
+- `REMOTE_STORE`: use this as alibuild's `--remote-store`, for caching
+- `TRUST_COLLABORATORS`: automatically test PRs from people who have committed to the same repo before, without waiting for approval from someone else
+- `TRUSTED_USERS`, `TRUSTED_TEAM`: trust pull requests from these users (i.e. test them without requiring approval)
+
+In order to add a new pull request check for a repository, and a checker for the required platform/container exists already, just add a `*.env` file in the appropriate directory in ali-bot.
+
+If you add a new check, make sure to update the appropriate repository's GitHub action that cleans up broken statuses to include your new check. For example, in alidist, update [this file](https://github.com/alisw/alidist/blob/master/.github/workflows/clean-pr-checks.yml), or [this file](https://github.com/AliceO2Group/AliceO2/blob/dev/.github/workflows/clean-test.yml) for O2.
+
 ## Setup your environment
 
 Besides setting up your ALICE Aurora environment as described [here](https://alisw.github.io/infrastructure-aurora), you must be part of the `alice-aurora-mesosci` [egroup](https://egroups.cern.ch). Moreover, you will need to download
@@ -305,20 +339,21 @@ aurora task run -l root <ID> "tail -n1 sw/BUILD/O2-latest/log"
 
 ## Monitoring the checkers
 
+The CI system is monitored using a dedicated [Grafana dashboard](https://monit-grafana.cern.ch/d/7_5s-W27k/ci-overview?orgId=65).
+
 Builders are monitored in [Monalisa](http://alimonitor.cern.ch/display?page=github/combined).
 In particular you can use aliendb9 and look at the `github-pr-checker/github.com/github-api-calls`
 metric to know how many API calls are being done by the system.
 
 You can also get a detailed view the activity of the builders in our [Build Infrastructure Cockpit](https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB). If you are interested in extending the reports, please contact us.
 
-Some of the CI machines are also included in [IT Grafana dashboard]
-(https://monit-grafana.cern.ch/d/8KnQO4HMk/openstack-vms?orgId=1&var-project_name=ALICE%20Release%20Testing). Notice this includes also machines which do not run CI builds.
+Some of the CI machines are also included in the [IT Grafana dashboard](https://monit-grafana.cern.ch/d/8KnQO4HMk/openstack-vms?orgId=1&var-project_name=ALICE%20Release%20Testing). Notice this includes also machines which do not run CI builds.
 
 # Troubleshooting
   
 ## Empty logs
 
-Empty logs can happen in the case the build fails in some pre alibuild steps and the harvesting script is not able / is not allowed to fetch logs. In particular, due to the criticality of some operations, logs which might contain sensible information are not retrieved, to avoid exposing them to unprivileged ALICE users. Maintainers of the build infrastructure can follow the instructions in the report to retrieve them.
+Empty logs can happen in the case the build fails in some pre-alibuild steps and the harvesting script is not able or not allowed to fetch logs. In particular, due to the criticality of some operations, logs which might contain sensitive information are not retrieved, to avoid exposing them to unprivileged ALICE users. Maintainers of the build infrastructure can follow the instructions in the report to retrieve them.
   
 That said, the vast majority of the "missing logs issues" are due to the following two items:
   
