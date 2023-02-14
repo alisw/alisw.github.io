@@ -81,7 +81,7 @@ Next we want to bring `stable-sync` to the state of the current `dev`. For this 
 - Afterwards, in case the merge did not yield the exact state of `upstream/dev`, we run a `git diff` to `upstream/dev`, apply possible changes to the working tree, and amend the merge commit by it. The exact commands for this are:
 
   ```bash
-  git diff origin/dev | git apply --allow-empty -R --index; git commit --amend --no-edit
+  git diff upstream/dev | git apply --allow-empty -R --index; git commit --amend --no-edit
   ```
 
 - Here again the possible console output:
@@ -102,21 +102,21 @@ Next we want to bring `stable-sync` to the state of the current `dev`. For this 
   Common/Utils/include/CommonUtils/RngHelper.h                                   |    6 +-
   [...]
   78 files changed, 2518 insertions(+), 1572 deletions(-)
-  qon@qon ~/alice/O2 $ git diff origin/dev | git apply --allow-empty -R --index
+  qon@qon ~/alice/O2 $ git diff upstream/dev | git apply --allow-empty -R --index
   qon@qon ~/alice/O2 $ git commit --amend --no-edit
-  [stable-sync 005d1dd4aff] Merge remote-tracking branch 'origin/dev' into stable-sync
+  [stable-sync 005d1dd4aff] Merge remote-tracking branch 'upstream/dev' into stable-sync
   Date: Wed Aug 17 14:15:22 2022 +0200
   ```
 
 - Finally, make sure we are exactly at `upstream/dev`. The following diff must not show any difference.
 
   ```bash
-  qon@qon ~/alice/O2 $ git diff origin/dev | cat
+  qon@qon ~/alice/O2 $ git diff upstream/dev | cat
   qon@qon ~/alice/O2 $
   ```
 
 - Now the `stable-sync` branch is exactly at the state of `upstream/dev`, and from here on we can cherry-pick further commits from `upstream/dev` that were commited after the merge.
 
-- Please see the final state in the figure below. From the point we started branching of (`epn-20220812`) the `stable-sync` branch had 2 commits cherry-picked, and then it is merged with `origin/dev`.
+- Please see the final state in the figure below. From the point we started branching of (`epn-20220812`) the `stable-sync` branch had 2 commits cherry-picked, and then it is merged with `upstream/dev`.
 
   ![After merging]({{site.baseurl}}/images/branching-screenshot3.png)
