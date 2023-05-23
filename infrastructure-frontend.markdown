@@ -67,3 +67,31 @@ You can check their load balanced score with:
 ```
 /usr/local/sbin/lbclient -d TRACE
 ```
+
+# CERN Single Sign-On (SSO) authentication
+
+Some web applications use Apache's OIDC support to authenticate with CERN SSO. Apache then sets [various `OIDC_CLAIM_*` headers][headers] on the forwarded requests.
+
+See also [the CERN SSO documentation][cern-sso].
+
+[headers]: https://auth.docs.cern.ch/user-documentation/oidc/config/
+[cern-sso]: https://auth.docs.cern.ch/applications/application-configuration/
+
+## Adding a new application
+
+Applications must be configured on the CERN SSO side through the [Application Portal][app-portal] and on the ALICE side though our Puppet-generated Apache configuration, specifically the file `it-puppet-hostgroup-alibuild/data/hostgroup/alibuild/frontend.yaml`.
+
+1. [Add the application on the Application Portal][add-app]
+   - Configure the client ID of the application in `it-puppet-hostgroup-alibuild/data/hostgroup/alibuild/frontend.yaml`, using `oidc_client_id: <client ID>`
+   - Store the generated client secret in Teigi as `<app name>-oidc-client-secret`
+   - Generate an OIDC crypto passphrase, e.g. using `tr -dc '[:alnum:].+_-' < /dev/urandom | head -c 24; echo` and save it in Teigi as `<app name>-oidc-crypto-passphrase`
+2. [Add an OIDC (not SAML) registration to the new application][sso-registration]
+   - Make sure you use `https://<app name>.cern.ch/oidc-redirect` as the redirect URI. Apache intercepts the `/oidc-redirect` path.
+3. Optionally, configure any required roles, e.g. `alice-member`:
+   - [Add this role as documented here][roles] and map any required e-groups (e.g. `alice-member`) to it
+   - Configure `oidc_require_role: <role identifier>` for the application in `it-puppet-hostgroup-alibuild/data/hostgroup/alibuild/frontend.yaml`
+
+[app-portal]: https://application-portal.web.cern.ch/
+[add-app]: https://auth.docs.cern.ch/applications/adding-application/
+[sso-registration]: https://auth.docs.cern.ch/applications/sso-registration/
+[roles]: https://auth.docs.cern.ch/applications/role-based-permissions/
