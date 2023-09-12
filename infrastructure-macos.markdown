@@ -103,4 +103,11 @@ There are currently three dedicated worker nodes:
 * `alibuildmac00`: process pull requests for `ALIROOT` and is launched by providing config file [`aliroot-guntest`](https://github.com/alisw/ali-bot/blob/master/ci/conf/aliroot-guntest.sh)
 * `alibuildmac01`: process pull requests for O2 and is launched by providing argument [`o2-0`](https://github.com/alisw/ali-bot/blob/master/ci/conf/o2-0.sh)
 * `alibuildmac03`: process pull requests for alidist and are launched by providing argument [`alidist_o2-0`](https://github.com/alisw/ali-bot/blob/master/ci/conf/alidist_o2-0.sh)
-* the actual builds are taking place in `/build/<config_file_argument>` 
+* the actual builds are taking place in `/build/<config_file_argument>`
+
+# Troubleshooting
+{: #troubleshooting}
+
+Possible causes for the macOS builders not working.
+
+* IPv6 networking misconfiguration, resulting in logs not correctly uploading to CERN S3. This can be solved by hardcoding the gateway in the Network panel.
