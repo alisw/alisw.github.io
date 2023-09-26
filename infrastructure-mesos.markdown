@@ -162,10 +162,10 @@ The short recipe for a build machine is:
   eval $(ai-rc "ALICE Release Testing")
   ```
 
-  or, for the release validation machines:
-  
+  or, for the physical/bare-metal machines:
+
   ```bash
-  eval $(ai-rc "ALICE Cloud Tests")
+  eval $(ai-rc "ALICE Release Testing - physical machines")
   ```
 
 - In order to create new machines, you will also need the public SSH key to be
@@ -176,50 +176,53 @@ The short recipe for a build machine is:
   openstack keypair create --public-key alibuild.pub alibuild
   ```
 
+  This only needs to be done the first time you create a VM.
+
 - Specify a few parameters for the machine you want to spawn:
 
   ```bash
-  MACHINE_NAME=<alibuildXX>
+  MACHINE_NAME=<alibuildXX/alimetalXX>
+  FLAVOR=<OpenStack flavor name, see below>
+  VOLSIZE=<"1000GB" for VMs, empty for physical machines>
   ```
+
+  For virtual machines, `FLAVOR` is `m2.2xlarge`. For physical/bare-metal
+  machines, this will be a string given by CERN IT, probably of the form
+  `p1.dlXXXXXXX.S513-V-IPXX`. You can list the flavors you have access to by
+  running `openstack flavor list`.
 
 - To spawn a machine you need to use the `ai-bs` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
 
   ```bash
-  ai-bs -g alibuild/mesos/slave                     \
-        --foreman-environment production            \
-        --cc7                                       \
-        --nova-sshkey alibuild                      \
-        --nova-flavor m2.2xlarge                    \
-        --landb-mainuser alice-agile-admin          \
-        --landb-responsible alice-agile-admin       \
-        --nova-attach-new-volume vdb=500GB:type=io1 \
-        $MACHINE_NAME
-  ```
-
-  or for release validation machines, the same command but without the
-  `--nova-attach-new-volume vdb=500GB:type=io1` option:
-
-  ```bash
-  ai-bs -g alibuild/mesos/slave                     \
-        --foreman-environment production            \
-        --cc7                                       \
-        --nova-sshkey alibuild                      \
-        --nova-flavor m2.2xlarge                    \
-        --landb-mainuser alice-agile-admin          \
-        --landb-responsible alice-agile-admin       \
-        $MACHINE_NAME
+  ai-bs -g alibuild/mesos/slave --alma9                              \
+        --foreman-environment production                             \
+        --nova-sshkey alibuild --nova-flavor "$FLAVOR"               \
+        --landb-mainuser alice-agile-admin                           \
+        --landb-responsible alice-agile-admin                        \
+        ${VOLSIZE:+--nova-attach-new-volume "vdb=$VOLSIZE:type=io1"} \
+        "$MACHINE_NAME"
   ```
 
 This will spawn a new machine. You can check the boot status either in the
-OpenStack GUI or via `openstack server list`. Of course you should change the name
-of the machine (`<alibuildXX>` in the example).
-- In order to make sure that the machine is correctly up and running, you should:
-  - ping it
-  - ssh to it
-  - run `puppet agent -t -v` until no errors are reported
-  - execute `docker pull alisw/slc7-builder` to force pull the builder image.
+OpenStack GUI or via `openstack server show -f yaml "$MACHINE_NAME"`. Of
+course you should change the name of the machine (`<alibuildXX>` in the
+example).
+
+For bare-metal machines in particular, a flavor being listed in `openstack
+flavor list` does not guarantee that there is capacity for more hosts within
+it. If you create a host and it is immediately in an "ERROR" state, try
+another flavor or contact CERN IT.
+
+In order to make sure that the machine is correctly up and running, you
+should:
+
+- ping it
+- ssh to it
+- run `puppet agent -t -v` until no errors are reported
+- execute e.g. `docker pull registry.cern.ch/alisw/slc7-builder` to
+  force-pull the builder image.
 
 ## Rebuilding a master
 {: #rebuild-master}
