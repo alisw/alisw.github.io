@@ -205,15 +205,21 @@ The short recipe for a build machine is:
         "$MACHINE_NAME"
   ```
 
-This will spawn a new machine. You can check the boot status either in the
-OpenStack GUI or via `openstack server show -f yaml "$MACHINE_NAME"`. Of
-course you should change the name of the machine (`<alibuildXX>` in the
-example).
+  This will spawn a new machine. You can check the boot status either in the
+  OpenStack GUI or via `openstack server show -f yaml "$MACHINE_NAME"`. Of
+  course you should change the name of the machine (`<alibuildXX>` in the
+  example).
 
-For bare-metal machines in particular, a flavor being listed in `openstack
-flavor list` does not guarantee that there is capacity for more hosts within
-it. If you create a host and it is immediately in an "ERROR" state, try
-another flavor or contact CERN IT.
+  For bare-metal machines in particular, a flavor being listed in `openstack
+  flavor list` does not guarantee that there is capacity for more hosts within
+  it. If you create a host and it is immediately in an "ERROR" state, try
+  another flavor or contact CERN IT.
+
+- Machines may require a manual reboot to apply updates to the kernel command
+  line.
+
+  In particular, make sure that `/proc/cmdline` contains
+  `systemd.unified_cgroup_hierarchy=0`. If not, reboot the machine.
 
 In order to make sure that the machine is correctly up and running, you
 should:
