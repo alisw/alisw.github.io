@@ -15,7 +15,8 @@ The O2 software is developed continuously in the `dev` branch. Both the synchron
 5. The stable branches shall not split up further, i.e. we only either cherry-pick individual commits on top, or we merge the full `dev`.
 6. Nightly builds for `dev` are unaffected, we do not do nightly builds for the stable branch. Instead, tags of the stable branch are only built manually via jenkins when needed.
 7. We use the same validation mechanism for tags of the stable branch as for the `dev` branch, i.e. the FST for `stable-sync`, and the release validation for `stable-async`.
-8. The naming scheme for tags of the stable branch is [last tag in dev branch] + "." + [incrementing number]
+8. The naming scheme for tags of the stable branch is [last tag in dev branch] + "." + [incrementing number].
+   If changes to an existing tag are carried out, you can instead add an incrementing letter, for example, `async-20231102.3` -> `async-20231102.3a` -> `async-20231102.3b`.
 
 
 The procedure for cherry-picking and for merging is described below. The following branching scheme should give an overview:
