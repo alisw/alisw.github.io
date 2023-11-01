@@ -9,13 +9,14 @@ categories: infrastructure
 The O2 software is developed continuously in the `dev` branch. Both the synchronous and the asynchronous processing have their own stable branches, `stable-sync` and `stable-async`, which follow the `dev` branch closely. The following procedure has been agreed upon for managing the two stable branches:
 
 1. Both synchronous processing at P2 and the asynchronous processing on the grid might require quick fixes which should not rely on coordination between the two. For that reason there are two stable branches `stable-sync` and `stable-async`.
-2. No development shall go into these branches. All developments must go into `dev`. They will not be used to port fixes by yser requests.
+2. No development shall go into these branches. All developments must go into `dev`. They will not be used to port fixes by user requests.
 3. When requested by RC or by experts for sync / async reconstruction, we can cherry-pick fixes / features from `dev` in one of the stable branches. We will not do extensive back-porting. If the patches do not apply cleanly or with only trivial merge conflicts, we do not cherry-pick but we will merge the full `dev` branch into the stable branche.
 4. We will regularly merge the full `dev` branch into the stable branches. For synchronous reconstruction usually synchronized with the large software updates. After merging, `stable-*` will be hard reset to the state of `dev`.
 5. The stable branches shall not split up further, i.e. we only either cherry-pick individual commits on top, or we merge the full `dev`.
 6. Nightly builds for `dev` are unaffected, we do not do nightly builds for the stable branch. Instead, tags of the stable branch are only built manually via jenkins when needed.
 7. We use the same validation mechanism for tags of the stable branch as for the `dev` branch, i.e. the FST for `stable-sync`, and the release validation for `stable-async`.
-8. The naming scheme for tags of the stable branch is [last tag in dev branch] + "." + [incrementing number]
+8. The naming scheme for tags of the stable branch is [last tag in dev branch] + "." + [incrementing number].
+   If changes to an existing tag are carried out, you can instead add an incrementing letter, for example, `async-20231102.3` -> `async-20231102.3a` -> `async-20231102.3b`.
 
 
 The procedure for cherry-picking and for merging is described below. The following branching scheme should give an overview:
