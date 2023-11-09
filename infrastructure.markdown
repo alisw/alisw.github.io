@@ -21,7 +21,6 @@ Further troubleshooting information is privately available in the repository:
 * <a href="{{site.baseurl}}/infrastructure-o2-branches">O2 stable branches</a>
 * <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
 * <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
-* <a href="{{site.baseurl}}/infrastructure-macos">Testing of Pull Requests on macOS</a>
 * <a href="{{site.baseurl}}/infrastructure-logs">Build Logs</a>
 * <a href="{{site.baseurl}}/infrastructure-publisher">Release Publishing</a>
 * <a href="{{site.baseurl}}/infrastructure-relval">RelVal</a>
@@ -33,6 +32,7 @@ Further troubleshooting information is privately available in the repository:
 ## Infrastructure
 
 * [Nomad, Consul and Vault]({{site.baseurl}}/infrastructure-nomad)
+* [MacOS builder setup]({{site.baseurl}}/infrastructure-macos)
 * <a href="{{site.baseurl}}/infrastructure-mesos">Apache Mesos</a>
 * <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
 * <a href="{{site.baseurl}}/infrastructure-aurora">Apache Aurora</a>
