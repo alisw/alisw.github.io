@@ -18,6 +18,12 @@ These are the instructions for macOS Ventura.
 * During setup, create a user account for the `alibuild` user, do not sign in to iCloud.
 * Sign into the App Store as `ali.bot@cern.ch`.
 
+Some commands below should be run on your local machine.
+These may refer to the new Mac's hostname, so set a variable for this now, or substitute `$newhost` manually in the commands below.
+```bash
+newhost='<short hostname of the new Mac, e.g. alibuildmac09>'
+```
+
 ## Set up firewall exceptions
 
 Add the new Mac's hostname to the list of non-Puppetized CI hosts in Puppet.
@@ -78,7 +84,7 @@ O2 unit tests need this to connect to services like the test CCDB instance.
 
 On your local computer, run:
 ```bash
-ssh alibuildmac00.cern.ch tar -cz /etc/grid-security/certificates | ssh <new hostname> 'cat > certs.tar.gz'
+ssh alibuildmac00.cern.ch tar -cz /etc/grid-security/certificates | ssh "$newhost" 'cat > certs.tar.gz'
 ```
 
 Then, on the Mac being set up, run:
@@ -98,7 +104,7 @@ In order to do this, you must be listed as the "responsible" or "main user" of t
 Set up a temporary passphrase for the generated certificate before downloading it.
 After downloading it, copy it to the Mac being set up.
 
-Assuming the certificate you downloaded was called `<short-hostname>.p12` (which is the default), run the following on the Mac:
+Assuming the certificate you downloaded was called `$newhost.p12` (which is the default), run the following on the Mac:
 <!-- https://ca.cern.ch/ca/Help/?kbid=024100 -->
 ```bash
 sudo openssl pkcs12 -in "$(hostname -s).p12" -clcerts -nokeys -out /etc/grid-security/hostcert.pem
@@ -138,7 +144,7 @@ Now adapt the files to the local host:
 You also need to set up custom launchd services for Nomad and Consul, since the ones packaged by Homebrew are not suitable for production use.
 On your local machine, run the following to copy the files into place:
 ```bash
-scp -3 alibuildmac00.cern.ch:{homebrew.mxcl.{nomad,consul}.plist,restart-services.sh} <new hostname>:.
+scp -3 alibuildmac00.cern.ch:{homebrew.mxcl.{nomad,consul}.plist,restart-services.sh} "$newhost:."
 ```
 
 Finally, start the services by running the following command on the Mac:
@@ -161,7 +167,7 @@ pdsh -w 'alimesos[01-03].cern.ch' puppet agent -tv
 The Macs are configured on a host-by-host basis, unlike the Linux checkers, so that we can more tightly control what checks run where.
 This saves precious disks space, since many Macs lack this resource compared to the Linux machines.
 
-In the private `ci-jobs` repository, configure a new CI job variation by creating a file called `ci-jobs/ci/<new hostname>.yaml` with the following content (substituting the parts in `<>`):
+In the private `ci-jobs` repository, configure a new CI job variation by creating a file called `ci-jobs/ci/$newhost.yaml` with the following content (substituting the parts in `<>`):
 ```yaml
 ---
 role: macos
@@ -179,9 +185,9 @@ Once that's done, actually run the CI job on the new host:
 
 ```bash
 cd ci-jobs/ci
-levant render -var-file <new hostname>.yaml | nomad job plan -
+levant render -var-file "$newhost.yaml" | nomad job plan -
 # If the above succeeds, then:
-levant render -var-file <new hostname>.yaml | nomad job run -
+levant render -var-file "$newhost.yaml" | nomad job run -
 ```
 
 ## Configuring individual checks
