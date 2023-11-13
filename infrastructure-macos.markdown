@@ -32,6 +32,13 @@ You have to do this in two places, once each in the header of:
 * `it-puppet-hostgroup-alibuild/code/manifests/mesos/master.pp`
 * `it-puppet-hostgroup-alibuild/code/manifests/mesos/slave.pp`
 
+## Set up the Mac's network connection
+
+On the Mac, go to System Settings -> Network and disable WiFi.
+
+Then, in the network settings, go to Ethernet -> Details -> DNS, and click "+" under "DNS Servers" to add the IPv4 addresses of alimesos01, alimesos02 and alimesos03 as DNS servers.
+Remove other DNS servers (including the automatic CERN central ones).
+
 ## Software prerequisites
 
 * Install the right version of XCode, either from the App Store or from [xcodereleases.com](https://xcodereleases.com/).
