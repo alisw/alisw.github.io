@@ -39,6 +39,14 @@ On the Mac, go to System Settings -> Network and disable WiFi.
 Then, in the network settings, go to Ethernet -> Details -> DNS, and click "+" under "DNS Servers" to add the IPv4 addresses of alimesos01, alimesos02 and alimesos03 as DNS servers.
 Remove other DNS servers (including the automatic CERN central ones).
 
+## Prevent the Mac from going to sleep
+
+By default, Macs will go into a low-power state after a while without interactive use, which interrupts the CI build process.
+
+In System Settings -> Energy Saver, enable both "Start up automatically after a power failure" and "Wake for network access".
+
+In System Settings -> Lock Screen, set "Start Screen Saver when inactive" to "Never".
+
 ## Software prerequisites
 
 * Install the right version of XCode, either from the App Store or from [xcodereleases.com](https://xcodereleases.com/).
