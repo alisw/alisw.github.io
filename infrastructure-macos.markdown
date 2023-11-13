@@ -45,7 +45,7 @@ By default, Macs will go into a low-power state after a while without interactiv
 
 In System Settings -> Energy Saver, enable both "Start up automatically after a power failure" and "Wake for network access".
 
-In System Settings -> Lock Screen, set "Start Screen Saver when inactive" to "Never".
+In System Settings -> Displays -> Advanced, enable "Prevent automatic sleeping when the display is off" (at the bottom of the page).
 
 ## Software prerequisites
 
