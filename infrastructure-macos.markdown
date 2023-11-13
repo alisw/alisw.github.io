@@ -42,10 +42,13 @@ Remove other DNS servers (including the automatic CERN central ones).
 ## Prevent the Mac from going to sleep
 
 By default, Macs will go into a low-power state after a while without interactive use, which interrupts the CI build process.
+To prevent this, change the following settings in System Settings:
 
-In System Settings -> Energy Saver, enable both "Start up automatically after a power failure" and "Wake for network access".
+In Energy Saver, enable both "Start up automatically after a power failure" and "Wake for network access".
 
-In System Settings -> Displays -> Advanced, enable "Prevent automatic sleeping when the display is off" (at the bottom of the page).
+In Lock Screen, set both "Start Screen Saver when inactive" and "Turn display off when inactive" to "Never".
+
+In Displays -> Advanced, enable "Prevent automatic sleeping when the display is off" (at the bottom of the page).
 
 ## Software prerequisites
 
