@@ -165,9 +165,15 @@ On your local machine, run the following to copy the files into place:
 scp -3 alibuildmac00.cern.ch:{homebrew.mxcl.{nomad,consul}.plist,restart-services.sh} "$newhost:."
 ```
 
-Finally, start the services by running the following command on the Mac:
+Start the services by running the following command on the Mac:
 ```bash
 sudo ~/restart-services.sh
+```
+
+Finally, make sure that Nomad's work directory is readable by all users.
+This is necessary to run CI jobs as the `alibuild` user, since it cannot find the script otherwise:
+```bash
+sudo chmod go+rx /opt/build/nomad
 ```
 
 The host should appear in [the list of Nomad clients](https://alinomad.cern.ch/ui/clients).
