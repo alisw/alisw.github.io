@@ -12,15 +12,21 @@ The easiest way to create a release is to trigger the corresponding GitHub Actio
 
 For each workflow, replace the `XXy` string in the release tag with the one you'd like to build. This will be two digits and a lowercase letter. The last workflow (in AliPhysics) will need the same tag as the other two, but with `-01` appended.
 
-1. ["Prepare AliPhysics tag"][alidist tag] in alidist
+1. ["Prepare AliRoot/AliPhysics tag"][alidist tag] in alidist
 2. ["Prepare AliRoot tag"][aliroot tag] in AliRoot
-3. ["Prepare AliPhysics tag and start build"][aliphysics build] in AliPhysics
-
-The last of these is set up to automatically start a build on Jenkins.
+3. ["Prepare AliPhysics tag"][aliphysics tag] in AliPhysics
+4. Start a [build in Jenkins][jenkins build].
+   Change the following settings, replacing `XXy` with the tag name you created above:
+   ```
+   ALIDIST_SLUG=alisw/alidist@AliPhysics-v5-09-XXy-01
+   ARCHITECTURE=slc7_x86-64
+   PACKAGE_NAME=AliPhysics
+   ```
 
 [alidist tag]: https://github.com/alisw/alidist/actions/workflows/prepare-patch-release-branch.yml
 [aliroot tag]: https://github.com/alisw/AliRoot/actions/workflows/main.yml
-[aliphysics build]: https://github.com/alisw/AliPhysics/actions/workflows/release.yml
+[aliphysics tag]: https://github.com/alisw/AliPhysics/actions/workflows/release.yml
+[jenkins build]: https://alijenkins.cern.ch/job/build-any-ib/build?delay=0sec
 
 ## Patching old (≤ AliRoot-v5-08) releases
 
