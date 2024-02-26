@@ -20,6 +20,7 @@ Further troubleshooting information is privately available in the repository:
 * <a href="{{site.baseurl}}/infrastructure-release-process-o2">Release process O2PDPSuite</a>
 * <a href="{{site.baseurl}}/infrastructure-o2-branches">O2 stable branches</a>
 * <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
+* [CVMFS releases]({{site.baseurl}}/infrastructure-cvmfs)
 * <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
 * <a href="{{site.baseurl}}/infrastructure-logs">Build Logs</a>
 * <a href="{{site.baseurl}}/infrastructure-publisher">Release Publishing</a>
