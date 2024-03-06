@@ -17,12 +17,14 @@ You can edit the contents of CVMFS by SSH'ing into cvmfs-alice.cern.ch, then run
    This will run some tests on the changed script.
    Once merged into ali-bot, then deploy manually by copying the file to its path in CVMFS.
 2. Add the new architecture to [aliPublish.conf](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish.conf).
-   You will at least need to publish the `GCC-Toolchain` and `jq` packages, in addition to any physics packages you want to make available (like `O2PDPSuite`).
+   You will at least need to publish the `GCC-Toolchain` and `grid-base-packages` packages, in addition to any physics packages you want to make available (like `O2PDPSuite`).
 3. Create a `BASE/1.0` modulefile for the new architecture at `/cvmfs/alice.cern.ch/el9-x86_64/Modules/modulefiles/BASE/1.0`.
    The easiest way to do this is to copy the modulefile from an existing architecture and adjust it as necessary.
 4. Create symlinks for GCC builds under `/cvmfs/alice.cern.ch/etc/toolchain/modulefiles/<arch>/Toolchain/`.
    For this, you should run the publisher manually once (or wait for it to run via cron), so that GCC builds are available under `/cvmfs/alice.cern.ch/<arch>/Modules/modulefiles/GCC-Toolchain/`.
    For each desired GCC version, add a symlink `/cvmfs/alice.cern.ch/etc/toolchain/modulefiles/<arch>/Toolchain/GCC-vX.Y.Z` pointing to `../../../../../<arch>/Modules/modulefiles/GCC-Toolchain/vX.Y.Z-N`.
+5. Create a `default` symlink for the `grid-base-packages` modulefile under `/cvmfs/alice.cern.ch/<arch>/Modules/modulefiles/grid-base-packages`.
+   If you've just built `grid-base-packages` for the first time for the new architecture, it'll be called `v1-1`, so run `ln -s v1-1 /cvmfs/alice.cern.ch/<arch>/Modules/modulefiles/grid-base-packages/default`.
    
 When you're done, commit your changes by running `cd` (so that your shell isn't keeping a CVMFS directory open), then running `cvmfs_server publish alice.cern.ch`.
 
