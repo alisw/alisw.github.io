@@ -1,0 +1,90 @@
+graph alice_ci_infra {
+  // Colours are from https://yeun.github.io/open-color/. Use "<Colour> 2" for backgrounds.
+  graph [fontname="sans-serif", style=filled, color="#e9ecef", labelloc=t]
+  node [fontname="sans-serif", shape=box]
+  edge [fontname="sans-serif", fontsize=12, arrowhead=empty, arrowtail=empty]
+
+  label=<<B>ALICE CI Infrastructure</B><BR/>Overview of components and their interaction>
+  newrank=true   // make rank=same inside subgraphs work
+
+  // Note: the order of declaration of nodes influences the final generated layout.
+
+  internet [label="Internet", width=3, style=filled, color=none, fillcolor="#ffc9c9"]
+
+  // Subgraphs with cluster_* names are special: they automatically have cluster=true set.
+  subgraph cluster_frontend {
+    // label=<<B>Frontend node</B><BR/><FONT POINT-SIZE="10">2&times; <FONT FACE="monospace">alibuild-frontend*</FONT></FONT>>
+    label=<<B>Frontend node</B><BR/><FONT POINT-SIZE="10">2&times; <FONT FACE="monospace">alibuild/frontend</FONT></FONT>>
+    color="#ffd8a8"    // Orange 2
+    rank=same
+    traefik [label="Traefik"]
+    consul_frontend [label="Consul"]
+    apache [label="Apache"]
+  }
+
+  subgraph cluster_server {
+    // label=<<B>Server</B><BR ALIGN="RIGHT"/><FONT POINT-SIZE="10">3&times; <FONT FACE="monospace">alimesos*</FONT></FONT>>
+    label=<<B>Server node</B><BR ALIGN="RIGHT"/><FONT POINT-SIZE="10">3&times; <FONT FACE="monospace">alibuild/mesos/master</FONT></FONT>>
+    labelloc=b; labeljust=r
+    color="#d0bfff"   // Violet 2
+    rank=same
+    consul_server [label="Consul"]
+    vault [label="Vault"]
+    nomad_server [label="Nomad"]
+    prometheus [label="Prometheus"]
+  }
+
+  subgraph cluster_agent {
+    // label=<<B>Agent</B><BR/><FONT POINT-SIZE="10">&asymp;40&times; <FONT FACE="monospace">alibuild*, alientest*, &hellip;</FONT></FONT>>
+    label=<<B>Agent node</B><BR/><FONT POINT-SIZE="10">&asymp;40&times; <FONT FACE="monospace">alibuild/mesos/slave</FONT>  &amp; bare-metal hosts</FONT>>
+    labelloc=b
+    color="#b2f2bb"   // Green 2
+    rank=same
+    consul_agent [label="Consul"]
+    allocs [label=<<TABLE BORDER="0" CELLBORDER="0"><TR><TD>alloc 1</TD></TR><TR><TD>alloc 2</TD></TR><TR><TD>&hellip;</TD></TR></TABLE>>]
+    nomad_agent [label="Nomad"]
+  }
+
+  subgraph cluster_monit {
+    label=<<B>Monitoring</B><BR/><FONT POINT-SIZE="10">CERN MONIT</FONT>>
+    color="#a5d8ff"    // Blue 2
+    rank=same
+    grafana [label="Grafana"]
+    cortex [label="Cortex"]
+  }
+
+  // Frontend services
+  apache -- consul_server [label=<DNS<BR ALIGN="LEFT"/><FONT POINT-SIZE="8">via dnsmasq</FONT>>, dir=back]
+  consul_frontend -- consul_server [label="service\linfo", dir=back]
+  traefik -- consul_frontend [label="service\nports", dir=back]
+
+  // Server and agent services
+  consul_server -- consul_agent [headlabel="register\rservices", labeldistance=3, labelangle=60, dir=back]
+  nomad_server -- nomad_agent [taillabel="scheduling", labeldistance=4, labelangle=300]
+  vault -- allocs [label="secrets", dir=forward]
+  consul_server -- allocs [taillabel=<DNS<BR ALIGN="LEFT"/><FONT POINT-SIZE="8">via dnsmasq</FONT>>, labeldistance=4, labelangle=40, dir=forward]
+  consul_agent -- allocs [label="health\nchecks"]
+  allocs -- nomad_agent [label="job/alloc\nsupervision"]
+
+  // Web request routing
+  // Web requests should be styled as [color="black:black", dir=both].
+  internet:sw -- traefik [label=<web<BR/>requests<BR/><FONT POINT-SIZE="8">via Apache</FONT>>, color="black:black", dir=both]
+  internet:se -- apache [label=<ali* web<BR/>UIs &amp; APIs<BR/><FONT POINT-SIZE="8"> (client cert auth)</FONT>>, color="black:black", dir=both]
+  consul_frontend -- apache [label="aliconsul\nUI & API", color="black:black", dir=both]
+  apache -- nomad_server [label="alinomad\nUI & API", color="black:black", dir=both]
+  apache -- vault [label="alivault\nUI & API", color="black:black", dir=both]
+  traefik -- allocs:nw [taillabel="web\nrequests", labeldistance=5, labelangle=330, color="black:black", dir=both]
+
+  // Metrics: Prometheus monitors various things and pushes metrics to Cortex.
+  // Metrics should be styled as [style=dashed].
+  grafana -- cortex [style=dashed, dir=back]
+  cortex -- prometheus [style=dashed, dir=back, label=<  <I>push metrics<BR ALIGN="LEFT"/>to storage</I>>]
+  // Prometheus monitors itself.
+  prometheus -- prometheus [style=dashed, dir=back]
+  // Metrics from all the server node's services. Visualised as "flowing" to Prometheus along a common "rail".
+  traefik:se -- consul_server:w [style=dashed]
+  consul_server -- vault -- nomad_server [style=dashed]
+  nomad_server -- prometheus [style=dashed, label=<<I>cluster<BR/>metrics</I>>, dir=forward]
+  // Show metrics from agent nodes separately.
+  prometheus:w -- nomad_agent [style=dashed, dir=back, label=<<I>metrics</I>>]
+}

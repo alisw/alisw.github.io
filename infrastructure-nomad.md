@@ -130,9 +130,11 @@ In this case, check the following:
 
 2. If your job requires, for instance, lots of memory, but all the high-memory machines are taken by other jobs, you may have to stop and reschedule those other jobs while deploying yours. Assuming that the other jobs don't need a lot of memory, they should be scheduled on other free machines when you restart them after deploying your job.
 
-3. If your job requires a lot of disk space, make sure that Nomad's internal tracking of available disk space is correct. You can do this using the `nomad-diskfree` script and looking for "metric free space is lower than real free space" warnings.
+3. If your job requires a lot of disk space, make sure that Nomad's internal tracking of available disk space is correct. You can do this using the [`nomad-diskfree`][nomad-diskfree] script and looking for any warnings on hosts that don't have any allocations running.
 
-   If you see warnings from `nomad-diskfree`, `ssh` into the affected machine and run `systemctl restart nomad` to reset Nomad's idea of available disk space. If you then run `nomad job plan` again, you should see fewer unplaced allocations.
+   If you see warnings from `nomad-diskfree`, `ssh` into the affected machine, manually clean up under `/build/nomad/alloc` if necessary, and run `systemctl restart nomad` to reset Nomad's idea of available disk space. If you then run `nomad job plan` again, you should see fewer unplaced allocations.
+
+[nomad-diskfree]: https://github.com/alisw/ali-bot/tree/master/nomad-diskfree
 
 # Developing locally
 
