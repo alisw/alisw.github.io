@@ -35,7 +35,7 @@ Further troubleshooting information is privately available in the repository:
 * [Using Nomad, Consul and Vault]({{site.baseurl}}/infrastructure-nomad)
 * [Nomad cluster setup]({{site.baseurl}}/infrastructure-nomad-host)
 * [MacOS builder setup]({{site.baseurl}}/infrastructure-macos)
-* <a href="{{site.baseurl}}/infrastructure-mesos">Apache Mesos</a>
+* [Virtual and physical machines]({{site.baseurl}}/infrastructure-machines)
 * <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
 * <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
 * <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>

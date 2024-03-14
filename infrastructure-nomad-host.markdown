@@ -9,6 +9,8 @@ categories: infrastructure
 <!-- Note: run `dot -Tsvg -oimages/nomad-infra.svg images/nomad-infra.dot` to regenerate this plot. -->
 [![ALICE CI Infrastructure diagram]({{ site.baseurl }}/images/nomad-infra.svg)]({{ site.baseurl }}/images/nomad-infra.svg)
 
+[See here for an explanation of the underlying infrastructure.](/infrastructure-machines)
+
 # Nomad, Consul and Vault setup notes
 
 ## Nomad and Consul setup on non-Openstack machines

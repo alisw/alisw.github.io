@@ -1,48 +1,43 @@
 ---
-title: Creating the build infrastructure
+title: Machines underlying the build infrastructure
 layout: main
 categories: infrastructure
 ---
 
 # Cluster architecture description
 
-The ALICE build infrastructure consists of two kinds of nodes: masters,
-responsible for scheduling jobs, and agents, responsible for executing jobs and
-services. They are in general provisioned using [CERN Openstack
-Infrastructure](http://openstack.cern.ch) and configured using the [CERN Puppet /
-Foreman setup](http://cern.ch/config).
+The ALICE build infrastructure consists of two kinds of nodes: masters, responsible for scheduling jobs, and agents, responsible for executing jobs and services.
+They are in general provisioned using [CERN Openstack Infrastructure](https://openstack.cern.ch) and configured using the [CERN Puppet / Foreman setup](https://cern.ch/config).
 
-Masters belong to the Puppet hostgroup `alibuild/mesos/master` while agents
-belong to `alibuild/mesos/slave`. The configuration of those hostgroups
-can be found in the `master` branch of the
-[it-puppet-hostgroup-alibuild](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild)
-git repository, in particular in:
+Masters belong to the Puppet hostgroup `alibuild/mesos/master` while agents belong to `alibuild/mesos/slave`.
+The configuration of those hostgroups can be found in the `master` branch of the [it-puppet-hostgroup-alibuild](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild) git repository, in particular in:
 
 - [/code/manifests/mesos/master.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/-/blob/master/code/manifests/mesos/master.pp) for the master.
 - [/code/manifests/mesos/slave.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/-/blob/master/code/manifests/mesos/slave.pp) for the slaves.
 
-Notice that in order to be able to modify such configuration and create / deploy machines in those hostgroups you will have to be part of the `alice-puppet` hostgroup.
+In order to be able to modify this configuration, and to create or deploy machines in those hostgroups, you will have to be part of the `alice-puppet` and `alice-agile-admin` hostgroups.
 
-We have in particular three masters, each running on a separate OpenStack
-availability zone which work in an High Availability (HA) mode which allows
-the ensemble to continue working correctly and scheduling jobs even in the eventuality that one
-of the machines goes down. A diagram for the services running on the masters can be find below:
+We have in particular three masters, each running on a separate OpenStack availability zone.
+These work in a High Availability (HA) mode, which allows the ensemble to continue working correctly, even in the eventuality that one of the machines goes down.
+A diagram for the services running on the masters can be found below:
 
-![build-infrastructure-diagram](images/build-infrastructure-diagram.png)
+<!-- Note: run `dot -Tsvg -oimages/nomad-infra.svg images/nomad-infra.dot` to regenerate this plot. -->
+[![ALICE CI Infrastructure diagram]({{ site.baseurl }}/images/nomad-infra.svg)]({{ site.baseurl }}/images/nomad-infra.svg)
 
 The masters run the following services:
 
-- The [**Mesos Master**](http://mesos.apache.org) service: Mesos is used to
-  schedule some of the Jenkins jobs automatically on the cluster and to automate
-  deployment of some of the services, in particular using the Marathon setup.
+- The [**Nomad server**](https://nomadproject.io/):
+  Nomad is used to schedule and deploy jobs like CI builders and publishers automatically on the cluster.
 
-- The [**ZooKeeper**](https://zookeeper.apache.org): the backend which keeps
-  track of Mesos distributed state, actually providing the HA setup.
+- The [**Consul server**](https://consul.io/):
+  A key-value store, used for its DNS features (Nomad jobs are assigned `<job name>.service.consul` domain names), and used as a backing store for Vault.
 
-- The [**Marathon**](https://mesosphere.github.io/marathon/) service: a simple
-  Platform as a Service (PaaS) implemented as a Mesos framework which allows
-  to define, launch and monitor long running services on the slaves. It relies
-  on Mesos to do the resource management.
+- The [**Vault server**](https://vaultproject.io/):
+  This service stores secrets and lets Nomad jobs use them, by substituting them into job declarations on-the-fly.
+
+- [**Prometheus**](https://prometheus.io/):
+  A monitoring service that polls various running jobs, in addition to the Nomad, Consul and Vault servers, and sends metrics to MONIT Cortex.
+  [This integration is documented here.](https://monit-docs.web.cern.ch/metrics/prometheus/)
 
 # Essential Operation Guides
 
@@ -61,31 +56,24 @@ First of all make sure you have all the rights to create machines in OpenStack a
 
 To get the OpenStack access rights, you should ask to become member of the `alice-vm-admin` egroup. To get the Puppet rights, you should ask to become member of the `alice-agile-admin` egroup. This can be done using the usual [egroups interface](https://egroups.cern.ch).
 
-Once you have those rights to use OpenStack you need to ssh into the CERN
-OpenStack administration machines (`aiadm.cern.ch`) and obtain the correct
-OpenStack credentials for the build machines by doing:
+Once you have those rights to use OpenStack, you need to ssh into the CERN OpenStack administration machines (`aiadm.cern.ch`) and obtain the correct OpenStack credentials for the virtual machines by running:
 
 ```bash
 eval $(ai-rc "ALICE Release Testing")
 ```
 
-or, for the release validation machines:
+or, for the physical machines managed by CERN IT:
 
 ```bash
-eval $(ai-rc "ALICE Cloud Tests")
+eval $(ai-rc "ALICE Release Testing - physical nodes")
 ```
 
-You can now execute the various OpenStack commands, using the CLI tool called
-`openstack`, while an exhaustive list of all the available options can be
-optained via `openstack help -h`, for the process of spawning new machines you probably
-only care about:
+You can now execute the various OpenStack commands, using the CLI tool called `openstack`.
+While an exhaustive list of all the available options can be optained via `openstack help -h`, for the process of spawning new machines you probably only care about:
 
-- `openstack server list`: list the machines in the project you specified on the
-  `eval $(ai-rc ...)` line above
-- `openstack image list`: list of OS images you can use. The build nodes should
-  use the latest `CC7` ones.
-- `openstack flavor list`: list available flavors of virtual machines (i.e. how
-  many CPUs, RAM).
+- `openstack server list`: list the machines in the project you specified on the `eval $(ai-rc ...)` line above
+- `openstack image list`: list of OS images you can use. The build nodes should use the latest "Alma 9" ones.
+- `openstack flavor list`: list available flavors of virtual machines (i.e. how many CPUs, RAM).
 
 Further information on how CERN OpenStack cloud works can be found [here](https://clouddocs.web.cern.ch/clouddocs/).
 
@@ -99,13 +87,12 @@ In case there are issues with one of the masters you should follow the following
 * Check in [Foreman](https://foreman.cern.ch) if there are any puppet errors.
 * Ping the machine.
 * SSH into the machine.
-* Check if docker is running and if it has at least the following containers: `mesos-master`, `zookeeper`, `marathon`, `aurora-scheduler`, `mesos-dns`.
+* Check if docker.service, nomad.service, consul.service and vault.service are running.
 
 ## Creating a master
 {: #create-master}
 
-Creation of masters in CERN Foreman setup is described in the [Configuration
-Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
+Creation of masters in CERN Foreman setup is described in the [Configuration Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
 The short recipe for a build machine is:
 
 - Login to `aiadm.cern.ch`.
@@ -126,20 +113,21 @@ The short recipe for a build machine is:
 
   ai-bs -g alibuild/mesos/master               \
         --foreman-environment alibuild_devel   \
-        --cc7                                  \
+        --alma9                                \
         --nova-sshkey alibuild                 \
         --nova-availabilityzone $ZONE          \
         --nova-flavor m2.large                 \
         --landb-mainuser alice-agile-admin     \
         --landb-responsible alice-agile-admin  \
-        --nova-attach-new-volume vdb=200GB     \
         $MACHINE_NAME
   ```
 
 ## Backup master
 {: #backup-master}
 
-Backing up of the masters is done for the `/data/zookeeper` folder via the [standard backup service of CERN/IT](https://information-technology.web.cern.ch/services/Backup-Restore-Service). The service itself is setup via puppet as usual. Things which can resuscitate a backup when it fails:
+Backing up of the masters is done for the `/build/consul` folder via the [standard backup service of CERN/IT](https://information-technology.web.cern.ch/services/Backup-Restore-Service).
+The service itself is setup via puppet as usual.
+Things which can resuscitate a backup when it fails:
 
 ```bash
 # restarting the service
@@ -151,8 +139,7 @@ dsmc incremental
 ## Creating a agent
 {: #create-agent}
 
-Creation of mesos agents in CERN Foreman setup is described in the
-[Configuration Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
+Creation of mesos agents in CERN Foreman setup is described in the [Configuration Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
 The short recipe for a build machine is:
 
 - Login to `aiadm.cern.ch`.
@@ -165,7 +152,7 @@ The short recipe for a build machine is:
   or, for the physical/bare-metal machines:
 
   ```bash
-  eval $(ai-rc "ALICE Release Testing - physical machines")
+  eval $(ai-rc "ALICE Release Testing - physical nodes")
   ```
 
 - In order to create new machines, you will also need the public SSH key to be
@@ -227,7 +214,7 @@ should:
 - ping it
 - ssh to it
 - run `puppet agent -t -v` until no errors are reported
-- execute e.g. `docker pull registry.cern.ch/alisw/slc7-builder` to
+- execute e.g. `docker pull registry.cern.ch/alisw/slc9-builder` to
   force-pull the builder image.
 
 ## Rebuilding a master
@@ -254,7 +241,7 @@ In order to perform the rebuild you need to do:
 - Actually rebuild the machine
 
   ```bash
-  ai-rebuild-vm --cc7 alimesosXX
+  ai-rebuild-vm --alma9 alimesosXX
   ```
 
 It can take up to one hour for the process to complete.
@@ -267,14 +254,12 @@ It can take up to one hour for the process to complete.
 ## Rebuilding an agent
 {: #rebuild-master}
 
-**YOU SHOULD NEVER REBUILD ALIBUILD03 and ALIBUILD09**
-
-Rebuilding an agent is potentially a problem, since the Mesos machine might be doing something,
+Rebuilding an agent is potentially a problem, since the Nomad agent might be doing something,
 e.g. building a release, which should not be in general interrupted. Therefore you need to:
 
 * Discuss with your collegueas whether that's a good idea.
 * Verify that the machine is not running any particularly important task, by looking at the report
-  in the Mesos GUI. If in doubt, ask.
+  in [the Nomad GUI](https://alinomad.cern.ch/ui/clients). If in doubt, ask.
 
 In order to perform the rebuild you need to do:
 
@@ -285,10 +270,10 @@ In order to perform the rebuild you need to do:
   eval $(ai-rc "ALICE Release Testing")
   ```
       
-  or, for the release validation machines:
+  or, for the physical machines:
 
   ```bash
-  eval $(ai-rc "ALICE Cloud Tests")
+  eval $(ai-rc "ALICE Release Testing - physical nodes")
   ```
 
   depending on which project the machine belongs to.
@@ -296,7 +281,7 @@ In order to perform the rebuild you need to do:
 - Actually rebuild the machine
 
   ```bash
-  ai-rebuild-vm --cc7 alibuildXX
+  ai-rebuild-vm --alma9 alibuildXX
   ```
       
 - In order to make sure that the machine is correctly up and running, you should:
@@ -308,10 +293,7 @@ In order to perform the rebuild you need to do:
 ## Deleting a build infrastructure VM
 {: #delete-agent}
 
-**WHATEVER YOU DO, NEVER DELETE ALIBUILD03 OR ITS ATTACHED VOLUME** 
-
-Documentation to delete a VM is found in the [Configuration Management User
-Guide](http://configdocs.web.cern.ch/configdocs/nodes/deletenode.html).
+Documentation to delete a VM is found in the [Configuration Management User Guide](http://configdocs.web.cern.ch/configdocs/nodes/deletenode.html).
 
 The recipe for destoying agents is:
 
@@ -351,4 +333,6 @@ in case the GUI is not functional.
 
 ## Master backups
 
-Backup of the Mesos Master is done via CERN TSM. This needs to be renewed regularly and CERN IT will ping by email about it. Agents are not backed up.
+Backup of the Consul server is done via CERN TSM.
+This needs to be renewed regularly and CERN IT will ping by email about it.
+Agents are not backed up.
