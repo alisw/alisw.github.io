@@ -14,24 +14,42 @@ can help making sure that the branch is in the best possible state.
 In order to drive ALICE builds we use [Jenkins](https://jenkins-ci.org) while
 results of the builds are shown in <https://alijenkins.cern.ch/job/DailyBuilds/>.
 
-The job which schedules the build is
-[schedule-all-ib](https://alijenkins.cern.ch/job/schedule-all-ib/)
-which in the end executes [`schedule.py`](https://github.com/alisw/ali-bot/blob/master/schedule.py)
-which creates `.ini` files which are used to trigger the actual build jobs
-[build-any-ib](https://alijenkins.cern.ch/job/build-any-ib).
-The configuration of which build needs to happen is defined in
-[`config.yaml`](https://github.com/alisw/ali-bot/blob/master/config.yaml) in
-particular in the section `integration_rules`.
+## Troubleshooting
+
+### `aliBuild` errors out with a conflict on S3
+
+`aliBuild` uploads tarballs to [its remote store](#nightly-repository).
+However, it cannot just upload one file -- it needs to upload the tarball itself under `TARS/<arch>/store/`, a "symlink" to it under `TARS/<arch>/<package>/` and various "symlinks" specifying the new tarball's dependencies under `TARS/<arch>/dist{,-direct,-runtime}/<package>/<package>-<version>-<revision>/`.
+
+When aliBuild is killed while uploading tarballs, it can leave the repository in a partial state.
+
+If this happens, you need to manually delete the partial symlinks:
+
+```bash
+arch=slc9_x86-64 package=O2 version=daily-20240313-0100 revision=1
+s3cmd rm "s3://alibuild-repo/TARS/$arch/$package/$package-$version-$revision.$arch.tar.gz"
+s3cmd rm -r "s3://alibuild-repo/TARS/$arch/dist/$package/$package-$version-$revision/"
+s3cmd rm -r "s3://alibuild-repo/TARS/$arch/dist-runtime/$package/$package-$version-$revision/"
+s3cmd rm -r "s3://alibuild-repo/TARS/$arch/dist-direct/$package/$package-$version-$revision/"
+```
+
+Since the main tarball in `TARS/<arch>/store/` is uploaded last, it likely does not exist in this case, but if it does, find its name using:
+
+```bash
+s3cmd ls -r "s3://alibuild-repo/TARS/$arch/store/" | grep -F "/$package-$version-$revision.$arch.tar.gz"
+2024-03-13 00:28   1682231289  s3://alibuild-repo/TARS/slc9_x86-64/store/f2/f242f6e4ef58e8f15f3b410729bee6fdb562d790/O2-daily-20240313-0100-1.slc9_x86-64.tar.gz
+```
+
+The file name to delete is shown in the output above:
+
+```bash
+s3cmd rm 's3://alibuild-repo/TARS/slc9_x86-64/store/f2/f242f6e4ef58e8f15f3b410729bee6fdb562d790/O2-daily-20240313-0100-1.slc9_x86-64.tar.gz'
+```
 
 # Nightly repository
 
-In order to speed up builds we maintain a nightly repository which caches
-packages which were already built previously. This consist of an rsync server,
-`rsync://repo.marathon.mesos/store` which is deployed via Marathon. You can look
-at its status in Marathon at <https://alimarathon.cern.ch/#apps/%2Frepo>.
+In order to speed up builds we maintain a nightly repository which caches packages which were already built previously.
+This consist of a CERN S3 bucket, `s3://alibuild-repo/`, which is also accessible over HTTP at <https://s3.cern.ch/swift/v1/alibuild-repo/>.
+You can browse it in [CERN OpenStack](https://openstack.cern.ch/project/containers/container/alibuild-repo), when switched to the "ALICE Release Testing" project.
 
-In case you need to deploy again the application, you can do so by doing:
-
-    git clone https://gitlab.cern.ch/eulisse/ali-marathon.git
-    cd ali-marathon 
-    ./deploy rsync
+In order to upload tarballs to the repository, use `--remote-store b3://alibuild-repo::rw` with `aliBuild`, while having the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables set.
