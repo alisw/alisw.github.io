@@ -225,6 +225,9 @@ You can also get a detailed view the activity of the builders in our [Build Infr
 
 Some of the CI machines are also included in the [IT Grafana dashboard](https://monit-grafana.cern.ch/d/8KnQO4HMk/openstack-vms?orgId=1&var-project_name=ALICE%20Release%20Testing). Notice this includes also machines which do not run CI builds.
 
+There is also a [dashboard that shows the status of each check and pull request](https://alice-ci-overview.cern.ch/).
+In case of outages for larger problems, this can be useful to find failed PRs, or to find out when the problems started (since PRs are sorted newest-first).
+
 # Troubleshooting
   
 ## Empty logs
