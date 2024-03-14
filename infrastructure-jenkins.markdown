@@ -6,19 +6,17 @@ categories: infrastructure
 
 In order to drive the Continuos Integration process the ALICE build infrastructure uses Jenkins. 
 
-Jenkin master(s) is started by Aurora, on a machine which belongs to the `alibuild/mesos/slave/jenkins` hostgroup in CERN puppet, while slaves
-are in general dynamically provisioned using Apache Mesos using the Jenkins
-[mesos-plugin](https://github.com/jenkinsci/mesos-plugin). The main advantage
-of this setup is that the plugin can spawn slaves inside a docker container so
-that it can run, for example SLC5 on CC7 or similar setups.
+The Jenkin master is started by Nomad, on a machine which belongs to the `alibuild/mesos/slave/jenkins` hostgroup in CERN puppet, while slaves are declared using [Nomad]({{site.baseurl}}/infrastructure-nomad) under `ci-jobs/jenkins-builder/`.
+The main advantage of this setup is that we can run slaves inside a Docker container, so that it can run e.g. CentOS 7 builds on Alma 9 hosts.
 
-- [/code/manifests/alibuild/mesos/slave/jenkins.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/master/code/manifests/mesos/slave/jenkins.pp)  for the master.
+Master nodes are configured through Puppet in the file:
+
+- [/code/manifests/alibuild/mesos/slave/jenkins.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/master/code/manifests/mesos/slave/jenkins.pp)
 
 # Essential Operation Guides:
 
 * [Create the Jenkins](#create-jenkins)
-* [Starting Jenkins in aurora](#start-jenkins)
-* [Adding a new Mesos cloud](#add-mesos-cloud)
+* [Starting Jenkins](#starting-jenkins)
 * [Killing a stuck job](#kill-stuck-job)
 * [Triggering builds programmatically](#trigger-jobs)
 * [Gotchas and issues](#gotchas)
@@ -28,7 +26,7 @@ that it can run, for example SLC5 on CC7 or similar setups.
 
 The jenkins master is created on top of the usual OpenStack / Foreman
 infrastructure at CERN. This is because we want to be able to run Jenkins even
-if every other bit of the Mesos Build infrastructure fails.
+if every other bit of the build infrastructure fails.
 
 Creation of the jenkins masters in CERN Foreman setup is described at
 <http://cern.ch/config/nodes/createnode.html>. The short recipe to create the machine,
@@ -36,62 +34,36 @@ Creation of the jenkins masters in CERN Foreman setup is described at
 
 - Login to `aiadm.cern.ch`.
 - Set up your OpenStack environment by doing:
-
-      eval $(ai-rc "ALICE Release Testing")
+  ```bash
+  eval $(ai-rc "ALICE Release Testing")
+  ```
 - To spawn a machine you need to use the `ai-bs` wrapper, which will take
   care of provisioning the machine and putting it in Foreman, so that it will
   receive from it the Puppet configuration:
+  ```bash
+  MACHINE_NAME=<alijenkinsXX>
 
-      MACHINE_NAME=<alijenkinsXX>
-
-      ai-bs -g alibuild/mesos/slave/jenkins       \
-            --cc7                                 \
-            --nova-sshkey alibuild                \
-            --nova-flavor m2.large                \
-            --landb-mainuser alice-agile-admin    \
-            --landb-responsible alice-agile-admin \
-            $MACHINE_NAME
+  ai-bs -g alibuild/mesos/slave/jenkins       \
+        --alma9                               \
+        --nova-sshkey alibuild                \
+        --nova-flavor m2.large                \
+        --landb-mainuser alice-agile-admin    \
+        --landb-responsible alice-agile-admin \
+        $MACHINE_NAME
+  ```
 
 ### Starting Jenkins
 
-While the machine on which jenkins run is provisioned by OpenStack, the actual Jenkins instance is managed by Aurora. The machine will join the Mesos cluster with a `dedicated:jenkins/master` attribute and the instance itself can be started with:
+While the machine on which Jenkins is run is provisioned by OpenStack, the actual Jenkins instance is managed by Nomad.
+The instance can be started with:
 
 ```bash
-aurora job create build/jenkins/prod/jenkins_master aurora/jenkins.aurora
+cd ci-jobs
+nomad job plan jenkins-master.nomad  # sanity check
+nomad job run jenkins-master.nomad   # actually deploy the job
 ```
 
-You can then look at the logs in the Aurora GUI. Other maintanance tasks can be found in the same `aurora/jenkins.aurora` configuration.
-
-### Adding a new Mesos cloud
-{: #add-mesos}
-
-In order to provision jenkins slaves we use the Jenkins Mesos plugin. The
-configuration of such a plugin is found at the bottom of the "Jenkins >
-Configuration" page. In order to create a new one:
-
-- Click on "Add Slave Info" you will get a new entry.
-- Modify the various entries as it follows:
-
-    - Label String: a mnemonic string with the architecture and the size of the queue,
-      e.g. `slc5_x86-64-large`. The size should be either small, medium, large.
-    - Jenkins Slave CPUs: 0.1
-    - Jenkins Slave Memory: 512 
-    - Maximum number of Executor per slave: 1
-    - Jenkins Executor CPUs: either 1 for small, 4 for medium, 20 for large.
-    - Jenkins Executor Memory in MB: either 2000 for small, 8000 for medium, 40000 for large.
-    - Remove FS Root: jenkins
-    - Idle termination minutes: 3
-    - Mesos Offer Selection Attributes: empty.
-    - Additional Jenkins Slave JVM arguments: `-Xms16m -XX:+UseConcMarkSweepGC -Djava.net.preferIPv4Stack=true`
-    - Additional Jenkins Slave Agent JNLP arguments: `-noCertificateCheck -noReconnect`
-
-- Click on advanced and modify as follow:
-
-    - Use Docker Containerizer: checked.
-    - Docker image: `alisw/<os>-builder` where `<os>` is the operating system
-      to use, e.g. `slc5` for Scientific Linux 5. 
-
-- Click on save.
+You can then look at the logs in the Nomad GUI.
 
 ### Killing a stuck job
 {: #kill-stuck-job}
@@ -129,14 +101,42 @@ The step by step guide is:
 
 ## Creating Jenkins agents with guaranteed resources
 
-In order to create a Jenkins agent which has some guarantees in terms of resources you can do so by using aurora. 
-* First of all you need to go to `alijenkins.cern.ch > New Node` and create a new node. Assuming the architecture is `<arch>` the node needs to be called (e.g. `<arch>-builder-<X>`) where `<X>` is incremental number. Valid `<arch>` values are, for the time being `slc7`, and `slc8`.
-* Click on the newly create agent and note down the associated secret.
-* Download the aurora configuration in `ali-marathon`.
-* Finally you can create the new agent with:
+This is the main way we deploy Jenkins builders.
+The advantage of fixed builders is that we are never in a situation where there is not enough space on the cluster by accident to run a Jenkins build.
+
+You can create dedicated Jenkins builders using Nomad.
+
+[Similar to the setup for CI builders]({{site.baseurl}}/infrastructure-nomad#complex-templated-job-declarations-eg-ci),
+Jenkins builders are defined as YAML files under `ci-jobs/jenkins-builder/`.
+
+They are normally configured using three keys:
+
+- `name`: a user-visible name, to keep builders apart. It's a good idea to mention the OS that the builder is running, e.g. `slc9-builder-1`.
+  Make this the same as the file name, sans the `.yaml` extension.
+- `docker_image`: the image to run the builder inside of.
+  Builds will run for this platform.
+  For example: `registry.cern.ch/alisw/slc9-builder:latest`.
+- `is_light`: a boolean; if true, enough resources are allocated to actually run a compilation.
+  "Light" builders are useful to have for non-compilation tasks; for instance, some Jenkins builds wait for approved PRs to be merged before starting the build; this only takes up a slot on a "light" builder to avoid wasting resources.
+
+Jenkins builders also need to be declared to Jenkins.
+To do this, go to <https://alijenkins.cern.ch/computer> > "New Node" and create a new node.
+Assuming the architecture is `<arch>`, the node needs to be called (e.g. `<arch>-builder-<X>`) where `<X>` is incremental number.
+Valid `<arch>` values are e.g. `slc7`, `slc8`, `ubuntu2004`, etc. These mirror `aliBuild`'s idea of architectures.
+
+Click on the newly create agent and note down the associated secret.
+This needs to be stored in [the `jenkins-builder` Vault secret](https://alivault.cern.ch/ui/vault/secrets/kv/kv/jenkins-builder/details).
+Click "create a new version", then add a new key at the bottom, named `<name>_node_secret` (where `<name>` is the one you gave it in the YAML file earlier).
+For the value, paste in the secret hexadecimal token you copied from Jenkins earlier.
+Save the updated secret.
+
+Finally, you can create the new agent with:
 
 ```bash
-aurora job create build/mesosci/prod/jenkins-<arch>-builder-1 aurora/ci-services.aurora --bind arch=<arch> --bind agent_name=<arch>-builder-<X> --bind secret=<secret>
+cd ci-jobs/jenkins-builder/
+levant render -var-file <name>.yaml | nomad job validate -  # check syntax
+levant render -var-file <name>.yaml | nomad job plan -      # make sure job can be scheduled
+levant render -var-file <name>.yaml | nomad job run -       # actually run job
 ```
 
 ## Gotchas and issues:
