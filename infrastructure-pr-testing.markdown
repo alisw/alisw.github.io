@@ -27,23 +27,18 @@ By default the builders will behave in the following manner:
   not have a failure. If yes, test one of them and then go back to the starting
   point.
 
-We use Apache Aurora to deploy the builders on linux while builders on macOS are deployed 
-directly.
+We use [Nomad](/infrastructure-nomad) to deploy the builders on Linux and MacOS.
 
 <iframe width="700" height="550" src="https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB" frameborder="0" style="border:0"></iframe>
   
 # Essential operations guide
 
-The following documentation applies to the Linux pull request checkers deployed with Aurora. 
-Checkers on macOS do not use Aurora, instead they are run directly as scripts. 
-**Before you do anything make sure you are familiar with [Apache Aurora command line
- interface](http://aurora.apache.org/documentation/0.16.0/reference/client-commands/)** and
-make sure **you set up your [ALICE Aurora environment](https://alisw.github.io/infrastructure-aurora) correctly**.
+See also: [the essential CI operations guide](/infrastructure-nomad#essential-ci-operations-guide) for the ALICE Nomad deployment.
 
+* [Adding a package to be tested](#adding-a-package-to-be-tested)
 * [Setup your environment](#setup-your-environment)
 * [Listing active PR checker](#listing-active-pr-checkers)
-* [Scaling up the number of checkers](#scaling-up-the-number-of-checkers)
-* [Scaling down the number of checkers](#scaling-down-the-number-of-checkers)
+* [Scaling the number of checkers](#scaling-the-number-of-checkers)
 * [Creating a new checker](#creating-a-new-checker)
 * [Updating a PR checker](#updating-a-pr-checker)
 * [Restarting a checker](#restarting-a-checker)
@@ -63,15 +58,15 @@ The `DEFAULTS.env` files in the directory tree are special -- they are sourced b
 The most relevant variables you can set through the `*.env` file are:
 
 - `ALIBUILD_DEFAULTS`: what to pass to alibuild using its `--defaults` flag
-- `ALIBUILD_O2_TESTS`, `ALIBUILD_O2PHYSICS_TESTS`: set these if O2 and/or O2Physics unit tests should be run as part of the check
+- `ALIBUILD_O2_TESTS`, `ALIBUILD_O2PHYSICS_TESTS`, `ALIBUILD_XJALIENFS_TESTS`: set these if O2, O2Physics and/or xjalienfs unit tests should be run as part of the check
 - `CHECK_NAME`: the display name for this check, shown on GitHub
 - `CI_NAME`: an internal name for this check
 - `DEVEL_PKGS`: a newline-separated list of repositories to install as "development packages" for the build
 - `DOCKER_EXTRA_ARGS`: if running builds in Docker, any additional args to pass to the container; e.g. use this to mount a `tmpfs` if needed
 - `DONT_USE_COMMENTS`: only update GitHub statuses after the check completes, instead of commenting on each pull request as the alibuild user
-- `INSTALL_ALIBOT`, `INSTALL_ALIBUILD`: a slug (`<org>/<repo>@<tag>`) specifying the ali-bot and alibuild versions to install for this check
+- `INSTALL_ALIBOT`, `INSTALL_ALIBUILD`: a slug (`<org>/<repo>@<tag>#egg=<package>`) specifying the ali-bot and alibuild versions to install for this check
 - `JOBS`: how many CPU cores to use for building
-- `NO_ASSUME_CONSISTENT_EXTERNALS`: auto-generate a build identifier to keep builds of different pull requests apart
+- `NO_ASSUME_CONSISTENT_EXTERNALS`: auto-generate a build identifier to keep builds of different pull requests apart. This uses more disk space overall, but can speed up rebuilds, since build artifacts are kept for each pull request.
 - `PACKAGE`: the package (as declared in alidist) to build for the check
 - `PR_BRANCH`: look for pull requests against this branch
 - `PR_REPO`: look for pull requests in this repository
@@ -79,6 +74,7 @@ The most relevant variables you can set through the `*.env` file are:
 - `REMOTE_STORE`: use this as alibuild's `--remote-store`, for caching
 - `TRUST_COLLABORATORS`: automatically test PRs from people who have committed to the same repo before, without waiting for approval from someone else
 - `TRUSTED_USERS`, `TRUSTED_TEAM`: trust pull requests from these users (i.e. test them without requiring approval)
+- `ONLY_RUN_WHEN_CHANGED`: a space-separated list of paths. The check will only be run if the given pull request contains any changes under any of these paths. If not, the check will be skipped and marked as successful with an appropriate message.
 
 In order to add a new pull request check for a repository, and a checker for the required platform/container exists already, just add a `*.env` file in the appropriate directory in ali-bot.
 
@@ -86,256 +82,135 @@ If you add a new check, make sure to update the appropriate repository's GitHub 
 
 ## Setup your environment
 
-Besides setting up your ALICE Aurora environment as described [here](https://alisw.github.io/infrastructure-aurora), you must be part of the `alice-aurora-mesosci` [egroup](https://egroups.cern.ch). Moreover, you will need to download
-the set of recipes describing the jobs from the `ali-marathon` (bad name...) repository:
+Set up your Nomad environment as described [here](/infrastructure-nomad#setting-up-your-local-environment).
+Job declarations for the pull request checkers are stored inside the `ci/` subdirectory of the [ci-jobs](https://github.com/alisw/ci-jobs) repository.
 
-```bash
-git clone https://gitlab.cern.ch/ALICEDevOps/ali-marathon
-```
-
-unless otherwise specified all the instructions of this page assume that you use `ali-marathon` as your working directory.
+See [this section](/infrastructure-nomad#complex-templated-job-declarations-eg-ci) of the ALICE Nomad docs for instructions on deploying CI builders.
 
 ## Listing active PR checkers
 
 In order to see the list of the running prs you can do:
 
-    $ aurora job list build/mesosci
-
-where the resulting job names will follow the convention:
-
-    build_<Package>_<alibuild-default>
-
-## Scaling up the number of checkers
-
-A simpler update operation is scaling up (or down) the number of checkers. This is also done with the `aurora add`
-command which will add more instances, duplicating the configuration of one of the running ones.
-
-* First of all you need to add more instances by doing:
-
 ```bash
-aurora job add <ID>/0 <N>
+nomad job status ci-
 ```
 
-where `<ID>/0` is your template configuration while `<N>` is the number of instances you want to add.
+where the resulting job names will follow the convention `ci-<mesos role>-<container>[-<suffix>]`.
 
-* Once they are warm and building pull requests correctly (use `aurora task ssh` to check), you can increase the worker pool size by setting `config/workers-pool-size` for each of them, you assign each a partition, and make all reporting their results.
+This matches the subdirectories of `ali-bot/ci/repo-config/`.
+For example, the `ci-mesosci-slc9-o2physics` checker will pick up its `.env` files from `ali-bot/ci/repo-config/mesosci/slc9-o2physics/`.
 
-```bash
-aurora task ssh -l root <ID> "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID> 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
-```
-
-* Finally you mark all the new instances as non-silent, so that they can start reporting results of the check:
+Each checker will have one or more instances with the same configuration.
+You can see these by running, e.g.:
 
 ```bash
-aurora task ssh -l root <ID> "rm config/silent"
+nomad job status ci-mesosci-slc8-gpu
 ```
 
-## Scaling down the number of checkers
-
-Scaling down the number of checker might be useful to claim back resources in low activity periods. The logic is similar to the scaling up:
-
-* Kill the checkers you do not need.
+You can check what each instance is doing by getting its allocation ID, then running:
 
 ```bash
-aurora job kill <ID>/4-7
+nomad alloc logs -stderr -tail -f <alloc ID>
 ```
 
-* Resize the workers pool accordingly:
+## Scaling the number of checkers
 
-```bash
-aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
-```
+[See here for the procedure.](/infrastructure-nomad#scaling-a-ci-job)
+
+Running builders should not be affected by this operation.
+This will only add builders if you increased `num_builders` or delete some if you decreased it.
+
+The builders know how many there are of the same type though the `config/workers-pool-size` file.
+Nomad will automatically update this file for you when you deploy the updated job declaration.
 
 ## Creating a new checker
 
-Checkers configuration is in `ali-marathon/aurora/continuous-integration.aurora`. I order to add a new checker you need
-to add a properly configured `CIConfig` instance to the `specs` list and start it with:
+In order to add a new checker, you need to add both a Nomad job declaration by creating a new YAML file in `ci-jobs/ci/`.
+Assuming you want to add a checker that runs two parallel builders as the `mesosci` user and compiles software using an `slc9` container, create a file called `ci-jobs/ci/mesosci-slc9-foobar.yaml` containing the following:
 
-```bash
-aurora job create build/mesosci/devel/<ci-name>
+```yaml
+---
+role: mesosci
+arch: slc9
+config_suffix: '-foobar'
+num_builders: 2
 ```
 
-where `<ci-name>` is the value of the `ci_name` field in the associated `CIConfig` configuration object. Notice that in
-order to post status updates for pull requests, the user `alibuild` must be a collaborator of the repository with write access.
+You can deploy the checkers declared using this file by running:
 
-An example of the `continuous-integration.aurora` update for a newly added checker `o2-dataflow` can be found at this [GitLab MR](https://gitlab.cern.ch/ALICEDevOps/ali-marathon/-/commit/71b3ddb52afcbabf0671672b5888e61ac8905423).
+```bash
+levant render -var-file mesosci-slc9-foobar.yaml | nomad job plan -  # make sure scheduling is fine
+levant render -var-file mesosci-slc9-foobar.yaml | nomad job run -   # actually redeploy the job
+```
+
+You also need to tell the new checker what it should build and where it should look for incoming pull requests.
+Do this by creating configuration files in `ali-bot/ci/repo-config/mesosci/slc9-foobar/` (assuming the same parameters as above).
+
+The easiest thing to do is to copy an existing `.env` file that you want to mimic and change the `CI_NAME` and `CHECK_NAME` variables.
+
+For example, if you want to test PRs in the <https://github.com/AliceO2Group/AliceO2> repository by compiling O2Suite and running O2's and O2Physics' unit tests, adapt the following:
+
+```bash
+CI_NAME=build_O2_o2
+CHECK_NAME=build/O2/o2
+PACKAGE=O2Suite
+ALIBUILD_DEFAULTS=o2
+PR_REPO=AliceO2Group/AliceO2
+PR_REPO_CHECKOUT=O2
+PR_BRANCH=dev
+TRUST_COLLABORATORS=true
+DONT_USE_COMMENTS=1
+DEVEL_PKGS="$PR_REPO $PR_BRANCH $PR_REPO_CHECKOUT
+AliceO2Group/O2Physics master
+alisw/alidist master"
+ALIBUILD_O2_TESTS=1
+ALIBUILD_O2PHYSICS_TESTS=1
+```
+
+The `.env` files are in shell syntax.
+They are sourced by the CI builders, but some utilities (`list-branch-pr` and `ci-status-overview`) also parse them using Python's `shlex` library, so try not to use overly complex Bash features.
+Try to use only literal strings for the `PR_REPO`, `PR_BRANCH`, `CHECK_NAME`, `TRUST_COLLABORATORS`, `TRUSTED_USERS` and `TRUSTED_TEAM` variables, since the Python tools parse these.
+For other variables, feel free to use variable substitution with the usual shell syntax.
 
 ## Updating the PR checker inner loop
 
-Sometimes one might need to update the inner loop of the PR checking, without having to restart the checker itself. This can be done for whatever update of the `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` files. In order to do so,
-make you need to:
+Sometimes one might need to update the inner loop of the PR checking, without having to restart the checker itself.
+This is done automatically for any updates of the `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` files.
 
-* SSH on the machine running the docker container for the test. E.g. via:
+Upgrades will be picked up at the next iteration of the PR builder, so you might still have to wait for the current one to finish before you can see your updates deployed.
 
-```bash
-aurora task ssh -l root <job-id>
-```
-
-* Enter in the container running the test:
-
-```bash
-docker exec -it <container-id> /bin/bash
-```
-
-* Force upgrade the ali-bot python package:
-
-```bash
-pip install --upgrade git+https://github.com/alisw/ali-bot@master
-```
-
-Notice that upgrades will be picked up at the next iteration of the PR builder, so you might still have to wait for the current one to finish before you can see your updates deployed.
-
-## Updating a PR checker
-
-For all changes regarding `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` please see the [previous section](#updating-the-pr-checker-inner-loop).
-
-For all other changes, a redeployment is required. This can be done with no interruption of service by using the following recipe.
-
-* Make sure that the number of instances you have in `aurora/continuous-builder.sh` matches the final number of instances you want to have.
-
-* Check what are the differences between the currently running configuration and the one you have locally in `ali-marathon`:
-
-```bash
-aurora job diff <ID> aurora/continuous-integration.aurora
-```
-
-You should see only changes in the either ownership or resources.
-
-* If you do not have more than one instance, make sure you scale to at least two instances and wait for the second one to be ready.
-
-* Make sure the second half of the cluster can do the job of the first half, by halving the value in `config/workers-pool-size` and remapping the indices. E.g., if you have 8 instances:
-
-```bash
-# assuming 8 workers in total.
-aurora task ssh -l root <ID>/0-3 "echo 1 > config/silent"
-aurora task ssh -l root <ID>/4-7 "echo 4 > config/workers-pool-size"
-aurora task ssh -l root <ID>/4-7 'echo $(({{ "{{mesos.instance" }}}} - 4)) > config/worker-index'
-```
-
-* Update the first half of the cluster and set it in silent mode:
-
-```bash
-# assuming 8 workers in total.
-aurora update start <ID>/0-3 aurora/continuous-integration.aurora
-aurora task run -l root build/mesosci/devel/build_O2_o2/0-3 "echo 1 > config/silent"
-```
-
-* Wait for it to be up and running by looking at the `.logs/*-continuos_integration/0/stderr` file.
-
-```bash
-aurora task run -l root build/mesosci/devel/build_O2_o2/0-3 "tail .logs/*continuos_integration/0/stderr"
-```
-
-If it's there, then the new builders are processing PRs. Mark them as non-silent and make the first half do all the work:
-
-```bash
-aurora task ssh -l root <ID>/0-3 "rm config/silent"
-aurora task ssh -l root <ID>/0-3 "echo 4 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
-```
-
-* Now you can safely update the second half.
-
-```bash
-# assuming 8 workers in total.
-aurora update start <ID>/4-7 aurora/continuous-integration.aurora
-```
-
-* Wait until all the new nodes are working correctly:
-
-```
-aurora task run -l root build/mesosci/devel/build_O2_o2/4-7 "tail .logs/*continuos_integration/0/stderr"
-```
-
-* Rebalance the workload on the whole pool:
-
-```bash
-aurora task ssh -l root <ID>/0-3 "rm config/silent"
-aurora task ssh -l root <ID>/0-3 "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-3 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
-```
+Updates to `ali-bot/ci/continuous-builder.sh` are also picked up, but less frequently.
 
 ## Restarting a checker
 
-In some cases, builders need to be restarted. This will redeploy the same aurora configuration,
-but the `ali-bot` scripts will be taken from HEAD and `continuous-builder.sh` will be run again.
-Because each builder has ~30 minutes of warm up periods, you should follow the following procedure
-to make it transparent to the user.
+In some cases, builders need to be restarted.
 
-* Take the builder to be restarted out of the workers pool by changing the worker pool size to the old size -1. E.g. if
-you have eight builders and you want to restart 4
+[See here for the procedure.](/infrastructure-nomad#stopping-and-restarting-ci-jobs)
 
-```bash
-aurora task ssh -l root <ID>/0-7 "echo 7 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-2 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
-aurora task ssh -l root <ID>/4-7 'echo $(({{ "{{mesos.instance" }}}} - 1)) > config/worker-index'
-aurora job restart <ID>/3'
-```
-
-* Wait for the new builder to warm up (use `aurora task ssh` to check), and then scale up the whole cluster back to the worker pool size:
-
-```bash
-aurora task ssh -l root <ID>/0-7 "echo 8 > config/workers-pool-size"
-aurora task ssh -l root <ID>/0-7 'echo {{ "{{mesos.instance" }}}} > config/worker-index'
-aurora task ssh -l root <ID>/0-7 "rm config/silent"
-```
+This will redeploy the same configuration, but the `ali-bot` scripts will be taken from the master branch and `continuous-builder.sh` will be run again.
 
 ## Inspecting the checkers
 
-Toi inspect checkers, you should probably get familiar with the command line client of aurora [documentation](http://aurora.apache.org/documentation/latest/reference/client-commands/).
+You can stream the logs of any CI builder instance easily -- [see here how to do this](/infrastructure-nomad#where-to-find-logs).
 
-Inspecting the checkers can be done interactively, using the `aurora task ssh <ID>/<instance>` command. 
-
-E.g. use:
+If you want to interactively log in to any instance, run:
 
 ```bash
-aurora task ssh -l root build/mesosci/devel/build_O2_o2/0
+nomad alloc exec <alloc ID> sh -c 'export TERM=xterm-256color HOME=$NOMAD_TASK_DIR PS1="\\u@\\h \\w \\\$ "; cd; exec bash -i'
 ```
 
-to ssh on the first instance where the job is running.
+This will give you a shell in the builder's home directory, where it stores its workarea.
 
-You can also run commands programmatically, using the `aurora task run <ID>/<instance-range>` command, e.g.:
+Log files are in the `$NOMAD_ALLOC_DIR/logs` directory.
 
-```
-aurora task run -l root build/mesosci/devel/build_O2_o2/0-1 ls
-```
-
-to run `ls` on the instances 0 and 1.
-
-The checkers react to some special files which can be created in the sandbox. In particular:
+The checkers react to some special files, which can be created in their home directory.
+In particular:
 
 * `config/silent` with non empty content means that the checker will not report issues to the github PR page associated with the checks being done.
-* `config/debug` will force alibuild execution with `--debug` option.
+* `config/debug` will force additional debugging output.
 * `config/workers-pool-size` will force the number of checkers currently active.
+  This is normally created and updated automatically by Nomad.
 * `config/worker-index` will force the index of the current instance of the checker.
-
-Moreover there are a few files which give you information about the current status of the system:
-
-* `.logs/<step>/0/stderr`: stderr logs for <step> step in the job.
-* `.logs/<step>/0/stderr`: stderr logs for <step> step in the job.
-* `state/ready`: if present, the builder went throught the cache warm up phase
-
-A few useful commands:
-
-* To see the current pool configuration:
-
-```bash
-aurora task run -l root <ID> 'grep list .logs/*cont*/0/stderr | tail -n1'
-```
-
-* To update `ali-bot` on each node:
-
-```bash
-aurora task run -l root <ID> "cd ali-bot ; git pull --rebase"
-```
-
-* To check what it's happening inside the O2 build:
-
-```bash
-aurora task run -l root <ID> "tail -n1 sw/BUILD/O2-latest/log"
-```
 
 ## Monitoring the checkers
 

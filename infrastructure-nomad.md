@@ -189,7 +189,7 @@ As Levant bundles a version of the Nomad client, Levant [`0.3.1` or later][levan
 
 ### Simple job declarations (e.g. `rsync` server)
 
-Simple job declarations, i.e. those that declare only a single job, don't use Levant for templating at all. They are simple HCL files stored in the root directory of the [ci-jobs repository][ci-jobs repo], named `<job-name>.nomad`.
+Simple job declarations, i.e. those that declare only a single job, don't use Levant for templating at all. They are simple HCL files stored in the root directory of the [ci-jobs repository][jobs-decls-repo], named `<job-name>.nomad`.
 
 An example of this is the declaration for the [`rsync` server that serves tarballs for `aliBuild`][rsync-job].
 
@@ -227,7 +227,6 @@ levant render -var-file vars.yaml | nomad job run -       # actually run job
 [levant]: https://github.com/hashicorp/levant
 [levant-releases]: https://releases.hashicorp.com/levant
 [levant-template]: https://github.com/hashicorp/levant/blob/main/docs/templates.md
-[ci-jobs repo]: https://github.com/alisw/ci-jobs
 [rsync-job]: https://github.com/alisw/ci-jobs/blob/master/repo.nomad
 [ci]: https://github.com/alisw/ci-jobs/tree/master/ci
 [o2physics-ci]: https://github.com/alisw/ci-jobs/blob/master/ci/mesosci-slc7-o2physics.yaml

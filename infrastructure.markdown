@@ -37,7 +37,6 @@ Further troubleshooting information is privately available in the repository:
 * [MacOS builder setup]({{site.baseurl}}/infrastructure-macos)
 * <a href="{{site.baseurl}}/infrastructure-mesos">Apache Mesos</a>
 * <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
-* <a href="{{site.baseurl}}/infrastructure-aurora">Apache Aurora</a>
 * <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
 * <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
 * <a href="{{site.baseurl}}/infrastructure-repository">AliBuild S3 Repository</a>
