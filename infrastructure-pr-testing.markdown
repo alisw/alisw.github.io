@@ -47,7 +47,8 @@ See also: [the essential CI operations guide](/infrastructure-nomad#essential-ci
 
 ## Adding a package to be tested
 
-Each checker deployed on Aurora can test multiple packages. These are declared as `*.env` files [in a subdirectory of ali-bot](https://github.com/alisw/ali-bot/tree/master/ci/repo-config), following the pattern:
+Each checker deployed on Nomad can test multiple packages.
+These are declared as `*.env` files [in a subdirectory of ali-bot](https://github.com/alisw/ali-bot/tree/master/ci/repo-config), following the pattern:
 
 ```
 ali-bot/ci/repo-config/<mesos role>/<container>/<short name>.env
