@@ -47,18 +47,12 @@ Things should be then back in business in a few minutes, time for CVMFS to propa
 
 ## Troubleshooting ALIEN
 
-* SSH to `alimonitor.cern.ch` as `monalisa` (ask Costin).
-* Logs are in `~/publisher/log`
+See the [`publish-alien` Nomad job](https://alinomad.cern.ch/ui/jobs/publish-alien@default?desc=true&sort=submitTime).
 
 ## Troubleshooting RPMS
 
-RPMS are also created using `aliPublish`. The script runs in `aurora` and you can access it via:
-
-```
-aurora task ssh -l root build/mesosdaq/prod/rpm_creation/0
-```
-
-or by using the aliaurora web UI. 
+RPMS are also created using `aliPublishS3` in [Nomad]({{site.baseurl}}/infrastructure-nomad).
+[See the dedicated documentation.]({{site.baseurl}}/infrastructure-rpms)
 
 ## Add new packages:
 
@@ -76,11 +70,7 @@ In addition, the AliDPG package is handled specially and published to `noarch` u
 
 ### RPMS
 
-If you need to generate a new RPM package, the configuration is in `ali-bot/publisher/aliPublish-rpms.conf` and `aliPublish-updatable-rpms.conf`. Once you have updated it and merged in [alisw/ali-bot](https://github.com/alisw/ali-bot). You need to update the deployment by running:
-
-```
-aurora task run -l root build/mesosdaq/prod/rpm_creation/0 "cd ali-bot && git fetch origin && git reset --hard origin/master"
-```
+If you need to generate a new RPM package, the configuration is in `ali-bot/publisher/aliPublish-rpms.conf` and `aliPublish-updatable-rpms.conf`. Once you have updated it and merged in [alisw/ali-bot](https://github.com/alisw/ali-bot), the publisher will pick your changes up automatically.
 
 ## Start publishing on a new architecture
 
