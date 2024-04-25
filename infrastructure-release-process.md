@@ -27,6 +27,7 @@ For each workflow, replace the `XXy` string in the release tag with the one you'
    ALIDIST_SLUG=alisw/alidist@AliPhysics-v5-09-XXy-01
    ARCHITECTURE=slc7_x86-64
    PACKAGE_NAME=AliPhysics
+   OVERRIDE_TAGS="AliPhysics=v5-09-XXy-01 AliRoot=v5-09-XXy"
    ```
 
 [alidist tag]: https://github.com/alisw/alidist/actions/workflows/prepare-patch-release-branch.yml
