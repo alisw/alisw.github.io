@@ -6,6 +6,12 @@ categories: infrastructure
 
 This is to document the release process of AliRoot / AliPhysics.
 
+## Prerequisites
+
+You should be roughly familiar on [how to run a Github Actions workflow by hand](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow#running-a-workflow) and you should ask for permissions to do so.
+
+Unless otherwise specified, always use the **master** branch of the workflow definition.
+
 ## Creating a release
 
 The easiest way to create a release is to trigger the corresponding GitHub Actions in each repository. It is important to do this in the following order!
