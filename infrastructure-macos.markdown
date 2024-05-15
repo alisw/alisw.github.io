@@ -157,15 +157,15 @@ Then paste it to generate the certificates. Download the base 64 certificate and
 
 ```bash
 NEW_CERT=$HOME/Downloads/host.cert
-scp $NEW_CERT $TARGET_MACHINE:$WORK_DIR/host.cert
-ssh $TARGET_MACHINE sudo install -m 0600 -o alibuild -g staff $WORK_DIR/host.cert /etc/grid-security/hostcert.pem
-ssh $TARGET_MACHINE sudo install -m 0600 -o alibuild -g staff $WORK_DIR/privkey.pem /etc/grid-security/hostkey.pem
+scp $NEW_CERT $TARGET_MACHINE:$REMOTE_WORK_DIR/host.cert
+ssh $TARGET_MACHINE sudo install -m 0600 -o alibuild -g staff $REMOTE_WORK_DIR/host.cert /etc/grid-security/hostcert.pem
+ssh $TARGET_MACHINE sudo install -m 0600 -o alibuild -g staff $REMOTE_WORK_DIR/privkey.pem /etc/grid-security/hostkey.pem
 ```
 
 Test that everything works correctly with (might need some adjustments to the path):
 
 ```bash
-ssh $TARGET_MACHINE "WORK_DIR=/Volumes/build/alice-ci-workdir/o2/sw/ source /Volumes/build/alice-ci-workdir/o2/sw/osx_arm64/xjalienfs/latest/etc/profile.d/init.sh && X509_USER_CERT=/etc/grid-security/hostcert.pem X509_USER_KEY=/etc/grid-security/hostkey.pem alien-token-init"
+ssh $TARGET_MACHINE "REMOTE_WORK_DIR=/Volumes/build/alice-ci-workdir/o2/sw/ source /Volumes/build/alice-ci-workdir/o2/sw/osx_arm64/xjalienfs/latest/etc/profile.d/init.sh && X509_USER_CERT=/etc/grid-security/hostcert.pem X509_USER_KEY=/etc/grid-security/hostkey.pem alien-token-init"
 ```
 
 Finally clean-up the temporary area with:
