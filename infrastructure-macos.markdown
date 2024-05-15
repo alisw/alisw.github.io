@@ -135,6 +135,7 @@ open https://ca.cern.ch/ca/host/Submit.aspx?template=ee2host&instructions=openss
 Get in your clipboard the certificate request:
 
 ```bash
+rm -fr $HOME/Downloads/host.cert
 ssh $TARGET_MACHINE mkdir -p $REMOTE_WORK_DIR
 ssh $TARGET_MACHINE cp /System/Library/OpenSSL/openssl.cnf $REMOTE_WORK_DIR/openssl.cnf
 cat <<EOF | ssh $TARGET_MACHINE "cat >>$REMOTE_WORK_DIR/openssl.cnf"
