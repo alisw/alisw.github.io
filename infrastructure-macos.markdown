@@ -119,16 +119,62 @@ At <https://ca.cern.ch/ca/>, request a new Grid host certificate for the machine
 Make sure that reminders about expiring certs go to the responsible group, not just you.
 In order to do this, you must be listed as the "responsible" or "main user" of the machine in LanDB.
 
-Set up a temporary passphrase for the generated certificate before downloading it.
-After downloading it, copy it to the Mac being set up.
+Create the certificate request using the system OpenSSL. On your local machine, set up the environment:
 
-Assuming the certificate you downloaded was called `$newhost.p12` (which is the default), run the following on the Mac:
-<!-- https://ca.cern.ch/ca/Help/?kbid=024100 -->
 ```bash
-sudo openssl pkcs12 -in "$(hostname -s).p12" -clcerts -nokeys -out /etc/grid-security/hostcert.pem
-sudo openssl pkcs12 -in "$(hostname -s).p12" -nocerts -nodes -out /etc/grid-security/hostkey.pem
-sudo chmod 0600 /etc/grid-security/hostkey.pem
-sudo chown alibuild:staff /etc/grid-security/*.pem
+TARGET_MACHINE=alibuildmacXX
+REMOTE_WORK_DIR=/Users/alibuild/renew-certificate
+```
+
+Open the page where you can paste the certificate request: 
+
+```open
+open https://ca.cern.ch/ca/host/Submit.aspx?template=ee2host&instructions=openssl&subject=$TARGET_MACHINE.cern.ch
+```
+
+Get in your clipboard the certificate request:
+
+```bash
+ssh $TARGET_MACHINE mkdir -p $REMOTE_WORK_DIR
+ssh $TARGET_MACHINE cp /System/Library/OpenSSL/openssl.cnf $REMOTE_WORK_DIR/openssl.cnf
+cat <<EOF | ssh $TARGET_MACHINE "cat >>$REMOTE_WORK_DIR/openssl.cnf"
+[req]
+req_extensions = v3_req
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = $TARGET_MACHINE.cern.ch
+EOF
+ssh $TARGET_MACHINE openssl req -new -subj "/CN=$TARGET_MACHINE.cern.ch" -out $REMOTE_WORK_DIR/newcsr.csr -keyout $REMOTE_WORK_DIR/privkey.pem -nodes -sha512 -newkey rsa:2048 -config $REMOTE_WORK_DIR/openssl.cnf
+ssh $TARGET_MACHINE cat $REMOTE_WORK_DIR/newcsr.csr | pbcopy
+```
+
+Then paste it to generate the certificates. Download the base 64 certificate and copy it to the target machine with:
+
+```bash
+NEW_CERT=$HOME/Downloads/host.cert
+scp $NEW_CERT $TARGET_MACHINE:$WORK_DIR/host.cert
+ssh $TARGET_MACHINE sudo install -m 0600 -o alibuild -g staff $WORK_DIR/host.cert /etc/grid-security/hostcert.pem
+ssh $TARGET_MACHINE sudo install -m 0600 -o alibuild -g staff $WORK_DIR/privkey.pem /etc/grid-security/hostkey.pem
+```
+
+Test that everything works correctly with (might need some adjustments to the path):
+
+```bash
+ssh $TARGET_MACHINE "WORK_DIR=/Volumes/build/alice-ci-workdir/o2/sw/ source /Volumes/build/alice-ci-workdir/o2/sw/osx_arm64/xjalienfs/latest/etc/profile.d/init.sh && X509_USER_CERT=/etc/grid-security/hostcert.pem X509_USER_KEY=/etc/grid-security/hostkey.pem alien-token-init"
+```
+
+Finally clean-up the temporary area with:
+
+```bash
+# We keep it explicit to avoid having REMOTE_WORK_DIR empty or pointing to some wrong place.
+# Check this is actually what you want to do!
+ssh $TARGET_MACHINE rm -rf /Users/alibuild/new-certificate
+rm -fr $HOME/Downloads/host.cert
 ```
 
 ## Ask for AliEn access
