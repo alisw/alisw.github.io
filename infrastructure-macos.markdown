@@ -179,7 +179,7 @@ Finally clean-up the temporary area with:
 ```bash
 # We keep it explicit to avoid having REMOTE_WORK_DIR empty or pointing to some wrong place.
 # Check this is actually what you want to do!
-ssh $TARGET_MACHINE rm -rf /Users/alibuild/new-certificate
+ssh $TARGET_MACHINE rm -rf /Users/alibuild/renew-certificate
 rm -fr $HOME/Downloads/host.cert
 ```
 
