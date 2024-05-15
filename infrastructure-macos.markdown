@@ -164,10 +164,14 @@ security find-generic-password -a 'alibuild' -s "$TARGET_MACHINE" -w | ssh $TARG
 security find-generic-password -a 'alibuild' -s "$TARGET_MACHINE" -w | ssh $TARGET_MACHINE sudo -S install -m 0600 -o alibuild -g staff $REMOTE_WORK_DIR/privkey.pem /etc/grid-security/hostkey.pem
 ```
 
-Test that everything works correctly with (might need some adjustments to the path):
+Test that everything works correctly with (might need some adjustments to the path). On the `$TARGET_MACHINE`:
 
 ```bash
-ssh $TARGET_MACHINE "REMOTE_WORK_DIR=/Volumes/build/alice-ci-workdir/o2/sw/ source /Volumes/build/alice-ci-workdir/o2/sw/osx_arm64/xjalienfs/latest/etc/profile.d/init.sh && X509_USER_CERT=/etc/grid-security/hostcert.pem X509_USER_KEY=/etc/grid-security/hostkey.pem alien-token-init"
+ssh $TARGET_MACHINE
+# Adapt to find a valid xjalienfs
+export WORK_DIR=/Volumes/build/alice-ci-workdir/o2/sw
+source "$WORK_DIR/osx*/xjalienfs/latest/etc/profile.d/init.sh"
+X509_USER_CERT=/etc/grid-security/hostcert.pem X509_USER_KEY=/etc/grid-security/hostkey.pem alien-token-init
 ```
 
 Finally clean-up the temporary area with:
