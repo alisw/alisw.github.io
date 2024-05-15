@@ -159,8 +159,9 @@ Then paste it to generate the certificates. Download the base 64 certificate and
 ```bash
 NEW_CERT=$HOME/Downloads/host.cert
 scp $NEW_CERT $TARGET_MACHINE:$REMOTE_WORK_DIR/host.cert
-ssh $TARGET_MACHINE sudo -S install -m 0600 -o alibuild -g staff $REMOTE_WORK_DIR/host.cert /etc/grid-security/hostcert.pem
-ssh $TARGET_MACHINE sudo -S install -m 0600 -o alibuild -g staff $REMOTE_WORK_DIR/privkey.pem /etc/grid-security/hostkey.pem
+# FIXME: linux users feel free to provide a PR using "pass"
+security find-generic-password -a 'alibuild' -s "$TARGET_MACHINE" -w | ssh $TARGET_MACHINE sudo -S install -m 0600 -o alibuild -g staff $REMOTE_WORK_DIR/host.cert /etc/grid-security/hostcert.pem
+security find-generic-password -a 'alibuild' -s "$TARGET_MACHINE" -w | ssh $TARGET_MACHINE sudo -S install -m 0600 -o alibuild -g staff $REMOTE_WORK_DIR/privkey.pem /etc/grid-security/hostkey.pem
 ```
 
 Test that everything works correctly with (might need some adjustments to the path):
