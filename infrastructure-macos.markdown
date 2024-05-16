@@ -275,3 +275,7 @@ Each host has a directory there named after its short hostname; it will run chec
 
 If checks are not picked up, make sure the hostname matches what the Mac thinks it is.
 If in doubt, run `hostname -s` to check.
+
+## Notable macOS post-mortes
+
+* [Issues after a powercut](https://its.cern.ch/jira/browse/O2-4950)
