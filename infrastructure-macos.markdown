@@ -174,6 +174,13 @@ source "$WORK_DIR/osx*/xjalienfs/latest/etc/profile.d/init.sh"
 X509_USER_CERT=/etc/grid-security/hostcert.pem X509_USER_KEY=/etc/grid-security/hostkey.pem alien-token-init
 ```
 
+Nomad does not apparently handle the change of certificate gracefully as of 1.6.2, so you need to restart it:
+
+```
+security find-generic-password -a 'alibuild' -s "$TARGET_MACHINE" -w | ssh $TARGET_MACHINE sudo -S brew service stop nomad
+security find-generic-password -a 'alibuild' -s "$TARGET_MACHINE" -w | ssh $TARGET_MACHINE sudo -S sudo brew services start nomad --file=$HOME/homebrew.mxcl.nomad.plist
+```
+
 Finally clean-up the temporary area with:
 
 ```bash
