@@ -134,7 +134,7 @@ In this case, check the following:
 
    If you see warnings from `nomad-diskfree`, `ssh` into the affected machine, manually clean up under `/build/nomad/alloc` if necessary, and run `systemctl restart nomad` to reset Nomad's idea of available disk space. If you then run `nomad job plan` again, you should see fewer unplaced allocations.
 
-[nomad-diskfree]: https://github.com/alisw/ali-bot/tree/master/nomad-diskfree
+[nomad-diskfree]: https://github.com/alisw/ali-bot/tree/master/utils/nomad-diskfree
 
 # Developing locally
 

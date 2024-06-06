@@ -27,7 +27,7 @@ brew install hub
 ```
 
 On Linux you can [use the precompiled
-releases](https://github.com/github/hub/releases\). After you have installed
+releases](https://github.com/github/hub/releases/). After you have installed
 hub, the `hub` command will be available. Note that the [hub
 documentation](https://hub.github.com/) suggests you configure `git` as an
 alias to `hub` in your shell configuration:
