@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-Logs for the PRs are now copied on the [CERN S3](https://clouddocs.web.cern.ch/clouddocs/object_store/) object store. 
+Logs for the PRs are now copied on the [CERN S3](https://clouddocs.web.cern.ch/object_store/index.html) object store.
 They are accessible either via the read only web interface at:
 
 https://ali-ci.cern.ch/alice-build-logs/
