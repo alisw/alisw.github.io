@@ -5,12 +5,12 @@ categories: infrastructure
 ---
 
 
-The **Ali**ce **B**enchmark **I**nfrastructure is a service that was established to provide a platform for systematic, reproducable and consistent benchmarks for ALICE O2.
+The **Ali**ce **B**enchmark **I**nfrastructure is a service that was established to provide a platform for systematic, reproducible and consistent benchmarks for ALICE O2.
 
 Its primary task is to provide automated performance regression testing for simulation and reconstruction nightlies, however it is open to developers for their own **benchmarking** tasks within extended CERN working hours.
 
 ## Hardware
-For the sake of reproducable results, a physical server (compute node) has been aquired:
+For the sake of reproducible results, a physical server (compute node) has been acquired:
 * 2x Xeon Gold 6132 (2.6GHz, 14Core each)
 * 384GB ECC DDR4-2666 RAM
 * Nvidia Geforce RTX 2080 (8GB GDDR5)
@@ -121,13 +121,13 @@ This is your local home directory. Data is kept and users will be asked to clean
 ```
 $SCRATCH=/tmp/$USER
 ```
-This is a temporary directory which will be cleared out regularly without prior anouncement
+This is a temporary directory which will be cleared out regularly without prior announcement
 
 ### Can I use SSH keys?
 Yes but just as with `lxplus` you will get any Kerberos, AFS and eos token which will cause access issues including no access (neither read nor write) to your home directory
 
 ### I Cannot Read/Write to AFS or EOS
-You probably logged in with a `ssh` key or your ssh is missconfigured. 
+You probably logged in with a `ssh` key or your ssh is misconfigured. 
 To check the state of your Kerberos cache use `klist`. If it complains about an empty credentials cache:
 ```bash
 -bash-4.2$ klist
@@ -139,7 +139,7 @@ issue the following commands:
 * `aklog`: request/renew afs token
 * `eosfusebind`: sets up eos directories
 
-After this opperation your kerberos cache should look like this 
+After this operation your kerberos cache should look like this 
 ```
 -bash-4.2$ klist
 Ticket cache: FILE:/tmp/krb5cc_101957
