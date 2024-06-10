@@ -29,6 +29,7 @@ Further troubleshooting information is privately available in the repository:
 * <a href="{{site.baseurl}}/infrastructure-auto-builds">Setting up automatic release builds</a>
 * <a href="{{site.baseurl}}/infrastructure-rpms">Generation of RPMs</a>
 * <a href="{{site.baseurl}}/infrastructure-known-tradeoffs">Known tradeoffs</a>
+* [Building Docker images with Packer]({{site.baseurl}}/infrastructure-docker-packer)
 
 ## Infrastructure
 
