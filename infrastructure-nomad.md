@@ -272,3 +272,19 @@ This example assumes that you have a secret called `my-secret-name` stored in Va
   "my_other_secret": "my 0th3r s3cr3t"
 }
 ```
+
+
+# Troubleshooting
+
+
+If you are on macOS you'll need an unencrypted key, you can export it from your certificate with a command like this (note the ``-nodes`` flag)
+
+```bash
+openssl pkcs12 -nocerts -in ~/Downloads/myCertificate.p12 -out ~/.globus/userkey.pem -nodes
+```
+
+Otherwise you'll probably get the following error:
+
+```
+Error initializing client: tls: failed to parse private key
+```
