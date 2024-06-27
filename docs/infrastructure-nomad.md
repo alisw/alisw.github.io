@@ -10,12 +10,6 @@ These all have web interfaces. If you have access, you can log in at <https://al
 
 Jobs are defined in [a dedicated git repository][job-decls-repo].
 
-## Table of contents
-{:.no_toc}
-
-1. This is a placeholder for the table of contents. Do not delete this line.
-{:toc}
-
 # Essential CI operations guide
 
 For hints on how to adapt the instructions in this section to jobs other than the CI job, see the following sections.
