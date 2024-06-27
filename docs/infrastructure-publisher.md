@@ -51,8 +51,8 @@ See the [`publish-alien` Nomad job](https://alinomad.cern.ch/ui/jobs/publish-ali
 
 ## Troubleshooting RPMS
 
-RPMS are also created using `aliPublishS3` in [Nomad](infrastructure-nomad).
-[See the dedicated documentation.](infrastructure-rpms)
+RPMS are also created using `aliPublishS3` in [Nomad](infrastructure-nomad.md).
+[See the dedicated documentation.](infrastructure-rpms.md)
 
 ## Add new packages:
 

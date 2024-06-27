@@ -27,20 +27,20 @@ By default the builders will behave in the following manner:
   not have a failure. If yes, test one of them and then go back to the starting
   point.
 
-We use [Nomad](/infrastructure-nomad) to deploy the builders on Linux and MacOS.
+We use [Nomad](infrastructure-nomad.md) to deploy the builders on Linux and MacOS.
 
 <iframe width="700" height="550" src="https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB" frameborder="0" style="border:0"></iframe>
   
 # Essential operations guide
 
-See also: [the essential CI operations guide](/infrastructure-nomad#essential-ci-operations-guide) for the ALICE Nomad deployment.
+See also: [the essential CI operations guide](infrastructure-nomad.md#essential-ci-operations-guide) for the ALICE Nomad deployment.
 
 * [Adding a package to be tested](#adding-a-package-to-be-tested)
 * [Setup your environment](#setup-your-environment)
 * [Listing active PR checker](#listing-active-pr-checkers)
 * [Scaling the number of checkers](#scaling-the-number-of-checkers)
 * [Creating a new checker](#creating-a-new-checker)
-* [Updating a PR checker](#updating-a-pr-checker)
+* [Updating the PR checker](#updating-the-pr-checker-inner-loop)
 * [Restarting a checker](#restarting-a-checker)
 * [Inspecting the checkers](#inspecting-the-checkers)
 * [Monitoring the checkers](#monitoring-the-checkers)
@@ -83,10 +83,10 @@ If you add a new check, make sure to update the appropriate repository's GitHub 
 
 ## Setup your environment
 
-Set up your Nomad environment as described [here](/infrastructure-nomad#setting-up-your-local-environment).
+Set up your Nomad environment as described [here](infrastructure-nomad.md#setting-up-your-local-environment).
 Job declarations for the pull request checkers are stored inside the `ci/` subdirectory of the [ci-jobs](https://github.com/alisw/ci-jobs) repository.
 
-See [this section](/infrastructure-nomad#complex-templated-job-declarations-eg-ci) of the ALICE Nomad docs for instructions on deploying CI builders.
+See [this section](infrastructure-nomad.md#complex-templated-job-declarations-eg-ci) of the ALICE Nomad docs for instructions on deploying CI builders.
 
 ## Listing active PR checkers
 
@@ -116,7 +116,7 @@ nomad alloc logs -stderr -tail -f <alloc ID>
 
 ## Scaling the number of checkers
 
-[See here for the procedure.](/infrastructure-nomad#scaling-a-ci-job)
+[See here for the procedure.](infrastructure-nomad.md#scaling-a-ci-job)
 
 Running builders should not be affected by this operation.
 This will only add builders if you increased `num_builders` or delete some if you decreased it.
@@ -186,13 +186,13 @@ Updates to `ali-bot/ci/continuous-builder.sh` are also picked up, but less frequ
 
 In some cases, builders need to be restarted.
 
-[See here for the procedure.](/infrastructure-nomad#stopping-and-restarting-ci-jobs)
+[See here for the procedure.](infrastructure-nomad.md#stopping-and-restarting-ci-jobs)
 
 This will redeploy the same configuration, but the `ali-bot` scripts will be taken from the master branch and `continuous-builder.sh` will be run again.
 
 ## Inspecting the checkers
 
-You can stream the logs of any CI builder instance easily -- [see here how to do this](/infrastructure-nomad#where-to-find-logs).
+You can stream the logs of any CI builder instance easily -- [see here how to do this](infrastructure-nomad.md#where-to-find-logs).
 
 If you want to interactively log in to any instance, run:
 

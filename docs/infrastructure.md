@@ -20,7 +20,7 @@ Further troubleshooting information is privately available in the repository:
 * [Release process O2PDPSuite](infrastructure-release-process-o2.md)
 * [O2 stable branches](infrastructure-o2-branches.md)
 * [Nightly builds](infrastructure-nightly.md)
-* [CVMFS releases](infrastructure-cvmfs)
+* [CVMFS releases](infrastructure-cvmfs.md)
 * [Testing of Pull Requests (continuous integration)](infrastructure-pr-testing.md)
 * [Build Logs](infrastructure-logs.md)
 * [Release Publishing](infrastructure-publisher.md)
@@ -29,14 +29,14 @@ Further troubleshooting information is privately available in the repository:
 * [Setting up automatic release builds](infrastructure-auto-builds.md)
 * [Generation of RPMs](infrastructure-rpms.md)
 * [Known tradeoffs](infrastructure-known-tradeoffs.md)
-* [Building Docker images with Packer](infrastructure-docker-packer)
+* [Building Docker images with Packer](infrastructure-docker-packer.md)
 
 ## Infrastructure
 
-* [Using Nomad, Consul and Vault](infrastructure-nomad)
-* [Nomad cluster setup](infrastructure-nomad-host)
-* [MacOS builder setup](infrastructure-macos)
-* [Virtual and physical machines](infrastructure-machines)
+* [Using Nomad, Consul and Vault](infrastructure-nomad.md)
+* [Nomad cluster setup](infrastructure-nomad-host.md)
+* [MacOS builder setup](infrastructure-macos.md)
+* [Virtual and physical machines](infrastructure-machines.md)
 * [AliEn VoBox](infrastructure-alienvobox.md)
 * [Web Frontend](infrastructure-frontend.md)
 * [Jenkins](infrastructure-jenkins.md)

@@ -7,11 +7,10 @@ categories: infrastructure
 The macOS build infrastructure works the same way as its Linux counterpart -- it uses Nomad.
 
 This guide covers:
-* [Installation and initial setup of the machine](#installation_and_initial_setup)
-* [Adding a CI checker](#adding_ci_checker)
+* [Installation and initial setup of the machine](#installation-and-initial-setup)
+* [Adding a CI checker](#adding-a-ci-checker)
 
 # Installation and initial setup
-{: #installation_and_initial_setup}
 
 These are the instructions for macOS Ventura.
 
@@ -243,7 +242,6 @@ pdsh -w 'alimesos[01-03].cern.ch' puppet agent -tv
 ```
 
 # Adding a CI checker
-{: #adding_ci_checker}
 
 ## Adding a Nomad job
 

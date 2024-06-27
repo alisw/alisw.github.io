@@ -9,7 +9,7 @@ categories: infrastructure
 <!-- Note: run `dot -Tsvg -oimages/nomad-infra.svg images/nomad-infra.dot` to regenerate this plot. -->
 [![ALICE CI Infrastructure diagram](images/nomad-infra.svg)](images/nomad-infra.svg)
 
-[See here for an explanation of the underlying infrastructure.](/infrastructure-machines)
+[See here for an explanation of the underlying infrastructure.](infrastructure-machines.md)
 
 # Nomad, Consul and Vault setup notes
 

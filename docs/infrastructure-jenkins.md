@@ -15,14 +15,13 @@ Master nodes are configured through Puppet in the file:
 
 # Essential Operation Guides:
 
-* [Create the Jenkins](#create-jenkins)
+* [Create the Jenkins](#create-the-jenkins-master-only-in-case-of-disaster-recovery)
 * [Starting Jenkins](#starting-jenkins)
-* [Killing a stuck job](#kill-stuck-job)
-* [Triggering builds programmatically](#trigger-jobs)
-* [Gotchas and issues](#gotchas)
+* [Killing a stuck job](#killing-a-stuck-job)
+* [Triggering builds programmatically](#triggering-builds-programmatically)
+* [Gotchas and issues](#gotchas-and-issues)
 
 ### Create the Jenkins master (only in case of disaster recovery!!!!)
-{: #create-jenkins}
 
 The jenkins master is created on top of the usual OpenStack / Foreman
 infrastructure at CERN. This is because we want to be able to run Jenkins even
@@ -66,7 +65,6 @@ nomad job run jenkins-master.nomad   # actually deploy the job
 You can then look at the logs in the Nomad GUI.
 
 ### Killing a stuck job
-{: #kill-stuck-job}
 
 Sometimes Jenkins jobs (especially pipelines) remain stuck in some weird state
 and refuse to be killed by the GUI. When this happens, the last resort is to do the following:
@@ -82,7 +80,6 @@ and refuse to be killed by the GUI. When this happens, the last resort is to do 
       task.doKill()
 
 ### Triggering builds programmatically
-{: #trigger-jobs}
 
 It's now possible to start new builds in a programmatic way. In order to do so you must
 have a valid kerberos token, and you must be able to execute the build from the web GUI.
@@ -140,7 +137,6 @@ levant render -var-file <name>.yaml | nomad job run -       # actually run job
 ```
 
 ## Gotchas and issues:
-{: #gotchas}
 
 * On some systems, the CERN CA is not available by default. You can overcome this by either:
   * Go to <https://ca.cern.ch> and install all the required CA certificates. In general this is what is needed on macOS.

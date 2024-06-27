@@ -12,7 +12,7 @@ developing one feature at the time for AliPhysics on GitHub. They can be reused
 for AliRoot by simply changing AliPhysics to AliRoot. If you are trying to do
 something more complicated or you want to have more detailed information on the
 inner workings of the system, please refer to the [advanced
-workflow](/git-advanced) instead.
+workflow](git-advanced.md) instead.
 
 
 ## Setup GitHub account
@@ -95,7 +95,7 @@ documentation](https://cern.service-now.com/service-portal/article.do?n=KB000313
 During the compilation process you might be asked several times for your CERN
 credentials. To avoid repeating the procedure several times, and to prevent
 unattended builds to wait for your input, you can [setup a temporary or
-permanent credentials cache](/git-advanced/#setup-a-git-credentials-cache).
+permanent credentials cache](git-advanced.md/#setup-a-git-credentials-cache).
 Note that the credentials cache is also an alternative to setting up a GitHub
 SSH key.
 
@@ -227,7 +227,7 @@ branch. The workflow is simpler, but it has limitations you need to know.
   branches for that.
 * **If you need to work on multiple features at the same time** then you will
   need to work with [multiple branches (advanced
-  documentation)](/git-advanced#work-with-multiple-branches).
+  documentation)](git-advanced.md#work-with-multiple-branches).
 
 > It is important to stress that if you have an open (not yet merged) pull
 > request following this simplified workflow and you push new changes, then
@@ -273,14 +273,14 @@ software, and it will guarantee a faster approval (if required).
 > Notice GitHub is a popular, public, hosting site, so there will be zero
 > tolerance for offending statements or embarrassments to ALICE collaboration.
 > In case of doubt, you can find more information in the [commit
-> guidelines](/git-advanced#how-to-write-a-pull-request).
+> guidelines](git-advanced.md#how-to-write-a-pull-request).
 
 ![Git open a Pull Request](images/git-open-pr.png)
 
 Once you are done, your code is **proposed** for inclusion in the official
 repository, but it’s not yet in, as it needs to pass a review process. Notice
 also that creating pull requests can be done from the command-line, see the
-[advanced guide](/git-advanced#i-want-to-use-the-command-line) for more
+[advanced guide](git-advanced.md#i-want-to-use-the-command-line) for more
 information.
 
 
@@ -390,7 +390,7 @@ rejected:
 You will also receive an email notification. The general idea is to use the
 code repositories to store code only: since sometimes there is the need to store
 data files too [we are providing an
-alternative](/git-advanced/#how-to-use-large-data-files-for-analysis) with the
+alternative](git-advanced.md#how-to-use-large-data-files-for-analysis) with the
 following features:
 
 * Large files are easy to upload and with proper PWG-based permissions
@@ -399,7 +399,7 @@ following features:
 
 If you are using or plan to use large files, even if you are below our current
 limit, [we encourage you to follow the documented
-procedure](/git-advanced/#how-to-use-large-data-files-for-analysis).
+procedure](git-advanced.md/#how-to-use-large-data-files-for-analysis).
 
 
 ## Conflicts between different pull requests
@@ -499,7 +499,7 @@ former work was backupped just in case, in the `my-backup-just-in-case` branch
 > Note that doing so without a backup will imply **a loss of your current
 > work**. You must really be sure that you want to discard it first. If you
 > want to work on multiple features at the same time, and have different pull
-> requests open at once, please refer to the [advanced guide](/git-advanced).
+> requests open at once, please refer to the [advanced guide](git-advanced.md).
 
 
 ### Restore work from a backupped branch

@@ -6,12 +6,11 @@ categories: infrastructure
 
 # Essential operation guides
 
-* [Creating the bucket](#create-bucket)
-* [Access via RClone](#access-rclone)
+* [Creating the bucket](#creating-the-bucket)
+* [Access via RClone](#accessing-via-rclone)
 
 
 ## Creating the bucket
-{: #create-bucket}
 
 Creating the bucket should not be needed unless some disaster happens. The current instructions to do so are:
 
@@ -23,7 +22,6 @@ Creating the bucket should not be needed unless some disaster happens. The curre
 * Verify that using the `ali-bot` access_key / secret_key you can write files.
 
 ## Accessing via RClone
-{: #access-rclone }
 
 You can use RClone to access the repository with the following configuration:
 

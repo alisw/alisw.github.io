@@ -8,7 +8,7 @@ permalink: /git-advanced/
 This guide is meant to be a set of advanced topics regarding the ALICE Github
 workflow. If you are looking for a more step-by-step guide on how to get
 started and propose code changes to AliPhysics, please start from the [basic
-GitHub workflow](/git-tutorial).
+GitHub workflow](git-tutorial.md).
 
 
 ## I want to use the command line!
@@ -45,7 +45,7 @@ document.
 In order to fork a repository you can use `hub fork` and `hub clone`. The
 following example clones the official AliPhysics repository and configures your
 own fork (the `user.github` Git configuration parameter must be set as
-suggested in the [basic workflow documentation](/git-tutorial)). Note that your
+suggested in the [basic workflow documentation](git-tutorial.md)). Note that your
 fork is created on your GitHub account in case it does not exist:
 
 ```bash
@@ -291,9 +291,9 @@ button indicated by the red arrow. This is very convenient.
 In case you are not presented with a direct link, then use the dropdown to
 select your branch explicitly (see the other red arrow). Once you have done
 that just click the "New pull request" button next to the dropdown and continue
-with the [normal workflow](/git-tutorial#create-a-pull-request).
+with the [normal workflow](git-tutorial.md#create-a-pull-request).
 
-[As explained already](/git-tutorial#amend-an-open-pull-request) in order to
+[As explained already](git-tutorial.md#amend-an-open-pull-request) in order to
 amend or integrate an open pull request just keep committing and pushing on the
 corresponding feature branch.
 

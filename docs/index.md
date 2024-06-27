@@ -24,4 +24,4 @@ collisions and in their own right. This page hosts the software for RUN1 and RUN
 </p>
 
 You can find a basic tutorial on how to use the software
-[here](/git-tutorial), and an advanced tutorial [here](/git-advanced).
+[here](git-tutorial.md), and an advanced tutorial [here](git-advanced.md).

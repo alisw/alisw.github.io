@@ -41,16 +41,15 @@ The masters run the following services:
 
 # Essential Operation Guides
 
-* [Getting access to the OpenStack / Puppet infrastructure](#setup)
-* [Creating a master](#create-master)
+* [Getting access to the OpenStack / Puppet infrastructure](#getting-access-to-the-openstack-puppet-infrastructure)
+* [Creating a master](#creating-a-master)
 * [Backup the masters](#backup-master)
-* [Rebuild a master](#rebuild-master)
-* [Creating an agent](#create-agent)
-* [Reboot an agent](#reboot-agent)
-* [Delete an agent](#delete-agent)
+* [Rebuild a master](#rebuilding-a-master)
+* [Creating an agent](#creating-an-agent)
+* [Reboot an agent](#rebooting-a-server)
+* [Delete an agent](#deleting-a-build-infrastructure-vm)
 
 ## Getting access to the OpenStack / Puppet infrastructure
-{: #setup}
 
 First of all make sure you have all the rights to create machines in OpenStack and to administer them via Puppet. 
 
@@ -90,7 +89,6 @@ In case there are issues with one of the masters you should follow the following
 * Check if docker.service, nomad.service, consul.service and vault.service are running.
 
 ## Creating a master
-{: #create-master}
 
 Creation of masters in CERN Foreman setup is described in the [Configuration Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
 The short recipe for a build machine is:
@@ -123,7 +121,6 @@ The short recipe for a build machine is:
   ```
 
 ## Backup master
-{: #backup-master}
 
 Backing up of the masters is done for the `/build/consul` folder via the [standard backup service of CERN/IT](https://information-technology.web.cern.ch/services/Backup-Restore-Service).
 The service itself is setup via puppet as usual.
@@ -136,8 +133,7 @@ service dsmcad restart
 dsmc incremental
 ```
 
-## Creating a agent
-{: #create-agent}
+## Creating an agent
 
 Creation of mesos agents in CERN Foreman setup is described in the [Configuration Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
 The short recipe for a build machine is:
@@ -218,7 +214,6 @@ should:
   force-pull the builder image.
 
 ## Rebuilding a master
-{: #rebuild-master}
 
 Rebuilding a master is a potentially disruptive operation, since our mesos setup requires at least 2
 masters to be up and running in order to schedule new jobs. Therefore before you actually decide to
@@ -252,7 +247,6 @@ It can take up to one hour for the process to complete.
   - run `puppet agent -t -v` until no errors are reported
 
 ## Rebuilding an agent
-{: #rebuild-master}
 
 Rebuilding an agent is potentially a problem, since the Nomad agent might be doing something,
 e.g. building a release, which should not be in general interrupted. Therefore you need to:
@@ -291,7 +285,6 @@ In order to perform the rebuild you need to do:
     runs, report them.
 
 ## Deleting a build infrastructure VM
-{: #delete-agent}
 
 Documentation to delete a VM is found in the [Configuration Management User Guide](http://configdocs.web.cern.ch/configdocs/nodes/deletenode.html).
 
@@ -310,8 +303,7 @@ The recipe for destoying agents is:
 - Delete the VM with `ai-kill <alibuildXX>`
 - Delete the previously attached volumes.
 
-## Rebooting a Mesos server
-{: #reboot-server}
+## Rebooting a server
 
 In case there is an issue with any of the agents, a hard reboot can be
 attempted to bring it back to a working state. This can be done via the
