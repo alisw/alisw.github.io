@@ -144,6 +144,8 @@ You will need to install a reasonably recent versions of Nomad to parse existing
 
 Set the following environment values to connect to ALICE's scheduling cluster:
 
+More info on how to get the certificates [here](https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html)
+
 ```bash
 export NOMAD_ADDR='https://alinomad.cern.ch:443'
 export CONSUL_HTTP_ADDR='https://aliconsul.cern.ch:443'
