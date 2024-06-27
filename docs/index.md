@@ -3,7 +3,7 @@ title: ALICE Software on Github
 layout: main
 ---
 
-<img src="{{site.baseurl}}/images/alice.png" style="width: 45%; margin: 40px 40px; float: right;"/>
+<img src="images/alice.png" style="width: 45%; margin: 40px 40px; float: right;"/>
 
 <p style="text-align: justify;">
 The ALICE Collaboration has built a dedicated detector to exploit the

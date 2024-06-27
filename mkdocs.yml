@@ -8,15 +8,7 @@ theme:
 
 extra_css: [stylesheets/extra.css]
 
-use_directory_urls: false
-
-nav:
-  - Home: index.md
-  - Quickstart: quick.md
-  - User manual: user.md
-  - Reference: reference.md
-  - Troubleshooting: troubleshooting.md
-  - ALICE/O2 tutorial: "https://alice-doc.github.io/alice-analysis-tutorial/building/"
+use_directory_urls: true # Required for backwards compatibility with some old URLs
 
 markdown_extensions:
   - pymdownx.highlight:

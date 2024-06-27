@@ -281,7 +281,7 @@ to use the interface, go to your fork from a browser:
 
 From the web interface you will see something like the following:
 
-![Open a GitHub pull request from a certain branch]({{site.baseurl}}/images/git-open-pr-adv.png)
+![Open a GitHub pull request from a certain branch](images/git-open-pr-adv.png)
 
 If you have recently pushed, which is the case most of the time, GitHub tells
 you what is your branch name and proposes you to open the pull request right
@@ -539,7 +539,7 @@ first need to make sure "watch" notifications are enabled. Go to the [GitHub
 notification settings](https://github.com/settings/notifications) page for your
 account, and enable email notifications for **Watching**:
 
-![GitHub notification settings]({{site.baseurl}}/images/git-notif-settings.png)
+![GitHub notification settings](images/git-notif-settings.png)
 
 A green tick will appear next to the checkboxes to confirm your settings have
 been saved (there is no "save settings" button).
@@ -557,4 +557,4 @@ Navigate now to the repository you want to follow, for instance
 [AliPhysics](https://github.com/alisw/AliPhysics) and on the dropdown on top
 select **Watch** to be notified of all activities.
 
-![GitHub watch repository]({{site.baseurl}}/images/git-notif-repo.png)
+![GitHub watch repository](images/git-notif-repo.png)

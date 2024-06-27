@@ -20,14 +20,14 @@ The O2 software is developed continuously in the `dev` branch. Both the synchron
 
 
 The procedure for cherry-picking and for merging is described below. The following branching scheme should give an overview:
-![Overview]({{site.baseurl}}/images/branching-scheme.png)
+![Overview](images/branching-scheme.png)
 
 ## Cherry-picking of specific commits from `dev` into `stable-*`
 
 
 - We start with the branch `stable-sync` at commit `6d54961f81f6c129a28b655baa4101b0ecd41535`, tag `epn-20220812`.
 
-  ![Starting point]({{site.baseurl}}/images/branching-screenshot1.png)
+  ![Starting point](images/branching-screenshot1.png)
 
 - The remote repository is set up with write access under a special name "upstream-write", to make sure that no accidental push to "upstream" is tried (upstream is configured as read-only via http).
 - First, rebase to make sure you are on the latest state of the upstream branch.
@@ -73,7 +73,7 @@ The procedure for cherry-picking and for merging is described below. The followi
 
 - See below the state of the current branch. We are at the previous state (`epn-20220812`) with the two cherry-picked commits on top. And this state is tagged as `epn-20220812.1`.
 
-  ![After picking]({{site.baseurl}}/images/branching-screenshot2.png)
+  ![After picking](images/branching-screenshot2.png)
 
 ## Merging the changes from `dev` into `stable-*`
 
@@ -120,4 +120,4 @@ Next we want to bring `stable-sync` to the state of the current `dev`. For this 
 
 - Please see the final state in the figure below. From the point we started branching of (`epn-20220812`) the `stable-sync` branch had 2 commits cherry-picked, and then it is merged with `upstream/dev`.
 
-  ![After merging]({{site.baseurl}}/images/branching-screenshot3.png)
+  ![After merging](images/branching-screenshot3.png)

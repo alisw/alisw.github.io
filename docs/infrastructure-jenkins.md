@@ -6,7 +6,7 @@ categories: infrastructure
 
 In order to drive the Continuos Integration process the ALICE build infrastructure uses Jenkins. 
 
-The Jenkin master is started by Nomad, on a machine which belongs to the `alibuild/mesos/slave/jenkins` hostgroup in CERN puppet, while slaves are declared using [Nomad]({{site.baseurl}}/infrastructure-nomad) under `ci-jobs/jenkins-builder/`.
+The Jenkin master is started by Nomad, on a machine which belongs to the `alibuild/mesos/slave/jenkins` hostgroup in CERN puppet, while slaves are declared using [Nomad](infrastructure-nomad.md) under `ci-jobs/jenkins-builder/`.
 The main advantage of this setup is that we can run slaves inside a Docker container, so that it can run e.g. CentOS 7 builds on Alma 9 hosts.
 
 Master nodes are configured through Puppet in the file:
@@ -106,7 +106,7 @@ The advantage of fixed builders is that we are never in a situation where there 
 
 You can create dedicated Jenkins builders using Nomad.
 
-[Similar to the setup for CI builders]({{site.baseurl}}/infrastructure-nomad#complex-templated-job-declarations-eg-ci),
+[Similar to the setup for CI builders](infrastructure-nomad.md#complex-templated-job-declarations-eg-ci),
 Jenkins builders are defined as YAML files under `ci-jobs/jenkins-builder/`.
 
 They are normally configured using three keys:

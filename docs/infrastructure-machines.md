@@ -22,7 +22,7 @@ These work in a High Availability (HA) mode, which allows the ensemble to contin
 A diagram for the services running on the masters can be found below:
 
 <!-- Note: run `dot -Tsvg -oimages/nomad-infra.svg images/nomad-infra.dot` to regenerate this plot. -->
-[![ALICE CI Infrastructure diagram]({{ site.baseurl }}/images/nomad-infra.svg)]({{ site.baseurl }}/images/nomad-infra.svg)
+[![ALICE CI Infrastructure diagram](images/nomad-infra.svg)](images/nomad-infra.svg)
 
 The masters run the following services:
 

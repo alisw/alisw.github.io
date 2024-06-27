@@ -16,30 +16,30 @@ Further troubleshooting information is privately available in the repository:
 
 ## Tasks
 
-* <a href="{{site.baseurl}}/infrastructure-release-process">Release process AliRoot / AliPhysics</a>
-* <a href="{{site.baseurl}}/infrastructure-release-process-o2">Release process O2PDPSuite</a>
-* <a href="{{site.baseurl}}/infrastructure-o2-branches">O2 stable branches</a>
-* <a href="{{site.baseurl}}/infrastructure-nightly">Nightly builds</a>
-* [CVMFS releases]({{site.baseurl}}/infrastructure-cvmfs)
-* <a href="{{site.baseurl}}/infrastructure-pr-testing">Testing of Pull Requests (continuous integration)</a>
-* <a href="{{site.baseurl}}/infrastructure-logs">Build Logs</a>
-* <a href="{{site.baseurl}}/infrastructure-publisher">Release Publishing</a>
-* <a href="{{site.baseurl}}/infrastructure-relval">RelVal</a>
-* <a href="{{site.baseurl}}/infrastructure-alibi-user-guide">AliBI User Guide</a>
-* <a href="{{site.baseurl}}/infrastructure-auto-builds">Setting up automatic release builds</a>
-* <a href="{{site.baseurl}}/infrastructure-rpms">Generation of RPMs</a>
-* <a href="{{site.baseurl}}/infrastructure-known-tradeoffs">Known tradeoffs</a>
-* [Building Docker images with Packer]({{site.baseurl}}/infrastructure-docker-packer)
+* [Release process AliRoot / AliPhysics](infrastructure-release-process.md)
+* [Release process O2PDPSuite](infrastructure-release-process-o2.md)
+* [O2 stable branches](infrastructure-o2-branches.md)
+* [Nightly builds](infrastructure-nightly.md)
+* [CVMFS releases](infrastructure-cvmfs)
+* [Testing of Pull Requests (continuous integration)](infrastructure-pr-testing.md)
+* [Build Logs](infrastructure-logs.md)
+* [Release Publishing](infrastructure-publisher.md)
+* [RelVal](infrastructure-relval.md)
+* [AliBI User Guide](infrastructure-alibi-user-guide.md)
+* [Setting up automatic release builds](infrastructure-auto-builds.md)
+* [Generation of RPMs](infrastructure-rpms.md)
+* [Known tradeoffs](infrastructure-known-tradeoffs.md)
+* [Building Docker images with Packer](infrastructure-docker-packer)
 
 ## Infrastructure
 
-* [Using Nomad, Consul and Vault]({{site.baseurl}}/infrastructure-nomad)
-* [Nomad cluster setup]({{site.baseurl}}/infrastructure-nomad-host)
-* [MacOS builder setup]({{site.baseurl}}/infrastructure-macos)
-* [Virtual and physical machines]({{site.baseurl}}/infrastructure-machines)
-* <a href="{{site.baseurl}}/infrastructure-alienvobox">AliEn VoBox</a>
-* <a href="{{site.baseurl}}/infrastructure-frontend">Web Frontend</a>
-* <a href="{{site.baseurl}}/infrastructure-jenkins">Jenkins</a>
-* <a href="{{site.baseurl}}/infrastructure-repository">AliBuild S3 Repository</a>
-* <a href="{{site.baseurl}}/infrastructure-alibi">AliBI</a>
-* <a href="{{site.baseurl}}/infrastructure-auto-builds">Setting up automatic release builds</a>
+* [Using Nomad, Consul and Vault](infrastructure-nomad)
+* [Nomad cluster setup](infrastructure-nomad-host)
+* [MacOS builder setup](infrastructure-macos)
+* [Virtual and physical machines](infrastructure-machines)
+* [AliEn VoBox](infrastructure-alienvobox.md)
+* [Web Frontend](infrastructure-frontend.md)
+* [Jenkins](infrastructure-jenkins.md)
+* [AliBuild S3 Repository](infrastructure-repository.md)
+* [AliBI](infrastructure-alibi.md)
+* [Setting up automatic release builds](infrastructure-auto-builds.md)
