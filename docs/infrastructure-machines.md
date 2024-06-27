@@ -74,7 +74,7 @@ While an exhaustive list of all the available options can be optained via `opens
 - `openstack image list`: list of OS images you can use. The build nodes should use the latest "Alma 9" ones.
 - `openstack flavor list`: list available flavors of virtual machines (i.e. how many CPUs, RAM).
 
-Further information on how CERN OpenStack cloud works can be found [here](https://clouddocs.web.cern.ch/clouddocs/).
+Further information on how CERN OpenStack cloud works can be found [here](https://clouddocs.web.cern.ch/).
 
 Note that you will have to login as `root` to all the machines.
 
