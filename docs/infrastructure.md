@@ -10,6 +10,8 @@ The following pages contain implementation details of various parts of the
 build infrastructure. They are not of general need, but serve as reference to
 operate the system.
 
+You can find further information on how aliBuild works in the [aliBuild documentation](https://alisw.github.io/alibuild/).
+
 Further troubleshooting information is privately available in the repository:
 
 <https://gitlab.cern.ch/ALICEDevOps/aliops.git/>
