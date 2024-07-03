@@ -10,11 +10,11 @@ These all have web interfaces. If you have access, you can log in at <https://al
 
 Jobs are defined in [a dedicated git repository][job-decls-repo].
 
-# Essential CI operations guide
+## Essential CI operations guide
 
 For hints on how to adapt the instructions in this section to jobs other than the CI job, see the following sections.
 
-## Where to find logs
+### Where to find logs
 
 Logs are written out to disk by the Nomad agent under an allocation's `alloc/logs/` directory. They can also be fetched or streamed using the Nomad command-line client:
 
@@ -31,7 +31,7 @@ If you use the last command (the one with `-job`) on a job that has multiple all
 
 Run `nomad alloc logs -help` for more information on the command and its options.
 
-## Stopping and restarting CI jobs
+### Stopping and restarting CI jobs
 
 If you want to fully bring down and redeploy a CI job, you must do this manually by stopping and rescheduling it.
 
@@ -61,7 +61,7 @@ group "ci" {
 }
 ```
 
-## Scaling a CI job
+### Scaling a CI job
 
 If you want to permanently change the number of running CI jobs for a specific type of builder (e.g. the `mesosci-cs8` one), change the desired number of builders by setting the value of `num_builders` in `mesosci-cs8.yaml`.
 
@@ -84,7 +84,7 @@ nomad job scale ci-mesosci-cs8 N    # N is the desired number of builders for th
 
 The above command will automatically install a new `config/workers-pool-size` file into the working area of the running builders without restarting them.
 
-## Deploying changes to the CI job template
+### Deploying changes to the CI job template
 
 When changing the template itself (i.e. the `ci.nomad` file), the changes must be deployed for each YAML file, as each declares a separate instance of the templated job.
 
@@ -100,7 +100,7 @@ git add ci.nomad && git commit                            # track your changes
 
 While there's no harm in running the syntax validation step in a loop, it's probably better to do the actual deployment (i.e. `nomad job run`) manually for each YAML file, so that issues with the deployment can be caught early.
 
-## Troubleshooting placement failures
+### Troubleshooting placement failures
 
 If the Nomad scheduler fails to place your job, you will see a message like this when you run `nomad job plan`:
 
@@ -130,9 +130,9 @@ In this case, check the following:
 
 [nomad-diskfree]: https://github.com/alisw/ali-bot/tree/master/utils/nomad-diskfree
 
-# Developing locally
+## Developing locally
 
-## Setting up your local environment
+### Setting up your local environment
 
 You will need to install a reasonably recent versions of Nomad to parse existing job declarations. Additionally, you should install the latest version of Levant; ideally [version 0.3.1 or later][levant-release].
 
@@ -177,13 +177,13 @@ export {NOMAD,CONSUL,VAULT}_TLS_SERVER_NAME=alimesos01.cern.ch
 
 [levant-release]: https://releases.hashicorp.com/levant
 
-## Writing job declarations
+### Writing job declarations
 
 Jobs are defined using [Levant][levant] templates. While plain nomad templating is powerful, it does not allow variable job identifiers (which are crucial for declaring e.g. multiple similar Jenkins builders or CI workers). Levant allows templating on top of the HCL job specification read by nomad.
 
 As Levant bundles a version of the Nomad client, Levant [`0.3.1` or later][levant-releases] is required in order to parse the HCL job declarations we use.
 
-### Simple job declarations (e.g. `rsync` server)
+#### Simple job declarations (e.g. `rsync` server)
 
 Simple job declarations, i.e. those that declare only a single job, don't use Levant for templating at all. They are simple HCL files stored in the root directory of the [ci-jobs repository][jobs-decls-repo], named `<job-name>.nomad`.
 
@@ -197,7 +197,7 @@ nomad job plan repo.nomad       # check if the job can be scheduled
 nomad job run repo.nomad        # actually run the job
 ```
 
-### Complex, templated job declarations (e.g. CI)
+#### Complex, templated job declarations (e.g. CI)
 
 Complicated job declarations are broken up into a common, templated declaration, and multiple YAML "variable files" to declare the variations of the base job to be deployed. These should be collected into a single directory, with multiple `.yaml` files, but only one `.nomad` file per directory.
 
@@ -228,9 +228,9 @@ levant render -var-file vars.yaml | nomad job run -       # actually run job
 [o2physics-ci]: https://github.com/alisw/ci-jobs/blob/master/ci/mesosci-slc7-o2physics.yaml
 
 
-# Tips and tricks for writing Nomad job declarations
+## Tips and tricks for writing Nomad job declarations
 
-## Using Vault secrets
+### Using Vault secrets
 
 If you want to use Vault secrets in your job declaration, you can substitute them inside of templates.
 
@@ -268,8 +268,19 @@ This example assumes that you have a secret called `my-secret-name` stored in Va
 ```
 
 
-# Troubleshooting
+## Troubleshooting
 
+### Stuck allocations/jobs
+
+When a job is not able to be deleted and recreated, you can force the deletion using the following commands (requires nomad management token):
+
+```bash
+nomad job stop -purge <job-name>
+nomad system gc
+```
+
+
+### Nomad error initializing client: tls: failed to parse private key
 
 If you are on macOS you'll need an unencrypted key, you can export it from your certificate with a command like this (note the ``-nodes`` flag)
 
