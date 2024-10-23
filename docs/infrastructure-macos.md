@@ -285,3 +285,18 @@ If in doubt, run `hostname -s` to check.
 ## Notable macOS post-mortems
 
 * [Issues after a powercut](https://its.cern.ch/jira/browse/O2-4950)
+
+## Troubleshooting
+
+### Nomad service doesn't start after reboot / Job allocation stuck in pending
+
+Some machines aren't able to remount the disks properly after a reboot. You can usually fix this issue with the following commands:
+
+
+```
+sudo mkdir /Volumes/build
+diskutil list # find the right disk for the next command
+sudo mount -t hfs /dev/disk2s1 /Volumes/build
+sudo /Users/alibuild/restart-services.sh
+```
+
