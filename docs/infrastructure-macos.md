@@ -7,6 +7,7 @@ categories: infrastructure
 The macOS build infrastructure works the same way as its Linux counterpart -- it uses Nomad.
 
 This guide covers:
+
 * [Installation and initial setup of the machine](#installation-and-initial-setup)
 * [Adding a CI checker](#adding-a-ci-checker)
 
@@ -241,9 +242,9 @@ If Nomad complains about not being able to connect to the master nodes at `alime
 pdsh -w 'alimesos[01-03].cern.ch' puppet agent -tv
 ```
 
-# Adding a CI checker
+## Adding a CI checker
 
-## Adding a Nomad job
+### Adding a Nomad job
 
 The Macs are configured on a host-by-host basis, unlike the Linux checkers, so that we can more tightly control what checks run where.
 This saves precious disks space, since many Macs lack this resource compared to the Linux machines.
@@ -271,7 +272,7 @@ levant render -var-file "$newhost.yaml" | nomad job plan -
 levant render -var-file "$newhost.yaml" | nomad job run -
 ```
 
-## Configuring individual checks
+### Configuring individual checks
 
 Mac CI checkers are configured like their Linux equivalents, using `.env` files under `ali-bot/ci/repo-config/`.
 The Macs specifically are listed under [`ali-bot/ci/repo-config/macos/`](https://github.com/alisw/ali-bot/tree/master/ci/repo-config/macos).
@@ -284,3 +285,18 @@ If in doubt, run `hostname -s` to check.
 ## Notable macOS post-mortes
 
 * [Issues after a powercut](https://its.cern.ch/jira/browse/O2-4950)
+
+## Troubleshooting
+
+### Nomad service doesn't start after reboot / Job allocation stuck in pending
+
+Some machines aren't able to remount the disks properly after a reboot. You can usually fix this issue with the following commands:
+
+
+```
+sudo mkdir /Volumes/build
+diskutil list # find the right disk for the next command
+sudo mount -t hfs /dev/disk2s1 /Volumes/build
+sudo /Users/alibuild/restart-services.sh
+```
+
