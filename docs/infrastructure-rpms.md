@@ -19,7 +19,7 @@ on CVMFS. The script itself is called `aliPublish` and as usual it's part of the
 [alisw/ali-bot](https://github.com/alisw/ali-bot/tree/master/publish) repository.
 
 For the RPM case, in particular, the script runs in [Nomad](infrastructure-nomad.md) as a `publish-rpm-*` job.
-The script runs asynchrounously and publishes packages as specified by the configurations for [parallel](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-rpms.conf) and [updateable](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-updatable-rpms.conf) RPMs.
+The script runs asynchrounously and publishes packages as specified by the configurations for [parallel](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-rpms-cc8.conf) and [updateable](https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-s3-updatable-rpms.conf) RPMs.
 
 ## Nomad job management
 
