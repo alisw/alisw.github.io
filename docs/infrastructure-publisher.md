@@ -65,12 +65,11 @@ Builds of O2PDPSuite from the `async` branch are also published on CVMFS using [
 In addition, the AliDPG package is handled specially and published to `noarch` using [`aliPublish-noarch.conf`][noarch-conf].
 
 [aliPublish-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish.conf
-[async-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-async.conf
 [noarch-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-noarch.conf
 
 ### RPMS
 
-If you need to generate a new RPM package, the configuration is in `ali-bot/publisher/aliPublish-rpms.conf` and `aliPublish-updatable-rpms.conf`. Once you have updated it and merged in [alisw/ali-bot](https://github.com/alisw/ali-bot), the publisher will pick your changes up automatically.
+If you need to generate a new RPM package, the configuration is in `ali-bot/publisher/aliPublish-rpms-cc8.conf` and `aliPublish-s3-updatable-rpms.conf`. Once you have updated it and merged in [alisw/ali-bot](https://github.com/alisw/ali-bot), the publisher will pick your changes up automatically.
 
 ## Start publishing on a new architecture
 
