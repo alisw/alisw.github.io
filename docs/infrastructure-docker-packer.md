@@ -21,8 +21,7 @@ registry for Nomad to use it in new job allocations.
 ## Packer-defined images
 
 Newer images have a ``packer.json`` file, which allows them to be built using
-Hashicorp packer. This has the nice advantage that we can customize and upload
-the images in one go. 
+Hashicorp packer
 
 There's a [GitHub Action
 here](https://github.com/alisw/docks/actions/workflows/push-docker-image.yml)
@@ -34,13 +33,8 @@ In case you prefer to do it manually:
 brew install packer # > 0.10.0
 cd <image-name>
 packer build packer.json
+docker push registry.cern.ch/alisw/<image-name>
 ```
-
-If you don't want to upload the finished image to DockerHub (e.g. if you're just
-testing changes to the image, or you don't have the rights to upload), remove
-the `"docker-push"` entry from `"post-processors"` in the `packer.json` you're
-using. (JSON doesn't allow trailing commas in arrays, so don't forget to remove
-the comma as well!)
 
 ## Dockerfile-defined images
 
