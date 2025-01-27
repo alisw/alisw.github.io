@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-# Frontend setup
+## Frontend setup
 
 The ALICE build infrastructure is exposed via SSO.
 
@@ -14,9 +14,9 @@ runs apache and does the reverse proxying to the actual service.
 The machine is setup in CERN/IT puppet + OpenStack facility in the hostgroup
 `alibuild/frontend`.
 
-# Disaster recovering
+## Disaster recovering
 
-## Starting the frontend
+### Starting the frontend
 
 The quick recipe to restart the frontend is:
 
@@ -47,7 +47,7 @@ The quick recipe to restart the frontend is:
   
   and they need to have the right Ip Address registered there.
 
-## Enabling / disabling one host in the load balancing
+### Enabling / disabling one host in the load balancing
 
 Machines in the `alibuild/frontend` hostgroup participate in a load balanced DNS alias. In order to do so they must be in roger state `production`. To do so:
 
@@ -68,7 +68,7 @@ You can check their load balanced score with:
 /usr/local/sbin/lbclient -d TRACE
 ```
 
-# CERN Single Sign-On (SSO) authentication
+## CERN Single Sign-On (SSO) authentication
 
 Some web applications use Apache's OIDC support to authenticate with CERN SSO. Apache then sets [various `OIDC_CLAIM_*` headers][headers] on the forwarded requests.
 
@@ -77,7 +77,7 @@ See also [the CERN SSO documentation][cern-sso].
 [headers]: https://auth.docs.cern.ch/user-documentation/oidc/config/
 [cern-sso]: https://auth.docs.cern.ch/applications/application-configuration/
 
-## Adding a new application
+### Adding a new application
 
 Applications must be configured on the CERN SSO side through the [Application Portal][app-portal] and on the ALICE side though our Puppet-generated Apache configuration, specifically the file `it-puppet-hostgroup-alibuild/data/hostgroup/alibuild/frontend.yaml`.
 

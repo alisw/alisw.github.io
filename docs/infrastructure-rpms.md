@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-# Rationale
+## Rationale
 
 Some clients of O2 software need to use RPMs to deploy O2 software and its
 dependencies. We support two kind of RPM builds:

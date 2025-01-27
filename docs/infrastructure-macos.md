@@ -11,7 +11,7 @@ This guide covers:
 * [Installation and initial setup of the machine](#installation-and-initial-setup)
 * [Adding a CI checker](#adding-a-ci-checker)
 
-# Installation and initial setup
+## Installation and initial setup
 
 These are the instructions for macOS Ventura.
 
@@ -24,7 +24,7 @@ These may refer to the new Mac's hostname, so set a variable for this now, or su
 newhost='<short hostname of the new Mac, e.g. alibuildmac09>'
 ```
 
-## Set up firewall exceptions
+### Set up firewall exceptions
 
 Add the new Mac's hostname to the list of non-Puppetized CI hosts in Puppet.
 You have to do this in two places, once each in the header of:
@@ -32,14 +32,14 @@ You have to do this in two places, once each in the header of:
 * `it-puppet-hostgroup-alibuild/code/manifests/mesos/master.pp`
 * `it-puppet-hostgroup-alibuild/code/manifests/mesos/slave.pp`
 
-## Set up the Mac's network connection
+### Set up the Mac's network connection
 
 On the Mac, go to System Settings -> Network and disable WiFi.
 
 Then, in the network settings, go to Ethernet -> Details -> DNS, and click "+" under "DNS Servers" to add the IPv4 addresses of alimesos01, alimesos02 and alimesos03 as DNS servers.
 Remove other DNS servers (including the automatic CERN central ones).
 
-## Prevent the Mac from going to sleep
+### Prevent the Mac from going to sleep
 
 By default, Macs will go into a low-power state after a while without interactive use, which interrupts the CI build process.
 To prevent this, change the following settings in System Settings:
@@ -50,7 +50,7 @@ In Lock Screen, set both "Start Screen Saver when inactive" and "Turn display of
 
 In Displays -> Advanced, enable "Prevent automatic sleeping when the display is off" (at the bottom of the page).
 
-## Software prerequisites
+### Software prerequisites
 
 * Install the right version of XCode, either from the App Store or from [xcodereleases.com](https://xcodereleases.com/).
   Usually this should be the latest one from the App Store, but occasionally we don't support the latest one yet.
@@ -75,13 +75,13 @@ In Displays -> Advanced, enable "Prevent automatic sleeping when the display is 
   brew install alisw/system-deps/alice-build-machine
   ```
 
-## Create a build volume
+### Create a build volume
 
 Open "Disk Utility".
 Select "Macintosh HD", then in the window title bar, press "+" above "Volume".
 Call the new volume `build` with format "APFS".
 
-## Create the work environment
+### Create the work environment
 
 With recent MacOS versions, `/` is not writable.
 We install under `/opt/build` instead:
@@ -96,7 +96,7 @@ In System Preferences, go to Siri & Spotlight -> Spotlight Privacy (at the botto
 In the "Privacy" tab, hit the "+" button.
 Now select the `build` volume and confirm.
 
-## Copy Grid CA certificates from another host
+### Copy Grid CA certificates from another host
 
 O2 unit tests need this to connect to services like the test CCDB instance.
 
@@ -111,7 +111,7 @@ sudo mkdir -p /etc/grid-security/certificates
 sudo tar -xzf ~/certs.tar.gz --strip-components=3 -C /etc/grid-security/certificates
 ```
 
-## Get a Grid host certificate
+### Get a Grid host certificate
 
 O2 unit tests need this to connect to services like the test CCDB instance.
 
@@ -190,7 +190,7 @@ ssh $TARGET_MACHINE rm -rf /Users/alibuild/renew-certificate
 rm -fr $HOME/Downloads/host.cert
 ```
 
-## Ask for AliEn access
+### Ask for AliEn access
 
 Ask Costin or Max to add the DN of the certificate you just installed to the list of allowed certs for the `alienci` user.
 You can get the certificate's DN using:
@@ -198,7 +198,7 @@ You can get the certificate's DN using:
 openssl x509 -in /etc/grid-security/hostcert.pem -noout -text | grep Subject:
 ```
 
-## Set up Nomad and Consul
+### Set up Nomad and Consul
 
 ```bash
 sudo mkdir -p "$(brew --prefix)/etc"/{nomad,consul}.d

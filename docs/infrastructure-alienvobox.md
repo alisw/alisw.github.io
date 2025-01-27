@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-# Register the VOBOX
+## Register the VOBOX
 
 An AliEn VOBOX has first to be registered to the AliEn LDAP. AliEn
 administrators can do that with two pieces of information:
@@ -15,7 +15,7 @@ administrators can do that with two pieces of information:
 A site certificate and an associated private key will be created.
 
 
-# Store credentials in Vault
+## Store credentials in Vault
 
 First create a policy:
 
@@ -55,7 +55,7 @@ Alternatively we can read it from a file:
     vault write secret/mysitevobox/host_cert value=@usercert.pem
 
 
-# Run the Ansible configuration
+## Run the Ansible configuration
 
 Our configuration is stored on Ansible. To run it, by limiting the run only to
 the AliEn VOBOXes, do - from the private configuration folder:

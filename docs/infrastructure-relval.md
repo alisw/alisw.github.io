@@ -14,15 +14,15 @@ Then we start the [AliRootDPGValidation](https://alijenkins.cern.ch/job/AliRootD
 
 Start the validation script for Reconstruction first, then General Purpose Monte Carlo.
 
-# Essential User Guide
+## Essential User Guide
 
 All the release validations performed are available at:
 
 <https://ali-ci.cern.ch/release-validation/>
 
-# Essential Operations Guide
+## Essential Operations Guide
 
-## Managing data on EOS
+### Managing data on EOS
 
 EOS and its XRootD interface are used by the release validation:
 
@@ -57,7 +57,7 @@ environment variables and start EOS afterwards:
     eos
 
 
-## Remove old release validations
+### Remove old release validations
 
 From the EOS prompt on `eospublic.cern.ch` move to the results output folder:
 
@@ -68,14 +68,14 @@ You can then list the directories with `ls` and remove them one by one with:
     rm -r
 
 
-## Used quota on EOS
+### Used quota on EOS
 
 From the EOS prompt on `eospublic.cern.ch` query the quota for our directory:
 
     quota /eos/opstest/pbuncic/
 
 
-## Stage new data on EOS from AliEn
+### Stage new data on EOS from AliEn
 
 This operation requires a working AliEn installation, we will be assuming that
 you are using AliEn from aliBuild. Enter the AliEn environment:
@@ -112,7 +112,7 @@ used as a dataset for a release validation. In order to make this file usable:
    variable
 
 
-## Proxy certificate
+### Proxy certificate
 
 Release validation uses a Grid proxy certificate mapped to the **alibot**
 EOS/CERN service account on eospublic.cern.ch.

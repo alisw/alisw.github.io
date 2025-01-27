@@ -12,13 +12,13 @@ The docker image definitions are available in
 <https://registry.cern.ch/>
 
 
-# Rebuilding a Docker image
+## Rebuilding a Docker image
 
 If an image definition has changed, it must be rebuilt and pushed to the proper
 registry for Nomad to use it in new job allocations.
 
 
-## Packer-defined images
+### Packer-defined images
 
 Newer images have a ``packer.json`` file, which allows them to be built using
 Hashicorp packer
@@ -36,7 +36,7 @@ packer build packer.json
 docker push registry.cern.ch/alisw/<image-name>
 ```
 
-## Dockerfile-defined images
+### Dockerfile-defined images
 
 Older images without a `packer.json` can be built with:
 
@@ -45,13 +45,14 @@ docker build -t alisw/<image-name> <image-name>
 ```
 
 
-# Conventions
+## Conventions
 
 The CI uses an image named <arch>-builder where <arch> is the architecture of the
 image. The CI system will automatically select the correct image for a given
 architecture, so the image name must match the format exactly.
 
-https://github.com/alisw/ci-jobs/blob/master/ci/ci.nomad
+The code to infer the image names is
+[here](https://github.com/alisw/ci-jobs/blob/master/ci/ci.nomad)
 
 [ci-jobs]: https://github.com/alisw/ci-jobs
 [packer]: https://www.packer.io/

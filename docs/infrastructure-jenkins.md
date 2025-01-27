@@ -13,7 +13,7 @@ Master nodes are configured through Puppet in the file:
 
 - [/code/manifests/alibuild/mesos/slave/jenkins.pp](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/master/code/manifests/mesos/slave/jenkins.pp)
 
-# Essential Operation Guides:
+## Essential Operation Guides:
 
 * [Create the Jenkins](#create-the-jenkins-master-only-in-case-of-disaster-recovery)
 * [Starting Jenkins](#starting-jenkins)
@@ -96,7 +96,7 @@ The step by step guide is:
 
   The `<parameters>` are formatted as in a URL: `<name>=<value>&<name2>=<value2>`.
 
-## Creating Jenkins agents with guaranteed resources
+### Creating Jenkins agents with guaranteed resources
 
 This is the main way we deploy Jenkins builders.
 The advantage of fixed builders is that we are never in a situation where there is not enough space on the cluster by accident to run a Jenkins build.
@@ -136,7 +136,7 @@ levant render -var-file <name>.yaml | nomad job plan -      # make sure job can 
 levant render -var-file <name>.yaml | nomad job run -       # actually run job
 ```
 
-## Gotchas and issues:
+### Gotchas and issues:
 
 * On some systems, the CERN CA is not available by default. You can overcome this by either:
   * Go to <https://ca.cern.ch> and install all the required CA certificates. In general this is what is needed on macOS.

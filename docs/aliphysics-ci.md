@@ -4,7 +4,7 @@ layout: main
 categories: developer
 ---
 
-# Checking the status of the daily builds
+## Checking the status of the daily builds
 
 Daily build are built with Jenkins. You can check the status of the current
 build and the logs of previous one by going to:
@@ -12,7 +12,7 @@ build and the logs of previous one by going to:
 <https://alijenkins.cern.ch/job/daily-builds/job/daily-aliphysics-github/>
 
 
-# Trying out a Release Validation
+## Trying out a Release Validation
 
 If a release validation fails, one can try out the release candidate by sourcing the
 nightly environment from CVMFS:

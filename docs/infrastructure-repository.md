@@ -4,13 +4,13 @@ layout: main
 categories: infrastructure
 ---
 
-# Essential operation guides
+## Essential operation guides
 
 * [Creating the bucket](#creating-the-bucket)
 * [Access via RClone](#accessing-via-rclone)
 
 
-## Creating the bucket
+### Creating the bucket
 
 Creating the bucket should not be needed unless some disaster happens. The current instructions to do so are:
 
@@ -21,7 +21,7 @@ Creating the bucket should not be needed unless some disaster happens. The curre
 * Set the access policy to the contents of `ali-marathon/s3/alibuild-repo.json`. See [clouddocs](https://clouddocs.web.cern.ch/object_store/index.html) how to do that.
 * Verify that using the `ali-bot` access_key / secret_key you can write files.
 
-## Accessing via RClone
+### Accessing via RClone
 
 You can use RClone to access the repository with the following configuration:
 

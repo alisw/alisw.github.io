@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-# O2PDPSuite release process for EPNs
+## O2PDPSuite release process for EPNs
 
 
 1. O2PDPSuite is a meta package which contains O2, QualityControl, DataDistribution and all their dependencies.

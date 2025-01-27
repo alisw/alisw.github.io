@@ -31,7 +31,7 @@ We use [Nomad](infrastructure-nomad.md) to deploy the builders on Linux and MacO
 
 <iframe width="700" height="550" src="https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB" frameborder="0" style="border:0"></iframe>
   
-# Essential operations guide
+## Essential operations guide
 
 See also: [the essential CI operations guide](infrastructure-nomad.md#essential-ci-operations-guide) for the ALICE Nomad deployment.
 
@@ -45,7 +45,7 @@ See also: [the essential CI operations guide](infrastructure-nomad.md#essential-
 * [Inspecting the checkers](#inspecting-the-checkers)
 * [Monitoring the checkers](#monitoring-the-checkers)
 
-## Adding a package to be tested
+### Adding a package to be tested
 
 Each checker deployed on Nomad can test multiple packages.
 These are declared as `*.env` files [in a subdirectory of ali-bot](https://github.com/alisw/ali-bot/tree/master/ci/repo-config), following the pattern:
@@ -81,14 +81,14 @@ In order to add a new pull request check for a repository, and a checker for the
 
 If you add a new check, make sure to update the appropriate repository's GitHub action that cleans up broken statuses to include your new check. For example, in alidist, update [this file](https://github.com/alisw/alidist/blob/master/.github/workflows/clean-pr-checks.yml), or [this file](https://github.com/AliceO2Group/AliceO2/blob/dev/.github/workflows/clean-test.yml) for O2.
 
-## Setup your environment
+### Setup your environment
 
 Set up your Nomad environment as described [here](infrastructure-nomad.md#setting-up-your-local-environment).
 Job declarations for the pull request checkers are stored inside the `ci/` subdirectory of the [ci-jobs](https://github.com/alisw/ci-jobs) repository.
 
 See [this section](infrastructure-nomad.md#complex-templated-job-declarations-eg-ci) of the ALICE Nomad docs for instructions on deploying CI builders.
 
-## Listing active PR checkers
+### Listing active PR checkers
 
 In order to see the list of the running prs you can do:
 
@@ -114,7 +114,7 @@ You can check what each instance is doing by getting its allocation ID, then run
 nomad alloc logs -stderr -tail -f <alloc ID>
 ```
 
-## Scaling the number of checkers
+### Scaling the number of checkers
 
 [See here for the procedure.](infrastructure-nomad.md#scaling-a-ci-job)
 
@@ -124,7 +124,7 @@ This will only add builders if you increased `num_builders` or delete some if yo
 The builders know how many there are of the same type though the `config/workers-pool-size` file.
 Nomad will automatically update this file for you when you deploy the updated job declaration.
 
-## Creating a new checker
+### Creating a new checker
 
 In order to add a new checker, you need to add both a Nomad job declaration by creating a new YAML file in `ci-jobs/ci/`.
 Assuming you want to add a checker that runs two parallel builders as the `mesosci` user and compiles software using an `slc9` container, create a file called `ci-jobs/ci/mesosci-slc9-foobar.yaml` containing the following:
@@ -173,7 +173,7 @@ They are sourced by the CI builders, but some utilities (`list-branch-pr` and `c
 Try to use only literal strings for the `PR_REPO`, `PR_BRANCH`, `CHECK_NAME`, `TRUST_COLLABORATORS`, `TRUSTED_USERS` and `TRUSTED_TEAM` variables, since the Python tools parse these.
 For other variables, feel free to use variable substitution with the usual shell syntax.
 
-## Updating the PR checker inner loop
+### Updating the PR checker inner loop
 
 Sometimes one might need to update the inner loop of the PR checking, without having to restart the checker itself.
 This is done automatically for any updates of the `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` files.
@@ -182,7 +182,7 @@ Upgrades will be picked up at the next iteration of the PR builder, so you might
 
 Updates to `ali-bot/ci/continuous-builder.sh` are also picked up, but less frequently.
 
-## Restarting a checker
+### Restarting a checker
 
 In some cases, builders need to be restarted.
 
@@ -190,7 +190,7 @@ In some cases, builders need to be restarted.
 
 This will redeploy the same configuration, but the `ali-bot` scripts will be taken from the master branch and `continuous-builder.sh` will be run again.
 
-## Inspecting the checkers
+### Inspecting the checkers
 
 You can stream the logs of any CI builder instance easily -- [see here how to do this](infrastructure-nomad.md#where-to-find-logs).
 
@@ -213,7 +213,7 @@ In particular:
   This is normally created and updated automatically by Nomad.
 * `config/worker-index` will force the index of the current instance of the checker.
 
-## Monitoring the checkers
+### Monitoring the checkers
 
 The CI system is monitored using a dedicated [Grafana dashboard](https://monit-grafana.cern.ch/d/7_5s-W27k/ci-overview?orgId=65).
 
@@ -228,9 +228,9 @@ Some of the CI machines are also included in the [IT Grafana dashboard](https://
 There is also a [dashboard that shows the status of each check and pull request](https://alice-ci-overview.cern.ch/).
 In case of outages for larger problems, this can be useful to find failed PRs, or to find out when the problems started (since PRs are sorted newest-first).
 
-# Troubleshooting
+## Troubleshooting
   
-## Empty logs
+### Empty logs
 
 Empty logs can happen in the case the build fails in some pre-alibuild steps and the harvesting script is not able or not allowed to fetch logs. In particular, due to the criticality of some operations, logs which might contain sensitive information are not retrieved, to avoid exposing them to unprivileged ALICE users. Maintainers of the build infrastructure can follow the instructions in the report to retrieve them.
   

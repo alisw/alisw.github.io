@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-# Integration builds
+## Integration builds
 
 So called integration (or nightly) builds are the pivotal part of a continuos
 integration system. They get triggered as often as possible using the tip of

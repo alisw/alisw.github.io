@@ -3,16 +3,16 @@ title: Release publishing
 layout: main
 categories: infrastructure
 ---
-# Publishing of packages
+## Publishing of packages
 
 Packages are published using [ali-bot/publish](https://github.com/alisw/ali-bot/tree/master/publish) scripts. 
 This happens in different places depending if we are deploying on CVMFS or Alien. The procedure
 is automatic and in principle there is no need for babysitting it, however in
 case of troubles you can do the following:
 
-## Troubleshooting CVMFS
+### Troubleshooting CVMFS
 
-### Access to the publisher machines
+#### Access to the publisher machines
 
 * SSH as your username to `cvmfs-alice.cern.ch` or
   `cvmfs-alice-nightlies.cern.ch` depending on
@@ -20,7 +20,7 @@ case of troubles you can do the following:
 * Follow the instructions given at the logon by the MOD
 * Logs are in `~/publisher/log`
 
-### Issue with missing ROOT libraries
+#### Issue with missing ROOT libraries
 
 For some yet to be understood reason sometimes ROOT is published with a `-<N>` revision, while `-<N+1>` is available.
 This leads to errors like:
@@ -45,18 +45,18 @@ cvmfs_server transaction alice.cern.ch
 
 Things should be then back in business in a few minutes, time for CVMFS to propagate the changes everywhere.
 
-## Troubleshooting ALIEN
+### Troubleshooting ALIEN
 
 See the [`publish-alien` Nomad job](https://alinomad.cern.ch/ui/jobs/publish-alien@default?desc=true&sort=submitTime).
 
-## Troubleshooting RPMS
+### Troubleshooting RPMS
 
 RPMS are also created using `aliPublishS3` in [Nomad](infrastructure-nomad.md).
 [See the dedicated documentation.](infrastructure-rpms.md)
 
-## Add new packages:
+### Add new packages:
 
-### CVMFS
+#### CVMFS
 
 Packages published on CVMFS can be configured via the [`aliPublish.conf`][aliPublish-conf] file. Apart from having your changes in master, no further action is required.
 
@@ -67,11 +67,11 @@ In addition, the AliDPG package is handled specially and published to `noarch` u
 [aliPublish-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish.conf
 [noarch-conf]: https://github.com/alisw/ali-bot/blob/master/publish/aliPublish-noarch.conf
 
-### RPMS
+#### RPMS
 
 If you need to generate a new RPM package, the configuration is in `ali-bot/publisher/aliPublish-rpms-cc8.conf` and `aliPublish-s3-updatable-rpms.conf`. Once you have updated it and merged in [alisw/ali-bot](https://github.com/alisw/ali-bot), the publisher will pick your changes up automatically.
 
-## Start publishing on a new architecture
+### Start publishing on a new architecture
 
 In order to publish Run 2 packages on another architecture on CVMFS, symlinks for the AliDPG package must be in place.
 
