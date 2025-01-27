@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-# Cluster architecture description
+## Cluster architecture description
 
 The ALICE build infrastructure consists of two kinds of nodes: masters, responsible for scheduling jobs, and agents, responsible for executing jobs and services.
 They are in general provisioned using [CERN Openstack Infrastructure](https://openstack.cern.ch) and configured using the [CERN Puppet / Foreman setup](https://cern.ch/config).
@@ -39,7 +39,7 @@ The masters run the following services:
   A monitoring service that polls various running jobs, in addition to the Nomad, Consul and Vault servers, and sends metrics to MONIT Cortex.
   [This integration is documented here.](https://monit-docs.web.cern.ch/metrics/prometheus/)
 
-# Essential Operation Guides
+## Essential Operation Guides
 
 * [Getting access to the OpenStack / Puppet infrastructure](#getting-access-to-the-openstack-puppet-infrastructure)
 * [Creating a master](#creating-a-master)
@@ -49,7 +49,7 @@ The masters run the following services:
 * [Reboot an agent](#rebooting-a-server)
 * [Delete an agent](#deleting-a-build-infrastructure-vm)
 
-## Getting access to the OpenStack / Puppet infrastructure
+### Getting access to the OpenStack / Puppet infrastructure
 
 First of all make sure you have all the rights to create machines in OpenStack and to administer them via Puppet. 
 
@@ -78,7 +78,7 @@ Further information on how CERN OpenStack cloud works can be found [here](https:
 
 Note that you will have to login as `root` to all the machines.
 
-## Checklist to verify the status of a master
+### Checklist to verify the status of a master
 
 In case there are issues with one of the masters you should follow the following checklist:
 
@@ -88,7 +88,7 @@ In case there are issues with one of the masters you should follow the following
 * SSH into the machine.
 * Check if docker.service, nomad.service, consul.service and vault.service are running.
 
-## Creating a master
+### Creating a master
 
 Creation of masters in CERN Foreman setup is described in the [Configuration Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
 The short recipe for a build machine is:
@@ -120,7 +120,7 @@ The short recipe for a build machine is:
         $MACHINE_NAME
   ```
 
-## Backup master
+### Backup master
 
 Backing up of the masters is done for the `/build/consul` folder via the [standard backup service of CERN/IT](https://information-technology.web.cern.ch/services/Backup-Restore-Service).
 The service itself is setup via puppet as usual.
@@ -133,7 +133,7 @@ service dsmcad restart
 dsmc incremental
 ```
 
-## Creating an agent
+### Creating an agent
 
 Creation of mesos agents in CERN Foreman setup is described in the [Configuration Management User Guide](https://configdocs.web.cern.ch/nodes/create/index.html).
 The short recipe for a build machine is:
@@ -213,7 +213,7 @@ should:
 - execute e.g. `docker pull registry.cern.ch/alisw/slc9-builder` to
   force-pull the builder image.
 
-## Rebuilding a master
+### Rebuilding a master
 
 Rebuilding a master is a potentially disruptive operation, since our mesos setup requires at least 2
 masters to be up and running in order to schedule new jobs. Therefore before you actually decide to
@@ -246,7 +246,7 @@ It can take up to one hour for the process to complete.
   - ssh to it
   - run `puppet agent -t -v` until no errors are reported
 
-## Rebuilding an agent
+### Rebuilding an agent
 
 Rebuilding an agent is potentially a problem, since the Nomad agent might be doing something,
 e.g. building a release, which should not be in general interrupted. Therefore you need to:
@@ -284,7 +284,7 @@ In order to perform the rebuild you need to do:
   - run `puppet agent -t -v` until no errors are reported. If you keep having errors after a few
     runs, report them.
 
-## Deleting a build infrastructure VM
+### Deleting a build infrastructure VM
 
 Documentation to delete a VM is found in the [Configuration Management User Guide](http://configdocs.web.cern.ch/configdocs/nodes/deletenode.html).
 
@@ -303,7 +303,7 @@ The recipe for destoying agents is:
 - Delete the VM with `ai-kill <alibuildXX>`
 - Delete the previously attached volumes.
 
-## Rebooting a server
+### Rebooting a server
 
 In case there is an issue with any of the agents, a hard reboot can be
 attempted to bring it back to a working state. This can be done via the
@@ -323,7 +323,7 @@ OpenStack GUI, in the Instances tab, or doing:
 
 in case the GUI is not functional.
 
-## Master backups
+### Master backups
 
 Backup of the Consul server is done via CERN TSM.
 This needs to be renewed regularly and CERN IT will ping by email about it.

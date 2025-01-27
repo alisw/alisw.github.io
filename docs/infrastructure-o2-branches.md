@@ -4,7 +4,7 @@ layout: main
 categories: infrastructure
 ---
 
-# Stable branches for O2
+## Stable branches for O2
 
 The O2 software is developed continuously in the `dev` branch. Both the synchronous and the asynchronous processing have their own stable branches, `stable-sync` and `stable-async`, which follow the `dev` branch closely. The following procedure has been agreed upon for managing the two stable branches:
 
@@ -22,7 +22,7 @@ The O2 software is developed continuously in the `dev` branch. Both the synchron
 The procedure for cherry-picking and for merging is described below. The following branching scheme should give an overview:
 ![Overview](images/branching-scheme.png)
 
-## Cherry-picking of specific commits from `dev` into `stable-*`
+### Cherry-picking specific commits from `dev` into `stable-*`
 
 
 - We start with the branch `stable-sync` at commit `6d54961f81f6c129a28b655baa4101b0ecd41535`, tag `epn-20220812`.
@@ -75,7 +75,7 @@ The procedure for cherry-picking and for merging is described below. The followi
 
   ![After picking](images/branching-screenshot2.png)
 
-## Merging the changes from `dev` into `stable-*`
+### Merging the changes from `dev` into `stable-*`
 
 Next we want to bring `stable-sync` to the state of the current `dev`. For this we merge `upstream/dev` into the current branch `stable-sync`. (We could also merge the latest nightly-tag, if that nightly tag is what is running on the EPNs.)
 - We merge with the option `-X theirs` to make sure that in case of a conflict, we use the `dev` branch.

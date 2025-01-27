@@ -14,11 +14,11 @@ To ensure that results are always reproducable, the machine setup is enforced an
 * The user is the only active user on the underlying hardware eliminating system load that might have otherwise been caused by other users. 
 * The system state corresponds to the one described in the systems initial puppet manifest. This ensures that no processes or containers from previous users are still running on the hardware as well as a consistent software stack.
 
-# Installing the AliBI system
+## Installing the AliBI system
 
 The AliBI system relies on a CERN OpenStack VM for the _head node_ (`alibilogin01.cern.ch`) and a bare metal server as _compute node_ (`alibicompute01.cern.ch`). The software stack and machine state is formalized using puppet manifests and is fully integrated in the CERN configuration management ecosystem. The setup process is fully described below.
 
-## AliBI head node
+### AliBI head node
 
 * On `aiadm.cern.ch` enter the OpenStack _Release Testing_ environment by running
 
@@ -38,11 +38,11 @@ The AliBI system relies on a CERN OpenStack VM for the _head node_ (`alibilogin0
   openstack server set --property landb-alias=alibi alibilogin01
   ```
 
-## AliBI compute node
+### AliBI compute node
 
 The compute node is a physical machine outside the CERN datacenter, which makes provisioning a bit more complicated.
 
-### Registrations (only for first time set up)
+#### Registrations (only for first time set up)
 
 * Register the machine in CERN [LANDB](https://network.cern.ch)
 * Create an entry for the machine in [Foreman](https://judy.cern.ch/):
@@ -75,7 +75,7 @@ The compute node is a physical machine outside the CERN datacenter, which makes 
     * Enabled: `YES`
     * Hardware Model: `ProLiant DL380 Gen10`
 
-### Prepare installation
+#### Prepare installation
 
 * Based on the Foreman entry, a provisioning template in form of a _kickstart file_ is generated and is updated every time the configuration in Foreman is changed.
 * Since the compute node is outside of the CERN datacenter it does not have direct access to this file, so it needs to be downloaded and self hosted for the duration of the installation.
@@ -94,7 +94,7 @@ The compute node is a physical machine outside the CERN datacenter, which makes 
 
 * Set Foreman environment to `alibuild/alibi`.
 
-### Installation
+#### Installation
 
 * Get IPMI/ILO access to the physical server
 * Boot machine in network boot (PXE)
@@ -123,7 +123,7 @@ The compute node is a physical machine outside the CERN datacenter, which makes 
 * At this point you will notice that the `post installation` section of the installation has not been completed automatically. Since all commands are bash, it can be executed dully by copy& paste or extracted and executed as a separate script.
 * Afterwards the machine state should reflect the puppet manifests and can be fully monitored using the CERN Foreman infastruture.
 
-## Installation of packages via puppet
+### Installation of packages via puppet
 
 * Packages are installed via puppet. The configuration / manifests is taken from a special `alibi` branch on a central git repository 
   [PUPPET-HOSTGROUP](https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/alibi).
@@ -134,9 +134,9 @@ The compute node is a physical machine outside the CERN datacenter, which makes 
   puppet agent -t -v
   ```
 
-## Troubleshooting
+### Troubleshooting
 
-### Symptom: No allocations can be made, node stuck in "drain" state
+#### Symptom: No allocations can be made, node stuck in "drain" state
 
 In case `sinfo` shows:
 

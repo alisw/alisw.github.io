@@ -112,7 +112,7 @@ TBD
 
 ## FAQ
 
-### Which Local Directories Can I Use on The  Compute Node?
+### Which Local Directories Can I Use on The Compute Node?
 Fast, local directories are available under
 ```
 $L_HOME=/home/$USER
