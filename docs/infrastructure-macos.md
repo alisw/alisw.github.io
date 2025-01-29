@@ -39,16 +39,38 @@ On the Mac, go to System Settings -> Network and disable WiFi.
 Then, in the network settings, go to Ethernet -> Details -> DNS, and click "+" under "DNS Servers" to add the IPv4 addresses of alimesos01, alimesos02 and alimesos03 as DNS servers.
 Remove other DNS servers (including the automatic CERN central ones).
 
+You will have to register them in LanDB too, the network will redirect you to the right page automatically.
+
+### Set up the Mac's hostname
+
+Make sure the Mac knows itself by it's real hostname, as it can have issues
+with DNS resolution otherwise. You can do this by going to System Preferences
+-> General -> About, and changing the computer name to the short hostname of
+the Mac (e.g. `alibuildmac09`).
+
+### Enable SSH and VNC
+
+To start both the SSH and VNC servers, enable remote login in System Preferences -> General -> Sharing -> Remote Login, and Screen Sharing.
+
+Additionally, you may want to add the proper SSH keys to the `alibuild` user's `authorized_keys` file.
+
 ### Prevent the Mac from going to sleep
 
 By default, Macs will go into a low-power state after a while without interactive use, which interrupts the CI build process.
 To prevent this, change the following settings in System Settings:
 
-In Energy Saver, enable both "Start up automatically after a power failure" and "Wake for network access".
+In Energy, enable "Start up automatically after a power failure", "Wake for network access", and "Prevent computer from sleeping automatically when the display is off".
 
 In Lock Screen, set both "Start Screen Saver when inactive" and "Turn display off when inactive" to "Never".
 
-In Displays -> Advanced, enable "Prevent automatic sleeping when the display is off" (at the bottom of the page).
+### Disable crash reporting
+
+Some jobs are intended to crash, and we don't want the Mac to get stuck waiting for user input.
+
+```bash
+launchctl unload -w /System/Library/LaunchAgents/com.apple.ReportCrash.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
+```
 
 ### Software prerequisites
 
@@ -300,3 +322,6 @@ sudo mount -t hfs /dev/disk2s1 /Volumes/build
 sudo /Users/alibuild/restart-services.sh
 ```
 
+### Macs continuously running out of memory
+
+Make sure the Crash Reporter is disabled, as it can cause jobs like `o2-framework-crashing-workflow` to hang indefinitely.
