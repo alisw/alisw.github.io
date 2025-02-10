@@ -236,7 +236,7 @@ In order to perform the rebuild you need to do:
 - Actually rebuild the machine
 
   ```bash
-  ai-rebuild-vm --alma9 alimesosXX
+  ai-rebuild --alma9 alimesosXX
   ```
 
 It can take up to one hour for the process to complete.
@@ -275,7 +275,7 @@ In order to perform the rebuild you need to do:
 - Actually rebuild the machine
 
   ```bash
-  ai-rebuild-vm --alma9 alibuildXX
+  ai-rebuild --alma9 alibuildXX
   ```
       
 - In order to make sure that the machine is correctly up and running, you should:
