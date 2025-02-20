@@ -325,3 +325,14 @@ sudo /Users/alibuild/restart-services.sh
 ### Macs continuously running out of memory
 
 Make sure the Crash Reporter is disabled, as it can cause jobs like `o2-framework-crashing-workflow` to hang indefinitely.
+
+### Nomad cannot stream logs (Path escapes the alloc directory)
+
+Nomad has issues following symlinks in the data_dir, you can solve it by replacing it for the real path. 
+
+e.g in `nomad.hcl`:
+
+```diff
+- data_dir = "/opt/build/nomad"
++ data_dir = "/Volumes/build/nomad"
+```
