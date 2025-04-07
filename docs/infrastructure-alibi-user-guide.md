@@ -30,7 +30,7 @@ For the sake of reproducible results, a physical server (compute node) has been 
 Become member of e-group [alibi-users](https://e-groups.cern.ch/)
 
 ## Working with the AliBI service
-To avoid the interference of multiple users accessing the machine in parallel, users have to request exclusive access to the compute node by asking for an allocation via the [SLURM worload manager](https://slurm.schedmd.com/).
+To avoid the interference of multiple users accessing the machine in parallel, users have to request exclusive access to the compute node by asking for an allocation via the [SLURM workload manager](https://slurm.schedmd.com/).
 
 Allocations can be requested in two different work queues:
 * Short term interactive shell login directly on the compute node for at most 2h

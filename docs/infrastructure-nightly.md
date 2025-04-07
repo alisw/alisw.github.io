@@ -6,7 +6,7 @@ categories: infrastructure
 
 ## Integration builds
 
-So called integration (or nightly) builds are the pivotal part of a continuos
+So called integration (or nightly) builds are the pivotal part of a continuous
 integration system. They get triggered as often as possible using the tip of
 the branch of a repository and they usually include as many tests as possible which
 can help making sure that the branch is in the best possible state.

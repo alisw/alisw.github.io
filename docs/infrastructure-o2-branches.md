@@ -10,7 +10,7 @@ The O2 software is developed continuously in the `dev` branch. Both the synchron
 
 1. Both synchronous processing at P2 and the asynchronous processing on the grid might require quick fixes which should not rely on coordination between the two. For that reason there are two stable branches `stable-sync` and `stable-async`.
 2. No development shall go into these branches. All developments must go into `dev`. They will not be used to port fixes by user requests.
-3. When requested by RC or by experts for sync / async reconstruction, we can cherry-pick fixes / features from `dev` in one of the stable branches. We will not do extensive back-porting. If the patches do not apply cleanly or with only trivial merge conflicts, we do not cherry-pick but we will merge the full `dev` branch into the stable branche.
+3. When requested by RC or by experts for sync / async reconstruction, we can cherry-pick fixes / features from `dev` in one of the stable branches. We will not do extensive back-porting. If the patches do not apply cleanly or with only trivial merge conflicts, we do not cherry-pick but we will merge the full `dev` branch into the stable branch.
 4. We will regularly merge the full `dev` branch into the stable branches. For synchronous reconstruction usually synchronized with the large software updates. After merging, `stable-*` will be hard reset to the state of `dev`.
 5. The stable branches shall not split up further, i.e. we only either cherry-pick individual commits on top, or we merge the full `dev`.
 6. Nightly builds for `dev` are unaffected, we do not do nightly builds for the stable branch. Instead, tags of the stable branch are only built manually via jenkins when needed.
@@ -116,7 +116,7 @@ Next we want to bring `stable-sync` to the state of the current `dev`. For this 
   qon@qon ~/alice/O2 $
   ```
 
-- Now the `stable-sync` branch is exactly at the state of `upstream/dev`, and from here on we can cherry-pick further commits from `upstream/dev` that were commited after the merge.
+- Now the `stable-sync` branch is exactly at the state of `upstream/dev`, and from here on we can cherry-pick further commits from `upstream/dev` that were committed after the merge.
 
 - Please see the final state in the figure below. From the point we started branching of (`epn-20220812`) the `stable-sync` branch had 2 commits cherry-picked, and then it is merged with `upstream/dev`.
 
