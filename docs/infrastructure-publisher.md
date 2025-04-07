@@ -77,7 +77,7 @@ In order to publish Run 2 packages on another architecture on CVMFS, symlinks fo
 
 AliDPG is built on CentOS 8, but published to a special `noarch` architecture on CVMFS and AliEn.
 
-AliDPG is always loaded explicitly, as the last package in a list, like `AliPhysics/v5-09-59a-01-1,AliDPG/prod-202209-01-1`. Becase `alienv` loads all packages from the same architecture, the availability of the AliPhysics package determines where we look for the AliDPG package. As AliDPG just provides a shell script and some uncompiled ROOT macros, it doesn't matter which architecture it was built on, so we can share AliDPGs between all architectures by putting them in `noarch`.
+AliDPG is always loaded explicitly, as the last package in a list, like `AliPhysics/v5-09-59a-01-1,AliDPG/prod-202209-01-1`. Because `alienv` loads all packages from the same architecture, the availability of the AliPhysics package determines where we look for the AliDPG package. As AliDPG just provides a shell script and some uncompiled ROOT macros, it doesn't matter which architecture it was built on, so we can share AliDPGs between all architectures by putting them in `noarch`.
 
 To facilitate this, the following symlinks must be created (remember to wrap this in a CVMFS transaction):
 

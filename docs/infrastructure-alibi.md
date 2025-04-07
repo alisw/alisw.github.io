@@ -4,13 +4,13 @@ layout: main
 categories: infrastructure
 ---
 
-The main goal of AliBI is to provide a service for benchmarking CPU and GPU code in a consistent, reproducable environment. This allows monitoring of performance of the code base over time, especially for simulation and reconstruction tasks.
+The main goal of AliBI is to provide a service for benchmarking CPU and GPU code in a consistent, reproducible environment. This allows monitoring of performance of the code base over time, especially for simulation and reconstruction tasks.
 
 The system is conceived to run two types of jobs:
 * Nightly performance regression tests for simulation and reconstruction tasks
-* Interactive and batch access for registerd users during CERN extended working hours.
+* Interactive and batch access for registered users during CERN extended working hours.
 
-To ensure that results are always reproducable, the machine setup is enforced and controlled using Puppet and access to the compute resources is serialized using the SLURM cluster manager. This means that users do not login onto the nodes directly where the computation is being carried out. Instead, users log in into a _head node_ and ask for access to compute resources. If they can be granted, an interactive bash session on a _compute node_ is opened. In this session the following guarantees can be made:
+To ensure that results are always reproducible, the machine setup is enforced and controlled using Puppet and access to the compute resources is serialized using the SLURM cluster manager. This means that users do not login onto the nodes directly where the computation is being carried out. Instead, users log in into a _head node_ and ask for access to compute resources. If they can be granted, an interactive bash session on a _compute node_ is opened. In this session the following guarantees can be made:
 * The user is the only active user on the underlying hardware eliminating system load that might have otherwise been caused by other users. 
 * The system state corresponds to the one described in the systems initial puppet manifest. This ensures that no processes or containers from previous users are still running on the hardware as well as a consistent software stack.
 

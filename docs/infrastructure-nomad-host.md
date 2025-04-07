@@ -49,7 +49,7 @@ categories: infrastructure
 
 #### Allow Nomad clients access to secrets
 
-Secret subtitution happens on the nomad client that receives a job. It has a `nomad-server` token, with which it has to get a temporary `nomad` token (which it in turn uses to fetch secrets).
+Secret substitution happens on the nomad client that receives a job. It has a `nomad-server` token, with which it has to get a temporary `nomad` token (which it in turn uses to fetch secrets).
 
 ```bash
 vault write auth/token/roles/nomad-server allowed_policies='default, nomad, nomad-server' orphan=true

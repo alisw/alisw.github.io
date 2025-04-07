@@ -68,7 +68,7 @@ eval $(ai-rc "ALICE Release Testing - physical nodes")
 ```
 
 You can now execute the various OpenStack commands, using the CLI tool called `openstack`.
-While an exhaustive list of all the available options can be optained via `openstack help -h`, for the process of spawning new machines you probably only care about:
+While an exhaustive list of all the available options can be obtained via `openstack help -h`, for the process of spawning new machines you probably only care about:
 
 - `openstack server list`: list the machines in the project you specified on the `eval $(ai-rc ...)` line above
 - `openstack image list`: list of OS images you can use. The build nodes should use the latest "Alma 9" ones.
