@@ -47,7 +47,7 @@ docker build -t alisw/<image-name> <image-name>
 
 ## Conventions
 
-The CI uses an image named <arch>-builder where <arch> is the architecture of the
+The CI uses an image named `<arch>-builder` where `<arch>` is the architecture of the
 image. The CI system will automatically select the correct image for a given
 architecture, so the image name must match the format exactly.
 
