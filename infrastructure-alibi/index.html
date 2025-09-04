@@ -1,0 +1,1454 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../infrastructure-repository/">
+      
+      
+        <link rel="next" href="../infrastructure-auto-builds/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>ALICE Benchmarking Infrastrure (AliBI) - ALICE software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-the-alibi-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ALICE software" class="md-header__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ALICE software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ALICE Benchmarking Infrastrure (AliBI)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ALICE software" class="md-nav__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    ALICE software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process of AliRoot / AliPhysics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process-o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process O2PDPSuite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-o2-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    O2 stable branches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nightly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nightly builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-cvmfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CVMFS releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-pr-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing of Pull Requests (continuous integration)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Publishing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-relval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release and Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-rpms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generation of RPMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-known-tradeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known tradeoffs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-docker-packer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Docker images with Packer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Infrastructure details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Nomad, Consul and Vault
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomad cluster setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacOS builder setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual and physical machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alienvobox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliEn VoBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBuild S3 Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    AliBI
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-alibi-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the AliBI system
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the AliBI system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alibi-head-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      AliBI head node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alibi-compute-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      AliBI compute node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AliBI compute node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registrations-only-for-first-time-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registrations (only for first time set up)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-packages-via-puppet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation of packages via puppet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symptom-no-allocations-can-be-made-node-stuck-in-drain-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symptom: No allocations can be made, node stuck in "drain" state
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-alibi-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the AliBI system
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the AliBI system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alibi-head-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      AliBI head node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alibi-compute-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      AliBI compute node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AliBI compute node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registrations-only-for-first-time-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registrations (only for first time set up)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-packages-via-puppet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation of packages via puppet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symptom-no-allocations-can-be-made-node-stuck-in-drain-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symptom: No allocations can be made, node stuck in "drain" state
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>AliBI</h1>
+
+<p>The main goal of AliBI is to provide a service for benchmarking CPU and GPU code in a consistent, reproducible environment. This allows monitoring of performance of the code base over time, especially for simulation and reconstruction tasks.</p>
+<p>The system is conceived to run two types of jobs:
+* Nightly performance regression tests for simulation and reconstruction tasks
+* Interactive and batch access for registered users during CERN extended working hours.</p>
+<p>To ensure that results are always reproducible, the machine setup is enforced and controlled using Puppet and access to the compute resources is serialized using the SLURM cluster manager. This means that users do not login onto the nodes directly where the computation is being carried out. Instead, users log in into a <em>head node</em> and ask for access to compute resources. If they can be granted, an interactive bash session on a <em>compute node</em> is opened. In this session the following guarantees can be made:
+* The user is the only active user on the underlying hardware eliminating system load that might have otherwise been caused by other users. 
+* The system state corresponds to the one described in the systems initial puppet manifest. This ensures that no processes or containers from previous users are still running on the hardware as well as a consistent software stack.</p>
+<h2 id="installing-the-alibi-system">Installing the AliBI system<a class="headerlink" href="#installing-the-alibi-system" title="Permanent link">#</a></h2>
+<p>The AliBI system relies on a CERN OpenStack VM for the <em>head node</em> (<code>alibilogin01.cern.ch</code>) and a bare metal server as <em>compute node</em> (<code>alibicompute01.cern.ch</code>). The software stack and machine state is formalized using puppet manifests and is fully integrated in the CERN configuration management ecosystem. The setup process is fully described below.</p>
+<h3 id="alibi-head-node">AliBI head node<a class="headerlink" href="#alibi-head-node" title="Permanent link">#</a></h3>
+<ul>
+<li>On <code>aiadm.cern.ch</code> enter the OpenStack <em>Release Testing</em> environment by running</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ai-rc<span class="w"> </span><span class="s2">&quot;ALICE Release Testing&quot;</span><span class="k">)</span>
+</span></code></pre></div>
+<ul>
+<li>Spawn the head node by</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ai-bs<span class="w"> </span>-g<span class="w"> </span>alibuild/alibi/login<span class="w"> </span>--foreman-environment<span class="w"> </span>alibuild_alibi<span class="w"> </span>--cc7<span class="w"> </span>--nova-sshkey<span class="w"> </span>alibuild<span class="w"> </span>--nova-flavor<span class="w"> </span>m2.xlarge<span class="w"> </span>--landb-mainuser<span class="w"> </span>alice-agile-admin<span class="w"> </span>--landb-responsible<span class="w"> </span>alice-agile-admin<span class="w"> </span>alibilogin01
+</span></code></pre></div>
+<ul>
+<li>add alias to <code>alibi</code>:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>openstack<span class="w"> </span>server<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--property<span class="w"> </span>landb-alias<span class="o">=</span>alibi<span class="w"> </span>alibilogin01
+</span></code></pre></div>
+<h3 id="alibi-compute-node">AliBI compute node<a class="headerlink" href="#alibi-compute-node" title="Permanent link">#</a></h3>
+<p>The compute node is a physical machine outside the CERN datacenter, which makes provisioning a bit more complicated.</p>
+<h4 id="registrations-only-for-first-time-set-up">Registrations (only for first time set up)<a class="headerlink" href="#registrations-only-for-first-time-set-up" title="Permanent link">#</a></h4>
+<ul>
+<li>Register the machine in CERN <a href="https://network.cern.ch">LANDB</a></li>
+<li>Create an entry for the machine in <a href="https://judy.cern.ch/">Foreman</a>:</li>
+<li>In Foreman, select <code>Hosts&gt;New Host</code>. </li>
+<li>In <em>Host</em> enter:<ul>
+<li>Name: <code>alibicompute01</code></li>
+<li>Host Group: <code>alibuild/alibi/compute</code></li>
+<li>Environment: <code>production</code></li>
+<li>Rest is blank</li>
+</ul>
+</li>
+<li>Puppet classes: blank</li>
+<li>Interfaces: en1 - crosscheck with LANDB!<ul>
+<li>Type: <code>Interface</code></li>
+<li>Mac address: <code>08:f1:ea:f0:1f:3c</code></li>
+<li>Device identifier: <code>eno1</code></li>
+<li>DNS name: <code>alibicompute01</code></li>
+<li>Domain: <code>cern.ch</code></li>
+<li>Subnet: <code>CERN GPN 2 (188.184.0.0/15)</code></li>
+<li>IP address: <code>188.184.2.54</code></li>
+<li>Managed: <code>YES</code></li>
+<li>Primary: <code>YES</code></li>
+<li>Provision: <code>YES</code></li>
+</ul>
+</li>
+<li>Operating System:<ul>
+<li>Architecture: <code>x86_64</code></li>
+<li>Operating System: <code>CentOS 7.7</code></li>
+<li>Media: <code>CentOS mirror</code></li>
+<li>Root password required.</li>
+</ul>
+</li>
+<li>Parameters: no changes.</li>
+<li>Additional Information:<ul>
+<li>Owned by: <code>alice-agile-admin</code></li>
+<li>Enabled: <code>YES</code></li>
+<li>Hardware Model: <code>ProLiant DL380 Gen10</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="prepare-installation">Prepare installation<a class="headerlink" href="#prepare-installation" title="Permanent link">#</a></h4>
+<ul>
+<li>Based on the Foreman entry, a provisioning template in form of a <em>kickstart file</em> is generated and is updated every time the configuration in Foreman is changed.</li>
+<li>Since the compute node is outside of the CERN datacenter it does not have direct access to this file, so it needs to be downloaded and self hosted for the duration of the installation.</li>
+<li>Download kikstart file from <code>Templates&gt;provision Template&gt;Review</code></li>
+<li>Inside the file:<ul>
+<li>Set install to <code>graphical</code></li>
+<li>Remove content about:</li>
+<li>bootloader (mbr)</li>
+<li>partitioning</li>
+</ul>
+</li>
+<li>Host the file on a webserver. The simplest way is to use python2.7 <code>python -m SimpleHTTPServer</code> in the directory where your kickstart file is located.</li>
+<li>Stage certificate on <code>aiadm.cern.ch</code>:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>certmgr-stage<span class="w"> </span>--host<span class="w"> </span>alibicompute01.cern.ch
+</span></code></pre></div>
+<ul>
+<li>Set Foreman environment to <code>alibuild/alibi</code>.</li>
+</ul>
+<h4 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h4>
+<ul>
+<li>Get IPMI/ILO access to the physical server</li>
+<li>Boot machine in network boot (PXE)</li>
+<li>Select OS and press E to edit.</li>
+<li>Modify the <code>linuxefi ...</code> line by deleting everything that comes after <code>ip=dhcp</code>and append the location of your kickstart script such that it reads</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>linuxefi<span class="w"> </span><span class="o">(</span>http<span class="o">)</span>/aims/boot/&lt;YOUR_CC_VERSION_HERE&gt;/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span><span class="nv">ks</span><span class="o">=</span>http://&lt;PATH_TO_KICKSTART_FILE&gt;
+</span></code></pre></div>
+<ul>
+<li><code>CTRL+x</code> to start</li>
+<li>A graphical installer will start.<ul>
+<li>All options but the partitioning are already preset, but can be changed manually.</li>
+<li>Perform partitioning:</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Mountpoint</th>
+<th style="text-align: right;">Space (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/boot</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>/boot/efi</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr>
+<td>/</td>
+<td style="text-align: right;">500.0</td>
+</tr>
+<tr>
+<td>/docker</td>
+<td style="text-align: right;">1000.0</td>
+</tr>
+<tr>
+<td>/home</td>
+<td style="text-align: right;">7000.0</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td style="text-align: right;">14000.0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Start the installation and let it finish. The machine will restart automatically.</li>
+<li>At this point you will notice that the <code>post installation</code> section of the installation has not been completed automatically. Since all commands are bash, it can be executed dully by copy&amp; paste or extracted and executed as a separate script.</li>
+<li>Afterwards the machine state should reflect the puppet manifests and can be fully monitored using the CERN Foreman infastruture.</li>
+</ul>
+<h3 id="installation-of-packages-via-puppet">Installation of packages via puppet<a class="headerlink" href="#installation-of-packages-via-puppet" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>Packages are installed via puppet. The configuration / manifests is taken from a special <code>alibi</code> branch on a central git repository 
+  <a href="https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/alibi">PUPPET-HOSTGROUP</a>.</p>
+</li>
+<li>
+<p>Upon updating the manifests, changes can be immediately applied through (as root)</p>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>puppet<span class="w"> </span>agent<span class="w"> </span>-t<span class="w"> </span>-v
+</span></code></pre></div>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h3>
+<h4 id="symptom-no-allocations-can-be-made-node-stuck-in-drain-state">Symptom: No allocations can be made, node stuck in "drain" state<a class="headerlink" href="#symptom-no-allocations-can-be-made-node-stuck-in-drain-state" title="Permanent link">#</a></h4>
+<p>In case <code>sinfo</code> shows:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>PARTITION<span class="w"> </span>AVAIL<span class="w">  </span>TIMELIMIT<span class="w">  </span>NODES<span class="w">  </span>STATE<span class="w"> </span>NODELIST
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>compute*<span class="w">     </span>up<span class="w">   </span>infinite<span class="w">      </span><span class="m">1</span><span class="w">  </span>drain<span class="w"> </span>alibicompute01.cern.ch
+</span></code></pre></div>
+<p>We need to undrain the node. </p>
+<ul>
+<li>Make sure you understand why the node is stuck, if necessary restart the node. </li>
+<li>As admin, reset the node state by</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>scontrol<span class="w"> </span>update<span class="w"> </span><span class="nv">nodename</span><span class="o">=</span>alibicompute01.cern.ch<span class="w"> </span><span class="nv">state</span><span class="o">=</span>idle
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

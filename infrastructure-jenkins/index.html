@@ -1,0 +1,1355 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../infrastructure-frontend/">
+      
+      
+        <link rel="next" href="../infrastructure-repository/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Creating the Jenkins Master - ALICE software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#essential-operation-guides" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ALICE software" class="md-header__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ALICE software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating the Jenkins Master
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ALICE software" class="md-nav__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    ALICE software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process of AliRoot / AliPhysics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process-o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process O2PDPSuite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-o2-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    O2 stable branches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nightly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nightly builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-cvmfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CVMFS releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-pr-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing of Pull Requests (continuous integration)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Publishing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-relval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release and Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-rpms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generation of RPMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-known-tradeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known tradeoffs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-docker-packer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Docker images with Packer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Infrastructure details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Nomad, Consul and Vault
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomad cluster setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacOS builder setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual and physical machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alienvobox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliEn VoBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#essential-operation-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Operation Guides:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Essential Operation Guides:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-jenkins-master-only-in-case-of-disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the Jenkins master (only in case of disaster recovery!!!!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#killing-a-stuck-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Killing a stuck job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triggering-builds-programmatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggering builds programmatically
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-jenkins-agents-with-guaranteed-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Jenkins agents with guaranteed resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotchas-and-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotchas and issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBuild S3 Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#essential-operation-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Operation Guides:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Essential Operation Guides:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-jenkins-master-only-in-case-of-disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the Jenkins master (only in case of disaster recovery!!!!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#killing-a-stuck-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Killing a stuck job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triggering-builds-programmatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggering builds programmatically
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-jenkins-agents-with-guaranteed-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Jenkins agents with guaranteed resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotchas-and-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotchas and issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Jenkins</h1>
+
+<p>In order to drive the Continuous Integration process the ALICE build infrastructure uses Jenkins. </p>
+<p>The Jenkins master is started by Nomad, on a machine which belongs to the <code>alibuild/mesos/slave/jenkins</code> hostgroup in CERN puppet, while slaves are declared using <a href="../infrastructure-nomad/">Nomad</a> under <code>ci-jobs/jenkins-builder/</code>.
+The main advantage of this setup is that we can run slaves inside a Docker container, so that it can run e.g. CentOS 7 builds on Alma 9 hosts.</p>
+<p>Master nodes are configured through Puppet in the file:</p>
+<ul>
+<li><a href="https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/blob/master/code/manifests/mesos/slave/jenkins.pp">/code/manifests/alibuild/mesos/slave/jenkins.pp</a></li>
+</ul>
+<h2 id="essential-operation-guides">Essential Operation Guides:<a class="headerlink" href="#essential-operation-guides" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="#create-the-jenkins-master-only-in-case-of-disaster-recovery">Create the Jenkins</a></li>
+<li><a href="#starting-jenkins">Starting Jenkins</a></li>
+<li><a href="#killing-a-stuck-job">Killing a stuck job</a></li>
+<li><a href="#triggering-builds-programmatically">Triggering builds programmatically</a></li>
+<li><a href="#gotchas-and-issues">Gotchas and issues</a></li>
+</ul>
+<h3 id="create-the-jenkins-master-only-in-case-of-disaster-recovery">Create the Jenkins master (only in case of disaster recovery!!!!)<a class="headerlink" href="#create-the-jenkins-master-only-in-case-of-disaster-recovery" title="Permanent link">#</a></h3>
+<p>The jenkins master is created on top of the usual OpenStack / Foreman
+infrastructure at CERN. This is because we want to be able to run Jenkins even
+if every other bit of the build infrastructure fails.</p>
+<p>Creation of the jenkins masters in CERN Foreman setup is described at
+<a href="http://cern.ch/config/nodes/createnode.html">http://cern.ch/config/nodes/createnode.html</a>. The short recipe to create the machine,
+<strong>to do only in case of disaster</strong> is:</p>
+<ul>
+<li>Login to <code>aiadm.cern.ch</code>.</li>
+<li>Set up your OpenStack environment by doing:
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ai-rc<span class="w"> </span><span class="s2">&quot;ALICE Release Testing&quot;</span><span class="k">)</span>
+</span></code></pre></div></li>
+<li>To spawn a machine you need to use the <code>ai-bs</code> wrapper, which will take
+  care of provisioning the machine and putting it in Foreman, so that it will
+  receive from it the Puppet configuration:
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">MACHINE_NAME</span><span class="o">=</span>&lt;alijenkinsXX&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>ai-bs<span class="w"> </span>-g<span class="w"> </span>alibuild/mesos/slave/jenkins<span class="w">       </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span>--alma9<span class="w">                               </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span>--nova-sshkey<span class="w"> </span>alibuild<span class="w">                </span><span class="se">\</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span>--nova-flavor<span class="w"> </span>m2.large<span class="w">                </span><span class="se">\</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span>--landb-mainuser<span class="w"> </span>alice-agile-admin<span class="w">    </span><span class="se">\</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span>--landb-responsible<span class="w"> </span>alice-agile-admin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nv">$MACHINE_NAME</span>
+</span></code></pre></div></li>
+</ul>
+<h3 id="starting-jenkins">Starting Jenkins<a class="headerlink" href="#starting-jenkins" title="Permanent link">#</a></h3>
+<p>While the machine on which Jenkins is run is provisioned by OpenStack, the actual Jenkins instance is managed by Nomad.
+The instance can be started with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>ci-jobs
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>jenkins-master.nomad<span class="w">  </span><span class="c1"># sanity check</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>jenkins-master.nomad<span class="w">   </span><span class="c1"># actually deploy the job</span>
+</span></code></pre></div>
+<p>You can then look at the logs in the Nomad GUI.</p>
+<h3 id="killing-a-stuck-job">Killing a stuck job<a class="headerlink" href="#killing-a-stuck-job" title="Permanent link">#</a></h3>
+<p>Sometimes Jenkins jobs (especially pipelines) remain stuck in some weird state
+and refuse to be killed by the GUI. When this happens, the last resort is to do the following:</p>
+<ul>
+<li>Go to "Manage Jenkins"</li>
+<li>Go to "Script Console"</li>
+<li>
+<p>Adapt the following script to your needs:</p>
+<p>def jobId = XYZ
+  def jobName = "daily-builds/daily-aliphysics-test"
+  def job = Jenkins.instance.getItemByFullName(jobName)
+  def task = job.getBuildByNumber(jobId)
+  task.doKill()</p>
+</li>
+</ul>
+<h3 id="triggering-builds-programmatically">Triggering builds programmatically<a class="headerlink" href="#triggering-builds-programmatically" title="Permanent link">#</a></h3>
+<p>It's now possible to start new builds in a programmatic way. In order to do so you must
+have a valid kerberos token, and you must be able to execute the build from the web GUI.
+The step by step guide is:</p>
+<ul>
+<li>Get the token with <code>kinit</code>, use <code>klist</code> to verify you have one.</li>
+<li>
+<p>Given the name of the job in the GUI, <code>&lt;job&gt;</code>, you can trigger a build with:</p>
+<p>curl -k -X POST --negotiate -u : https://alijenkins.cern.ch/kerberos/job/<job>/build --data-urlencode json='{}'</p>
+</li>
+<li>
+<p>The parametrized job can be started with:</p>
+<p>curl -X POST -k --negotiate -u : https://alijenkins.cern.ch/kerberos/job/<job>/buildWithParameters -H 'Content-Type: application/x-www-form-urlencoded' -d '<parameters>'</p>
+</li>
+</ul>
+<p>The <code>&lt;parameters&gt;</code> are formatted as in a URL: <code>&lt;name&gt;=&lt;value&gt;&amp;&lt;name2&gt;=&lt;value2&gt;</code>.</p>
+<h3 id="creating-jenkins-agents-with-guaranteed-resources">Creating Jenkins agents with guaranteed resources<a class="headerlink" href="#creating-jenkins-agents-with-guaranteed-resources" title="Permanent link">#</a></h3>
+<p>This is the main way we deploy Jenkins builders.
+The advantage of fixed builders is that we are never in a situation where there is not enough space on the cluster by accident to run a Jenkins build.</p>
+<p>You can create dedicated Jenkins builders using Nomad.</p>
+<p><a href="../infrastructure-nomad/#complex-templated-job-declarations-eg-ci">Similar to the setup for CI builders</a>,
+Jenkins builders are defined as YAML files under <code>ci-jobs/jenkins-builder/</code>.</p>
+<p>They are normally configured using three keys:</p>
+<ul>
+<li><code>name</code>: a user-visible name, to keep builders apart. It's a good idea to mention the OS that the builder is running, e.g. <code>slc9-builder-1</code>.
+  Make this the same as the file name, sans the <code>.yaml</code> extension.</li>
+<li><code>docker_image</code>: the image to run the builder inside of.
+  Builds will run for this platform.
+  For example: <code>registry.cern.ch/alisw/slc9-builder:latest</code>.</li>
+<li><code>is_light</code>: a boolean; if true, enough resources are allocated to actually run a compilation.
+  "Light" builders are useful to have for non-compilation tasks; for instance, some Jenkins builds wait for approved PRs to be merged before starting the build; this only takes up a slot on a "light" builder to avoid wasting resources.</li>
+</ul>
+<p>Jenkins builders also need to be declared to Jenkins.
+To do this, go to <a href="https://alijenkins.cern.ch/computer">https://alijenkins.cern.ch/computer</a> &gt; "New Node" and create a new node.
+Assuming the architecture is <code>&lt;arch&gt;</code>, the node needs to be called (e.g. <code>&lt;arch&gt;-builder-&lt;X&gt;</code>) where <code>&lt;X&gt;</code> is incremental number.
+Valid <code>&lt;arch&gt;</code> values are e.g. <code>slc7</code>, <code>slc8</code>, <code>ubuntu2004</code>, etc. These mirror <code>aliBuild</code>'s idea of architectures.</p>
+<p>Click on the newly create agent and note down the associated secret.
+This needs to be stored in <a href="https://alivault.cern.ch/ui/vault/secrets/kv/kv/jenkins-builder/details">the <code>jenkins-builder</code> Vault secret</a>.
+Click "create a new version", then add a new key at the bottom, named <code>&lt;name&gt;_node_secret</code> (where <code>&lt;name&gt;</code> is the one you gave it in the YAML file earlier).
+For the value, paste in the secret hexadecimal token you copied from Jenkins earlier.
+Save the updated secret.</p>
+<p>Finally, you can create the new agent with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>ci-jobs/jenkins-builder/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>&lt;name&gt;.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>validate<span class="w"> </span>-<span class="w">  </span><span class="c1"># check syntax</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>&lt;name&gt;.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>-<span class="w">      </span><span class="c1"># make sure job can be scheduled</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>&lt;name&gt;.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>-<span class="w">       </span><span class="c1"># actually run job</span>
+</span></code></pre></div>
+<h3 id="gotchas-and-issues">Gotchas and issues:<a class="headerlink" href="#gotchas-and-issues" title="Permanent link">#</a></h3>
+<ul>
+<li>On some systems, the CERN CA is not available by default. You can overcome this by either:</li>
+<li>Go to <a href="https://ca.cern.ch">https://ca.cern.ch</a> and install all the required CA certificates. In general this is what is needed on macOS.</li>
+<li>
+<p>Installing the <code>CERN-CA-certs</code> package.</p>
+</li>
+<li>
+<p>On some systems, kerberos gives a token for the actual backend name, rather than <code>aliaurora</code>. You can check that by doing klist and you will see <code>HTTP/alibuild-frontend01.cern.ch@CERN.CH</code>:</p>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Credentials<span class="w"> </span>cache:<span class="w"> </span>API:B7FC3DD4-738F-417E-B2FA-92B2CCA9590C
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">        </span>Principal:<span class="w"> </span>eulisse@CERN.CH
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>Issued<span class="w">                </span>Expires<span class="w">               </span>Principal
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Aug<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:50:42<span class="w"> </span><span class="m">2019</span><span class="w">  </span>Aug<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">01</span>:50:42<span class="w"> </span><span class="m">2019</span><span class="w">  </span>krbtgt/CERN.CH@CERN.CH
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Aug<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:50:46<span class="w"> </span><span class="m">2019</span><span class="w">  </span>Aug<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">01</span>:50:42<span class="w"> </span><span class="m">2019</span><span class="w">  </span>HTTP/alibuild-frontend01.cern.ch@CERN.CH
+</span></code></pre></div>
+<p>In order to fix this you will have to change your kerberos configuration, usually found in <code>/etc/krb5.conf</code>, and add <code>rdns = false</code> in the <code>[libdefaults]</code> stanza.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

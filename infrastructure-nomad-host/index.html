@@ -1,0 +1,1325 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../infrastructure-nomad/">
+      
+      
+        <link rel="next" href="../infrastructure-macos/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Nomad cluster setup - ALICE software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cluster-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ALICE software" class="md-header__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ALICE software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nomad cluster setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ALICE software" class="md-nav__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    ALICE software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process of AliRoot / AliPhysics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process-o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process O2PDPSuite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-o2-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    O2 stable branches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nightly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nightly builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-cvmfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CVMFS releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-pr-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing of Pull Requests (continuous integration)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Publishing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-relval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release and Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-rpms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generation of RPMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-known-tradeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known tradeoffs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-docker-packer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Docker images with Packer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Infrastructure details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Nomad, Consul and Vault
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Nomad cluster setup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomad cluster setup
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cluster-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nomad-consul-and-vault-setup-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad, Consul and Vault setup notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nomad, Consul and Vault setup notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nomad-and-consul-setup-on-non-openstack-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad and Consul setup on non-Openstack machines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vault-settings-applied-to-our-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vault settings applied to our cluster
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vault settings applied to our cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-nomad-clients-access-to-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow Nomad clients access to secrets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-issuing-essentially-non-expiring-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow issuing essentially non-expiring tokens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leftover-consul-services-arent-deregistered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leftover Consul services aren't deregistered
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacOS builder setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual and physical machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alienvobox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliEn VoBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBuild S3 Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cluster-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nomad-consul-and-vault-setup-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad, Consul and Vault setup notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nomad, Consul and Vault setup notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nomad-and-consul-setup-on-non-openstack-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad and Consul setup on non-Openstack machines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vault-settings-applied-to-our-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vault settings applied to our cluster
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vault settings applied to our cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-nomad-clients-access-to-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow Nomad clients access to secrets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-issuing-essentially-non-expiring-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow issuing essentially non-expiring tokens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leftover-consul-services-arent-deregistered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leftover Consul services aren't deregistered
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Nomad cluster setup</h1>
+
+<h2 id="cluster-architecture">Cluster architecture<a class="headerlink" href="#cluster-architecture" title="Permanent link">#</a></h2>
+<!-- Note: run `dot -Tsvg -oimages/nomad-infra.svg images/nomad-infra.dot` to regenerate this plot. -->
+<p><a href="../images/nomad-infra.svg"><img alt="ALICE CI Infrastructure diagram" src="../images/nomad-infra.svg" /></a></p>
+<p><a href="../infrastructure-machines/">See here for an explanation of the underlying infrastructure.</a></p>
+<h2 id="nomad-consul-and-vault-setup-notes">Nomad, Consul and Vault setup notes<a class="headerlink" href="#nomad-consul-and-vault-setup-notes" title="Permanent link">#</a></h2>
+<h3 id="nomad-and-consul-setup-on-non-openstack-machines">Nomad and Consul setup on non-Openstack machines<a class="headerlink" href="#nomad-and-consul-setup-on-non-openstack-machines" title="Permanent link">#</a></h3>
+<ol>
+<li>Add Hashicorp apt repo to get modern consul/nomad packages (the Ubuntu-packaged ones are too old to work with our config):
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://apt.releases.hashicorp.com/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cat<span class="w"> </span><span class="s">&lt;&lt; EOF &gt; /etc/apt/sources.list.d/hashicorp.list</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s"># Added &lt;date&gt; by &lt;you&gt;.</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s"># Required for newer versions of nomad and consul -- Ubuntu repo versions are too old.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s">deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s">EOF</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>apt<span class="w"> </span>update
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>apt<span class="w"> </span>install<span class="w"> </span>nomad<span class="w"> </span>consul
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>systemctl<span class="w"> </span>stop<span class="w"> </span>nomad<span class="w"> </span>consul<span class="w">   </span><span class="c1"># for now</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>mkdir<span class="w"> </span>/build/consul<span class="w"> </span>/build/nomad
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>chown<span class="w"> </span>consul:consul<span class="w"> </span>/build/consul
+</span></code></pre></div></li>
+</ol>
+<p>Ignore any errors about packages not being able to create directories in <code>/opt</code>. Jalien stuff is mounted there, and consul/nomad would only create their default data directory there (which we don't use).
+2. Use <a href="https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/-/blob/master/code/templates/etc/consul.d/consul.hcl.erb"><code>consul.hcl</code></a> and <a href="https://gitlab.cern.ch/ai/it-puppet-hostgroup-alibuild/-/blob/master/code/templates/etc/nomad.d/nomad.hcl.erb"><code>nomad.hcl</code></a> from Puppet (use the links or get them from <code>/etc/nomad.d</code> / <code>/etc/consul.d</code> on a Puppet-managed host), but adapt by setting the correct IP address for <code>advertise_addr</code> and/or <code>bind_addr</code>, and substituting Teigi secrets manually.</p>
+<p>Also, change the location of Grid certificates if necessary, both for nomad's multiple <code>tls</code> settings and for nomad's <code>host_volumes</code>. Nomad itself runs as root, so no filesystem ACL adjustments should be necessary (but as before, the CI should be allowed access to them via the <code>mesos{ci,daq}</code> users).</p>
+<p>For <code>alissandra</code> machines, <a href="https://www.nomadproject.io/docs/configuration/client#reserved-parameters">reserve</a> half the resources so the CI system doesn't take up too much of the host.
+3. Add a <code>server=/consul/137.138.62.94</code> line to <code>/etc/dnsmasq.conf</code> and restart <code>dnsmasq.service</code>. This is required for Nomad to look up Vault hosts at <code>vault.service.consul</code>.
+4. Start the daemons:
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>nomad<span class="w"> </span>consul
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>journalctl<span class="w"> </span>-fu<span class="w"> </span>nomad<span class="w">   </span><span class="c1"># to watch logs</span>
+</span></code></pre></div></p>
+<p>An autogenerated nomad-client entry for the host should now appear in consul, and the new nomad client should appear in the nomad web UI.</p>
+<h3 id="vault-settings-applied-to-our-cluster">Vault settings applied to our cluster<a class="headerlink" href="#vault-settings-applied-to-our-cluster" title="Permanent link">#</a></h3>
+<h4 id="allow-nomad-clients-access-to-secrets">Allow Nomad clients access to secrets<a class="headerlink" href="#allow-nomad-clients-access-to-secrets" title="Permanent link">#</a></h4>
+<p>Secret substitution happens on the nomad client that receives a job. It has a <code>nomad-server</code> token, with which it has to get a temporary <code>nomad</code> token (which it in turn uses to fetch secrets).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vault<span class="w"> </span>write<span class="w"> </span>auth/token/roles/nomad-server<span class="w"> </span><span class="nv">allowed_policies</span><span class="o">=</span><span class="s1">&#39;default, nomad, nomad-server&#39;</span><span class="w"> </span><span class="nv">orphan</span><span class="o">=</span><span class="nb">true</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>vault<span class="w"> </span>write<span class="w"> </span>auth/token/roles/nomad<span class="w"> </span><span class="nv">allowed_policies</span><span class="o">=</span><span class="s1">&#39;default, nomad&#39;</span><span class="w"> </span><span class="nv">orphan</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">token_period</span><span class="o">=</span>1d
+</span></code></pre></div>
+<h4 id="allow-issuing-essentially-non-expiring-tokens">Allow issuing essentially non-expiring tokens<a class="headerlink" href="#allow-issuing-essentially-non-expiring-tokens" title="Permanent link">#</a></h4>
+<p>By default, tokens expire after a month, which means the nomad cluster breaks and tokens have to be manually updated.</p>
+<p>Change the default max expiry time to 100 years instead.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>vault<span class="w"> </span>write<span class="w"> </span>sys/auth/token/tune<span class="w"> </span><span class="nv">default_lease_ttl</span><span class="o">=</span>3155760000s<span class="w"> </span><span class="nv">max_lease_ttl</span><span class="o">=</span>3155760000s
+</span></code></pre></div>
+<p>Tokens can still be revoked manually using any one of the following commands:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vault<span class="w"> </span>token<span class="w"> </span>revoke<span class="w"> </span><span class="s1">&#39;&lt;secret token here&gt;&#39;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># Or alternatively:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>vault<span class="w"> </span>token<span class="w"> </span>revoke<span class="w"> </span>-accessor<span class="w"> </span><span class="s1">&#39;&lt;token accessor here&gt;&#39;</span>
+</span></code></pre></div>
+<p>This will revoke any child tokens of the given token as well, unless the <code>-mode=orphan</code> option is given.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
+<h3 id="leftover-consul-services-arent-deregistered">Leftover Consul services aren't deregistered<a class="headerlink" href="#leftover-consul-services-arent-deregistered" title="Permanent link">#</a></h3>
+<p>Sometimes, Consul can get into a state where services were registered but never deregistered.
+In particular, this happens when a host changes its public IP address -- in that case, the old service remains registered because a Consul agent with the same <em>host name</em> is still available, even though the service's public IP address is wrong.</p>
+<p>If this happens, deregister the service with the wrong IP manually by running the following:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh<span class="w"> </span>host-with-changed-ip.cern.ch<span class="w"> </span><span class="s2">&quot;CONSUL_HTTP_TOKEN=</span><span class="k">$(</span>pass<span class="w"> </span>.../consul-token<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>consul<span class="w"> </span>services<span class="w"> </span>deregister<span class="w"> </span>-id<span class="w"> </span>offending-service-id
+</span></code></pre></div>
+...where the <code>pass</code> command prints out your Consul token, <code>host-with-changed-ip</code> is the affected hostname, and <code>offending-service-id</code> is the ID of the old service with the wrong IP, e.g. <code>_nomad-client-xd2yun6h34z5nni56pdncbqb6b3mjfcf</code>.</p>
+<p>It is critical that the <code>consul services deregister</code> command runs on the host that originally registered the service.
+If you run the plain <code>consul</code> command locally, e.g. against one of the Consul master nodes, it will fail with a "service not found" error, even if the ID is correct.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

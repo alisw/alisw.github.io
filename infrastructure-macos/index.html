@@ -1,0 +1,1749 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../infrastructure-nomad-host/">
+      
+      
+        <link rel="next" href="../infrastructure-machines/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>CI builders on macOS - ALICE software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation-and-initial-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ALICE software" class="md-header__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ALICE software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CI builders on macOS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ALICE software" class="md-nav__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    ALICE software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process of AliRoot / AliPhysics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process-o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process O2PDPSuite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-o2-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    O2 stable branches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nightly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nightly builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-cvmfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CVMFS releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-pr-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing of Pull Requests (continuous integration)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Publishing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-relval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release and Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-rpms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generation of RPMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-known-tradeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known tradeoffs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-docker-packer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Docker images with Packer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Infrastructure details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Nomad, Consul and Vault
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomad cluster setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    MacOS builder setup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacOS builder setup
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation and initial setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation and initial setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up-firewall-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up firewall exceptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-the-macs-network-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up the Mac's network connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-the-macs-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up the Mac's hostname
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-ssh-and-vnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable SSH and VNC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-the-mac-from-going-to-sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevent the Mac from going to sleep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-crash-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable crash reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-build-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a build volume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-work-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the work environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-grid-ca-certificates-from-another-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy Grid CA certificates from another host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-grid-host-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get a Grid host certificate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask-for-alien-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ask for AliEn access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-nomad-and-consul" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Nomad and Consul
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-ci-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a CI checker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a CI checker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-nomad-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Nomad job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-individual-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring individual checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-macos-post-mortes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notable macOS post-mortes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nomad-service-doesnt-start-after-reboot-job-allocation-stuck-in-pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad service doesn't start after reboot / Job allocation stuck in pending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macs-continuously-running-out-of-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macs continuously running out of memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomad-cannot-stream-logs-path-escapes-the-alloc-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad cannot stream logs (Path escapes the alloc directory)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual and physical machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alienvobox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliEn VoBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBuild S3 Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation and initial setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation and initial setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up-firewall-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up firewall exceptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-the-macs-network-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up the Mac's network connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-the-macs-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up the Mac's hostname
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-ssh-and-vnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable SSH and VNC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-the-mac-from-going-to-sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevent the Mac from going to sleep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-crash-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable crash reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-build-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a build volume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-work-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the work environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-grid-ca-certificates-from-another-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy Grid CA certificates from another host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-grid-host-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get a Grid host certificate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask-for-alien-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ask for AliEn access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-nomad-and-consul" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Nomad and Consul
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-ci-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a CI checker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a CI checker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-nomad-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Nomad job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-individual-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring individual checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-macos-post-mortes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notable macOS post-mortes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nomad-service-doesnt-start-after-reboot-job-allocation-stuck-in-pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad service doesn't start after reboot / Job allocation stuck in pending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macs-continuously-running-out-of-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macs continuously running out of memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomad-cannot-stream-logs-path-escapes-the-alloc-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad cannot stream logs (Path escapes the alloc directory)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>MacOS builder setup</h1>
+
+<p>The macOS build infrastructure works the same way as its Linux counterpart -- it uses Nomad.</p>
+<p>This guide covers:</p>
+<ul>
+<li><a href="#installation-and-initial-setup">Installation and initial setup of the machine</a></li>
+<li><a href="#adding-a-ci-checker">Adding a CI checker</a></li>
+</ul>
+<h2 id="installation-and-initial-setup">Installation and initial setup<a class="headerlink" href="#installation-and-initial-setup" title="Permanent link">#</a></h2>
+<p>These are the instructions for macOS Ventura.</p>
+<ul>
+<li>During setup, create a user account for the <code>alibuild</code> user, do not sign in to iCloud.</li>
+<li>Sign into the App Store as <code>ali.bot@cern.ch</code>.</li>
+</ul>
+<p>Some commands below should be run on your local machine.
+These may refer to the new Mac's hostname, so set a variable for this now, or substitute <code>$newhost</code> manually in the commands below.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">newhost</span><span class="o">=</span><span class="s1">&#39;&lt;short hostname of the new Mac, e.g. alibuildmac09&gt;&#39;</span>
+</span></code></pre></div></p>
+<h3 id="set-up-firewall-exceptions">Set up firewall exceptions<a class="headerlink" href="#set-up-firewall-exceptions" title="Permanent link">#</a></h3>
+<p>Add the new Mac's hostname to the list of non-Puppetized CI hosts in Puppet.
+You have to do this in two places, once each in the header of:</p>
+<ul>
+<li><code>it-puppet-hostgroup-alibuild/code/manifests/mesos/master.pp</code></li>
+<li><code>it-puppet-hostgroup-alibuild/code/manifests/mesos/slave.pp</code></li>
+</ul>
+<h3 id="set-up-the-macs-network-connection">Set up the Mac's network connection<a class="headerlink" href="#set-up-the-macs-network-connection" title="Permanent link">#</a></h3>
+<p>On the Mac, go to System Settings -&gt; Network and disable WiFi.</p>
+<p>Then, in the network settings, go to Ethernet -&gt; Details -&gt; DNS, and click "+" under "DNS Servers" to add the IPv4 addresses of alimesos01, alimesos02 and alimesos03 as DNS servers.
+Remove other DNS servers (including the automatic CERN central ones).</p>
+<p>You will have to register them in LanDB too, the network will redirect you to the right page automatically.</p>
+<h3 id="set-up-the-macs-hostname">Set up the Mac's hostname<a class="headerlink" href="#set-up-the-macs-hostname" title="Permanent link">#</a></h3>
+<p>Make sure the Mac knows itself by it's real hostname, as it can have issues
+with DNS resolution otherwise. You can do this by going to System Preferences
+-&gt; General -&gt; About, and changing the computer name to the short hostname of
+the Mac (e.g. <code>alibuildmac09</code>).</p>
+<h3 id="enable-ssh-and-vnc">Enable SSH and VNC<a class="headerlink" href="#enable-ssh-and-vnc" title="Permanent link">#</a></h3>
+<p>To start both the SSH and VNC servers, enable remote login in System Preferences -&gt; General -&gt; Sharing -&gt; Remote Login, and Screen Sharing.</p>
+<p>Additionally, you may want to add the proper SSH keys to the <code>alibuild</code> user's <code>authorized_keys</code> file.</p>
+<h3 id="prevent-the-mac-from-going-to-sleep">Prevent the Mac from going to sleep<a class="headerlink" href="#prevent-the-mac-from-going-to-sleep" title="Permanent link">#</a></h3>
+<p>By default, Macs will go into a low-power state after a while without interactive use, which interrupts the CI build process.
+To prevent this, change the following settings in System Settings:</p>
+<p>In Energy, enable "Start up automatically after a power failure", "Wake for network access", and "Prevent computer from sleeping automatically when the display is off".</p>
+<p>In Lock Screen, set both "Start Screen Saver when inactive" and "Turn display off when inactive" to "Never".</p>
+<h3 id="disable-crash-reporting">Disable crash reporting<a class="headerlink" href="#disable-crash-reporting" title="Permanent link">#</a></h3>
+<p>Some jobs are intended to crash, and we don't want the Mac to get stuck waiting for user input.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>launchctl<span class="w"> </span>unload<span class="w"> </span>-w<span class="w"> </span>/System/Library/LaunchAgents/com.apple.ReportCrash.plist
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>launchctl<span class="w"> </span>unload<span class="w"> </span>-w<span class="w"> </span>/System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
+</span></code></pre></div>
+<h3 id="software-prerequisites">Software prerequisites<a class="headerlink" href="#software-prerequisites" title="Permanent link">#</a></h3>
+<ul>
+<li>Install the right version of XCode, either from the App Store or from <a href="https://xcodereleases.com/">xcodereleases.com</a>.
+  Usually this should be the latest one from the App Store, but occasionally we don't support the latest one yet.
+  In that case, use the latest supported one.</li>
+<li>Open XCode in order to install the command line tools and accept the license, or run:
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>xcode-select<span class="w"> </span>--install
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>xcodebuild<span class="w"> </span>-license
+</span></code></pre></div></li>
+<li>Install Homebrew using the <a href="https://brew.sh/">instructions on their webpage</a>:
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zprofile
+</span></code></pre></div>
+  ...and reload the session or <code>source ~/.zprofile</code>.</li>
+<li>Check if everything is OK via:
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>brew<span class="w"> </span>doctor
+</span></code></pre></div></li>
+<li>Install the software prerequisites:
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>brew<span class="w"> </span>install<span class="w"> </span>alisw/system-deps/alice-build-machine
+</span></code></pre></div></li>
+</ul>
+<h3 id="create-a-build-volume">Create a build volume<a class="headerlink" href="#create-a-build-volume" title="Permanent link">#</a></h3>
+<p>Open "Disk Utility".
+Select "Macintosh HD", then in the window title bar, press "+" above "Volume".
+Call the new volume <code>build</code> with format "APFS".</p>
+<h3 id="create-the-work-environment">Create the work environment<a class="headerlink" href="#create-the-work-environment" title="Permanent link">#</a></h3>
+<p>With recent MacOS versions, <code>/</code> is not writable.
+We install under <code>/opt/build</code> instead:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>../Volumes/build<span class="w"> </span>/opt/build
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/opt/build/alice-ci-workdir
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sudo<span class="w"> </span>chown<span class="w"> </span>alibuild:staff<span class="w"> </span>/opt/build/alice-ci-workdir
+</span></code></pre></div></p>
+<p>Afterwards exclude the <code>/opt/build</code> directory from Spotlight in the system preferences.
+In System Preferences, go to Siri &amp; Spotlight -&gt; Spotlight Privacy (at the bottom of the page).
+In the "Privacy" tab, hit the "+" button.
+Now select the <code>build</code> volume and confirm.</p>
+<h3 id="copy-grid-ca-certificates-from-another-host">Copy Grid CA certificates from another host<a class="headerlink" href="#copy-grid-ca-certificates-from-another-host" title="Permanent link">#</a></h3>
+<p>O2 unit tests need this to connect to services like the test CCDB instance.</p>
+<p>On your local computer, run:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh<span class="w"> </span>alibuildmac00.cern.ch<span class="w"> </span>tar<span class="w"> </span>-cz<span class="w"> </span>/etc/grid-security/certificates<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$newhost</span><span class="s2">&quot;</span><span class="w"> </span><span class="s1">&#39;cat &gt; certs.tar.gz&#39;</span>
+</span></code></pre></div></p>
+<p>Then, on the Mac being set up, run:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/grid-security/certificates
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>tar<span class="w"> </span>-xzf<span class="w"> </span>~/certs.tar.gz<span class="w"> </span>--strip-components<span class="o">=</span><span class="m">3</span><span class="w"> </span>-C<span class="w"> </span>/etc/grid-security/certificates
+</span></code></pre></div></p>
+<h3 id="get-a-grid-host-certificate">Get a Grid host certificate<a class="headerlink" href="#get-a-grid-host-certificate" title="Permanent link">#</a></h3>
+<p>O2 unit tests need this to connect to services like the test CCDB instance.</p>
+<p>At <a href="https://ca.cern.ch/ca/">https://ca.cern.ch/ca/</a>, request a new Grid host certificate for the machine.
+Make sure that reminders about expiring certs go to the responsible group, not just you.
+In order to do this, you must be listed as the "responsible" or "main user" of the machine in LanDB.</p>
+<p>Create the certificate request using the system OpenSSL. On your local machine, set up the environment:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">TARGET_MACHINE</span><span class="o">=</span>alibuildmacXX
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">REMOTE_WORK_DIR</span><span class="o">=</span>/Users/alibuild/renew-certificate
+</span></code></pre></div>
+<p>Open the page where you can paste the certificate request: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>open https://ca.cern.ch/ca/host/Submit.aspx?template=ee2host&amp;instructions=openssl&amp;subject=$TARGET_MACHINE.cern.ch
+</span></code></pre></div>
+<p>Get in your clipboard the certificate request:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>rm<span class="w"> </span>-fr<span class="w"> </span><span class="nv">$HOME</span>/Downloads/host.cert
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span><span class="w"> </span>cp<span class="w"> </span>/System/Library/OpenSSL/openssl.cnf<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>/openssl.cnf
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>cat<span class="w"> </span><span class="s">&lt;&lt;EOF | ssh $TARGET_MACHINE &quot;cat &gt;&gt;$REMOTE_WORK_DIR/openssl.cnf&quot;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s">[req]</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="s">req_extensions = v3_req</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="s">[ v3_req ]</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="s">basicConstraints = CA:FALSE</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="s">keyUsage = nonRepudiation, digitalSignature, keyEncipherment</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="s">subjectAltName = @alt_names</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="s">[alt_names]</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="s">DNS.1 = $TARGET_MACHINE.cern.ch</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="s">EOF</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span><span class="w"> </span>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-subj<span class="w"> </span><span class="s2">&quot;/CN=</span><span class="nv">$TARGET_MACHINE</span><span class="s2">.cern.ch&quot;</span><span class="w"> </span>-out<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>/newcsr.csr<span class="w"> </span>-keyout<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>/privkey.pem<span class="w"> </span>-nodes<span class="w"> </span>-sha512<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-config<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>/openssl.cnf
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span><span class="w"> </span>cat<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>/newcsr.csr<span class="w"> </span><span class="p">|</span><span class="w"> </span>pbcopy
+</span></code></pre></div>
+<p>Then paste it to generate the certificates. Download the base 64 certificate and copy it to the target machine with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">NEW_CERT</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads/host.cert
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>scp<span class="w"> </span><span class="nv">$NEW_CERT</span><span class="w"> </span><span class="nv">$TARGET_MACHINE</span>:<span class="nv">$REMOTE_WORK_DIR</span>/host.cert
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># FIXME: linux users feel free to provide a PR using &quot;pass&quot;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>security<span class="w"> </span>find-generic-password<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;alibuild&#39;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$TARGET_MACHINE</span><span class="s2">&quot;</span><span class="w"> </span>-w<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span><span class="w"> </span>sudo<span class="w"> </span>-S<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">0600</span><span class="w"> </span>-o<span class="w"> </span>alibuild<span class="w"> </span>-g<span class="w"> </span>staff<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>/host.cert<span class="w"> </span>/etc/grid-security/hostcert.pem
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>security<span class="w"> </span>find-generic-password<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;alibuild&#39;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$TARGET_MACHINE</span><span class="s2">&quot;</span><span class="w"> </span>-w<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span><span class="w"> </span>sudo<span class="w"> </span>-S<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">0600</span><span class="w"> </span>-o<span class="w"> </span>alibuild<span class="w"> </span>-g<span class="w"> </span>staff<span class="w"> </span><span class="nv">$REMOTE_WORK_DIR</span>/privkey.pem<span class="w"> </span>/etc/grid-security/hostkey.pem
+</span></code></pre></div>
+<p>Test that everything works correctly with (might need some adjustments to the path). On the <code>$TARGET_MACHINE</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1"># Adapt to find a valid xjalienfs</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">WORK_DIR</span><span class="o">=</span>/Volumes/build/alice-ci-workdir/o2/sw
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nb">source</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WORK_DIR</span><span class="s2">/osx*/xjalienfs/latest/etc/profile.d/init.sh&quot;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nv">X509_USER_CERT</span><span class="o">=</span>/etc/grid-security/hostcert.pem<span class="w"> </span><span class="nv">X509_USER_KEY</span><span class="o">=</span>/etc/grid-security/hostkey.pem<span class="w"> </span>alien-token-init
+</span></code></pre></div>
+<p>Nomad does not apparently handle the change of certificate gracefully as of 1.6.2, so you need to restart it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>security find-generic-password -a &#39;alibuild&#39; -s &quot;$TARGET_MACHINE&quot; -w | ssh $TARGET_MACHINE sudo -S brew service stop nomad
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>security find-generic-password -a &#39;alibuild&#39; -s &quot;$TARGET_MACHINE&quot; -w | ssh $TARGET_MACHINE sudo -S sudo brew services start nomad --file=$HOME/homebrew.mxcl.nomad.plist
+</span></code></pre></div>
+<p>Finally clean-up the temporary area with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># We keep it explicit to avoid having REMOTE_WORK_DIR empty or pointing to some wrong place.</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1"># Check this is actually what you want to do!</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>ssh<span class="w"> </span><span class="nv">$TARGET_MACHINE</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/Users/alibuild/renew-certificate
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>rm<span class="w"> </span>-fr<span class="w"> </span><span class="nv">$HOME</span>/Downloads/host.cert
+</span></code></pre></div>
+<h3 id="ask-for-alien-access">Ask for AliEn access<a class="headerlink" href="#ask-for-alien-access" title="Permanent link">#</a></h3>
+<p>Ask Costin or Max to add the DN of the certificate you just installed to the list of allowed certs for the <code>alienci</code> user.
+You can get the certificate's DN using:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>/etc/grid-security/hostcert.pem<span class="w"> </span>-noout<span class="w"> </span>-text<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Subject:
+</span></code></pre></div></p>
+<h3 id="set-up-nomad-and-consul">Set up Nomad and Consul<a class="headerlink" href="#set-up-nomad-and-consul" title="Permanent link">#</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>brew<span class="w"> </span>--prefix<span class="k">)</span><span class="s2">/etc&quot;</span>/<span class="o">{</span>nomad,consul<span class="o">}</span>.d
+</span></code></pre></div>
+<p>Then, copy <code>nomad.hcl</code> and <code>consul.hcl</code> into these directories from another CI Mac.
+Fix the permissions, since the files contain secrets:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>root:admin<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>brew<span class="w"> </span>--prefix<span class="k">)</span><span class="s2">/etc&quot;</span>/<span class="o">{</span>nomad,consul<span class="o">}</span>.d/*.hcl
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>brew<span class="w"> </span>--prefix<span class="k">)</span><span class="s2">/etc&quot;</span>/<span class="o">{</span>nomad,consul<span class="o">}</span>.d/*.hcl
+</span></code></pre></div></p>
+<p>Now adapt the files to the local host:</p>
+<ul>
+<li>In <code>consul.hcl</code>, change <code>advertise_addr</code> to the host's external IP address.</li>
+<li>In <code>nomad.hcl</code>, change <code>bind_addr</code> to the host's external IP address.</li>
+<li>In <code>nomad.hcl</code>, change <code>cpu_total_compute</code>, since Nomad doesn't know how to compute this itself for M1/M2 machines.
+  To compute the right number, run <code>sudo powermetrics -s cpu_power -n 1</code> and add up the maximum frequency (in MHz) for each listed CPU.</li>
+</ul>
+<p>You also need to set up custom launchd services for Nomad and Consul, since the ones packaged by Homebrew are not suitable for production use.
+On your local machine, run the following to copy the files into place:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>scp<span class="w"> </span>-3<span class="w"> </span>alibuildmac00.cern.ch:<span class="o">{</span>homebrew.mxcl.<span class="o">{</span>nomad,consul<span class="o">}</span>.plist,restart-services.sh<span class="o">}</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$newhost</span><span class="s2">:.&quot;</span>
+</span></code></pre></div></p>
+<p>Start the services by running the following command on the Mac:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>sudo<span class="w"> </span>~/restart-services.sh
+</span></code></pre></div></p>
+<p>Finally, make sure that Nomad's work directory is readable by all users.
+This is necessary to run CI jobs as the <code>alibuild</code> user, since it cannot find the script otherwise:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>go+rx<span class="w"> </span>/opt/build/nomad
+</span></code></pre></div></p>
+<p>The host should appear in <a href="https://alinomad.cern.ch/ui/clients">the list of Nomad clients</a>.
+If it does not, check the log, e.g. using <code>less -RSM "$(brew --prefix)/var/log/nomad.log"</code>.
+If Nomad complains about not being able to connect to the master nodes at <code>alimesosNN.cern.ch</code>, update their firewall rules using:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>pdsh<span class="w"> </span>-w<span class="w"> </span><span class="s1">&#39;alimesos[01-03].cern.ch&#39;</span><span class="w"> </span>puppet<span class="w"> </span>agent<span class="w"> </span>-tv
+</span></code></pre></div></p>
+<h2 id="adding-a-ci-checker">Adding a CI checker<a class="headerlink" href="#adding-a-ci-checker" title="Permanent link">#</a></h2>
+<h3 id="adding-a-nomad-job">Adding a Nomad job<a class="headerlink" href="#adding-a-nomad-job" title="Permanent link">#</a></h3>
+<p>The Macs are configured on a host-by-host basis, unlike the Linux checkers, so that we can more tightly control what checks run where.
+This saves precious disks space, since many Macs lack this resource compared to the Linux machines.</p>
+<p>In the private <code>ci-jobs</code> repository, configure a new CI job variation by creating a file called <code>ci-jobs/ci/$newhost.yaml</code> with the following content (substituting the parts in <code>&lt;&gt;</code>):
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nn">---</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">macos</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nt">arch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;new hostname&gt;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nt">config_suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nt">num_builders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="c1"># Specify the total resources available on the host, so that we can reserve the</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1"># entire thing. This makes nomad&#39;s statistics more accurate.</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="nt">resources</span><span class="p">:</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">  </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;the number you configured earlier as cpu_total_compute&gt;</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">  </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;total MB of memory available on the host&gt;</span>
+</span></code></pre></div></p>
+<p>Once that's done, actually run the CI job on the new host:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">cd</span><span class="w"> </span>ci-jobs/ci
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$newhost</span><span class="s2">.yaml&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>-
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="c1"># If the above succeeds, then:</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$newhost</span><span class="s2">.yaml&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>-
+</span></code></pre></div>
+<h3 id="configuring-individual-checks">Configuring individual checks<a class="headerlink" href="#configuring-individual-checks" title="Permanent link">#</a></h3>
+<p>Mac CI checkers are configured like their Linux equivalents, using <code>.env</code> files under <code>ali-bot/ci/repo-config/</code>.
+The Macs specifically are listed under <a href="https://github.com/alisw/ali-bot/tree/master/ci/repo-config/macos"><code>ali-bot/ci/repo-config/macos/</code></a>.</p>
+<p>Each host has a directory there named after its short hostname; it will run checks for the <code>.env</code> files inside its directory.</p>
+<p>If checks are not picked up, make sure the hostname matches what the Mac thinks it is.
+If in doubt, run <code>hostname -s</code> to check.</p>
+<h2 id="notable-macos-post-mortes">Notable macOS post-mortes<a class="headerlink" href="#notable-macos-post-mortes" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://its.cern.ch/jira/browse/O2-4950">Issues after a powercut</a></li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
+<h3 id="nomad-service-doesnt-start-after-reboot-job-allocation-stuck-in-pending">Nomad service doesn't start after reboot / Job allocation stuck in pending<a class="headerlink" href="#nomad-service-doesnt-start-after-reboot-job-allocation-stuck-in-pending" title="Permanent link">#</a></h3>
+<p>Some machines aren't able to remount the disks properly after a reboot. You can usually fix this issue with the following commands:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo mkdir /Volumes/build
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>diskutil list # find the right disk for the next command
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>sudo mount -t hfs /dev/disk2s1 /Volumes/build
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>sudo /Users/alibuild/restart-services.sh
+</span></code></pre></div>
+<h3 id="macs-continuously-running-out-of-memory">Macs continuously running out of memory<a class="headerlink" href="#macs-continuously-running-out-of-memory" title="Permanent link">#</a></h3>
+<p>Make sure the Crash Reporter is disabled, as it can cause jobs like <code>o2-framework-crashing-workflow</code> to hang indefinitely.</p>
+<h3 id="nomad-cannot-stream-logs-path-escapes-the-alloc-directory">Nomad cannot stream logs (Path escapes the alloc directory)<a class="headerlink" href="#nomad-cannot-stream-logs-path-escapes-the-alloc-directory" title="Permanent link">#</a></h3>
+<p>Nomad has issues following symlinks in the data_dir, you can solve it by replacing it for the real path. </p>
+<p>e.g in <code>nomad.hcl</code>:</p>
+<div class="language-diff highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gd">- data_dir = &quot;/opt/build/nomad&quot;</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="gi">+ data_dir = &quot;/Volumes/build/nomad&quot;</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

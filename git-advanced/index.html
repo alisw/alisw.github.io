@@ -1,0 +1,1768 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../git-tutorial/">
+      
+      
+        <link rel="next" href="../infrastructure/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>GitHub advanced workflow - ALICE software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#i-want-to-use-the-command-line" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ALICE software" class="md-header__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ALICE software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GitHub advanced workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ALICE software" class="md-nav__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    ALICE software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Advanced tutorial
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced tutorial
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-use-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to use the command line!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I want to use the command line!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install hub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-and-cloning-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking and cloning the repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a pull request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-write-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to write a pull request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-large-data-files-for-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use large data files for analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use large data files for analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-oadb-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-OADB data files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-editors-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git editors plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-multiple-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work with multiple branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Work with multiple branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clean-up-feature-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up feature branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-unpushed-old-commits-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port unpushed old commits to GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebuild-an-old-alirootaliphysics-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuild an old AliRoot/AliPhysics release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-the-reference-ocdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the reference OCDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-a-git-credentials-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup a Git credentials cache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-notified-for-all-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get notified for all changes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process of AliRoot / AliPhysics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process-o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process O2PDPSuite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-o2-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    O2 stable branches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nightly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nightly builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-cvmfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CVMFS releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-pr-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing of Pull Requests (continuous integration)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Publishing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-relval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release and Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-rpms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generation of RPMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-known-tradeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known tradeoffs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-docker-packer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Docker images with Packer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Infrastructure details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Nomad, Consul and Vault
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomad cluster setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacOS builder setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual and physical machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alienvobox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliEn VoBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBuild S3 Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-use-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to use the command line!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I want to use the command line!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install hub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-and-cloning-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking and cloning the repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a pull request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-write-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to write a pull request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-large-data-files-for-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use large data files for analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use large data files for analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-oadb-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-OADB data files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-editors-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git editors plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-multiple-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work with multiple branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Work with multiple branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clean-up-feature-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up feature branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-unpushed-old-commits-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port unpushed old commits to GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebuild-an-old-alirootaliphysics-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuild an old AliRoot/AliPhysics release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-the-reference-ocdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the reference OCDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-a-git-credentials-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup a Git credentials cache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-notified-for-all-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get notified for all changes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Advanced tutorial</h1>
+
+<p>This guide is meant to be a set of advanced topics regarding the ALICE Github
+workflow. If you are looking for a more step-by-step guide on how to get
+started and propose code changes to AliPhysics, please start from the <a href="../git-tutorial/">basic
+GitHub workflow</a>.</p>
+<h2 id="i-want-to-use-the-command-line">I want to use the command line!<a class="headerlink" href="#i-want-to-use-the-command-line" title="Permanent link">#</a></h2>
+<p>If you find the web based workflow not matching your taste, GitHub offers the
+possibility to use a command-line based workflow as well via a utility called
+<code>hub</code> .</p>
+<h3 id="install-hub">Install hub<a class="headerlink" href="#install-hub" title="Permanent link">#</a></h3>
+<p>On macOS you can install it with brew:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>install<span class="w"> </span>hub
+</span></code></pre></div>
+<p>On Linux you can <a href="https://github.com/github/hub/releases/">use the precompiled
+releases</a>. After you have installed
+hub, the <code>hub</code> command will be available. Note that the <a href="https://hub.github.com/">hub
+documentation</a> suggests you configure <code>git</code> as an
+alias to <code>hub</code> in your shell configuration:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">git</span><span class="o">=</span>hub
+</span></code></pre></div>
+<p>This way you can “extend” the <code>git</code> command functionalities with the ones
+offered by <code>hub</code> seamlessly. We will not assume the alias is configured in this
+document.</p>
+<h3 id="forking-and-cloning-the-repository">Forking and cloning the repository<a class="headerlink" href="#forking-and-cloning-the-repository" title="Permanent link">#</a></h3>
+<p>In order to fork a repository you can use <code>hub fork</code> and <code>hub clone</code>. The
+following example clones the official AliPhysics repository and configures your
+own fork (the <code>user.github</code> Git configuration parameter must be set as
+suggested in the <a href="../git-tutorial/">basic workflow documentation</a>). Note that your
+fork is created on your GitHub account in case it does not exist:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>hub<span class="w"> </span>clone<span class="w"> </span>alisw/AliPhysics
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>hub<span class="w"> </span>fork
+</span></code></pre></div>
+<h3 id="creating-a-pull-request">Creating a pull request<a class="headerlink" href="#creating-a-pull-request" title="Permanent link">#</a></h3>
+<p>The second step to request your changes to be tested and reviewed in order to
+be included upstream. This is done by typing:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hub<span class="w"> </span>pull-request
+</span></code></pre></div>
+<p>The command above allows you to do so without leaving the terminal. The output
+of the command above will be a URL like:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>https://github.com/alisw/AliPhysics/pull/12
+</span></code></pre></div>
+<p>If you copy-paste it to your browser you will see the GitHub interface for the
+opened pull request, which is the same as if you had opened it via the web
+interface.</p>
+<h2 id="how-to-write-a-pull-request">How to write a pull request<a class="headerlink" href="#how-to-write-a-pull-request" title="Permanent link">#</a></h2>
+<p>Try to be short (stay within 50 characters) and concise in the title, and save
+any elaboration for the description.</p>
+<p>A good example is:</p>
+<ul>
+<li><strong>Title:</strong> Fix missing particles in the decay table</li>
+<li><strong>Description:</strong> Warning messages about missing particle entries during the
+  ppbench are fixed.</li>
+</ul>
+<p>A bad example is:</p>
+<ul>
+<li><strong>Title:</strong> A fix</li>
+<li><strong>Description:</strong> <empty></li>
+</ul>
+<p>You should elaborate what the fix is for at least.</p>
+<p>Another bad example is:</p>
+<ul>
+<li><strong>Title:</strong> Fix missing particles in the decay table that caused ppbench to
+  complain a lot with warning messages</li>
+<li><strong>Description:</strong> <empty></li>
+</ul>
+<p>The title is too long, and most of what it says can be moved to the description
+field.</p>
+<h2 id="how-to-use-large-data-files-for-analysis">How to use large data files for analysis<a class="headerlink" href="#how-to-use-large-data-files-for-analysis" title="Permanent link">#</a></h2>
+<p>Some large OADB files were removed from AliPhysics and they are no longer
+available in the Git repository. Those files are not lost; they have been moved
+to the following EOS location, which is accessible from lxplus:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/eos/experiment/alice/analysis-data
+</span></code></pre></div>
+<p>We have preserved the same directory structure found on AliPhysics, and the
+same permissions: for instance, <code>PWGLF</code> is writable by all members of
+<code>alice-svn-pwglf</code> (whose members can be edited by the group conveners).</p>
+<p>Every day, in concomitance with the AliPhysics daily tag (at 4pm Geneva time),
+this folder is snapshotted on CVMFS under the following path:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD
+</span></code></pre></div>
+<p>carrying the same name as the corresponding AliPhysics tag. Moreover, at
+every AliRoot/AliPhysics production release, we also snapshot at:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/cvmfs/alice.cern.ch/data/prod/v5-XX-YY-01
+</span></code></pre></div>
+<p>where the last component is the AliPhysics tag name.</p>
+<p>CVMFS brings the advantage to make data access from Grid jobs reliable and
+faster due to caching (files unchanged in two different snapshots are not
+downloaded twice).</p>
+<p>In order to profit from the separate storage for large files we have created an
+interface in AliRoot to allow transparent access to OADB files using a relative
+path. For instance, if you want to access the following large OADB data file:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>PWGLF/FORWARD/CORRECTIONS/data/fmd_corrections.root
+</span></code></pre></div>
+<p>you can do:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">TFile</span><span class="o">::</span><span class="n">Open</span><span class="p">(</span><span class="n">AliDataFile</span><span class="o">::</span><span class="n">GetFileNameOADB</span><span class="p">(</span><span class="s">&quot;PWGLF/FORWARD/CORRECTIONS/data/fmd_corrections.root&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<p>The static function <code>AliDataFile::GetFileNameOADB</code> returns the first accessible
+full URL of the OADB file by finding the first match from the following ordered
+list of paths:</p>
+<ol>
+<li><code>$OADB_PATH/&lt;file&gt;</code></li>
+<li><code>$ALICE_DATA/OADB/&lt;file&gt;</code></li>
+<li><code>$ALICE_PHYSICS/OADB/&lt;file&gt;</code></li>
+<li><code>/cvmfs/alice.cern.ch/data/prod/v5-XX-YY-01/OADB/&lt;file&gt;</code> (for Grid jobs, or with CVMFS installed)</li>
+<li><code>/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/OADB/&lt;file&gt;</code> (for Grid jobs, or with CVMFS installed)</li>
+<li><code>root://eospublic.cern.ch//eos/experiment/alice/analysis-data/OADB/&lt;file&gt;</code></li>
+</ol>
+<p>This means that for laptop analysis it will always be possible to access data
+files, somehow, and in a transparent fashion. If you want to have your OADB
+data locally, you can download it from lxplus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OADB_PATH</span><span class="o">=</span>/path/to/my/local/oadb
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>rsync<span class="w"> </span>-av<span class="w"> </span>--delete<span class="w"> </span>cern_user@lxplus.cern.ch:/eos/experiment/alice/analysis-data/<span class="w"> </span><span class="nv">$OADB_PATH</span>/
+</span></code></pre></div>
+<blockquote>
+<p>Trailing slashes are important to rsync! Do not forget them!</p>
+</blockquote>
+<p>Note that the variable <code>$OADB_PATH</code> must be exported to the environment where
+you run your local analysis in order to make it visible to the job.</p>
+<h3 id="non-oadb-data-files">Non-OADB data files<a class="headerlink" href="#non-oadb-data-files" title="Permanent link">#</a></h3>
+<p>The same EOS path has also PWG-specific directories, outside the OADB one, for
+other analysis-specific data. The following interface can be used to access
+files from there:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">TFile</span><span class="o">::</span><span class="n">Open</span><span class="p">(</span><span class="n">AliDataFile</span><span class="o">::</span><span class="n">GetFileName</span><span class="p">(</span><span class="s">&quot;PWGMM/my_large_data.root&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<blockquote>
+<p>Note the difference between <code>GetFileName()</code> and <code>GetFileNameOADB()</code>.</p>
+</blockquote>
+<p>In this case, the file will be searched in the following locations in order:</p>
+<ol>
+<li><code>$ALICE_DATA/&lt;file&gt;</code></li>
+<li><code>$ALICE_PHYSICS/&lt;file&gt;</code></li>
+<li><code>/cvmfs/alice.cern.ch/data/prod/v5-XX-YY-01/&lt;file&gt;</code> (for Grid jobs, or with CVMFS installed)</li>
+<li><code>/cvmfs/alice.cern.ch/data/analysis/YYYY/vAN-YYYYMMDD/&lt;file&gt;</code> (for Grid jobs, or with CVMFS installed)</li>
+</ol>
+<h2 id="git-editors-plugins">Git editors plugins<a class="headerlink" href="#git-editors-plugins" title="Permanent link">#</a></h2>
+<p>Many Git plugins exist in order to improve your Git workflow from within your
+favorite editor. Examples of what you can do with such plugins are seeing what
+parts of code were added or removed by you before committing them, or perform
+the commit of some portions of your modifications.</p>
+<ul>
+<li><a href="https://magit.vc/">Magit</a> for Emacs</li>
+<li>GitGutter for <a href="https://github.com/jisaacks/GitGutter">Sublime</a> or
+  <a href="https://github.com/airblade/vim-gitgutter">Vim</a></li>
+</ul>
+<h2 id="work-with-multiple-branches">Work with multiple branches<a class="headerlink" href="#work-with-multiple-branches" title="Permanent link">#</a></h2>
+<p>The basic workflow we suggest is to use a single branch and develop one feature
+at a time. If you follow this workflow then your local branch will be called
+<code>master</code>, and so are called the remote working branch on your fork, and the
+remote upstream branch.</p>
+<p>You may want to develop multiple features at the same time because you do not
+want to wait for one feature to be merged before proceeding, for instance.</p>
+<p>To do so, the first thing to do is make sure your local <code>master</code> branch is
+up-to-date:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice/AliPhysics
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>master
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>upstream<span class="w"> </span>master
+</span></code></pre></div>
+<p>Now from your <code>master</code> branch, spawn a different one, and name it explicitly:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>my-new-feature
+</span></code></pre></div>
+<p>The <code>git checkout -b</code> command creates the <code>my-new-feature</code> branch (the name is
+arbitrary) and moves you to it. You can check at any time what is your current
+branch at any time with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>status
+</span></code></pre></div>
+<p>which will give you something like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>On branch my-new-feature
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>nothing to commit, working directory clean
+</span></code></pre></div>
+<p>At this point you can start developing your code, and make your commits as usual
+with <code>git commit</code>. When it comes the time for pushing, you need to tell Git that
+you want to push your current branch to a remote branch with the same name (for
+simplicity) on <em>your</em> remote fork. This is done by:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>my-new-feature
+</span></code></pre></div>
+<p>Note that all subsequent pushes from this branch can be simply done with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>push
+</span></code></pre></div>
+<p>as you have already told Git what is the corresponding upstream branch once.</p>
+<p>When you need to create a pull request you can simply do it from the command
+line <a href="#i-want-to-use-the-command-line">in case you have Hub installed</a>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>hub pull-request
+</span></code></pre></div>
+<p>and it will return you the link (to copy and paste into your browser) to the
+GitHub page corresponding to the newly created pull request. In case you want
+to use the interface, go to your fork from a browser:</p>
+<blockquote>
+<p>https://github.com/\&lt;your-github-username&gt;/AliPhysics</p>
+</blockquote>
+<p>From the web interface you will see something like the following:</p>
+<p><img alt="Open a GitHub pull request from a certain branch" src="../images/git-open-pr-adv.png" /></p>
+<p>If you have recently pushed, which is the case most of the time, GitHub tells
+you what is your branch name and proposes you to open the pull request right
+away, as you can see from the yellow box. You just need to press the green
+button indicated by the red arrow. This is very convenient.</p>
+<p>In case you are not presented with a direct link, then use the dropdown to
+select your branch explicitly (see the other red arrow). Once you have done
+that just click the "New pull request" button next to the dropdown and continue
+with the <a href="../git-tutorial/#create-a-pull-request">normal workflow</a>.</p>
+<p><a href="../git-tutorial/#amend-an-open-pull-request">As explained already</a> in order to
+amend or integrate an open pull request just keep committing and pushing on the
+corresponding feature branch.</p>
+<p>While you are working on a certain feature on a branch different from <code>master</code>
+you can work on other features. You don't need to push your current changes,
+and you don't need to open a pull request either: just <em>commit</em> all your
+changes with, for instance:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>add<span class="w"> </span>--all<span class="w"> </span>-v<span class="w"> </span>:/
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>git<span class="w"> </span>commit
+</span></code></pre></div>
+<p>in order to be able to cleanly switch to a different branch (if you don't want
+to commit you can use the <a href="https://git-scm.com/docs/git-stash">stash</a> too).</p>
+<p>Now switch back to <code>master</code>, update it, and create a new branch from there:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>master
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>upstream<span class="w"> </span>master
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>my-second-feature
+</span></code></pre></div>
+<p>You can now follow the same workflow, by keeping in mind that you can switch
+back and forth using <code>git checkout</code> (without the <code>-b</code> option this time).</p>
+<blockquote>
+<p>It is important you create your feature branches from an updated <code>master</code>,
+and not from other feature branches, in order to avoid confusion and in order
+to avoid opening different pull requests with overlapping contents.</p>
+</blockquote>
+<p>The advantage of this workflow is that you will never work in your <code>master</code>
+branch (<em>i.e.</em> you will never perform <code>git push</code> from there): your changes and
+the upstream ones are clearly separated.</p>
+<h3 id="clean-up-feature-branches">Clean up feature branches<a class="headerlink" href="#clean-up-feature-branches" title="Permanent link">#</a></h3>
+<p>Once your pull requests get merged, you can delete both your local feature branch
+and the remote counterpart. Note that this is completely optional.</p>
+<p>To delete your local branch, first move to the <code>master</code> and update it:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>master
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>upstream<span class="w"> </span>master
+</span></code></pre></div>
+<p>then delete it:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>my-feature-branch
+</span></code></pre></div>
+<p>If your branch was merged to <code>master</code> then Git will not complain. If your
+branch was not merged, Git will prevent you from accidentally delete it (you
+can force by using <code>-D</code> instead of <code>-d</code> if you really know what you are doing).</p>
+<p>Now you can delete the remote one <strong>(this is a dangerous and irreversible
+operation)</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>:my-feature-branch
+</span></code></pre></div>
+<p>It's the <code>:</code> that does the trick (it's not a typo).</p>
+<h2 id="port-unpushed-old-commits-to-github">Port unpushed old commits to GitHub<a class="headerlink" href="#port-unpushed-old-commits-to-github" title="Permanent link">#</a></h2>
+<p>In case you have local Git commits you did not push in your old AliPhysics
+repository and you would like to push them to GitHub now, you can create a
+"patch" from your old local repository and apply it on top of your local GitHub
+copy of AliPhysics.</p>
+<p>Go in your old AliPhysics repository (assumed to be in <code>~/alice-old</code>):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice-old/AliPhysics
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>git<span class="w"> </span>format-patch<span class="w"> </span>HEAD^1
+</span></code></pre></div>
+<p>The <code>HEAD^1</code> means: take the first commit on top. If you have more than one
+commit to port, replace <code>1</code> with the appropriate number.</p>
+<p>You will find in your current directory a number of <code>.patches</code> files. If you
+have your new AliPhysics directory under <code>~/alice</code>, you can go there and apply
+all of them at once, after making sure you have all the upstream changes
+locally:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>master
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>upstream<span class="w"> </span>master
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>git<span class="w"> </span>am<span class="w"> </span>~/alice-old/AliPhysics/*.patch
+</span></code></pre></div>
+<p>Note that this command assumes that the only <code>.patches</code> files you have in your
+old AliPhysics directory are the ones you have just created with <code>git
+format-patch</code>.</p>
+<p>At this point you can push to your local fork and create a pull request:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>hub<span class="w"> </span>pull-request<span class="w"> </span>-b<span class="w"> </span>alisw/AliPhysics:master
+</span></code></pre></div>
+<p>The <code>hub</code> command works if you have the command line tool installed, otherwise
+just follow the web-based procedure.</p>
+<h2 id="rebuild-an-old-alirootaliphysics-release">Rebuild an old AliRoot/AliPhysics release<a class="headerlink" href="#rebuild-an-old-alirootaliphysics-release" title="Permanent link">#</a></h2>
+<p>GitHub clones are only valid for building AliRoot/AliPhysics releases from
+v5-09 on. Due to the repository cleanup, checking out an older version will
+lead to inconsistent results.</p>
+<p>Suppose you want to build version v5-08-18 of AliRoot (corresponding to
+v5-08-18-01 of AliPhysics). In a separate directory, called <code>~/alice-legacy</code>,
+you can do:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>mkdir<span class="w"> </span>~/alice-legacy<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/alice-legacy
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>aliBuild<span class="w"> </span>--dist<span class="w"> </span>IB/v5-08/prod<span class="w"> </span>init<span class="w"> </span>AliRoot,AliPhysics
+</span></code></pre></div>
+<p>Then you can explicitly checkout the versions you need:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice-legacy/AliRoot
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>v5-08-18
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="nb">cd</span><span class="w"> </span>~/alice-legacy/AliPhysics
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>git<span class="w"> </span>checkout<span class="w"> </span>v5-08-18-01
+</span></code></pre></div>
+<p>Now you can run aliBuild as usual:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>cd ~/alice-legacy
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>aliBuild build AliPhysics
+</span></code></pre></div>
+<p>The trick is using the recipes set (alidist) from the branch <code>IB/v5-08/prod</code>,
+which has the correct pointers to the frozen old clones of AliRoot and
+AliPhysics.</p>
+<h2 id="use-the-reference-ocdb">Use the reference OCDB<a class="headerlink" href="#use-the-reference-ocdb" title="Permanent link">#</a></h2>
+<p>Our production OCDB is stored on CVMFS and AliEn, however we also have a
+reference OCDB which used to be part of AliRoot. The reference OCDB is no
+longer there: it can now be found at this <a href="https://gitlab.cern.ch/alisw/AliRootOCDB/">separate Git
+repository</a>.</p>
+<p>To use the new OCDB with AliPhysics, you first need to build the package:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>aliBuild<span class="w"> </span>build<span class="w"> </span>AliPhysics
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>aliBuild<span class="w"> </span>build<span class="w"> </span>AliRoot-OCDB
+</span></code></pre></div>
+<p>When you enter the environment, load it as extra package:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>alienv<span class="w"> </span>enter<span class="w"> </span>AliPhysics/latest<span class="w"> </span>AliRoot-OCDB/latest
+</span></code></pre></div>
+<p>The OCDB will be available at the following path:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>$ALIROOT_OCDB_ROOT/OCDB
+</span></code></pre></div>
+<p>so you will need to update your paths accordingly. If you don't use aliBuild
+you can simply clone the package and manually export the environment variable:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nb">cd</span><span class="w"> </span>~/alice
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>git<span class="w"> </span>clone<span class="w"> </span>--origin<span class="w"> </span>upstream<span class="w"> </span>https://gitlab.cern.ch/alisw/AliRootOCDB.git
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ALIROOT_OCDB_ROOT</span><span class="o">=</span><span class="nv">$PWD</span>/AliRootOCDB
+</span></code></pre></div>
+<blockquote>
+<p>Note that <code>ALIROOT_OCDB_ROOT</code> is the toplevel directory containing in turn
+the <code>OCDB</code> directory with the calibration files.</p>
+</blockquote>
+<h2 id="setup-a-git-credentials-cache">Setup a Git credentials cache<a class="headerlink" href="#setup-a-git-credentials-cache" title="Permanent link">#</a></h2>
+<p>While compiling the AliRoot/AliPhysics software chain you might be asked
+several times to input your CERN username and your password. This is because
+some of the required software components have licensing restrictions and cannot
+be made publicly available, so authentication is an inevitable consequence. This
+happens for instance with the DPMJET generator.</p>
+<p>To prevent automated installations from bothering you with multiple password
+requests, you can set up a Git credentials cache.</p>
+<p>You can do (only once):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span><span class="s2">&quot;cache --timeout=86400&quot;</span>
+</span></code></pre></div>
+<p>to tell Git to save in memory all inputted credentials for one day. You will be
+prompted for your password only once in 24 hours, or if your password changes
+and the cached one is no longer valid.</p>
+<p>The cache duration can be configured with the <code>--timeout</code> switch and it is is
+expressed in seconds.</p>
+<p>A very unsafe option is to <em>permanently</em> store your password in
+<code>~/.git-credentials</code>: you will be prompted only once, and the password will be
+forever stored there <strong>in clear text</strong>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store
+</span></code></pre></div>
+<blockquote>
+<p>Note: this solution is not good for your laptop. It is meant to target
+clusters with unattended installation systems.</p>
+</blockquote>
+<p>If you are on macOS you can also save your Git password inside your Keychain:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>osxkeychain
+</span></code></pre></div>
+<p>More information on caching Git credentials can be found <a href="https://help.github.com/articles/caching-your-github-password-in-git/">on the GitHub
+documentation</a>:
+the documentation applies also to repositories not hosted on GitHub.</p>
+<h2 id="get-notified-for-all-changes">Get notified for all changes<a class="headerlink" href="#get-notified-for-all-changes" title="Permanent link">#</a></h2>
+<p>Email notifications are handled by GitHub and will be sent to the email you
+have linked to your GitHub account.</p>
+<p>If you want to be notified for every activity on a certain repository, you
+first need to make sure "watch" notifications are enabled. Go to the <a href="https://github.com/settings/notifications">GitHub
+notification settings</a> page for your
+account, and enable email notifications for <strong>Watching</strong>:</p>
+<p><img alt="GitHub notification settings" src="../images/git-notif-settings.png" /></p>
+<p>A green tick will appear next to the checkboxes to confirm your settings have
+been saved (there is no "save settings" button).</p>
+<p>Note that in the <a href="https://github.com/settings/notifications">GitHub notification
+settings</a> you can granularily
+specify what are the events that trigger a notification. You can for instance
+be notified only for pushes or merges, and not for every comment.</p>
+<blockquote>
+<p>Note that independently from your "Watch" settings, you will continue
+receiving emails if you are <strong>@mentioned</strong> if the <strong>Participating</strong> settings
+are ticked.</p>
+</blockquote>
+<p>Navigate now to the repository you want to follow, for instance
+<a href="https://github.com/alisw/AliPhysics">AliPhysics</a> and on the dropdown on top
+select <strong>Watch</strong> to be notified of all activities.</p>
+<p><img alt="GitHub watch repository" src="../images/git-notif-repo.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

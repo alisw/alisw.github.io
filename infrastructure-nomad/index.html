@@ -1,0 +1,1622 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../infrastructure-docker-packer/">
+      
+      
+        <link rel="next" href="../infrastructure-nomad-host/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Build infrastructure on Nomad - ALICE software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#essential-ci-operations-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ALICE software" class="md-header__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ALICE software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Build infrastructure on Nomad
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ALICE software" class="md-nav__button md-logo" aria-label="ALICE software" data-md-component="logo">
+      
+  <img src="../alice_logo.png" alt="logo">
+
+    </a>
+    ALICE software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alisw/alisw.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View source code
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process of AliRoot / AliPhysics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-release-process-o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release process O2PDPSuite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-o2-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    O2 stable branches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nightly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nightly builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-cvmfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CVMFS releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-pr-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing of Pull Requests (continuous integration)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Publishing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-relval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release and Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi-user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-rpms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generation of RPMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-known-tradeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known tradeoffs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-docker-packer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Docker images with Packer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Infrastructure details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Using Nomad, Consul and Vault
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Nomad, Consul and Vault
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#essential-ci-operations-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential CI operations guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Essential CI operations guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-find-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to find logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-and-restarting-ci-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping and restarting CI jobs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-a-ci-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling a CI job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-changes-to-the-ci-job-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying changes to the CI job template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-placement-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting placement failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developing locally
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-your-local-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up your local environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-job-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing job declarations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing job declarations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-job-declarations-eg-rsync-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple job declarations (e.g. rsync server)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-templated-job-declarations-eg-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex, templated job declarations (e.g. CI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-and-tricks-for-writing-nomad-job-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips and tricks for writing Nomad job declarations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips and tricks for writing Nomad job declarations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-vault-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Vault secrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stuck-allocationsjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stuck allocations/jobs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomad-error-initializing-client-tls-failed-to-parse-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad error initializing client: tls: failed to parse private key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-nomad-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomad cluster setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacOS builder setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual and physical machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alienvobox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliEn VoBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBuild S3 Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-alibi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AliBI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-auto-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up automatic release builds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#essential-ci-operations-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential CI operations guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Essential CI operations guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-find-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to find logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-and-restarting-ci-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping and restarting CI jobs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-a-ci-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling a CI job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-changes-to-the-ci-job-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying changes to the CI job template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-placement-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting placement failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developing locally
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-your-local-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up your local environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-job-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing job declarations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing job declarations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-job-declarations-eg-rsync-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple job declarations (e.g. rsync server)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-templated-job-declarations-eg-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex, templated job declarations (e.g. CI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-and-tricks-for-writing-nomad-job-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips and tricks for writing Nomad job declarations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips and tricks for writing Nomad job declarations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-vault-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Vault secrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stuck-allocationsjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stuck allocations/jobs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomad-error-initializing-client-tls-failed-to-parse-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomad error initializing client: tls: failed to parse private key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Using Nomad, Consul and Vault</h1>
+
+<p>The CI system uses <a href="https://www.nomadproject.io/">Nomad</a> for job scheduling, plus <a href="https://www.consul.io/">Consul</a> for job discovery and DNS, and <a href="https://www.vaultproject.io/">Vault</a> to store secrets.</p>
+<p>These all have web interfaces. If you have access, you can log in at <a href="https://alinomad.cern.ch">https://alinomad.cern.ch</a>, <a href="https://aliconsul.cern.ch">https://aliconsul.cern.ch</a> and <a href="https://alivault.cern.ch">https://alivault.cern.ch</a> if on the CERN network.</p>
+<p>Jobs are defined in <a href="https://github.com/alisw/ci-jobs">a dedicated git repository</a>.</p>
+<h3 id="essential-ci-operations-guide">Essential CI operations guide<a class="headerlink" href="#essential-ci-operations-guide" title="Permanent link">#</a></h3>
+<p>For hints on how to adapt the instructions in this section to jobs other than the CI job, see the following sections.</p>
+<h4 id="where-to-find-logs">Where to find logs<a class="headerlink" href="#where-to-find-logs" title="Permanent link">#</a></h4>
+<p>Logs are written out to disk by the Nomad agent under an allocation's <code>alloc/logs/</code> directory. They can also be fetched or streamed using the Nomad command-line client:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Stream logs live, as they are written:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>nomad<span class="w"> </span>alloc<span class="w"> </span>logs<span class="w"> </span>-stderr<span class="w"> </span>-tail<span class="w"> </span>-f<span class="w"> </span><span class="s1">&#39;&lt;alloc-uuid&gt;&#39;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Fetch and print all stored logs for this allocation (warning: lots of text!):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>nomad<span class="w"> </span>alloc<span class="w"> </span>logs<span class="w"> </span>-stderr<span class="w"> </span><span class="s1">&#39;&lt;alloc-uuid&gt;&#39;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># If a job only has one allocation, you can directly use `-job`:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>nomad<span class="w"> </span>alloc<span class="w"> </span>logs<span class="w"> </span>-stderr<span class="w"> </span>-tail<span class="w"> </span>-f<span class="w"> </span>-job<span class="w"> </span>repo
+</span></code></pre></div>
+<p>If you use the last command (the one with <code>-job</code>) on a job that has multiple allocations (such as most CI jobs), Nomad will pick a random allocation within the job and give you its logs.</p>
+<p>Run <code>nomad alloc logs -help</code> for more information on the command and its options.</p>
+<h4 id="stopping-and-restarting-ci-jobs">Stopping and restarting CI jobs<a class="headerlink" href="#stopping-and-restarting-ci-jobs" title="Permanent link">#</a></h4>
+<p>If you want to fully bring down and redeploy a CI job, you must do this manually by stopping and rescheduling it.</p>
+<p>Nomad has a "restart" facility for individual allocations, which may suffice, but this only reschedules individual allocs, and not necessarily for long enough for e.g. resource redistribution to happen properly. For instance, if you have one alloc waiting for a spot on a high-memory machine, and something else that doesn't need a lot of memory is taking that spot, then you may have to fully stop the latter alloc's job for the former to be properly scheduled, and afterwards, redeploy the stopped job.</p>
+<p>In order to fully stop and redeploy a job, run the following commands (<code>ci-mesosci-cs8</code> chosen as an example):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>ci-jobs/ci
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># First, make sure the running job is identical to the local declaration:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>mesosci-cs8.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>-<span class="w">  </span><span class="c1"># no changes should be shown</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Stop all allocations of the running job:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>nomad<span class="w"> </span>job<span class="w"> </span>stop<span class="w"> </span>ci-mesosci-cs8
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Now redeploy the job from the current definitions:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>mesosci-cs8.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>-<span class="w">  </span><span class="c1"># make sure scheduling is fine</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>mesosci-cs8.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>-<span class="w">   </span><span class="c1"># actually redeploy the job</span>
+</span></code></pre></div>
+<p>Build areas are preserved across allocation restarts, but only if the replacement alloc runs on the same host as its predecessor. If this is not the case, it's not worth transferring the entire build directory over the network, so we just start from scratch instead. This is implemented using the following settings in the CI job definition:</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="err">group</span><span class="w"> </span><span class="s2">&quot;ci&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nb">ephemeral_disk</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="na">sticky</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="na">migrate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">false</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="scaling-a-ci-job">Scaling a CI job<a class="headerlink" href="#scaling-a-ci-job" title="Permanent link">#</a></h4>
+<p>If you want to permanently change the number of running CI jobs for a specific type of builder (e.g. the <code>mesosci-cs8</code> one), change the desired number of builders by setting the value of <code>num_builders</code> in <code>mesosci-cs8.yaml</code>.</p>
+<p>Deploy your scaling update to the cluster by running the usual commands:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>ci
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">$EDITOR</span><span class="w"> </span>mesosci-cs8.yaml<span class="w">                                         </span><span class="c1"># change num_builders value</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>mesosci-cs8.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>validate<span class="w"> </span>-<span class="w">  </span><span class="c1"># check syntax</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>mesosci-cs8.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>-<span class="w">      </span><span class="c1"># make sure only your desired changes will be applied</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>mesosci-cs8.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>-<span class="w">       </span><span class="c1"># actually deploy your changes</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>git<span class="w"> </span>add<span class="w"> </span>mesosci-cs8.yaml<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w">                           </span><span class="c1"># track your changes</span>
+</span></code></pre></div>
+<p>If you want to scale a job without committing this change to the Git repository, this can be done like so:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>nomad<span class="w"> </span>job<span class="w"> </span>scale<span class="w"> </span>ci-mesosci-cs8<span class="w"> </span>N<span class="w">    </span><span class="c1"># N is the desired number of builders for this job</span>
+</span></code></pre></div>
+<p>The above command will automatically install a new <code>config/workers-pool-size</code> file into the working area of the running builders without restarting them.</p>
+<h4 id="deploying-changes-to-the-ci-job-template">Deploying changes to the CI job template<a class="headerlink" href="#deploying-changes-to-the-ci-job-template" title="Permanent link">#</a></h4>
+<p>When changing the template itself (i.e. the <code>ci.nomad</code> file), the changes must be deployed for each YAML file, as each declares a separate instance of the templated job.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>ci
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">$EDITOR</span><span class="w"> </span>ci.nomad
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.yaml<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">.yaml&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>validate<span class="w"> </span>-<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Now, for each .yaml file in the directory:</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>vars.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>-<span class="w">      </span><span class="c1"># make sure your desired changes will be applied</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>vars.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>-<span class="w">       </span><span class="c1"># actually deploy your changes</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>git<span class="w"> </span>add<span class="w"> </span>ci.nomad<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w">                            </span><span class="c1"># track your changes</span>
+</span></code></pre></div>
+<p>While there's no harm in running the syntax validation step in a loop, it's probably better to do the actual deployment (i.e. <code>nomad job run</code>) manually for each YAML file, so that issues with the deployment can be caught early.</p>
+<h4 id="troubleshooting-placement-failures">Troubleshooting placement failures<a class="headerlink" href="#troubleshooting-placement-failures" title="Permanent link">#</a></h4>
+<p>If the Nomad scheduler fails to place your job, you will see a message like this when you run <code>nomad job plan</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Scheduler dry-run:
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>- WARNING: Failed to place all allocations.
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  Task Group &quot;ci&quot; (failed to place 10 allocations):
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    * Constraint &quot;${attr.kernel.name} = linux&quot;: 3 nodes excluded by filter
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    * Constraint &quot;${meta.allow_compilation} = true&quot;: 3 nodes excluded by filter
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    * Resources exhausted on 39 nodes
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    * Dimension &quot;cores&quot; exhausted on 24 nodes
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    * Dimension &quot;disk&quot; exhausted on 9 nodes
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    * Dimension &quot;cpu&quot; exhausted on 6 nodes
+</span></code></pre></div>
+<p>In this case, check the following:</p>
+<ol>
+<li>Check that the cluster actually has space for your job, and that your job declares the correct resource requirements.</li>
+</ol>
+<p>For example, not all Openstack machines have a separate build disk of 500 GiB, so a CI job legitimately cannot be scheduled on these.</p>
+<ol>
+<li>
+<p>If your job requires, for instance, lots of memory, but all the high-memory machines are taken by other jobs, you may have to stop and reschedule those other jobs while deploying yours. Assuming that the other jobs don't need a lot of memory, they should be scheduled on other free machines when you restart them after deploying your job.</p>
+</li>
+<li>
+<p>If your job requires a lot of disk space, make sure that Nomad's internal tracking of available disk space is correct. You can do this using the <a href="https://github.com/alisw/ali-bot/tree/master/utils/nomad-diskfree"><code>nomad-diskfree</code></a> script and looking for any warnings on hosts that don't have any allocations running.</p>
+</li>
+</ol>
+<p>If you see warnings from <code>nomad-diskfree</code>, <code>ssh</code> into the affected machine, manually clean up under <code>/build/nomad/alloc</code> if necessary, and run <code>systemctl restart nomad</code> to reset Nomad's idea of available disk space. If you then run <code>nomad job plan</code> again, you should see fewer unplaced allocations.</p>
+<h3 id="developing-locally">Developing locally<a class="headerlink" href="#developing-locally" title="Permanent link">#</a></h3>
+<h4 id="setting-up-your-local-environment">Setting up your local environment<a class="headerlink" href="#setting-up-your-local-environment" title="Permanent link">#</a></h4>
+<p>You will need to install a reasonably recent versions of Nomad to parse existing job declarations. Additionally, you should install the latest version of Levant; ideally <a href="https://releases.hashicorp.com/levant">version 0.3.1 or later</a>.</p>
+<p>Set the following environment values to connect to ALICE's scheduling cluster:</p>
+<p>More info on how to get the certificates <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html">here</a></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NOMAD_ADDR</span><span class="o">=</span><span class="s1">&#39;https://alinomad.cern.ch:443&#39;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CONSUL_HTTP_ADDR</span><span class="o">=</span><span class="s1">&#39;https://aliconsul.cern.ch:443&#39;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">VAULT_ADDR</span><span class="o">=</span><span class="s1">&#39;https://alivault.cern.ch:443&#39;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># These .pem files must not be password-protected.</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># For extra security, make sure they are mode 0600 (owner read-write only).</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nb">export</span><span class="w"> </span><span class="o">{</span>NOMAD,CONSUL,VAULT<span class="o">}</span><span class="nv">_CACERT</span><span class="o">=</span><span class="s1">&#39;&lt;path/to/cern-ca-bundle.crt&gt;&#39;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nb">export</span><span class="w"> </span><span class="o">{</span>NOMAD,CONSUL,VAULT<span class="o">}</span><span class="nv">_CLIENT_KEY</span><span class="o">=</span><span class="s1">&#39;&lt;path/to/grid-personal-key.pem&gt;&#39;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nb">export</span><span class="w"> </span><span class="o">{</span>NOMAD,CONSUL,VAULT<span class="o">}</span><span class="nv">_CLIENT_CERT</span><span class="o">=</span><span class="s1">&#39;&lt;path/to/grid-personal-cert.pem&gt;&#39;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># Export your access tokens to the cluster, so that the command-line nomad,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># consul and vault clients can use them:</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NOMAD_TOKEN</span><span class="o">=</span><span class="s1">&#39;&lt;nomad access token UUID&gt;&#39;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CONSUL_HTTP_TOKEN</span><span class="o">=</span><span class="s1">&#39;&lt;consul access token UUID&gt;&#39;</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="nb">export</span><span class="w"> </span><span class="nv">VAULT_TOKEN</span><span class="o">=</span><span class="s1">&#39;&lt;vault access token UUID&gt;&#39;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># Alternatively, set these tokens only for commands that need them, e.g.</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="c1"># by using aliases to retrieve the secrets and invoke the respective command:</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">nomad</span><span class="o">=</span><span class="s1">&#39;NOMAD_TOKEN=$(pass cern/ci/nomad-token | head -1) \nomad&#39;</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">levant</span><span class="o">=</span><span class="s1">&#39;NOMAD_TOKEN=$(pass cern/ci/nomad-token | head -1) \levant&#39;</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">consul</span><span class="o">=</span><span class="s1">&#39;CONSUL_HTTP_TOKEN=$(pass cern/ci/consul-token | head -1) \consul&#39;</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">vault</span><span class="o">=</span><span class="s1">&#39;VAULT_TOKEN=$(pass cern/ci/vault-token | head -1) \vault&#39;</span>
+</span></code></pre></div>
+<p>However, this only works for machines on the CERN network. If dialling in from outside, you'll have to set up a proxy (e.g. using SSH forwarding) like so, in addition to setting the <code>*_TOKEN</code> and certificate-related environment variables as above:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh<span class="w"> </span>-L<span class="w"> </span>localhost:4646:alimesos01.cern.ch:4646<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>-L<span class="w"> </span>localhost:8500:alimesos01.cern.ch:8500<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>-L<span class="w"> </span>localhost:8200:alimesos01.cern.ch:8200<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>-N<span class="w"> </span>alimesos01.cern.ch<span class="w"> </span><span class="p">&amp;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NOMAD_ADDR</span><span class="o">=</span><span class="s1">&#39;https://localhost:4646&#39;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CONSUL_HTTP_ADDR</span><span class="o">=</span><span class="s1">&#39;https://localhost:8500&#39;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">VAULT_ADDR</span><span class="o">=</span><span class="s1">&#39;https://localhost:8200&#39;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="nb">export</span><span class="w"> </span><span class="o">{</span>NOMAD,CONSUL,VAULT<span class="o">}</span><span class="nv">_TLS_SERVER_NAME</span><span class="o">=</span>alimesos01.cern.ch
+</span></code></pre></div>
+<h4 id="writing-job-declarations">Writing job declarations<a class="headerlink" href="#writing-job-declarations" title="Permanent link">#</a></h4>
+<p>Jobs are defined using <a href="https://github.com/hashicorp/levant">Levant</a> templates. While plain nomad templating is powerful, it does not allow variable job identifiers (which are crucial for declaring e.g. multiple similar Jenkins builders or CI workers). Levant allows templating on top of the HCL job specification read by nomad.</p>
+<p>As Levant bundles a version of the Nomad client, Levant <a href="https://releases.hashicorp.com/levant"><code>0.3.1</code> or later</a> is required in order to parse the HCL job declarations we use.</p>
+<h5 id="simple-job-declarations-eg-rsync-server">Simple job declarations (e.g. <code>rsync</code> server)<a class="headerlink" href="#simple-job-declarations-eg-rsync-server" title="Permanent link">#</a></h5>
+<p>Simple job declarations, i.e. those that declare only a single job, don't use Levant for templating at all. They are simple HCL files stored in the root directory of the [ci-jobs repository][jobs-decls-repo], named <code>&lt;job-name&gt;.nomad</code>.</p>
+<p>An example of this is the declaration for the <a href="https://github.com/alisw/ci-jobs/blob/master/repo.nomad"><code>rsync</code> server that serves tarballs for <code>aliBuild</code></a>.</p>
+<p>In order to deploy this job, simply run the following commands, checking the output of each:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>nomad<span class="w"> </span>job<span class="w"> </span>validate<span class="w"> </span>repo.nomad<span class="w">   </span><span class="c1"># check syntax</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>repo.nomad<span class="w">       </span><span class="c1"># check if the job can be scheduled</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>repo.nomad<span class="w">        </span><span class="c1"># actually run the job</span>
+</span></code></pre></div>
+<h5 id="complex-templated-job-declarations-eg-ci">Complex, templated job declarations (e.g. CI)<a class="headerlink" href="#complex-templated-job-declarations-eg-ci" title="Permanent link">#</a></h5>
+<p>Complicated job declarations are broken up into a common, templated declaration, and multiple YAML "variable files" to declare the variations of the base job to be deployed. These should be collected into a single directory, with multiple <code>.yaml</code> files, but only one <code>.nomad</code> file per directory.</p>
+<p>An example of this is the <a href="https://github.com/alisw/ci-jobs/tree/master/ci">CI job</a>. It contains a <code>ci.nomad</code> file, which is the general job declaration. This file is processed first by Levant (in the <code>levant render</code> step above). Levant <a href="https://github.com/hashicorp/levant/blob/main/docs/templates.md">only processes directives</a> surrounded by double square brackets (<code>[[ ... ]]</code>). The result of this first processing step is a <a href="https://www.nomadproject.io/docs/job-specification">Nomad job declaration</a> in <a href="https://www.nomadproject.io/docs/job-specification/hcl2">HCL syntax</a>, which can be passed directly to Nomad.</p>
+<p>What values Levant inserts into the file is determined by the YAML file it is given. The structure of these files depends entirely on what values the template expects, but for CI jobs, an example is the <a href="https://github.com/alisw/ci-jobs/blob/master/ci/mesosci-slc7-o2physics.yaml"><code>mesosci-slc7-o2physics.yaml</code> variable file</a>.</p>
+<p>In order to run or update this job, run the following commands, replacing <code>vars.yaml</code> with the variable file for the instance you want to deploy, and checking the output of each command before running the next one:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cd</span><span class="w"> </span>ci<span class="w">    </span><span class="c1"># so that levant picks up the correct .nomad file</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>vars.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>validate<span class="w"> </span>-<span class="w">  </span><span class="c1"># check syntax</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>vars.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>plan<span class="w"> </span>-<span class="w">      </span><span class="c1"># make sure job can be scheduled</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>levant<span class="w"> </span>render<span class="w"> </span>-var-file<span class="w"> </span>vars.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>nomad<span class="w"> </span>job<span class="w"> </span>run<span class="w"> </span>-<span class="w">       </span><span class="c1"># actually run job</span>
+</span></code></pre></div>
+<h5 id="tips-and-tricks-for-writing-nomad-job-declarations">Tips and tricks for writing Nomad job declarations<a class="headerlink" href="#tips-and-tricks-for-writing-nomad-job-declarations" title="Permanent link">#</a></h5>
+<h6 id="using-vault-secrets">Using Vault secrets<a class="headerlink" href="#using-vault-secrets" title="Permanent link">#</a></h6>
+<p>If you want to use Vault secrets in your job declaration, you can substitute them inside of templates.</p>
+<p>For instance, to assign secrets to environment variables that will be set when the job runs, use a block like the following inside your <code>task</code> block:</p>
+<!-- We have to escape the opening curly braces in the below code as Jekyll seems to treat them specially. -->
+
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">template</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;&lt;-</span><span class="dl">EOD</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="sh">    {{ &quot;{{&quot; }} with secret &quot;kv/data/my-secret-name&quot; }}</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="sh">    MY_SECRET={{ &quot;{{&quot; }} .Data.data.my_secret | toJSON }}</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="sh">    MY_OTHER_SECRET={{ &quot;{{&quot; }} .Data.data.my_other_secret | toJSON }}</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="sh">    {{ &quot;{{&quot; }} end }}</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="dl">    EOD</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="na">env</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="na">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;${NOMAD_SECRETS_DIR}/secrets.env&quot;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="na">perms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;400&quot;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span><span class="na">change_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;restart&quot;</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="p">}</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c1"># Required in order to read vault secrets.</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="nb">vault</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">  </span><span class="na">policies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;nomad&quot;</span><span class="p">]</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>This example assumes that you have a secret called <code>my-secret-name</code> stored in Vault, whose contents are a JSON object of the form:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">&quot;my_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my sup3r s3cr3t&quot;</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">&quot;my_other_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my 0th3r s3cr3t&quot;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
+<h3 id="stuck-allocationsjobs">Stuck allocations/jobs<a class="headerlink" href="#stuck-allocationsjobs" title="Permanent link">#</a></h3>
+<p>When a job is not able to be deleted and recreated, you can force the deletion using the following commands (requires nomad management token):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>nomad<span class="w"> </span>job<span class="w"> </span>stop<span class="w"> </span>-purge<span class="w"> </span>&lt;job-name&gt;
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>nomad<span class="w"> </span>system<span class="w"> </span>gc
+</span></code></pre></div>
+<h3 id="nomad-error-initializing-client-tls-failed-to-parse-private-key">Nomad error initializing client: tls: failed to parse private key<a class="headerlink" href="#nomad-error-initializing-client-tls-failed-to-parse-private-key" title="Permanent link">#</a></h3>
+<p>If you are on macOS you'll need an unencrypted key, you can export it from your certificate with a command like this (note the <code>-nodes</code> flag)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-nocerts<span class="w"> </span>-in<span class="w"> </span>~/Downloads/myCertificate.p12<span class="w"> </span>-out<span class="w"> </span>~/.globus/userkey.pem<span class="w"> </span>-nodes
+</span></code></pre></div>
+<p>Otherwise you'll probably get the following error:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Error initializing client: tls: failed to parse private key
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
