@@ -11,16 +11,14 @@ The docker image definitions are available in
 [alisw/docks](https://github.com/alisw/docks), and the CERN docker registry is
 <https://registry.cern.ch/>
 
-
 ## Rebuilding a Docker image
 
 If an image definition has changed, it must be rebuilt and pushed to the proper
 registry for Nomad to use it in new job allocations.
 
-
 ### Packer-defined images
 
-Newer images have a ``packer.json`` file, which allows them to be built using
+Newer images have a `packer.json` file, which allows them to be built using
 Hashicorp packer
 
 There's a [GitHub Action
@@ -44,7 +42,6 @@ Older images without a `packer.json` can be built with:
 docker build -t alisw/<image-name> <image-name>
 ```
 
-
 ## Conventions
 
 The CI uses an image named `<arch>-builder` where `<arch>` is the architecture of the
@@ -56,3 +53,9 @@ The code to infer the image names is
 
 [ci-jobs]: https://github.com/alisw/ci-jobs
 [packer]: https://www.packer.io/
+
+## Reverting a broken image
+
+Our registry keeps previously built images, in case a new release has an issue you can just re-tag the previous image as `latest`, and go back to a working state
+
+For example, these are the last builds for `slc9-gpu-builder`: [slc9-gpu-builder artifacts-tab](https://registry.cern.ch/harbor/projects/3529/repositories/slc9-gpu-builder/artifacts-tab)
