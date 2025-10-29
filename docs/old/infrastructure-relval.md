@@ -10,7 +10,7 @@ Then we start the [AliRootDPGValidation](https://alijenkins.cern.ch/job/AliRootD
 
 * Automatically tag AliRoot, AliPhysics and AliDPG from their master branches (the tag will be clearly marked as “rc”, as in “release candidate”)
 * Build the three of them, using the master of alidist
-* Wait for their deployment on CVMFS: we use the nightlies repository, /cvmfs/alice-nightlies.cern.ch
+* Wait for their deployment on CVMFS
 
 Start the validation script for Reconstruction first, then General Purpose Monte Carlo.
 

@@ -14,9 +14,8 @@ case of troubles you can do the following:
 
 #### Access to the publisher machines
 
-* SSH as your username to `cvmfs-alice.cern.ch` or
-  `cvmfs-alice-nightlies.cern.ch` depending on
-  what you are publishing (ask to be added to the self managed lxcvmfs-alice for authorization).
+* SSH as your username to `cvmfs-alice.cern.ch` (ask to be added to the self
+  managed lxcvmfs-alice for authorization).
 * Follow the instructions given at the logon by the MOD
 * Logs are in `~/publisher/log`
 

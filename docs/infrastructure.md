@@ -26,7 +26,6 @@ Further troubleshooting information is privately available in the repository:
 * [Testing of Pull Requests (continuous integration)](infrastructure-pr-testing.md)
 * [Build Logs](infrastructure-logs.md)
 * [Release Publishing](infrastructure-publisher.md)
-* [RelVal](infrastructure-relval.md)
 * [AliBI User Guide](infrastructure-alibi-user-guide.md)
 * [Setting up automatic release builds](infrastructure-auto-builds.md)
 * [Generation of RPMs](infrastructure-rpms.md)
