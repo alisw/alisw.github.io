@@ -144,14 +144,14 @@ In order to do this, you must be listed as the "responsible" or "main user" of t
 Create the certificate request using the system OpenSSL. On your local machine, set up the environment:
 
 ```bash
-TARGET_MACHINE=alibuildmacXX
+TARGET_MACHINE=alibuildmacXX.cern.ch
 REMOTE_WORK_DIR=/Users/alibuild/renew-certificate
 ```
 
 Open the page where you can paste the certificate request: 
 
 ```open
-open https://ca.cern.ch/ca/host/Submit.aspx?template=ee2host&instructions=openssl&subject=$TARGET_MACHINE.cern.ch
+open "https://ca.cern.ch/ca/host/Submit.aspx?template=ee2host&instructions=openssl&subject=$TARGET_MACHINE"
 ```
 
 Get in your clipboard the certificate request:
@@ -170,9 +170,9 @@ keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 subjectAltName = @alt_names
 
 [alt_names]
-DNS.1 = $TARGET_MACHINE.cern.ch
+DNS.1 = $TARGET_MACHINE
 EOF
-ssh $TARGET_MACHINE openssl req -new -subj "/CN=$TARGET_MACHINE.cern.ch" -out $REMOTE_WORK_DIR/newcsr.csr -keyout $REMOTE_WORK_DIR/privkey.pem -nodes -sha512 -newkey rsa:2048 -config $REMOTE_WORK_DIR/openssl.cnf
+ssh $TARGET_MACHINE openssl req -new -subj "/CN=$TARGET_MACHINE" -out $REMOTE_WORK_DIR/newcsr.csr -keyout $REMOTE_WORK_DIR/privkey.pem -nodes -sha512 -newkey rsa:2048 -config $REMOTE_WORK_DIR/openssl.cnf
 ssh $TARGET_MACHINE cat $REMOTE_WORK_DIR/newcsr.csr | pbcopy
 ```
 
