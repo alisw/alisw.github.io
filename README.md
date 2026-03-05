@@ -8,15 +8,25 @@ This repository contains documentation for ALICE collaboration software, includi
 
 ## Development
 
-This site is built using [MkDocs](https://www.mkdocs.org/) with the Material theme.
+Requires Python 3.8+
 
-### Requirements
+### Install and run
 
-- Python 3.8+
-- MkDocs
-- MkDocs Material theme
+#### Using `uv` (recommended)
 
-### Installation
+Serve the documentation locally:
+
+```bash
+uv run mkdocs serve
+```
+
+Build the static site:
+
+```bash
+uv run mkdocs build
+```
+
+#### Using `pip`
 
 Optionally, create a virtual environment:
 
@@ -31,17 +41,9 @@ Install dependencies:
 pip install -e .
 ```
 
-### Local Development
-
-To serve the documentation locally:
-
 ```bash
 mkdocs serve
 ```
-
-The site will be available at `http://127.0.0.1:8000/`
-
-### Building
 
 To build the static site:
 
