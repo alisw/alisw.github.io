@@ -28,8 +28,6 @@ By default the builders will behave in the following manner:
   point.
 
 We use [Nomad](infrastructure-nomad.md) to deploy the builders on Linux and MacOS.
-
-<iframe width="700" height="550" src="https://datastudio.google.com/embed/reporting/f41f8c21-c617-4e7e-b14f-0f760c228be4/page/5FCOB" frameborder="0" style="border:0"></iframe>
   
 ## Essential operations guide
 
