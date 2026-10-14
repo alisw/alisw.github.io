@@ -53,13 +53,24 @@ See the [`publish-alien` Nomad job](https://alinomad.cern.ch/ui/jobs/publish-ali
 RPMS are also created using `aliPublishS3` in [Nomad](infrastructure-nomad.md).
 [See the dedicated documentation.](infrastructure-rpms.md)
 
+### Credentials
+
+Only the RPM publishing action (`sync-rpms`) needs object store credentials, since it is the only
+one that uploads anything.
+The `sync-cvmfs`, `sync-dir` and `sync-alien` actions use the object store only to list the
+available packages, and the ALICE package repository can be listed anonymously, so they run without
+credentials altogether.
+Tarballs themselves have always been downloaded over plain HTTPS.
+
 ### Add new packages:
 
 #### CVMFS
 
 Packages published on CVMFS can be configured via the [`aliPublish.conf`][aliPublish-conf] file. Apart from having your changes in master, no further action is required.
 
-Builds of O2PDPSuite from the `async` branch are also published on CVMFS using [`aliPublish-async.conf`][async-conf].
+Builds of O2PDPSuite from the `async` branch are also published on CVMFS from the same file: they
+are selected by the `^async-.*$` version pattern of the `O2PDPSuite` package, which also has its
+own notification settings.
 
 In addition, the AliDPG package is handled specially and published to `noarch` using [`aliPublish-noarch.conf`][noarch-conf].
 
@@ -68,7 +79,9 @@ In addition, the AliDPG package is handled specially and published to `noarch` u
 
 #### RPMS
 
-If you need to generate a new RPM package, the configuration is in `ali-bot/publisher/aliPublish-rpms-cc8.conf` and `aliPublish-s3-updatable-rpms.conf`. Once you have updated it and merged in [alisw/ali-bot](https://github.com/alisw/ali-bot), the publisher will pick your changes up automatically.
+If you need to generate a new RPM package, the configuration is in the per-architecture
+`ali-bot/publish/aliPublish-rpms-cc<N>.conf` files (`cc9` for Alma 9, `cc10` for Alma 10) and in
+`aliPublish-s3-updatable-rpms.conf`. Once you have updated it and merged in [alisw/ali-bot](https://github.com/alisw/ali-bot), the publisher will pick your changes up automatically.
 
 ### Start publishing on a new architecture
 

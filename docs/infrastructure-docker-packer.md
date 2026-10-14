@@ -45,11 +45,13 @@ docker build -t alisw/<image-name> <image-name>
 ## Conventions
 
 The CI uses an image named `<arch>-builder` where `<arch>` is the architecture of the
-image. The CI system will automatically select the correct image for a given
-architecture, so the image name must match the format exactly.
+image. `aliBuild` derives the image name from the architecture it is asked to build for, so the
+image name must match the format exactly: for instance, building for `slc10_x86-64` pulls
+`registry.cern.ch/alisw/slc10-builder`.
 
-The code to infer the image names is
-[here](https://github.com/alisw/ci-jobs/blob/master/ci/ci.nomad)
+The code that derives the image name is
+[in aliBuild](https://github.com/alisw/alibuild/blob/master/alibuild_helpers/utilities.py)
+(see `default_builder_image`).
 
 [ci-jobs]: https://github.com/alisw/ci-jobs
 [packer]: https://www.packer.io/

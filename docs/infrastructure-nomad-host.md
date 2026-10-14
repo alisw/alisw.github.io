@@ -13,7 +13,52 @@ categories: infrastructure
 
 ## Nomad, Consul and Vault setup notes
 
+### Automated provisioning with swarm-management-mcp
+
+The manual procedure below is what a new node needs; on hand-managed machines it
+is now driven by [`swarm-management-mcp`](https://gitlab.cern.ch/alisw/swarm-management-mcp),
+which performs the same steps idempotently and refuses rather than half-configuring.
+Its README carries the full runbook; the outline is:
+
+1. **Describe the node.** Add it to `inventory.yaml` with `mgmt: manual`, and
+   create `nodes/<fqdn>.conf` with the CPU and memory cap, the Nomad metadata,
+   and the data directories. Anything machine-specific belongs there, so the
+   decision is recorded in git rather than in someone's shell history.
+
+2. **Install the dispatcher**, once, with `bootstrap-node.sh <fqdn>`. This is the
+   only step that pushes anything to the machine. It installs a forced-command
+   `authorized_keys` entry, so the key used afterwards can run a fixed set of
+   verbs and cannot get a shell, and it verifies that restriction before
+   reporting success.
+
+3. **Provide the node's credentials.** A per-node Consul token and the cluster's
+   existing gossip key are read from the operator's Keychain and streamed to the
+   node, which validates them and writes `/etc/swarm/secrets.env`. They are never
+   committed and never copied from a working tree.
+
+4. **Deploy a signed revision.** The node clones a pinned, signed tag from GitLab
+   itself, so what runs is always something published and blessed rather than
+   whatever was on someone's laptop.
+
+5. **Preview, then apply.** `dry-run` renders every file that would be written
+   and diffs it against the machine, with secrets redacted but changes still
+   visible, and lists the commands it would run — without executing any of them.
+   `converge` then applies it.
+
+6. **Verify it joined.** A client can start cleanly and still fail to register,
+   so check with `nomad node status` rather than trusting a clean exit.
+
+Two behaviours are worth knowing because they look like failures and are not.
+Converge **refuses to reconfigure a `dnsmasq` it did not install**, since on a
+shared machine that resolver may be serving other hosts; adopting it is an
+explicit opt-in per node. And it **refuses to run without a grid host
+certificate**, because Nomad's TLS, Consul and Vault settings all reference one
+and a node without it joins and then fails everything placed on it.
+
 ### Nomad and Consul setup on non-Openstack machines
+
+These are the underlying steps, for reference or for a machine the tooling does
+not cover.
 
 1. Add Hashicorp apt repo to get modern consul/nomad packages (the Ubuntu-packaged ones are too old to work with our config):
    ```bash

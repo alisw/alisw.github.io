@@ -103,23 +103,29 @@ The advantage of fixed builders is that we are never in a situation where there 
 
 You can create dedicated Jenkins builders using Nomad.
 
-[Similar to the setup for CI builders](infrastructure-nomad.md#complex-templated-job-declarations-eg-ci),
-Jenkins builders are defined as YAML files under `ci-jobs/jenkins-builder/`.
+There is one Nomad job per Jenkins agent, declared by the single
+[`jenkins-builder.nomad`](https://github.com/alisw/ci-jobs/blob/master/jenkins-builder/jenkins-builder.nomad)
+jobspec in `ci-jobs/jenkins-builder/`, with the per-agent values in a `<name>.vars.hcl` file next to
+it. [See here for the general pattern.](infrastructure-nomad.md#jobs-with-several-near-identical-instances-eg-jenkins-agents)
 
-They are normally configured using three keys:
+The variable file normally sets:
 
-- `name`: a user-visible name, to keep builders apart. It's a good idea to mention the OS that the builder is running, e.g. `slc9-builder-1`.
-  Make this the same as the file name, sans the `.yaml` extension.
 - `docker_image`: the image to run the builder inside of.
   Builds will run for this platform.
-  For example: `registry.cern.ch/alisw/slc9-builder:latest`.
-- `is_light`: a boolean; if true, enough resources are allocated to actually run a compilation.
+  For example: `registry.cern.ch/alisw/slc10-builder:latest`.
+- `is_light`: a boolean; if true, *fewer* resources are allocated, as the agent is not expected to
+  run a compilation.
   "Light" builders are useful to have for non-compilation tasks; for instance, some Jenkins builds wait for approved PRs to be merged before starting the build; this only takes up a slot on a "light" builder to avoid wasting resources.
+
+The agent's name is not set in the variable file: it is the name of the variable file itself, and
+the deployment script below derives the job name, the Jenkins node name and the Vault key from it,
+so the three cannot drift apart.
+It's a good idea to mention the OS that the builder is running, e.g. `slc10-builder-1`.
 
 Jenkins builders also need to be declared to Jenkins.
 To do this, go to <https://alijenkins.cern.ch/computer> > "New Node" and create a new node.
 Assuming the architecture is `<arch>`, the node needs to be called (e.g. `<arch>-builder-<X>`) where `<X>` is incremental number.
-Valid `<arch>` values are e.g. `slc7`, `slc8`, `ubuntu2004`, etc. These mirror `aliBuild`'s idea of architectures.
+Valid `<arch>` values are e.g. `slc9`, `slc10`, `ubuntu2404`, etc. These mirror `aliBuild`'s idea of architectures.
 
 Click on the newly create agent and note down the associated secret.
 This needs to be stored in [the `jenkins-builder` Vault secret](https://alivault.cern.ch/ui/vault/secrets/kv/kv/jenkins-builder/details).
@@ -127,14 +133,17 @@ Click "create a new version", then add a new key at the bottom, named `<name>_no
 For the value, paste in the secret hexadecimal token you copied from Jenkins earlier.
 Save the updated secret.
 
-Finally, you can create the new agent with:
+Finally, you can create the new agent by rendering its jobspec and deploying it:
 
 ```bash
 cd ci-jobs/jenkins-builder/
-levant render -var-file <name>.yaml | nomad job validate -  # check syntax
-levant render -var-file <name>.yaml | nomad job plan -      # make sure job can be scheduled
-levant render -var-file <name>.yaml | nomad job run -       # actually run job
+./render.sh <name> > /tmp/jenkins-<name>.json   # also checks the syntax
+nomad job plan -json /tmp/jenkins-<name>.json   # make sure job can be scheduled
+nomad job run -json /tmp/jenkins-<name>.json    # actually run job
 ```
+
+`render.sh` only reads local files, so it is safe to run and inspect its output before deploying
+anything.
 
 ### Gotchas and issues:
 

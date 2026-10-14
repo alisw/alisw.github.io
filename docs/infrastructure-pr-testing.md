@@ -4,11 +4,14 @@ layout: main
 categories: infrastructure
 ---
 
-The ALICE Github PR builder is implemented as a set of independent
-agents which looks at a portion of the phase space of the PRs available
-for testing. This means that if there are 4 builders deployed each one
-of them will build on average 1/4th of the PRs. This avoids the need
-for a centralised scheduling service. Moreover, since the process of
+The ALICE Github PR builder is implemented as a set of independent agents, each of which looks at
+the full list of pull requests available for testing and *claims* the work it is about to do. A
+claim is taken on the pair (check, commit), and it is held cluster-wide, so two agents never build
+the same thing and no centralised scheduling service is needed. Agents therefore have no identity
+and need to know nothing about each other: adding one simply drains the queue faster, and when one
+disappears its claim lapses and the work becomes available again.
+
+Moreover, since the process of
 checking a PR is not done once a given PR is built, but only when it's
 merged, builders keep retrying to build even PR which were previously
 successfully built. This is because the boundary condition of the PR
@@ -18,14 +21,12 @@ test of a given PR is considered complete only when the PR is merged.
 
 By default the builders will behave in the following manner:
 
-- Wait for a configurable number of seconds
-- Check if there is one or more untested PR. If yes, start building them
-  and then go back to the starting point.
-- Check if there are pull requests which were previously checked and had
-  a failure. If yes, test one of them and then go back to the starting point.
-- Check if there are pull requests which were previously checked and had did
-  not have a failure. If yes, test one of them and then go back to the starting
-  point.
+- Refresh the check definitions from `ali-bot`'s master branch.
+- Ask for the list of every buildable pull request, in the order the lister recommends (untested
+  ones first, then previously failed ones, then the rest).
+- Walk that list and build the first pull request whose claim they can take.
+- Only if the whole list was already claimed or there was nothing to do, wait for a configurable
+  number of seconds before starting over.
 
 We use [Nomad](infrastructure-nomad.md) to deploy the builders on Linux and MacOS.
   
@@ -82,9 +83,11 @@ If you add a new check, make sure to update the appropriate repository's GitHub 
 ### Setup your environment
 
 Set up your Nomad environment as described [here](infrastructure-nomad.md#setting-up-your-local-environment).
-Job declarations for the pull request checkers are stored inside the `ci/` subdirectory of the [ci-jobs](https://github.com/alisw/ci-jobs) repository.
 
-See [this section](infrastructure-nomad.md#complex-templated-job-declarations-eg-ci) of the ALICE Nomad docs for instructions on deploying CI builders.
+Job declarations for the pull request checkers are plain HCL files named `ci-*.nomad`, in the root
+of the [ci-jobs](https://github.com/alisw/ci-jobs) repository.
+See [this section](infrastructure-nomad.md#single-instance-jobs-eg-rsync-server) of the ALICE Nomad
+docs for instructions on deploying them.
 
 ### Listing active PR checkers
 
@@ -94,16 +97,20 @@ In order to see the list of the running prs you can do:
 nomad job status ci-
 ```
 
-where the resulting job names will follow the convention `ci-<mesos role>-<container>[-<suffix>]`.
+There is one job per platform family, e.g. `ci-linux-x86`, `ci-linux-arm`, `ci-linux-x86-gpu`,
+`ci-linux-x86-release` and `ci-macos-arm`.
 
-This matches the subdirectories of `ali-bot/ci/repo-config/`.
-For example, the `ci-mesosci-slc9-o2physics` checker will pick up its `.env` files from `ali-bot/ci/repo-config/mesosci/slc9-o2physics/`.
+Which checks a job serves is not part of its name: each job sets `MESOS_ROLE` and a list of
+containers in `CUR_CONTAINERS`, and reads its `.env` files from
+`ali-bot/ci/repo-config/<role>/<container>/` for each of them. One job can therefore serve the
+checks of several platforms at once, and moving a set of checks from one job to another is a
+configuration change rather than a new job.
 
-Each checker will have one or more instances with the same configuration.
+Each job will have one or more instances with the same configuration.
 You can see these by running, e.g.:
 
 ```bash
-nomad job status ci-mesosci-slc8-gpu
+nomad job status ci-linux-x86
 ```
 
 You can check what each instance is doing by getting its allocation ID, then running:
@@ -117,33 +124,28 @@ nomad alloc logs -stderr -tail -f <alloc ID>
 [See here for the procedure.](infrastructure-nomad.md#scaling-a-ci-job)
 
 Running builders should not be affected by this operation.
-This will only add builders if you increased `num_builders` or delete some if you decreased it.
+This will only add builders if you increased the count, or delete some if you decreased it.
 
-The builders know how many there are of the same type though the `config/workers-pool-size` file.
-Nomad will automatically update this file for you when you deploy the updated job declaration.
+Because builders claim their work rather than owning a share of it, the remaining builders need no
+notification that the count changed, and nothing has to be restarted.
 
 ### Creating a new checker
 
-In order to add a new checker, you need to add both a Nomad job declaration by creating a new YAML file in `ci-jobs/ci/`.
-Assuming you want to add a checker that runs two parallel builders as the `mesosci` user and compiles software using an `slc9` container, create a file called `ci-jobs/ci/mesosci-slc9-foobar.yaml` containing the following:
+Most of the time there is no new Nomad job to create: adding a container to the `CUR_CONTAINERS`
+list of an existing `ci-*.nomad` job is enough, and the new checks are then served by the builders
+that job already runs.
 
-```yaml
----
-role: mesosci
-arch: slc9
-config_suffix: '-foobar'
-num_builders: 2
-```
+A new job is only needed when the checks require something the existing jobs cannot offer, such as
+a different CPU architecture, a GPU, or dedicated capacity. In that case, copy the closest existing
+`ci-*.nomad` file, give it a new job name, and adjust its constraints, its `count` and its
+`MESOS_ROLE`/`CUR_CONTAINERS` settings. Because a claim is cluster-wide and carries no job name, a
+new job can be registered alongside an existing one and the two will serve the same checks without
+building anything twice, which is the recommended way to roll a change out gradually.
 
-You can deploy the checkers declared using this file by running:
-
-```bash
-levant render -var-file mesosci-slc9-foobar.yaml | nomad job plan -  # make sure scheduling is fine
-levant render -var-file mesosci-slc9-foobar.yaml | nomad job run -   # actually redeploy the job
-```
-
-You also need to tell the new checker what it should build and where it should look for incoming pull requests.
-Do this by creating configuration files in `ali-bot/ci/repo-config/mesosci/slc9-foobar/` (assuming the same parameters as above).
+Either way, you need to tell the checker what it should build and where it should look for incoming
+pull requests.
+Do this by creating configuration files in `ali-bot/ci/repo-config/<role>/<container>/`, e.g. in
+`ali-bot/ci/repo-config/mesosci/slc10/`.
 
 The easiest thing to do is to copy an existing `.env` file that you want to mimic and change the `CI_NAME` and `CHECK_NAME` variables.
 
@@ -174,11 +176,12 @@ For other variables, feel free to use variable substitution with the usual shell
 ### Updating the PR checker inner loop
 
 Sometimes one might need to update the inner loop of the PR checking, without having to restart the checker itself.
-This is done automatically for any updates of the `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` files.
+This is done automatically for any updates of the `ali-bot/ci/build-loop.sh` and `ali-bot/ci/build-helpers.sh` files, as well as of the `.env` files under `ali-bot/ci/repo-config/`.
 
 Upgrades will be picked up at the next iteration of the PR builder, so you might still have to wait for the current one to finish before you can see your updates deployed.
 
-Updates to `ali-bot/ci/continuous-builder.sh` are also picked up, but less frequently.
+Changes to the outer loop itself (`ali-bot/ci/claim-builder.sh` and `ali-bot/ci/claims.sh`) require
+the job to be restarted.
 
 ### Restarting a checker
 
@@ -231,6 +234,12 @@ In case of outages for larger problems, this can be useful to find failed PRs, o
 ### Empty logs
 
 Empty logs can happen in the case the build fails in some pre-alibuild steps and the harvesting script is not able or not allowed to fetch logs. In particular, due to the criticality of some operations, logs which might contain sensitive information are not retrieved, to avoid exposing them to unprivileged ALICE users. Maintainers of the build infrastructure can follow the instructions in the report to retrieve them.
+
+More generally, build logs must never contain credentials in the first place: being able to read a
+job's logs is a much more widely held permission than being able to read the credentials that job
+uses. Note in particular that a shell running under `set -x` echoes every assignment it makes, so a
+traced shell that sources a file of secrets prints all of them into its log; disable tracing around
+any such step.
   
 That said, the vast majority of the "missing logs issues" are due to the following two items:
   
