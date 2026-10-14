@@ -41,3 +41,17 @@ rclone ls alibuild:alibuild-repo/
 ```
 
 In order to actually write to the repository you need to have the valid access key / secret set. Alternatively you can have the appropriate stanza in `~/.config/rclone/rclone.conf`. 
+
+## Content-addressed tarballs
+
+Architectures built by aliBuild 2.0 into a content-addressed store (a `--remote-store` of the form
+`reapi://...`) do not keep the tarball itself under the classic `TARS/<arch>/store/` path.
+What lives there is a small stub object, which names the real payload in an HTTP header
+(`x-amz-website-redirect-location`) pointing at a content-addressed blob in a separate bucket.
+Note that the stub is served with HTTP 200 and not with a redirect status, so a plain `curl -L`
+downloads the stub rather than following it; `aliPublish` resolves the stub with a `HEAD` request
+before downloading.
+
+The blob itself is an ordinary tarball, so relocation and modulefile generation are unaffected.
+This is the reason why the download URL of a tarball may not match the historical
+`TARS/<arch>/store/<hash prefix>/<hash>/` layout.

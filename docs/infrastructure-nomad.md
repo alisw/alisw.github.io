@@ -37,17 +37,17 @@ If you want to fully bring down and redeploy a CI job, you must do this manually
 
 Nomad has a "restart" facility for individual allocations, which may suffice, but this only reschedules individual allocs, and not necessarily for long enough for e.g. resource redistribution to happen properly. For instance, if you have one alloc waiting for a spot on a high-memory machine, and something else that doesn't need a lot of memory is taking that spot, then you may have to fully stop the latter alloc's job for the former to be properly scheduled, and afterwards, redeploy the stopped job.
 
-In order to fully stop and redeploy a job, run the following commands (`ci-mesosci-cs8` chosen as an example):
+In order to fully stop and redeploy a job, run the following commands (`ci-linux-x86` chosen as an example):
 
 ```bash
-cd ci-jobs/ci
+cd ci-jobs
 # First, make sure the running job is identical to the local declaration:
-levant render -var-file mesosci-cs8.yaml | nomad job plan -  # no changes should be shown
+nomad job plan ci-linux-x86.nomad   # no changes should be shown
 # Stop all allocations of the running job:
-nomad job stop ci-mesosci-cs8
+nomad job stop ci-linux-x86
 # Now redeploy the job from the current definitions:
-levant render -var-file mesosci-cs8.yaml | nomad job plan -  # make sure scheduling is fine
-levant render -var-file mesosci-cs8.yaml | nomad job run -   # actually redeploy the job
+nomad job plan ci-linux-x86.nomad   # make sure scheduling is fine
+nomad job run ci-linux-x86.nomad    # actually redeploy the job
 ```
 
 Build areas are preserved across allocation restarts, but only if the replacement alloc runs on the same host as its predecessor. If this is not the case, it's not worth transferring the entire build directory over the network, so we just start from scratch instead. This is implemented using the following settings in the CI job definition:
@@ -63,42 +63,45 @@ group "ci" {
 
 #### Scaling a CI job
 
-If you want to permanently change the number of running CI jobs for a specific type of builder (e.g. the `mesosci-cs8` one), change the desired number of builders by setting the value of `num_builders` in `mesosci-cs8.yaml`.
+If you want to permanently change the number of running builders for a specific type of builder (e.g. the `ci-linux-x86` one), change the `count` of its task group in the job declaration.
 
 Deploy your scaling update to the cluster by running the usual commands:
 
 ```bash
-cd ci
-$EDITOR mesosci-cs8.yaml                                         # change num_builders value
-levant render -var-file mesosci-cs8.yaml | nomad job validate -  # check syntax
-levant render -var-file mesosci-cs8.yaml | nomad job plan -      # make sure only your desired changes will be applied
-levant render -var-file mesosci-cs8.yaml | nomad job run -       # actually deploy your changes
-git add mesosci-cs8.yaml && git commit                           # track your changes
+cd ci-jobs
+$EDITOR ci-linux-x86.nomad              # change the group's count
+nomad job validate ci-linux-x86.nomad   # check syntax
+nomad job plan ci-linux-x86.nomad       # make sure only your desired changes will be applied
+nomad job run ci-linux-x86.nomad        # actually deploy your changes
+git add ci-linux-x86.nomad && git commit # track your changes
 ```
 
 If you want to scale a job without committing this change to the Git repository, this can be done like so:
 
 ```bash
-nomad job scale ci-mesosci-cs8 N    # N is the desired number of builders for this job
+nomad job scale ci-linux-x86 N    # N is the desired number of builders for this job
 ```
 
-The above command will automatically install a new `config/workers-pool-size` file into the working area of the running builders without restarting them.
+Builders take their work by claiming it, so they need no knowledge of each other: adding one simply
+drains the queue faster, and removing one lets its claims lapse. No further change is needed after
+scaling.
 
-#### Deploying changes to the CI job template
+#### Deploying a change that affects several CI jobs
 
-When changing the template itself (i.e. the `ci.nomad` file), the changes must be deployed for each YAML file, as each declares a separate instance of the templated job.
+There is one CI job declaration per architecture (`ci-linux-x86.nomad`, `ci-linux-arm.nomad`,
+`ci-macos-arm.nomad`, and so on), so a change that applies to all of them has to be deployed once
+per file.
+
+It's a good idea to validate them all first, but to do the actual deployment (i.e. `nomad job run`)
+one file at a time, so that issues with the deployment can be caught early.
 
 ```bash
-cd ci
-$EDITOR ci.nomad
-for f in *.yaml; do levant render -var-file "$f.yaml" | nomad job validate -; done
-# Now, for each .yaml file in the directory:
-levant render -var-file vars.yaml | nomad job plan -      # make sure your desired changes will be applied
-levant render -var-file vars.yaml | nomad job run -       # actually deploy your changes
-git add ci.nomad && git commit                            # track your changes
+cd ci-jobs
+for f in ci-*.nomad; do nomad job validate "$f"; done
+# Now, for each file in turn:
+nomad job plan ci-linux-x86.nomad       # make sure your desired changes will be applied
+nomad job run ci-linux-x86.nomad        # actually deploy your changes
 ```
-
-While there's no harm in running the syntax validation step in a loop, it's probably better to do the actual deployment (i.e. `nomad job run`) manually for each YAML file, so that issues with the deployment can be caught early.
 
 #### Troubleshooting placement failures
 
@@ -134,7 +137,7 @@ In this case, check the following:
 
 #### Setting up your local environment
 
-You will need to install a reasonably recent versions of Nomad to parse existing job declarations. Additionally, you should install the latest version of Levant; ideally [version 0.3.1 or later][levant-release].
+You will need to install a reasonably recent version of Nomad to parse existing job declarations.
 
 Set the following environment values to connect to ALICE's scheduling cluster:
 
@@ -157,7 +160,6 @@ export VAULT_TOKEN='<vault access token UUID>'
 # Alternatively, set these tokens only for commands that need them, e.g.
 # by using aliases to retrieve the secrets and invoke the respective command:
 alias nomad='NOMAD_TOKEN=$(pass cern/ci/nomad-token | head -1) \nomad'
-alias levant='NOMAD_TOKEN=$(pass cern/ci/nomad-token | head -1) \levant'
 alias consul='CONSUL_HTTP_TOKEN=$(pass cern/ci/consul-token | head -1) \consul'
 alias vault='VAULT_TOKEN=$(pass cern/ci/vault-token | head -1) \vault'
 ```
@@ -175,17 +177,21 @@ export VAULT_ADDR='https://localhost:8200'
 export {NOMAD,CONSUL,VAULT}_TLS_SERVER_NAME=alimesos01.cern.ch
 ```
 
-[levant-release]: https://releases.hashicorp.com/levant
 
 #### Writing job declarations
 
-Jobs are defined using [Levant][levant] templates. While plain nomad templating is powerful, it does not allow variable job identifiers (which are crucial for declaring e.g. multiple similar Jenkins builders or CI workers). Levant allows templating on top of the HCL job specification read by nomad.
+Jobs are written as plain [Nomad job declarations][nomad-jobspec] in [HCL2 syntax][hcl-syntax].
+We used to template some of them with Levant, in order to declare several jobs whose *identifiers*
+differ (something plain Nomad templating cannot express); this is no longer the case, and HCL2
+variables are used instead.
 
-As Levant bundles a version of the Nomad client, Levant [`0.3.1` or later][levant-releases] is required in order to parse the HCL job declarations we use.
+##### Single-instance jobs (e.g. `rsync` server)
 
-##### Simple job declarations (e.g. `rsync` server)
-
-Simple job declarations, i.e. those that declare only a single job, don't use Levant for templating at all. They are simple HCL files stored in the root directory of the [ci-jobs repository][jobs-decls-repo], named `<job-name>.nomad`.
+Most jobs are a single `.nomad` file stored in the root directory of the
+[ci-jobs repository][job-decls-repo], named `<job-name>.nomad`. The CI builders are declared this
+way, one job per platform family (`ci-linux-x86.nomad`, `ci-linux-arm.nomad`, `ci-macos-arm.nomad`,
+...), as is the AliEn publisher. The [RPM publisher](infrastructure-rpms.md) is a single job too,
+but it keeps its declaration in a directory of its own.
 
 An example of this is the declaration for the [`rsync` server that serves tarballs for `aliBuild`][rsync-job].
 
@@ -197,21 +203,24 @@ nomad job plan repo.nomad       # check if the job can be scheduled
 nomad job run repo.nomad        # actually run the job
 ```
 
-##### Complex, templated job declarations (e.g. CI)
+##### Jobs with several near-identical instances (e.g. Jenkins agents)
 
-Complicated job declarations are broken up into a common, templated declaration, and multiple YAML "variable files" to declare the variations of the base job to be deployed. These should be collected into a single directory, with multiple `.yaml` files, but only one `.nomad` file per directory.
+Some jobs exist in several near-identical copies that differ only by name and a handful of values.
+These live in a directory of their own, with a single `.nomad` file holding the job declaration and
+one `<instance>.vars.hcl` file per instance holding that instance's values, declared as
+[HCL2 variables][hcl2-variables] in the jobspec.
 
-An example of this is the [CI job][ci]. It contains a `ci.nomad` file, which is the general job declaration. This file is processed first by Levant (in the `levant render` step above). Levant [only processes directives][levant-template] surrounded by double square brackets (`[[ ... ]]`). The result of this first processing step is a [Nomad job declaration][nomad-jobspec] in [HCL syntax][hcl-syntax], which can be passed directly to Nomad.
-
-What values Levant inserts into the file is determined by the YAML file it is given. The structure of these files depends entirely on what values the template expects, but for CI jobs, an example is the [`mesosci-slc7-o2physics.yaml` variable file][o2physics-ci].
-
-In order to run or update this job, run the following commands, replacing `vars.yaml` with the variable file for the instance you want to deploy, and checking the output of each command before running the next one:
+The [Jenkins agents][jenkins-builder] are the main example.
+A job's identifier *is* its HCL block label, which cannot be interpolated, so the jobspec is
+rendered to JSON by a small script in the directory that fills in the name and reads the matching
+variable file. The rendering is purely local: `nomad job run -output` parses the declaration without
+contacting the cluster, so the result can be inspected before anything is deployed.
 
 ```bash
-cd ci    # so that levant picks up the correct .nomad file
-levant render -var-file vars.yaml | nomad job validate -  # check syntax
-levant render -var-file vars.yaml | nomad job plan -      # make sure job can be scheduled
-levant render -var-file vars.yaml | nomad job run -       # actually run job
+cd jenkins-builder
+./render.sh slc10-builder-1 > /tmp/jenkins-slc10-builder-1.json
+nomad job plan -json /tmp/jenkins-slc10-builder-1.json   # make sure job can be scheduled
+nomad job run -json /tmp/jenkins-slc10-builder-1.json    # actually run job
 ```
 
 [nomad]: https://www.nomadproject.io/
@@ -220,12 +229,9 @@ levant render -var-file vars.yaml | nomad job run -       # actually run job
 [consul]: https://www.consul.io/
 [vault]: https://www.vaultproject.io/
 [job-decls-repo]: https://github.com/alisw/ci-jobs
-[levant]: https://github.com/hashicorp/levant
-[levant-releases]: https://releases.hashicorp.com/levant
-[levant-template]: https://github.com/hashicorp/levant/blob/main/docs/templates.md
+[hcl2-variables]: https://developer.hashicorp.com/nomad/docs/job-specification/hcl2/variables
 [rsync-job]: https://github.com/alisw/ci-jobs/blob/master/repo.nomad
-[ci]: https://github.com/alisw/ci-jobs/tree/master/ci
-[o2physics-ci]: https://github.com/alisw/ci-jobs/blob/master/ci/mesosci-slc7-o2physics.yaml
+[jenkins-builder]: https://github.com/alisw/ci-jobs/tree/master/jenkins-builder
 
 
 ##### Tips and tricks for writing Nomad job declarations

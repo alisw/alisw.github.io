@@ -14,11 +14,27 @@ can help making sure that the branch is in the best possible state.
 In order to drive ALICE builds we use [Jenkins](https://jenkins-ci.org) while
 results of the builds are shown in <https://alijenkins.cern.ch/job/DailyBuilds/>.
 
+### Release builds on the CI workers
+
+Some platforms have their nightly and release builds driven by the
+[CI workers](infrastructure-pr-testing.md) instead of by a Jenkins job. These are configured exactly
+like a pull request check, but in a `<container>-release` directory under
+`ali-bot/ci/repo-config/<role>/`, and instead of watching a repository for pull requests they watch
+it for *tags* matching a `TAG_REGEX`. The worker then builds the matching tag and reports a GitHub
+status for it, which is also what stops the same tag from being built twice.
+
+This is how the `slc10` (AlmaLinux 10, x86-64) architecture is being brought up: the checks in
+`ali-bot/ci/repo-config/mesosci/slc10-release/` rebuild, for `slc10_x86-64`, the daily O2PDPSuite
+tag that Jenkins cuts and builds for `slc9`, plus the few packages that CVMFS needs before anything
+is loadable on a new architecture.
+
 ## Troubleshooting
 
 ### `aliBuild` errors out with a conflict on S3
 
 `aliBuild` uploads tarballs to [its remote store](#nightly-repository).
+(This describes the classic tarball layout; for architectures built into a content-addressed store,
+see [the package repository page](infrastructure-repository.md#content-addressed-tarballs).)
 However, it cannot just upload one file -- it needs to upload the tarball itself under `TARS/<arch>/store/`, a "symlink" to it under `TARS/<arch>/<package>/` and various "symlinks" specifying the new tarball's dependencies under `TARS/<arch>/dist{,-direct,-runtime}/<package>/<package>-<version>-<revision>/`.
 
 When aliBuild is killed while uploading tarballs, it can leave the repository in a partial state.

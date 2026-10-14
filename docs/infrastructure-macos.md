@@ -268,30 +268,29 @@ pdsh -w 'alimesos[01-03].cern.ch' puppet agent -tv
 
 ### Adding a Nomad job
 
-The Macs are configured on a host-by-host basis, unlike the Linux checkers, so that we can more tightly control what checks run where.
-This saves precious disks space, since many Macs lack this resource compared to the Linux machines.
+The macOS checkers are declared by a single Nomad job, `ci-jobs/ci-macos-arm.nomad`, which runs one
+builder per eligible Mac. Unlike the Linux checkers, which can be placed anywhere in the cluster,
+this job names the machines it may run on explicitly, so that we can tightly control what runs
+where: many Macs have much less disk space than the Linux machines.
 
-In the private `ci-jobs` repository, configure a new CI job variation by creating a file called `ci-jobs/ci/$newhost.yaml` with the following content (substituting the parts in `<>`):
-```yaml
----
-role: macos
-arch: <new hostname>
-config_suffix: ''
-num_builders: 1
-# Specify the total resources available on the host, so that we can reserve the
-# entire thing. This makes nomad's statistics more accurate.
-resources:
-  cpu: <the number you configured earlier as cpu_total_compute>
-  memory: <total MB of memory available on the host>
-```
+Two things in the jobspec therefore have to be updated when a Mac joins or leaves the fleet:
 
-Once that's done, actually run the CI job on the new host:
+- the `constraint` on `${node.unique.name}`, which lists the hosts the job may be placed on. Being
+  a macOS machine with compilation enabled is not sufficient, since other jobs own the remaining
+  Macs;
+- the task group's `count`, which must match the number of *eligible* hosts, as a
+  `distinct_hosts` constraint allows only one builder per machine. A `count` higher than the number
+  of eligible hosts leaves the deployment unable to reach its desired count, and it then never
+  starts the rolling replacement either; make sure the new node has been marked eligible before
+  raising it.
+
+Once that's done, deploy as for any other plain jobspec:
 
 ```bash
-cd ci-jobs/ci
-levant render -var-file "$newhost.yaml" | nomad job plan -
+cd ci-jobs
+nomad job plan ci-macos-arm.nomad
 # If the above succeeds, then:
-levant render -var-file "$newhost.yaml" | nomad job run -
+nomad job run ci-macos-arm.nomad
 ```
 
 ### Configuring individual checks
@@ -299,10 +298,9 @@ levant render -var-file "$newhost.yaml" | nomad job run -
 Mac CI checkers are configured like their Linux equivalents, using `.env` files under `ali-bot/ci/repo-config/`.
 The Macs specifically are listed under [`ali-bot/ci/repo-config/macos/`](https://github.com/alisw/ali-bot/tree/master/ci/repo-config/macos).
 
-Each host has a directory there named after its short hostname; it will run checks for the `.env` files inside its directory.
-
-If checks are not picked up, make sure the hostname matches what the Mac thinks it is.
-If in doubt, run `hostname -s` to check.
+The directories there are named after the *platform*, not after a host: a builder serves the `.env`
+files of every directory listed in the job's `CUR_CONTAINERS`, so all the Macs of a fleet run the
+same set of checks and take their work from the same queue.
 
 ## Notable macOS post-mortes
 
